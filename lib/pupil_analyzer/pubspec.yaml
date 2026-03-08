@@ -1,0 +1,22 @@
+name: pupil_analyzer
+description: A Flutter module for analyzing iris and pupil parameters from eye images. Extracts measurements like pupil/iris ratio, ellipseness, decentralization, and ANW ratio.
+version: 1.0.0
+homepage: https://github.com/yourusername/pupil_analyzer
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  image: ^4.1.7
+
+  purchases_flutter: ^8.3.2     # ← correctly indented under dependencies
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+flutter:
+  # This package does not require any assets or special configuration

@@ -1,0 +1,96 @@
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    // END: FlutterFire Configuration
+    id "org.jetbrains.kotlin.android"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '2.1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '2.1'
+}
+
+// 🔑 Load keystore properties
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    namespace "com.cnri.pupil.metrics.neuro"
+    compileSdk 36
+    ndkVersion = "29.0.14206865"  // ← UPDATED
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        applicationId "com.cnri.pupil.metrics.neuro"
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion 36
+        versionCode 18  // ← Bump this for new release
+        versionName "18.1"
+    }
+
+    packagingOptions {  // ← ADD THIS BLOCK
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:2.0.21"))
+    implementation 'com.android.billingclient:billing:6.1.0'
+    implementation 'androidx.core:core-ktx:1.15.0'
+}

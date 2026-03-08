@@ -1,0 +1,13 @@
+   6 ANGR
+   6 BURD
+   6 DECK
+   6 ENSN
+   6 GUNT
+   6 JAUS
+   6 ROBS
+   6 VELH
+   2 NDSH
+   1 DISTR_OB
+   1 PROFIL
+   1 RECOMEND
+   1 TENDENC

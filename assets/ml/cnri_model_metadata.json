@@ -1,0 +1,46 @@
+{
+  "model_version": "6.0.0",
+  "model_type": "onnx",
+  "input_size": 224,
+  "input_channels": 3,
+  "input_name": "input",
+  "output_name": "output",
+  "outputs": [
+    {
+      "name": "pi_ratio",
+      "index": 0,
+      "scale": 50.0,
+      "unit": "%"
+    },
+    {
+      "name": "ellipseness",
+      "index": 1,
+      "scale": 100.0,
+      "unit": "%"
+    },
+    {
+      "name": "decentration",
+      "index": 2,
+      "scale": 100.0,
+      "unit": "%"
+    },
+    {
+      "name": "decentration_angle",
+      "index": 3,
+      "scale": 360.0,
+      "unit": "degrees"
+    }
+  ],
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  }
+}

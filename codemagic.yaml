@@ -1,0 +1,121 @@
+workflows:
+  ios-workflow:
+    name: Flutter iOS App Store Build
+    instance_type: mac_mini_m2
+    max_build_duration: 120
+
+    # Configure in Codemagic UI:
+    # Integrations -> App Store Connect API key
+    integrations:
+      app_store_connect: codemagic_app_store_connect
+
+    environment:
+      flutter: stable
+      xcode: latest
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.cnri.pupilmetrics # <-- CHANGE THIS
+      vars:
+        # Add as Secret in Codemagic UI (recommended)
+        # REVENUECAT_IOS_API_KEY=appl_xxxxx
+        REVENUECAT_IOS_API_KEY: Encrypted(...) # <-- replace or set in UI group
+
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+
+    scripts:
+      - name: Flutter pub get
+        script: |
+          flutter pub get
+
+      - name: Install CocoaPods
+        script: |
+          cd ios
+          pod install
+          cd ..
+
+      - name: Set up code signing
+        script: |
+          xcode-project use-profiles
+
+      - name: Build signed iOS IPA (App Store/TestFlight)
+        script: |
+          flutter build ipa --release \
+            --dart-define=REVENUECAT_IOS_API_KEY=$REVENUECAT_IOS_API_KEY
+
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
+
+  macos-workflow:
+    name: Flutter macOS Build + DMG
+    instance_type: mac_mini_m2
+    max_build_duration: 120
+    environment:
+      flutter: stable
+      xcode: latest
+
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+
+    scripts:
+      - name: Enable macOS & get packages
+        script: |
+          flutter config --enable-macos-desktop
+          flutter pub get
+
+      - name: Verify branch/commit and macOS target
+        script: |
+          git rev-parse --short HEAD
+          git log --oneline -n 3
+          grep -n "platform :osx" macos/Podfile || true
+          grep -n "MACOSX_DEPLOYMENT_TARGET" macos/Runner.xcodeproj/project.pbxproj || true
+
+      - name: Clean macOS pods
+        script: |
+          rm -rf macos/Pods macos/Podfile.lock
+
+      - name: Build macOS release
+        script: |
+          flutter build macos --release
+
+      - name: Package macOS app as DMG and ZIP
+        script: |
+          set -e
+          APP_PATH=$(find build/macos/Build/Products/Release -maxdepth 1 -name "*.app" | head -n 1)
+          if [ -z "$APP_PATH" ]; then
+            echo "No .app found in Release output"
+            exit 1
+          fi
+
+          APP_NAME=$(basename "$APP_PATH" .app)
+          mkdir -p artifacts
+
+          echo "Creating DMG for $APP_NAME..."
+          hdiutil create \
+            -volname "$APP_NAME" \
+            -srcfolder "$APP_PATH" \
+            -ov \
+            -format UDZO \
+            "artifacts/${APP_NAME}.dmg"
+
+          echo "Creating ZIP for $APP_NAME..."
+          ditto -c -k --sequesterRsrc --keepParent \
+            "$APP_PATH" \
+            "artifacts/${APP_NAME}.zip"
+
+    artifacts:
+      - build/macos/Build/Products/Release/**/*.app
+      - artifacts/*.dmg
+      - artifacts/*.zip
