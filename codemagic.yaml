@@ -18,7 +18,7 @@ workflows:
       vars:
         # Add as Secret in Codemagic UI (recommended)
         # REVENUECAT_IOS_API_KEY=appl_xxxxx
-        REVENUECAT_IOS_API_KEY: Encrypted(...) # <-- replace or set in UI group
+        # <-- replace or set in UI group
 
     triggering:
       events:
