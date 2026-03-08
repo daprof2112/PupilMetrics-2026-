@@ -15,10 +15,10 @@ workflows:
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.cnri.pupilmetrics # <-- CHANGE THIS
-      vars:
+        #  vars:
         # Add as Secret in Codemagic UI (recommended)
         # REVENUECAT_IOS_API_KEY=appl_xxxxx
-        # <-- replace or set in UI group
+        # REVENUECAT_IOS_API_KEY: Encrypted(...) # <-- replace or set in UI group
 
     triggering:
       events:
