@@ -2043,16 +2043,16 @@ class AppLocalizationsDe extends AppLocalizations {
   String get anwAtonic => 'Atonic';
 
   @override
-  String get anwTonicState => 'Tonic State';
+  String get anwTonicState => 'Historical Tone Pattern';
 
   @override
-  String get anwParasympathotonic => 'Parasympathotonic';
+  String get anwParasympathotonic => 'Parasympathotonic pattern';
 
   @override
-  String get anwSympathotonicState => 'Sympathotonic';
+  String get anwSympathotonicState => 'Sympathotonic pattern';
 
   @override
-  String get anwShiftDetected => 'Shift Detected';
+  String get anwShiftDetected => 'Historical Shift Pattern';
 
   @override
   String get anwConstrictionDetected => 'Constriction Detected';
@@ -2078,15 +2078,15 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get anwParasympathotonicDesc =>
-      'Liminal sensitivity increased. Reflex activity accelerated. GI secretory/evacuation functions heightened.';
+      'Historical observations linked this to increased liminal sensitivity. Reflex activity accelerated. GI secretory/evacuation functions heightened.';
 
   @override
   String get anwSympathotonicDesc =>
-      'Liminal sensitivity decreased. Reflex activity decelerated. GI secretory/evacuation functions reduced.';
+      'Historical observations linked this to decreased liminal sensitivity. Reflex activity decelerated. GI secretory/evacuation functions reduced.';
 
   @override
   String get anwMiddleTemporalShiftCardiac =>
-      'Overloads of the left ventricle. Cardiac stress.';
+      'Historical studies according to Velchover linked this to left-ventricular overload patterns and cardiac stress.';
 
   @override
   String get anwFrontalConstricted =>
@@ -2208,11 +2208,11 @@ class AppLocalizationsDe extends AppLocalizations {
       'Vergleicht OD vs OS um Asymmetrien zu erkennen.';
 
   @override
-  String get helpFeatureMlTitle => 'ML-Verbesserung';
+  String get helpFeatureMlTitle => 'ONNX-CNN-Vergleich';
 
   @override
   String get helpFeatureMlDesc =>
-      'ResNet18-Modell liefert sekundäre Messungen.';
+      'Das ONNX-CNN-Modell liefert sekundäre Messungen zum Vergleich.';
 
   @override
   String get helpKeyboardShortcuts => 'Tastenkürzel';
@@ -2294,6 +2294,53 @@ class AppLocalizationsDe extends AppLocalizations {
   String get helpIssuePdfSolution4 => 'Zuerst TXT-Export versuchen';
 
   @override
+  String get helpCaptureChecklistTitle => 'Aufnahme-Checkliste';
+
+  @override
+  String get helpCaptureChecklist1 =>
+      'Halten Sie die Pupille zentriert und vollständig im Bild sichtbar.';
+
+  @override
+  String get helpCaptureChecklist2 =>
+      'Verwenden Sie gleichmäßige Beleuchtung und reduzieren Sie Blendung oder Reflexe auf der Hornhaut.';
+
+  @override
+  String get helpCaptureChecklist3 =>
+      'Halten Sie einen ähnlichen Iriskop-Abstand für rechtes und linkes Auge ein.';
+
+  @override
+  String get helpCaptureChecklist4 =>
+      'Fokussieren Sie neu oder nehmen Sie erneut auf, wenn der Pupillenrand weich oder unscharf wirkt.';
+
+  @override
+  String get helpExportSettingsTitle => 'Export-Einstellungen';
+
+  @override
+  String get helpExportSettingsDesc =>
+      'PDF automatisch speichern kann nach der Analyse einen Bericht sichern, Bilder einschließen steuert die Augenfotos im PDF, und ONNX-CNN-Vergleich anzeigen fügt Vergleichswerte zu Berichten hinzu.';
+
+  @override
+  String get helpHybridScoreTitle => 'Hybride Konfidenz & Note';
+
+  @override
+  String get helpHybridScoreDesc =>
+      'Die angezeigte Konfidenz und Note kombinieren klassische Geometriequalität mit ML-Übereinstimmung und spiegeln daher die Messzuverlässigkeit statt einer Diagnose wider.';
+
+  @override
+  String get helpAnomalyGuideTitle => 'Abflachungen & Vorwölbungen lesen';
+
+  @override
+  String get helpAnomalyGuideDesc =>
+      'Abflachungen zeigen ein relatives Einwärtsziehen, Vorwölbungen ein Auswärtsziehen entlang des Pupillenrands; jede Karte zeigt Zone, Ausmaß und zugeordnete Assoziation.';
+
+  @override
+  String get helpZoneOverlayGuideTitle => 'Zonen-Overlay';
+
+  @override
+  String get helpZoneOverlayGuideDesc =>
+      'Verwenden Sie das Zonen-Overlay, um Sektorpositionen visuell zu prüfen und zu kontrollieren, wo erkannte Anomalien um Pupille und Iris liegen.';
+
+  @override
   String get helpContactSupportTip =>
       'Kontaktieren Sie helpdesk@cnri.edu für Unterstützung.';
 
@@ -2326,9 +2373,6 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get settingsShowZoneOverlay => 'Zonen-Überlagerung anzeigen';
-
-  @override
-  String get settingsAutoDetectPupil => 'Pupille automatisch erkennen';
 
   @override
   String get settingsExportReports => 'EXPORT & BERICHTE';
@@ -2376,6 +2420,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get languageSelectTitle => 'Sprache Auswählen';
+
+  @override
+  String get selectLanguage => 'Sprache auswählen';
 
   @override
   String get languageChanged => 'Sprache Geändert';
@@ -3102,17 +3149,18 @@ class AppLocalizationsDe extends AppLocalizations {
       'Manuelle Ausrichtungshilfe nur zur Überprüfung. Bild ziehen oder Auto-Zentrierung verwenden.';
 
   @override
-  String get frontalShift => 'S: Frontale Verschiebung.';
+  String get frontalShift => 'S: Frontales Verschiebungsmuster.';
 
   @override
-  String get cerebralCirculation => 'Zerebrale Durchblutungsmuster.';
+  String get cerebralCirculation =>
+      'Historische Studien nach Velchover brachten dies mit zerebralen Durchblutungsmustern in Verbindung.';
 
   @override
-  String get middleTemporalShift => 'D: Mittel-temporale Verschiebung.';
+  String get middleTemporalShift => 'D: Mittel-temporales Verschiebungsmuster.';
 
   @override
   String get respiratoryCardiac =>
-      'Respiratorische und kardiale autonome Muster.';
+      'Historische Studien nach Velchover brachten dies mit respiratorischen und kardialen autonomen Mustern in Verbindung.';
 
   @override
   String get findings => 'Befunde:';
@@ -3172,13 +3220,13 @@ class AppLocalizationsDe extends AppLocalizations {
   String get reportAnwParametersTitle => 'Autonomer Nervenkranz (ANW)';
 
   @override
-  String get reportTonicStateLabel => 'Tonischer Zustand';
+  String get reportTonicStateLabel => 'Historisches Tonusmuster';
 
   @override
-  String get reportShiftDetectedTitle => 'Verschiebung erkannt';
+  String get reportShiftDetectedTitle => 'Historisches Verschiebungsmuster';
 
   @override
-  String get reportClinicalLabel => 'Klinisch';
+  String get reportClinicalLabel => 'Historischer Hinweis';
 
   @override
   String get reportConstrictionDetectedTitle => 'Konstriktion erkannt';
@@ -3244,4 +3292,60 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get ageGroupSenior60Plus => 'Senior (60+)';
+
+  @override
+  String get middleNasalShift => 'Mittel-nasales Verschiebungsmuster.';
+
+  @override
+  String get upperTemporalShift => 'Oberes temporales Verschiebungsmuster.';
+
+  @override
+  String get lowerTemporalShift => 'Unteres temporales Verschiebungsmuster.';
+
+  @override
+  String get basalShift => 'Basales Verschiebungsmuster.';
+
+  @override
+  String get vagusStellateAssociation =>
+      'Historische Studien nach Velchover brachten dies mit Hypofunktionsmustern des Nervus vagus oder des Ganglion stellatum in Verbindung.';
+
+  @override
+  String get venaCavaInferiorAssociation =>
+      'Historische Studien nach Velchover brachten dies mit hamodynamischen Storungsmustern der Vena cava inferior in Verbindung.';
+
+  @override
+  String get vertebralArteryAssociation =>
+      'Historische Studien nach Velchover brachten dies mit Durchblutungsmustern der Arteria vertebralis in Verbindung.';
+
+  @override
+  String get smallPelvisAssociation =>
+      'Historische Studien nach Velchover brachten dies mit Stauungsmustern im kleinen Becken in Verbindung.';
+
+  @override
+  String get openZoneOverlay => 'Zonenueberlagerung oeffnen';
+
+  @override
+  String get iris => 'Iris';
+
+  @override
+  String get chartOpacity => 'Diagrammtransparenz';
+
+  @override
+  String get irisSizeNotAvailable => 'Irisgroessendaten nicht verfuegbar';
+
+  @override
+  String get ratio => 'Verhaeltnis';
+
+  @override
+  String get reportRefPiRatio => 'Pupillen/Iris-Verhaeltnis: Normal 20-30%';
+
+  @override
+  String get reportRefEllipseness => 'Ellipsizitaet: Normal >95%';
+
+  @override
+  String get reportRefDecentralization => 'Dezentralisierung: Normal <5%';
+
+  @override
+  String get reportRefPupilSizeDiff =>
+      'Pupillengroesse Diff.: <2% Normal, 2-4% Mild, >4% Signifikant';
 }

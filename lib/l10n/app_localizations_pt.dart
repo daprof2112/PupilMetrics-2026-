@@ -2042,16 +2042,16 @@ class AppLocalizationsPt extends AppLocalizations {
   String get anwAtonic => 'Atônico';
 
   @override
-  String get anwTonicState => 'Estado Tônico';
+  String get anwTonicState => 'Padrao Tonico Historico';
 
   @override
-  String get anwParasympathotonic => 'Parassimpaticotônico';
+  String get anwParasympathotonic => 'Padrao parassimpaticotonico';
 
   @override
-  String get anwSympathotonicState => 'Simpaticotônico';
+  String get anwSympathotonicState => 'Padrao simpaticotonico';
 
   @override
-  String get anwShiftDetected => 'Deslocamento Detectado';
+  String get anwShiftDetected => 'Padrao Historico de Deslocamento';
 
   @override
   String get anwConstrictionDetected => 'Constrição Detectada';
@@ -2078,15 +2078,15 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get anwParasympathotonicDesc =>
-      'Sensibilidade liminar aumentada. Atividade reflexa acelerada. Funções secretoras/evacuativas GI aumentadas.';
+      'Observacoes historicas associaram isto a maior sensibilidade liminar, atividade reflexa acelerada e funcoes secretorias/evacuatorias gastrointestinais aumentadas.';
 
   @override
   String get anwSympathotonicDesc =>
-      'Sensibilidade liminar diminuída. Atividade reflexa desacelerada. Funções secretoras/evacuativas GI reduzidas.';
+      'Observacoes historicas associaram isto a menor sensibilidade liminar, atividade reflexa desacelerada e funcoes secretorias/evacuatorias gastrointestinais reduzidas.';
 
   @override
   String get anwMiddleTemporalShiftCardiac =>
-      'Sobrecargas do ventrículo esquerdo. Estresse cardíaco.';
+      'Estudos historicos segundo Velchover associaram isto a padroes de sobrecarga do ventriculo esquerdo e estresse cardiaco.';
 
   @override
   String get anwFrontalConstricted =>
@@ -2208,11 +2208,11 @@ class AppLocalizationsPt extends AppLocalizations {
       'Compara OD vs OS para detectar assimetrias.';
 
   @override
-  String get helpFeatureMlTitle => 'Melhoria ML';
+  String get helpFeatureMlTitle => 'Comparação ONNX CNN';
 
   @override
   String get helpFeatureMlDesc =>
-      'Modelo ResNet18 fornece medições secundárias.';
+      'O modelo ONNX CNN fornece medições secundárias para comparação.';
 
   @override
   String get helpKeyboardShortcuts => 'Atalhos de Teclado';
@@ -2293,6 +2293,53 @@ class AppLocalizationsPt extends AppLocalizations {
   String get helpIssuePdfSolution4 => 'Tente exportar TXT primeiro';
 
   @override
+  String get helpCaptureChecklistTitle => 'Checklist de Captura';
+
+  @override
+  String get helpCaptureChecklist1 =>
+      'Mantenha a pupila centralizada e totalmente visível no enquadramento.';
+
+  @override
+  String get helpCaptureChecklist2 =>
+      'Use iluminação uniforme e reduza brilho ou reflexos na córnea.';
+
+  @override
+  String get helpCaptureChecklist3 =>
+      'Mantenha distância semelhante do iriscópio para olho direito e esquerdo.';
+
+  @override
+  String get helpCaptureChecklist4 =>
+      'Refaça o foco ou capture novamente se a borda da pupila parecer suave ou borrada.';
+
+  @override
+  String get helpExportSettingsTitle => 'Configurações de Exportação';
+
+  @override
+  String get helpExportSettingsDesc =>
+      'Auto-salvar PDF pode salvar um relatório após a análise, Incluir Imagens controla se as fotos aparecem no PDF, e Comparação ONNX CNN adiciona valores comparativos aos relatórios.';
+
+  @override
+  String get helpHybridScoreTitle => 'Confiança e Grau Híbridos';
+
+  @override
+  String get helpHybridScoreDesc =>
+      'A confiança e o grau exibidos combinam qualidade geométrica clássica com concordância ML, refletindo a confiabilidade da medição e não um diagnóstico.';
+
+  @override
+  String get helpAnomalyGuideTitle => 'Como Ler Achatamentos e Protrusões';
+
+  @override
+  String get helpAnomalyGuideDesc =>
+      'Achatamentos indicam tração relativa para dentro e protrusões indicam tração para fora ao longo da borda pupilar; cada cartão mostra zona, magnitude e associação mapeada.';
+
+  @override
+  String get helpZoneOverlayGuideTitle => 'Sobreposição de Zonas';
+
+  @override
+  String get helpZoneOverlayGuideDesc =>
+      'Use a sobreposição de zonas para inspecionar visualmente as posições dos setores e conferir onde as anomalias detectadas ficam ao redor da pupila e da íris.';
+
+  @override
   String get helpContactSupportTip =>
       'Contate helpdesk@cnri.edu para assistência.';
 
@@ -2325,9 +2372,6 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get settingsShowZoneOverlay => 'Mostrar Sobreposição de Zonas';
-
-  @override
-  String get settingsAutoDetectPupil => 'Auto-detectar Pupila';
 
   @override
   String get settingsExportReports => 'EXPORTAÇÃO E RELATÓRIOS';
@@ -2375,6 +2419,9 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get languageSelectTitle => 'Selecionar Idioma';
+
+  @override
+  String get selectLanguage => 'Selecionar Idioma';
 
   @override
   String get languageChanged => 'Idioma Alterado';
@@ -3103,17 +3150,18 @@ class AppLocalizationsPt extends AppLocalizations {
       'Auxílio de alinhamento manual apenas para revisão. Arraste a imagem ou use Auto-centralizar.';
 
   @override
-  String get frontalShift => 'S: Desvio frontal.';
+  String get frontalShift => 'S: Padrao de deslocamento frontal.';
 
   @override
-  String get cerebralCirculation => 'Padrões de circulação cerebral.';
+  String get cerebralCirculation =>
+      'Estudos historicos segundo Velchover associaram isto a padroes de circulacao cerebral.';
 
   @override
-  String get middleTemporalShift => 'D: Desvio temporal médio.';
+  String get middleTemporalShift => 'D: Padrao de deslocamento medio-temporal.';
 
   @override
   String get respiratoryCardiac =>
-      'Padrões autonômicos respiratórios e cardíacos.';
+      'Estudos historicos segundo Velchover associaram isto a padroes autonomicos respiratorios e cardiacos.';
 
   @override
   String get findings => 'Achados:';
@@ -3174,13 +3222,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get reportAnwParametersTitle => 'Coroa nervosa autonoma (ANW)';
 
   @override
-  String get reportTonicStateLabel => 'Estado tonico';
+  String get reportTonicStateLabel => 'Padrao Tonico Historico';
 
   @override
-  String get reportShiftDetectedTitle => 'Deslocamento detectado';
+  String get reportShiftDetectedTitle => 'Padrao Historico de Deslocamento';
 
   @override
-  String get reportClinicalLabel => 'Clinico';
+  String get reportClinicalLabel => 'Nota Historica';
 
   @override
   String get reportConstrictionDetectedTitle => 'Constricao detectada';
@@ -3246,6 +3294,62 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get ageGroupSenior60Plus => 'Idoso (60+)';
+
+  @override
+  String get middleNasalShift => 'Padrao de deslocamento medio-nasal.';
+
+  @override
+  String get upperTemporalShift => 'Padrao de deslocamento temporal-superior.';
+
+  @override
+  String get lowerTemporalShift => 'Padrao de deslocamento temporal-inferior.';
+
+  @override
+  String get basalShift => 'Padrao de deslocamento basal.';
+
+  @override
+  String get vagusStellateAssociation =>
+      'Estudos historicos segundo Velchover associaram isto a padroes de hipofuncao do nervo vago ou do ganglio estrelado.';
+
+  @override
+  String get venaCavaInferiorAssociation =>
+      'Estudos historicos segundo Velchover associaram isto a padroes de disturbio hemodinamico na veia cava inferior.';
+
+  @override
+  String get vertebralArteryAssociation =>
+      'Estudos historicos segundo Velchover associaram isto a padroes de circulacao da arteria vertebral.';
+
+  @override
+  String get smallPelvisAssociation =>
+      'Estudos historicos segundo Velchover associaram isto a padroes congestivos na pelve menor.';
+
+  @override
+  String get openZoneOverlay => 'Abrir sobreposicao de zonas';
+
+  @override
+  String get iris => 'Iris';
+
+  @override
+  String get chartOpacity => 'Opacidade do grafico';
+
+  @override
+  String get irisSizeNotAvailable => 'Dados de tamanho da iris nao disponiveis';
+
+  @override
+  String get ratio => 'Proporcao';
+
+  @override
+  String get reportRefPiRatio => 'Relacao Pupila/Iris: Normal 20-30%';
+
+  @override
+  String get reportRefEllipseness => 'Elipticidade: Normal >95%';
+
+  @override
+  String get reportRefDecentralization => 'Descentralizacao: Normal <5%';
+
+  @override
+  String get reportRefPupilSizeDiff =>
+      'Dif. Tamanho Pupila: <2% Normal, 2-4% Leve, >4% Significativo';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -5283,16 +5387,16 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   String get anwAtonic => 'Atônico';
 
   @override
-  String get anwTonicState => 'Estado Tônico';
+  String get anwTonicState => 'Padrao Tonico Historico';
 
   @override
-  String get anwParasympathotonic => 'Parassimpaticotônico';
+  String get anwParasympathotonic => 'Padrao parassimpaticotonico';
 
   @override
-  String get anwSympathotonicState => 'Simpaticotônico';
+  String get anwSympathotonicState => 'Padrao simpaticotonico';
 
   @override
-  String get anwShiftDetected => 'Deslocamento Detectado';
+  String get anwShiftDetected => 'Padrao Historico de Deslocamento';
 
   @override
   String get anwConstrictionDetected => 'Constrição Detectada';
@@ -5319,15 +5423,15 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get anwParasympathotonicDesc =>
-      'Sensibilidade liminar aumentada. Atividade reflexa acelerada. Funções secretoras/evacuativas GI aumentadas.';
+      'Observacoes historicas associaram isto a maior sensibilidade liminar, atividade reflexa acelerada e funcoes secretorias/evacuatorias gastrointestinais aumentadas.';
 
   @override
   String get anwSympathotonicDesc =>
-      'Sensibilidade liminar diminuída. Atividade reflexa desacelerada. Funções secretoras/evacuativas GI reduzidas.';
+      'Observacoes historicas associaram isto a menor sensibilidade liminar, atividade reflexa desacelerada e funcoes secretorias/evacuatorias gastrointestinais reduzidas.';
 
   @override
   String get anwMiddleTemporalShiftCardiac =>
-      'Sobrecargas do ventrículo esquerdo. Estresse cardíaco.';
+      'Estudos historicos segundo Velchover associaram isto a padroes de sobrecarga do ventriculo esquerdo e estresse cardiaco.';
 
   @override
   String get anwFrontalConstricted =>
@@ -5449,11 +5553,11 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
       'Compara OD vs OS para detectar assimetrias.';
 
   @override
-  String get helpFeatureMlTitle => 'Melhoria ML';
+  String get helpFeatureMlTitle => 'Comparação ONNX CNN';
 
   @override
   String get helpFeatureMlDesc =>
-      'Modelo ResNet18 fornece medições secundárias.';
+      'O modelo ONNX CNN fornece medições secundárias para comparação.';
 
   @override
   String get helpKeyboardShortcuts => 'Atalhos de Teclado';
@@ -5534,6 +5638,53 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   String get helpIssuePdfSolution4 => 'Tente exportar TXT primeiro';
 
   @override
+  String get helpCaptureChecklistTitle => 'Checklist de Captura';
+
+  @override
+  String get helpCaptureChecklist1 =>
+      'Mantenha a pupila centralizada e totalmente visível no enquadramento.';
+
+  @override
+  String get helpCaptureChecklist2 =>
+      'Use iluminação uniforme e reduza brilho ou reflexos na córnea.';
+
+  @override
+  String get helpCaptureChecklist3 =>
+      'Mantenha distância semelhante do iriscópio para olho direito e esquerdo.';
+
+  @override
+  String get helpCaptureChecklist4 =>
+      'Refaça o foco ou capture novamente se a borda da pupila parecer suave ou borrada.';
+
+  @override
+  String get helpExportSettingsTitle => 'Configurações de Exportação';
+
+  @override
+  String get helpExportSettingsDesc =>
+      'Auto-salvar PDF pode salvar um relatório após a análise, Incluir Imagens controla se as fotos aparecem no PDF, e Comparação ONNX CNN adiciona valores comparativos aos relatórios.';
+
+  @override
+  String get helpHybridScoreTitle => 'Confiança e Grau Híbridos';
+
+  @override
+  String get helpHybridScoreDesc =>
+      'A confiança e o grau exibidos combinam qualidade geométrica clássica com concordância ML, refletindo a confiabilidade da medição e não um diagnóstico.';
+
+  @override
+  String get helpAnomalyGuideTitle => 'Como Ler Achatamentos e Protrusões';
+
+  @override
+  String get helpAnomalyGuideDesc =>
+      'Achatamentos indicam tração relativa para dentro e protrusões indicam tração para fora ao longo da borda pupilar; cada cartão mostra zona, magnitude e associação mapeada.';
+
+  @override
+  String get helpZoneOverlayGuideTitle => 'Sobreposição de Zonas';
+
+  @override
+  String get helpZoneOverlayGuideDesc =>
+      'Use a sobreposição de zonas para inspecionar visualmente as posições dos setores e conferir onde as anomalias detectadas ficam ao redor da pupila e da íris.';
+
+  @override
   String get helpContactSupportTip =>
       'Contate helpdesk@cnri.edu para assistência.';
 
@@ -5566,9 +5717,6 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get settingsShowZoneOverlay => 'Mostrar Sobreposição de Zonas';
-
-  @override
-  String get settingsAutoDetectPupil => 'Auto-detectar Pupila';
 
   @override
   String get settingsExportReports => 'EXPORTAÇÃO E RELATÓRIOS';
@@ -5616,6 +5764,9 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get languageSelectTitle => 'Selecionar Idioma';
+
+  @override
+  String get selectLanguage => 'Selecionar Idioma';
 
   @override
   String get languageChanged => 'Idioma Alterado';
@@ -6286,17 +6437,18 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
       'Auxílio de alinhamento manual apenas para revisão. Arraste a imagem ou use Auto-centralizar.';
 
   @override
-  String get frontalShift => 'S: Desvio frontal.';
+  String get frontalShift => 'S: Padrao de deslocamento frontal.';
 
   @override
-  String get cerebralCirculation => 'Padrões de circulação cerebral.';
+  String get cerebralCirculation =>
+      'Estudos historicos segundo Velchover associaram isto a padroes de circulacao cerebral.';
 
   @override
-  String get middleTemporalShift => 'D: Desvio temporal médio.';
+  String get middleTemporalShift => 'D: Padrao de deslocamento medio-temporal.';
 
   @override
   String get respiratoryCardiac =>
-      'Padrões autonômicos respiratórios e cardíacos.';
+      'Estudos historicos segundo Velchover associaram isto a padroes autonomicos respiratorios e cardiacos.';
 
   @override
   String get findings => 'Achados:';
@@ -6357,13 +6509,13 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   String get reportAnwParametersTitle => 'Coroa nervosa autonoma (ANW)';
 
   @override
-  String get reportTonicStateLabel => 'Estado tonico';
+  String get reportTonicStateLabel => 'Padrao Tonico Historico';
 
   @override
-  String get reportShiftDetectedTitle => 'Deslocamento detectado';
+  String get reportShiftDetectedTitle => 'Padrao Historico de Deslocamento';
 
   @override
-  String get reportClinicalLabel => 'Clinico';
+  String get reportClinicalLabel => 'Nota Historica';
 
   @override
   String get reportConstrictionDetectedTitle => 'Constricao detectada';
@@ -6429,4 +6581,60 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get ageGroupSenior60Plus => 'Idoso (60+)';
+
+  @override
+  String get middleNasalShift => 'Padrao de deslocamento medio-nasal.';
+
+  @override
+  String get upperTemporalShift => 'Padrao de deslocamento temporal-superior.';
+
+  @override
+  String get lowerTemporalShift => 'Padrao de deslocamento temporal-inferior.';
+
+  @override
+  String get basalShift => 'Padrao de deslocamento basal.';
+
+  @override
+  String get vagusStellateAssociation =>
+      'Estudos historicos segundo Velchover associaram isto a padroes de hipofuncao do nervo vago ou do ganglio estrelado.';
+
+  @override
+  String get venaCavaInferiorAssociation =>
+      'Estudos historicos segundo Velchover associaram isto a padroes de disturbio hemodinamico na veia cava inferior.';
+
+  @override
+  String get vertebralArteryAssociation =>
+      'Estudos historicos segundo Velchover associaram isto a padroes de circulacao da arteria vertebral.';
+
+  @override
+  String get smallPelvisAssociation =>
+      'Estudos historicos segundo Velchover associaram isto a padroes congestivos na pelve menor.';
+
+  @override
+  String get openZoneOverlay => 'Abrir sobreposicao de zonas';
+
+  @override
+  String get iris => 'Iris';
+
+  @override
+  String get chartOpacity => 'Opacidade do grafico';
+
+  @override
+  String get irisSizeNotAvailable => 'Dados de tamanho da iris nao disponiveis';
+
+  @override
+  String get ratio => 'Proporcao';
+
+  @override
+  String get reportRefPiRatio => 'Relacao Pupila/Iris: Normal 20-30%';
+
+  @override
+  String get reportRefEllipseness => 'Elipticidade: Normal >95%';
+
+  @override
+  String get reportRefDecentralization => 'Descentralizacao: Normal <5%';
+
+  @override
+  String get reportRefPupilSizeDiff =>
+      'Dif. Tamanho Pupila: <2% Normal, 2-4% Leve, >4% Significativo';
 }

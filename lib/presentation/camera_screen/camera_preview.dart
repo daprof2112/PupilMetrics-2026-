@@ -17,6 +17,7 @@ import 'package:image/image.dart' as imglib;
 import 'package:ai_eye_capture/utils/utils.dart';
 import 'package:ai_eye_capture/presentation/right_eye_screen/take_right_eye_photo_screen.dart';
 import 'package:ai_eye_capture/iris_detector.dart';
+import 'package:ai_eye_capture/l10n/app_localizations.dart';
 
 enum CameraMode {
   auto,    // Auto-capture with countdown
@@ -327,11 +328,12 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
 
   // ======== Crop screen ========
   Future<String?> _openCropper(Uint8List imageBytes) async {
+    final l10n = AppLocalizations.of(context)!;
     String? resultPath;
     await Navigator.of(context).push(
       MaterialPageRoute(
         builder: (_) => Scaffold(
-          appBar: AppBar(title: const Text('Crop (4:3)')),
+          appBar: AppBar(title: Text(l10n.crop43)),
           body: Stack(
             children: [
               Crop(
@@ -344,8 +346,8 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
                       resultPath = await _saveBytesToTemp(croppedImage);
                       if (!mounted) return;
                       showCustomSnackbar(
-                        title: 'Success',
-                        message: 'Image cropped successfully!',
+                        title: l10n.success,
+                        message: l10n.imageCroppedSuccess,
                         backgroundColor: Colors.green,
                       );
                       Navigator.of(context).pop();
@@ -354,8 +356,8 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
                       debugPrint('Crop failed: $cause');
                       if (!mounted) return;
                       showCustomSnackbar(
-                        title: 'Error',
-                        message: 'Failed to crop image. Please try again.',
+                        title: l10n.error,
+                        message: l10n.cropFailed,
                         backgroundColor: Colors.red,
                       );
                   }
@@ -380,11 +382,11 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
                           setState(() => _isCropping = true);
                           _cropController.crop();
                         },
-                        child: const Text('Crop'),
+                        child: Text(l10n.crop),
                       ),
                       ElevatedButton(
                         onPressed: () => Navigator.of(context).pop(),
-                        child: const Text('Cancel'),
+                        child: Text(l10n.cancel),
                       ),
                     ],
                   ),
@@ -476,6 +478,7 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
@@ -518,8 +521,8 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
                   final res = await ImageGallerySaverPlus.saveFile(cropped);
                   if (res['isSuccess'] == true) {
                     showCustomSnackbar(
-                      title: 'Saved! ✅',
-                      message: 'Image saved successfully in gallery',
+                      title: l10n.saved,
+                      message: l10n.imageSavedToGallery,
                       backgroundColor: Colors.green,
                     );
                   }
@@ -580,7 +583,7 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
                                   shape: BoxShape.circle,
                                 ),
                                 child: IconButton(
-                                  tooltip: 'Flash',
+                                  tooltip: l10n.flash,
                                   onPressed: () async {
                                     final next = _nextFlash(current);
                                     try {
@@ -613,13 +616,13 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            _buildCompactStatusIcon(Icons.visibility, _eyeDetected, 'Eye'),
+                            _buildCompactStatusIcon(Icons.visibility, _eyeDetected, l10n.eye),
                             const SizedBox(width: 12),
-                            _buildCompactStatusIcon(Icons.center_focus_strong, _isWellCentered, 'Center'),
+                            _buildCompactStatusIcon(Icons.center_focus_strong, _isWellCentered, l10n.center),
                             const SizedBox(width: 12),
-                            _buildCompactStatusIcon(Icons.wb_sunny, _hasGoodLighting, 'Light'),
+                            _buildCompactStatusIcon(Icons.wb_sunny, _hasGoodLighting, l10n.light),
                             const SizedBox(width: 12),
-                            _buildCompactStatusIcon(Icons.check_circle, _isStable, 'Ready'),
+                            _buildCompactStatusIcon(Icons.check_circle, _isStable, l10n.ready),
                           ],
                         ),
                       ),
@@ -652,7 +655,7 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
                               color: _mirrorFront ? Colors.amber : Colors.white,
                             ),
                             label: Text(
-                              _mirrorFront ? 'ON' : 'OFF',
+                              _mirrorFront ? l10n.on : l10n.off,
                               style: const TextStyle(fontSize: 9),
                             ),
                           ),
@@ -675,9 +678,9 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            const Text(
-                              'Exposure',
-                              style: TextStyle(color: Colors.white70, fontSize: 11),
+                            Text(
+                              l10n.exposure,
+                              style: const TextStyle(color: Colors.white70, fontSize: 11),
                             ),
                             SliderTheme(
                               data: SliderTheme.of(context).copyWith(
@@ -812,13 +815,14 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
   }
 
   String _getModeLabel() {
+    final l10n = AppLocalizations.of(context)!;
     switch (widget.cameraMode) {
       case CameraMode.auto:
-        return 'AUTO';
+        return l10n.auto;
       case CameraMode.manual:
-        return 'MANUAL';
+        return l10n.manual;
       case CameraMode.selfie:
-        return 'SELFIE';
+        return l10n.selfie;
     }
   }
 

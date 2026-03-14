@@ -13,6 +13,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:ai_eye_capture/models/patient_info.dart';
 import 'package:ai_eye_capture/l10n/app_localizations.dart';
 import 'package:ai_eye_capture/presentation/splash_screen/splash_screen.dart';
+import 'package:ai_eye_capture/presentation/scan_history_screen.dart';
 import 'package:ai_eye_capture/utils/app_branding.dart';
 import 'package:ai_eye_capture/utils/language_controller.dart';
 import 'package:ai_eye_capture/services/security_utils.dart';
@@ -252,15 +253,29 @@ class _MyAppState extends State<MyApp> {
             Locale('it'),
           ],
           builder: (context, child) {
+            final appContent = isDesktopPlatform
+                ? Column(
+                    children: [
+                      const WindowsTitleBar(),
+                      Expanded(child: child ?? const SizedBox.shrink()),
+                    ],
+                  )
+                : (child ?? const SizedBox.shrink());
+
             if (isDesktopPlatform) {
-              return Column(
-                children: [
-                  const WindowsTitleBar(),
-                  Expanded(child: child ?? const SizedBox.shrink()),
-                ],
+              return CallbackShortcuts(
+                bindings: <ShortcutActivator, VoidCallback>{
+                  const SingleActivator(LogicalKeyboardKey.f11): _toggleDesktopFullscreen,
+                  const SingleActivator(LogicalKeyboardKey.keyH, control: true): _openScanHistory,
+                  const SingleActivator(LogicalKeyboardKey.escape): _handleEscape,
+                },
+                child: Focus(
+                  autofocus: true,
+                  child: appContent,
+                ),
               );
             }
-            return child ?? const SizedBox.shrink();
+            return appContent;
           },
           home: !_licenseChecked
               ? const _LicenseCheckScreenContent()
@@ -275,6 +290,38 @@ class _MyAppState extends State<MyApp> {
 
 
 // ============================================================================
+void _openScanHistory() {
+  final nav = Get.key.currentState;
+  if (nav == null) return;
+
+  nav.push(
+    MaterialPageRoute(builder: (_) => const ScanHistoryScreen()),
+  );
+}
+
+Future<void> _toggleDesktopFullscreen() async {
+  if (!isDesktopPlatform) return;
+
+  try {
+    final isFullScreen = await windowManager.isFullScreen();
+    await windowManager.setFullScreen(!isFullScreen);
+  } catch (e) {
+    await logToFile('Fullscreen shortcut error: $e');
+  }
+}
+
+void _handleEscape() {
+  if (Get.isDialogOpen ?? false) {
+    Get.back();
+    return;
+  }
+
+  final nav = Get.key.currentState;
+  if (nav?.canPop() ?? false) {
+    nav!.maybePop();
+  }
+}
+
 // NOTE: Title bar is now added via GetMaterialApp builder for ALL screens
 // ============================================================================
 
@@ -318,9 +365,9 @@ class _LicenseCheckScreenContent extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 32),
-            const Text(
-              'PupilMetrics Research',
-              style: TextStyle(
+            Text(
+              '${AppLocalizations.of(context)!.windowTitle} ${AppLocalizations.of(context)!.aboutResearchEdition}',
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 24,
                 fontWeight: FontWeight.bold,

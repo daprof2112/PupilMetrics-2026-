@@ -2020,16 +2020,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get anwAtonic => 'Atonic';
 
   @override
-  String get anwTonicState => 'Tonic State';
+  String get anwTonicState => 'Historical Tone Pattern';
 
   @override
-  String get anwParasympathotonic => 'Parasympathotonic';
+  String get anwParasympathotonic => 'Parasympathotonic pattern';
 
   @override
-  String get anwSympathotonicState => 'Sympathotonic';
+  String get anwSympathotonicState => 'Sympathotonic pattern';
 
   @override
-  String get anwShiftDetected => 'Shift Detected';
+  String get anwShiftDetected => 'Historical Shift Pattern';
 
   @override
   String get anwConstrictionDetected => 'Constriction Detected';
@@ -2055,15 +2055,15 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get anwParasympathotonicDesc =>
-      'Liminal sensitivity increased. Reflex activity accelerated. GI secretory/evacuation functions heightened.';
+      'Historical observations linked this to increased liminal sensitivity. Reflex activity accelerated. GI secretory/evacuation functions heightened.';
 
   @override
   String get anwSympathotonicDesc =>
-      'Liminal sensitivity decreased. Reflex activity decelerated. GI secretory/evacuation functions reduced.';
+      'Historical observations linked this to decreased liminal sensitivity. Reflex activity decelerated. GI secretory/evacuation functions reduced.';
 
   @override
   String get anwMiddleTemporalShiftCardiac =>
-      'Overloads of the left ventricle. Cardiac stress.';
+      'Historical studies according to Velchover linked this to left-ventricular overload patterns and cardiac stress.';
 
   @override
   String get anwFrontalConstricted =>
@@ -2185,11 +2185,11 @@ class AppLocalizationsEn extends AppLocalizations {
       'Compares OD vs OS to detect asymmetries.';
 
   @override
-  String get helpFeatureMlTitle => 'ML Enhancement';
+  String get helpFeatureMlTitle => 'ONNX CNN Comparison';
 
   @override
   String get helpFeatureMlDesc =>
-      'ResNet18 model provides secondary measurements.';
+      'ONNX CNN model provides secondary measurements for comparison.';
 
   @override
   String get helpKeyboardShortcuts => 'Keyboard Shortcuts';
@@ -2270,6 +2270,53 @@ class AppLocalizationsEn extends AppLocalizations {
   String get helpIssuePdfSolution4 => 'Try TXT export first';
 
   @override
+  String get helpCaptureChecklistTitle => 'Capture Checklist';
+
+  @override
+  String get helpCaptureChecklist1 =>
+      'Keep the pupil centered and fully visible inside the frame.';
+
+  @override
+  String get helpCaptureChecklist2 =>
+      'Use even lighting and reduce glare or reflections on the cornea.';
+
+  @override
+  String get helpCaptureChecklist3 =>
+      'Keep similar iriscope distance for right and left eyes.';
+
+  @override
+  String get helpCaptureChecklist4 =>
+      'Refocus or retake if the pupil edge looks soft or blurred.';
+
+  @override
+  String get helpExportSettingsTitle => 'Export Settings';
+
+  @override
+  String get helpExportSettingsDesc =>
+      'Auto-save PDF can save a report after analysis, Include Images controls whether eye photos appear in the PDF, and Show ML Comparison adds the ONNX CNN comparison values to reports.';
+
+  @override
+  String get helpHybridScoreTitle => 'Hybrid Confidence & Grade';
+
+  @override
+  String get helpHybridScoreDesc =>
+      'Displayed confidence and grade combine classical geometry quality with ML agreement, so they reflect measurement reliability rather than a diagnosis.';
+
+  @override
+  String get helpAnomalyGuideTitle => 'Reading Flattenings & Protrusions';
+
+  @override
+  String get helpAnomalyGuideDesc =>
+      'Flattenings indicate relative inward drawing and protrusions indicate outward drawing along the pupil boundary; each card lists the zone, magnitude, and mapped association.';
+
+  @override
+  String get helpZoneOverlayGuideTitle => 'Zone Overlay';
+
+  @override
+  String get helpZoneOverlayGuideDesc =>
+      'Use the zone overlay to inspect sector positions visually and cross-check where detected anomalies fall around the pupil and iris.';
+
+  @override
   String get helpContactSupportTip =>
       'Contact helpdesk@cnri.edu for assistance.';
 
@@ -2302,9 +2349,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsShowZoneOverlay => 'Show Zone Overlay';
-
-  @override
-  String get settingsAutoDetectPupil => 'Auto-detect Pupil';
 
   @override
   String get settingsExportReports => 'EXPORT & REPORTS';
@@ -2352,6 +2396,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get languageSelectTitle => 'Select Language';
+
+  @override
+  String get selectLanguage => 'Select Language';
 
   @override
   String get languageChanged => 'Language Changed';
@@ -3074,17 +3121,18 @@ class AppLocalizationsEn extends AppLocalizations {
       'Manual alignment aid for review only (post-capture). Drag image or use Auto-center.';
 
   @override
-  String get frontalShift => 'S: Frontal shift.';
+  String get frontalShift => 'S: Frontal shift pattern.';
 
   @override
-  String get cerebralCirculation => 'Cerebral circulation patterns.';
+  String get cerebralCirculation =>
+      'Historical studies according to Velchover linked this to cerebral circulation patterns.';
 
   @override
-  String get middleTemporalShift => 'D: Middle-temporal shift.';
+  String get middleTemporalShift => 'D: Middle-temporal shift pattern.';
 
   @override
   String get respiratoryCardiac =>
-      'Respiratory and cardiac autonomic patterns.';
+      'Historical studies according to Velchover linked this to respiratory and cardiac autonomic patterns.';
 
   @override
   String get findings => 'Findings:';
@@ -3144,13 +3192,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get reportAnwParametersTitle => 'Autonomic Nerve Wreath (ANW)';
 
   @override
-  String get reportTonicStateLabel => 'Tonic State';
+  String get reportTonicStateLabel => 'Historical Tone Pattern';
 
   @override
-  String get reportShiftDetectedTitle => 'Shift Detected';
+  String get reportShiftDetectedTitle => 'Historical Shift Pattern';
 
   @override
-  String get reportClinicalLabel => 'Clinical';
+  String get reportClinicalLabel => 'Historical Note';
 
   @override
   String get reportConstrictionDetectedTitle => 'Constriction Detected';
@@ -3216,4 +3264,60 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get ageGroupSenior60Plus => 'Senior (60+)';
+
+  @override
+  String get middleNasalShift => 'Middle-nasal shift pattern.';
+
+  @override
+  String get upperTemporalShift => 'Upper-temporal shift pattern.';
+
+  @override
+  String get lowerTemporalShift => 'Lower-temporal shift pattern.';
+
+  @override
+  String get basalShift => 'Basal shift pattern.';
+
+  @override
+  String get vagusStellateAssociation =>
+      'Historical studies according to Velchover linked this to hypofunction patterns of the vagus nerve or stellate ganglion.';
+
+  @override
+  String get venaCavaInferiorAssociation =>
+      'Historical studies according to Velchover linked this to hemodynamic disturbance patterns in the inferior vena cava.';
+
+  @override
+  String get vertebralArteryAssociation =>
+      'Historical studies according to Velchover linked this to vertebral artery circulation patterns.';
+
+  @override
+  String get smallPelvisAssociation =>
+      'Historical studies according to Velchover linked this to congestive patterns in the small pelvis.';
+
+  @override
+  String get openZoneOverlay => 'Open zone overlay';
+
+  @override
+  String get iris => 'Iris';
+
+  @override
+  String get chartOpacity => 'Chart opacity';
+
+  @override
+  String get irisSizeNotAvailable => 'Iris size data not available';
+
+  @override
+  String get ratio => 'Ratio';
+
+  @override
+  String get reportRefPiRatio => 'Pupil/Iris Ratio: Normal 20-30%';
+
+  @override
+  String get reportRefEllipseness => 'Ellipseness: Normal >95%';
+
+  @override
+  String get reportRefDecentralization => 'Decentralization: Normal <5%';
+
+  @override
+  String get reportRefPupilSizeDiff =>
+      'Pupil Size Diff: <2% Normal, 2-4% Mild, >4% Significant';
 }

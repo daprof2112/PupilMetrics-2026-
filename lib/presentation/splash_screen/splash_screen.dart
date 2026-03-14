@@ -215,6 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   /// Show dialog when trial has expired
   void _showTrialExpiredDialog() {
+    final l10n = AppLocalizations.of(context);
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -223,13 +224,13 @@ class _HomeScreenState extends State<HomeScreen> {
           borderRadius: BorderRadius.circular(16),
           side: const BorderSide(color: Colors.orange, width: 2),
         ),
-        title: const Row(
+        title: Row(
           children: [
-            Icon(Icons.timer_off, color: Colors.orange, size: 28),
-            SizedBox(width: 12),
+            const Icon(Icons.timer_off, color: Colors.orange, size: 28),
+            const SizedBox(width: 12),
             Text(
-              'Trial Period Ended',
-              style: TextStyle(color: Colors.white, fontSize: 18),
+              l10n.trialExpiredTitle,
+              style: const TextStyle(color: Colors.white, fontSize: 18),
             ),
           ],
         ),
@@ -237,9 +238,9 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Your 14-day trial has ended. To continue analyzing iris images, please purchase a license.',
-              style: TextStyle(color: Colors.white70, fontSize: 14, height: 1.5),
+            Text(
+              l10n.trialExpiredMessage,
+              style: const TextStyle(color: Colors.white70, fontSize: 14, height: 1.5),
             ),
             const SizedBox(height: 16),
             Container(
@@ -249,17 +250,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(color: Colors.green.withOpacity(0.3)),
               ),
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'You can still:',
-                    style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 13),
+                    l10n.trialExpiredCanStill,
+                    style: const TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 13),
                   ),
-                  SizedBox(height: 8),
-                  Text('• View your previous analyses', style: TextStyle(color: Colors.white60, fontSize: 13)),
-                  Text('• Export existing reports', style: TextStyle(color: Colors.white60, fontSize: 13)),
-                  Text('• Access scan history', style: TextStyle(color: Colors.white60, fontSize: 13)),
+                  const SizedBox(height: 8),
+                  Text('• ${l10n.trialExpiredViewAnalyses}', style: const TextStyle(color: Colors.white60, fontSize: 13)),
+                  Text('• ${l10n.trialExpiredExportReports}', style: const TextStyle(color: Colors.white60, fontSize: 13)),
+                  Text('• ${l10n.trialExpiredAccessHistory}', style: const TextStyle(color: Colors.white60, fontSize: 13)),
                 ],
               ),
             ),
@@ -268,7 +269,7 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Maybe Later', style: TextStyle(color: Colors.white54)),
+            child: Text(l10n.trialExpiredMaybeLater, style: const TextStyle(color: Colors.white54)),
           ),
           ElevatedButton.icon(
             onPressed: () {
@@ -276,7 +277,7 @@ class _HomeScreenState extends State<HomeScreen> {
               _openLicenseDialog();
             },
             icon: const Icon(Icons.key, size: 18),
-            label: const Text('Enter License Key'),
+            label: Text(l10n.licenseEnterKeyTitle),
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFF00D9FF),
               foregroundColor: Colors.black,
@@ -422,12 +423,14 @@ class _HomeScreenState extends State<HomeScreen> {
   // ============================================================
 
   Widget _buildLicenseStatusWidget() {
+    final l10n = AppLocalizations.of(context);
+
     if (!_licenseLoaded) {
       return _buildLicenseCard(
         icon: Icons.hourglass_empty,
         iconColor: Colors.grey,
-        title: 'License',
-        subtitle: 'Loading...',
+        title: l10n.aboutLicense,
+        subtitle: l10n.licenseLoading,
         subtitleColor: Colors.grey,
         showButton: false,
       );
@@ -447,11 +450,11 @@ class _HomeScreenState extends State<HomeScreen> {
       return _buildLicenseCard(
         icon: Icons.rocket_launch,
         iconColor: isExpiringSoon ? Colors.orange : Colors.green,
-        title: 'Free Trial',
-        subtitle: '$days days remaining',
+        title: l10n.licenseFreeTrial,
+        subtitle: l10n.licenseDaysRemaining(days),
         subtitleColor: isExpiringSoon ? Colors.orange : Colors.green,
         showButton: true,
-        buttonText: 'Upgrade',
+        buttonText: l10n.upgrade,
         buttonColor: const Color(0xFF00D9FF),
       );
     }
@@ -461,28 +464,28 @@ class _HomeScreenState extends State<HomeScreen> {
       return _buildLicenseCard(
         icon: Icons.timer_off,
         iconColor: Colors.orange,
-        title: 'Trial Ended',
-        subtitle: 'Enter license to continue',
+        title: l10n.licenseTrialEnded,
+        subtitle: l10n.licenseEnterToContinue,
         subtitleColor: Colors.orange,
         showButton: true,
-        buttonText: 'Activate',
+        buttonText: l10n.licenseActivate,
         buttonColor: Colors.orange,
       );
     }
 
     // Valid full license
     if (license.isValid) {
-      final typeText = switch (license.type) {
-        LicenseType.standard => 'Standard',
-        LicenseType.professional => 'Professional',
-        LicenseType.enterprise => 'Enterprise',
-        _ => 'Licensed',
+      final title = switch (license.type) {
+        LicenseType.standard => l10n.licenseStandard,
+        LicenseType.professional => l10n.licenseProfessional,
+        LicenseType.enterprise => l10n.licenseEnterprise,
+        _ => l10n.licenseLicensed,
       };
       return _buildLicenseCard(
         icon: Icons.verified,
         iconColor: Colors.green,
-        title: '$typeText License',
-        subtitle: license.registeredTo ?? 'Active',
+        title: title,
+        subtitle: license.registeredTo ?? l10n.licenseActive,
         subtitleColor: Colors.green,
         showButton: false,
       );
@@ -493,6 +496,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildWelcomeCard() {
+    final l10n = AppLocalizations.of(context);
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(16),
@@ -514,18 +518,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: const Icon(Icons.rocket_launch, color: Color(0xFF00D9FF), size: 24),
               ),
               const SizedBox(width: 12),
-              const Expanded(
+              Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Welcome to PupilMetrics!',
-                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15),
+                      l10n.licenseWelcome,
+                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15),
                     ),
-                    SizedBox(height: 2),
+                    const SizedBox(height: 2),
                     Text(
-                      '14-day free trial • Full features',
-                      style: TextStyle(color: Color(0xFF00D9FF), fontSize: 13),
+                      l10n.licenseTrialFeatures,
+                      style: const TextStyle(color: Color(0xFF00D9FF), fontSize: 13),
                     ),
                   ],
                 ),
@@ -541,8 +545,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     await LicenseManager().checkLicense();
                     _loadLicenseStatus();
                     Get.snackbar(
-                      'Trial Started!',
-                      'Enjoy 14 days of full access',
+                      l10n.trialStartedSnackbar,
+                      l10n.trialStartedMessage,
                       backgroundColor: Colors.green,
                       colorText: Colors.white,
                       snackPosition: SnackPosition.BOTTOM,
@@ -553,7 +557,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     side: const BorderSide(color: Color(0xFF00D9FF)),
                     padding: const EdgeInsets.symmetric(vertical: 12),
                   ),
-                  child: const Text('Start Free Trial'),
+                  child: Text(l10n.licenseStartTrial),
                 ),
               ),
               const SizedBox(width: 12),
@@ -565,7 +569,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     foregroundColor: Colors.black,
                     padding: const EdgeInsets.symmetric(vertical: 12),
                   ),
-                  child: const Text('Enter License'),
+                  child: Text(l10n.licenseEnterKey),
                 ),
               ),
             ],
@@ -613,7 +617,7 @@ class _HomeScreenState extends State<HomeScreen> {
             TextButton(
               onPressed: _openLicenseDialog,
               child: Text(
-                buttonText ?? 'Manage',
+                buttonText ?? AppLocalizations.of(context).aboutManageLicense,
                 style: TextStyle(color: buttonColor ?? const Color(0xFF00D9FF), fontWeight: FontWeight.bold),
               ),
             ),

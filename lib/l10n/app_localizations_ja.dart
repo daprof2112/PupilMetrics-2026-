@@ -1984,16 +1984,16 @@ class AppLocalizationsJa extends AppLocalizations {
   String get anwAtonic => '弛緩性';
 
   @override
-  String get anwTonicState => '緊張状態';
+  String get anwTonicState => '歴史的トーンパターン';
 
   @override
-  String get anwParasympathotonic => '副交感神経優位';
+  String get anwParasympathotonic => '副交感神経優位パターン';
 
   @override
-  String get anwSympathotonicState => '交感神経優位';
+  String get anwSympathotonicState => '交感神経優位パターン';
 
   @override
-  String get anwShiftDetected => '偏位検出';
+  String get anwShiftDetected => '歴史的シフトパターン';
 
   @override
   String get anwConstrictionDetected => '狭窄検出';
@@ -2017,13 +2017,16 @@ class AppLocalizationsJa extends AppLocalizations {
   String get functionalFrustration => '交感神経系と副交感神経系の相関における機能的フラストレーション。';
 
   @override
-  String get anwParasympathotonicDesc => '閾値感受性が上昇。反射活動が加速。消化管分泌・排泄機能が亢進。';
+  String get anwParasympathotonicDesc =>
+      '歴史的観察では、これを閾値感受性の上昇、反射活動の加速、胃腸の分泌・排泄機能の亢進と関連づけています。';
 
   @override
-  String get anwSympathotonicDesc => '閾値感受性が低下。反射活動が減速。消化管分泌・排泄機能が低下。';
+  String get anwSympathotonicDesc =>
+      '歴史的観察では、これを閾値感受性の低下、反射活動の減速、胃腸の分泌・排泄機能の低下と関連づけています。';
 
   @override
-  String get anwMiddleTemporalShiftCardiac => '左心室の過負荷。心臓ストレス。';
+  String get anwMiddleTemporalShiftCardiac =>
+      'Velchoverによる歴史的研究では、これを左心室負荷パターンと心臓ストレスに関連づけています。';
 
   @override
   String get anwFrontalConstricted => '瞳孔帯の前頭部が狭窄しています。';
@@ -2131,10 +2134,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get helpFeatureBilateralDesc => 'ODとOSを比較して非対称性を検出します。';
 
   @override
-  String get helpFeatureMlTitle => 'ML強化';
+  String get helpFeatureMlTitle => 'ONNX CNN比較';
 
   @override
-  String get helpFeatureMlDesc => 'ResNet18モデルが二次測定を提供します。';
+  String get helpFeatureMlDesc => 'ONNX CNNモデルが比較用の補助測定値を提供します。';
 
   @override
   String get helpKeyboardShortcuts => 'キーボードショートカット';
@@ -2215,6 +2218,49 @@ class AppLocalizationsJa extends AppLocalizations {
   String get helpIssuePdfSolution4 => 'まずTXTエクスポートを試す';
 
   @override
+  String get helpCaptureChecklistTitle => '撮影チェックリスト';
+
+  @override
+  String get helpCaptureChecklist1 => '瞳孔が中央にあり、フレーム内で完全に見えていることを確認します。';
+
+  @override
+  String get helpCaptureChecklist2 => '均一な照明を使い、角膜上のまぶしさや反射を減らします。';
+
+  @override
+  String get helpCaptureChecklist3 => '右眼と左眼でアイリスコープ距離をできるだけ揃えます。';
+
+  @override
+  String get helpCaptureChecklist4 => '瞳孔縁がぼやけて見える場合は再フォーカスまたは再撮影します。';
+
+  @override
+  String get helpExportSettingsTitle => 'エクスポート設定';
+
+  @override
+  String get helpExportSettingsDesc =>
+      'PDF自動保存は解析後にレポートを保存でき、画像を含めるはPDF内の眼画像を制御し、ONNX CNN比較は比較値をレポートに追加します。';
+
+  @override
+  String get helpHybridScoreTitle => 'ハイブリッド信頼度とグレード';
+
+  @override
+  String get helpHybridScoreDesc =>
+      '表示される信頼度とグレードは古典的幾何品質とML一致度を組み合わせたもので、診断ではなく測定信頼性を示します。';
+
+  @override
+  String get helpAnomalyGuideTitle => '扁平化と突出の見方';
+
+  @override
+  String get helpAnomalyGuideDesc =>
+      '扁平化は瞳孔境界の相対的な内向き変化、突出は外向き変化を示します。各カードにはゾーン、程度、対応づけられた関連情報が表示されます。';
+
+  @override
+  String get helpZoneOverlayGuideTitle => 'ゾーンオーバーレイ';
+
+  @override
+  String get helpZoneOverlayGuideDesc =>
+      'ゾーンオーバーレイを使うと、瞳孔と虹彩の周囲で検出された異常がどのセクターに位置するかを視覚的に確認できます。';
+
+  @override
   String get helpContactSupportTip => 'サポートはhelpdesk@cnri.eduまでお問い合わせください。';
 
   @override
@@ -2246,9 +2292,6 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get settingsShowZoneOverlay => 'ゾーンオーバーレイを表示';
-
-  @override
-  String get settingsAutoDetectPupil => '瞳孔を自動検出';
 
   @override
   String get settingsExportReports => 'エクスポートとレポート';
@@ -2296,6 +2339,9 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get languageSelectTitle => '言語を選択';
+
+  @override
+  String get selectLanguage => '言語を選択';
 
   @override
   String get languageChanged => '言語が変更されました';
@@ -3001,16 +3047,17 @@ class AppLocalizationsJa extends AppLocalizations {
   String get manualAlignmentAid => 'レビュー専用の手動位置合わせ補助。画像をドラッグまたは自動中心合わせを使用。';
 
   @override
-  String get frontalShift => 'S：前頭部シフト';
+  String get frontalShift => 'S: 前頭シフトパターン。';
 
   @override
-  String get cerebralCirculation => '脳循環パターン。';
+  String get cerebralCirculation => 'Velchoverによる歴史的研究では、これを脳循環パターンに関連づけています。';
 
   @override
-  String get middleTemporalShift => 'D：中側頭部シフト';
+  String get middleTemporalShift => 'D: 中側頭シフトパターン。';
 
   @override
-  String get respiratoryCardiac => '呼吸器・心臓自律神経パターン。';
+  String get respiratoryCardiac =>
+      'Velchoverによる歴史的研究では、これを呼吸器および心臓の自律神経パターンに関連づけています。';
 
   @override
   String get findings => '所見：';
@@ -3067,13 +3114,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get reportAnwParametersTitle => '自律神経輪（ANW）';
 
   @override
-  String get reportTonicStateLabel => '緊張状態';
+  String get reportTonicStateLabel => '歴史的トーンパターン';
 
   @override
-  String get reportShiftDetectedTitle => '偏位検出';
+  String get reportShiftDetectedTitle => '歴史的シフトパターン';
 
   @override
-  String get reportClinicalLabel => '臨床';
+  String get reportClinicalLabel => '歴史的注記';
 
   @override
   String get reportConstrictionDetectedTitle => '収縮検出';
@@ -3138,4 +3185,59 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get ageGroupSenior60Plus => '高齢者 (60+)';
+
+  @override
+  String get middleNasalShift => '中鼻側シフトパターン。';
+
+  @override
+  String get upperTemporalShift => '上側頭シフトパターン。';
+
+  @override
+  String get lowerTemporalShift => '下側頭シフトパターン。';
+
+  @override
+  String get basalShift => '基底シフトパターン。';
+
+  @override
+  String get vagusStellateAssociation =>
+      'Velchoverによる歴史的研究では、これを迷走神経または星状神経節の機能低下パターンに関連づけています。';
+
+  @override
+  String get venaCavaInferiorAssociation =>
+      'Velchoverによる歴史的研究では、これを下大静脈の血行動態障害パターンに関連づけています。';
+
+  @override
+  String get vertebralArteryAssociation =>
+      'Velchoverによる歴史的研究では、これを椎骨動脈循環パターンに関連づけています。';
+
+  @override
+  String get smallPelvisAssociation =>
+      'Velchoverによる歴史的研究では、これを小骨盤のうっ血パターンに関連づけています。';
+
+  @override
+  String get openZoneOverlay => 'ゾーンオーバーレイを開く';
+
+  @override
+  String get iris => '虹彩';
+
+  @override
+  String get chartOpacity => 'チャートの不透明度';
+
+  @override
+  String get irisSizeNotAvailable => '虹彩サイズデータが利用できません';
+
+  @override
+  String get ratio => '比率';
+
+  @override
+  String get reportRefPiRatio => '瞳孔/虹彩比: 正常 20-30%';
+
+  @override
+  String get reportRefEllipseness => '楕円度: 正常 >95%';
+
+  @override
+  String get reportRefDecentralization => '脱中心: 正常 <5%';
+
+  @override
+  String get reportRefPupilSizeDiff => '瞳孔サイズ差: <2% 正常, 2-4% 軽度, >4% 重要';
 }

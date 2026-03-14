@@ -1,24 +1,20 @@
 {
   "@@locale": "es",
-
   "appTitle": "CNRI Captura Ocular",
   "analyzeButton": "Analizar",
   "plrModes": "Modos PLR",
   "captureInstructions": "Posicione el ojo dentro del círculo guía",
   "scanHistory": "Historial de Escaneos",
-
   "selectCameraMode": "Seleccionar Modo de Cámara",
   "loadFromGallery": "Cargar desde Galería",
   "rightEyePhoto": "Foto del Ojo Derecho",
   "leftEyePhoto": "Foto del Ojo Izquierdo",
-
   "autoCapture": "Captura Automática",
   "autoCaptureDesc": "Detección ocular + captura automática de 5 segundos",
   "manualCapture": "Captura Manual",
   "manualCaptureDesc": "Detección ocular + captura manual (cámara trasera)",
   "selfieMode": "Modo Selfie",
   "selfieModeDesc": "Detección ocular + captura automática de 5 seg (cámara frontal)",
-
   "plrVideoRear": "Video PLR (Trasera)",
   "plrVideoRearDesc": "Cámara trasera • captura de 10 seg",
   "plrVideoSelfie": "Video PLR (Selfie)",
@@ -27,7 +23,6 @@
   "frontCamera": "Cámara Frontal",
   "rearCamera": "Cámara Trasera",
   "selectEyeToAssess": "Seleccione qué ojo evaluar",
-
   "rightEyeOD": "Ojo Derecho (OD)",
   "leftEyeOS": "Ojo Izquierdo (OS)",
   "recordPlrRightEye": "Grabar PLR del ojo derecho",
@@ -37,13 +32,11 @@
   "bothEyes": "Ambos Ojos",
   "loadBothEyesDesc": "Cargar ojo derecho, luego izquierdo",
   "selectEyeImageFromDevice": "Seleccione una imagen ocular de su dispositivo",
-
   "selectRightEyeFirst": "Seleccione primero la imagen del ojo DERECHO (OD)",
   "rightEyeSaved": "Ojo derecho guardado. Ahora seleccione la imagen del ojo IZQUIERDO (OS)",
   "cancelledNoRightEye": "Cancelado - no se seleccionó ojo derecho",
   "cancelledNoLeftEye": "Cancelado - no se seleccionó ojo izquierdo",
   "errorLoadingImages": "Error al cargar imágenes: {error}",
-
   "crop43": "Recortar (4:3)",
   "success": "Éxito",
   "imageCroppedSuccess": "¡Imagen recortada exitosamente!",
@@ -53,11 +46,10 @@
   "cancel": "Cancelar",
   "saved": "¡Guardado! ✅",
   "imageSavedToGallery": "Imagen guardada exitosamente en la galería",
-
   "exposure": "Exposición",
   "flash": "Flash",
   "eye": "Ojo",
-  "center": "Centro",
+  "center": "centro",
   "light": "Luz",
   "ready": "Listo",
   "on": "SÍ",
@@ -66,7 +58,6 @@
   "manual": "MANUAL",
   "selfie": "SELFIE",
   "pupil": "PUPILA",
-
   "plrHistory": "Historial PLR",
   "searchByName": "Buscar por nombre...",
   "totalScans": "Total Escaneos",
@@ -90,11 +81,10 @@
   "plrDetected": "PLR Detectado",
   "confidence": "Confianza",
   "grade": "Grado",
-  "close": "Cerrar",
+  "close": "cerrar",
   "yes": "Sí",
   "no": "No",
   "na": "N/D",
-
   "takeLeftEyePhoto": "Tomar Foto del Ojo Izquierdo",
   "takeRightEyePhoto": "Tomar Foto del Ojo Derecho",
   "nowTakingLeftEye": "Ahora tomando ojo IZQUIERDO (OS)",
@@ -113,7 +103,6 @@
   "rightEyePhotoMissing": "¡Falta foto del ojo derecho!",
   "patientInfoMissingRestart": "Falta información del paciente. Por favor reinicie.",
   "exitApp": "Salir de la App",
-
   "tipsForBestResults": "CONSEJOS PARA MEJORES RESULTADOS",
   "followGuidelinesForQuality": "Siga estas pautas para una calidad de imagen óptima",
   "cameraDistance": "Distancia de la Cámara",
@@ -131,7 +120,6 @@
   "forClinicalUseCnri": "Para uso clínico con CNRI (cnri.edu)",
   "noMedicalDiagnosis": "No proporciona diagnóstico médico",
   "eyeWideOpenClear": "Asegúrese de que su ojo esté bien abierto y la imagen sea clara",
-
   "personalInfo": "Información Personal",
   "personInformation": "Información de la Persona",
   "enterPersonDetails": "Ingrese los Datos de la Persona",
@@ -162,7 +150,6 @@
   "partialLeftHandedness": "Zurdería parcial",
   "retrainedLeftHandedness": "Zurdería reentrenada",
   "bilateralUseBothHands": "Uso bilateral de ambas manos",
-
   "splashTitle": "PupilMetrics Captura Ocular",
   "splashDeveloper": "Desarrollador del Programa - Bryan K. Marcia, Ph.D.",
   "researchEducationalTool": "Herramienta de Investigación/Educación",
@@ -177,7 +164,6 @@
   "researchDisclaimerAcknowledge": "Al continuar, usted reconoce que esta es una herramienta de investigación y no debe usarse para decisiones médicas.",
   "researchDisclaimerWarning": "Esta aplicación es SOLO para propósitos de INVESTIGACIÓN y EDUCACIÓN.",
   "iUnderstand": "Entiendo",
-
   "plrAnalysisTest": "Prueba de Análisis PLR",
   "checkingVideoFile": "Verificando archivo de video...",
   "processingFrame": "Procesando cuadro {current}/{total} ({timestamp}ms)...",
@@ -211,7 +197,6 @@
   "shareReport": "Compartir Reporte",
   "shareJson": "Compartir JSON",
   "rerunTest": "Repetir prueba",
-
   "videoCaptureTitle": "PLR - {eye}",
   "initializingCamera": "Inicializando cámara...",
   "usingCamera": "Usando cámara {camera}",
@@ -236,7 +221,6 @@
   "plrRecordingComplete": "Grabación PLR completa",
   "positionEyeInstruction": "Posicione el ojo {eye} dentro del círculo.\nMantenga firme durante la grabación de {seconds} segundos.",
   "keepEyeSteadyFlash": "Mantenga el ojo firme. El flash ocurrirá a los {sec} segundos.",
-
   "recordingComplete": "Grabación Completa",
   "plrVideoCapturedSuccess": "¡Video PLR capturado exitosamente!",
   "duration": "Duración",
@@ -252,7 +236,6 @@
   "testFrameAnalysis": "🧪 Prueba de Análisis de Cuadros",
   "retake": "Repetir",
   "done": "Listo",
-
   "plrVideoModeTitle": "Modo de Video PLR",
   "plrAssessmentTitle": "Evaluación del Reflejo Pupilar a la Luz (PLR)",
   "plrInstructions": "1. Posicione el ojo dentro del círculo guía\n2. Toque \"Iniciar Grabación PLR\"\n3. Mantenga firme por 10 segundos\n4. Ocurrirá un flash a los 3 segundos\n5. La app graba la respuesta pupilar",
@@ -263,7 +246,6 @@
   "recoveryPhaseDesc": "La pupila regresa",
   "normalPlrValues": "Valores PLR Normales:",
   "gotIt": "Entendido",
-
   "pupilAnalysis": "Análisis Pupilar",
   "scansLeft": "{count} restantes",
   "validatingRightEye": "Validando ojo derecho...",
@@ -274,7 +256,6 @@
   "person": "Persona: {name}",
   "invalidEyeImage": "Imagen Ocular Inválida",
   "analysisFailed": "Análisis fallido: {error}",
-
   "researchEducationalToolOnly": "SOLO HERRAMIENTA DE INVESTIGACIÓN/EDUCACIÓN",
   "resultsNotMedicalDiagnoses": "Esta aplicación es solo para propósitos de investigación y educación. Los resultados NO son diagnósticos médicos y NO han sido validados para uso clínico. Las asociaciones de patrones provienen de literatura de investigación histórica. Consulte a un profesional de la salud para cualquier preocupación de salud.",
   "pupilSizeDifference": "Diferencia de Tamaño Pupilar Detectada",
@@ -298,8 +279,8 @@
   "ellipseness": "Elipticidad",
   "circularity": "Circularidad",
   "decentralization": "Descentración",
-  "anwRatio": "Ratio ANW",
-  "normal": "Normal",
+  "anwRatio": "Proporción",
+  "normal": "normal",
   "elliptical": "Elíptico",
   "circular": "Circular",
   "irregular": "Irregular",
@@ -318,7 +299,6 @@
   "retakePhotos": "Repetir Fotos",
   "scansLeftBanner": "{count} escaneos restantes",
   "upgrade": "Mejorar",
-
   "unlockUnlimited": "Desbloquear Ilimitado",
   "usedAllFreeScans": "Ha usado todos los escaneos gratuitos.",
   "unlimitedScans": "Escaneos ilimitados",
@@ -334,14 +314,12 @@
   "best": "MEJOR",
   "purchaseCancelled": "Compra cancelada",
   "purchaseFailed": "Compra fallida: {error}",
-
   "txtSaved": "TXT guardado: {path}",
   "jsonSaved": "JSON guardado: {path}",
   "pdfSaved": "¡PDF Guardado!",
   "pdfFailed": "PDF Fallido: {error}",
   "open": "ABRIR",
   "failed": "Fallido: {error}",
-
   "staticScans": "Estático",
   "plrScans": "PLR",
   "searchByNameOrComplaints": "Buscar por nombre o quejas...",
@@ -355,7 +333,6 @@
   "viewResults": "Ver Resultados",
   "avgPlr": "PLR Prom",
   "years": "años",
-
   "anisocoria": "Anisocoria",
   "none": "Ninguno",
   "mild": "Leve",
@@ -367,12 +344,10 @@
   "low": "Bajo",
   "good": "Bueno",
   "zones": "Zonas",
-
   "significanceWithinLimits": "dentro de límites aceptables",
   "significanceMild": "leve",
   "significanceModerate": "moderado",
   "significanceSignificant": "significativo",
-
   "formTypeCircle": "Círculo (Normal)",
   "formTypeOval": "Oval",
   "formTypeOvalVertical": "Oval-vertical",
@@ -385,7 +360,6 @@
   "formTypeEllipse": "Elipse",
   "formTypeChord": "Cuerda",
   "formTypeIrregular": "Irregular",
-
   "pupilFormCircleDesc": "Forma pupilar circular normal. No se detectaron variaciones de patrón.",
   "pupilFormOvalHorizontalDesc": "Patrón oval horizontal. La investigación histórica asoció esto con patrones del sistema nervioso autónomo que afectan las zonas de función respiratoria y glandular.",
   "pupilFormOvalVerticalDesc": "Patrón oval vertical. La investigación histórica vinculó este patrón con zonas de circulación cerebral en estudios de reflejos autonómicos.",
@@ -398,7 +372,6 @@
   "pupilFormEllipseDesc": "Patrón pupilar elíptico indicando variaciones del sistema autonómico en estudios históricos.",
   "pupilFormChordDesc": "Patrón de deformación tipo cuerda indicando influencias autonómicas localizadas en literatura de investigación.",
   "pupilFormIrregularDesc": "Forma irregular sugiriendo múltiples influencias de patrones autonómicos basado en observaciones históricas.",
-
   "patternCentered": "Centrado (Normal)",
   "patternFrontal": "Descentralización frontal",
   "patternBasal": "Descentralización basal",
@@ -414,7 +387,6 @@
   "patternDownwards": "Descentración - Hacia abajo",
   "patternUpwardsInwards": "Descentración - Arriba-Adentro",
   "patternUpwardsOutwards": "Descentración - Arriba-Afuera",
-
   "decentrationCenteredDesc": "Posicionamiento pupilar normal dentro de límites fisiológicos.",
   "decentrationNasalRightDesc": "Patrón nasal (Derecho). La investigación histórica asoció esta zona con reflejos autonómicos pulmonares.",
   "decentrationNasalLeftDesc": "Patrón nasal (Izquierdo). La literatura de investigación vinculó esta zona con patrones de función autonómica cardíaca.",
@@ -437,7 +409,6 @@
   "decentrationLowerNasalDesc": "Patrón nasal inferior. La investigación indicó asociaciones con zonas autonómicas urogenitales y lumbosacras.",
   "decentrationLowerTemporalRightDesc": "Patrón temporal inferior (Derecho). Las observaciones históricas asociaron esto con zonas metabólicas y hepáticas.",
   "decentrationLowerTemporalLeftDesc": "Patrón temporal inferior (Izquierdo). La investigación vinculó esto con patrones autonómicos cardíacos y esplénicos.",
-
   "flatteningUpperCentralRightDesc": "Patrón asociado con zona central superior. La investigación histórica vinculó esto con reflejos autonómicos de regulación del ánimo y energía.",
   "flatteningUpperTemporalRightDesc": "Patrón asociado con zona temporal superior. La investigación indicó asociaciones con reflejos autonómicos de nervios craneales y auditivos.",
   "flatteningMiddleTemporalRightDesc": "Patrón asociado con zona temporal media. Las observaciones históricas vincularon esto con patrones autonómicos respiratorios y cardíacos.",
@@ -447,7 +418,6 @@
   "flatteningMiddleNasalRightDesc": "Patrón asociado con zona nasal media. Las observaciones históricas vincularon esto con patrones autonómicos de utilización de oxígeno y respiratorios.",
   "flatteningUpperNasalRightDesc": "Patrón asociado con zona nasal superior. La literatura de investigación asoció esto con reflejos autonómicos cognitivos y cervicales.",
   "flatteningDefaultRightDesc": "Variación de patrón del sistema nervioso autónomo detectada en esta zona basada en investigación histórica.",
-
   "flatteningUpperCentralLeftDesc": "Patrón asociado con zona central superior. La investigación histórica vinculó esto con patrones autonómicos de regulación del ánimo y neurológicos.",
   "flatteningUpperTemporalLeftDesc": "Patrón asociado con zona temporal superior. La investigación indicó asociaciones con zonas autonómicas neurovegetativas y del habla.",
   "flatteningMiddleTemporalLeftDesc": "Patrón asociado con zona temporal media. Las observaciones históricas vincularon esto con reflejos autonómicos pulmonares y cardíacos.",
@@ -457,7 +427,6 @@
   "flatteningMiddleNasalLeftDesc": "Patrón asociado con zona nasal media. Las observaciones históricas vincularon esto con patrones autonómicos cardíacos y respiratorios.",
   "flatteningUpperNasalLeftDesc": "Patrón asociado con zona nasal superior. La literatura de investigación asoció esto con zonas autonómicas cognitivas y cervicales.",
   "flatteningDefaultLeftDesc": "Variación de patrón del sistema nervioso autónomo detectada en esta zona basada en investigación histórica.",
-
   "protrusionUpperCentralRightDesc": "Patrón de protrusión en zona central superior. La investigación asoció esto con patrones de hiperactivación simpática afectando zonas cerebrales.",
   "protrusionUpperTemporalRightDesc": "Patrón de protrusión en zona temporal superior. Las observaciones históricas vincularon esto con patrones de hiperactividad del sistema de nervios craneales y auditivo.",
   "protrusionMiddleTemporalRightDesc": "Patrón de protrusión en zona temporal media. La investigación indicó asociaciones con patrones simpáticos cardíacos y respiratorios.",
@@ -467,7 +436,6 @@
   "protrusionMiddleNasalRightDesc": "Patrón de protrusión en zona nasal media. La investigación indicó asociaciones con patrones simpáticos gástricos y pancreáticos.",
   "protrusionUpperNasalRightDesc": "Patrón de protrusión en zona nasal superior. Los estudios históricos vincularon esto con zonas de hiperactivación simpática cognitiva y visual.",
   "protrusionDefaultRightDesc": "Patrón de hiperactividad del sistema nervioso simpático detectado en esta zona basado en observaciones de investigación.",
-
   "protrusionUpperCentralLeftDesc": "Patrón de protrusión en zona central superior. La investigación asoció esto con patrones simpáticos psicomotores y cerebrales.",
   "protrusionUpperTemporalLeftDesc": "Patrón de protrusión en zona temporal superior. Las observaciones históricas vincularon esto con zonas de hiperactividad simpática neurovegetativa.",
   "protrusionMiddleTemporalLeftDesc": "Patrón de protrusión en zona temporal media. La investigación indicó asociaciones con patrones simpáticos pulmonares y cardíacos.",
@@ -477,7 +445,6 @@
   "protrusionMiddleNasalLeftDesc": "Patrón de protrusión en zona nasal media. La investigación indicó asociaciones con patrones simpáticos de ansiedad-cardíacos.",
   "protrusionUpperNasalLeftDesc": "Patrón de protrusión en zona nasal superior. Los estudios históricos vincularon esto con zonas de hiperactivación simpática cognitiva y visual.",
   "protrusionDefaultLeftDesc": "Patrón de hiperactividad del sistema nervioso simpático detectado en esta zona basado en observaciones de investigación.",
-
   "anisocoriaNone": "Tamaños pupilares dentro de límites normales. No se detectó anisocoria significativa.",
   "anisocoriaDetected": "Anisocoria detectada: {difference}% ({direction}). {description}",
   "anisocoriaDirectionSD": "S>D",
@@ -489,10 +456,8 @@
   "largerPupilEqual": "igual",
   "largerPupilOS": "OS (Izquierdo)",
   "largerPupilOD": "OD (Derecho)",
-
   "decentrationWithinLimits": "Dentro de límites normales.",
   "decentrationClinicalNote": "{patternName}. Desplazamiento: {offset}%",
-
   "zoneUpperCentral": "Central-Superior",
   "zoneUpperNasal": "Nasal-Superior",
   "zoneMiddleNasal": "Nasal-Medio",
@@ -504,184 +469,188 @@
   "zoneFrontal": "Frontal",
   "zoneBasal": "Basal",
   "zoneUnknown": "Desconocido",
-
   "flatteningDescription": "Aplanamiento {zone} ({clockRange}) - {percentage}%",
   "protrusionDescription": "Protrusión {zone} ({clockRange}) - {percentage}%",
   "usbIriscopeMode": "Modo Iriscopio USB",
   "iriscopeExternal": "Iriscopio / Externo",
   "usbLabel": "USB",
   "useConnectedUsbCamera": "Usar cámara USB o iriscopio conectado",
-
-    "detectedCameras": "Cámaras Detectadas",
-    "externalCamera": "Cámara Externa",
-    "cameraIndex": "Cámara {index}",
-    "@cameraIndex": {"placeholders": {"index": {"type": "int"}}},
-    "noExternalCameraDetected": "No se detectó cámara externa.\nConecte un iriscopio USB para habilitar.",
-    "refresh": "Actualizar",
-
-    "selectCameraSource": "Seleccionar Fuente de Cámara",
-    "camerasDetected": "{count} cámaras detectadas",
-    "@camerasDetected": {"placeholders": {"count": {"type": "int"}}},
-    "camerasAvailable": "{count} cámaras disponibles",
-    "@camerasAvailable": {"placeholders": {"count": {"type": "int"}}},
-    "externalCameraIndex": "Cámara Externa {index}",
-    "@externalCameraIndex": {"placeholders": {"index": {"type": "int"}}},
-
-    "qualityGatedRear": "Captura automática con control de calidad (cámara trasera)",
-    "qualityGatedFront": "Captura automática con control de calidad (cámara frontal)",
-
-    "usbCameraInfo": "Info de Cámara USB",
-    "connected": "Conectado",
-    "waiting": "Esperando...",
-    "disconnected": "Desconectado",
-
-    "waitingForUsbCamera": "Esperando Cámara USB",
-    "connectIriscopePrompt": "Conecte su iriscopio mediante adaptador USB OTG.\nOtorgue permiso cuando se solicite.",
-
-    "usbCameraIssue": "Problema con Cámara USB",
-    "pleaseConnectIriscope": "Por favor conecte su iriscopio o cámara USB.",
-    "retryConnection": "Reintentar Conexión",
-
-    "troubleshootingTips": "Consejos de Solución",
-    "tipUsbOtgAdapter": "Asegúrese de que el adaptador USB OTG esté correctamente conectado",
-    "tipUsbHostMode": "Verifique si el dispositivo soporta modo USB Host",
-    "tipReconnectCamera": "Intente desconectar y reconectar la cámara",
-    "tipGrantPermissions": "Otorgue permisos USB cuando se soliciten",
-    "tipUnlockDevice": "Algunos dispositivos necesitan estar desbloqueados",
-
-    "back": "Atrás",
-    "switchEye": "Cambiar Ojo",
-    "state": "Estado",
-    "status": "Estado",
-
-    "usingFlutterUvcPlugin": "Usando plugin flutter_uvc_camera\npara soporte de dispositivos USB Video Class.",
-
-    "initialized": "Inicializado",
-    "notReady": "No Listo",
-    "captureDistanceMatch": "Coincidencia de Distancia",
-      "irisSize": "Tamaño del Iris",
-      "distanceMatched": "Distancia Coincidente",
-      "distanceMismatch": "Distancia No Coincide",
-      "excellentMatch": "Coincidencia excelente",
-      "goodMatch": "Buena coincidencia",
-      "acceptableMatch": "Coincidencia aceptable",
-      "considerRetaking": "Distancia no coincide - considere repetir",
-
-      "qualityReady": "¡Listo! Mantenga firme...",
-      "qualityTooBlurry": "Mantenga la cámara firme",
-      "qualityTooDark": "Necesita más luz",
-      "qualityTooBright": "Demasiado brillante - reduzca la luz",
-      "qualityNoContrast": "Ajuste el ángulo de iluminación",
-      "qualityNoPupil": "Centre la pupila en el marco",
-      "qualityNotCentered": "Mueva el ojo al centro",
-      "qualityNotAnEye": "No se detectó ojo",
-      "qualityProcessing": "Procesando...",
-
-      "distanceMatchedCheck": "✓ Distancia coincidente",
-      "distanceGoodMatchCheck": "✓ Buena coincidencia",
-      "distanceSlightlyBack": "Un poco atrás ↔",
-      "distanceSlightlyCloser": "Un poco más cerca ↔",
-      "distanceAlmostThere": "Casi listo...",
-      "distanceMoveBack": "Muévase atrás ←←",
-      "distanceMoveCloser": "Muévase más cerca →→",
-      "distanceTooClose": "¡Muy cerca! Retroceda",
-      "distanceTooFar": "¡Muy lejos! Acérquese",
-      "distanceStabilizing": "Estabilizando...",
-      "distanceLabel": "Distancia: {percent}%",
-      "irisSizeComparison": "OD: {odSize}px → OS: {osSize}px",
-
-      "frontCameraLabel": "Cámara Frontal",
-      "rearCameraLabel": "Cámara Trasera",
-      "startingCamera": "Iniciando cámara...",
-      "eyeNotDetected": "Ojo No Detectado",
-      "tryAgain": "Intentar de Nuevo",
-
-      "indicatorEye": "Ojo",
-      "indicatorSharp": "Nitidez",
-      "indicatorLight": "Luz",
-      "indicatorFocus": "Enfoque",
-      "indicatorPupil": "Pupila",
-      "indicatorIris": "Iris",
-      "indicatorMatch": "Coinc.",
-
-      "checkImageShape": "Forma de Imagen",
-      "checkCircularIris": "Iris Circular",
-      "checkDarkPupil": "Pupila Oscura",
-      "checkIrisTexture": "Textura del Iris",
-      "checkPupilIrisStructure": "Estructura Pupila-Iris",
-      "checkNaturalColors": "Colores Naturales",
-      "checkEdgePattern": "Patrón de Bordes",
-
-      "errorImageShapeIncorrect": "Forma incorrecta - asegure que el ojo llene el marco",
-      "errorNoEyeDetected": "No se detectó ojo - centre el iris en el marco",
-      "errorNoPupilDetected": "No se detectó pupila - asegure buena iluminación",
-      "errorNoIrisTexture": "Sin textura de iris - acérquese más al ojo",
-      "errorUnusualColors": "Colores inusuales - evite pantallas/reflejos",
-      "errorTooManyEdges": "Demasiados bordes rectos - puede no ser un ojo",
-      "errorNotValidEye": "Imagen de ojo no válida - intente de nuevo",
-
-      "holdStillCapturing": "Quieto - capturando...",
-      "adjustDistanceFirst": "Ajuste la distancia primero",
-      "stabilizingReading": "Estabilizando...",
-      "autoCaptureWhenReady": "Captura automática cuando esté listo",
-      "tapOrWaitAutoCapture": "Toque o espere captura automática",
-      "validatingImage": "Validando...",
-      "capturingStatus": "Capturando...",
-      "adjustPositionStatus": "Ajuste posición",
-
-      "validationTip": "Consejo: Asegure buena iluminación, sostenga la cámara a 10-15cm del ojo, evite reflejos",
-      "validationChecksTitle": "Verificaciones de Validación:",
-      "confidenceLabel": "Confianza: {percent}%",
-      "incompleteData": "Datos incompletos",
-      "irisDiameterLabel": "iris ø",
-      "plrResponseCurve": "Curva de Respuesta PLR",
-        "plrLatency": "Latencia",
-        "plrVelocity": "Velocidad",
-        "plrRecoveryTime": "Recuperación",
-        "plrRecoveryRatio": "Ratio Rec.",
-        "plrEnhancedMetrics": "Métricas PLR Avanzadas",
-        "plrNormalLatency": "Normal: 200-500ms",
-        "plrNormalConstriction": "Normal: 10-30%",
-        "plrNormalVelocity": "Normal: 1.5-4.0%/s",
-        "plrReferenceValues": "Valores de Referencia PLR Normales",
-        "plrSubjectInfo": "Información del Sujeto",
-        "plrTestType": "Reflejo Pupilar a la Luz",
-        "plrAnalysisSummary": "Resumen del Análisis",
-        "plrTotalFrames": "Total de Cuadros Analizados",
-        "plrSuccessRate": "Tasa de Éxito",
-        "plrMaxConstriction": "Contracción Máxima",
-          "anwTitle": "Corona Nerviosa Autónoma (ANW)",
-          "anwAbnormal": "Anormal",
-          "anwDiameter": "Diámetro",
-          "anwPerimeter": "Perímetro",
-          "anwRatio": "Proporción",
-          "anwAsymmetry": "Asimetría",
-          "anwElevated": "Elevado",
-          "anwFormType": "Tipo de Forma",
-          "anwRegular": "Regular",
-          "anwDrawnIn": "Contraído",
-          "anwIndented": "Dentado",
-          "anwLacerated": "Lacerado",
-          "anwSpastic": "Espástico",
-          "anwAtonic": "Atónico",
-          "anwTonicState": "Estado Tónico",
-          "anwParasympathotonic": "Parasimpaticotónico",
-          "anwSympathotonicState": "Simpaticotónico",
-          "anwShiftDetected": "Desplazamiento Detectado",
-          "anwConstrictionDetected": "Constricción Detectada",
-          "anwFindings": "Hallazgos",
-          "anwRatioComparison": "Proporción ANW",
-          "bilateralANWComparison": "Comparación Bilateral de ANW",
-          "anwSymmetryNormal": "Simetría de ANW dentro de límites normales.",
-          "anwAsymmetryDetected": "Asimetría de ANW detectada entre los ojos.",
-          "functionalFrustration": "Frustración funcional en la correlación entre los sistemas nerviosos simpático y parasimpático.",
-          "anwParasympathotonicDesc": "Sensibilidad liminal aumentada. Actividad refleja acelerada. Funciones secretoras/evacuativas GI aumentadas.",
-          "anwSympathotonicDesc": "Sensibilidad liminal disminuida. Actividad refleja desacelerada. Funciones secretoras/evacuativas GI reducidas.",
-          "anwMiddleTemporalShiftCardiac": "Sobrecargas del ventrículo izquierdo. Estrés cardíaco.",
-          "anwFrontalConstricted": "Zona frontal del cinturón pupilar está contraída.",
-          "anwBasalConstricted": "Zona basal del cinturón pupilar está contraída.",
-          "anwFrontalBasalConstricted": "Zonas frontal y basal del cinturón pupilar están contraídas.",
-    "helpTitle": "Ayuda y Guía del Usuario",
+  "detectedCameras": "Cámaras Detectadas",
+  "externalCamera": "Cámara Externa",
+  "cameraIndex": "Cámara {index}",
+  "@cameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "noExternalCameraDetected": "No se detectó cámara externa.\nConecte un iriscopio USB para habilitar.",
+  "refresh": "Actualizar",
+  "selectCameraSource": "Seleccionar Fuente de Cámara",
+  "camerasDetected": "{count} cámaras detectadas",
+  "@camerasDetected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "camerasAvailable": "{count} cámaras disponibles",
+  "@camerasAvailable": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "externalCameraIndex": "Cámara Externa {index}",
+  "@externalCameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "qualityGatedRear": "Captura automática con control de calidad (cámara trasera)",
+  "qualityGatedFront": "Captura automática con control de calidad (cámara frontal)",
+  "usbCameraInfo": "Info de Cámara USB",
+  "connected": "Conectado",
+  "waiting": "Esperando...",
+  "disconnected": "Desconectado",
+  "waitingForUsbCamera": "Esperando Cámara USB",
+  "connectIriscopePrompt": "Conecte su iriscopio mediante adaptador USB OTG.\nOtorgue permiso cuando se solicite.",
+  "usbCameraIssue": "Problema con Cámara USB",
+  "pleaseConnectIriscope": "Por favor conecte su iriscopio o cámara USB.",
+  "retryConnection": "Reintentar Conexión",
+  "troubleshootingTips": "Consejos de Solución",
+  "tipUsbOtgAdapter": "Asegúrese de que el adaptador USB OTG esté correctamente conectado",
+  "tipUsbHostMode": "Verifique si el dispositivo soporta modo USB Host",
+  "tipReconnectCamera": "Intente desconectar y reconectar la cámara",
+  "tipGrantPermissions": "Otorgue permisos USB cuando se soliciten",
+  "tipUnlockDevice": "Algunos dispositivos necesitan estar desbloqueados",
+  "back": "Atrás",
+  "switchEye": "Cambiar Ojo",
+  "state": "Estado",
+  "status": "Estado",
+  "usingFlutterUvcPlugin": "Usando plugin flutter_uvc_camera\npara soporte de dispositivos USB Video Class.",
+  "initialized": "Inicializado",
+  "notReady": "No Listo",
+  "captureDistanceMatch": "Coincidencia de Distancia",
+  "irisSize": "Tamaño del Iris",
+  "distanceMatched": "Distancia Coincidente",
+  "distanceMismatch": "Distancia No Coincide",
+  "excellentMatch": "Coincidencia excelente",
+  "goodMatch": "Buena coincidencia",
+  "acceptableMatch": "Coincidencia aceptable",
+  "considerRetaking": "Distancia no coincide - considere repetir",
+  "qualityReady": "¡Listo! Mantenga firme...",
+  "qualityTooBlurry": "Mantenga la cámara firme",
+  "qualityTooDark": "Necesita más luz",
+  "qualityTooBright": "Demasiado brillante - reduzca la luz",
+  "qualityNoContrast": "Ajuste el ángulo de iluminación",
+  "qualityNoPupil": "Centre la pupila en el marco",
+  "qualityNotCentered": "Mueva el ojo al centro",
+  "qualityNotAnEye": "No se detectó ojo",
+  "qualityProcessing": "Procesando...",
+  "distanceMatchedCheck": "✓ Distancia coincidente",
+  "distanceGoodMatchCheck": "✓ Buena coincidencia",
+  "distanceSlightlyBack": "Un poco atrás ↔",
+  "distanceSlightlyCloser": "Un poco más cerca ↔",
+  "distanceAlmostThere": "Casi listo...",
+  "distanceMoveBack": "Muévase atrás ←←",
+  "distanceMoveCloser": "Muévase más cerca →→",
+  "distanceTooClose": "¡Muy cerca! Retroceda",
+  "distanceTooFar": "¡Muy lejos! Acérquese",
+  "distanceStabilizing": "Estabilizando...",
+  "distanceLabel": "Distancia: {percent}%",
+  "irisSizeComparison": "OD: {odSize}px → OS: {osSize}px",
+  "frontCameraLabel": "Cámara Frontal",
+  "rearCameraLabel": "Cámara Trasera",
+  "startingCamera": "Iniciando cámara...",
+  "eyeNotDetected": "Ojo No Detectado",
+  "tryAgain": "Intentar de Nuevo",
+  "indicatorEye": "Ojo",
+  "indicatorSharp": "Nitidez",
+  "indicatorLight": "Luz",
+  "indicatorFocus": "Enfoque",
+  "indicatorPupil": "Pupila",
+  "indicatorIris": "Iris",
+  "indicatorMatch": "Coinc.",
+  "checkImageShape": "Forma de Imagen",
+  "checkCircularIris": "Iris Circular",
+  "checkDarkPupil": "Pupila Oscura",
+  "checkIrisTexture": "Textura del Iris",
+  "checkPupilIrisStructure": "Estructura Pupila-Iris",
+  "checkNaturalColors": "Colores Naturales",
+  "checkEdgePattern": "Patrón de Bordes",
+  "errorImageShapeIncorrect": "Forma incorrecta - asegure que el ojo llene el marco",
+  "errorNoEyeDetected": "No se detectó ojo - centre el iris en el marco",
+  "errorNoPupilDetected": "No se detectó pupila - asegure buena iluminación",
+  "errorNoIrisTexture": "Sin textura de iris - acérquese más al ojo",
+  "errorUnusualColors": "Colores inusuales - evite pantallas/reflejos",
+  "errorTooManyEdges": "Demasiados bordes rectos - puede no ser un ojo",
+  "errorNotValidEye": "Imagen de ojo no válida - intente de nuevo",
+  "holdStillCapturing": "Quieto - capturando...",
+  "adjustDistanceFirst": "Ajuste la distancia primero",
+  "stabilizingReading": "Estabilizando...",
+  "autoCaptureWhenReady": "Captura automática cuando esté listo",
+  "tapOrWaitAutoCapture": "Toque o espere captura automática",
+  "validatingImage": "Validando...",
+  "capturingStatus": "Capturando...",
+  "adjustPositionStatus": "Ajuste posición",
+  "validationTip": "Consejo: Asegure buena iluminación, sostenga la cámara a 10-15cm del ojo, evite reflejos",
+  "validationChecksTitle": "Verificaciones de Validación:",
+  "confidenceLabel": "Confianza:",
+  "incompleteData": "Datos incompletos",
+  "irisDiameterLabel": "iris ø",
+  "plrResponseCurve": "Curva de Respuesta PLR",
+  "plrLatency": "Latencia",
+  "plrVelocity": "Velocidad",
+  "plrRecoveryTime": "Recuperación",
+  "plrRecoveryRatio": "Ratio Rec.",
+  "plrEnhancedMetrics": "Métricas PLR Avanzadas",
+  "plrNormalLatency": "Normal: 200-500ms",
+  "plrNormalConstriction": "Normal: 10-30%",
+  "plrNormalVelocity": "Normal: 1.5-4.0%/s",
+  "plrReferenceValues": "Valores de Referencia PLR Normales",
+  "plrSubjectInfo": "Información del Sujeto",
+  "plrTestType": "Reflejo Pupilar a la Luz",
+  "plrAnalysisSummary": "Resumen del Análisis",
+  "plrTotalFrames": "Total de Cuadros Analizados",
+  "plrSuccessRate": "Tasa de Éxito",
+  "plrMaxConstriction": "Contracción Máxima",
+  "anwTitle": "Corona Nerviosa Autónoma (ANW)",
+  "anwAbnormal": "Anormal",
+  "anwDiameter": "Diámetro",
+  "anwPerimeter": "Perímetro",
+  "anwAsymmetry": "Asimetría",
+  "anwElevated": "Elevado",
+  "anwFormType": "Tipo de Forma",
+  "anwRegular": "Regular",
+  "anwDrawnIn": "Contraído",
+  "anwIndented": "Dentado",
+  "anwLacerated": "Lacerado",
+  "anwSpastic": "Espástico",
+  "anwAtonic": "Atónico",
+  "anwTonicState": "Patron Tonico Historico",
+  "anwParasympathotonic": "Patron parasimpaticotonico",
+  "anwSympathotonicState": "Patron simpaticotonico",
+  "anwShiftDetected": "Patron Historico de Desplazamiento",
+  "anwConstrictionDetected": "Constricción Detectada",
+  "anwFindings": "Hallazgos",
+  "anwRatioComparison": "Proporción ANW",
+  "bilateralANWComparison": "Comparación Bilateral de ANW",
+  "anwSymmetryNormal": "Simetría de ANW dentro de límites normales.",
+  "anwAsymmetryDetected": "Asimetría de ANW detectada entre los ojos.",
+  "functionalFrustration": "Frustración funcional en la correlación entre los sistemas nerviosos simpático y parasimpático.",
+  "anwParasympathotonicDesc": "Las observaciones historicas vincularon esto con mayor sensibilidad liminal, actividad refleja acelerada y funciones secretoras/evacuativas gastrointestinales aumentadas.",
+  "anwSympathotonicDesc": "Las observaciones historicas vincularon esto con menor sensibilidad liminal, actividad refleja desacelerada y funciones secretoras/evacuativas gastrointestinales reducidas.",
+  "anwMiddleTemporalShiftCardiac": "Los estudios historicos segun Velchover vincularon esto con patrones de sobrecarga del ventriculo izquierdo y estres cardiaco.",
+  "anwFrontalConstricted": "Zona frontal del cinturón pupilar está contraída.",
+  "anwBasalConstricted": "Zona basal del cinturón pupilar está contraída.",
+  "anwFrontalBasalConstricted": "Zonas frontal y basal del cinturón pupilar están contraídas.",
+  "helpTitle": "Ayuda y Guía del Usuario",
   "helpTabQuickStart": "Inicio Rápido",
   "helpTabCnriAnalysis": "Análisis CNRI",
   "helpTabShortcuts": "Atajos",
@@ -713,8 +682,8 @@
   "helpFeatureZoneDesc": "Mapea aplanamientos/protrusiones a zonas de órganos CNRI.",
   "helpFeatureBilateralTitle": "Comparación Bilateral",
   "helpFeatureBilateralDesc": "Compara OD vs OS para detectar asimetrías.",
-  "helpFeatureMlTitle": "Mejora ML",
-  "helpFeatureMlDesc": "Modelo ResNet18 proporciona mediciones secundarias.",
+  "helpFeatureMlTitle": "Comparación ONNX CNN",
+  "helpFeatureMlDesc": "El modelo ONNX CNN proporciona mediciones secundarias para comparación.",
   "helpKeyboardShortcuts": "Atajos de Teclado",
   "helpCameraControls": "Controles de Cámara",
   "helpShortcutSpace": "Capturar imagen",
@@ -741,8 +710,20 @@
   "helpIssuePdfSolution2": "Asegure espacio disponible en disco",
   "helpIssuePdfSolution3": "Cierre archivos PDF abiertos",
   "helpIssuePdfSolution4": "Pruebe exportar TXT primero",
+  "helpCaptureChecklistTitle": "Lista de Captura",
+  "helpCaptureChecklist1": "Mantenga la pupila centrada y completamente visible dentro del encuadre.",
+  "helpCaptureChecklist2": "Use iluminación uniforme y reduzca reflejos o brillos sobre la córnea.",
+  "helpCaptureChecklist3": "Mantenga una distancia similar del iriscopio para ambos ojos.",
+  "helpCaptureChecklist4": "Vuelva a enfocar o repita la captura si el borde pupilar se ve suave o borroso.",
+  "helpExportSettingsTitle": "Ajustes de Exportación",
+  "helpExportSettingsDesc": "Auto-guardar PDF puede guardar un informe tras el análisis, Incluir Imágenes controla si las fotos aparecen en el PDF, y Mostrar Comparación ML agrega valores comparativos del ONNX CNN al informe.",
+  "helpHybridScoreTitle": "Confianza y Grado Híbridos",
+  "helpHybridScoreDesc": "La confianza y el grado mostrados combinan la calidad geométrica clásica con la concordancia ML, por lo que reflejan fiabilidad de la medición y no un diagnóstico.",
+  "helpAnomalyGuideTitle": "Cómo leer Aplanamientos y Protrusiones",
+  "helpAnomalyGuideDesc": "Los aplanamientos indican una retracción relativa y las protrusiones una expansión hacia afuera del borde pupilar; cada tarjeta muestra zona, magnitud y asociación mapeada.",
+  "helpZoneOverlayGuideTitle": "Superposición de Zonas",
+  "helpZoneOverlayGuideDesc": "Use la superposición de zonas para inspeccionar visualmente las posiciones sectoriales y verificar dónde caen las anomalías detectadas alrededor de la pupila y el iris.",
   "helpContactSupportTip": "Contacte helpdesk@cnri.edu para asistencia.",
-
   "settingsTitle": "Configuración",
   "settingsCameraIriscope": "CÁMARA / IRISCOPIO",
   "settingsPreferredCamera": "Cámara Preferida:",
@@ -753,12 +734,10 @@
   "settingsAnalysis": "ANÁLISIS",
   "settingsShowMlComparison": "Mostrar Comparación ML",
   "settingsShowZoneOverlay": "Mostrar Superposición de Zonas",
-  "settingsAutoDetectPupil": "Auto-detectar Pupila",
   "settingsExportReports": "EXPORTACIÓN Y REPORTES",
   "settingsAutoSavePdf": "Auto-guardar PDF",
   "settingsIncludeImages": "Incluir Imágenes",
   "settingsSaved": "Configuración guardada",
-
   "aboutResearchEdition": "Edición de Investigación",
   "aboutVersion": "Versión {version}",
   "aboutLicense": "Licencia",
@@ -769,12 +748,11 @@
   "aboutCopyright": "© 2024-2026 PupilMetrics Research",
   "aboutWebsite": "Sitio Web",
   "aboutPrivacy": "Privacidad",
-
   "languageSelectTitle": "Seleccionar Idioma",
+  "selectLanguage": "Seleccionar Idioma",
   "languageChanged": "Idioma Cambiado",
   "languageChangedMessage": "Idioma de la app establecido a {language}",
   "languageSystemNotAvailable": "Sistema de idioma no disponible",
-
   "licenseLoading": "Cargando...",
   "licenseWelcome": "¡Bienvenido a PupilMetrics!",
   "licenseTrialFeatures": "Prueba gratuita de 14 días • Funciones completas",
@@ -792,7 +770,6 @@
   "licenseTrialUser": "Usuario de Prueba",
   "licenseLifetime": "Vitalicia",
   "licenseNotSetUp": "No Configurada",
-
   "trialExpiredTitle": "Período de Prueba Terminado",
   "trialExpiredMessage": "Su prueba de 14 días ha terminado. Para continuar analizando imágenes de iris, por favor adquiera una licencia.",
   "trialExpiredCanStill": "Aún puede:",
@@ -800,7 +777,6 @@
   "trialExpiredExportReports": "Exportar reportes existentes",
   "trialExpiredAccessHistory": "Acceder al historial de escaneos",
   "trialExpiredMaybeLater": "Quizás Después",
-
   "licenseRegistration": "Registro de Licencia",
   "licenseStatusValid": "Licenciado",
   "licenseStatusTrialActive": "Prueba Gratuita",
@@ -828,7 +804,6 @@
   "licenseNeedHelp": "¿Necesita ayuda?",
   "licenseLicenseAgreement": "Acuerdo de Licencia",
   "licenseActivatedSuccess": "¡Licencia Activada Exitosamente!",
-
   "licenseMsgMachineMismatch": "Esta licencia está registrada en otra computadora. Por favor use su dispositivo original o contacte soporte.",
   "licenseMsgTrialEnded": "Su prueba gratuita ha terminado. Ingrese una clave de licencia para continuar usando todas las funciones.",
   "licenseMsgExpired": "Su licencia ha expirado. Por favor renueve para continuar.",
@@ -846,17 +821,12 @@
   "licenseMsgUnableToActivateKey": "No se pudo activar esta clave de licencia.",
   "licenseMsgNoLongerValid": "La licencia ya no es válida.",
   "licenseMsgUnableToVerify": "No se pudo verificar esta clave de licencia. Por favor contacte soporte.",
-
   "trialStartedSnackbar": "¡Prueba Iniciada!",
   "trialStartedMessage": "Disfrute 14 días de acceso completo",
-
-
   "windowTitle": "PupilMetrics",
   "themeMode": "Modo de tema",
   "methods": "MÉTODOS",
-
   "setAsFrameless": "setAsFrameless",
-  "close": "cerrar",
   "isPreventCloseSetPreventClose": "isPreventClose / setPreventClose",
   "focusBlur": "enfocar / desenfocar",
   "showHide": "mostrar / ocultar",
@@ -883,7 +853,6 @@
   "topCenter": "arriba centro",
   "topRight": "arriba derecha",
   "centerLeft": "centro izquierda",
-  "center": "centro",
   "centerRight": "centro derecha",
   "bottomLeft": "abajo izquierda",
   "bottomCenter": "abajo centro",
@@ -901,9 +870,7 @@
   "isAlwaysOnTopSetAlwaysOnTop": "isAlwaysOnTop / setAlwaysOnTop",
   "isAlwaysOnBottomSetAlwaysOnBottom": "isAlwaysOnBottom / setAlwaysOnBottom",
   "getTitleSetTitle": "getTitle / setTitle",
-
   "setTitleBarStyle": "setTitleBarStyle",
-  "normal": "normal",
   "hidden": "oculto",
   "getTitleBarHeight": "getTitleBarHeight",
   "isSkipTaskbar": "isSkipTaskbar",
@@ -920,22 +887,16 @@
   "popUpWindowMenu": "popUpWindowMenu",
   "grabKeyboard": "grabKeyboard",
   "ungrabKeyboard": "ungrabKeyboard",
-
   "dragToMoveArea": "Arrastrar para mover",
   "dragToResizeArea": "Arrastrar para redimensionar",
   "dragToResizeAreaExample": "Ejemplo de área redimensionable",
-
   "closeWindowConfirmation": "¿Está seguro de que desea cerrar esta ventana?",
-  "yes": "Sí",
-  "no": "No",
-
   "zoneOverlay": "Superposición de Zonas",
   "tipDragImage": "Consejo: arrastre la imagen para alinear el limbo con los círculos.",
   "overlayMetrics": "Métricas de Superposición",
   "piRatioLabel": "Relación P/I:",
   "ellipsenessLabel": "Elipticidad:",
   "decentralizationLabel": "Descentralización:",
-  "confidenceLabel": "Confianza:",
   "detectedFindings": "Hallazgos detectados",
   "anwCollarette": "ANW / COLLARETE",
   "observerNotes": "Notas del observador",
@@ -959,22 +920,33 @@
   "noMajorOSAnomalies": "Sin anomalías pupilares OS significativas.",
   "anwNotAssessed": "ANW: no evaluado",
   "manualAlignmentAid": "Ayuda de alineación manual solo para revisión. Arrastre imagen o use Auto-centrar.",
-  "frontalShift": "S: Desplazamiento frontal.",
-  "cerebralCirculation": "Patrones de circulación cerebral.",
-  "middleTemporalShift": "D: Desplazamiento temporal medio.",
-  "respiratoryCardiac": "Patrones autonómicos respiratorios y cardíacos.",
-  "findings": "Hallazgos:"
-,
+  "frontalShift": "S: Patron de desplazamiento frontal.",
+  "cerebralCirculation": "Los estudios historicos segun Velchover vincularon esto con patrones de circulacion cerebral.",
+  "middleTemporalShift": "D: Patron de desplazamiento temporomedio.",
+  "respiratoryCardiac": "Los estudios historicos segun Velchover vincularon esto con patrones autonomicos respiratorios y cardiacos.",
+  "findings": "Hallazgos:",
   "plrReportTitle": "Informe de Analisis PLR",
   "plrResearchOnlyTitle": "SOLO PARA INVESTIGACION/EDUCACION",
   "plrResearchDisclaimer": "Los resultados NO son diagnosticos medicos. Consulte a un profesional de la salud.",
   "plrNameLabel": "Nombre",
   "plrAgeYears": "Edad: {age} anos",
-  "@plrAgeYears": {"placeholders": {"age": {"type": "int"}}},
+  "@plrAgeYears": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
   "plrTestLabel": "Prueba",
   "plrSummaryTitle": "Resumen PLR",
   "plrGradeValue": "Grado {grade}",
-  "@plrGradeValue": {"placeholders": {"grade": {"type": "String"}}},
+  "@plrGradeValue": {
+    "placeholders": {
+      "grade": {
+        "type": "String"
+      }
+    }
+  },
   "plrStatusLabel": "Estado",
   "plrDetectedStatus": "PLR DETECTADO",
   "plrWeakNotDetectedStatus": "DEBIL/NO DETECTADO",
@@ -982,29 +954,58 @@
   "plrRecoveryRatioLabel": "Relacion de recuperacion",
   "plrChartDescription": "Representacion visual de la respuesta pupilar a lo largo del tiempo",
   "plrPiRange": "Rango P/I: {min}% - {max}%",
-  "@plrPiRange": {"placeholders": {"min": {"type": "String"}, "max": {"type": "String"}}},
+  "@plrPiRange": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
   "plrMinValue": "Min: {value}%",
-  "@plrMinValue": {"placeholders": {"value": {"type": "String"}}},
+  "@plrMinValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
   "plrFrameDataTitle": "Datos de cuadros",
   "plrTableTime": "Tiempo",
   "plrTablePiPercent": "P/I %",
   "plrTablePhase": "Fase",
   "plrTableConfidenceShort": "Conf",
   "plrSuccessfulFailed": "Exitosos: {success} | Fallidos: {fail}",
-  "@plrSuccessfulFailed": {"placeholders": {"success": {"type": "int"}, "fail": {"type": "int"}}},
+  "@plrSuccessfulFailed": {
+    "placeholders": {
+      "success": {
+        "type": "int"
+      },
+      "fail": {
+        "type": "int"
+      }
+    }
+  },
   "plrReferenceLatencyLine": "• Latencia: 200-500 ms (tiempo hasta la respuesta inicial)",
   "plrReferenceConstrictionLine": "• Constriccion: reduccion del 10-30 % desde la linea base",
   "plrReferenceVelocityLine": "• Velocidad: 1.5-4.0 %/segundo",
   "plrReferenceRecoveryLine": "• Recuperacion: >75 % de retorno a la linea base en 5 segundos",
   "plrReferenceRecoveryLineShort": "• Recuperacion: >75 % de retorno a la linea base en 5 s",
   "plrShareSubject": "Informe de Analisis PLR - {eye}",
-  "@plrShareSubject": {"placeholders": {"eye": {"type": "String"}}},
+  "@plrShareSubject": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
   "plrTextReportTitle": "INFORME DE ANALISIS DE VIDEO PLR",
   "plrTextDisclaimerTitle": "AVISO: Solo para investigacion/fines educativos",
   "plrTextDisclaimerBody": "Los resultados NO son diagnosticos medicos.",
   "plrOverallGradeLabel": "Calificacion general",
-  "plrEndOfReport": "FIN DEL INFORME"
-,
+  "plrEndOfReport": "FIN DEL INFORME",
   "analysisReportTitle": "Informe de Analisis Pupilar",
   "reportResearchVersion": "Version de Investigacion",
   "reportDisclaimerTitle": "AVISO: Solo para investigacion/fines educativos",
@@ -1022,9 +1023,9 @@
   "reportFlatteningsTitle": "Aplanamientos",
   "reportProtrusionsTitle": "Protrusiones",
   "reportAnwParametersTitle": "Corona Nerviosa Autonoma (ANW)",
-  "reportTonicStateLabel": "Estado tonico",
-  "reportShiftDetectedTitle": "Desplazamiento detectado",
-  "reportClinicalLabel": "Clinico",
+  "reportTonicStateLabel": "Patron Tonico Historico",
+  "reportShiftDetectedTitle": "Patron Historico de Desplazamiento",
+  "reportClinicalLabel": "Nota Historica",
   "reportConstrictionDetectedTitle": "Constriccion detectada",
   "reportSeverityLabel": "Severidad",
   "reportReferenceValuesTitle": "Valores de referencia (Protocolo de investigacion CNRI)",
@@ -1032,28 +1033,100 @@
   "reportValueLabel": "Valor",
   "reportNormalPupilForm": "Forma pupilar normal",
   "reportPageXofY": "Pagina {page}/{total}",
-  "@reportPageXofY": {"placeholders": {"page": {"type": "int"}, "total": {"type": "int"}}},
+  "@reportPageXofY": {
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "reportShareSubject": "Informe de Analisis Pupilar - {patientName}",
-  "@reportShareSubject": {"placeholders": {"patientName": {"type": "String"}}},
+  "@reportShareSubject": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      }
+    }
+  },
   "reportShareBody": "Se adjunta el informe de analisis pupilar de {patientName}, generado el {date}.",
-  "@reportShareBody": {"placeholders": {"patientName": {"type": "String"}, "date": {"type": "String"}}}
-,
+  "@reportShareBody": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "belowBaseline": "Por debajo del rango de investigacion para edad {age} ({group})",
-  "@belowBaseline": {"placeholders": {"age": {"type": "int"}, "group": {"type": "String"}}},
+  "@belowBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
   "aboveBaseline": "Por encima del rango de investigacion para edad {age} ({group})",
-  "@aboveBaseline": {"placeholders": {"age": {"type": "int"}, "group": {"type": "String"}}},
+  "@aboveBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
   "ageGroupInfant": "Infante",
-  "@ageGroupInfant": {"description": "Localized age group label"},
+  "@ageGroupInfant": {
+    "description": "Localized age group label"
+  },
   "ageGroupChild15": "Nino (1-5)",
-  "@ageGroupChild15": {"description": "Localized age group label"},
+  "@ageGroupChild15": {
+    "description": "Localized age group label"
+  },
   "ageGroupChild611": "Nino (6-11)",
-  "@ageGroupChild611": {"description": "Localized age group label"},
+  "@ageGroupChild611": {
+    "description": "Localized age group label"
+  },
   "ageGroupTeen": "Adolescente",
-  "@ageGroupTeen": {"description": "Localized age group label"},
+  "@ageGroupTeen": {
+    "description": "Localized age group label"
+  },
   "ageGroupAdult2039": "Adulto (20-39)",
-  "@ageGroupAdult2039": {"description": "Localized age group label"},
+  "@ageGroupAdult2039": {
+    "description": "Localized age group label"
+  },
   "ageGroupAdult4059": "Adulto (40-59)",
-  "@ageGroupAdult4059": {"description": "Localized age group label"},
+  "@ageGroupAdult4059": {
+    "description": "Localized age group label"
+  },
   "ageGroupSenior60Plus": "Adulto mayor (60+)",
-  "@ageGroupSenior60Plus": {"description": "Localized age group label"}
+  "@ageGroupSenior60Plus": {
+    "description": "Localized age group label"
+  },
+  "middleNasalShift": "Patron de desplazamiento nasal-medio.",
+  "upperTemporalShift": "Patron de desplazamiento temporal-superior.",
+  "lowerTemporalShift": "Patron de desplazamiento temporal-inferior.",
+  "basalShift": "Patron de desplazamiento basal.",
+  "vagusStellateAssociation": "Los estudios historicos segun Velchover vincularon esto con patrones de hipofuncion del nervio vago o del ganglio estrellado.",
+  "venaCavaInferiorAssociation": "Los estudios historicos segun Velchover vincularon esto con patrones de alteracion hemodinamica en la vena cava inferior.",
+  "vertebralArteryAssociation": "Los estudios historicos segun Velchover vincularon esto con patrones de circulacion de la arteria vertebral.",
+  "smallPelvisAssociation": "Los estudios historicos segun Velchover vincularon esto con patrones congestivos en la pelvis menor.",
+  "openZoneOverlay": "Abrir superposicion de zonas",
+  "iris": "Iris",
+  "chartOpacity": "Opacidad del grafico",
+  "irisSizeNotAvailable": "Datos de tamano del iris no disponibles",
+  "ratio": "Relacion",
+  "reportRefPiRatio": "Relacion Pupila/Iris: Normal 20-30%",
+  "reportRefEllipseness": "Elipticidad: Normal >95%",
+  "reportRefDecentralization": "Descentralizacion: Normal <5%",
+  "reportRefPupilSizeDiff": "Dif. Tamano Pupila: <2% Normal, 2-4% Leve, >4% Significativo"
 }

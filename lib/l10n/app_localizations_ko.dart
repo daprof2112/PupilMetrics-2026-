@@ -1989,16 +1989,16 @@ class AppLocalizationsKo extends AppLocalizations {
   String get anwAtonic => '이완성';
 
   @override
-  String get anwTonicState => '긴장 상태';
+  String get anwTonicState => '역사적 긴장 패턴';
 
   @override
-  String get anwParasympathotonic => '부교감신경 긴장';
+  String get anwParasympathotonic => '부교감신경 우세 패턴';
 
   @override
-  String get anwSympathotonicState => '교감신경 긴장';
+  String get anwSympathotonicState => '교감신경 우세 패턴';
 
   @override
-  String get anwShiftDetected => '편위 감지됨';
+  String get anwShiftDetected => '역사적 이동 패턴';
 
   @override
   String get anwConstrictionDetected => '수축 감지됨';
@@ -2023,13 +2023,15 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get anwParasympathotonicDesc =>
-      '역치 감수성 증가. 반사 활동 가속화. 위장관 분비/배설 기능 항진.';
+      '역사적 관찰에서는 이것을 역치 민감도 증가, 반사 활동 가속, 위장 분비/배출 기능 증가와 연결했습니다.';
 
   @override
-  String get anwSympathotonicDesc => '역치 감수성 감소. 반사 활동 감속. 위장관 분비/배설 기능 저하.';
+  String get anwSympathotonicDesc =>
+      '역사적 관찰에서는 이것을 역치 민감도 감소, 반사 활동 저하, 위장 분비/배출 기능 감소와 연결했습니다.';
 
   @override
-  String get anwMiddleTemporalShiftCardiac => '좌심실 과부하. 심장 스트레스.';
+  String get anwMiddleTemporalShiftCardiac =>
+      'Velchover에 따른 역사적 연구에서는 이것을 좌심실 과부하 패턴과 심장 스트레스에 연결했습니다.';
 
   @override
   String get anwFrontalConstricted => '동공대의 전두 영역이 수축되어 있습니다.';
@@ -2139,10 +2141,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get helpFeatureBilateralDesc => 'OD 대 OS를 비교하여 비대칭을 감지합니다.';
 
   @override
-  String get helpFeatureMlTitle => 'ML 향상';
+  String get helpFeatureMlTitle => 'ONNX CNN 비교';
 
   @override
-  String get helpFeatureMlDesc => 'ResNet18 모델이 보조 측정을 제공합니다.';
+  String get helpFeatureMlDesc => 'ONNX CNN 모델이 비교용 보조 측정을 제공합니다.';
 
   @override
   String get helpKeyboardShortcuts => '키보드 단축키';
@@ -2223,6 +2225,49 @@ class AppLocalizationsKo extends AppLocalizations {
   String get helpIssuePdfSolution4 => '먼저 TXT 내보내기 시도';
 
   @override
+  String get helpCaptureChecklistTitle => '촬영 체크리스트';
+
+  @override
+  String get helpCaptureChecklist1 => '동공이 중앙에 있고 프레임 안에서 완전히 보이도록 유지하세요.';
+
+  @override
+  String get helpCaptureChecklist2 => '균일한 조명을 사용하고 각막의 눈부심이나 반사를 줄이세요.';
+
+  @override
+  String get helpCaptureChecklist3 => '오른쪽 눈과 왼쪽 눈에서 아이리스코프 거리를 비슷하게 유지하세요.';
+
+  @override
+  String get helpCaptureChecklist4 => '동공 가장자리가 흐리게 보이면 다시 초점을 맞추거나 다시 촬영하세요.';
+
+  @override
+  String get helpExportSettingsTitle => '내보내기 설정';
+
+  @override
+  String get helpExportSettingsDesc =>
+      'PDF 자동 저장은 분석 후 보고서를 저장할 수 있고, 이미지 포함은 PDF의 눈 사진 표시를 제어하며, ONNX CNN 비교는 비교 값을 보고서에 추가합니다.';
+
+  @override
+  String get helpHybridScoreTitle => '하이브리드 신뢰도 및 등급';
+
+  @override
+  String get helpHybridScoreDesc =>
+      '표시되는 신뢰도와 등급은 고전 기하 품질과 ML 일치를 결합하므로 진단이 아니라 측정 신뢰성을 반영합니다.';
+
+  @override
+  String get helpAnomalyGuideTitle => '편평화와 돌출 읽기';
+
+  @override
+  String get helpAnomalyGuideDesc =>
+      '편평화는 동공 경계의 상대적 안쪽 당김을, 돌출은 바깥쪽 당김을 의미합니다. 각 카드에는 구역, 크기, 매핑된 연관 정보가 표시됩니다.';
+
+  @override
+  String get helpZoneOverlayGuideTitle => '구역 오버레이';
+
+  @override
+  String get helpZoneOverlayGuideDesc =>
+      '구역 오버레이를 사용하면 동공과 홍채 주변에서 감지된 이상이 어느 섹터에 위치하는지 시각적으로 확인할 수 있습니다.';
+
+  @override
   String get helpContactSupportTip => '도움이 필요하면 helpdesk@cnri.edu에 문의하세요.';
 
   @override
@@ -2254,9 +2299,6 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get settingsShowZoneOverlay => '구역 오버레이 표시';
-
-  @override
-  String get settingsAutoDetectPupil => '동공 자동 감지';
 
   @override
   String get settingsExportReports => '내보내기 및 보고서';
@@ -2304,6 +2346,9 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get languageSelectTitle => '언어 선택';
+
+  @override
+  String get selectLanguage => '언어 선택';
 
   @override
   String get languageChanged => '언어 변경됨';
@@ -3008,16 +3053,18 @@ class AppLocalizationsKo extends AppLocalizations {
   String get manualAlignmentAid => '검토 전용 수동 정렬 보조. 이미지 드래그 또는 자동 중심 사용.';
 
   @override
-  String get frontalShift => 'S: 전두부 이동.';
+  String get frontalShift => 'S: 전두 이동 패턴.';
 
   @override
-  String get cerebralCirculation => '뇌순환 패턴.';
+  String get cerebralCirculation =>
+      'Velchover에 따른 역사적 연구에서는 이것을 뇌순환 패턴에 연결했습니다.';
 
   @override
-  String get middleTemporalShift => 'D: 중측두부 이동.';
+  String get middleTemporalShift => 'D: 중측두 이동 패턴.';
 
   @override
-  String get respiratoryCardiac => '호흡기 및 심장 자율신경 패턴.';
+  String get respiratoryCardiac =>
+      'Velchover에 따른 역사적 연구에서는 이것을 호흡기 및 심장 자율신경 패턴에 연결했습니다.';
 
   @override
   String get findings => '소견:';
@@ -3074,13 +3121,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get reportAnwParametersTitle => '자율신경 환(ANW)';
 
   @override
-  String get reportTonicStateLabel => '긴장 상태';
+  String get reportTonicStateLabel => '역사적 긴장 패턴';
 
   @override
-  String get reportShiftDetectedTitle => '이동 감지';
+  String get reportShiftDetectedTitle => '역사적 이동 패턴';
 
   @override
-  String get reportClinicalLabel => '임상';
+  String get reportClinicalLabel => '역사적 참고';
 
   @override
   String get reportConstrictionDetectedTitle => '수축 감지';
@@ -3145,4 +3192,59 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get ageGroupSenior60Plus => '노년층 (60+)';
+
+  @override
+  String get middleNasalShift => '중비측 이동 패턴.';
+
+  @override
+  String get upperTemporalShift => '상측두 이동 패턴.';
+
+  @override
+  String get lowerTemporalShift => '하측두 이동 패턴.';
+
+  @override
+  String get basalShift => '기저 이동 패턴.';
+
+  @override
+  String get vagusStellateAssociation =>
+      'Velchover에 따른 역사적 연구에서는 이것을 미주신경 또는 성상신경절의 기능저하 패턴과 연결했습니다.';
+
+  @override
+  String get venaCavaInferiorAssociation =>
+      'Velchover에 따른 역사적 연구에서는 이것을 하대정맥의 혈역학적 장애 패턴과 연결했습니다.';
+
+  @override
+  String get vertebralArteryAssociation =>
+      'Velchover에 따른 역사적 연구에서는 이것을 척추동맥 순환 패턴과 연결했습니다.';
+
+  @override
+  String get smallPelvisAssociation =>
+      'Velchover에 따른 역사적 연구에서는 이것을 소골반 울혈 패턴과 연결했습니다.';
+
+  @override
+  String get openZoneOverlay => '영역 오버레이 열기';
+
+  @override
+  String get iris => '홍채';
+
+  @override
+  String get chartOpacity => '차트 불투명도';
+
+  @override
+  String get irisSizeNotAvailable => '홍채 크기 데이터를 사용할 수 없습니다';
+
+  @override
+  String get ratio => '비율';
+
+  @override
+  String get reportRefPiRatio => '동공/홍채 비율: 정상 20-30%';
+
+  @override
+  String get reportRefEllipseness => '타원도: 정상 >95%';
+
+  @override
+  String get reportRefDecentralization => '탈중심화: 정상 <5%';
+
+  @override
+  String get reportRefPupilSizeDiff => '동공 크기 차이: <2% 정상, 2-4% 경미, >4% 유의';
 }

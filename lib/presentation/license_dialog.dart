@@ -8,6 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:ai_eye_capture/utils/license_manager.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:ai_eye_capture/utils/purchase_links.dart';
+import 'package:ai_eye_capture/l10n/app_localizations.dart';
 /// Shows the license registration dialog
 Future<LicenseInfo?> showLicenseDialog(BuildContext context, {LicenseInfo? currentLicense}) {
   return showDialog<LicenseInfo>(
@@ -93,6 +94,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
   }
 
   Widget _buildHeader() {
+    final l10n = AppLocalizations.of(context);
     return Column(
       children: [
         Container(
@@ -116,18 +118,18 @@ class _LicenseDialogState extends State<LicenseDialog> {
           child: const Icon(Icons.verified_user, size: 40, color: Colors.white),
         ),
         const SizedBox(height: 16),
-        const Text(
-          'PupilMetrics',
-          style: TextStyle(
+        Text(
+          l10n.appTitle,
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
         ),
         const SizedBox(height: 4),
-        const Text(
-          'License Registration',
-          style: TextStyle(color: Colors.white60, fontSize: 14),
+        Text(
+          l10n.licenseRegistration,
+          style: const TextStyle(color: Colors.white60, fontSize: 14),
         ),
       ],
     );
@@ -215,14 +217,15 @@ class _LicenseDialogState extends State<LicenseDialog> {
   }
 
   Widget _buildRegistrationForm() {
+    final l10n = AppLocalizations.of(context);
     return Form(
       key: _formKey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            'Enter License Key',
-            style: TextStyle(
+          Text(
+            l10n.licenseEnterKeyTitle,
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 16,
               fontWeight: FontWeight.w600,
@@ -240,7 +243,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
               letterSpacing: 2,
             ),
             decoration: InputDecoration(
-              hintText: 'CNRI-XXXX-XXXX-XXXX-XXXX',
+              hintText: l10n.licenseKeyPlaceholder,
               hintStyle: TextStyle(color: Colors.white.withOpacity(0.3)),
               prefixIcon: const Icon(Icons.vpn_key, color: Color(0xFF00D9FF)),
               filled: true,
@@ -261,11 +264,11 @@ class _LicenseDialogState extends State<LicenseDialog> {
             ],
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your license key';
+                return l10n.licenseValidationKeyRequired;
               }
               final cleaned = value.replaceAll('-', '');
               if (cleaned.length != 20) {
-                return 'License key should be 20 characters (CNRI-XXXX-XXXX-XXXX-XXXX)';
+                return l10n.licenseValidationKeyFormat;
               }
               return null;
             },
@@ -278,7 +281,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
             controller: _nameController,
             style: const TextStyle(color: Colors.white),
             decoration: InputDecoration(
-              labelText: 'Your Name',
+              labelText: l10n.licenseYourName,
               labelStyle: const TextStyle(color: Colors.white54),
               prefixIcon: const Icon(Icons.person, color: Colors.white54),
               filled: true,
@@ -294,7 +297,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
             ),
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your name';
+                return l10n.licenseValidationNameRequired;
               }
               return null;
             },
@@ -307,7 +310,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
             controller: _emailController,
             style: const TextStyle(color: Colors.white),
             decoration: InputDecoration(
-              labelText: 'Email Address',
+              labelText: l10n.licenseEmailAddress,
               labelStyle: const TextStyle(color: Colors.white54),
               prefixIcon: const Icon(Icons.email, color: Colors.white54),
               filled: true,
@@ -324,10 +327,10 @@ class _LicenseDialogState extends State<LicenseDialog> {
             keyboardType: TextInputType.emailAddress,
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your email';
+                return l10n.licenseValidationEmailRequired;
               }
               if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
-                return 'Please enter a valid email';
+                return l10n.licenseValidationEmailInvalid;
               }
               return null;
             },
@@ -351,9 +354,9 @@ class _LicenseDialogState extends State<LicenseDialog> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'Machine ID',
-                          style: TextStyle(color: Colors.white38, fontSize: 10),
+                        Text(
+                          l10n.licenseMachineId,
+                          style: const TextStyle(color: Colors.white38, fontSize: 10),
                         ),
                         Text(
                           _machineId!,
@@ -371,13 +374,13 @@ class _LicenseDialogState extends State<LicenseDialog> {
                     onPressed: () {
                       Clipboard.setData(ClipboardData(text: _machineId!));
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Machine ID copied to clipboard'),
-                          duration: Duration(seconds: 2),
+                        SnackBar(
+                          content: Text(l10n.licenseMachineIdCopied),
+                          duration: const Duration(seconds: 2),
                         ),
                       );
                     },
-                    tooltip: 'Copy Machine ID',
+                    tooltip: l10n.licenseCopyMachineId,
                   ),
                 ],
               ),
@@ -426,9 +429,9 @@ class _LicenseDialogState extends State<LicenseDialog> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'License Activated Successfully!',
-                  style: TextStyle(
+                Text(
+                  AppLocalizations.of(context).licenseActivatedSuccess,
+                  style: const TextStyle(
                     color: Colors.green,
                     fontWeight: FontWeight.bold,
                     fontSize: 14,
@@ -471,14 +474,14 @@ class _LicenseDialogState extends State<LicenseDialog> {
                       valueColor: AlwaysStoppedAnimation(Colors.black),
                     ),
                   )
-                : const Row(
+                : Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.verified),
-                      SizedBox(width: 8),
+                      const Icon(Icons.verified),
+                      const SizedBox(width: 8),
                       Text(
-                        'Activate License',
-                        style: TextStyle(
+                        AppLocalizations.of(context).licenseActivate,
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
@@ -507,8 +510,10 @@ class _LicenseDialogState extends State<LicenseDialog> {
                 ),
                 child: Text(
                   _activatedLicense != null
-                      ? 'Close'
-                      : (widget.currentLicense?.isTrial == true ? 'Continue Trial' : 'Cancel'),
+                      ? AppLocalizations.of(context).close
+                      : (widget.currentLicense?.isTrial == true
+                          ? AppLocalizations.of(context).licenseContinueTrial
+                          : AppLocalizations.of(context).cancel),
                 ),
               ),
             ),
@@ -520,7 +525,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
               child: OutlinedButton.icon(
                 onPressed: _openPurchasePage,
                 icon: const Icon(Icons.shopping_cart, size: 18),
-                label: const Text('Buy License'),
+                label: Text(AppLocalizations.of(context).licenseBuyLicense),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: Colors.green,
                   side: const BorderSide(color: Colors.green),
@@ -547,17 +552,17 @@ class _LicenseDialogState extends State<LicenseDialog> {
           children: [
             TextButton(
               onPressed: _openSupportPage,
-              child: const Text(
-                'Need help?',
-                style: TextStyle(color: Colors.white54, fontSize: 12),
+              child: Text(
+                AppLocalizations.of(context).licenseNeedHelp,
+                style: const TextStyle(color: Colors.white54, fontSize: 12),
               ),
             ),
             const Text('•', style: TextStyle(color: Colors.white24)),
             TextButton(
               onPressed: _openEULA,
-              child: const Text(
-                'License Agreement',
-                style: TextStyle(color: Colors.white54, fontSize: 12),
+              child: Text(
+                AppLocalizations.of(context).licenseLicenseAgreement,
+                style: const TextStyle(color: Colors.white54, fontSize: 12),
               ),
             ),
           ],
@@ -568,15 +573,16 @@ class _LicenseDialogState extends State<LicenseDialog> {
 
   // FIXED: Changed machineeMismatch to machineMismatch (single 'e')
   String _getStatusTitle(LicenseStatus status) {
+    final l10n = AppLocalizations.of(context);
     return switch (status) {
-      LicenseStatus.valid => 'Licensed',
-      LicenseStatus.trialActive => 'Free Trial',
-      LicenseStatus.trialExpired => 'Trial Ended',
-      LicenseStatus.expired => 'License Expired',
-      LicenseStatus.invalid => 'Invalid License',
-      LicenseStatus.unregistered => 'Not Set Up',
-      LicenseStatus.machineMismatch => 'Different Computer', // FIXED: was machineeMismatch
-      LicenseStatus.networkError => 'Connection Error',
+      LicenseStatus.valid => l10n.licenseStatusValid,
+      LicenseStatus.trialActive => l10n.licenseStatusTrialActive,
+      LicenseStatus.trialExpired => l10n.licenseStatusTrialExpired,
+      LicenseStatus.expired => l10n.licenseStatusExpired,
+      LicenseStatus.invalid => l10n.licenseStatusInvalid,
+      LicenseStatus.unregistered => l10n.licenseStatusUnregistered,
+      LicenseStatus.machineMismatch => l10n.licenseStatusMachineMismatch, // FIXED: was machineeMismatch
+      LicenseStatus.networkError => l10n.licenseStatusNetworkError,
     };
   }
 
@@ -607,7 +613,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
     } catch (e) {
       setState(() {
         _isActivating = false;
-        _errorMessage = 'Unable to activate license. Please try again.';
+        _errorMessage = AppLocalizations.of(context).licenseMsgUnableToActivate;
       });
     }
   }

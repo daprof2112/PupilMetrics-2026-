@@ -110,7 +110,7 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
                 smallSize: 8,
                 child: const Icon(Icons.videocam),
               ),
-              tooltip: 'Detected Cameras',
+              tooltip: l10n.detectedCameras,
               onPressed: () => _showDetectedCameras(context),
             ),
         ],

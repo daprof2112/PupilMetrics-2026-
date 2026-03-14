@@ -3753,25 +3753,25 @@ abstract class AppLocalizations {
   /// No description provided for @anwTonicState.
   ///
   /// In en, this message translates to:
-  /// **'Tonic State'**
+  /// **'Historical Tone Pattern'**
   String get anwTonicState;
 
   /// No description provided for @anwParasympathotonic.
   ///
   /// In en, this message translates to:
-  /// **'Parasympathotonic'**
+  /// **'Parasympathotonic pattern'**
   String get anwParasympathotonic;
 
   /// No description provided for @anwSympathotonicState.
   ///
   /// In en, this message translates to:
-  /// **'Sympathotonic'**
+  /// **'Sympathotonic pattern'**
   String get anwSympathotonicState;
 
   /// No description provided for @anwShiftDetected.
   ///
   /// In en, this message translates to:
-  /// **'Shift Detected'**
+  /// **'Historical Shift Pattern'**
   String get anwShiftDetected;
 
   /// No description provided for @anwConstrictionDetected.
@@ -3819,19 +3819,19 @@ abstract class AppLocalizations {
   /// No description provided for @anwParasympathotonicDesc.
   ///
   /// In en, this message translates to:
-  /// **'Liminal sensitivity increased. Reflex activity accelerated. GI secretory/evacuation functions heightened.'**
+  /// **'Historical observations linked this to increased liminal sensitivity. Reflex activity accelerated. GI secretory/evacuation functions heightened.'**
   String get anwParasympathotonicDesc;
 
   /// No description provided for @anwSympathotonicDesc.
   ///
   /// In en, this message translates to:
-  /// **'Liminal sensitivity decreased. Reflex activity decelerated. GI secretory/evacuation functions reduced.'**
+  /// **'Historical observations linked this to decreased liminal sensitivity. Reflex activity decelerated. GI secretory/evacuation functions reduced.'**
   String get anwSympathotonicDesc;
 
   /// No description provided for @anwMiddleTemporalShiftCardiac.
   ///
   /// In en, this message translates to:
-  /// **'Overloads of the left ventricle. Cardiac stress.'**
+  /// **'Historical studies according to Velchover linked this to left-ventricular overload patterns and cardiac stress.'**
   String get anwMiddleTemporalShiftCardiac;
 
   /// No description provided for @anwFrontalConstricted.
@@ -4047,13 +4047,13 @@ abstract class AppLocalizations {
   /// No description provided for @helpFeatureMlTitle.
   ///
   /// In en, this message translates to:
-  /// **'ML Enhancement'**
+  /// **'ONNX CNN Comparison'**
   String get helpFeatureMlTitle;
 
   /// No description provided for @helpFeatureMlDesc.
   ///
   /// In en, this message translates to:
-  /// **'ResNet18 model provides secondary measurements.'**
+  /// **'ONNX CNN model provides secondary measurements for comparison.'**
   String get helpFeatureMlDesc;
 
   /// No description provided for @helpKeyboardShortcuts.
@@ -4212,6 +4212,84 @@ abstract class AppLocalizations {
   /// **'Try TXT export first'**
   String get helpIssuePdfSolution4;
 
+  /// No description provided for @helpCaptureChecklistTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Capture Checklist'**
+  String get helpCaptureChecklistTitle;
+
+  /// No description provided for @helpCaptureChecklist1.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep the pupil centered and fully visible inside the frame.'**
+  String get helpCaptureChecklist1;
+
+  /// No description provided for @helpCaptureChecklist2.
+  ///
+  /// In en, this message translates to:
+  /// **'Use even lighting and reduce glare or reflections on the cornea.'**
+  String get helpCaptureChecklist2;
+
+  /// No description provided for @helpCaptureChecklist3.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep similar iriscope distance for right and left eyes.'**
+  String get helpCaptureChecklist3;
+
+  /// No description provided for @helpCaptureChecklist4.
+  ///
+  /// In en, this message translates to:
+  /// **'Refocus or retake if the pupil edge looks soft or blurred.'**
+  String get helpCaptureChecklist4;
+
+  /// No description provided for @helpExportSettingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Export Settings'**
+  String get helpExportSettingsTitle;
+
+  /// No description provided for @helpExportSettingsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto-save PDF can save a report after analysis, Include Images controls whether eye photos appear in the PDF, and Show ML Comparison adds the ONNX CNN comparison values to reports.'**
+  String get helpExportSettingsDesc;
+
+  /// No description provided for @helpHybridScoreTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Hybrid Confidence & Grade'**
+  String get helpHybridScoreTitle;
+
+  /// No description provided for @helpHybridScoreDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Displayed confidence and grade combine classical geometry quality with ML agreement, so they reflect measurement reliability rather than a diagnosis.'**
+  String get helpHybridScoreDesc;
+
+  /// No description provided for @helpAnomalyGuideTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reading Flattenings & Protrusions'**
+  String get helpAnomalyGuideTitle;
+
+  /// No description provided for @helpAnomalyGuideDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Flattenings indicate relative inward drawing and protrusions indicate outward drawing along the pupil boundary; each card lists the zone, magnitude, and mapped association.'**
+  String get helpAnomalyGuideDesc;
+
+  /// No description provided for @helpZoneOverlayGuideTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Zone Overlay'**
+  String get helpZoneOverlayGuideTitle;
+
+  /// No description provided for @helpZoneOverlayGuideDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Use the zone overlay to inspect sector positions visually and cross-check where detected anomalies fall around the pupil and iris.'**
+  String get helpZoneOverlayGuideDesc;
+
   /// No description provided for @helpContactSupportTip.
   ///
   /// In en, this message translates to:
@@ -4277,12 +4355,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Show Zone Overlay'**
   String get settingsShowZoneOverlay;
-
-  /// No description provided for @settingsAutoDetectPupil.
-  ///
-  /// In en, this message translates to:
-  /// **'Auto-detect Pupil'**
-  String get settingsAutoDetectPupil;
 
   /// No description provided for @settingsExportReports.
   ///
@@ -4373,6 +4445,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Select Language'**
   String get languageSelectTitle;
+
+  /// No description provided for @selectLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Language'**
+  String get selectLanguage;
 
   /// No description provided for @languageChanged.
   ///
@@ -5703,25 +5781,25 @@ abstract class AppLocalizations {
   /// Zone overlay / analysis: S: Frontal shift.
   ///
   /// In en, this message translates to:
-  /// **'S: Frontal shift.'**
+  /// **'S: Frontal shift pattern.'**
   String get frontalShift;
 
   /// Zone overlay / analysis: Cerebral circulation patterns.
   ///
   /// In en, this message translates to:
-  /// **'Cerebral circulation patterns.'**
+  /// **'Historical studies according to Velchover linked this to cerebral circulation patterns.'**
   String get cerebralCirculation;
 
   /// Zone overlay / analysis: D: Middle-temporal shift.
   ///
   /// In en, this message translates to:
-  /// **'D: Middle-temporal shift.'**
+  /// **'D: Middle-temporal shift pattern.'**
   String get middleTemporalShift;
 
   /// Zone overlay / analysis: Respiratory and cardiac autonomic patterns.
   ///
   /// In en, this message translates to:
-  /// **'Respiratory and cardiac autonomic patterns.'**
+  /// **'Historical studies according to Velchover linked this to respiratory and cardiac autonomic patterns.'**
   String get respiratoryCardiac;
 
   /// Zone overlay / analysis: Findings:
@@ -5835,19 +5913,19 @@ abstract class AppLocalizations {
   /// No description provided for @reportTonicStateLabel.
   ///
   /// In en, this message translates to:
-  /// **'Tonic State'**
+  /// **'Historical Tone Pattern'**
   String get reportTonicStateLabel;
 
   /// No description provided for @reportShiftDetectedTitle.
   ///
   /// In en, this message translates to:
-  /// **'Shift Detected'**
+  /// **'Historical Shift Pattern'**
   String get reportShiftDetectedTitle;
 
   /// No description provided for @reportClinicalLabel.
   ///
   /// In en, this message translates to:
-  /// **'Clinical'**
+  /// **'Historical Note'**
   String get reportClinicalLabel;
 
   /// No description provided for @reportConstrictionDetectedTitle.
@@ -5957,6 +6035,108 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Senior (60+)'**
   String get ageGroupSenior60Plus;
+
+  /// No description provided for @middleNasalShift.
+  ///
+  /// In en, this message translates to:
+  /// **'Middle-nasal shift pattern.'**
+  String get middleNasalShift;
+
+  /// No description provided for @upperTemporalShift.
+  ///
+  /// In en, this message translates to:
+  /// **'Upper-temporal shift pattern.'**
+  String get upperTemporalShift;
+
+  /// No description provided for @lowerTemporalShift.
+  ///
+  /// In en, this message translates to:
+  /// **'Lower-temporal shift pattern.'**
+  String get lowerTemporalShift;
+
+  /// No description provided for @basalShift.
+  ///
+  /// In en, this message translates to:
+  /// **'Basal shift pattern.'**
+  String get basalShift;
+
+  /// No description provided for @vagusStellateAssociation.
+  ///
+  /// In en, this message translates to:
+  /// **'Historical studies according to Velchover linked this to hypofunction patterns of the vagus nerve or stellate ganglion.'**
+  String get vagusStellateAssociation;
+
+  /// No description provided for @venaCavaInferiorAssociation.
+  ///
+  /// In en, this message translates to:
+  /// **'Historical studies according to Velchover linked this to hemodynamic disturbance patterns in the inferior vena cava.'**
+  String get venaCavaInferiorAssociation;
+
+  /// No description provided for @vertebralArteryAssociation.
+  ///
+  /// In en, this message translates to:
+  /// **'Historical studies according to Velchover linked this to vertebral artery circulation patterns.'**
+  String get vertebralArteryAssociation;
+
+  /// No description provided for @smallPelvisAssociation.
+  ///
+  /// In en, this message translates to:
+  /// **'Historical studies according to Velchover linked this to congestive patterns in the small pelvis.'**
+  String get smallPelvisAssociation;
+
+  /// No description provided for @openZoneOverlay.
+  ///
+  /// In en, this message translates to:
+  /// **'Open zone overlay'**
+  String get openZoneOverlay;
+
+  /// No description provided for @iris.
+  ///
+  /// In en, this message translates to:
+  /// **'Iris'**
+  String get iris;
+
+  /// No description provided for @chartOpacity.
+  ///
+  /// In en, this message translates to:
+  /// **'Chart opacity'**
+  String get chartOpacity;
+
+  /// No description provided for @irisSizeNotAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Iris size data not available'**
+  String get irisSizeNotAvailable;
+
+  /// No description provided for @ratio.
+  ///
+  /// In en, this message translates to:
+  /// **'Ratio'**
+  String get ratio;
+
+  /// No description provided for @reportRefPiRatio.
+  ///
+  /// In en, this message translates to:
+  /// **'Pupil/Iris Ratio: Normal 20-30%'**
+  String get reportRefPiRatio;
+
+  /// No description provided for @reportRefEllipseness.
+  ///
+  /// In en, this message translates to:
+  /// **'Ellipseness: Normal >95%'**
+  String get reportRefEllipseness;
+
+  /// No description provided for @reportRefDecentralization.
+  ///
+  /// In en, this message translates to:
+  /// **'Decentralization: Normal <5%'**
+  String get reportRefDecentralization;
+
+  /// No description provided for @reportRefPupilSizeDiff.
+  ///
+  /// In en, this message translates to:
+  /// **'Pupil Size Diff: <2% Normal, 2-4% Mild, >4% Significant'**
+  String get reportRefPupilSizeDiff;
 }
 
 class _AppLocalizationsDelegate

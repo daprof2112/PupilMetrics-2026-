@@ -12,69 +12,8 @@ import 'package:ai_eye_capture/l10n/app_localizations.dart';
 import 'package:ai_eye_capture/utils/license_manager.dart';
 import 'package:ai_eye_capture/presentation/license_dialog.dart';
 import 'package:ai_eye_capture/utils/language_controller.dart';
+import 'package:ai_eye_capture/utils/app_settings.dart';
 
-// =============================================================================
-// LOCALIZED STRINGS
-// =============================================================================
-
-// Short title for custom title bar (inside app window)
-// Using 2-letter codes for consistency and to prevent overflow
-const Map<String, String> _localizedShortTitles = {
-  'en': 'PupilMetrics',
-  'es': 'PupilMetrics (ES)',
-  'pt': 'PupilMetrics (PT)',
-  'fr': 'PupilMetrics (FR)',
-  'de': 'PupilMetrics (DE)',
-  'it': 'PupilMetrics (IT)',
-  'ja': 'PupilMetrics (JP)',
-  'ko': 'PupilMetrics (KO)',
-};
-
-// Full title for native Windows taskbar / alt-tab
-const Map<String, String> _localizedWindowTitles = {
-  'en': 'PupilMetrics - Research Edition',
-  'es': 'PupilMetrics - Edición de Investigación',
-  'pt': 'PupilMetrics - Edição de Pesquisa',
-  'fr': 'PupilMetrics - Édition Recherche',
-  'de': 'PupilMetrics - Forschungsausgabe',
-  'it': 'PupilMetrics - Edizione Ricerca',
-  'ja': 'PupilMetrics - 研究版',
-  'ko': 'PupilMetrics - 연구용',
-};
-
-// Snackbar: "Language Changed"
-const Map<String, String> _localizedLanguageChanged = {
-  'en': 'Language Changed',
-  'es': 'Idioma Cambiado',
-  'pt': 'Idioma Alterado',
-  'fr': 'Langue Modifiée',
-  'de': 'Sprache Geändert',
-  'it': 'Lingua Cambiata',
-  'ja': '言語が変更されました',
-  'ko': '언어가 변경되었습니다',
-};
-
-// Snackbar: "App language set to"
-const Map<String, String> _localizedLanguageSetTo = {
-  'en': 'App language set to',
-  'es': 'Idioma de la aplicación establecido en',
-  'pt': 'Idioma do aplicativo definido para',
-  'fr': 'Langue de l\'application définie sur',
-  'de': 'App-Sprache eingestellt auf',
-  'it': 'Lingua dell\'app impostata su',
-  'ja': 'アプリの言語が設定されました：',
-  'ko': '앱 언어가 설정되었습니다:',
-};
-
-/// Helper to get localized window title (for native taskbar)
-String getLocalizedWindowTitle(String langCode) {
-  return _localizedWindowTitles[langCode] ?? _localizedWindowTitles['en']!;
-}
-
-/// Helper to get short title (for custom title bar widget)
-String getLocalizedShortTitle(String langCode) {
-  return _localizedShortTitles[langCode] ?? _localizedShortTitles['en']!;
-}
 
 // =============================================================================
 // WINDOWS TITLE BAR - Reactive to language changes
@@ -94,8 +33,7 @@ class WindowsTitleBar extends StatelessWidget {
     return GetX<LanguageController>(
       init: LanguageController(),
       builder: (controller) {
-        final langCode = controller.currentLocale.value.languageCode;
-        final displayTitle = getLocalizedShortTitle(langCode);
+        final displayTitle = AppLocalizations.of(context).windowTitle;
 
         return GestureDetector(
           onPanStart: (_) => windowManager.startDragging(),
@@ -294,16 +232,13 @@ class _LanguageDialogState extends State<LanguageDialog> {
 
       // Update the native Windows title bar (taskbar, alt-tab)
       await Future.delayed(const Duration(milliseconds: 200));
-      final newTitle = getLocalizedWindowTitle(newLangCode);
-      await windowManager.setTitle(newTitle);
+      final newL10n = lookupAppLocalizations(Locale(newLangCode));
+      await windowManager.setTitle('${newL10n.windowTitle} - ${newL10n.aboutResearchEdition}');
 
       // Show localized snackbar
-      final changedText = _localizedLanguageChanged[newLangCode] ?? _localizedLanguageChanged['en']!;
-      final setToText = _localizedLanguageSetTo[newLangCode] ?? _localizedLanguageSetTo['en']!;
-
       Get.snackbar(
-        changedText,
-        '$setToText ${language.nativeName}',
+        newL10n.languageChanged,
+        newL10n.languageChangedMessage(language.nativeName),
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: const Color(0xFF00D9FF),
         colorText: Colors.black,
@@ -326,9 +261,9 @@ class _LanguageDialogState extends State<LanguageDialog> {
             children: [
               const Icon(Icons.error_outline, color: Colors.orange, size: 48),
               const SizedBox(height: 16),
-              const Text('Language system not available', style: TextStyle(color: Colors.white)),
+              Text(AppLocalizations.of(context).languageSystemNotAvailable, style: const TextStyle(color: Colors.white)),
               const SizedBox(height: 16),
-              TextButton(onPressed: () => Get.back(), child: const Text('Close')),
+              TextButton(onPressed: () => Get.back(), child: Text(AppLocalizations.of(context).close)),
             ],
           ),
         ),
@@ -359,8 +294,8 @@ class _LanguageDialogState extends State<LanguageDialog> {
                 children: [
                   const Icon(Icons.language, color: Color(0xFF00D9FF), size: 24),
                   const SizedBox(width: 12),
-                  const Expanded(
-                    child: Text('Select Language', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+                  Expanded(
+                    child: Text(AppLocalizations.of(context).selectLanguage, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
                   ),
                   IconButton(
                     onPressed: () => Get.back(),
@@ -595,17 +530,58 @@ class SettingsDialog extends StatefulWidget {
 }
 
 class _SettingsDialogState extends State<SettingsDialog> {
-  bool _autoSavePdf = true;
-  bool _includeImagesInPdf = true;
-  bool _showMLComparison = true;
-  bool _showZoneOverlay = true;
-  bool _autoDetectPupil = true;
-  String _preferredCamera = 'Dino-Lite';
-  double _defaultZoom = 1.0;
+  bool _autoSavePdf = AppSettings.defaults.autoSavePdf;
+  bool _includeImagesInPdf = AppSettings.defaults.includeImagesInPdf;
+  bool _showMLComparison = AppSettings.defaults.showMlComparison;
+  bool _showZoneOverlay = AppSettings.defaults.showZoneOverlay;
+  String _preferredCamera = AppSettings.defaults.preferredCamera;
+  double _defaultZoom = AppSettings.defaults.defaultZoom;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadSettings();
+  }
+
+  Future<void> _loadSettings() async {
+    final settings = await AppSettings.load();
+    if (!mounted) return;
+
+    setState(() {
+      _autoSavePdf = settings.autoSavePdf;
+      _includeImagesInPdf = settings.includeImagesInPdf;
+      _showMLComparison = settings.showMlComparison;
+      _showZoneOverlay = settings.showZoneOverlay;
+      _preferredCamera = settings.preferredCamera;
+      _defaultZoom = settings.defaultZoom;
+    });
+  }
+
+  Future<void> _saveSettings() {
+    return AppSettings.save(
+      AppSettingsData(
+        autoSavePdf: _autoSavePdf,
+        includeImagesInPdf: _includeImagesInPdf,
+        showMlComparison: _showMLComparison,
+        showZoneOverlay: _showZoneOverlay,
+        preferredCamera: _preferredCamera,
+        defaultZoom: _defaultZoom,
+      ),
+    );
+  }
+
+  Map<String, String> _cameraOptions(AppLocalizations l10n) {
+    return {
+      AppSettings.cameraDinoLite: l10n.settingsCameraDinoLite,
+      AppSettings.cameraUsb: l10n.settingsCameraUsb,
+      AppSettings.cameraAutoDetect: l10n.settingsCameraAutoDetect,
+    };
+  }
 
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final cameraOptions = _cameraOptions(l10n);
 
     return AlertDialog(
       backgroundColor: const Color(0xFF1D1E33),
@@ -628,16 +604,17 @@ class _SettingsDialogState extends State<SettingsDialog> {
               Text(l10n.settingsPreferredCamera, style: const TextStyle(color: Colors.white70, fontSize: 13)),
               const SizedBox(height: 4),
               DropdownButton<String>(
-                value: _preferredCamera,
+                value: cameraOptions.containsKey(_preferredCamera) ? _preferredCamera : AppSettings.defaults.preferredCamera,
                 isExpanded: true,
                 dropdownColor: const Color(0xFF1D1E33),
                 style: const TextStyle(color: Colors.white),
-                items: [
-                  l10n.settingsCameraDinoLite,
-                  l10n.settingsCameraUsb,
-                  l10n.settingsCameraAutoDetect,
-                ].map((c) => DropdownMenuItem<String>(value: c, child: Text(c))).toList(),
-                onChanged: (v) => setState(() => _preferredCamera = v!),
+                items: cameraOptions.entries
+                    .map((entry) => DropdownMenuItem<String>(value: entry.key, child: Text(entry.value)))
+                    .toList(),
+                onChanged: (v) {
+                  if (v == null) return;
+                  setState(() => _preferredCamera = v);
+                },
               ),
               const SizedBox(height: 8),
               Row(
@@ -646,16 +623,16 @@ class _SettingsDialogState extends State<SettingsDialog> {
                   const SizedBox(width: 12),
                   Expanded(
                     child: Slider(
-                      value: _defaultZoom,
-                      min: 0.5,
-                      max: 3.0,
-                      divisions: 5,
-                      label: '${_defaultZoom.toStringAsFixed(1)}x',
+                      value: AppSettings.storedZoomToDisplay(_defaultZoom),
+                      min: 1.0,
+                      max: 4.0,
+                      divisions: 6,
+                      label: '${AppSettings.storedZoomToDisplay(_defaultZoom).toStringAsFixed(1)}x',
                       activeColor: const Color(0xFF00D9FF),
-                      onChanged: (v) => setState(() => _defaultZoom = v),
+                      onChanged: (v) => setState(() => _defaultZoom = AppSettings.displayZoomToStored(v)),
                     ),
                   ),
-                  Text('${_defaultZoom.toStringAsFixed(1)}x', style: const TextStyle(color: Colors.white, fontSize: 12)),
+                  Text('${AppSettings.storedZoomToDisplay(_defaultZoom).toStringAsFixed(1)}x', style: const TextStyle(color: Colors.white, fontSize: 12)),
                 ],
               ),
               const Divider(color: Colors.white24, height: 24),
@@ -663,7 +640,6 @@ class _SettingsDialogState extends State<SettingsDialog> {
               const SizedBox(height: 12),
               _buildSwitch(l10n.settingsShowMlComparison, _showMLComparison, (v) => setState(() => _showMLComparison = v)),
               _buildSwitch(l10n.settingsShowZoneOverlay, _showZoneOverlay, (v) => setState(() => _showZoneOverlay = v)),
-              _buildSwitch(l10n.settingsAutoDetectPupil, _autoDetectPupil, (v) => setState(() => _autoDetectPupil = v)),
               const Divider(color: Colors.white24, height: 24),
               _sectionHeader(l10n.settingsExportReports),
               const SizedBox(height: 12),
@@ -676,7 +652,9 @@ class _SettingsDialogState extends State<SettingsDialog> {
       actions: [
         TextButton(onPressed: () => Get.back(), child: Text(l10n.cancel)),
         ElevatedButton(
-          onPressed: () {
+          onPressed: () async {
+            await _saveSettings();
+            if (!mounted) return;
             Get.back();
             Get.snackbar(l10n.settingsTitle, l10n.settingsSaved, backgroundColor: Colors.green, colorText: Colors.white, snackPosition: SnackPosition.BOTTOM);
           },
@@ -702,7 +680,6 @@ class _SettingsDialogState extends State<SettingsDialog> {
     );
   }
 }
-
 // =============================================================================
 // HELP DIALOG WITH TABS
 // =============================================================================
@@ -755,19 +732,23 @@ class HelpDialog extends StatelessWidget {
           ),
         ),
       ),
+      actionsAlignment: MainAxisAlignment.center,
       actions: [
-        TextButton(
-          onPressed: () => launchUrl(Uri.parse('https://cnri.edu/pricing/')),
-          child: Text(l10n.helpOnlineDocs),
-        ),
-        TextButton(
-          onPressed: () => launchUrl(Uri.parse('mailto:helpdesk@cnri.edu')),
-          child: Text(l10n.helpContactSupport),
-        ),
-        ElevatedButton(
-          onPressed: () => Get.back(),
-          style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF00D9FF)),
-          child: Text(l10n.close, style: const TextStyle(color: Colors.black)),
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+              onPressed: () => launchUrl(Uri.parse('mailto:helpdesk@cnri.edu')),
+              child: Text(l10n.helpContactSupport),
+            ),
+            const SizedBox(width: 12),
+            ElevatedButton(
+              onPressed: () => Get.back(),
+              style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF00D9FF)),
+              child: Text(l10n.close, style: const TextStyle(color: Colors.black)),
+            ),
+          ],
         ),
       ],
     );
@@ -779,7 +760,7 @@ class HelpDialog extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(l10n.helpGettingStarted, style: const TextStyle(color: Color(0xFF00D9FF), fontSize: 16, fontWeight: FontWeight.bold)),
+          _sectionTitle(l10n.helpGettingStarted),
           const SizedBox(height: 12),
           _helpItem('1', l10n.helpStep1Title, l10n.helpStep1Desc),
           _helpItem('2', l10n.helpStep2Title, l10n.helpStep2Desc),
@@ -788,18 +769,52 @@ class HelpDialog extends StatelessWidget {
           _helpItem('5', l10n.helpStep5Title, l10n.helpStep5Desc),
           _helpItem('6', l10n.helpStep6Title, l10n.helpStep6Desc),
           const SizedBox(height: 16),
-          Container(
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: Colors.green.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: Colors.green.withOpacity(0.3)),
+          _infoCard(
+            icon: Icons.lightbulb_outline,
+            iconColor: Colors.green,
+            borderColor: Colors.green,
+            backgroundColor: Colors.green.withOpacity(0.10),
+            child: Text(
+              l10n.helpTipBestResults,
+              style: const TextStyle(color: Colors.green, fontSize: 12, fontStyle: FontStyle.italic, height: 1.35),
             ),
-            child: Row(
+          ),
+          const SizedBox(height: 24),
+          _sectionTitle(l10n.helpCaptureChecklistTitle),
+          const SizedBox(height: 12),
+          _infoCard(
+            icon: Icons.checklist,
+            iconColor: const Color(0xFF00D9FF),
+            borderColor: const Color(0xFF00D9FF),
+            backgroundColor: const Color(0xFF00D9FF).withOpacity(0.08),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Icon(Icons.lightbulb_outline, color: Colors.green, size: 20),
-                const SizedBox(width: 12),
-                Expanded(child: Text(l10n.helpTipBestResults, style: const TextStyle(color: Colors.green, fontSize: 12, fontStyle: FontStyle.italic))),
+                _bulletItem(l10n.helpCaptureChecklist1),
+                _bulletItem(l10n.helpCaptureChecklist2),
+                _bulletItem(l10n.helpCaptureChecklist3),
+                _bulletItem(l10n.helpCaptureChecklist4),
+              ],
+            ),
+          ),
+          const SizedBox(height: 16),
+          _infoCard(
+            icon: Icons.settings_suggest,
+            iconColor: Colors.cyan,
+            borderColor: Colors.cyan,
+            backgroundColor: Colors.cyan.withOpacity(0.10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  l10n.helpExportSettingsTitle,
+                  style: const TextStyle(color: Colors.cyan, fontSize: 13, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  l10n.helpExportSettingsDesc,
+                  style: const TextStyle(color: Colors.white70, fontSize: 12, height: 1.35),
+                ),
               ],
             ),
           ),
@@ -814,7 +829,7 @@ class HelpDialog extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(l10n.helpCnriProtocolFeatures, style: const TextStyle(color: Color(0xFF00D9FF), fontSize: 16, fontWeight: FontWeight.bold)),
+          _sectionTitle(l10n.helpCnriProtocolFeatures),
           const SizedBox(height: 12),
           _featureItem(Icons.visibility, l10n.helpFeaturePiRatioTitle, l10n.helpFeaturePiRatioDesc),
           _featureItem(Icons.circle_outlined, l10n.helpFeaturePupilFormTitle, l10n.helpFeaturePupilFormDesc),
@@ -822,6 +837,9 @@ class HelpDialog extends StatelessWidget {
           _featureItem(Icons.radar, l10n.helpFeatureZoneTitle, l10n.helpFeatureZoneDesc),
           _featureItem(Icons.compare_arrows, l10n.helpFeatureBilateralTitle, l10n.helpFeatureBilateralDesc),
           _featureItem(Icons.psychology, l10n.helpFeatureMlTitle, l10n.helpFeatureMlDesc),
+          _featureItem(Icons.hub, l10n.helpHybridScoreTitle, l10n.helpHybridScoreDesc),
+          _featureItem(Icons.waves, l10n.helpAnomalyGuideTitle, l10n.helpAnomalyGuideDesc),
+          _featureItem(Icons.layers, l10n.helpZoneOverlayGuideTitle, l10n.helpZoneOverlayGuideDesc),
         ],
       ),
     );
@@ -833,31 +851,22 @@ class HelpDialog extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(l10n.helpKeyboardShortcuts, style: const TextStyle(color: Color(0xFF00D9FF), fontSize: 16, fontWeight: FontWeight.bold)),
+          _sectionTitle(l10n.helpKeyboardShortcuts),
           const SizedBox(height: 12),
-          _shortcutItem('Space', l10n.helpShortcutSpace),
-          _shortcutItem('Ctrl + S', l10n.helpShortcutCtrlS),
-          _shortcutItem('Ctrl + O', l10n.helpShortcutCtrlO),
           _shortcutItem('Ctrl + H', l10n.helpShortcutCtrlH),
           _shortcutItem('F11', l10n.helpShortcutF11),
           _shortcutItem('Esc', l10n.helpShortcutEsc),
-          const SizedBox(height: 24),
-          Text(l10n.helpCameraControls, style: const TextStyle(color: Color(0xFF00D9FF), fontSize: 16, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 12),
-          _shortcutItem('Scroll', l10n.helpShortcutScroll),
-          _shortcutItem('Double-click', l10n.helpShortcutDoubleClick),
         ],
       ),
     );
   }
-
   static Widget _buildTroubleshootingTab(AppLocalizations l10n) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(l10n.helpCommonIssues, style: const TextStyle(color: Color(0xFF00D9FF), fontSize: 16, fontWeight: FontWeight.bold)),
+          _sectionTitle(l10n.helpCommonIssues),
           const SizedBox(height: 12),
           _troubleshootItem(l10n.helpIssueCameraNotDetected, [
             l10n.helpIssueCameraSolution1,
@@ -878,24 +887,14 @@ class HelpDialog extends StatelessWidget {
             l10n.helpIssuePdfSolution4,
           ]),
           const SizedBox(height: 16),
-          Container(
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: Colors.amber.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: Colors.amber.withOpacity(0.3)),
-            ),
-            child: Row(
-              children: [
-                const Icon(Icons.support_agent, color: Colors.amber, size: 20),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Text(
-                    l10n.helpContactSupportTip,
-                    style: const TextStyle(color: Colors.amber, fontSize: 12, fontStyle: FontStyle.italic),
-                  ),
-                ),
-              ],
+          _infoCard(
+            icon: Icons.support_agent,
+            iconColor: Colors.amber,
+            borderColor: Colors.amber,
+            backgroundColor: Colors.amber.withOpacity(0.10),
+            child: Text(
+              l10n.helpContactSupportTip,
+              style: const TextStyle(color: Colors.amber, fontSize: 12, fontStyle: FontStyle.italic, height: 1.35),
             ),
           ),
         ],
@@ -903,15 +902,59 @@ class HelpDialog extends StatelessWidget {
     );
   }
 
+  static Widget _sectionTitle(String text) {
+    return Text(
+      text,
+      style: const TextStyle(
+        color: Color(0xFF00D9FF),
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        letterSpacing: 0.2,
+      ),
+    );
+  }
+
+  static Widget _infoCard({
+    required IconData icon,
+    required Color iconColor,
+    required Color borderColor,
+    required Color backgroundColor,
+    required Widget child,
+  }) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: backgroundColor,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: borderColor.withOpacity(0.35)),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(icon, color: iconColor, size: 20),
+          const SizedBox(width: 12),
+          Expanded(child: child),
+        ],
+      ),
+    );
+  }
+
   static Widget _helpItem(String num, String title, String description) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
+    return Container(
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.04),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: Colors.white10),
+      ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 24,
-            height: 24,
+            width: 28,
+            height: 28,
             decoration: const BoxDecoration(color: Color(0xFF00D9FF), shape: BoxShape.circle),
             child: Center(child: Text(num, style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 12))),
           ),
@@ -921,8 +964,8 @@ class HelpDialog extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(title, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13)),
-                const SizedBox(height: 2),
-                Text(description, style: const TextStyle(color: Colors.white60, fontSize: 12)),
+                const SizedBox(height: 4),
+                Text(description, style: const TextStyle(color: Colors.white60, fontSize: 12, height: 1.35)),
               ],
             ),
           ),
@@ -932,20 +975,34 @@ class HelpDialog extends StatelessWidget {
   }
 
   static Widget _featureItem(IconData icon, String title, String description) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
+    return Container(
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.04),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: Colors.white10),
+      ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(icon, color: const Color(0xFF00D9FF), size: 20),
+          Container(
+            width: 34,
+            height: 34,
+            decoration: BoxDecoration(
+              color: const Color(0xFF00D9FF).withOpacity(0.12),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Icon(icon, color: const Color(0xFF00D9FF), size: 18),
+          ),
           const SizedBox(width: 12),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(title, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13)),
-                const SizedBox(height: 2),
-                Text(description, style: const TextStyle(color: Colors.white60, fontSize: 12)),
+                const SizedBox(height: 4),
+                Text(description, style: const TextStyle(color: Colors.white60, fontSize: 12, height: 1.35)),
               ],
             ),
           ),
@@ -954,31 +1011,60 @@ class HelpDialog extends StatelessWidget {
     );
   }
 
-  static Widget _shortcutItem(String keys, String action) {
+  static Widget _bulletItem(String text) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Padding(
+            padding: EdgeInsets.only(top: 3),
+            child: Icon(Icons.check_circle, color: Colors.green, size: 16),
+          ),
+          const SizedBox(width: 10),
+          Expanded(child: Text(text, style: const TextStyle(color: Colors.white70, fontSize: 12, height: 1.35))),
+        ],
+      ),
+    );
+  }
+
+  static Widget _shortcutItem(String keys, String action) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.04),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: Colors.white10),
+      ),
+      child: Row(
         children: [
           Container(
-            width: 100,
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+            width: 108,
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
             decoration: BoxDecoration(
               color: Colors.white10,
-              borderRadius: BorderRadius.circular(4),
+              borderRadius: BorderRadius.circular(6),
               border: Border.all(color: Colors.white24),
             ),
             child: Text(keys, style: const TextStyle(color: Colors.white, fontSize: 11, fontFamily: 'monospace')),
           ),
           const SizedBox(width: 16),
-          Expanded(child: Text(action, style: const TextStyle(color: Colors.white70, fontSize: 13))),
+          Expanded(child: Text(action, style: const TextStyle(color: Colors.white70, fontSize: 13, height: 1.3))),
         ],
       ),
     );
   }
 
   static Widget _troubleshootItem(String problem, List<String> solutions) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
+    return Container(
+      margin: const EdgeInsets.only(bottom: 14),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.04),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: Colors.white10),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -986,17 +1072,17 @@ class HelpDialog extends StatelessWidget {
             children: [
               const Icon(Icons.error_outline, color: Colors.orange, size: 18),
               const SizedBox(width: 8),
-              Text(problem, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13)),
+              Expanded(child: Text(problem, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13))),
             ],
           ),
-          const SizedBox(height: 6),
+          const SizedBox(height: 8),
           ...solutions.map((s) => Padding(
-            padding: const EdgeInsets.only(left: 26, bottom: 2),
+            padding: const EdgeInsets.only(left: 4, bottom: 4),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text('• ', style: TextStyle(color: Colors.green, fontSize: 12)),
-                Expanded(child: Text(s, style: const TextStyle(color: Colors.white60, fontSize: 12))),
+                Expanded(child: Text(s, style: const TextStyle(color: Colors.white60, fontSize: 12, height: 1.3))),
               ],
             ),
           )),
@@ -1004,9 +1090,8 @@ class HelpDialog extends StatelessWidget {
       ),
     );
   }
-}
 
-// =============================================================================
+}
 // ABOUT DIALOG WITH LICENSE
 // =============================================================================
 class AboutDialogWithLicense extends StatefulWidget {
@@ -1094,7 +1179,7 @@ class _AboutDialogWithLicenseState extends State<AboutDialogWithLicense> {
                 child: const Icon(Icons.remove_red_eye, size: 30, color: Color(0xFF00D9FF)),
               ),
               const SizedBox(height: 12),
-              const Text('PupilMetrics', style: TextStyle(color: Color(0xFF00D9FF), fontSize: 22, fontWeight: FontWeight.bold)),
+              Text(l10n.appTitle, style: const TextStyle(color: Color(0xFF00D9FF), fontSize: 22, fontWeight: FontWeight.bold)),
               Text(l10n.aboutResearchEdition, style: const TextStyle(color: Colors.white54, fontSize: 12)),
               const SizedBox(height: 8),
               Container(

@@ -6,7 +6,6 @@
 
 import 'dart:io';
 import 'dart:math' as math;
-import 'dart:typed_data';
 import 'dart:convert';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
@@ -22,6 +21,8 @@ import 'package:open_file/open_file.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:ai_eye_capture/utils/pupil_analyzer_fixed.dart';
 import 'package:ai_eye_capture/utils/ml_pupil_analyzer.dart';
+import 'package:ai_eye_capture/utils/hybrid_confidence.dart';
+import 'package:ai_eye_capture/utils/app_settings.dart';
 import 'package:ai_eye_capture/utils/pupil_analyzer_localizations.dart';
 import 'package:ai_eye_capture/utils/database_helper.dart';
 import 'package:ai_eye_capture/main.dart';
@@ -56,10 +57,15 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
   final _mlAnalyzer = MLPupilAnalyzer();
   EyeAnalysisResult? _leftResult, _rightResult;
   MLAnalysisResult? _mlLeftResult, _mlRightResult;
+  HybridConfidenceBreakdown? _hybridLeftConfidence, _hybridRightConfidence;
   AnisocoriaAssessment? _anisocoriaResult;
   AgeNormAssessment? _ageNormResult;
   String? _overlayObserverNotes;  // notes typed in zone overlay dialog, included in exports
   BilateralIrisMetrics? _irisMetrics;
+  bool _showMlComparison = AppSettings.defaults.showMlComparison;
+  bool _showZoneOverlay = AppSettings.defaults.showZoneOverlay;
+  bool _includeImagesInPdf = AppSettings.defaults.includeImagesInPdf;
+  bool _autoSavePdf = AppSettings.defaults.autoSavePdf;
   bool _isAnalyzing = true;
   String _statusMessage = '';
   bool get _isDesktop => Platform.isWindows || Platform.isMacOS || Platform.isLinux;
@@ -99,7 +105,20 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
         vsync: this,
         duration: const Duration(seconds: 2)
     )..repeat();
+    _loadAppSettings();
     _initializeAndRun();
+  }
+
+  Future<void> _loadAppSettings() async {
+    final settings = await AppSettings.load();
+    if (!mounted) return;
+
+    setState(() {
+      _showMlComparison = settings.showMlComparison;
+      _showZoneOverlay = settings.showZoneOverlay;
+      _includeImagesInPdf = settings.includeImagesInPdf;
+      _autoSavePdf = settings.autoSavePdf;
+    });
   }
 
   Future<void> _initializeAndRun() async {
@@ -114,7 +133,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
   }
 
   Future<void> _runAnalysis() async {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final analyzer = PupilAnalyzer();
     final validator = EyeValidator();
 
@@ -173,14 +192,18 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
         await Future.delayed(const Duration(milliseconds: 300));
         _rightResult = await analyzer.analyzeEye(widget.rightEyeImage!, isRightEye: true);
         _mlRightResult = await _mlAnalyzer.analyze(await widget.rightEyeImage!.readAsBytes(), eye: 'OD');
+        _hybridRightConfidence = HybridConfidenceFusion.fuse(
+          classical: _rightResult!,
+          ml: _mlRightResult!,
+          validationPassed: true,
+        );
 
-        print('👁 RIGHT EYE: Classical=${_rightResult!.pupilIrisRatio.toStringAsFixed(1)}% | ML=${_mlRightResult!.pupilIrisRatio.toStringAsFixed(1)}%');
-
+        debugPrint('👁 RIGHT EYE: Classical=${_rightResult!.pupilIrisRatio.toStringAsFixed(1)}% | ML=${_mlRightResult!.pupilIrisRatio.toStringAsFixed(1)}% | HybridConf=${(_hybridRightConfidence!.fusedConfidence * 100).toStringAsFixed(0)}%');
         // v5.3.0: Log ANW assessment
         if (_rightResult!.anwAssessment != null) {
           final anw = _rightResult!.anwAssessment!;
-          print('🔵 RIGHT ANW: Ratio=${anw.ratio.toStringAsFixed(1)}% (${anw.ratioStatusLabel}), Form=${anw.formTypeName}');
-          if (anw.bexelFindings.isNotEmpty) print('   Findings: ${anw.bexelFindings.join(", ")}');
+          debugPrint('🔵 RIGHT ANW: Ratio=${anw.ratio.toStringAsFixed(1)}% (${anw.ratioStatusLabel}), Form=${anw.formTypeName}');
+          if (anw.bexelFindings.isNotEmpty) debugPrint('   Findings: ${anw.bexelFindings.join(", ")}' );
         }
       }
 
@@ -193,14 +216,18 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
         await Future.delayed(const Duration(milliseconds: 300));
         _leftResult = await analyzer.analyzeEye(widget.leftEyeImage!, isRightEye: false);
         _mlLeftResult = await _mlAnalyzer.analyze(await widget.leftEyeImage!.readAsBytes(), eye: 'OS');
+        _hybridLeftConfidence = HybridConfidenceFusion.fuse(
+          classical: _leftResult!,
+          ml: _mlLeftResult!,
+          validationPassed: true,
+        );
 
-        print('👁 LEFT EYE: Classical=${_leftResult!.pupilIrisRatio.toStringAsFixed(1)}% | ML=${_mlLeftResult!.pupilIrisRatio.toStringAsFixed(1)}%');
-
+        debugPrint('👁 LEFT EYE: Classical=${_leftResult!.pupilIrisRatio.toStringAsFixed(1)}% | ML=${_mlLeftResult!.pupilIrisRatio.toStringAsFixed(1)}% | HybridConf=${(_hybridLeftConfidence!.fusedConfidence * 100).toStringAsFixed(0)}%');
         // v5.3.0: Log ANW assessment
         if (_leftResult!.anwAssessment != null) {
           final anw = _leftResult!.anwAssessment!;
-          print('🟢 LEFT ANW: Ratio=${anw.ratio.toStringAsFixed(1)}% (${anw.ratioStatusLabel}), Form=${anw.formTypeName}');
-          if (anw.bexelFindings.isNotEmpty) print('   Findings: ${anw.bexelFindings.join(", ")}');
+          debugPrint('🟢 LEFT ANW: Ratio=${anw.ratio.toStringAsFixed(1)}% (${anw.ratioStatusLabel}), Form=${anw.formTypeName}');
+          if (anw.bexelFindings.isNotEmpty) debugPrint('   Findings: ${anw.bexelFindings.join(", ")}' );
         }
       }
 
@@ -223,7 +250,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
       _irisMetrics = BilateralIrisMetrics.calculate(globalRightEyeIrisSize, globalLeftEyeIrisSize);
 
       if (_irisMetrics != null) {
-        print('📏 IRIS METRICS: OD=${_irisMetrics!.odIrisDiameterPx?.toStringAsFixed(0)}px, OS=${_irisMetrics!.osIrisDiameterPx?.toStringAsFixed(0)}px, Match=${_irisMetrics!.sizeMatchPercent?.toStringAsFixed(1)}%');
+        debugPrint('📏 IRIS METRICS: OD=${_irisMetrics!.odIrisDiameterPx?.toStringAsFixed(0)}px, OS=${_irisMetrics!.osIrisDiameterPx?.toStringAsFixed(0)}px, Match=${_irisMetrics!.sizeMatchPercent?.toStringAsFixed(1)}%');
       }
 
       final scanRecord = ScanRecord.fromAnalysis(
@@ -243,6 +270,11 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
         _progress = 1.0;
       });
 
+
+      if (_autoSavePdf) {
+        await _exportPdf();
+      }
+
     } catch (e) {
       setState(() {
         _isAnalyzing = false;
@@ -252,7 +284,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
   }
 
   AnisocoriaAssessment _assessAnisocoria(EyeAnalysisResult left, EyeAnalysisResult right) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final diff = (left.pupilIrisRatio - right.pupilIrisRatio).abs();
     final avg = (left.pupilIrisRatio + right.pupilIrisRatio) / 2;
     final relDiff = avg > 0 ? (diff / avg) * 100 : 0;
@@ -295,7 +327,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
   }
 
   AgeNormAssessment _assessAgeNorms(EyeAnalysisResult? left, EyeAnalysisResult? right, int age) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final norm = _getPupilNormForAge(age);
     final localizedGroup = _localizedAgeGroup(l10n, norm.group);
 
@@ -429,6 +461,28 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
     }
   }
 
+  HybridConfidenceBreakdown? _hybridForEye(bool isRightEye) {
+    return isRightEye ? _hybridRightConfidence : _hybridLeftConfidence;
+  }
+
+  double _displayConfidence(EyeAnalysisResult r, {required bool isRightEye}) {
+    return (_hybridForEye(isRightEye)?.fusedConfidence ?? r.confidence)
+        .clamp(0.0, 1.0)
+        .toDouble();
+  }
+
+  String _gradeFromConfidence(double confidence) {
+    if (confidence >= 0.85) return 'A';
+    if (confidence >= 0.70) return 'B';
+    if (confidence >= 0.55) return 'C';
+    return 'D';
+  }
+
+  String _displayGrade(EyeAnalysisResult r, {required bool isRightEye}) {
+    final hybrid = _hybridForEye(isRightEye);
+    if (hybrid == null) return r.qualityGrade;
+    return _gradeFromConfidence(hybrid.fusedConfidence);
+  }
 // ============================================================================
 // END OF SECTION 1 - Continue with SECTION 2
 // ============================================================================
@@ -439,7 +493,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     if (_showPaywall) return _buildPaywall(l10n);
 
     return Scaffold(
@@ -759,16 +813,17 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
   Widget _buildEyeImagesRow(AppLocalizations l10n) => Row(
       children: [
         if (widget.rightEyeImage != null)
-          Expanded(child: _buildThumb(widget.rightEyeImage!, l10n.rightEyeOD, _rightResult)),
+          Expanded(child: _buildThumb(widget.rightEyeImage!, l10n.rightEyeOD, _rightResult, isRightEye: true)),
         if (widget.rightEyeImage != null && widget.leftEyeImage != null)
           const SizedBox(width: 12),
         if (widget.leftEyeImage != null)
-          Expanded(child: _buildThumb(widget.leftEyeImage!, l10n.leftEyeOS, _leftResult))
+          Expanded(child: _buildThumb(widget.leftEyeImage!, l10n.leftEyeOS, _leftResult, isRightEye: false))
       ]
   );
 
-Widget _buildThumb(File f, String label, EyeAnalysisResult? r) {
-    final c = r != null ? _gradeColor(r.qualityGrade) : Colors.grey;
+Widget _buildThumb(File f, String label, EyeAnalysisResult? r, {required bool isRightEye}) {
+    final grade = r != null ? _displayGrade(r, isRightEye: isRightEye) : null;
+    final c = grade != null ? _gradeColor(grade) : Colors.grey;
     return Container(
         height: 180,
         decoration: BoxDecoration(
@@ -789,7 +844,7 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r) {
                               child: Image.file(f, fit: BoxFit.contain, width: double.infinity),
                             ),
                           ),
-                          if (r != null)
+                          if (r != null && _showZoneOverlay)
                             Positioned(
                               top: 6,
                               right: 6,
@@ -797,7 +852,7 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r) {
                                 color: Colors.black.withOpacity(0.55),
                                 borderRadius: BorderRadius.circular(20),
                                 child: IconButton(
-                                  tooltip: 'Open zone overlay',
+                                  tooltip: AppLocalizations.of(context).openZoneOverlay,
                                   onPressed: () => _openZoneOverlayDialog(
                                     f,
                                     label,
@@ -842,7 +897,7 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r) {
                               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                               decoration: BoxDecoration(color: c, borderRadius: BorderRadius.circular(8)),
                               child: Text(
-                                  r.qualityGrade,
+                                  grade!,
                                   style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 12,
@@ -1078,7 +1133,7 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r) {
                     FilterChip(
                       selectedColor: const Color(0x3300D9FF),
                       checkmarkColor: const Color(0xFF00D9FF),
-                      label: const Text('Iris', style: TextStyle(color: Colors.white)),
+                      label: Text(AppLocalizations.of(context).iris, style: const TextStyle(color: Colors.white)),
                       selected: showIris,
                       onSelected: (v) => setLocalState(() => showIris = v),
                     ),
@@ -1160,12 +1215,12 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r) {
                           onChanged: (v) => setLocalState(() => chartOpacity = v),
                         ),
                       ),
-                      const Tooltip(message: 'Chart opacity', child: Icon(Icons.visibility, color: Colors.white38, size: 14)),
+                      Tooltip(message: AppLocalizations.of(context).chartOpacity, child: const Icon(Icons.visibility, color: Colors.white38, size: 14)),
                     ],
                     // Ring size controls — shown in a tidy row below chart sliders
                     if (showIris || showPupil || showANW) ...[
                       const SizedBox(width: 4),
-                      const Text('Iris', style: TextStyle(color: Color(0xFF00D9FF), fontSize: 10)),
+                      Text(AppLocalizations.of(context).iris, style: const TextStyle(color: Color(0xFF00D9FF), fontSize: 10)),
                       SizedBox(width: 60, child: Slider(value: irisLimbusScale, min: 0.5, max: 2.0, divisions: 30, activeColor: const Color(0xFF00D9FF), inactiveColor: Colors.white12, onChanged: (v) => setLocalState(() => irisLimbusScale = v))),
                       Text(l10n.pupil, style: const TextStyle(color: Colors.greenAccent, fontSize: 10)),
                       SizedBox(width: 60, child: Slider(value: pupilRingScale, min: 0.5, max: 2.0, divisions: 30, activeColor: Colors.greenAccent, inactiveColor: Colors.white12, onChanged: (v) => setLocalState(() => pupilRingScale = v))),
@@ -1445,7 +1500,7 @@ String? _chartSourcePathPreview({
   }
 
 Widget _buildOverlayMetricsPanel(EyeAnalysisResult r, {required bool isRightEye}) {
-  final l10n = AppLocalizations.of(context)!;
+  final l10n = AppLocalizations.of(context);
   Widget metric(String label, double value, String unit, Color color) {
     final clamped = (value / 100).clamp(0.0, 1.0);
     return Padding(
@@ -1486,7 +1541,7 @@ Widget _buildOverlayMetricsPanel(EyeAnalysisResult r, {required bool isRightEye}
         metric(l10n.piRatioLabel.replaceAll(':', ''), r.pupilIrisRatio, '%', const Color(0xFF00D9FF)),
         metric(l10n.ellipsenessLabel.replaceAll(':', ''), r.ellipseness, '%', Colors.greenAccent),
         metric(l10n.decentralizationLabel.replaceAll(':', ''), r.decentralization, '%', Colors.orangeAccent),
-        metric(l10n.confidence, r.confidence * 100, '%', Colors.purpleAccent),
+        metric(l10n.confidence, _displayConfidence(r, isRightEye: isRightEye) * 100, '%', Colors.purpleAccent),
         const SizedBox(height: 6),
         Text(l10n.detectedFindings, style: const TextStyle(color: Colors.white70, fontSize: 12, fontWeight: FontWeight.w600)),
         const SizedBox(height: 6),
@@ -1502,7 +1557,7 @@ Widget _buildOverlayMetricsPanel(EyeAnalysisResult r, {required bool isRightEye}
 }
 
 List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRightEye}) {
-  final l10n = AppLocalizations.of(context)!;
+  final l10n = AppLocalizations.of(context);
   final loc = PupilAnalyzerLocalizations(l10n);
 
   Widget noteText(String t, {Color color = const Color(0xFFBBBBCC)}) => Padding(
@@ -1659,7 +1714,7 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
               ),
             ),
           ] else
-            const Text('Iris size data not available', style: TextStyle(color: Colors.white54, fontSize: 13)),
+            Text(AppLocalizations.of(context).irisSizeNotAvailable, style: const TextStyle(color: Colors.white54, fontSize: 13)),
         ],
       ),
     );
@@ -1671,7 +1726,7 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
         Text(label, style: TextStyle(color: color, fontSize: 12)),
         const SizedBox(height: 4),
         Text(value, style: TextStyle(color: color, fontSize: 18, fontWeight: FontWeight.bold)),
-        const Text('iris ø', style: TextStyle(color: Colors.white38, fontSize: 10)),
+        Text(AppLocalizations.of(context).irisDiameterLabel, style: const TextStyle(color: Colors.white38, fontSize: 10)),
       ],
     );
   }
@@ -1851,7 +1906,6 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
     );
   }
 
-// ============================================================================
 // END OF SECTION 2 - Continue with SECTION 3
 // ============================================================================
 // SECTION 3 of 4: RESULT CARDS, COMPARISON, ACTION BUTTONS, AND PAYWALL
@@ -1864,6 +1918,7 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
 
   Widget _buildResultCard(EyeAnalysisResult r, String title, bool isRightEye, AppLocalizations l10n) {
     final localizer = PupilAnalyzerLocalizations.of(context);
+    final displayGrade = _displayGrade(r, isRightEye: isRightEye);
 
     return Container(
         margin: const EdgeInsets.only(bottom: 16),
@@ -1871,21 +1926,21 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
         decoration: BoxDecoration(
             color: const Color(0xFF1D1E33),
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: _gradeColor(r.qualityGrade).withOpacity(0.5))
+            border: Border.all(color: _gradeColor(displayGrade).withOpacity(0.5))
         ),
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                   children: [
-                    Icon(Icons.remove_red_eye, color: _gradeColor(r.qualityGrade), size: 28),
+                    Icon(Icons.remove_red_eye, color: _gradeColor(displayGrade), size: 28),
                     const SizedBox(width: 12),
                     Text(title, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
                     const Spacer(),
                     Container(
                         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                        decoration: BoxDecoration(color: _gradeColor(r.qualityGrade), borderRadius: BorderRadius.circular(20)),
-                        child: Text('${l10n.grade} ${r.qualityGrade}',
+                        decoration: BoxDecoration(color: _gradeColor(displayGrade), borderRadius: BorderRadius.circular(20)),
+                        child: Text('${l10n.grade} $displayGrade',
                             style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12))
                     )
                   ]
@@ -1906,7 +1961,7 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
               // v5.3.0: FULL ANW ASSESSMENT CARD (replaces simple anwRatio display)
               if (r.anwAssessment != null) _buildANWAssessmentCard(r.anwAssessment!, isRightEye, l10n),
 
-              _buildMeas(l10n.confidence, '${(r.confidence * 100).toStringAsFixed(0)}%', r.confidence > 0.7 ? Colors.green : Colors.orange, r.confidence > 0.7 ? l10n.high : l10n.moderate)
+              _buildMeas(l10n.confidence, '${(r.confidence * 100).toStringAsFixed(0)}%', _displayConfidence(r, isRightEye: isRightEye) > 0.7 ? Colors.green : Colors.orange, _displayConfidence(r, isRightEye: isRightEye) > 0.7 ? l10n.high : l10n.moderate)
             ]
         )
     );
@@ -2247,6 +2302,10 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
     if (assoc == 'Respiratory and cardiac autonomic patterns.') return l10n.respiratoryCardiac;
     if (assoc == 'Cerebral circulation patterns.') return l10n.cerebralCirculation;
     if (assoc == 'Overloads of the left ventricle. Cardiac stress.') return l10n.anwMiddleTemporalShiftCardiac;
+    if (assoc == 'Hypofunction of n. vagus or stellate ganglion.') return l10n.vagusStellateAssociation;
+    if (assoc == 'Hemodynamics disturbance in vena cava inferior.') return l10n.venaCavaInferiorAssociation;
+    if (assoc == 'Circulation in vertebral artery affected.') return l10n.vertebralArteryAssociation;
+    if (assoc == 'Congestive symptoms in small pelvis.') return l10n.smallPelvisAssociation;
     return assoc;
   }
 
@@ -2300,23 +2359,62 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
     if (assoc == 'Respiratory and cardiac autonomic patterns.') return l10n.respiratoryCardiac;
     if (assoc == 'Cerebral circulation patterns.') return l10n.cerebralCirculation;
     if (assoc == 'Overloads of the left ventricle. Cardiac stress.') return l10n.anwMiddleTemporalShiftCardiac;
+    if (assoc == 'Hypofunction of n. vagus or stellate ganglion.') return l10n.vagusStellateAssociation;
+    if (assoc == 'Hemodynamics disturbance in vena cava inferior.') return l10n.venaCavaInferiorAssociation;
+    if (assoc == 'Circulation in vertebral artery affected.') return l10n.vertebralArteryAssociation;
+    if (assoc == 'Congestive symptoms in small pelvis.') return l10n.smallPelvisAssociation;
     return assoc;
   }
 
   String _getLocalizedShiftLabel(ANWShift shift, AppLocalizations l10n) {
     final zone = shift.zoneName.toLowerCase();
-    if (zone.contains('middle-temporal')) return l10n.middleTemporalShift;
-    if (zone.contains('frontal')) return l10n.frontalShift;
-    return '${PupilAnalyzerLocalizations(l10n).getZoneName(shift.zoneName)} shift.';
+    if (zone.contains('middle-temporal')) return _stripShiftPrefix(l10n.middleTemporalShift);
+    if (zone.contains('middle-nasal')) return l10n.middleNasalShift;
+    if (zone.contains('upper temporal')) return l10n.upperTemporalShift;
+    if (zone.contains('lower temporal')) return l10n.lowerTemporalShift;
+    if (zone.contains('basal')) return l10n.basalShift;
+    if (zone.contains('frontal')) return _stripShiftPrefix(l10n.frontalShift);
+    return '${PupilAnalyzerLocalizations(l10n).getZoneName(shift.zoneName)} shift pattern.';
   }
 
   String _getLocalizedAnwFinding(String finding, AppLocalizations l10n) {
     final trimmed = finding.trim();
-    if (trimmed == 'D: Middle-temporal shift.') return l10n.middleTemporalShift;
-    if (trimmed == 'S: Frontal shift.') return l10n.frontalShift;
-    if (trimmed == 'Respiratory and cardiac autonomic patterns.') return l10n.respiratoryCardiac;
-    if (trimmed == 'Cerebral circulation patterns.') return l10n.cerebralCirculation;
+    final match = RegExp(r'^([DS]):\s*(.*)$').firstMatch(trimmed);
+    final prefix = match?.group(1);
+    final body = match?.group(2) ?? trimmed;
+
+    String withPrefix(String value) {
+      if (prefix == null) return value;
+      return '$prefix: ${_stripShiftPrefix(value)}';
+    }
+
+    if (body == 'Middle-temporal shift.') return withPrefix(l10n.middleTemporalShift);
+    if (body == 'Middle-nasal shift.') return withPrefix(l10n.middleNasalShift);
+    if (body == 'Upper temporal shift.') return withPrefix(l10n.upperTemporalShift);
+    if (body == 'Lower temporal shift.') return withPrefix(l10n.lowerTemporalShift);
+    if (body == 'Basal shift.') return withPrefix(l10n.basalShift);
+    if (body == 'Frontal shift.') return withPrefix(l10n.frontalShift);
+    if (body == 'Respiratory and cardiac autonomic patterns.') return l10n.respiratoryCardiac;
+    if (body == 'Cerebral circulation patterns.') return l10n.cerebralCirculation;
+    if (body == 'Overloads of the left ventricle. Cardiac stress.') return l10n.anwMiddleTemporalShiftCardiac;
+    if (body == 'Hypofunction of n. vagus or stellate ganglion.') return l10n.vagusStellateAssociation;
+    if (body == 'Hemodynamics disturbance in vena cava inferior.') return l10n.venaCavaInferiorAssociation;
+    if (body == 'Circulation in vertebral artery affected.') return l10n.vertebralArteryAssociation;
+    if (body == 'Congestive symptoms in small pelvis.') return l10n.smallPelvisAssociation;
+    if (body == 'Frontal zone of pupillary belt is constricted.') return prefix == null ? l10n.anwFrontalConstricted : '$prefix: ${l10n.anwFrontalConstricted}';
+    if (body == 'Basal zone of pupillary belt is constricted.') return prefix == null ? l10n.anwBasalConstricted : '$prefix: ${l10n.anwBasalConstricted}';
+    if (body == 'Frontal and basal zones of pupillary belt are constricted.') return prefix == null ? l10n.anwFrontalBasalConstricted : '$prefix: ${l10n.anwFrontalBasalConstricted}';
     return trimmed;
+  }
+
+  String _stripShiftPrefix(String value) {
+    const prefixes = ['D: ', 'S: ', 'D : ', 'S : ', 'D：', 'S：'];
+    for (final prefix in prefixes) {
+      if (value.startsWith(prefix)) {
+        return value.substring(prefix.length);
+      }
+    }
+    return value;
   }
 
   Widget _anwMetricColumn(String label, String value) {
@@ -2483,48 +2581,66 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
 
   Widget _buildAnomalies(String label, List<ZoneAnomaly> list, Color c, PupilAnalyzerLocalizations localizer, bool isRightEye, AppLocalizations l10n) {
     return Container(
-        margin: const EdgeInsets.only(bottom: 8),
-        padding: const EdgeInsets.all(12),
-        decoration: BoxDecoration(color: c.withOpacity(0.1), borderRadius: BorderRadius.circular(8)),
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+      margin: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: c.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: c.withOpacity(0.3)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
             children: [
+              Icon(label == l10n.flattenings ? Icons.compress : Icons.expand, color: c, size: 18),
+              const SizedBox(width: 8),
               Text('$label (${list.length} ${l10n.zones})', style: TextStyle(color: c, fontWeight: FontWeight.bold, fontSize: 13)),
-              const SizedBox(height: 8),
-              ...list.map((a) {
-                final zoneName = localizer.getZoneName(a.zone);
-                final organAssociation = a.anomalyType == AnomalyType.flattening
-                    ? localizer.getFlatteningDescription(a.zone, isRightEye)
-                    : localizer.getProtrusionDescription(a.zone, isRightEye);
+            ],
+          ),
+          const SizedBox(height: 10),
+          ...list.map((a) {
+            final zoneName = localizer.getZoneName(a.zone);
+            final organAssociation = a.anomalyType == AnomalyType.flattening
+                ? localizer.getFlatteningDescription(a.zone, isRightEye)
+                : localizer.getProtrusionDescription(a.zone, isRightEye);
 
-                return Padding(
-                    padding: const EdgeInsets.only(bottom: 8),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                              children: [
-                                Container(
-                                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                                    decoration: BoxDecoration(color: c.withOpacity(0.2), borderRadius: BorderRadius.circular(4)),
-                                    child: Text(zoneName.toUpperCase(), style: TextStyle(color: c, fontWeight: FontWeight.bold, fontSize: 10))
-                                ),
-                                const SizedBox(width: 8),
-                                Text('${a.percentage.toStringAsFixed(1)}%', style: TextStyle(color: c, fontWeight: FontWeight.bold, fontSize: 12)),
-                                if (a.clockPosition.isNotEmpty) ...[
-                                  const SizedBox(width: 8),
-                                  Text('(${a.clockPosition})', style: const TextStyle(color: Colors.white38, fontSize: 10))
-                                ],
-                              ]
-                          ),
-                          const SizedBox(height: 4),
-                          Text(organAssociation, style: const TextStyle(color: Colors.white54, fontSize: 11)),
-                        ]
-                    )
-                );
-              })
-            ]
-        )
+            return Container(
+              margin: const EdgeInsets.only(bottom: 10),
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Colors.black26,
+                borderRadius: BorderRadius.circular(6),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                        decoration: BoxDecoration(
+                          color: c.withOpacity(0.3),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Text(zoneName.toUpperCase(), style: TextStyle(color: c, fontWeight: FontWeight.bold, fontSize: 9)),
+                      ),
+                      const SizedBox(width: 8),
+                      Text('${a.percentage.toStringAsFixed(1)}%', style: TextStyle(color: c, fontWeight: FontWeight.bold, fontSize: 13)),
+                      if (a.clockPosition.isNotEmpty) ...[
+                        const SizedBox(width: 8),
+                        Text('(${a.clockPosition})', style: const TextStyle(color: Colors.white38, fontSize: 10)),
+                      ],
+                    ],
+                  ),
+                  const SizedBox(height: 6),
+                  Text(organAssociation, style: const TextStyle(color: Colors.white60, fontSize: 11, height: 1.3)),
+                ],
+              ),
+            );
+          }),
+        ],
+      ),
     );
   }
 
@@ -2743,7 +2859,7 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
   );
 
   Widget _price(String t, String p, String per, bool pop, VoidCallback tap) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     return GestureDetector(
         onTap: tap,
         child: Container(
@@ -2783,7 +2899,7 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
   }
 
   Future<void> _buy(String type) async {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     try {
       setState(() => _isAnalyzing = true);
       final offerings = await Purchases.getOfferings();
@@ -2873,7 +2989,7 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
 }
 
 Future<void> _saveTxtReport() async {
-  final l10n = AppLocalizations.of(context)!;
+  final l10n = AppLocalizations.of(context);
   try {
     showDialog(
       context: context,
@@ -2913,7 +3029,7 @@ Future<void> _saveTxtReport() async {
 }
 
   String _generateTxtReport() {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final loc = PupilAnalyzerLocalizations(l10n);
     final b = StringBuffer();
     b.writeln('=' * 60);
@@ -2964,7 +3080,7 @@ Future<void> _saveTxtReport() async {
   void _writeEyeTxt(StringBuffer b, EyeAnalysisResult r, bool isRight, PupilAnalyzerLocalizations loc, AppLocalizations l10n) {
     final eyeCode = isRight ? 'D' : 'S';
 
-    b.writeln('${l10n.reportGradeLabel}: ${r.qualityGrade}');
+    b.writeln('${l10n.reportGradeLabel}: ${_displayGrade(r, isRightEye: isRight)}');
     b.writeln('${l10n.piRatio}: ${r.pupilIrisRatio.toStringAsFixed(2)}%');
     b.writeln('${l10n.ellipseness}: ${r.ellipseness.toStringAsFixed(2)}%');
     b.writeln('${l10n.circularity}: ${r.circularityScore.toStringAsFixed(2)}%');
@@ -3040,24 +3156,27 @@ Future<void> _saveTxtReport() async {
       }
     }
 
-    b.writeln('\n${l10n.confidence}: ${(r.confidence * 100).toStringAsFixed(0)}%');
+    b.writeln('\n${l10n.confidence}: ${(_displayConfidence(r, isRightEye: isRight) * 100).toStringAsFixed(0)}%');
   }
-
   void _writeObsTxt(StringBuffer b, PupilAnalyzerLocalizations loc, AppLocalizations l10n) {
     for (final entry in [(_rightResult, 'D', true), (_leftResult, 'S', false)]) {
-      final r = entry.$1; final code = entry.$2; final isRight = entry.$3;
+      final r = entry.$1;
+      final code = entry.$2;
       if (r == null) continue;
 
-      for (final f in r.flattenings.where((f) => f.percentage >= 3))
+      for (final f in r.flattenings.where((f) => f.percentage >= 3)) {
         b.writeln('$code : ${loc.getZoneName(f.zone)} ${l10n.reportFlatteningsTitle.toLowerCase()} (${f.clockPosition}) - ${f.percentage.toStringAsFixed(2)}%');
-      for (final p in r.protrusions.where((p) => p.percentage >= 1))
+      }
+      for (final p in r.protrusions.where((p) => p.percentage >= 1)) {
         b.writeln('$code : ${loc.getZoneName(p.zone)} ${l10n.reportProtrusionsTitle.toLowerCase()} (${p.clockPosition}) - ${p.percentage.toStringAsFixed(2)}%');
-      if (r.decentrationAssessment != null && r.decentrationAssessment!.pattern != DecentrationPattern.centered)
+      }
+      if (r.decentrationAssessment != null && r.decentrationAssessment!.pattern != DecentrationPattern.centered) {
         b.writeln('$code : ${loc.getPatternName(r.decentrationAssessment!.pattern)}.');
-      if (r.ellipseAssessment != null)
+      }
+      if (r.ellipseAssessment != null) {
         b.writeln('$code : ${r.ellipseAssessment!.formType == PupilFormType.circle ? l10n.reportNormalPupilForm : "${loc.getFormTypeName(r.ellipseAssessment!.formType)} ${l10n.pupilForm.toLowerCase()}"}.');
+      }
 
-      // v5.3.0: Add ANW findings to observations
       if (r.anwAssessment != null) {
         final anw = r.anwAssessment!;
         if (!anw.isRatioNormal) {
@@ -3082,19 +3201,15 @@ Future<void> _saveTxtReport() async {
       if (anwDiff > 5) {
         b.writeln('${l10n.bilateralANWComparison.toUpperCase()}: ${l10n.od}=${odAnw.ratio.toStringAsFixed(1)}% vs ${l10n.os}=${osAnw.ratio.toStringAsFixed(1)}% (${anwDiff.toStringAsFixed(1)}% ${l10n.diff}).');
       }
-      // Check for functional frustration pattern
       if ((odAnw.ratioStatus == ANWRatioStatus.spastic && osAnw.ratioStatus == ANWRatioStatus.atonic) ||
           (odAnw.ratioStatus == ANWRatioStatus.atonic && osAnw.ratioStatus == ANWRatioStatus.spastic)) {
         b.writeln('${l10n.bilateralComparison.toUpperCase()}: ${l10n.functionalFrustration}');
       }
     }
   }
-
-  // ==========================================================================
-  // REPORT GENERATION - JSON (Updated v5.3.0 with ANW)
   // ==========================================================================
 Future<void> _saveJsonReport() async {
-  final l10n = AppLocalizations.of(context)!;
+  final l10n = AppLocalizations.of(context);
   try {
     showDialog(
       context: context,
@@ -3215,7 +3330,7 @@ Future<void> _saveJsonReport() async {
   // REPORT GENERATION - PDF (Updated v5.3.0 with Full ANW Section)
   // ==========================================================================
 Future<String?> _exportPdf({bool showSnackbar = true}) async {
-  final l10n = AppLocalizations.of(context)!;
+  final l10n = AppLocalizations.of(context);
   try {
     showDialog(
       context: context,
@@ -3246,7 +3361,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
             children: [
               pw.Text(l10n.analysisReportTitle,
                   style: pw.TextStyle(fontSize: 20, fontWeight: pw.FontWeight.bold, color: PdfColors.blue900)),
-              pw.Text('v5.3.0-research', style: const pw.TextStyle(fontSize: 12, color: PdfColors.grey600))
+              pw.Text('v5.3.0', style: const pw.TextStyle(fontSize: 12, color: PdfColors.grey600))
             ],
           ),
           pw.Divider(color: PdfColors.blue900, thickness: 2),
@@ -3280,8 +3395,8 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
       build: (ctx) => [
         _buildPdfPersonInfo(l10n),
         pw.SizedBox(height: 16),
-        _buildPdfImages(rightBytes, leftBytes, l10n),
-        pw.SizedBox(height: 16),
+        if (_includeImagesInPdf && (rightBytes != null || leftBytes != null)) _buildPdfImages(rightBytes, leftBytes, l10n),
+        if (_includeImagesInPdf && (rightBytes != null || leftBytes != null)) pw.SizedBox(height: 16),
         if (_anisocoriaResult != null && _anisocoriaResult!.severity != AnisocoriaSeverity.none)
           _buildPdfAnisocoria(l10n),
         if (_irisMetrics?.odIrisDiameterPx != null) _buildPdfIrisMetrics(l10n),
@@ -3394,38 +3509,36 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
       child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
         pw.Text(l10n.reportReferenceValuesTitle, style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
         pw.SizedBox(height: 8),
-        pw.Text('Pupil/Iris Ratio: Normal 20-30%', style: const pw.TextStyle(fontSize: 9)),
-        pw.Text('Ellipseness: Normal >95%', style: const pw.TextStyle(fontSize: 9)),
-        pw.Text('Decentralization: Normal <5%', style: const pw.TextStyle(fontSize: 9)),
-        pw.Text('Pupil Size Diff: <2% Normal, 2-4% Mild, >4% Significant', style: const pw.TextStyle(fontSize: 9)),
+        pw.Text(l10n.reportRefPiRatio, style: const pw.TextStyle(fontSize: 9)),
+        pw.Text(l10n.reportRefEllipseness, style: const pw.TextStyle(fontSize: 9)),
+        pw.Text(l10n.reportRefDecentralization, style: const pw.TextStyle(fontSize: 9)),
+        pw.Text(l10n.reportRefPupilSizeDiff, style: const pw.TextStyle(fontSize: 9)),
         pw.SizedBox(height: 4),
         pw.Text('${l10n.anwRatio}: <25% ${l10n.anwSpastic}, 25-35% ${l10n.normal}, >35% ${l10n.anwAtonic}', style: const pw.TextStyle(fontSize: 9)),
         pw.Text('${l10n.anwAsymmetry}: ${l10n.normal} 0-5%', style: const pw.TextStyle(fontSize: 9)),
       ]));
-
 // ==========================================================================
-  // v5.3.0: IMPROVED PDF EYE SECTION - CLEANER FORMAT
-  // ==========================================================================
   pw.Widget _buildPdfEyeV53(String title, EyeAnalysisResult r, bool isRightEye, {MLAnalysisResult? ml}) {
     final l10n = AppLocalizations.of(context)!;
     final loc = PupilAnalyzerLocalizations(l10n);
     final eyeCode = isRightEye ? 'D' : 'S';
+    final displayGrade = _displayGrade(r, isRightEye: isRightEye);
 
     List<pw.Widget> children = [
       pw.Row(mainAxisAlignment: pw.MainAxisAlignment.spaceBetween, children: [
         pw.Text(title, style: pw.TextStyle(fontSize: 14, fontWeight: pw.FontWeight.bold, color: PdfColors.blue900)),
-        pw.Container(padding: const pw.EdgeInsets.symmetric(horizontal: 8, vertical: 4), color: r.qualityGrade == 'A' ? PdfColors.green : (r.qualityGrade == 'B' ? PdfColors.orange : PdfColors.red), child: pw.Text('${l10n.reportGradeLabel} ${r.qualityGrade}', style: const pw.TextStyle(color: PdfColors.white, fontSize: 10)))
+        pw.Container(padding: const pw.EdgeInsets.symmetric(horizontal: 8, vertical: 4), color: displayGrade == 'A' ? PdfColors.green : (displayGrade == 'B' ? PdfColors.orange : (displayGrade == 'C' ? PdfColors.deepOrange : PdfColors.red)), child: pw.Text('${l10n.reportGradeLabel} $displayGrade', style: const pw.TextStyle(color: PdfColors.white, fontSize: 10)))
       ]),
       pw.SizedBox(height: 8),
       pw.Row(children: [
         pw.Expanded(child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-          pw.Text('${l10n.piRatio}: ${r.pupilIrisRatio.toStringAsFixed(1)}%${ml != null ? " (ML: ${ml.piRatio.toStringAsFixed(1)}%)" : ""}', style: const pw.TextStyle(fontSize: 10)),
-          pw.Text('${l10n.ellipseness}: ${r.ellipseness.toStringAsFixed(1)}%', style: const pw.TextStyle(fontSize: 10)),
+          pw.Text('${l10n.piRatioLabel} ${r.pupilIrisRatio.toStringAsFixed(1)}%${_showMlComparison && ml != null ? " (ML: ${ml.piRatio.toStringAsFixed(1)}%)" : ""}', style: const pw.TextStyle(fontSize: 10)),
+          pw.Text('${l10n.ellipsenessLabel} ${r.ellipseness.toStringAsFixed(1)}%', style: const pw.TextStyle(fontSize: 10)),
           pw.Text('${l10n.circularity}: ${r.circularityScore.toStringAsFixed(1)}%', style: const pw.TextStyle(fontSize: 10))
         ])),
         pw.Expanded(child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-          pw.Text('${l10n.decentralization}: ${r.decentralization.toStringAsFixed(1)}%', style: const pw.TextStyle(fontSize: 10)),
-          pw.Text('${l10n.confidence}: ${(r.confidence * 100).toStringAsFixed(0)}%', style: const pw.TextStyle(fontSize: 10))
+          pw.Text('${l10n.decentralizationLabel} ${r.decentralization.toStringAsFixed(1)}%', style: const pw.TextStyle(fontSize: 10)),
+          pw.Text('${l10n.confidence}: ${(_displayConfidence(r, isRightEye: isRightEye) * 100).toStringAsFixed(0)}%', style: const pw.TextStyle(fontSize: 10))
         ]))
       ]),
       pw.SizedBox(height: 10)
@@ -3439,7 +3552,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
         padding: const pw.EdgeInsets.all(8),
         decoration: pw.BoxDecoration(color: isNormal ? PdfColors.green50 : PdfColors.orange50, border: pw.Border.all(color: isNormal ? PdfColors.green : PdfColors.orange)),
         child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-          pw.Text('${l10n.reportPupilFormTitle}: ${loc.getFormTypeName(r.ellipseAssessment!.formType)}', style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: isNormal ? PdfColors.green800 : PdfColors.orange800)),
+          pw.Text('${l10n.pupilForm}: ${loc.getFormTypeName(r.ellipseAssessment!.formType)}', style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: isNormal ? PdfColors.green800 : PdfColors.orange800)),
           pw.SizedBox(height: 4),
           pw.Text(loc.getPupilFormDescription(r.ellipseAssessment!.formType), style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey700))
         ])
@@ -3467,7 +3580,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
         padding: const pw.EdgeInsets.all(8),
         decoration: pw.BoxDecoration(color: PdfColors.blue50, border: pw.Border.all(color: PdfColors.blue)),
         child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-          pw.Text('${l10n.reportFlatteningsTitle} (${r.flattenings.length})', style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: PdfColors.blue800)),
+          pw.Text('${l10n.flattenings} (${r.flattenings.length})', style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: PdfColors.blue800)),
           pw.SizedBox(height: 6),
           ...r.flattenings.map((f) => pw.Container(
             margin: const pw.EdgeInsets.only(bottom: 6),
@@ -3500,7 +3613,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
         padding: const pw.EdgeInsets.all(8),
         decoration: pw.BoxDecoration(color: PdfColors.orange50, border: pw.Border.all(color: PdfColors.orange)),
         child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-          pw.Text('${l10n.reportProtrusionsTitle} (${r.protrusions.length})', style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: PdfColors.orange800)),
+          pw.Text('${l10n.protrusions} (${r.protrusions.length})', style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: PdfColors.orange800)),
           pw.SizedBox(height: 6),
           ...r.protrusions.map((p) => pw.Container(
             margin: const pw.EdgeInsets.only(bottom: 6),
@@ -3533,7 +3646,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
 
       List<pw.Widget> anwWidgets = [
         pw.Row(mainAxisAlignment: pw.MainAxisAlignment.spaceBetween, children: [
-          pw.Text(l10n.reportAnwParametersTitle, style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: PdfColors.cyan800)),
+          pw.Text(l10n.anwTitle.toUpperCase(), style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: PdfColors.cyan800)),
           pw.Container(
             padding: const pw.EdgeInsets.symmetric(horizontal: 6, vertical: 2),
             color: anw.isOverallNormal ? PdfColors.green : PdfColors.orange,
@@ -3605,7 +3718,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
           padding: const pw.EdgeInsets.all(6),
           decoration: pw.BoxDecoration(color: PdfColors.deepOrange50, border: pw.Border.all(color: PdfColors.deepOrange)),
           child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-            pw.Text('${l10n.reportShiftDetectedTitle}: $eyeCode: ${PupilAnalyzerLocalizations(l10n).getZoneName(anw.primaryShift!.zoneName)} shift (${anw.primaryShift!.clockPosition})', style: pw.TextStyle(fontSize: 9, fontWeight: pw.FontWeight.bold, color: PdfColors.deepOrange800)),
+            pw.Text('${l10n.reportShiftDetectedTitle}: $eyeCode: ${_getLocalizedShiftLabel(anw.primaryShift!, l10n)} (${anw.primaryShift!.clockPosition})', style: pw.TextStyle(fontSize: 9, fontWeight: pw.FontWeight.bold, color: PdfColors.deepOrange800)),
             if (anw.primaryShift!.clinicalAssociation.isNotEmpty) ...[
               pw.SizedBox(height: 3),
               pw.Text(_getLocalizedShiftAssocPdf(anw.primaryShift!, isRightEye, l10n), style: pw.TextStyle(fontSize: 7, color: PdfColors.grey700, fontStyle: pw.FontStyle.italic)),
@@ -3659,6 +3772,8 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
   // ==========================================================================
   // IMPROVED BILATERAL ANW COMPARISON - CLEANER FORMAT
   // ==========================================================================
+  // IMPROVED BILATERAL ANW COMPARISON - CLEANER FORMAT
+  // ==========================================================================
   pw.Widget _buildPdfBilateralANW(AppLocalizations l10n) {
     final odAnw = _rightResult!.anwAssessment!;
     final osAnw = _leftResult!.anwAssessment!;
@@ -3683,7 +3798,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
         pw.SizedBox(height: 10),
         pw.Row(mainAxisAlignment: pw.MainAxisAlignment.spaceAround, children: [
           pw.Column(children: [
-            pw.Text('OD', style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold)),
+            pw.Text(l10n.od, style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold)),
             pw.Text('${odAnw.ratio.toStringAsFixed(1)}%', style: const pw.TextStyle(fontSize: 14)),
             pw.Text(_getLocalizedRatioStatusPdf(odAnw.ratioStatus, l10n), style: pw.TextStyle(fontSize: 9, color: _pdfAnwStatusColor(odAnw.ratioStatus))),
           ]),
@@ -3696,7 +3811,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
             ),
           ]),
           pw.Column(children: [
-            pw.Text('OS', style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold)),
+            pw.Text(l10n.os, style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold)),
             pw.Text('${osAnw.ratio.toStringAsFixed(1)}%', style: const pw.TextStyle(fontSize: 14)),
             pw.Text(_getLocalizedRatioStatusPdf(osAnw.ratioStatus, l10n), style: pw.TextStyle(fontSize: 9, color: _pdfAnwStatusColor(osAnw.ratioStatus))),
           ]),
@@ -3732,7 +3847,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
     exit(0);
   }
   Future<void> _sharePdfReport() async {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     try {
       final pdfPath = await _exportPdf(showSnackbar: false);
       if (pdfPath != null) {
@@ -3970,3 +4085,14 @@ class _EyeZoneOverlayPainter extends CustomPainter {
 // ============================================================================
 // END OF SECTION 5 - FILE COMPLETE
 // ============================================================================
+
+
+
+
+
+
+
+
+
+
+

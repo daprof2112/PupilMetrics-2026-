@@ -1,26 +1,23 @@
 {
   "@@locale": "en",
-
   "appTitle": "PupilMetrics",
-  "@appTitle": {"description": "Application title"},
-
+  "@appTitle": {
+    "description": "Application title"
+  },
   "analyzeButton": "Analyze",
   "plrModes": "PLR Modes",
   "captureInstructions": "Position eye within the guide circle",
   "scanHistory": "Scan History",
-
   "selectCameraMode": "Select Camera Mode",
   "loadFromGallery": "Load from Gallery",
   "rightEyePhoto": "Right Eye Photo",
   "leftEyePhoto": "Left Eye Photo",
-
   "autoCapture": "Auto-Capture",
   "autoCaptureDesc": "Eye detection + 5-second auto-capture",
   "manualCapture": "Manual Capture",
   "manualCaptureDesc": "Eye detection + manual capture (back camera)",
   "selfieMode": "Selfie Mode",
   "selfieModeDesc": "Eye detection + 5-sec auto-capture (front camera)",
-
   "plrVideoRear": "PLR Video (Rear)",
   "plrVideoRearDesc": "Back camera • 10-sec capture",
   "plrVideoSelfie": "PLR Video (Selfie)",
@@ -29,7 +26,6 @@
   "frontCamera": "Front Camera",
   "rearCamera": "Rear Camera",
   "selectEyeToAssess": "Select which eye to assess",
-
   "rightEyeOD": "Right Eye (OD)",
   "leftEyeOS": "Left Eye (OS)",
   "recordPlrRightEye": "Record PLR for right eye",
@@ -39,14 +35,18 @@
   "bothEyes": "Both Eyes",
   "loadBothEyesDesc": "Load right eye, then left eye",
   "selectEyeImageFromDevice": "Select an eye image from your device",
-
   "selectRightEyeFirst": "Select RIGHT eye (OD) image first",
   "rightEyeSaved": "Right eye saved. Now select LEFT eye (OS) image",
   "cancelledNoRightEye": "Cancelled - no right eye selected",
   "cancelledNoLeftEye": "Cancelled - no left eye selected",
   "errorLoadingImages": "Error loading images: {error}",
-  "@errorLoadingImages": {"placeholders": {"error": {"type": "String"}}},
-
+  "@errorLoadingImages": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "crop43": "Crop (4:3)",
   "success": "Success",
   "imageCroppedSuccess": "Image cropped successfully!",
@@ -56,11 +56,10 @@
   "cancel": "Cancel",
   "saved": "Saved! ✅",
   "imageSavedToGallery": "Image saved successfully in gallery",
-
   "exposure": "Exposure",
   "flash": "Flash",
   "eye": "Eye",
-  "center": "Center",
+  "center": "center",
   "light": "Light",
   "ready": "Ready",
   "on": "ON",
@@ -69,7 +68,6 @@
   "manual": "MANUAL",
   "selfie": "SELFIE",
   "pupil": "PUPIL",
-
   "plrHistory": "PLR History",
   "searchByName": "Search by name...",
   "totalScans": "Total Scans",
@@ -80,11 +78,26 @@
   "recordPlrVideoToSeeHistory": "Record a PLR video to see history here",
   "deleteRecord": "Delete Record?",
   "deleteRecordConfirm": "Delete PLR analysis for {name} ({eye})?\\n\\nThis cannot be undone.",
-  "@deleteRecordConfirm": {"placeholders": {"name": {"type": "String"}, "eye": {"type": "String"}}},
+  "@deleteRecordConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
   "delete": "Delete",
   "recordDeleted": "Record deleted",
   "plrAnalysis": "PLR Analysis - {eye}",
-  "@plrAnalysis": {"placeholders": {"eye": {"type": "String"}}},
+  "@plrAnalysis": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
   "patient": "Patient",
   "date": "Date",
   "frames": "Frames",
@@ -95,11 +108,10 @@
   "plrDetected": "PLR Detected",
   "confidence": "Confidence",
   "grade": "Grade",
-  "close": "Close",
+  "close": "close",
   "yes": "Yes",
   "no": "No",
   "na": "N/A",
-
   "takeLeftEyePhoto": "Take Left Eye Photo",
   "takeRightEyePhoto": "Take Right Eye Photo",
   "nowTakingLeftEye": "Now taking LEFT eye (OS)",
@@ -118,7 +130,6 @@
   "rightEyePhotoMissing": "Right eye photo missing!",
   "patientInfoMissingRestart": "Patient info missing. Please restart.",
   "exitApp": "Exit App",
-
   "tipsForBestResults": "TIPS FOR BEST RESULTS",
   "followGuidelinesForQuality": "Follow these guidelines for optimal image quality",
   "cameraDistance": "Camera Distance",
@@ -136,7 +147,6 @@
   "forClinicalUseCnri": "For clinical use with CNRI (cnri.edu)",
   "noMedicalDiagnosis": "Does not provide medical diagnosis",
   "eyeWideOpenClear": "Make sure your eye is wide open and the picture is clear",
-
   "personalInfo": "Personal Info",
   "personInformation": "Person Information",
   "enterPersonDetails": "Enter Person Details",
@@ -167,7 +177,6 @@
   "partialLeftHandedness": "Partial Left-handedness",
   "retrainedLeftHandedness": "Retrained Left-handedness",
   "bilateralUseBothHands": "Bilateral use of both hands",
-
   "splashTitle": "PupilMetrics Eye Capture",
   "splashDeveloper": "Program Developer - Bryan K. Marcia, Ph.D.",
   "researchEducationalTool": "Research/Educational Tool",
@@ -182,11 +191,22 @@
   "researchDisclaimerAcknowledge": "By continuing, you acknowledge this is a research tool and should not be used for medical decisions.",
   "researchDisclaimerWarning": "This app is for RESEARCH and EDUCATIONAL purposes only.",
   "iUnderstand": "I Understand",
-
   "plrAnalysisTest": "PLR Analysis Test",
   "checkingVideoFile": "Checking video file...",
   "processingFrame": "Processing frame {current}/{total} ({timestamp}ms)...",
-  "@processingFrame": {"placeholders": {"current": {"type": "int"}, "total": {"type": "int"}, "timestamp": {"type": "int"}}},
+  "@processingFrame": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "timestamp": {
+        "type": "int"
+      }
+    }
+  },
   "analysisComplete": "Analysis complete!",
   "errorVideoNotFound": "Error: Video file not found",
   "waitingForResults": "Waiting for results...",
@@ -207,28 +227,69 @@
   "frameSavedToGallery": "Frame saved to gallery!",
   "failedToSaveFrame": "Failed to save frame",
   "framesSavedToGallery": "{count} frames saved to gallery!",
-  "@framesSavedToGallery": {"placeholders": {"count": {"type": "int"}}},
+  "@framesSavedToGallery": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "jsonCopiedToClipboard": "JSON copied to clipboard!",
   "reportCopiedToClipboard": "Report copied to clipboard!",
   "shareFailedError": "Share failed: {error}",
-  "@shareFailedError": {"placeholders": {"error": {"type": "String"}}},
+  "@shareFailedError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "savedToHistoryId": "Saved to history! (ID: {id})",
-  "@savedToHistoryId": {"placeholders": {"id": {"type": "int"}}},
+  "@savedToHistoryId": {
+    "placeholders": {
+      "id": {
+        "type": "int"
+      }
+    }
+  },
   "failedToSave": "Failed to save: {error}",
-  "@failedToSave": {"placeholders": {"error": {"type": "String"}}},
+  "@failedToSave": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "noSuccessfulFramesToSave": "No successful frames to save",
   "saveAllFrames": "Save All Frames",
   "shareReport": "Share Report",
   "shareJson": "Share JSON",
   "rerunTest": "Re-run test",
-
   "videoCaptureTitle": "PLR - {eye}",
-  "@videoCaptureTitle": {"placeholders": {"eye": {"type": "String"}}},
+  "@videoCaptureTitle": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
   "initializingCamera": "Initializing camera...",
   "usingCamera": "Using {camera} camera",
-  "@usingCamera": {"placeholders": {"camera": {"type": "String"}}},
+  "@usingCamera": {
+    "placeholders": {
+      "camera": {
+        "type": "String"
+      }
+    }
+  },
   "cameraError": "Camera error: {error}",
-  "@cameraError": {"placeholders": {"error": {"type": "String"}}},
+  "@cameraError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "noCamerasFound": "No cameras found",
   "retry": "Retry",
   "startPlrRecording": "Start PLR Recording",
@@ -236,26 +297,70 @@
   "phaseReady": "Ready",
   "phaseStarting": "Starting...",
   "phaseBaseline": "Baseline (0-{sec}s)",
-  "@phaseBaseline": {"placeholders": {"sec": {"type": "int"}}},
+  "@phaseBaseline": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
   "phaseFlash": "FLASH!",
   "phaseConstriction": "Constriction ({start}-{end}s)",
-  "@phaseConstriction": {"placeholders": {"start": {"type": "int"}, "end": {"type": "int"}}},
+  "@phaseConstriction": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
   "phaseRecovery": "Recovery ({start}-{end}s)",
-  "@phaseRecovery": {"placeholders": {"start": {"type": "int"}, "end": {"type": "int"}}},
+  "@phaseRecovery": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
   "phaseComplete": "Complete!",
   "readyDesc": "Position eye in the circle, then tap Start",
   "holdSteady": "Hold steady...",
   "recordingBaselinePupil": "Recording baseline pupil size",
   "lightStimulus": "Light stimulus ({ms}ms)",
-  "@lightStimulus": {"placeholders": {"ms": {"type": "int"}}},
+  "@lightStimulus": {
+    "placeholders": {
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
   "measuringConstriction": "Measuring pupil constriction",
   "measuringRecovery": "Measuring pupil recovery",
   "plrRecordingComplete": "PLR recording complete",
   "positionEyeInstruction": "Position the {eye} eye within the circle.\\nKeep steady during the {seconds}-second recording.",
-  "@positionEyeInstruction": {"placeholders": {"eye": {"type": "String"}, "seconds": {"type": "int"}}},
+  "@positionEyeInstruction": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      },
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
   "keepEyeSteadyFlash": "Keep eye steady. Flash will occur at {sec} seconds.",
-  "@keepEyeSteadyFlash": {"placeholders": {"sec": {"type": "int"}}},
-
+  "@keepEyeSteadyFlash": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
   "recordingComplete": "Recording Complete",
   "plrVideoCapturedSuccess": "PLR video captured successfully!",
   "duration": "Duration",
@@ -263,7 +368,16 @@
   "frameRate": "Frame Rate",
   "camera": "Camera",
   "flashAt": "At {sec}s ({ms}ms)",
-  "@flashAt": {"placeholders": {"sec": {"type": "int"}, "ms": {"type": "int"}}},
+  "@flashAt": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      },
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
   "phases": "Phases",
   "phasesFlow": "Baseline → Flash → Constriction → Recovery",
   "expectedNormalValues": "Expected Normal Values:",
@@ -272,7 +386,6 @@
   "testFrameAnalysis": "🧪 Test Frame Analysis",
   "retake": "Retake",
   "done": "Done",
-
   "plrVideoModeTitle": "PLR Video Mode",
   "plrAssessmentTitle": "Pupillary Light Reflex (PLR) Assessment",
   "plrInstructions": "1. Position the eye within the guide circle\\n2. Tap \"Start PLR Recording\"\\n3. Hold steady for 10 seconds\\n4. A flash will occur at 3 seconds\\n5. The app records pupil response",
@@ -283,21 +396,37 @@
   "recoveryPhaseDesc": "Pupil returns",
   "normalPlrValues": "Normal PLR Values:",
   "gotIt": "Got it",
-
   "pupilAnalysis": "Pupil Analysis",
   "scansLeft": "{count} left",
-  "@scansLeft": {"placeholders": {"count": {"type": "int"}}},
+  "@scansLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "validatingRightEye": "Validating right eye...",
   "validatingLeftEye": "Validating left eye...",
   "analyzingRightEye": "Analyzing right eye (OD)...",
   "analyzingLeftEye": "Analyzing left eye (OS)...",
   "comparingPupils": "Comparing pupils...",
   "person": "Person: {name}",
-  "@person": {"placeholders": {"name": {"type": "String"}}},
+  "@person": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "invalidEyeImage": "Invalid Eye Image",
   "analysisFailed": "Analysis failed: {error}",
-  "@analysisFailed": {"placeholders": {"error": {"type": "String"}}},
-
+  "@analysisFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "researchEducationalToolOnly": "RESEARCH/EDUCATIONAL TOOL ONLY",
   "resultsNotMedicalDiagnoses": "This application is for research and educational purposes only. Results are NOT medical diagnoses and have NOT been validated for clinical use. Pattern associations are from historical research literature. Consult a healthcare professional for any health concerns.",
   "pupilSizeDifference": "Pupil Size Difference Detected",
@@ -306,7 +435,13 @@
   "researchObservationConsult": "Research observation - Consult a healthcare professional for interpretation",
   "ageBasedResearchBaseline": "Age-Based Research Baseline",
   "group": "Group: {group}",
-  "@group": {"placeholders": {"group": {"type": "String"}}},
+  "@group": {
+    "placeholders": {
+      "group": {
+        "type": "String"
+      }
+    }
+  },
   "researchRange": "Research Range",
   "measuredEst": "Measured (est.)",
   "pupilForm": "Pupil Form",
@@ -314,7 +449,13 @@
   "flattenings": "Flattenings",
   "protrusions": "Protrusions",
   "zonesCount": "{count} zones",
-  "@zonesCount": {"placeholders": {"count": {"type": "int"}}},
+  "@zonesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "bilateralComparison": "Bilateral Comparison",
   "parameter": "Parameter",
   "od": "OD",
@@ -323,8 +464,8 @@
   "ellipseness": "Ellipseness",
   "circularity": "Circularity",
   "decentralization": "Decentralization",
-  "anwRatio": "ANW Ratio",
-  "normal": "Normal",
+  "anwRatio": "Ratio",
+  "normal": "normal",
   "elliptical": "Elliptical",
   "circular": "Circular",
   "irregular": "Irregular",
@@ -342,9 +483,14 @@
   "sharePdf": "Share PDF",
   "retakePhotos": "Retake Photos",
   "scansLeftBanner": "{count} scans left",
-  "@scansLeftBanner": {"placeholders": {"count": {"type": "int"}}},
+  "@scansLeftBanner": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "upgrade": "Upgrade",
-
   "unlockUnlimited": "Unlock Unlimited",
   "usedAllFreeScans": "You've used all free scans.",
   "unlimitedScans": "Unlimited scans",
@@ -360,19 +506,47 @@
   "best": "BEST",
   "purchaseCancelled": "Purchase cancelled",
   "purchaseFailed": "Purchase failed: {error}",
-  "@purchaseFailed": {"placeholders": {"error": {"type": "String"}}},
-
+  "@purchaseFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "txtSaved": "TXT saved: {path}",
-  "@txtSaved": {"placeholders": {"path": {"type": "String"}}},
+  "@txtSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
   "jsonSaved": "JSON saved: {path}",
-  "@jsonSaved": {"placeholders": {"path": {"type": "String"}}},
+  "@jsonSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
   "pdfSaved": "PDF Saved!",
   "pdfFailed": "PDF Failed: {error}",
-  "@pdfFailed": {"placeholders": {"error": {"type": "String"}}},
+  "@pdfFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "open": "OPEN",
   "failed": "Failed: {error}",
-  "@failed": {"placeholders": {"error": {"type": "String"}}},
-
+  "@failed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "staticScans": "Static",
   "plrScans": "PLR",
   "searchByNameOrComplaints": "Search by name or complaints...",
@@ -381,32 +555,50 @@
   "completedScansAppearHere": "Completed scans will appear here",
   "deleteScan": "Delete Scan?",
   "deleteScanConfirm": "Delete scan for {name} from {date}?",
-  "@deleteScanConfirm": {"placeholders": {"name": {"type": "String"}, "date": {"type": "String"}}},
+  "@deleteScanConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "scanDeleted": "Scan deleted",
   "originalImagesNotFound": "Original eye images not found.",
   "viewResults": "View Results",
   "avgPlr": "Avg PLR",
   "years": "years",
-
   "anisocoria": "Anisocoria",
   "none": "None",
   "mild": "Mild",
   "severe": "Severe",
   "zoneLabel": "Zone: {zone}",
-  "@zoneLabel": {"placeholders": {"zone": {"type": "String"}}},
+  "@zoneLabel": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
   "associatedWith": "Associated with {organ}",
-  "@associatedWith": {"placeholders": {"organ": {"type": "String"}}},
+  "@associatedWith": {
+    "placeholders": {
+      "organ": {
+        "type": "String"
+      }
+    }
+  },
   "significant": "Significant",
   "fair": "Fair",
   "low": "Low",
   "good": "Good",
   "zones": "zones",
-
   "significanceWithinLimits": "within acceptable limits",
   "significanceMild": "mild",
   "significanceModerate": "moderate",
   "significanceSignificant": "significant",
-
   "formTypeCircle": "Circle (Normal)",
   "formTypeOval": "Oval",
   "formTypeOvalVertical": "Oval-vertical",
@@ -419,7 +611,6 @@
   "formTypeEllipse": "Ellipse",
   "formTypeChord": "Chord",
   "formTypeIrregular": "Irregular",
-
   "pupilFormCircleDesc": "Normal circular pupil form. No pattern variations detected.",
   "pupilFormOvalHorizontalDesc": "Horizontal oval pattern. Historical research associated this with autonomic nervous system patterns affecting respiratory and glandular function zones.",
   "pupilFormOvalVerticalDesc": "Vertical oval pattern. Historical research linked this pattern to cerebral circulation zones in autonomic reflex studies.",
@@ -432,7 +623,6 @@
   "pupilFormEllipseDesc": "Elliptical pupil pattern indicating autonomic system variations in historical studies.",
   "pupilFormChordDesc": "Chord-like deformation pattern indicating localized autonomic influences in research literature.",
   "pupilFormIrregularDesc": "Irregular form suggesting multiple autonomic pattern influences based on historical observations.",
-
   "patternCentered": "Centered (Normal)",
   "patternFrontal": "Frontal decentralization",
   "patternBasal": "Basal decentralization",
@@ -448,7 +638,6 @@
   "patternDownwards": "Decentration - Downwards",
   "patternUpwardsInwards": "Decentration - Upwards-Inwards",
   "patternUpwardsOutwards": "Decentration - Upwards-Outwards",
-
   "decentrationCenteredDesc": "Normal pupil positioning within physiological limits.",
   "decentrationNasalRightDesc": "Nasal pattern (Right). Historical research associated this zone with pulmonary autonomic reflexes.",
   "decentrationNasalLeftDesc": "Nasal pattern (Left). Research literature linked this zone to cardiac autonomic function patterns.",
@@ -471,7 +660,6 @@
   "decentrationLowerNasalDesc": "Lower-nasal pattern. Research indicated associations with urogenital and lumbosacral autonomic zones.",
   "decentrationLowerTemporalRightDesc": "Lower-temporal pattern (Right). Historical observations associated this with metabolic and hepatic zones.",
   "decentrationLowerTemporalLeftDesc": "Lower-temporal pattern (Left). Research linked this to cardiac and splenic autonomic patterns.",
-
   "flatteningUpperCentralRightDesc": "Pattern associated with upper-central zone. Historical research linked this to mood regulation and energy autonomic reflexes.",
   "flatteningUpperTemporalRightDesc": "Pattern associated with upper-temporal zone. Research indicated associations with cranial nerve and auditory autonomic reflexes.",
   "flatteningMiddleTemporalRightDesc": "Pattern associated with middle-temporal zone. Historical observations linked this to respiratory and cardiac autonomic patterns.",
@@ -481,7 +669,6 @@
   "flatteningMiddleNasalRightDesc": "Pattern associated with middle-nasal zone. Historical observations linked this to oxygen utilization and respiratory autonomic patterns.",
   "flatteningUpperNasalRightDesc": "Pattern associated with upper-nasal zone. Research literature associated this with cognitive and cervical autonomic reflexes.",
   "flatteningDefaultRightDesc": "Autonomic nervous system pattern variation detected in this zone based on historical research.",
-
   "flatteningUpperCentralLeftDesc": "Pattern associated with upper-central zone. Historical research linked this to mood regulation and neurological autonomic patterns.",
   "flatteningUpperTemporalLeftDesc": "Pattern associated with upper-temporal zone. Research indicated associations with neurovegetative and speech autonomic zones.",
   "flatteningMiddleTemporalLeftDesc": "Pattern associated with middle-temporal zone. Historical observations linked this to pulmonary and cardiac autonomic reflexes.",
@@ -491,7 +678,6 @@
   "flatteningMiddleNasalLeftDesc": "Pattern associated with middle-nasal zone. Historical observations linked this to cardiac and respiratory autonomic patterns.",
   "flatteningUpperNasalLeftDesc": "Pattern associated with upper-nasal zone. Research literature associated this with cognitive and cervical autonomic zones.",
   "flatteningDefaultLeftDesc": "Autonomic nervous system pattern variation detected in this zone based on historical research.",
-
   "protrusionUpperCentralRightDesc": "Upper-central zone protrusion pattern. Research associated this with sympathetic hyperarousal patterns affecting cerebral zones.",
   "protrusionUpperTemporalRightDesc": "Upper-temporal zone protrusion pattern. Historical observations linked this to cranial nerve and auditory system hyperactivity patterns.",
   "protrusionMiddleTemporalRightDesc": "Middle-temporal zone protrusion pattern. Research indicated associations with cardiac and respiratory sympathetic patterns.",
@@ -501,7 +687,6 @@
   "protrusionMiddleNasalRightDesc": "Middle-nasal zone protrusion pattern. Research indicated associations with gastric and pancreatic sympathetic patterns.",
   "protrusionUpperNasalRightDesc": "Upper-nasal zone protrusion pattern. Historical studies linked this to cognitive and visual sympathetic hyperarousal zones.",
   "protrusionDefaultRightDesc": "Sympathetic nervous system hyperactivity pattern detected in this zone based on research observations.",
-
   "protrusionUpperCentralLeftDesc": "Upper-central zone protrusion pattern. Research associated this with psychomotor and cerebral sympathetic patterns.",
   "protrusionUpperTemporalLeftDesc": "Upper-temporal zone protrusion pattern. Historical observations linked this to neurovegetative sympathetic hyperactivity zones.",
   "protrusionMiddleTemporalLeftDesc": "Middle-temporal zone protrusion pattern. Research indicated associations with pulmonary and cardiac sympathetic patterns.",
@@ -511,14 +696,19 @@
   "protrusionMiddleNasalLeftDesc": "Middle-nasal zone protrusion pattern. Research indicated associations with anxiety-cardiac sympathetic patterns.",
   "protrusionUpperNasalLeftDesc": "Upper-nasal zone protrusion pattern. Historical studies linked this to cognitive and visual sympathetic hyperarousal zones.",
   "protrusionDefaultLeftDesc": "Sympathetic nervous system hyperactivity pattern detected in this zone based on research observations.",
-
   "anisocoriaNone": "Pupil sizes within normal limits. No significant anisocoria detected.",
   "anisocoriaDetected": "Anisocoria detected: {difference}% ({direction}). {description}",
   "@anisocoriaDetected": {
     "placeholders": {
-      "difference": {"type": "String"},
-      "direction": {"type": "String"},
-      "description": {"type": "String"}
+      "difference": {
+        "type": "String"
+      },
+      "direction": {
+        "type": "String"
+      },
+      "description": {
+        "type": "String"
+      }
     }
   },
   "anisocoriaDirectionSD": "S>D",
@@ -530,16 +720,18 @@
   "largerPupilEqual": "equal",
   "largerPupilOS": "OS (Left)",
   "largerPupilOD": "OD (Right)",
-
   "decentrationWithinLimits": "Within normal limits.",
   "decentrationClinicalNote": "{patternName}. Offset: {offset}%",
   "@decentrationClinicalNote": {
     "placeholders": {
-      "patternName": {"type": "String"},
-      "offset": {"type": "String"}
+      "patternName": {
+        "type": "String"
+      },
+      "offset": {
+        "type": "String"
+      }
     }
   },
-
   "zoneUpperCentral": "Upper-Central",
   "zoneUpperNasal": "Upper-Nasal",
   "zoneMiddleNasal": "Middle-Nasal",
@@ -551,378 +743,484 @@
   "zoneFrontal": "Frontal",
   "zoneBasal": "Basal",
   "zoneUnknown": "Unknown",
-
   "flatteningDescription": "{zone} flatness ({clockRange}) - {percentage}%",
   "@flatteningDescription": {
     "placeholders": {
-      "zone": {"type": "String"},
-      "clockRange": {"type": "String"},
-      "percentage": {"type": "String"}
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
     }
   },
   "protrusionDescription": "{zone} protrusion ({clockRange}) - {percentage}%",
   "@protrusionDescription": {
     "placeholders": {
-      "zone": {"type": "String"},
-      "clockRange": {"type": "String"},
-      "percentage": {"type": "String"}
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
     }
   },
-
   "usbIriscopeMode": "USB Iriscope Mode",
   "iriscopeExternal": "Iriscope / External",
   "usbLabel": "USB",
   "useConnectedUsbCamera": "Use connected USB camera or iriscope",
-
   "detectedCameras": "Detected Cameras",
   "externalCamera": "External Camera",
   "cameraIndex": "Camera {index}",
-  "@cameraIndex": {"placeholders": {"index": {"type": "int"}}},
+  "@cameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
   "noExternalCameraDetected": "No external camera detected.\\nConnect a USB iriscope to enable.",
   "refresh": "Refresh",
-
   "selectCameraSource": "Select Camera Source",
   "camerasDetected": "{count} cameras detected",
-  "@camerasDetected": {"placeholders": {"count": {"type": "int"}}},
+  "@camerasDetected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "camerasAvailable": "{count} cameras available",
-  "@camerasAvailable": {"placeholders": {"count": {"type": "int"}}},
+  "@camerasAvailable": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "externalCameraIndex": "External Camera {index}",
-  "@externalCameraIndex": {"placeholders": {"index": {"type": "int"}}},
-
+  "@externalCameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
   "qualityGatedRear": "Quality-gated auto-capture (rear camera)",
   "qualityGatedFront": "Quality-gated auto-capture (front camera)",
-
   "usbCameraInfo": "USB Camera Info",
   "connected": "Connected",
   "waiting": "Waiting...",
   "disconnected": "Disconnected",
-
   "waitingForUsbCamera": "Waiting for USB Camera",
   "connectIriscopePrompt": "Connect your iriscope via USB OTG adapter.\\nGrant permission when prompted.",
-
   "usbCameraIssue": "USB Camera Issue",
   "pleaseConnectIriscope": "Please connect your iriscope or USB camera.",
   "retryConnection": "Retry Connection",
-
   "troubleshootingTips": "Troubleshooting Tips",
   "tipUsbOtgAdapter": "Ensure USB OTG adapter is properly connected",
   "tipUsbHostMode": "Check if device supports USB Host mode",
   "tipReconnectCamera": "Try disconnecting and reconnecting the camera",
   "tipGrantPermissions": "Grant USB permissions when prompted",
   "tipUnlockDevice": "Some devices may need to be unlocked",
-
   "back": "Back",
   "switchEye": "Switch Eye",
   "state": "State",
   "status": "Status",
-
   "usingFlutterUvcPlugin": "Using flutter_uvc_camera plugin\\Plugin for USB Video Class device support.",
-
-
-
   "initialized": "Initialized",
   "notReady": "Not Ready",
-
-    "captureDistanceMatch": "Capture Distance Match",
-    "@captureDistanceMatch": {
-      "description": "Title for the bilateral iris size comparison card"
-    },
-
-    "irisSize": "Iris Size",
-    "@irisSize": {
-      "description": "Label for iris size measurement"
-    },
-
-    "distanceMatched": "Distance Matched",
-    "@distanceMatched": {
-      "description": "Status when capture distances match well"
-    },
-
-    "distanceMismatch": "Distance Mismatch",
-    "@distanceMismatch": {
-      "description": "Status when capture distances don't match"
-    },
-
-    "excellentMatch": "Excellent match",
-    "@excellentMatch": {
-      "description": "Distance match status 90%+"
-    },
-
-    "goodMatch": "Good match",
-    "@goodMatch": {
-      "description": "Distance match status 80-90%"
-    },
-
-    "acceptableMatch": "Acceptable match",
-    "@acceptableMatch": {
-      "description": "Distance match status 70-80%"
-    },
-
-    "considerRetaking": "Distance mismatch - consider retaking",
-    "@considerRetaking": {"description": "Warning when distances don't match well"},
-      "qualityReady": "Ready! Hold steady...",
-        "@qualityReady": {"description": "Camera quality feedback when ready to capture"},
-
-        "qualityTooBlurry": "Hold camera steady",
-        "@qualityTooBlurry": {"description": "Camera quality feedback when image is blurry"},
-
-        "qualityTooDark": "Need more light",
-        "@qualityTooDark": {"description": "Camera quality feedback when too dark"},
-
-        "qualityTooBright": "Too bright - reduce light",
-        "@qualityTooBright": {"description": "Camera quality feedback when too bright"},
-
-        "qualityNoContrast": "Adjust lighting angle",
-        "@qualityNoContrast": {"description": "Camera quality feedback when contrast is low"},
-
-        "qualityNoPupil": "Center pupil in frame",
-        "@qualityNoPupil": {"description": "Camera quality feedback when pupil not detected"},
-
-        "qualityNotCentered": "Move eye to center",
-        "@qualityNotCentered": {"description": "Camera quality feedback when eye not centered"},
-
-        "qualityNotAnEye": "No eye detected",
-        "@qualityNotAnEye": {"description": "Camera quality feedback when no eye detected"},
-
-        "qualityProcessing": "Processing...",
-        "@qualityProcessing": {"description": "Camera quality feedback during processing"},
-
-        "distanceMatchedCheck": "✓ Distance matched",
-        "@distanceMatchedCheck": {"description": "Distance guidance when perfectly matched"},
-
-        "distanceGoodMatchCheck": "✓ Good match",
-        "@distanceGoodMatchCheck": {"description": "Distance guidance when good match"},
-
-        "distanceSlightlyBack": "Slightly back ↔",
-        "@distanceSlightlyBack": {"description": "Distance guidance to move slightly back"},
-
-        "distanceSlightlyCloser": "Slightly closer ↔",
-        "@distanceSlightlyCloser": {"description": "Distance guidance to move slightly closer"},
-
-        "distanceAlmostThere": "Almost there...",
-        "@distanceAlmostThere": {"description": "Distance guidance when nearly matched"},
-
-        "distanceMoveBack": "Move back ←←",
-        "@distanceMoveBack": {"description": "Distance guidance to move back"},
-
-        "distanceMoveCloser": "Move closer →→",
-        "@distanceMoveCloser": {"description": "Distance guidance to move closer"},
-
-        "distanceTooClose": "Too close! Move back",
-        "@distanceTooClose": {"description": "Distance guidance when too close"},
-
-        "distanceTooFar": "Too far! Move closer",
-        "@distanceTooFar": {"description": "Distance guidance when too far"},
-
-        "distanceStabilizing": "Stabilizing...",
-        "@distanceStabilizing": {"description": "Distance status while stabilizing reading"},
-
-        "distanceLabel": "Distance: {percent}%",
-        "@distanceLabel": {"description": "Distance match percentage label", "placeholders": {"percent": {"type": "int"}}},
-
-        "irisSizeComparison": "OD: {odSize}px → OS: {osSize}px",
-        "@irisSizeComparison": {"description": "Iris size comparison between eyes", "placeholders": {"odSize": {"type": "int"}, "osSize": {"type": "int"}}},
-
-        "frontCameraLabel": "Front Camera",
-        "@frontCameraLabel": {"description": "Label for front camera"},
-
-        "rearCameraLabel": "Back Camera",
-        "@rearCameraLabel": {"description": "Label for rear/back camera"},
-
-        "startingCamera": "Starting camera...",
-        "@startingCamera": {"description": "Status when camera is initializing"},
-
-        "eyeNotDetected": "Eye Not Detected",
-        "@eyeNotDetected": {"description": "Title for validation failure dialog"},
-
-        "tryAgain": "Try Again",
-        "@tryAgain": {"description": "Button text to retry capture"},
-
-        "indicatorEye": "Eye",
-        "@indicatorEye": {"description": "Quality indicator label for eye detection"},
-
-        "indicatorSharp": "Sharp",
-        "@indicatorSharp": {"description": "Quality indicator label for sharpness"},
-
-        "indicatorLight": "Light",
-        "@indicatorLight": {"description": "Quality indicator label for lighting"},
-
-        "indicatorFocus": "Focus",
-        "@indicatorFocus": {"description": "Quality indicator label for focus/contrast"},
-
-        "indicatorPupil": "Pupil",
-        "@indicatorPupil": {"description": "Quality indicator label for pupil detection"},
-
-        "indicatorIris": "Iris",
-        "@indicatorIris": {"description": "Quality indicator label for iris size"},
-
-        "indicatorMatch": "Match",
-        "@indicatorMatch": {"description": "Quality indicator label for distance match"},
-
-        "checkImageShape": "Image Shape",
-        "@checkImageShape": {"description": "Validation check label for aspect ratio"},
-
-        "checkCircularIris": "Circular Iris",
-        "@checkCircularIris": {"description": "Validation check label for circular iris"},
-
-        "checkDarkPupil": "Dark Pupil",
-        "@checkDarkPupil": {"description": "Validation check label for dark pupil center"},
-
-        "checkIrisTexture": "Iris Texture",
-        "@checkIrisTexture": {"description": "Validation check label for iris texture"},
-
-        "checkPupilIrisStructure": "Pupil-Iris Structure",
-        "@checkPupilIrisStructure": {"description": "Validation check label for concentric circles"},
-
-        "checkNaturalColors": "Natural Colors",
-        "@checkNaturalColors": {"description": "Validation check label for color distribution"},
-
-        "checkEdgePattern": "Edge Pattern",
-        "@checkEdgePattern": {"description": "Validation check label for edge density"},
-
-        "errorImageShapeIncorrect": "Image shape incorrect - ensure eye fills frame",
-        "@errorImageShapeIncorrect": {"description": "Validation error for incorrect aspect ratio"},
-
-        "errorNoEyeDetected": "No eye detected - center iris in frame",
-        "@errorNoEyeDetected": {"description": "Validation error when no eye/iris detected"},
-
-        "errorNoPupilDetected": "No pupil detected - ensure good lighting",
-        "@errorNoPupilDetected": {"description": "Validation error when pupil not detected"},
-
-        "errorNoIrisTexture": "No iris texture - move closer to eye",
-        "@errorNoIrisTexture": {"description": "Validation error when iris texture not detected"},
-
-        "errorUnusualColors": "Unusual colors detected - avoid screens/reflections",
-        "@errorUnusualColors": {"description": "Validation error for unusual color distribution"},
-
-        "errorTooManyEdges": "Too many straight edges - this may not be an eye",
-        "@errorTooManyEdges": {"description": "Validation error for too many straight edges"},
-
-        "errorNotValidEye": "Not a valid eye image - please try again",
-        "@errorNotValidEye": {"description": "Generic validation error for invalid eye image"},
-
-        "holdStillCapturing": "Hold still - capturing...",
-        "@holdStillCapturing": {"description": "Status during countdown capture"},
-
-        "adjustDistanceFirst": "Adjust distance first",
-        "@adjustDistanceFirst": {"description": "Status when distance needs adjustment before capture"},
-
-        "stabilizingReading": "Stabilizing...",
-        "@stabilizingReading": {"description": "Status while distance reading stabilizes"},
-
-        "autoCaptureWhenReady": "Auto-capture when ready",
-        "@autoCaptureWhenReady": {"description": "Status indicating auto-capture is enabled"},
-
-        "tapOrWaitAutoCapture": "Tap or wait for auto-capture",
-        "@tapOrWaitAutoCapture": {"description": "Instruction when ready to capture"},
-
-        "validatingImage": "Validating...",
-        "@validatingImage": {"description": "Status during image validation"},
-
-        "capturingStatus": "Capturing...",
-        "@capturingStatus": {"description": "Status during image capture"},
-
-        "adjustPositionStatus": "Adjust position",
-        "@adjustPositionStatus": {"description": "Status when position needs adjustment"},
-
-        "validationTip": "Tip: Ensure good lighting, hold camera 10-15cm from eye, avoid reflections",
-        "@validationTip": {"description": "Helpful tip shown after multiple validation failures"},
-
-        "validationChecksTitle": "Validation Checks:",
-        "@validationChecksTitle": {"description": "Title for validation checks list in dialog"},
-
-        "confidenceLabel": "Confidence: {percent}%",
-        "@confidenceLabel": {"description": "Confidence percentage label", "placeholders": {"percent": {"type": "int"}}},
-
-        "incompleteData": "Incomplete data",
-        "@incompleteData": {"description": "Status when iris metrics data is incomplete"},
-
-        "irisDiameterLabel": "iris ø",
-        "@irisDiameterLabel": {"description": "Label for iris diameter measurement"},
-        "plrResponseCurve": "PLR Response Curve",
-          "@plrResponseCurve": {"description": "Title for PLR chart showing pupil response over time"},
-
-          "plrLatency": "Latency",
-          "@plrLatency": {"description": "Time from flash to start of constriction"},
-
-          "plrVelocity": "Velocity",
-          "@plrVelocity": {"description": "Rate of pupil constriction"},
-
-          "plrRecoveryTime": "Recovery",
-          "@plrRecoveryTime": {"description": "Time for pupil to recover"},
-
-          "plrRecoveryRatio": "Rec. Ratio",
-          "@plrRecoveryRatio": {"description": "Final size compared to baseline"},
-
-          "plrEnhancedMetrics": "Enhanced PLR Metrics",
-          "@plrEnhancedMetrics": {"description": "Section title for advanced PLR measurements"},
-
-          "plrNormalLatency": "Normal: 200-500ms",
-          "@plrNormalLatency": {"description": "Normal latency reference range"},
-
-          "plrNormalConstriction": "Normal: 10-30%",
-          "@plrNormalConstriction": {"description": "Normal constriction reference range"},
-
-          "plrNormalVelocity": "Normal: 1.5-4.0%/s",
-          "@plrNormalVelocity": {"description": "Normal velocity reference range"},
-
-          "plrReferenceValues": "Normal PLR Reference Values",
-          "@plrReferenceValues": {"description": "Title for reference values section"},
-
-          "plrSubjectInfo": "Subject Information",
-          "@plrSubjectInfo": {"description": "Section title for patient/subject info in PLR report"},
-
-          "plrTestType": "Pupillary Light Reflex",
-          "@plrTestType": {"description": "Name of the PLR test type"},
-
-          "plrAnalysisSummary": "Analysis Summary",
-          "@plrAnalysisSummary": {"description": "Section title for analysis summary"},
-
-          "plrTotalFrames": "Total Frames Analyzed",
-          "@plrTotalFrames": {"description": "Label for total frames count"},
-
-          "plrSuccessRate": "Success Rate",
-          "@plrSuccessRate": {"description": "Label for frame analysis success rate"},
-"plrMaxConstriction": "Max Constriction",
-"@plrMaxConstriction": {"description": "Label for maximum constriction time"},
-
-"plrResponseCurveLabels": "PLR Response Curve",
-"plrLatency": "Latency",
-"plrVelocity": "Velocity",
-"plrRecoveryTime": "Rec. Time",
-"plrRecoveryRatio": "Rec. %",
-
-"anwTitle": "Autonomic Nerve Wreath (ANW)",
-"anwAbnormal": "Abnormal",
-"anwDiameter": "Diameter",
-"anwPerimeter": "Perimeter",
-"anwRatio": "Ratio",
-"anwAsymmetry": "Asymmetry",
-"anwElevated": "Elevated",
-"anwFormType": "Form Type",
-"anwRegular": "Regular",
-"anwDrawnIn": "Drawn In",
-"anwIndented": "Indented",
-"anwLacerated": "Lacerated",
-"anwSpastic": "Spastic",
-"anwAtonic": "Atonic",
-"anwTonicState": "Tonic State",
-"anwParasympathotonic": "Parasympathotonic",
-"anwSympathotonicState": "Sympathotonic",
-"anwShiftDetected": "Shift Detected",
-"anwConstrictionDetected": "Constriction Detected",
-"anwFindings": "Findings",
-"anwRatioComparison": "ANW Ratio",
-"bilateralANWComparison": "Bilateral ANW Comparison",
-"anwSymmetryNormal": "ANW symmetry within normal limits.",
-"anwAsymmetryDetected": "ANW asymmetry detected between eyes.",
-"functionalFrustration": "Functional frustration in correlation between sympathetic and parasympathetic nervous systems.",
-"anwParasympathotonicDesc": "Liminal sensitivity increased. Reflex activity accelerated. GI secretory/evacuation functions heightened.",
-"anwSympathotonicDesc": "Liminal sensitivity decreased. Reflex activity decelerated. GI secretory/evacuation functions reduced.",
-"anwMiddleTemporalShiftCardiac": "Overloads of the left ventricle. Cardiac stress.",
-"anwFrontalConstricted": "Frontal zone of pupillary belt is constricted.",
-"anwBasalConstricted": "Basal zone of pupillary belt is constricted.",
-"anwFrontalBasalConstricted": "Frontal and basal zones of pupillary belt are constricted.",
+  "captureDistanceMatch": "Capture Distance Match",
+  "@captureDistanceMatch": {
+    "description": "Title for the bilateral iris size comparison card"
+  },
+  "irisSize": "Iris Size",
+  "@irisSize": {
+    "description": "Label for iris size measurement"
+  },
+  "distanceMatched": "Distance Matched",
+  "@distanceMatched": {
+    "description": "Status when capture distances match well"
+  },
+  "distanceMismatch": "Distance Mismatch",
+  "@distanceMismatch": {
+    "description": "Status when capture distances don't match"
+  },
+  "excellentMatch": "Excellent match",
+  "@excellentMatch": {
+    "description": "Distance match status 90%+"
+  },
+  "goodMatch": "Good match",
+  "@goodMatch": {
+    "description": "Distance match status 80-90%"
+  },
+  "acceptableMatch": "Acceptable match",
+  "@acceptableMatch": {
+    "description": "Distance match status 70-80%"
+  },
+  "considerRetaking": "Distance mismatch - consider retaking",
+  "@considerRetaking": {
+    "description": "Warning when distances don't match well"
+  },
+  "qualityReady": "Ready! Hold steady...",
+  "@qualityReady": {
+    "description": "Camera quality feedback when ready to capture"
+  },
+  "qualityTooBlurry": "Hold camera steady",
+  "@qualityTooBlurry": {
+    "description": "Camera quality feedback when image is blurry"
+  },
+  "qualityTooDark": "Need more light",
+  "@qualityTooDark": {
+    "description": "Camera quality feedback when too dark"
+  },
+  "qualityTooBright": "Too bright - reduce light",
+  "@qualityTooBright": {
+    "description": "Camera quality feedback when too bright"
+  },
+  "qualityNoContrast": "Adjust lighting angle",
+  "@qualityNoContrast": {
+    "description": "Camera quality feedback when contrast is low"
+  },
+  "qualityNoPupil": "Center pupil in frame",
+  "@qualityNoPupil": {
+    "description": "Camera quality feedback when pupil not detected"
+  },
+  "qualityNotCentered": "Move eye to center",
+  "@qualityNotCentered": {
+    "description": "Camera quality feedback when eye not centered"
+  },
+  "qualityNotAnEye": "No eye detected",
+  "@qualityNotAnEye": {
+    "description": "Camera quality feedback when no eye detected"
+  },
+  "qualityProcessing": "Processing...",
+  "@qualityProcessing": {
+    "description": "Camera quality feedback during processing"
+  },
+  "distanceMatchedCheck": "✓ Distance matched",
+  "@distanceMatchedCheck": {
+    "description": "Distance guidance when perfectly matched"
+  },
+  "distanceGoodMatchCheck": "✓ Good match",
+  "@distanceGoodMatchCheck": {
+    "description": "Distance guidance when good match"
+  },
+  "distanceSlightlyBack": "Slightly back ↔",
+  "@distanceSlightlyBack": {
+    "description": "Distance guidance to move slightly back"
+  },
+  "distanceSlightlyCloser": "Slightly closer ↔",
+  "@distanceSlightlyCloser": {
+    "description": "Distance guidance to move slightly closer"
+  },
+  "distanceAlmostThere": "Almost there...",
+  "@distanceAlmostThere": {
+    "description": "Distance guidance when nearly matched"
+  },
+  "distanceMoveBack": "Move back ←←",
+  "@distanceMoveBack": {
+    "description": "Distance guidance to move back"
+  },
+  "distanceMoveCloser": "Move closer →→",
+  "@distanceMoveCloser": {
+    "description": "Distance guidance to move closer"
+  },
+  "distanceTooClose": "Too close! Move back",
+  "@distanceTooClose": {
+    "description": "Distance guidance when too close"
+  },
+  "distanceTooFar": "Too far! Move closer",
+  "@distanceTooFar": {
+    "description": "Distance guidance when too far"
+  },
+  "distanceStabilizing": "Stabilizing...",
+  "@distanceStabilizing": {
+    "description": "Distance status while stabilizing reading"
+  },
+  "distanceLabel": "Distance: {percent}%",
+  "@distanceLabel": {
+    "description": "Distance match percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "irisSizeComparison": "OD: {odSize}px → OS: {osSize}px",
+  "@irisSizeComparison": {
+    "description": "Iris size comparison between eyes",
+    "placeholders": {
+      "odSize": {
+        "type": "int"
+      },
+      "osSize": {
+        "type": "int"
+      }
+    }
+  },
+  "frontCameraLabel": "Front Camera",
+  "@frontCameraLabel": {
+    "description": "Label for front camera"
+  },
+  "rearCameraLabel": "Back Camera",
+  "@rearCameraLabel": {
+    "description": "Label for rear/back camera"
+  },
+  "startingCamera": "Starting camera...",
+  "@startingCamera": {
+    "description": "Status when camera is initializing"
+  },
+  "eyeNotDetected": "Eye Not Detected",
+  "@eyeNotDetected": {
+    "description": "Title for validation failure dialog"
+  },
+  "tryAgain": "Try Again",
+  "@tryAgain": {
+    "description": "Button text to retry capture"
+  },
+  "indicatorEye": "Eye",
+  "@indicatorEye": {
+    "description": "Quality indicator label for eye detection"
+  },
+  "indicatorSharp": "Sharp",
+  "@indicatorSharp": {
+    "description": "Quality indicator label for sharpness"
+  },
+  "indicatorLight": "Light",
+  "@indicatorLight": {
+    "description": "Quality indicator label for lighting"
+  },
+  "indicatorFocus": "Focus",
+  "@indicatorFocus": {
+    "description": "Quality indicator label for focus/contrast"
+  },
+  "indicatorPupil": "Pupil",
+  "@indicatorPupil": {
+    "description": "Quality indicator label for pupil detection"
+  },
+  "indicatorIris": "Iris",
+  "@indicatorIris": {
+    "description": "Quality indicator label for iris size"
+  },
+  "indicatorMatch": "Match",
+  "@indicatorMatch": {
+    "description": "Quality indicator label for distance match"
+  },
+  "checkImageShape": "Image Shape",
+  "@checkImageShape": {
+    "description": "Validation check label for aspect ratio"
+  },
+  "checkCircularIris": "Circular Iris",
+  "@checkCircularIris": {
+    "description": "Validation check label for circular iris"
+  },
+  "checkDarkPupil": "Dark Pupil",
+  "@checkDarkPupil": {
+    "description": "Validation check label for dark pupil center"
+  },
+  "checkIrisTexture": "Iris Texture",
+  "@checkIrisTexture": {
+    "description": "Validation check label for iris texture"
+  },
+  "checkPupilIrisStructure": "Pupil-Iris Structure",
+  "@checkPupilIrisStructure": {
+    "description": "Validation check label for concentric circles"
+  },
+  "checkNaturalColors": "Natural Colors",
+  "@checkNaturalColors": {
+    "description": "Validation check label for color distribution"
+  },
+  "checkEdgePattern": "Edge Pattern",
+  "@checkEdgePattern": {
+    "description": "Validation check label for edge density"
+  },
+  "errorImageShapeIncorrect": "Image shape incorrect - ensure eye fills frame",
+  "@errorImageShapeIncorrect": {
+    "description": "Validation error for incorrect aspect ratio"
+  },
+  "errorNoEyeDetected": "No eye detected - center iris in frame",
+  "@errorNoEyeDetected": {
+    "description": "Validation error when no eye/iris detected"
+  },
+  "errorNoPupilDetected": "No pupil detected - ensure good lighting",
+  "@errorNoPupilDetected": {
+    "description": "Validation error when pupil not detected"
+  },
+  "errorNoIrisTexture": "No iris texture - move closer to eye",
+  "@errorNoIrisTexture": {
+    "description": "Validation error when iris texture not detected"
+  },
+  "errorUnusualColors": "Unusual colors detected - avoid screens/reflections",
+  "@errorUnusualColors": {
+    "description": "Validation error for unusual color distribution"
+  },
+  "errorTooManyEdges": "Too many straight edges - this may not be an eye",
+  "@errorTooManyEdges": {
+    "description": "Validation error for too many straight edges"
+  },
+  "errorNotValidEye": "Not a valid eye image - please try again",
+  "@errorNotValidEye": {
+    "description": "Generic validation error for invalid eye image"
+  },
+  "holdStillCapturing": "Hold still - capturing...",
+  "@holdStillCapturing": {
+    "description": "Status during countdown capture"
+  },
+  "adjustDistanceFirst": "Adjust distance first",
+  "@adjustDistanceFirst": {
+    "description": "Status when distance needs adjustment before capture"
+  },
+  "stabilizingReading": "Stabilizing...",
+  "@stabilizingReading": {
+    "description": "Status while distance reading stabilizes"
+  },
+  "autoCaptureWhenReady": "Auto-capture when ready",
+  "@autoCaptureWhenReady": {
+    "description": "Status indicating auto-capture is enabled"
+  },
+  "tapOrWaitAutoCapture": "Tap or wait for auto-capture",
+  "@tapOrWaitAutoCapture": {
+    "description": "Instruction when ready to capture"
+  },
+  "validatingImage": "Validating...",
+  "@validatingImage": {
+    "description": "Status during image validation"
+  },
+  "capturingStatus": "Capturing...",
+  "@capturingStatus": {
+    "description": "Status during image capture"
+  },
+  "adjustPositionStatus": "Adjust position",
+  "@adjustPositionStatus": {
+    "description": "Status when position needs adjustment"
+  },
+  "validationTip": "Tip: Ensure good lighting, hold camera 10-15cm from eye, avoid reflections",
+  "@validationTip": {
+    "description": "Helpful tip shown after multiple validation failures"
+  },
+  "validationChecksTitle": "Validation Checks:",
+  "@validationChecksTitle": {
+    "description": "Title for validation checks list in dialog"
+  },
+  "confidenceLabel": "Confidence: {percent}%",
+  "@confidenceLabel": {
+    "description": "Confidence percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "incompleteData": "Incomplete data",
+  "@incompleteData": {
+    "description": "Status when iris metrics data is incomplete"
+  },
+  "irisDiameterLabel": "iris ø",
+  "@irisDiameterLabel": {
+    "description": "Label for iris diameter measurement"
+  },
+  "plrResponseCurve": "PLR Response Curve",
+  "@plrResponseCurve": {
+    "description": "Title for PLR chart showing pupil response over time"
+  },
+  "plrLatency": "Latency",
+  "@plrLatency": {
+    "description": "Time from flash to start of constriction"
+  },
+  "plrVelocity": "Velocity",
+  "@plrVelocity": {
+    "description": "Rate of pupil constriction"
+  },
+  "plrRecoveryTime": "Rec. Time",
+  "@plrRecoveryTime": {
+    "description": "Time for pupil to recover"
+  },
+  "plrRecoveryRatio": "Rec. %",
+  "@plrRecoveryRatio": {
+    "description": "Final size compared to baseline"
+  },
+  "plrEnhancedMetrics": "Enhanced PLR Metrics",
+  "@plrEnhancedMetrics": {
+    "description": "Section title for advanced PLR measurements"
+  },
+  "plrNormalLatency": "Normal: 200-500ms",
+  "@plrNormalLatency": {
+    "description": "Normal latency reference range"
+  },
+  "plrNormalConstriction": "Normal: 10-30%",
+  "@plrNormalConstriction": {
+    "description": "Normal constriction reference range"
+  },
+  "plrNormalVelocity": "Normal: 1.5-4.0%/s",
+  "@plrNormalVelocity": {
+    "description": "Normal velocity reference range"
+  },
+  "plrReferenceValues": "Normal PLR Reference Values",
+  "@plrReferenceValues": {
+    "description": "Title for reference values section"
+  },
+  "plrSubjectInfo": "Subject Information",
+  "@plrSubjectInfo": {
+    "description": "Section title for patient/subject info in PLR report"
+  },
+  "plrTestType": "Pupillary Light Reflex",
+  "@plrTestType": {
+    "description": "Name of the PLR test type"
+  },
+  "plrAnalysisSummary": "Analysis Summary",
+  "@plrAnalysisSummary": {
+    "description": "Section title for analysis summary"
+  },
+  "plrTotalFrames": "Total Frames Analyzed",
+  "@plrTotalFrames": {
+    "description": "Label for total frames count"
+  },
+  "plrSuccessRate": "Success Rate",
+  "@plrSuccessRate": {
+    "description": "Label for frame analysis success rate"
+  },
+  "plrMaxConstriction": "Max Constriction",
+  "@plrMaxConstriction": {
+    "description": "Label for maximum constriction time"
+  },
+  "plrResponseCurveLabels": "PLR Response Curve",
+  "anwTitle": "Autonomic Nerve Wreath (ANW)",
+  "anwAbnormal": "Abnormal",
+  "anwDiameter": "Diameter",
+  "anwPerimeter": "Perimeter",
+  "anwAsymmetry": "Asymmetry",
+  "anwElevated": "Elevated",
+  "anwFormType": "Form Type",
+  "anwRegular": "Regular",
+  "anwDrawnIn": "Drawn In",
+  "anwIndented": "Indented",
+  "anwLacerated": "Lacerated",
+  "anwSpastic": "Spastic",
+  "anwAtonic": "Atonic",
+  "anwTonicState": "Historical Tone Pattern",
+  "anwParasympathotonic": "Parasympathotonic pattern",
+  "anwSympathotonicState": "Sympathotonic pattern",
+  "anwShiftDetected": "Historical Shift Pattern",
+  "anwConstrictionDetected": "Constriction Detected",
+  "anwFindings": "Findings",
+  "anwRatioComparison": "ANW Ratio",
+  "bilateralANWComparison": "Bilateral ANW Comparison",
+  "anwSymmetryNormal": "ANW symmetry within normal limits.",
+  "anwAsymmetryDetected": "ANW asymmetry detected between eyes.",
+  "functionalFrustration": "Functional frustration in correlation between sympathetic and parasympathetic nervous systems.",
+  "anwParasympathotonicDesc": "Historical observations linked this to increased liminal sensitivity. Reflex activity accelerated. GI secretory/evacuation functions heightened.",
+  "anwSympathotonicDesc": "Historical observations linked this to decreased liminal sensitivity. Reflex activity decelerated. GI secretory/evacuation functions reduced.",
+  "anwMiddleTemporalShiftCardiac": "Historical studies according to Velchover linked this to left-ventricular overload patterns and cardiac stress.",
+  "anwFrontalConstricted": "Frontal zone of pupillary belt is constricted.",
+  "anwBasalConstricted": "Basal zone of pupillary belt is constricted.",
+  "anwFrontalBasalConstricted": "Frontal and basal zones of pupillary belt are constricted.",
   "helpTitle": "Help & User Guide",
   "helpTabQuickStart": "Quick Start",
   "helpTabCnriAnalysis": "CNRI Analysis",
@@ -955,8 +1253,8 @@
   "helpFeatureZoneDesc": "Maps flattenings/protrusions to CNRI organ zones.",
   "helpFeatureBilateralTitle": "Bilateral Comparison",
   "helpFeatureBilateralDesc": "Compares OD vs OS to detect asymmetries.",
-  "helpFeatureMlTitle": "ML Enhancement",
-  "helpFeatureMlDesc": "ResNet18 model provides secondary measurements.",
+  "helpFeatureMlTitle": "ONNX CNN Comparison",
+  "helpFeatureMlDesc": "ONNX CNN model provides secondary measurements for comparison.",
   "helpKeyboardShortcuts": "Keyboard Shortcuts",
   "helpCameraControls": "Camera Controls",
   "helpShortcutSpace": "Capture image",
@@ -983,8 +1281,20 @@
   "helpIssuePdfSolution2": "Ensure disk space available",
   "helpIssuePdfSolution3": "Close open PDF files",
   "helpIssuePdfSolution4": "Try TXT export first",
+  "helpCaptureChecklistTitle": "Capture Checklist",
+  "helpCaptureChecklist1": "Keep the pupil centered and fully visible inside the frame.",
+  "helpCaptureChecklist2": "Use even lighting and reduce glare or reflections on the cornea.",
+  "helpCaptureChecklist3": "Keep similar iriscope distance for right and left eyes.",
+  "helpCaptureChecklist4": "Refocus or retake if the pupil edge looks soft or blurred.",
+  "helpExportSettingsTitle": "Export Settings",
+  "helpExportSettingsDesc": "Auto-save PDF can save a report after analysis, Include Images controls whether eye photos appear in the PDF, and Show ML Comparison adds the ONNX CNN comparison values to reports.",
+  "helpHybridScoreTitle": "Hybrid Confidence & Grade",
+  "helpHybridScoreDesc": "Displayed confidence and grade combine classical geometry quality with ML agreement, so they reflect measurement reliability rather than a diagnosis.",
+  "helpAnomalyGuideTitle": "Reading Flattenings & Protrusions",
+  "helpAnomalyGuideDesc": "Flattenings indicate relative inward drawing and protrusions indicate outward drawing along the pupil boundary; each card lists the zone, magnitude, and mapped association.",
+  "helpZoneOverlayGuideTitle": "Zone Overlay",
+  "helpZoneOverlayGuideDesc": "Use the zone overlay to inspect sector positions visually and cross-check where detected anomalies fall around the pupil and iris.",
   "helpContactSupportTip": "Contact helpdesk@cnri.edu for assistance.",
-
   "settingsTitle": "Settings",
   "settingsCameraIriscope": "CAMERA / IRISCOPE",
   "settingsPreferredCamera": "Preferred Camera:",
@@ -995,15 +1305,19 @@
   "settingsAnalysis": "ANALYSIS",
   "settingsShowMlComparison": "Show ML Comparison",
   "settingsShowZoneOverlay": "Show Zone Overlay",
-  "settingsAutoDetectPupil": "Auto-detect Pupil",
   "settingsExportReports": "EXPORT & REPORTS",
   "settingsAutoSavePdf": "Auto-save PDF",
   "settingsIncludeImages": "Include Images",
   "settingsSaved": "Settings saved",
-
   "aboutResearchEdition": "Research Edition",
   "aboutVersion": "Version {version}",
-  "@aboutVersion": {"placeholders": {"version": {"type": "String"}}},
+  "@aboutVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
   "aboutLicense": "License",
   "aboutLicensedTo": "Licensed To:",
   "aboutExpires": "Expires:",
@@ -1012,13 +1326,18 @@
   "aboutCopyright": "© 2024-2026 PupilMetrics Research",
   "aboutWebsite": "Website",
   "aboutPrivacy": "Privacy",
-
   "languageSelectTitle": "Select Language",
+  "selectLanguage": "Select Language",
   "languageChanged": "Language Changed",
   "languageChangedMessage": "App language set to {language}",
-  "@languageChangedMessage": {"placeholders": {"language": {"type": "String"}}},
+  "@languageChangedMessage": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
   "languageSystemNotAvailable": "Language system not available",
-
   "licenseLoading": "Loading...",
   "licenseWelcome": "Welcome to PupilMetrics!",
   "licenseTrialFeatures": "14-day free trial • Full features",
@@ -1026,7 +1345,13 @@
   "licenseEnterKey": "Enter License",
   "licenseFreeTrial": "Free Trial",
   "licenseDaysRemaining": "{count} days remaining",
-  "@licenseDaysRemaining": {"placeholders": {"count": {"type": "int"}}},
+  "@licenseDaysRemaining": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "licenseTrialEnded": "Trial Ended",
   "licenseEnterToContinue": "Enter license to continue",
   "licenseStandard": "Standard License",
@@ -1037,7 +1362,6 @@
   "licenseTrialUser": "Trial User",
   "licenseLifetime": "Lifetime",
   "licenseNotSetUp": "Not Set Up",
-
   "trialExpiredTitle": "Trial Period Ended",
   "trialExpiredMessage": "Your 14-day trial has ended. To continue analyzing iris images, please purchase a license.",
   "trialExpiredCanStill": "You can still:",
@@ -1045,7 +1369,6 @@
   "trialExpiredExportReports": "Export existing reports",
   "trialExpiredAccessHistory": "Access scan history",
   "trialExpiredMaybeLater": "Maybe Later",
-
   "licenseRegistration": "License Registration",
   "licenseStatusValid": "Licensed",
   "licenseStatusTrialActive": "Free Trial",
@@ -1073,7 +1396,6 @@
   "licenseNeedHelp": "Need help?",
   "licenseLicenseAgreement": "License Agreement",
   "licenseActivatedSuccess": "License Activated Successfully!",
-
   "licenseMsgMachineMismatch": "This license is registered to a different computer. Please use your original device or contact support.",
   "licenseMsgTrialEnded": "Your free trial has ended. Enter a license key to continue using all features.",
   "licenseMsgExpired": "Your license has expired. Please renew to continue.",
@@ -1085,25 +1407,39 @@
   "licenseMsgActivatedThankYou": "License activated successfully! Thank you for your purchase.",
   "licenseMsgUnableToActivate": "Unable to activate license. Please check your internet connection and try again.",
   "licenseMsgTrialWelcome": "Welcome! Your {days}-day free trial has started.",
-  "@licenseMsgTrialWelcome": {"placeholders": {"days": {"type": "int"}}},
+  "@licenseMsgTrialWelcome": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
   "licenseMsgTrialActive": "Trial active: {days} days remaining.",
-  "@licenseMsgTrialActive": {"placeholders": {"days": {"type": "int"}}},
+  "@licenseMsgTrialActive": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
   "licenseMsgFreeTrialActive": "Free trial active",
   "licenseMsgLicenseActive": "License active - {type}",
-  "@licenseMsgLicenseActive": {"placeholders": {"type": {"type": "String"}}},
+  "@licenseMsgLicenseActive": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
   "licenseMsgUnableToActivateKey": "Unable to activate this license key.",
   "licenseMsgNoLongerValid": "License is no longer valid.",
   "licenseMsgUnableToVerify": "Unable to verify this license key. Please contact support.",
-
   "trialStartedSnackbar": "Trial Started!",
   "trialStartedMessage": "Enjoy 14 days of full access",
-
   "windowTitle": "PupilMetrics",
   "themeMode": "ThemeMode",
   "methods": "METHODS",
-
   "setAsFrameless": "setAsFrameless",
-  "close": "close",
   "isPreventCloseSetPreventClose": "isPreventClose / setPreventClose",
   "focusBlur": "focus / blur",
   "showHide": "show / hide",
@@ -1130,7 +1466,6 @@
   "topCenter": "topCenter",
   "topRight": "topRight",
   "centerLeft": "centerLeft",
-  "center": "center",
   "centerRight": "centerRight",
   "bottomLeft": "bottomLeft",
   "bottomCenter": "bottomCenter",
@@ -1148,9 +1483,7 @@
   "isAlwaysOnTopSetAlwaysOnTop": "isAlwaysOnTop / setAlwaysOnTop",
   "isAlwaysOnBottomSetAlwaysOnBottom": "isAlwaysOnBottom / setAlwaysOnBottom",
   "getTitleSetTitle": "getTitle / setTitle",
-
   "setTitleBarStyle": "setTitleBarStyle",
-  "normal": "normal",
   "hidden": "hidden",
   "getTitleBarHeight": "getTitleBarHeight",
   "isSkipTaskbar": "isSkipTaskbar",
@@ -1167,15 +1500,10 @@
   "popUpWindowMenu": "popUpWindowMenu",
   "grabKeyboard": "grabKeyboard",
   "ungrabKeyboard": "ungrabKeyboard",
-
   "dragToMoveArea": "DragToMoveArea",
   "dragToResizeArea": "DragToResizeArea",
   "dragToResizeAreaExample": "DragToResizeArea example",
-
   "closeWindowConfirmation": "Are you sure you want to close this window?",
-  "yes": "Yes",
-  "no": "No"
-,
   "licenseChecking": "Checking license...",
   "licenseRequiredTitle": "License Required",
   "licenseActivateValidMessage": "Please activate a valid license to continue.",
@@ -1191,7 +1519,13 @@
   "windowCompactView": "Compact View",
   "windowExpandedView": "Expanded View",
   "licenseStatusTrialDaysLeft": "Trial ({count} days left)",
-  "@licenseStatusTrialDaysLeft": {"placeholders": {"count": {"type": "int"}}},
+  "@licenseStatusTrialDaysLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "licenseNotLicensed": "Not Licensed",
   "licenseStatusTitle": "License Status",
   "unknown": "Unknown",
@@ -1200,11 +1534,23 @@
   "plrResearchDisclaimer": "Results are NOT medical diagnoses. Consult healthcare professional.",
   "plrNameLabel": "Name",
   "plrAgeYears": "Age: {age} years",
-  "@plrAgeYears": {"placeholders": {"age": {"type": "int"}}},
+  "@plrAgeYears": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
   "plrTestLabel": "Test",
   "plrSummaryTitle": "PLR Summary",
   "plrGradeValue": "Grade {grade}",
-  "@plrGradeValue": {"placeholders": {"grade": {"type": "String"}}},
+  "@plrGradeValue": {
+    "placeholders": {
+      "grade": {
+        "type": "String"
+      }
+    }
+  },
   "plrStatusLabel": "Status",
   "plrDetectedStatus": "PLR DETECTED",
   "plrWeakNotDetectedStatus": "WEAK/NOT DETECTED",
@@ -1212,98 +1558,194 @@
   "plrRecoveryRatioLabel": "Recovery Ratio",
   "plrChartDescription": "Visual representation of pupil response over time",
   "plrPiRange": "P/I Range: {min}% - {max}%",
-  "@plrPiRange": {"placeholders": {"min": {"type": "String"}, "max": {"type": "String"}}},
+  "@plrPiRange": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
   "plrMinValue": "Min: {value}%",
-  "@plrMinValue": {"placeholders": {"value": {"type": "String"}}},
+  "@plrMinValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
   "plrFrameDataTitle": "Frame Data",
   "plrTableTime": "Time",
   "plrTablePiPercent": "P/I %",
   "plrTablePhase": "Phase",
   "plrTableConfidenceShort": "Conf",
   "plrSuccessfulFailed": "Successful: {success} | Failed: {fail}",
-  "@plrSuccessfulFailed": {"placeholders": {"success": {"type": "int"}, "fail": {"type": "int"}}},
+  "@plrSuccessfulFailed": {
+    "placeholders": {
+      "success": {
+        "type": "int"
+      },
+      "fail": {
+        "type": "int"
+      }
+    }
+  },
   "plrReferenceLatencyLine": "• Latency: 200-500ms (time to initial response)",
   "plrReferenceConstrictionLine": "• Constriction: 10-30% reduction from baseline",
   "plrReferenceVelocityLine": "• Velocity: 1.5-4.0%/second",
   "plrReferenceRecoveryLine": "• Recovery: >75% return to baseline within 5 seconds",
   "plrReferenceRecoveryLineShort": "• Recovery: >75% return to baseline within 5s",
   "plrShareSubject": "PLR Analysis Report - {eye}",
-  "@plrShareSubject": {"placeholders": {"eye": {"type": "String"}}},
+  "@plrShareSubject": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
   "plrTextReportTitle": "PLR VIDEO ANALYSIS REPORT",
   "plrTextDisclaimerTitle": "DISCLAIMER: Research/Educational Tool Only",
   "plrTextDisclaimerBody": "Results are NOT medical diagnoses.",
   "plrOverallGradeLabel": "Overall Grade",
-  "plrEndOfReport": "END OF REPORT"
-,
+  "plrEndOfReport": "END OF REPORT",
   "zoneOverlay": "Zone Overlay",
-  "@zoneOverlay": {"description": "Zone overlay / analysis: Zone Overlay"},
+  "@zoneOverlay": {
+    "description": "Zone overlay / analysis: Zone Overlay"
+  },
   "tipDragImage": "Tip: drag image to align limbus with overlay circles.",
-  "@tipDragImage": {"description": "Zone overlay / analysis: Tip: drag image to align limbus with overlay circl"},
+  "@tipDragImage": {
+    "description": "Zone overlay / analysis: Tip: drag image to align limbus with overlay circl"
+  },
   "overlayMetrics": "Overlay Metrics",
-  "@overlayMetrics": {"description": "Zone overlay / analysis: Overlay Metrics"},
+  "@overlayMetrics": {
+    "description": "Zone overlay / analysis: Overlay Metrics"
+  },
   "piRatioLabel": "P/I Ratio:",
-  "@piRatioLabel": {"description": "Zone overlay / analysis: P/I Ratio:"},
+  "@piRatioLabel": {
+    "description": "Zone overlay / analysis: P/I Ratio:"
+  },
   "ellipsenessLabel": "Ellipseness:",
-  "@ellipsenessLabel": {"description": "Zone overlay / analysis: Ellipseness:"},
+  "@ellipsenessLabel": {
+    "description": "Zone overlay / analysis: Ellipseness:"
+  },
   "decentralizationLabel": "Decentralization:",
-  "@decentralizationLabel": {"description": "Zone overlay / analysis: Decentralization:"},
+  "@decentralizationLabel": {
+    "description": "Zone overlay / analysis: Decentralization:"
+  },
   "detectedFindings": "Detected findings",
-  "@detectedFindings": {"description": "Zone overlay / analysis: Detected findings"},
+  "@detectedFindings": {
+    "description": "Zone overlay / analysis: Detected findings"
+  },
   "anwCollarette": "ANW / COLLARETTE",
-  "@anwCollarette": {"description": "Zone overlay / analysis: ANW / COLLARETTE"},
+  "@anwCollarette": {
+    "description": "Zone overlay / analysis: ANW / COLLARETTE"
+  },
   "observerNotes": "Observer notes",
-  "@observerNotes": {"description": "Zone overlay / analysis: Observer notes"},
+  "@observerNotes": {
+    "description": "Zone overlay / analysis: Observer notes"
+  },
   "observerNotesHint": "Enter clinical observations, zone findings, patterns…",
-  "@observerNotesHint": {"description": "Zone overlay / analysis: Enter clinical observations, zone findings, patter"},
+  "@observerNotesHint": {
+    "description": "Zone overlay / analysis: Enter clinical observations, zone findings, patter"
+  },
   "autoCenter": "Auto-center",
-  "@autoCenter": {"description": "Zone overlay / analysis: Auto-center"},
+  "@autoCenter": {
+    "description": "Zone overlay / analysis: Auto-center"
+  },
   "anwRing": "ANW Ring",
-  "@anwRing": {"description": "Zone overlay / analysis: ANW Ring"},
+  "@anwRing": {
+    "description": "Zone overlay / analysis: ANW Ring"
+  },
   "axisGrid": "Axis/Grid",
-  "@axisGrid": {"description": "Zone overlay / analysis: Axis/Grid"},
+  "@axisGrid": {
+    "description": "Zone overlay / analysis: Axis/Grid"
+  },
   "chart": "Chart",
-  "@chart": {"description": "Zone overlay / analysis: Chart"},
+  "@chart": {
+    "description": "Zone overlay / analysis: Chart"
+  },
   "hoverToIdentify": "Hover or tap a zone to identify",
-  "@hoverToIdentify": {"description": "Zone overlay / analysis: Hover or tap a zone to identify"},
+  "@hoverToIdentify": {
+    "description": "Zone overlay / analysis: Hover or tap a zone to identify"
+  },
   "organsMode": "Organs mode — hover iris to identify zones",
-  "@organsMode": {"description": "Zone overlay / analysis: Organs mode — hover iris to identify zones"},
+  "@organsMode": {
+    "description": "Zone overlay / analysis: Organs mode — hover iris to identify zones"
+  },
   "mildSizeDiff": "Mild size difference. May be physiological variation.",
-  "@mildSizeDiff": {"description": "Zone overlay / analysis: Mild size difference. May be physiological variati"},
+  "@mildSizeDiff": {
+    "description": "Zone overlay / analysis: Mild size difference. May be physiological variati"
+  },
   "withinBaseline": "Within research baseline for age {age} ({group})",
-  "@withinBaseline": {"description": "Zone overlay / analysis: Within research baseline for age {age} ({group})"},
+  "@withinBaseline": {
+    "description": "Zone overlay / analysis: Within research baseline for age {age} ({group})"
+  },
   "formLabel": "Form:",
-  "@formLabel": {"description": "Zone overlay / analysis: Form:"},
+  "@formLabel": {
+    "description": "Zone overlay / analysis: Form:"
+  },
   "flatteningLabel": "Flattening:",
-  "@flatteningLabel": {"description": "Zone overlay / analysis: Flattening:"},
+  "@flatteningLabel": {
+    "description": "Zone overlay / analysis: Flattening:"
+  },
   "protrusionLabel": "Protrusion:",
-  "@protrusionLabel": {"description": "Zone overlay / analysis: Protrusion:"},
+  "@protrusionLabel": {
+    "description": "Zone overlay / analysis: Protrusion:"
+  },
   "decentrationLabel": "Decentration:",
-  "@decentrationLabel": {"description": "Zone overlay / analysis: Decentration:"},
+  "@decentrationLabel": {
+    "description": "Zone overlay / analysis: Decentration:"
+  },
   "pupilSizeLabel": "Pupil size:",
-  "@pupilSizeLabel": {"description": "Zone overlay / analysis: Pupil size:"},
+  "@pupilSizeLabel": {
+    "description": "Zone overlay / analysis: Pupil size:"
+  },
   "anwRatioLabel": "ANW ratio:",
-  "@anwRatioLabel": {"description": "Zone overlay / analysis: ANW ratio:"},
+  "@anwRatioLabel": {
+    "description": "Zone overlay / analysis: ANW ratio:"
+  },
   "anwToneLabel": "ANW tone:",
-  "@anwToneLabel": {"description": "Zone overlay / analysis: ANW tone:"},
+  "@anwToneLabel": {
+    "description": "Zone overlay / analysis: ANW tone:"
+  },
   "noMajorODAnomalies": "No major OD pupil anomalies.",
-  "@noMajorODAnomalies": {"description": "Zone overlay / analysis: No major OD pupil anomalies."},
+  "@noMajorODAnomalies": {
+    "description": "Zone overlay / analysis: No major OD pupil anomalies."
+  },
   "noMajorOSAnomalies": "No major OS pupil anomalies.",
-  "@noMajorOSAnomalies": {"description": "Zone overlay / analysis: No major OS pupil anomalies."},
+  "@noMajorOSAnomalies": {
+    "description": "Zone overlay / analysis: No major OS pupil anomalies."
+  },
   "anwNotAssessed": "ANW: not assessed",
-  "@anwNotAssessed": {"description": "Zone overlay / analysis: ANW: not assessed"},
+  "@anwNotAssessed": {
+    "description": "Zone overlay / analysis: ANW: not assessed"
+  },
   "manualAlignmentAid": "Manual alignment aid for review only (post-capture). Drag image or use Auto-center.",
-  "@manualAlignmentAid": {"description": "Zone overlay / analysis: Manual alignment aid for review only (post-capture"},
-  "frontalShift": "S: Frontal shift.",
-  "@frontalShift": {"description": "Zone overlay / analysis: S: Frontal shift."},
-  "cerebralCirculation": "Cerebral circulation patterns.",
-  "@cerebralCirculation": {"description": "Zone overlay / analysis: Cerebral circulation patterns."},
-  "middleTemporalShift": "D: Middle-temporal shift.",
-  "@middleTemporalShift": {"description": "Zone overlay / analysis: D: Middle-temporal shift."},
-  "respiratoryCardiac": "Respiratory and cardiac autonomic patterns.",
-  "@respiratoryCardiac": {"description": "Zone overlay / analysis: Respiratory and cardiac autonomic patterns."},
+  "@manualAlignmentAid": {
+    "description": "Zone overlay / analysis: Manual alignment aid for review only (post-capture"
+  },
+  "frontalShift": "S: Frontal shift pattern.",
+  "@frontalShift": {
+    "description": "Zone overlay / analysis: S: Frontal shift."
+  },
+  "cerebralCirculation": "Historical studies according to Velchover linked this to cerebral circulation patterns.",
+  "@cerebralCirculation": {
+    "description": "Zone overlay / analysis: Cerebral circulation patterns."
+  },
+  "middleTemporalShift": "D: Middle-temporal shift pattern.",
+  "@middleTemporalShift": {
+    "description": "Zone overlay / analysis: D: Middle-temporal shift."
+  },
+  "respiratoryCardiac": "Historical studies according to Velchover linked this to respiratory and cardiac autonomic patterns.",
+  "@respiratoryCardiac": {
+    "description": "Zone overlay / analysis: Respiratory and cardiac autonomic patterns."
+  },
   "findings": "Findings:",
-  "@findings": {"description": "Zone overlay / analysis: Findings:"}
-,
+  "@findings": {
+    "description": "Zone overlay / analysis: Findings:"
+  },
   "analysisReportTitle": "Pupil Analysis Report",
   "reportResearchVersion": "Research Version",
   "reportDisclaimerTitle": "DISCLAIMER: Research/Educational Tool Only",
@@ -1321,9 +1763,9 @@
   "reportFlatteningsTitle": "Flattenings",
   "reportProtrusionsTitle": "Protrusions",
   "reportAnwParametersTitle": "Autonomic Nerve Wreath (ANW)",
-  "reportTonicStateLabel": "Tonic State",
-  "reportShiftDetectedTitle": "Shift Detected",
-  "reportClinicalLabel": "Clinical",
+  "reportTonicStateLabel": "Historical Tone Pattern",
+  "reportShiftDetectedTitle": "Historical Shift Pattern",
+  "reportClinicalLabel": "Historical Note",
   "reportConstrictionDetectedTitle": "Constriction Detected",
   "reportSeverityLabel": "Severity",
   "reportReferenceValuesTitle": "Reference Values (CNRI Research Protocol)",
@@ -1331,28 +1773,100 @@
   "reportValueLabel": "Value",
   "reportNormalPupilForm": "Normal pupil form",
   "reportPageXofY": "Page {page}/{total}",
-  "@reportPageXofY": {"placeholders": {"page": {"type": "int"}, "total": {"type": "int"}}},
+  "@reportPageXofY": {
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "reportShareSubject": "Pupil Analysis Report - {patientName}",
-  "@reportShareSubject": {"placeholders": {"patientName": {"type": "String"}}},
+  "@reportShareSubject": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      }
+    }
+  },
   "reportShareBody": "Attached is the pupil analysis report for {patientName}, generated on {date}.",
-  "@reportShareBody": {"placeholders": {"patientName": {"type": "String"}, "date": {"type": "String"}}}
-,
+  "@reportShareBody": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "belowBaseline": "Below research baseline for age {age} ({group})",
-  "@belowBaseline": {"placeholders": {"age": {"type": "int"}, "group": {"type": "String"}}},
+  "@belowBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
   "aboveBaseline": "Above research baseline for age {age} ({group})",
-  "@aboveBaseline": {"placeholders": {"age": {"type": "int"}, "group": {"type": "String"}}},
+  "@aboveBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
   "ageGroupInfant": "Infant",
-  "@ageGroupInfant": {"description": "Localized age group label"},
+  "@ageGroupInfant": {
+    "description": "Localized age group label"
+  },
   "ageGroupChild15": "Child (1-5)",
-  "@ageGroupChild15": {"description": "Localized age group label"},
+  "@ageGroupChild15": {
+    "description": "Localized age group label"
+  },
   "ageGroupChild611": "Child (6-11)",
-  "@ageGroupChild611": {"description": "Localized age group label"},
+  "@ageGroupChild611": {
+    "description": "Localized age group label"
+  },
   "ageGroupTeen": "Teen",
-  "@ageGroupTeen": {"description": "Localized age group label"},
+  "@ageGroupTeen": {
+    "description": "Localized age group label"
+  },
   "ageGroupAdult2039": "Adult (20-39)",
-  "@ageGroupAdult2039": {"description": "Localized age group label"},
+  "@ageGroupAdult2039": {
+    "description": "Localized age group label"
+  },
   "ageGroupAdult4059": "Adult (40-59)",
-  "@ageGroupAdult4059": {"description": "Localized age group label"},
+  "@ageGroupAdult4059": {
+    "description": "Localized age group label"
+  },
   "ageGroupSenior60Plus": "Senior (60+)",
-  "@ageGroupSenior60Plus": {"description": "Localized age group label"}
+  "@ageGroupSenior60Plus": {
+    "description": "Localized age group label"
+  },
+  "middleNasalShift": "Middle-nasal shift pattern.",
+  "upperTemporalShift": "Upper-temporal shift pattern.",
+  "lowerTemporalShift": "Lower-temporal shift pattern.",
+  "basalShift": "Basal shift pattern.",
+  "vagusStellateAssociation": "Historical studies according to Velchover linked this to hypofunction patterns of the vagus nerve or stellate ganglion.",
+  "venaCavaInferiorAssociation": "Historical studies according to Velchover linked this to hemodynamic disturbance patterns in the inferior vena cava.",
+  "vertebralArteryAssociation": "Historical studies according to Velchover linked this to vertebral artery circulation patterns.",
+  "smallPelvisAssociation": "Historical studies according to Velchover linked this to congestive patterns in the small pelvis.",
+  "openZoneOverlay": "Open zone overlay",
+  "iris": "Iris",
+  "chartOpacity": "Chart opacity",
+  "irisSizeNotAvailable": "Iris size data not available",
+  "ratio": "Ratio",
+  "reportRefPiRatio": "Pupil/Iris Ratio: Normal 20-30%",
+  "reportRefEllipseness": "Ellipseness: Normal >95%",
+  "reportRefDecentralization": "Decentralization: Normal <5%",
+  "reportRefPupilSizeDiff": "Pupil Size Diff: <2% Normal, 2-4% Mild, >4% Significant"
 }

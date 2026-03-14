@@ -2043,16 +2043,16 @@ class AppLocalizationsFr extends AppLocalizations {
   String get anwAtonic => 'Atonisch';
 
   @override
-  String get anwTonicState => 'Tonischer Zustand';
+  String get anwTonicState => 'Schema Tonique Historique';
 
   @override
-  String get anwParasympathotonic => 'Parasympathikoton';
+  String get anwParasympathotonic => 'Schema parasympathicotonique';
 
   @override
-  String get anwSympathotonicState => 'Sympathikoton';
+  String get anwSympathotonicState => 'Schema sympathicotonique';
 
   @override
-  String get anwShiftDetected => 'Verschiebung Erkannt';
+  String get anwShiftDetected => 'Schema Historique de Decalage';
 
   @override
   String get anwConstrictionDetected => 'Verengung Erkannt';
@@ -2079,15 +2079,15 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get anwParasympathotonicDesc =>
-      'Liminale Empfindlichkeit erhöht. Reflexaktivität beschleunigt. GI-Sekretions-/Evakuierungsfunktionen erhöht.';
+      'Des observations historiques ont associe cela a une sensibilite liminale accrue, une activite reflexe acceleree et des fonctions secretrices/evacuatrices gastro-intestinales augmentees.';
 
   @override
   String get anwSympathotonicDesc =>
-      'Liminale Empfindlichkeit verringert. Reflexaktivität verlangsamt. GI-Sekretions-/Evakuierungsfunktionen reduziert.';
+      'Des observations historiques ont associe cela a une sensibilite liminale diminuee, une activite reflexe ralentie et des fonctions secretrices/evacuatrices gastro-intestinales reduites.';
 
   @override
   String get anwMiddleTemporalShiftCardiac =>
-      'Überlastungen des linken Ventrikels. Kardiale Belastung.';
+      'Des etudes historiques selon Velchover ont associe cela a des profils de surcharge ventriculaire gauche et de stress cardiaque.';
 
   @override
   String get anwFrontalConstricted =>
@@ -2209,11 +2209,11 @@ class AppLocalizationsFr extends AppLocalizations {
       'Compare OD vs OS pour détecter les asymétries.';
 
   @override
-  String get helpFeatureMlTitle => 'Amélioration ML';
+  String get helpFeatureMlTitle => 'Comparaison ONNX CNN';
 
   @override
   String get helpFeatureMlDesc =>
-      'Le modèle ResNet18 fournit des mesures secondaires.';
+      'Le modèle ONNX CNN fournit des mesures secondaires à des fins de comparaison.';
 
   @override
   String get helpKeyboardShortcuts => 'Raccourcis Clavier';
@@ -2294,6 +2294,53 @@ class AppLocalizationsFr extends AppLocalizations {
   String get helpIssuePdfSolution4 => 'Essayez d\'abord l\'export TXT';
 
   @override
+  String get helpCaptureChecklistTitle => 'Checklist de Capture';
+
+  @override
+  String get helpCaptureChecklist1 =>
+      'Gardez la pupille centrée et entièrement visible dans le cadre.';
+
+  @override
+  String get helpCaptureChecklist2 =>
+      'Utilisez un éclairage uniforme et réduisez l\'éblouissement ou les reflets sur la cornée.';
+
+  @override
+  String get helpCaptureChecklist3 =>
+      'Conservez une distance d\'iriscopie similaire pour l\'œil droit et l\'œil gauche.';
+
+  @override
+  String get helpCaptureChecklist4 =>
+      'Refaites la mise au point ou reprenez la photo si le bord pupillaire paraît flou.';
+
+  @override
+  String get helpExportSettingsTitle => 'Paramètres d\'Export';
+
+  @override
+  String get helpExportSettingsDesc =>
+      'Auto-sauvegarde PDF peut enregistrer un rapport après l\'analyse, Inclure Images contrôle l\'affichage des photos dans le PDF, et Comparaison ONNX CNN ajoute des valeurs comparatives au rapport.';
+
+  @override
+  String get helpHybridScoreTitle => 'Confiance et Grade Hybrides';
+
+  @override
+  String get helpHybridScoreDesc =>
+      'La confiance et le grade affichés combinent la qualité géométrique classique avec l\'accord ML et reflètent donc la fiabilité de la mesure plutôt qu\'un diagnostic.';
+
+  @override
+  String get helpAnomalyGuideTitle => 'Lire les Aplatissements et Protrusions';
+
+  @override
+  String get helpAnomalyGuideDesc =>
+      'Les aplatissements indiquent un tirage vers l\'intérieur et les protrusions un tirage vers l\'extérieur le long du bord pupillaire ; chaque carte indique la zone, l\'ampleur et l\'association cartographiée.';
+
+  @override
+  String get helpZoneOverlayGuideTitle => 'Superposition de Zones';
+
+  @override
+  String get helpZoneOverlayGuideDesc =>
+      'Utilisez la superposition de zones pour inspecter visuellement les positions sectorielles et vérifier où se situent les anomalies détectées autour de la pupille et de l\'iris.';
+
+  @override
   String get helpContactSupportTip =>
       'Contactez helpdesk@cnri.edu pour assistance.';
 
@@ -2326,9 +2373,6 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get settingsShowZoneOverlay => 'Afficher Superposition Zones';
-
-  @override
-  String get settingsAutoDetectPupil => 'Auto-détection Pupille';
 
   @override
   String get settingsExportReports => 'EXPORT ET RAPPORTS';
@@ -2376,6 +2420,9 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get languageSelectTitle => 'Sélectionner Langue';
+
+  @override
+  String get selectLanguage => 'Sélectionner la langue';
 
   @override
   String get languageChanged => 'Langue Changée';
@@ -3104,17 +3151,18 @@ class AppLocalizationsFr extends AppLocalizations {
       'Aide d\'alignement manuel pour révision uniquement. Glissez l\'image ou utilisez Auto-centrer.';
 
   @override
-  String get frontalShift => 'S : Décalage frontal.';
+  String get frontalShift => 'S : Schema de decalage frontal.';
 
   @override
-  String get cerebralCirculation => 'Schémas de circulation cérébrale.';
+  String get cerebralCirculation =>
+      'Des etudes historiques selon Velchover ont associe cela a des profils de circulation cerebrale.';
 
   @override
-  String get middleTemporalShift => 'D : Décalage temporal moyen.';
+  String get middleTemporalShift => 'D : Schema de decalage temporo-median.';
 
   @override
   String get respiratoryCardiac =>
-      'Schémas autonomes respiratoires et cardiaques.';
+      'Des etudes historiques selon Velchover ont associe cela a des profils autonomes respiratoires et cardiaques.';
 
   @override
   String get findings => 'Résultats :';
@@ -3176,13 +3224,13 @@ class AppLocalizationsFr extends AppLocalizations {
   String get reportAnwParametersTitle => 'Couronne nerveuse autonome (ANW)';
 
   @override
-  String get reportTonicStateLabel => 'Etat tonique';
+  String get reportTonicStateLabel => 'Schema Tonique Historique';
 
   @override
-  String get reportShiftDetectedTitle => 'Deplacement detecte';
+  String get reportShiftDetectedTitle => 'Schema Historique de Decalage';
 
   @override
-  String get reportClinicalLabel => 'Clinique';
+  String get reportClinicalLabel => 'Note Historique';
 
   @override
   String get reportConstrictionDetectedTitle => 'Constriction detectee';
@@ -3248,4 +3296,61 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get ageGroupSenior60Plus => 'Senior (60+)';
+
+  @override
+  String get middleNasalShift => 'Schema de decalage naso-median.';
+
+  @override
+  String get upperTemporalShift => 'Schema de decalage temporo-superieur.';
+
+  @override
+  String get lowerTemporalShift => 'Schema de decalage temporo-inferieur.';
+
+  @override
+  String get basalShift => 'Schema de decalage basal.';
+
+  @override
+  String get vagusStellateAssociation =>
+      'Des etudes historiques selon Velchover ont associe cela a des profils d hypofonction du nerf vague ou du ganglion stellaire.';
+
+  @override
+  String get venaCavaInferiorAssociation =>
+      'Des etudes historiques selon Velchover ont associe cela a des profils de perturbation hemodynamique dans la veine cave inferieure.';
+
+  @override
+  String get vertebralArteryAssociation =>
+      'Des etudes historiques selon Velchover ont associe cela a des profils de circulation de l artere vertebrale.';
+
+  @override
+  String get smallPelvisAssociation =>
+      'Des etudes historiques selon Velchover ont associe cela a des profils congestifs du petit bassin.';
+
+  @override
+  String get openZoneOverlay => 'Ouvrir la superposition des zones';
+
+  @override
+  String get iris => 'Iris';
+
+  @override
+  String get chartOpacity => 'Opacite du graphique';
+
+  @override
+  String get irisSizeNotAvailable =>
+      'Donnees de taille de l iris non disponibles';
+
+  @override
+  String get ratio => 'Rapport';
+
+  @override
+  String get reportRefPiRatio => 'Rapport Pupille/Iris: Normal 20-30%';
+
+  @override
+  String get reportRefEllipseness => 'Ellipticite: Normal >95%';
+
+  @override
+  String get reportRefDecentralization => 'Decentralisation: Normal <5%';
+
+  @override
+  String get reportRefPupilSizeDiff =>
+      'Diff. Taille Pupille: <2% Normal, 2-4% Leger, >4% Significatif';
 }
