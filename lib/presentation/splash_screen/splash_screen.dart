@@ -215,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   /// Show dialog when trial has expired
   void _showTrialExpiredDialog() {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -298,7 +298,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _showDisclaimerDialog([SharedPreferences? prefs]) async {
     final preferences = prefs ?? await SharedPreferences.getInstance();
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
 
     await showDialog(
       context: context,
@@ -423,7 +423,7 @@ class _HomeScreenState extends State<HomeScreen> {
   // ============================================================
 
   Widget _buildLicenseStatusWidget() {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
 
     if (!_licenseLoaded) {
       return _buildLicenseCard(
@@ -496,7 +496,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildWelcomeCard() {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(16),
@@ -617,7 +617,7 @@ class _HomeScreenState extends State<HomeScreen> {
             TextButton(
               onPressed: _openLicenseDialog,
               child: Text(
-                buttonText ?? AppLocalizations.of(context).aboutManageLicense,
+                buttonText ?? AppLocalizations.of(context)!.aboutManageLicense,
                 style: TextStyle(color: buttonColor ?? const Color(0xFF00D9FF), fontWeight: FontWeight.bold),
               ),
             ),
@@ -635,7 +635,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       backgroundColor: const Color(0xFF0A0E21),

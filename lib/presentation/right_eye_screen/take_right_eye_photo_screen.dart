@@ -43,7 +43,7 @@ class _TakeRightEyePhotoScreenState extends State<TakeRightEyePhotoScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
 
     return PopScope(
       canPop: true,

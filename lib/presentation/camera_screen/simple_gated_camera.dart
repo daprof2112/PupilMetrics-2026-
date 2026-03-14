@@ -640,7 +640,7 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
   }
 
   void _showValidationErrorDialog(EyeValidationResult result) {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     final checks = result.checkResults;
 
     showDialog(
@@ -827,6 +827,7 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
     _countdownTimer?.cancel();
     _controller?.stopImageStream();
     _controller?.dispose();
+    _audioPlayer.stop().catchError((_) {});
     _audioPlayer.dispose();
     super.dispose();
   }
@@ -837,7 +838,7 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     final isReady = _lastResult?.isReady ?? false;
     final isFrontCamera = _selectedCamera?.lensDirection == CameraLensDirection.front;
 

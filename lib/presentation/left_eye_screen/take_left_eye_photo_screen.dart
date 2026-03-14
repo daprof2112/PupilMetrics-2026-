@@ -54,7 +54,7 @@ class _TakeLeftEyePhotoScreenState extends State<TakeLeftEyePhotoScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
 
     return PopScope(
       canPop: true,
@@ -603,7 +603,7 @@ Padding(
 
   // ========== DESKTOP CAPTURE OPTIONS DIALOG ==========
   void _showDesktopCaptureOptions(BuildContext context, {required bool isRightEye}) {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
 
     showDialog(
       context: context,

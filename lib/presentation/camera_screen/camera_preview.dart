@@ -138,7 +138,7 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
         _cancelAutoCapture();
       }
     } catch (e) {
-      print('[Detection] Detection error: $e');
+      debugPrint('[Detection] Detection error: $e');
     }
   }
 
@@ -146,6 +146,7 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
     if (_stabilityTimer != null) return;
 
     _stabilityTimer = Timer(const Duration(milliseconds: 1000), () {
+      if (!mounted) return;
       if (_eyeDetected && _isWellCentered && _hasGoodLighting) {
         setState(() => _isStable = true);
         _startCountdown();
@@ -159,6 +160,10 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
     setState(() => _captureCountdown = 5);
 
     _countdownTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (!mounted) {
+        timer.cancel();
+        return;
+      }
       if (_captureCountdown > 1) {
         setState(() => _captureCountdown--);
       } else {
@@ -284,7 +289,9 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
       try {
         state.sensorConfig.setBrightness(v01);
         _lastSentExposure01 = v01;
-      } catch (_) {}
+      } catch (e) {
+        debugPrint('[Camera] Exposure set failed: $e');
+      }
     });
   }
 
@@ -588,7 +595,9 @@ class _CameraPreviewPageState extends State<CameraPreviewPage> {
                                     final next = _nextFlash(current);
                                     try {
                                       await sc.setFlashMode(next);
-                                    } catch (_) {}
+                                    } catch (e) {
+                                      debugPrint('[Camera] Flash mode set failed: $e');
+                                    }
                                     setState(() => _flashMode = next);
                                     _saveFlash(next);
                                   },

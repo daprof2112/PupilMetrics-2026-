@@ -124,7 +124,7 @@ class DeviceIntegrityChecker {
       for (final path in emulatorPaths) {
         try {
           if (await File(path).exists()) return true;
-        } catch (_) {}
+        } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
       }
 
       // Check build properties via system properties
@@ -136,7 +136,7 @@ class DeviceIntegrityChecker {
             hardware.contains('vbox')) {
           return true;
         }
-      } catch (_) {}
+      } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
 
       return emulatorIndicators.any((e) => e);
     }
@@ -169,19 +169,19 @@ class DeviceIntegrityChecker {
       for (final path in rootPaths) {
         try {
           if (await File(path).exists()) return true;
-        } catch (_) {}
+        } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
       }
 
       // Try to execute su
       try {
         final result = await Process.run('su', ['-c', 'id']);
         if (result.exitCode == 0) return true;
-      } catch (_) {}
+      } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
 
       // Check for Magisk
       try {
         if (await Directory('/data/adb/magisk').exists()) return true;
-      } catch (_) {}
+      } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
     }
 
     if (Platform.isIOS) {
@@ -203,7 +203,7 @@ class DeviceIntegrityChecker {
           if (await File(path).exists() || await Directory(path).exists()) {
             return true;
           }
-        } catch (_) {}
+        } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
       }
 
       // Check if we can write outside sandbox
@@ -212,7 +212,7 @@ class DeviceIntegrityChecker {
         await file.writeAsString('test');
         await file.delete();
         return true; // If we can write here, device is jailbroken
-      } catch (_) {}
+      } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
     }
 
     return false;
@@ -232,7 +232,7 @@ class DeviceIntegrityChecker {
         );
         await socket.close();
         return true; // Frida server detected
-      } catch (_) {}
+      } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
     }
 
     // Check for Frida-related files (Android)
@@ -245,7 +245,7 @@ class DeviceIntegrityChecker {
       for (final path in fridaPaths) {
         try {
           if (await File(path).exists()) return true;
-        } catch (_) {}
+        } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
       }
     }
 
@@ -256,7 +256,7 @@ class DeviceIntegrityChecker {
         if (maps.contains('frida') || maps.contains('gadget')) {
           return true;
         }
-      } catch (_) {}
+      } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
     }
 
     return false;
@@ -278,7 +278,7 @@ class DeviceIntegrityChecker {
           if (await File(path).exists() || await Directory(path).exists()) {
             return true;
           }
-        } catch (_) {}
+        } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
       }
 
       // Check stack trace for hook indicators
@@ -288,7 +288,7 @@ class DeviceIntegrityChecker {
             stackTrace.contains('com.saurik.substrate')) {
           return true;
         }
-      } catch (_) {}
+      } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
     }
 
     if (Platform.isIOS) {
@@ -297,7 +297,7 @@ class DeviceIntegrityChecker {
         if (await File('/Library/MobileSubstrate/MobileSubstrate.dylib').exists()) {
           return true;
         }
-      } catch (_) {}
+      } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
     }
 
     return false;
@@ -329,7 +329,7 @@ class DeviceIntegrityChecker {
 
         result = await Process.run('getprop', ['ro.build.fingerprint']);
         components.add(result.stdout.toString().trim());
-      } catch (_) {}
+      } catch (_) { /* intentionally swallowed — security probe, failure is expected */ }
     }
 
     // Hash all components

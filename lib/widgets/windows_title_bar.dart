@@ -33,7 +33,7 @@ class WindowsTitleBar extends StatelessWidget {
     return GetX<LanguageController>(
       init: LanguageController(),
       builder: (controller) {
-        final displayTitle = AppLocalizations.of(context).windowTitle;
+        final displayTitle = AppLocalizations.of(context)!.windowTitle;
 
         return GestureDetector(
           onPanStart: (_) => windowManager.startDragging(),
@@ -261,9 +261,9 @@ class _LanguageDialogState extends State<LanguageDialog> {
             children: [
               const Icon(Icons.error_outline, color: Colors.orange, size: 48),
               const SizedBox(height: 16),
-              Text(AppLocalizations.of(context).languageSystemNotAvailable, style: const TextStyle(color: Colors.white)),
+              Text(AppLocalizations.of(context)!.languageSystemNotAvailable, style: const TextStyle(color: Colors.white)),
               const SizedBox(height: 16),
-              TextButton(onPressed: () => Get.back(), child: Text(AppLocalizations.of(context).close)),
+              TextButton(onPressed: () => Get.back(), child: Text(AppLocalizations.of(context)!.close)),
             ],
           ),
         ),
@@ -295,7 +295,7 @@ class _LanguageDialogState extends State<LanguageDialog> {
                   const Icon(Icons.language, color: Color(0xFF00D9FF), size: 24),
                   const SizedBox(width: 12),
                   Expanded(
-                    child: Text(AppLocalizations.of(context).selectLanguage, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+                    child: Text(AppLocalizations.of(context)!.selectLanguage, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
                   ),
                   IconButton(
                     onPressed: () => Get.back(),

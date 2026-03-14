@@ -94,7 +94,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
   }
 
   Widget _buildHeader() {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     return Column(
       children: [
         Container(
@@ -217,7 +217,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
   }
 
   Widget _buildRegistrationForm() {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     return Form(
       key: _formKey,
       child: Column(
@@ -430,7 +430,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  AppLocalizations.of(context).licenseActivatedSuccess,
+                  AppLocalizations.of(context)!.licenseActivatedSuccess,
                   style: const TextStyle(
                     color: Colors.green,
                     fontWeight: FontWeight.bold,
@@ -480,7 +480,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
                       const Icon(Icons.verified),
                       const SizedBox(width: 8),
                       Text(
-                        AppLocalizations.of(context).licenseActivate,
+                        AppLocalizations.of(context)!.licenseActivate,
                         style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -510,10 +510,10 @@ class _LicenseDialogState extends State<LicenseDialog> {
                 ),
                 child: Text(
                   _activatedLicense != null
-                      ? AppLocalizations.of(context).close
+                      ? AppLocalizations.of(context)!.close
                       : (widget.currentLicense?.isTrial == true
-                          ? AppLocalizations.of(context).licenseContinueTrial
-                          : AppLocalizations.of(context).cancel),
+                          ? AppLocalizations.of(context)!.licenseContinueTrial
+                          : AppLocalizations.of(context)!.cancel),
                 ),
               ),
             ),
@@ -525,7 +525,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
               child: OutlinedButton.icon(
                 onPressed: _openPurchasePage,
                 icon: const Icon(Icons.shopping_cart, size: 18),
-                label: Text(AppLocalizations.of(context).licenseBuyLicense),
+                label: Text(AppLocalizations.of(context)!.licenseBuyLicense),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: Colors.green,
                   side: const BorderSide(color: Colors.green),
@@ -553,7 +553,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
             TextButton(
               onPressed: _openSupportPage,
               child: Text(
-                AppLocalizations.of(context).licenseNeedHelp,
+                AppLocalizations.of(context)!.licenseNeedHelp,
                 style: const TextStyle(color: Colors.white54, fontSize: 12),
               ),
             ),
@@ -561,7 +561,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
             TextButton(
               onPressed: _openEULA,
               child: Text(
-                AppLocalizations.of(context).licenseLicenseAgreement,
+                AppLocalizations.of(context)!.licenseLicenseAgreement,
                 style: const TextStyle(color: Colors.white54, fontSize: 12),
               ),
             ),
@@ -573,7 +573,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
 
   // FIXED: Changed machineeMismatch to machineMismatch (single 'e')
   String _getStatusTitle(LicenseStatus status) {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     return switch (status) {
       LicenseStatus.valid => l10n.licenseStatusValid,
       LicenseStatus.trialActive => l10n.licenseStatusTrialActive,
@@ -613,7 +613,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
     } catch (e) {
       setState(() {
         _isActivating = false;
-        _errorMessage = AppLocalizations.of(context).licenseMsgUnableToActivate;
+        _errorMessage = AppLocalizations.of(context)!.licenseMsgUnableToActivate;
       });
     }
   }

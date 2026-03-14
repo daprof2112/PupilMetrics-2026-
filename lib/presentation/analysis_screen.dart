@@ -133,7 +133,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
   }
 
   Future<void> _runAnalysis() async {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     final analyzer = PupilAnalyzer();
     final validator = EyeValidator();
 
@@ -284,7 +284,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
   }
 
   AnisocoriaAssessment _assessAnisocoria(EyeAnalysisResult left, EyeAnalysisResult right) {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     final diff = (left.pupilIrisRatio - right.pupilIrisRatio).abs();
     final avg = (left.pupilIrisRatio + right.pupilIrisRatio) / 2;
     final relDiff = avg > 0 ? (diff / avg) * 100 : 0;
@@ -327,7 +327,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
   }
 
   AgeNormAssessment _assessAgeNorms(EyeAnalysisResult? left, EyeAnalysisResult? right, int age) {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     final norm = _getPupilNormForAge(age);
     final localizedGroup = _localizedAgeGroup(l10n, norm.group);
 
@@ -493,7 +493,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     if (_showPaywall) return _buildPaywall(l10n);
 
     return Scaffold(
@@ -852,7 +852,7 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r, {required bool is
                                 color: Colors.black.withOpacity(0.55),
                                 borderRadius: BorderRadius.circular(20),
                                 child: IconButton(
-                                  tooltip: AppLocalizations.of(context).openZoneOverlay,
+                                  tooltip: AppLocalizations.of(context)!.openZoneOverlay,
                                   onPressed: () => _openZoneOverlayDialog(
                                     f,
                                     label,
@@ -1133,7 +1133,7 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r, {required bool is
                     FilterChip(
                       selectedColor: const Color(0x3300D9FF),
                       checkmarkColor: const Color(0xFF00D9FF),
-                      label: Text(AppLocalizations.of(context).iris, style: const TextStyle(color: Colors.white)),
+                      label: Text(AppLocalizations.of(context)!.iris, style: const TextStyle(color: Colors.white)),
                       selected: showIris,
                       onSelected: (v) => setLocalState(() => showIris = v),
                     ),
@@ -1215,12 +1215,12 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r, {required bool is
                           onChanged: (v) => setLocalState(() => chartOpacity = v),
                         ),
                       ),
-                      Tooltip(message: AppLocalizations.of(context).chartOpacity, child: const Icon(Icons.visibility, color: Colors.white38, size: 14)),
+                      Tooltip(message: AppLocalizations.of(context)!.chartOpacity, child: const Icon(Icons.visibility, color: Colors.white38, size: 14)),
                     ],
                     // Ring size controls — shown in a tidy row below chart sliders
                     if (showIris || showPupil || showANW) ...[
                       const SizedBox(width: 4),
-                      Text(AppLocalizations.of(context).iris, style: const TextStyle(color: Color(0xFF00D9FF), fontSize: 10)),
+                      Text(AppLocalizations.of(context)!.iris, style: const TextStyle(color: Color(0xFF00D9FF), fontSize: 10)),
                       SizedBox(width: 60, child: Slider(value: irisLimbusScale, min: 0.5, max: 2.0, divisions: 30, activeColor: const Color(0xFF00D9FF), inactiveColor: Colors.white12, onChanged: (v) => setLocalState(() => irisLimbusScale = v))),
                       Text(l10n.pupil, style: const TextStyle(color: Colors.greenAccent, fontSize: 10)),
                       SizedBox(width: 60, child: Slider(value: pupilRingScale, min: 0.5, max: 2.0, divisions: 30, activeColor: Colors.greenAccent, inactiveColor: Colors.white12, onChanged: (v) => setLocalState(() => pupilRingScale = v))),
@@ -1500,7 +1500,7 @@ String? _chartSourcePathPreview({
   }
 
 Widget _buildOverlayMetricsPanel(EyeAnalysisResult r, {required bool isRightEye}) {
-  final l10n = AppLocalizations.of(context);
+  final l10n = AppLocalizations.of(context)!;
   Widget metric(String label, double value, String unit, Color color) {
     final clamped = (value / 100).clamp(0.0, 1.0);
     return Padding(
@@ -1557,7 +1557,7 @@ Widget _buildOverlayMetricsPanel(EyeAnalysisResult r, {required bool isRightEye}
 }
 
 List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRightEye}) {
-  final l10n = AppLocalizations.of(context);
+  final l10n = AppLocalizations.of(context)!;
   final loc = PupilAnalyzerLocalizations(l10n);
 
   Widget noteText(String t, {Color color = const Color(0xFFBBBBCC)}) => Padding(
@@ -1714,7 +1714,7 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
               ),
             ),
           ] else
-            Text(AppLocalizations.of(context).irisSizeNotAvailable, style: const TextStyle(color: Colors.white54, fontSize: 13)),
+            Text(AppLocalizations.of(context)!.irisSizeNotAvailable, style: const TextStyle(color: Colors.white54, fontSize: 13)),
         ],
       ),
     );
@@ -1726,7 +1726,7 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
         Text(label, style: TextStyle(color: color, fontSize: 12)),
         const SizedBox(height: 4),
         Text(value, style: TextStyle(color: color, fontSize: 18, fontWeight: FontWeight.bold)),
-        Text(AppLocalizations.of(context).irisDiameterLabel, style: const TextStyle(color: Colors.white38, fontSize: 10)),
+        Text(AppLocalizations.of(context)!.irisDiameterLabel, style: const TextStyle(color: Colors.white38, fontSize: 10)),
       ],
     );
   }
@@ -2859,7 +2859,7 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
   );
 
   Widget _price(String t, String p, String per, bool pop, VoidCallback tap) {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     return GestureDetector(
         onTap: tap,
         child: Container(
@@ -2899,7 +2899,7 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
   }
 
   Future<void> _buy(String type) async {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     try {
       setState(() => _isAnalyzing = true);
       final offerings = await Purchases.getOfferings();
@@ -2989,7 +2989,7 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
 }
 
 Future<void> _saveTxtReport() async {
-  final l10n = AppLocalizations.of(context);
+  final l10n = AppLocalizations.of(context)!;
   try {
     showDialog(
       context: context,
@@ -3029,7 +3029,7 @@ Future<void> _saveTxtReport() async {
 }
 
   String _generateTxtReport() {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     final loc = PupilAnalyzerLocalizations(l10n);
     final b = StringBuffer();
     b.writeln('=' * 60);
@@ -3209,7 +3209,7 @@ Future<void> _saveTxtReport() async {
   }
   // ==========================================================================
 Future<void> _saveJsonReport() async {
-  final l10n = AppLocalizations.of(context);
+  final l10n = AppLocalizations.of(context)!;
   try {
     showDialog(
       context: context,
@@ -3330,7 +3330,7 @@ Future<void> _saveJsonReport() async {
   // REPORT GENERATION - PDF (Updated v5.3.0 with Full ANW Section)
   // ==========================================================================
 Future<String?> _exportPdf({bool showSnackbar = true}) async {
-  final l10n = AppLocalizations.of(context);
+  final l10n = AppLocalizations.of(context)!;
   try {
     showDialog(
       context: context,
@@ -3847,7 +3847,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
     exit(0);
   }
   Future<void> _sharePdfReport() async {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
     try {
       final pdfPath = await _exportPdf(showSnackbar: false);
       if (pdfPath != null) {
