@@ -3404,6 +3404,30 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get initializing => 'Inicializando...';
+
+  @override
+  String get nameLabel => 'Nome:';
+
+  @override
+  String get ageLabel => 'Idade:';
+
+  @override
+  String get typeLabel => 'Tipo:';
+
+  @override
+  String get pleaseEnterName => 'Por favor insira o nome';
+
+  @override
+  String get pleaseEnterAge => 'Por favor insira a idade';
+
+  @override
+  String get ageMustBe2Digits => 'A idade deve ter 1 ou 2 dígitos';
+
+  @override
+  String get optional => '(Opcional)';
+
+  @override
+  String get bilateralBothHands => 'Uso bilateral de ambas as mãos';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -6745,4 +6769,28 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get initializing => 'Inicializando...';
+
+  @override
+  String get nameLabel => 'Nome:';
+
+  @override
+  String get ageLabel => 'Idade:';
+
+  @override
+  String get typeLabel => 'Tipo:';
+
+  @override
+  String get pleaseEnterName => 'Por favor insira o nome';
+
+  @override
+  String get pleaseEnterAge => 'Por favor insira a idade';
+
+  @override
+  String get ageMustBe2Digits => 'A idade deve ter 1 ou 2 dígitos';
+
+  @override
+  String get optional => '(Opcional)';
+
+  @override
+  String get bilateralBothHands => 'Uso bilateral de ambas as mãos';
 }

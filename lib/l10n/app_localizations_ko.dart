@@ -3298,4 +3298,28 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get initializing => '초기화 중...';
+
+  @override
+  String get nameLabel => '이름:';
+
+  @override
+  String get ageLabel => '나이:';
+
+  @override
+  String get typeLabel => '유형:';
+
+  @override
+  String get pleaseEnterName => '이름을 입력해 주세요';
+
+  @override
+  String get pleaseEnterAge => '나이를 입력해 주세요';
+
+  @override
+  String get ageMustBe2Digits => '나이는 1자리 또는 2자리여야 합니다';
+
+  @override
+  String get optional => '(선택)';
+
+  @override
+  String get bilateralBothHands => '양손 양측 사용';
 }

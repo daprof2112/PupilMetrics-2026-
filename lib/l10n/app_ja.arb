@@ -1397,5 +1397,13 @@
   "validationChecks": "バリデーションチェック：",
   "eyeQualityTip": "ヒント：適切な照明を確保し、目を安定させてください",
   "validatingEye": "目を検証中...",
-  "initializing": "初期化中..."
+  "initializing": "初期化中...",
+  "nameLabel": "名前：",
+  "ageLabel": "年齢：",
+  "typeLabel": "タイプ：",
+  "pleaseEnterName": "名前を入力してください",
+  "pleaseEnterAge": "年齢を入力してください",
+  "ageMustBe2Digits": "年齢は1桁または2桁である必要があります",
+  "optional": "（任意）",
+  "bilateralBothHands": "両手の両側使用"
 }

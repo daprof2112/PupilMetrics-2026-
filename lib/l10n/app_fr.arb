@@ -1396,5 +1396,13 @@
   "validationChecks": "Vérifications de validation :",
   "eyeQualityTip": "Conseil : Assurez un bon éclairage et gardez l'œil stable",
   "validatingEye": "Validation de l'œil...",
-  "initializing": "Initialisation..."
+  "initializing": "Initialisation...",
+  "nameLabel": "Nom :",
+  "ageLabel": "Âge :",
+  "typeLabel": "Type :",
+  "pleaseEnterName": "Veuillez entrer le nom",
+  "pleaseEnterAge": "Veuillez entrer l'âge",
+  "ageMustBe2Digits": "L'âge doit contenir 1 ou 2 chiffres",
+  "optional": "(Facultatif)",
+  "bilateralBothHands": "Utilisation bilatérale des deux mains"
 }

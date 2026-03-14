@@ -6239,6 +6239,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Initializing...'**
   String get initializing;
+
+  /// No description provided for @nameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Name:'**
+  String get nameLabel;
+
+  /// No description provided for @ageLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Age:'**
+  String get ageLabel;
+
+  /// No description provided for @typeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Type:'**
+  String get typeLabel;
+
+  /// No description provided for @pleaseEnterName.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter name'**
+  String get pleaseEnterName;
+
+  /// No description provided for @pleaseEnterAge.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter age'**
+  String get pleaseEnterAge;
+
+  /// No description provided for @ageMustBe2Digits.
+  ///
+  /// In en, this message translates to:
+  /// **'Age must contain 1 or 2 digits'**
+  String get ageMustBe2Digits;
+
+  /// No description provided for @optional.
+  ///
+  /// In en, this message translates to:
+  /// **'(Optional)'**
+  String get optional;
+
+  /// No description provided for @bilateralBothHands.
+  ///
+  /// In en, this message translates to:
+  /// **'Bilateral use of both hands'**
+  String get bilateralBothHands;
 }
 
 class _AppLocalizationsDelegate

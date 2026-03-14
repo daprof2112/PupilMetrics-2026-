@@ -3292,4 +3292,28 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get initializing => '初期化中...';
+
+  @override
+  String get nameLabel => '名前：';
+
+  @override
+  String get ageLabel => '年齢：';
+
+  @override
+  String get typeLabel => 'タイプ：';
+
+  @override
+  String get pleaseEnterName => '名前を入力してください';
+
+  @override
+  String get pleaseEnterAge => '年齢を入力してください';
+
+  @override
+  String get ageMustBe2Digits => '年齢は1桁または2桁である必要があります';
+
+  @override
+  String get optional => '（任意）';
+
+  @override
+  String get bilateralBothHands => '両手の両側使用';
 }

@@ -1,5 +1,6 @@
 import 'package:ai_eye_capture/constant/assets.dart';
 import 'package:ai_eye_capture/constant/color.dart';
+import 'package:ai_eye_capture/l10n/app_localizations.dart';
 import 'package:ai_eye_capture/main.dart';
 import 'package:ai_eye_capture/presentation/widgets/AppTextField.dart';
 import 'package:ai_eye_capture/presentation/widgets/primary_button.dart';
@@ -17,20 +18,16 @@ class PersonalInfo extends StatefulWidget {
 
 class _PersonalInfoState extends State<PersonalInfo> {
   String? _selectGender = '';
+
+  // Laterality stored as an index so it stays language-agnostic internally.
+  // Index 0 = Right-handed (default)
+  int _lateralityIndex = 0;
+
   bool consecutiveNewlines = false;
   final TextEditingController complaintsController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _ageController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
-
-  List<String> lateralitylist = <String>[
-    "Right-handed",
-    "Left-handed",
-    "Partial Left-handedness",
-    "Retrained Left-handedness",
-    "Bilateral use of both hands"
-  ];
-  String laterality = "Right-handed";
 
   late FocusNode _focusNode;
   final FocusNode _focus = FocusNode();
@@ -51,7 +48,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
     _focus.dispose();
     _nameController.dispose();
     _ageController.dispose();
-    // _phoneController.dispose();
+    complaintsController.dispose();
     super.dispose();
   }
 
@@ -59,33 +56,52 @@ class _PersonalInfoState extends State<PersonalInfo> {
     setState(() {});
   }
 
-  /// send email to eye analyst
+  List<String> _getLateralityList(AppLocalizations l10n) => [
+    l10n.rightHanded,
+    l10n.leftHanded,
+    l10n.partialLeftHandedness,
+    l10n.retrainedLeftHandedness,
+    l10n.bilateralBothHands,
+  ];
+
+  // English labels used in the email body so the recipient always gets English.
+  static const List<String> _lateralityEnglish = [
+    'Right-handed',
+    'Left-handed',
+    'Partial Left-handedness',
+    'Retrained Left-handedness',
+    'Bilateral use of both hands',
+  ];
+
+  /// Send email to eye analyst
   Future<bool> sendEmail() async {
     try {
-      final Email sendEmail = Email(
+      final Email email = Email(
         body: 'Personal Information\n'
             'Name:  ${_nameController.text.trim()}\n'
             'Age:  ${_ageController.text.trim()}\n'
             'Sex:  $_selectGender\n'
-            'Laterality:  $laterality\n'
+            'Laterality:  ${_lateralityEnglish[_lateralityIndex]}\n'
             'Complaints: \n${complaintsController.text.trim()}\n'
             '\nFirst is right eye image and second is left eye image.\n',
         subject: 'Eye Analysis',
         recipients: ['analysis@cnri.edu'],
-        // cc: ['example_cc@ex.com'],
-        // bcc: ['example_bcc@ex.com'],
         attachmentPaths: [rightEyePic!, leftEyePic!],
         isHTML: false,
       );
-      await FlutterEmailSender.send(sendEmail);
+      await FlutterEmailSender.send(email);
       return true;
     } catch (e) {
+      debugPrint('[PersonalInfo] sendEmail failed: $e');
       return false;
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final lateralityList = _getLateralityList(l10n);
+
     return Scaffold(
       body: SingleChildScrollView(
         padding: EdgeInsets.only(
@@ -98,24 +114,15 @@ class _PersonalInfoState extends State<PersonalInfo> {
             children: [
               Positioned(
                   right: 0,
-                  child: Image.asset(
-                    Assets.bg1,
-                    scale: 5,
-                  )),
+                  child: Image.asset(Assets.bg1, scale: 5)),
               Positioned(
                   bottom: 0,
                   left: 0,
-                  child: Image.asset(
-                    Assets.bg2,
-                    scale: 5,
-                  )),
+                  child: Image.asset(Assets.bg2, scale: 5)),
               Positioned(
                   bottom: 5,
                   right: 10,
-                  child: Image.asset(
-                    Assets.bg3,
-                    scale: 5,
-                  )),
+                  child: Image.asset(Assets.bg3, scale: 5)),
               SingleChildScrollView(
                 child: Padding(
                   padding: EdgeInsets.symmetric(
@@ -125,19 +132,14 @@ class _PersonalInfoState extends State<PersonalInfo> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
-                          height: getProportionateHeight(78),
-                        ),
+                        SizedBox(height: getProportionateHeight(78)),
                         Row(
                           children: [
                             InkWell(
-                              onTap: () {
-                                Navigator.pop(context);
-                              },
+                              onTap: () => Navigator.pop(context),
                               child: Container(
                                 decoration: BoxDecoration(
-                                  border:
-                                      Border.all(color: AppColor.primaryColor),
+                                  border: Border.all(color: AppColor.primaryColor),
                                   borderRadius: BorderRadius.circular(5),
                                 ),
                                 child: const Padding(
@@ -150,12 +152,10 @@ class _PersonalInfoState extends State<PersonalInfo> {
                                 ),
                               ),
                             ),
-                            const SizedBox(
-                              width: 16,
-                            ),
-                            const Text(
-                              'Personal Info',
-                              style: TextStyle(
+                            const SizedBox(width: 16),
+                            Text(
+                              l10n.personalInfo,
+                              style: const TextStyle(
                                 fontSize: 26,
                                 fontWeight: FontWeight.w700,
                                 color: AppColor.primaryColor,
@@ -164,151 +164,131 @@ class _PersonalInfoState extends State<PersonalInfo> {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: getProportionateHeight(36),
-                        ),
-                        const Text(
-                          'Name:',
-                          style: TextStyle(
+                        SizedBox(height: getProportionateHeight(36)),
+
+                        // ── Name ──────────────────────────────────────────
+                        Text(
+                          l10n.nameLabel,
+                          style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
                               color: Color(0xff606060),
                               fontFamily: 'Manrope'),
                         ),
-                        SizedBox(
-                          height: getProportionateHeight(6),
-                        ),
+                        SizedBox(height: getProportionateHeight(6)),
                         AppTextField(
-                          hint: "Johan Doe",
+                          hint: l10n.enterPersonName,
                           style: const TextStyle(color: AppColor.primaryColor),
                           controller: _nameController,
                           borderColor: AppColor.primaryColor,
                           cursorColor: AppColor.primaryColor,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return 'Please enter name';
+                              return l10n.pleaseEnterName;
                             }
                             return null;
                           },
                         ),
-                        SizedBox(
-                          height: getProportionateHeight(24),
-                        ),
+                        SizedBox(height: getProportionateHeight(24)),
+
+                        // ── Age + Laterality ──────────────────────────────
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Expanded(
-                                child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  'Age:',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600,
-                                      color: Color(0xff606060),
-                                      fontFamily: 'Manrope'),
-                                ),
-                                SizedBox(
-                                  height: getProportionateHeight(6),
-                                ),
-                                AppTextField(
-                                  style: const TextStyle(
-                                      color: AppColor.primaryColor),
-                                  inputType: TextInputType.number,
-                                  hint: "23",
-                                  borderColor: AppColor.primaryColor,
-                                  cursorColor: AppColor.primaryColor,
-                                  controller: _ageController,
-                                  validator: (value) {
-                                    if (value == null || value.isEmpty) {
-                                      return 'Please enter age';
-                                    } else if (value.length > 2) {
-                                      return 'Age must contain 2 or 1 digit';
-                                    }
-                                    return null;
-                                  },
-                                ),
-                              ],
-                            )),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                            Expanded(
-                                child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  'Type:',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600,
-                                      color: Color(0xff606060),
-                                      fontFamily: 'Manrope'),
-                                ),
-                                SizedBox(
-                                  height: getProportionateHeight(6),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                    color: Colors.white,
-                                    border: Border.all(
-                                      color: _focusNode.hasFocus
-                                          ? AppColor.primaryColor
-                                          : Colors.grey,
-                                    ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    l10n.ageLabel,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w600,
+                                        color: Color(0xff606060),
+                                        fontFamily: 'Manrope'),
                                   ),
-                                  child: DropdownButton<String>(
-                                    focusNode: _focusNode,
-                                    value: laterality,
-                                    hint: Text(
-                                      laterality,
-                                      style: const TextStyle(
-                                        color: Colors.grey,
-                                        // Change the color of the hint text here
-                                        fontSize: 14,
+                                  SizedBox(height: getProportionateHeight(6)),
+                                  AppTextField(
+                                    style: const TextStyle(
+                                        color: AppColor.primaryColor),
+                                    inputType: TextInputType.number,
+                                    hint: "23",
+                                    borderColor: AppColor.primaryColor,
+                                    cursorColor: AppColor.primaryColor,
+                                    controller: _ageController,
+                                    validator: (value) {
+                                      if (value == null || value.isEmpty) {
+                                        return l10n.pleaseEnterAge;
+                                      } else if (value.length > 2) {
+                                        return l10n.ageMustBe2Digits;
+                                      }
+                                      return null;
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(width: 15),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    l10n.typeLabel,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w600,
+                                        color: Color(0xff606060),
+                                        fontFamily: 'Manrope'),
+                                  ),
+                                  SizedBox(height: getProportionateHeight(6)),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      color: Colors.white,
+                                      border: Border.all(
+                                        color: _focusNode.hasFocus
+                                            ? AppColor.primaryColor
+                                            : Colors.grey,
                                       ),
                                     ),
-
-                                    onChanged: (String? newValue) {
-                                      setState(() {
-                                        laterality = newValue!;
-                                      });
-                                    },
-                                    isExpanded: true,
-                                    underline: Container(),
-                                    // This removes the underline
-                                    icon: const Icon(
-                                      Icons.keyboard_arrow_down_outlined,
-                                    ),
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 15),
-                                    items: lateralitylist
-                                        .map<DropdownMenuItem<String>>(
-                                            (String value) {
-                                      return DropdownMenuItem<String>(
-                                        value: value,
-                                        child: Text(
-                                          value,
-                                          style: const TextStyle(
-                                              color: AppColor.primaryColor,
-                                              fontSize: 12),
+                                    child: DropdownButton<int>(
+                                      focusNode: _focusNode,
+                                      value: _lateralityIndex,
+                                      onChanged: (int? newIndex) {
+                                        if (newIndex != null) {
+                                          setState(() => _lateralityIndex = newIndex);
+                                        }
+                                      },
+                                      isExpanded: true,
+                                      underline: Container(),
+                                      icon: const Icon(Icons.keyboard_arrow_down_outlined),
+                                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                                      items: List.generate(
+                                        lateralityList.length,
+                                        (i) => DropdownMenuItem<int>(
+                                          value: i,
+                                          child: Text(
+                                            lateralityList[i],
+                                            style: const TextStyle(
+                                                color: AppColor.primaryColor,
+                                                fontSize: 12),
+                                          ),
                                         ),
-                                      );
-                                    }).toList(),
+                                      ),
+                                    ),
                                   ),
-                                )
-                              ],
-                            )),
+                                ],
+                              ),
+                            ),
                           ],
                         ),
-                        SizedBox(
-                          height: getProportionateHeight(24),
-                        ),
-                        const Text(
-                          'Gender:',
-                          style: TextStyle(
+                        SizedBox(height: getProportionateHeight(24)),
+
+                        // ── Gender ────────────────────────────────────────
+                        Text(
+                          l10n.gender,
+                          style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
                               color: Color(0xff606060),
@@ -316,7 +296,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
+                          children: [
                             Row(
                               children: [
                                 Radio<String>(
@@ -324,15 +304,12 @@ class _PersonalInfoState extends State<PersonalInfo> {
                                   value: 'Male',
                                   groupValue: _selectGender,
                                   onChanged: (value) {
-                                    print("gggg");
-                                    setState(() {
-                                      _selectGender = value;
-                                    });
+                                    setState(() => _selectGender = value);
                                   },
                                 ),
-                                const Text(
-                                  'Male',
-                                  style: TextStyle(
+                                Text(
+                                  l10n.male,
+                                  style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       color: Color(0xff344054),
@@ -340,9 +317,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                                 ),
                               ],
                             ),
-                            const SizedBox(
-                              width: 40,
-                            ),
+                            const SizedBox(width: 40),
                             Row(
                               children: [
                                 Radio<String>(
@@ -350,14 +325,12 @@ class _PersonalInfoState extends State<PersonalInfo> {
                                   value: 'Female',
                                   groupValue: _selectGender,
                                   onChanged: (value) {
-                                    setState(() {
-                                      _selectGender = value;
-                                    });
+                                    setState(() => _selectGender = value);
                                   },
                                 ),
-                                const Text(
-                                  'Female',
-                                  style: TextStyle(
+                                Text(
+                                  l10n.female,
+                                  style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       color: Color(0xff344054),
@@ -367,22 +340,22 @@ class _PersonalInfoState extends State<PersonalInfo> {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: getProportionateHeight(24),
-                        ),
-                        const Row(
+                        SizedBox(height: getProportionateHeight(24)),
+
+                        // ── Main Complaints ───────────────────────────────
+                        Row(
                           children: [
                             Text(
-                              'Main Complaints',
-                              style: TextStyle(
+                              l10n.mainComplaints,
+                              style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w600,
                                   color: Color(0xff606060),
                                   fontFamily: 'Manrope'),
                             ),
                             Text(
-                              ' (Optional)',
-                              style: TextStyle(
+                              ' ${l10n.optional}',
+                              style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w600,
                                   color: Color(0xff248479),
@@ -390,9 +363,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: getProportionateHeight(6),
-                        ),
+                        SizedBox(height: getProportionateHeight(6)),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8),
                           child: Container(
@@ -410,24 +381,18 @@ class _PersonalInfoState extends State<PersonalInfo> {
                               constraints: BoxConstraints(
                                 minWidth: MediaQuery.of(context).size.width,
                                 maxWidth: MediaQuery.of(context).size.width,
-                                minHeight:
-                                    MediaQuery.of(context).size.height * 0.12,
-                                maxHeight:
-                                    MediaQuery.of(context).size.height * 0.2,
+                                minHeight: MediaQuery.of(context).size.height * 0.12,
+                                maxHeight: MediaQuery.of(context).size.height * 0.2,
                               ),
                               child: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 8),
+                                padding: const EdgeInsets.symmetric(horizontal: 8),
                                 child: TextField(
                                   cursorColor: AppColor.primaryColor,
                                   focusNode: _focus,
                                   controller: complaintsController,
                                   onChanged: (value) {
                                     complaintsController.text = value;
-
-                                    // Handle newline behavior:
                                     if (value.startsWith('\n')) {
-                                      // Prevent new line at the start
                                       value = value.substring(1);
                                       complaintsController.text = value;
                                       complaintsController.selection =
@@ -437,9 +402,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                                     } else if (value.endsWith('\n\n\n')) {
                                       consecutiveNewlines = true;
                                       if (consecutiveNewlines) {
-                                        // Prevent moving to the next line for the third and subsequent newlines
-                                        value = value.substring(
-                                            0, value.length - 1);
+                                        value = value.substring(0, value.length - 1);
                                         complaintsController.text = value;
                                         complaintsController.selection =
                                             TextSelection.fromPosition(
@@ -452,15 +415,14 @@ class _PersonalInfoState extends State<PersonalInfo> {
                                       consecutiveNewlines = false;
                                     }
                                   },
-                                  decoration: const InputDecoration(
+                                  decoration: InputDecoration(
                                       border: InputBorder.none,
-                                      hintText: "Enter",
+                                      hintText: l10n.complaintsHint,
                                       counterText: '',
-                                      hintStyle: TextStyle(color: Colors.grey)),
+                                      hintStyle: const TextStyle(color: Colors.grey)),
                                   enabled: true,
                                   autofocus: false,
-                                  textCapitalization:
-                                      TextCapitalization.sentences,
+                                  textCapitalization: TextCapitalization.sentences,
                                   textAlign: TextAlign.left,
                                   maxLines: null,
                                   textInputAction: TextInputAction.newline,
@@ -469,56 +431,49 @@ class _PersonalInfoState extends State<PersonalInfo> {
                             ),
                           ),
                         ),
-                        SizedBox(
-                          height: getProportionateHeight(50),
-                        ),
+                        SizedBox(height: getProportionateHeight(50)),
+
+                        // ── Submit ────────────────────────────────────────
                         PrimaryButton(
                           splashColor: Colors.transparent,
                           onPressed: () async {
                             if (_formKey.currentState!.validate()) {
                               if (_selectGender!.isEmpty) {
                                 showCustomSnackbar(
-                                    title: 'Error',
-                                    message: 'Please select gender!',
+                                    title: l10n.error,
+                                    message: l10n.pleaseSelectGender,
                                     backgroundColor: Colors.red);
                               } else {
-                                try {
-                                  final result = await sendEmail();
-                                  print("result: $result");
-                                  showDialog(
-                                    context: context,
-                                    builder: (context) => SuccessDialog(
-                                      message:
-                                          'Your application has been successfully submitted.',
-                                      onTap: () {
-                                        Navigator.pop(context);
-                                      },
-                                    ),
-                                  );
-                                } catch (e) {
-                                  /// An error occurred while sending the email
-                                  print("Failed to send email: $e");
-                                }
+                                final result = await sendEmail();
+                                debugPrint('[PersonalInfo] sendEmail result: $result');
+                                if (!mounted) return;
+                                showDialog(
+                                  context: context,
+                                  builder: (context) => SuccessDialog(
+                                    message: l10n.applicationSubmitted,
+                                    onTap: () => Navigator.pop(context),
+                                  ),
+                                );
                               }
                             }
                           },
                           fillColor: AppColor.primaryColor,
                           height: 60,
                           radius: BorderRadius.circular(20),
-                          child: const Text(
-                            'Submit',
-                            style: TextStyle(
+                          child: Text(
+                            l10n.submit,
+                            style: const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.white,
                                 fontFamily: 'Manrope'),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

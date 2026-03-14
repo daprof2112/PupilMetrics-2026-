@@ -1438,5 +1438,13 @@
   "validationChecks": "유효성 검사:",
   "eyeQualityTip": "팁: 좋은 조명을 확보하고 눈을 안정적으로 유지하세요",
   "validatingEye": "눈 유효성 검사 중...",
-  "initializing": "초기화 중..."
+  "initializing": "초기화 중...",
+  "nameLabel": "이름:",
+  "ageLabel": "나이:",
+  "typeLabel": "유형:",
+  "pleaseEnterName": "이름을 입력해 주세요",
+  "pleaseEnterAge": "나이를 입력해 주세요",
+  "ageMustBe2Digits": "나이는 1자리 또는 2자리여야 합니다",
+  "optional": "(선택)",
+  "bilateralBothHands": "양손 양측 사용"
 }

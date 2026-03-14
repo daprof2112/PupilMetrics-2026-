@@ -3409,4 +3409,28 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get initializing => 'Inicializando...';
+
+  @override
+  String get nameLabel => 'Nombre:';
+
+  @override
+  String get ageLabel => 'Edad:';
+
+  @override
+  String get typeLabel => 'Tipo:';
+
+  @override
+  String get pleaseEnterName => 'Por favor ingresa el nombre';
+
+  @override
+  String get pleaseEnterAge => 'Por favor ingresa la edad';
+
+  @override
+  String get ageMustBe2Digits => 'La edad debe tener 1 o 2 dígitos';
+
+  @override
+  String get optional => '(Opcional)';
+
+  @override
+  String get bilateralBothHands => 'Uso bilateral de ambas manos';
 }
