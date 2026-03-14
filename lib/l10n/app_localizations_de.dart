@@ -3434,4 +3434,21 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get zoomSliderTip =>
       'Verwenden Sie den Zoom-Schieberegler rechts, um die Vergrößerung vor der Aufnahme anzupassen.';
+
+  @override
+  String get aboutProgramDeveloper =>
+      'Programmentwickler - Bryan K. Marcia, Ph.D.';
+
+  @override
+  String get chartSizeTooltip => 'Diagrammgröße';
+
+  @override
+  String get chartOpacityAdvancedTooltip =>
+      'Diagramm-Deckkraft (0 = nur Hover / Organmodus)';
+
+  @override
+  String get anwLabel => 'ANW';
+
+  @override
+  String get doneAndGoBack => 'Fertig & Zurück';
 }

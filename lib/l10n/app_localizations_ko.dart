@@ -3328,4 +3328,19 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get zoomSliderTip => '녹화 전에 오른쪽 줌 슬라이더를 사용하여 배율을 조정하세요.';
+
+  @override
+  String get aboutProgramDeveloper => '프로그램 개발자 - Bryan K. Marcia, Ph.D.';
+
+  @override
+  String get chartSizeTooltip => '차트 크기';
+
+  @override
+  String get chartOpacityAdvancedTooltip => '차트 불투명도 (0 = 호버 전용 / 장기 모드)';
+
+  @override
+  String get anwLabel => 'ANW';
+
+  @override
+  String get doneAndGoBack => '완료 및 뒤로';
 }

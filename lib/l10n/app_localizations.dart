@@ -6299,6 +6299,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Use the zoom slider on the right to adjust magnification before recording.'**
   String get zoomSliderTip;
+
+  /// No description provided for @aboutProgramDeveloper.
+  ///
+  /// In en, this message translates to:
+  /// **'Program Developer - Bryan K. Marcia, Ph.D.'**
+  String get aboutProgramDeveloper;
+
+  /// No description provided for @chartSizeTooltip.
+  ///
+  /// In en, this message translates to:
+  /// **'Chart size'**
+  String get chartSizeTooltip;
+
+  /// No description provided for @chartOpacityAdvancedTooltip.
+  ///
+  /// In en, this message translates to:
+  /// **'Chart opacity (0 = hover-only / Organs mode)'**
+  String get chartOpacityAdvancedTooltip;
+
+  /// No description provided for @anwLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'ANW'**
+  String get anwLabel;
+
+  /// No description provided for @doneAndGoBack.
+  ///
+  /// In en, this message translates to:
+  /// **'Done & Go Back'**
+  String get doneAndGoBack;
 }
 
 class _AppLocalizationsDelegate

@@ -1895,5 +1895,10 @@
   "optional": "(Optional)",
   "bilateralBothHands": "Bilateral use of both hands",
   "zoom": "Zoom",
-  "zoomSliderTip": "Use the zoom slider on the right to adjust magnification before recording."
+  "zoomSliderTip": "Use the zoom slider on the right to adjust magnification before recording.",
+  "aboutProgramDeveloper": "Program Developer - Bryan K. Marcia, Ph.D.",
+  "chartSizeTooltip": "Chart size",
+  "chartOpacityAdvancedTooltip": "Chart opacity (0 = hover-only / Organs mode)",
+  "anwLabel": "ANW",
+  "doneAndGoBack": "Done & Go Back"
 }

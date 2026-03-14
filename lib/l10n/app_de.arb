@@ -1377,5 +1377,10 @@
   "optional": "(Optional)",
   "bilateralBothHands": "Beidseitiger Gebrauch beider Hände",
   "zoom": "Zoom",
-  "zoomSliderTip": "Verwenden Sie den Zoom-Schieberegler rechts, um die Vergrößerung vor der Aufnahme anzupassen."
+  "zoomSliderTip": "Verwenden Sie den Zoom-Schieberegler rechts, um die Vergrößerung vor der Aufnahme anzupassen.",
+  "aboutProgramDeveloper": "Programmentwickler - Bryan K. Marcia, Ph.D.",
+  "chartSizeTooltip": "Diagrammgröße",
+  "chartOpacityAdvancedTooltip": "Diagramm-Deckkraft (0 = nur Hover / Organmodus)",
+  "anwLabel": "ANW",
+  "doneAndGoBack": "Fertig & Zurück"
 }

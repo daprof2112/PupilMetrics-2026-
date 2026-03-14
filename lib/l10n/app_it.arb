@@ -1448,5 +1448,10 @@
   "optional": "(Facoltativo)",
   "bilateralBothHands": "Uso bilaterale di entrambe le mani",
   "zoom": "Zoom",
-  "zoomSliderTip": "Usa il cursore dello zoom a destra per regolare l'ingrandimento prima della registrazione."
+  "zoomSliderTip": "Usa il cursore dello zoom a destra per regolare l'ingrandimento prima della registrazione.",
+  "aboutProgramDeveloper": "Sviluppatore del Programma - Bryan K. Marcia, Ph.D.",
+  "chartSizeTooltip": "Dimensione del grafico",
+  "chartOpacityAdvancedTooltip": "Opacità del grafico (0 = solo hover / Modalità organi)",
+  "anwLabel": "ANW",
+  "doneAndGoBack": "Fatto e torna indietro"
 }

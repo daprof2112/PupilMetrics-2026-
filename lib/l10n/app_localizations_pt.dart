@@ -3435,6 +3435,23 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get zoomSliderTip =>
       'Use o controle deslizante de zoom à direita para ajustar a ampliação antes de gravar.';
+
+  @override
+  String get aboutProgramDeveloper =>
+      'Desenvolvedor do Programa - Bryan K. Marcia, Ph.D.';
+
+  @override
+  String get chartSizeTooltip => 'Tamanho do gráfico';
+
+  @override
+  String get chartOpacityAdvancedTooltip =>
+      'Opacidade do gráfico (0 = somente hover / Modo órgãos)';
+
+  @override
+  String get anwLabel => 'ANW';
+
+  @override
+  String get doneAndGoBack => 'Concluído e voltar';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -6807,4 +6824,21 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   @override
   String get zoomSliderTip =>
       'Use o controle deslizante de zoom à direita para ajustar a ampliação antes de gravar.';
+
+  @override
+  String get aboutProgramDeveloper =>
+      'Desenvolvedor do Programa - Bryan K. Marcia, Ph.D.';
+
+  @override
+  String get chartSizeTooltip => 'Tamanho do gráfico';
+
+  @override
+  String get chartOpacityAdvancedTooltip =>
+      'Opacidade do gráfico (0 = somente hover / Modo órgãos)';
+
+  @override
+  String get anwLabel => 'ANW';
+
+  @override
+  String get doneAndGoBack => 'Concluído e voltar';
 }

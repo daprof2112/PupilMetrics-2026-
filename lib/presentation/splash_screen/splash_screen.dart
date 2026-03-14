@@ -72,6 +72,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       backgroundColor: const Color(0xFF0A0E21),
       body: Center(
@@ -103,9 +104,9 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                       child: const Icon(Icons.remove_red_eye, size: 70, color: Color(0xFF00D9FF)),
                     ),
                     const SizedBox(height: 40),
-                    const Text(
-                      'PupilMetrics',
-                      style: TextStyle(
+                    Text(
+                      l10n.appTitle,
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 28,
                         fontWeight: FontWeight.bold,
@@ -113,9 +114,9 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                       ),
                     ),
                     const SizedBox(height: 12),
-                    const Text(
-                      'Program Developer - Bryan K. Marcia, Ph.D.',
-                      style: TextStyle(color: Colors.white54, fontSize: 16),
+                    Text(
+                      l10n.aboutProgramDeveloper,
+                      style: const TextStyle(color: Colors.white54, fontSize: 16),
                     ),
                     const SizedBox(height: 60),
                     const SizedBox(

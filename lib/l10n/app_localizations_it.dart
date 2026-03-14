@@ -3436,4 +3436,21 @@ class AppLocalizationsIt extends AppLocalizations {
   @override
   String get zoomSliderTip =>
       'Usa il cursore dello zoom a destra per regolare l\'ingrandimento prima della registrazione.';
+
+  @override
+  String get aboutProgramDeveloper =>
+      'Sviluppatore del Programma - Bryan K. Marcia, Ph.D.';
+
+  @override
+  String get chartSizeTooltip => 'Dimensione del grafico';
+
+  @override
+  String get chartOpacityAdvancedTooltip =>
+      'Opacità del grafico (0 = solo hover / Modalità organi)';
+
+  @override
+  String get anwLabel => 'ANW';
+
+  @override
+  String get doneAndGoBack => 'Fatto e torna indietro';
 }

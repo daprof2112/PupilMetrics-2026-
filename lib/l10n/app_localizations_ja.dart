@@ -3322,4 +3322,19 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get zoomSliderTip => '録画前に右側のズームスライダーで倍率を調整してください。';
+
+  @override
+  String get aboutProgramDeveloper => 'プログラム開発者 - Bryan K. Marcia, Ph.D.';
+
+  @override
+  String get chartSizeTooltip => 'チャートサイズ';
+
+  @override
+  String get chartOpacityAdvancedTooltip => 'チャート不透明度（0 = ホバーのみ / 臓器モード）';
+
+  @override
+  String get anwLabel => 'ANW';
+
+  @override
+  String get doneAndGoBack => '完了して戻る';
 }

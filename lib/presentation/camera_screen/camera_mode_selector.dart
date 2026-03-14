@@ -319,7 +319,7 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
             const Divider(color: Colors.grey),
             Text(
               _hasExternalCamera
-                  ? '✓ ${l10n.externalCamera} ${l10n.detected.toLowerCase()}'
+                  ? '${l10n.externalCamera} ${l10n.detected.toLowerCase()}'
                   : l10n.noExternalCameraDetected,
               style: TextStyle(
                 color: _hasExternalCamera ? Colors.green : Colors.grey[500],
@@ -858,7 +858,7 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
       final galleryDir = await _getGalleryImagesDirectory();
       final timestamp = DateTime.now().millisecondsSinceEpoch;
 
-      scaffoldMessenger.showSnackBar(SnackBar(content: Text('📷 ${l10n.selectRightEyeFirst}'), backgroundColor: Colors.green, duration: const Duration(seconds: 2)));
+      scaffoldMessenger.showSnackBar(SnackBar(content: Text(l10n.selectRightEyeFirst), backgroundColor: Colors.green, duration: const Duration(seconds: 2)));
       await Future.delayed(const Duration(milliseconds: 500));
 
       final XFile? rightImage = await picker.pickImage(source: ImageSource.gallery, imageQuality: 100);
@@ -870,7 +870,7 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
       final rightFile = File('${galleryDir.path}/gallery_right_$timestamp.jpg');
       await rightFile.writeAsBytes(await rightImage.readAsBytes());
 
-      scaffoldMessenger.showSnackBar(SnackBar(content: Text('✓ ${l10n.rightEyeSaved}'), backgroundColor: Colors.blue, duration: const Duration(seconds: 2)));
+      scaffoldMessenger.showSnackBar(SnackBar(content: Text(l10n.rightEyeSaved), backgroundColor: Colors.blue, duration: const Duration(seconds: 2)));
       await Future.delayed(const Duration(milliseconds: 500));
 
       final XFile? leftImage = await picker.pickImage(source: ImageSource.gallery, imageQuality: 100);

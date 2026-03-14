@@ -1407,5 +1407,10 @@
   "optional": "（任意）",
   "bilateralBothHands": "両手の両側使用",
   "zoom": "ズーム",
-  "zoomSliderTip": "録画前に右側のズームスライダーで倍率を調整してください。"
+  "zoomSliderTip": "録画前に右側のズームスライダーで倍率を調整してください。",
+  "aboutProgramDeveloper": "プログラム開発者 - Bryan K. Marcia, Ph.D.",
+  "chartSizeTooltip": "チャートサイズ",
+  "chartOpacityAdvancedTooltip": "チャート不透明度（0 = ホバーのみ / 臓器モード）",
+  "anwLabel": "ANW",
+  "doneAndGoBack": "完了して戻る"
 }

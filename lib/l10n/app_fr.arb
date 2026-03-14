@@ -1406,5 +1406,10 @@
   "optional": "(Facultatif)",
   "bilateralBothHands": "Utilisation bilatérale des deux mains",
   "zoom": "Zoom",
-  "zoomSliderTip": "Utilisez le curseur de zoom à droite pour ajuster le grossissement avant l'enregistrement."
+  "zoomSliderTip": "Utilisez le curseur de zoom à droite pour ajuster le grossissement avant l'enregistrement.",
+  "aboutProgramDeveloper": "Développeur du Programme - Bryan K. Marcia, Ph.D.",
+  "chartSizeTooltip": "Taille du graphique",
+  "chartOpacityAdvancedTooltip": "Opacité du graphique (0 = survol uniquement / Mode organes)",
+  "anwLabel": "ANW",
+  "doneAndGoBack": "Terminer et retour"
 }

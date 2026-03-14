@@ -1194,7 +1194,7 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r, {required bool is
                     if (showChart) ...[
                       // Size slider (expanded max to 3.0 for larger screens)
                       const SizedBox(width: 4),
-                      const Tooltip(message: 'Chart size', child: Icon(Icons.zoom_out, color: Colors.white38, size: 14)),
+                      Tooltip(message: l10n.chartSizeTooltip, child: const Icon(Icons.zoom_out, color: Colors.white38, size: 14)),
                       SizedBox(
                         width: 90,
                         child: Slider(
@@ -1203,10 +1203,10 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r, {required bool is
                           onChanged: (v) => setLocalState(() => scaleAdjust = v),
                         ),
                       ),
-                      const Tooltip(message: 'Chart size', child: Icon(Icons.zoom_in, color: Colors.white38, size: 14)),
+                      Tooltip(message: l10n.chartSizeTooltip, child: const Icon(Icons.zoom_in, color: Colors.white38, size: 14)),
                       const SizedBox(width: 8),
                       // Opacity slider
-                      const Tooltip(message: 'Chart opacity (0 = hover-only / Organs mode)', child: Icon(Icons.visibility_off, color: Colors.white38, size: 14)),
+                      Tooltip(message: l10n.chartOpacityAdvancedTooltip, child: const Icon(Icons.visibility_off, color: Colors.white38, size: 14)),
                       SizedBox(
                         width: 90,
                         child: Slider(
@@ -1224,7 +1224,7 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r, {required bool is
                       SizedBox(width: 60, child: Slider(value: irisLimbusScale, min: 0.5, max: 2.0, divisions: 30, activeColor: const Color(0xFF00D9FF), inactiveColor: Colors.white12, onChanged: (v) => setLocalState(() => irisLimbusScale = v))),
                       Text(l10n.pupil, style: const TextStyle(color: Colors.greenAccent, fontSize: 10)),
                       SizedBox(width: 60, child: Slider(value: pupilRingScale, min: 0.5, max: 2.0, divisions: 30, activeColor: Colors.greenAccent, inactiveColor: Colors.white12, onChanged: (v) => setLocalState(() => pupilRingScale = v))),
-                      const Text('ANW', style: TextStyle(color: Colors.orangeAccent, fontSize: 10)),
+                      Text(l10n.anwLabel, style: const TextStyle(color: Colors.orangeAccent, fontSize: 10)),
                       SizedBox(width: 60, child: Slider(value: anwRingScale, min: 0.5, max: 2.5, divisions: 40, activeColor: Colors.orangeAccent, inactiveColor: Colors.white12, onChanged: (v) => setLocalState(() => anwRingScale = v))),
                     ],
 

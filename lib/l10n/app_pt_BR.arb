@@ -1406,5 +1406,10 @@
   "optional": "(Opcional)",
   "bilateralBothHands": "Uso bilateral de ambas as mãos",
   "zoom": "Zoom",
-  "zoomSliderTip": "Use o controle deslizante de zoom à direita para ajustar a ampliação antes de gravar."
+  "zoomSliderTip": "Use o controle deslizante de zoom à direita para ajustar a ampliação antes de gravar.",
+  "aboutProgramDeveloper": "Desenvolvedor do Programa - Bryan K. Marcia, Ph.D.",
+  "chartSizeTooltip": "Tamanho do gráfico",
+  "chartOpacityAdvancedTooltip": "Opacidade do gráfico (0 = somente hover / Modo órgãos)",
+  "anwLabel": "ANW",
+  "doneAndGoBack": "Concluído e voltar"
 }
