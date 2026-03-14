@@ -1421,5 +1421,22 @@
   "reportRefPiRatio": "동공/홍채 비율: 정상 20-30%",
   "reportRefEllipseness": "타원도: 정상 >95%",
   "reportRefDecentralization": "탈중심화: 정상 <5%",
-  "reportRefPupilSizeDiff": "동공 크기 차이: <2% 정상, 2-4% 경미, >4% 유의"
+  "reportRefPupilSizeDiff": "동공 크기 차이: <2% 정상, 2-4% 경미, >4% 유의",
+  "enterPatientInfoAnalysis": "환자 정보 입력 → 분석",
+  "chooseCaptureMethod": "캡처 방법 선택:",
+  "usbCamera": "USB 카메라",
+  "selectExistingImage": "기존 이미지 선택",
+  "detectingCameras": "카메라 감지 중...",
+  "retryDetection": "감지 재시도",
+  "connectUvcCameraViaUsb": "USB로 UVC 카메라 연결",
+  "ensureCameraDriversInstalled": "카메라 드라이버가 설치되어 있는지 확인",
+  "tapRefreshToDetect": "새로 고침을 눌러 카메라 감지",
+  "connectUsbCameraToBegin": "USB 카메라를 연결하여 시작",
+  "noExternalCameraTitle": "외부 카메라가 감지되지 않음",
+  "connectUsbIriscopeEnsurePlugged": "USB 홍채경을 연결하고 꽂혀 있는지 확인하세요",
+  "languagesAvailable": "사용 가능한 언어",
+  "validationChecks": "유효성 검사:",
+  "eyeQualityTip": "팁: 좋은 조명을 확보하고 눈을 안정적으로 유지하세요",
+  "validatingEye": "눈 유효성 검사 중...",
+  "initializing": "초기화 중..."
 }

@@ -6137,6 +6137,108 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Pupil Size Diff: <2% Normal, 2-4% Mild, >4% Significant'**
   String get reportRefPupilSizeDiff;
+
+  /// No description provided for @enterPatientInfoAnalysis.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Patient Info → Analysis'**
+  String get enterPatientInfoAnalysis;
+
+  /// No description provided for @chooseCaptureMethod.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose capture method:'**
+  String get chooseCaptureMethod;
+
+  /// No description provided for @usbCamera.
+  ///
+  /// In en, this message translates to:
+  /// **'USB Camera'**
+  String get usbCamera;
+
+  /// No description provided for @selectExistingImage.
+  ///
+  /// In en, this message translates to:
+  /// **'Select existing image'**
+  String get selectExistingImage;
+
+  /// No description provided for @detectingCameras.
+  ///
+  /// In en, this message translates to:
+  /// **'Detecting cameras...'**
+  String get detectingCameras;
+
+  /// No description provided for @retryDetection.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry Detection'**
+  String get retryDetection;
+
+  /// No description provided for @connectUvcCameraViaUsb.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect UVC camera via USB'**
+  String get connectUvcCameraViaUsb;
+
+  /// No description provided for @ensureCameraDriversInstalled.
+  ///
+  /// In en, this message translates to:
+  /// **'Ensure camera drivers are installed'**
+  String get ensureCameraDriversInstalled;
+
+  /// No description provided for @tapRefreshToDetect.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap Refresh to detect cameras'**
+  String get tapRefreshToDetect;
+
+  /// No description provided for @connectUsbCameraToBegin.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect USB camera to begin'**
+  String get connectUsbCameraToBegin;
+
+  /// No description provided for @noExternalCameraTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No External Camera Detected'**
+  String get noExternalCameraTitle;
+
+  /// No description provided for @connectUsbIriscopeEnsurePlugged.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect your USB iriscope and ensure it is plugged in'**
+  String get connectUsbIriscopeEnsurePlugged;
+
+  /// No description provided for @languagesAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Languages Available'**
+  String get languagesAvailable;
+
+  /// No description provided for @validationChecks.
+  ///
+  /// In en, this message translates to:
+  /// **'Validation Checks:'**
+  String get validationChecks;
+
+  /// No description provided for @eyeQualityTip.
+  ///
+  /// In en, this message translates to:
+  /// **'Tip: Ensure good lighting and keep the eye steady'**
+  String get eyeQualityTip;
+
+  /// No description provided for @validatingEye.
+  ///
+  /// In en, this message translates to:
+  /// **'Validating eye...'**
+  String get validatingEye;
+
+  /// No description provided for @initializing.
+  ///
+  /// In en, this message translates to:
+  /// **'Initializing...'**
+  String get initializing;
 }
 
 class _AppLocalizationsDelegate

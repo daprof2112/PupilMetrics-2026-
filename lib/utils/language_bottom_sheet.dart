@@ -7,70 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:window_manager/window_manager.dart';
 import 'package:ai_eye_capture/utils/language_controller.dart';
-import 'package:window_manager/window_manager.dart';
-
-// =============================================================================
-// LOCALIZED STRINGS - Used for native title bar and snackbar messages
-// =============================================================================
-const Map<String, String> _localizedWindowTitles = {
-  'en': 'PupilMetrics - Research Edition',
-  'es': 'PupilMetrics - Edición de Investigación',
-  'pt': 'PupilMetrics - Edição de Pesquisa',
-  'fr': 'PupilMetrics - Édition Recherche',
-  'de': 'PupilMetrics - Forschungsausgabe',
-  'it': 'PupilMetrics - Edizione Ricerca',
-  'ja': 'PupilMetrics - 研究版',
-  'ko': 'PupilMetrics - 연구용',
-};
-
-const Map<String, String> _localizedLanguageChanged = {
-  'en': 'Language Changed',
-  'es': 'Idioma Cambiado',
-  'pt': 'Idioma Alterado',
-  'fr': 'Langue Modifiée',
-  'de': 'Sprache Geändert',
-  'it': 'Lingua Cambiata',
-  'ja': '言語が変更されました',
-  'ko': '언語가 변경되었습니다',
-};
-
-const Map<String, String> _localizedLanguageSetTo = {
-  'en': 'App language set to',
-  'es': 'Idioma de la aplicación establecido en',
-  'pt': 'Idioma do aplicativo definido para',
-  'fr': 'Langue de l\'application définie sur',
-  'de': 'App-Sprache eingestellt auf',
-  'it': 'Lingua dell\'app impostata su',
-  'ja': 'アプリの言語が設定されました：',
-  'ko': '앱 언어가 설정되었습니다:',
-};
-
-const Map<String, String> _localizedSelectLanguage = {
-  'en': 'Select Language',
-  'es': 'Seleccionar Idioma',
-  'pt': 'Selecionar Idioma',
-  'fr': 'Sélectionner la Langue',
-  'de': 'Sprache Auswählen',
-  'it': 'Seleziona Lingua',
-  'ja': '言語を選択',
-  'ko': '언어 선택',
-};
-
-const Map<String, String> _localizedLanguagesAvailable = {
-  'en': 'languages available',
-  'es': 'idiomas disponibles',
-  'pt': 'idiomas disponíveis',
-  'fr': 'langues disponibles',
-  'de': 'Sprachen verfügbar',
-  'it': 'lingue disponibili',
-  'ja': '言語が利用可能',
-  'ko': '개 언어 사용 가능',
-};
-
-/// Helper to get localized window title
-String getLocalizedWindowTitle(String langCode) {
-  return _localizedWindowTitles[langCode] ?? _localizedWindowTitles['en']!;
-}
+import 'package:ai_eye_capture/l10n/app_localizations.dart';
 
 /// Shows language selector - Dialog on desktop, BottomSheet on mobile
 void showLanguageBottomSheet(BuildContext context) {
@@ -142,18 +79,16 @@ class _LanguageDialogState extends State<_LanguageDialog> {
       // KEY FIX: Update the native Windows/macOS/Linux title bar
       if (Platform.isWindows || Platform.isMacOS || Platform.isLinux) {
         await Future.delayed(const Duration(milliseconds: 200));
-        final newTitle = getLocalizedWindowTitle(language.locale.languageCode);
-        await windowManager.setTitle(newTitle);
+        final loc = lookupAppLocalizations(language.locale);
+        await windowManager.setTitle('${loc.windowTitle} - ${loc.aboutResearchEdition}');
       }
 
       // Show localized snackbar
-      final langCode = language.locale.languageCode;
-      final changedText = _localizedLanguageChanged[langCode] ?? _localizedLanguageChanged['en']!;
-      final setToText = _localizedLanguageSetTo[langCode] ?? _localizedLanguageSetTo['en']!;
+      final loc = lookupAppLocalizations(language.locale);
 
       Get.snackbar(
-        changedText,
-        '$setToText ${language.nativeName}',
+        loc.languageChanged,
+        loc.languageChangedMessage(language.nativeName),
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: const Color(0xFF00D9FF),
         colorText: Colors.black,
@@ -166,9 +101,7 @@ class _LanguageDialogState extends State<_LanguageDialog> {
 
   @override
   Widget build(BuildContext context) {
-    final langCode = _selectedLanguageCode;
-    final selectLangText = _localizedSelectLanguage[langCode] ?? _localizedSelectLanguage['en']!;
-    final availableText = _localizedLanguagesAvailable[langCode] ?? _localizedLanguagesAvailable['en']!;
+    final l10n = AppLocalizations.of(context)!;
 
     return Dialog(
       backgroundColor: Colors.transparent,
@@ -212,10 +145,10 @@ class _LanguageDialogState extends State<_LanguageDialog> {
                       children: [
                         ShaderMask(
                           shaderCallback: (bounds) => const LinearGradient(colors: [Color(0xFF00D9FF), Color(0xFF00FFCC)]).createShader(bounds),
-                          child: Text(selectLangText, style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
+                          child: Text(l10n.languageSelectTitle, style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
                         ),
                         const SizedBox(height: 4),
-                        Text('${widget.languageController.supportedLanguages.length} $availableText',
+                        Text('${widget.languageController.supportedLanguages.length} ${l10n.languagesAvailable}',
                             style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12)),
                       ],
                     ),
@@ -296,9 +229,7 @@ class _LanguageBottomSheetContentState extends State<_LanguageBottomSheetContent
   @override
   Widget build(BuildContext context) {
     final maxHeight = MediaQuery.of(context).size.height * 0.75;
-    final langCode = _selectedLanguageCode;
-    final selectLangText = _localizedSelectLanguage[langCode] ?? _localizedSelectLanguage['en']!;
-    final availableText = _localizedLanguagesAvailable[langCode] ?? _localizedLanguagesAvailable['en']!;
+    final l10n = AppLocalizations.of(context)!;
 
     return Container(
       constraints: BoxConstraints(maxHeight: maxHeight),
@@ -351,10 +282,10 @@ class _LanguageBottomSheetContentState extends State<_LanguageBottomSheetContent
                       children: [
                         ShaderMask(
                           shaderCallback: (bounds) => const LinearGradient(colors: [Color(0xFF00D9FF), Color(0xFF00FFCC)]).createShader(bounds),
-                          child: Text(selectLangText, style: const TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold)),
+                          child: Text(l10n.languageSelectTitle, style: const TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold)),
                         ),
                         const SizedBox(height: 4),
-                        Text('${widget.languageController.supportedLanguages.length} $availableText',
+                        Text('${widget.languageController.supportedLanguages.length} ${l10n.languagesAvailable}',
                             style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 13)),
                       ],
                     ),
@@ -417,18 +348,16 @@ class _LanguageBottomSheetContentState extends State<_LanguageBottomSheetContent
       // KEY FIX: Update native window title bar (only on desktop)
       if (Platform.isWindows || Platform.isMacOS || Platform.isLinux) {
         await Future.delayed(const Duration(milliseconds: 200));
-        final newTitle = getLocalizedWindowTitle(language.locale.languageCode);
-        await windowManager.setTitle(newTitle);
+        final loc = lookupAppLocalizations(language.locale);
+        await windowManager.setTitle('${loc.windowTitle} - ${loc.aboutResearchEdition}');
       }
 
       // Show localized snackbar
-      final langCode = language.locale.languageCode;
-      final changedText = _localizedLanguageChanged[langCode] ?? _localizedLanguageChanged['en']!;
-      final setToText = _localizedLanguageSetTo[langCode] ?? _localizedLanguageSetTo['en']!;
+      final loc = lookupAppLocalizations(language.locale);
 
       Get.snackbar(
-        changedText,
-        '$setToText ${language.nativeName}',
+        loc.languageChanged,
+        loc.languageChangedMessage(language.nativeName),
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: const Color(0xFF00D9FF),
         colorText: Colors.black,

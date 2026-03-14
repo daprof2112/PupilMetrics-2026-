@@ -3350,6 +3350,60 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get reportRefPupilSizeDiff =>
       'Dif. Tamanho Pupila: <2% Normal, 2-4% Leve, >4% Significativo';
+
+  @override
+  String get enterPatientInfoAnalysis => 'Inserir Info do Paciente → Análise';
+
+  @override
+  String get chooseCaptureMethod => 'Escolha o método de captura:';
+
+  @override
+  String get usbCamera => 'Câmera USB';
+
+  @override
+  String get selectExistingImage => 'Selecionar imagem existente';
+
+  @override
+  String get detectingCameras => 'Detectando câmeras...';
+
+  @override
+  String get retryDetection => 'Tentar detecção novamente';
+
+  @override
+  String get connectUvcCameraViaUsb => 'Conecte a câmera UVC via USB';
+
+  @override
+  String get ensureCameraDriversInstalled =>
+      'Certifique-se de que os drivers estão instalados';
+
+  @override
+  String get tapRefreshToDetect => 'Toque em Atualizar para detectar câmeras';
+
+  @override
+  String get connectUsbCameraToBegin => 'Conecte a câmera USB para começar';
+
+  @override
+  String get noExternalCameraTitle => 'Nenhuma câmera externa detectada';
+
+  @override
+  String get connectUsbIriscopeEnsurePlugged =>
+      'Conecte seu iriscópio USB e certifique-se de que está conectado';
+
+  @override
+  String get languagesAvailable => 'Idiomas disponíveis';
+
+  @override
+  String get validationChecks => 'Verificações de validação:';
+
+  @override
+  String get eyeQualityTip =>
+      'Dica: Garanta boa iluminação e mantenha o olho firme';
+
+  @override
+  String get validatingEye => 'Validando olho...';
+
+  @override
+  String get initializing => 'Inicializando...';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -6637,4 +6691,58 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   @override
   String get reportRefPupilSizeDiff =>
       'Dif. Tamanho Pupila: <2% Normal, 2-4% Leve, >4% Significativo';
+
+  @override
+  String get enterPatientInfoAnalysis => 'Inserir Info do Paciente → Análise';
+
+  @override
+  String get chooseCaptureMethod => 'Escolha o método de captura:';
+
+  @override
+  String get usbCamera => 'Câmera USB';
+
+  @override
+  String get selectExistingImage => 'Selecionar imagem existente';
+
+  @override
+  String get detectingCameras => 'Detectando câmeras...';
+
+  @override
+  String get retryDetection => 'Tentar detecção novamente';
+
+  @override
+  String get connectUvcCameraViaUsb => 'Conecte a câmera UVC via USB';
+
+  @override
+  String get ensureCameraDriversInstalled =>
+      'Certifique-se de que os drivers estão instalados';
+
+  @override
+  String get tapRefreshToDetect => 'Toque em Atualizar para detectar câmeras';
+
+  @override
+  String get connectUsbCameraToBegin => 'Conecte a câmera USB para começar';
+
+  @override
+  String get noExternalCameraTitle => 'Nenhuma câmera externa detectada';
+
+  @override
+  String get connectUsbIriscopeEnsurePlugged =>
+      'Conecte seu iriscópio USB e certifique-se de que está conectado';
+
+  @override
+  String get languagesAvailable => 'Idiomas disponíveis';
+
+  @override
+  String get validationChecks => 'Verificações de validação:';
+
+  @override
+  String get eyeQualityTip =>
+      'Dica: Garanta boa iluminação e mantenha o olho firme';
+
+  @override
+  String get validatingEye => 'Validando olho...';
+
+  @override
+  String get initializing => 'Inicializando...';
 }

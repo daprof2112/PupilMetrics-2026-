@@ -252,7 +252,7 @@ class _UnifiedCameraScreenState extends State<UnifiedCameraScreen> {
           // Refresh cameras
           IconButton(
             icon: const Icon(Icons.refresh, color: Colors.white),
-            tooltip: 'Refresh Cameras',
+            tooltip: l10n!.refresh,
             onPressed: _initializeCameras,
           ),
         ],
@@ -277,7 +277,7 @@ class _UnifiedCameraScreenState extends State<UnifiedCameraScreen> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Text(
-                    widget.isRightEye ? 'OD' : 'OS',
+                    widget.isRightEye ? l10n.od : l10n.os,
                     style: TextStyle(
                       color: widget.isRightEye ? Colors.blue : Colors.green,
                       fontWeight: FontWeight.bold,
@@ -344,7 +344,7 @@ class _UnifiedCameraScreenState extends State<UnifiedCameraScreen> {
             const CircularProgressIndicator(color: Colors.teal),
             const SizedBox(height: 16),
             Text(
-              'Detecting cameras...',
+              l10n.detectingCameras,
               style: TextStyle(color: Colors.white.withOpacity(0.7)),
             ),
           ],
@@ -378,11 +378,11 @@ class _UnifiedCameraScreenState extends State<UnifiedCameraScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _buildHelpRow(Icons.usb, 'Connect UVC-compliant camera via USB'),
+                    _buildHelpRow(Icons.usb, l10n.connectUvcCameraViaUsb),
                     const SizedBox(height: 8),
-                    _buildHelpRow(Icons.settings, 'Ensure camera drivers are installed'),
+                    _buildHelpRow(Icons.settings, l10n.ensureCameraDriversInstalled),
                     const SizedBox(height: 8),
-                    _buildHelpRow(Icons.refresh, 'Tap refresh to detect cameras'),
+                    _buildHelpRow(Icons.refresh, l10n.tapRefreshToDetect),
                   ],
                 ),
               ),
@@ -390,7 +390,7 @@ class _UnifiedCameraScreenState extends State<UnifiedCameraScreen> {
               ElevatedButton.icon(
                 onPressed: _initializeCameras,
                 icon: const Icon(Icons.refresh),
-                label: const Text('Retry Detection'),
+                label: Text(l10n.retryDetection),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.teal,
                   foregroundColor: Colors.white,
@@ -453,7 +453,7 @@ class _UnifiedCameraScreenState extends State<UnifiedCameraScreen> {
                 );
               },
               icon: const Icon(Icons.swap_horiz, size: 20),
-              label: Text(widget.isRightEye ? 'OS' : 'OD'),
+              label: Text(widget.isRightEye ? l10n.os : l10n.od),
               style: TextButton.styleFrom(foregroundColor: Colors.white70),
             ),
 

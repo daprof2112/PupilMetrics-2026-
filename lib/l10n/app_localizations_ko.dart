@@ -3247,4 +3247,55 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get reportRefPupilSizeDiff => '동공 크기 차이: <2% 정상, 2-4% 경미, >4% 유의';
+
+  @override
+  String get enterPatientInfoAnalysis => '환자 정보 입력 → 분석';
+
+  @override
+  String get chooseCaptureMethod => '캡처 방법 선택:';
+
+  @override
+  String get usbCamera => 'USB 카메라';
+
+  @override
+  String get selectExistingImage => '기존 이미지 선택';
+
+  @override
+  String get detectingCameras => '카메라 감지 중...';
+
+  @override
+  String get retryDetection => '감지 재시도';
+
+  @override
+  String get connectUvcCameraViaUsb => 'USB로 UVC 카메라 연결';
+
+  @override
+  String get ensureCameraDriversInstalled => '카메라 드라이버가 설치되어 있는지 확인';
+
+  @override
+  String get tapRefreshToDetect => '새로 고침을 눌러 카메라 감지';
+
+  @override
+  String get connectUsbCameraToBegin => 'USB 카메라를 연결하여 시작';
+
+  @override
+  String get noExternalCameraTitle => '외부 카메라가 감지되지 않음';
+
+  @override
+  String get connectUsbIriscopeEnsurePlugged => 'USB 홍채경을 연결하고 꽂혀 있는지 확인하세요';
+
+  @override
+  String get languagesAvailable => '사용 가능한 언어';
+
+  @override
+  String get validationChecks => '유효성 검사:';
+
+  @override
+  String get eyeQualityTip => '팁: 좋은 조명을 확보하고 눈을 안정적으로 유지하세요';
+
+  @override
+  String get validatingEye => '눈 유효성 검사 중...';
+
+  @override
+  String get initializing => '초기화 중...';
 }

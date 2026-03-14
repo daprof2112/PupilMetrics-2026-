@@ -1421,5 +1421,22 @@
   "reportRefPiRatio": "Rapporto Pupilla/Iride: Normale 20-30%",
   "reportRefEllipseness": "Ellitticita: Normale >95%",
   "reportRefDecentralization": "Decentralizzazione: Normale <5%",
-  "reportRefPupilSizeDiff": "Diff. Dimensione Pupilla: <2% Normale, 2-4% Lieve, >4% Significativo"
+  "reportRefPupilSizeDiff": "Diff. Dimensione Pupilla: <2% Normale, 2-4% Lieve, >4% Significativo",
+  "enterPatientInfoAnalysis": "Inserisci Info Paziente → Analisi",
+  "chooseCaptureMethod": "Scegli il metodo di acquisizione:",
+  "usbCamera": "Fotocamera USB",
+  "selectExistingImage": "Seleziona immagine esistente",
+  "detectingCameras": "Rilevamento fotocamere...",
+  "retryDetection": "Riprova rilevamento",
+  "connectUvcCameraViaUsb": "Collega la fotocamera UVC tramite USB",
+  "ensureCameraDriversInstalled": "Assicurarsi che i driver siano installati",
+  "tapRefreshToDetect": "Tocca Aggiorna per rilevare le fotocamere",
+  "connectUsbCameraToBegin": "Collega la fotocamera USB per iniziare",
+  "noExternalCameraTitle": "Nessuna fotocamera esterna rilevata",
+  "connectUsbIriscopeEnsurePlugged": "Collega il tuo iridoscopio USB e assicurati che sia inserito",
+  "languagesAvailable": "Lingue disponibili",
+  "validationChecks": "Controlli di validazione:",
+  "eyeQualityTip": "Suggerimento: Assicura una buona illuminazione e tieni l'occhio fermo",
+  "validatingEye": "Convalida dell'occhio...",
+  "initializing": "Inizializzazione..."
 }

@@ -1128,5 +1128,22 @@
   "reportRefPiRatio": "Relacion Pupila/Iris: Normal 20-30%",
   "reportRefEllipseness": "Elipticidad: Normal >95%",
   "reportRefDecentralization": "Descentralizacion: Normal <5%",
-  "reportRefPupilSizeDiff": "Dif. Tamano Pupila: <2% Normal, 2-4% Leve, >4% Significativo"
+  "reportRefPupilSizeDiff": "Dif. Tamano Pupila: <2% Normal, 2-4% Leve, >4% Significativo",
+  "enterPatientInfoAnalysis": "Ingresar Info del Paciente → Análisis",
+  "chooseCaptureMethod": "Elige el método de captura:",
+  "usbCamera": "Cámara USB",
+  "selectExistingImage": "Seleccionar imagen existente",
+  "detectingCameras": "Detectando cámaras...",
+  "retryDetection": "Reintentar detección",
+  "connectUvcCameraViaUsb": "Conecta la cámara UVC por USB",
+  "ensureCameraDriversInstalled": "Asegúrate de que los controladores estén instalados",
+  "tapRefreshToDetect": "Toca Actualizar para detectar cámaras",
+  "connectUsbCameraToBegin": "Conecta la cámara USB para comenzar",
+  "noExternalCameraTitle": "No se detectó cámara externa",
+  "connectUsbIriscopeEnsurePlugged": "Conecta tu iriscopio USB y asegúrate de que esté enchufado",
+  "languagesAvailable": "Idiomas disponibles",
+  "validationChecks": "Verificaciones de validación:",
+  "eyeQualityTip": "Consejo: Asegura buena iluminación y mantén el ojo estable",
+  "validatingEye": "Validando ojo...",
+  "initializing": "Inicializando..."
 }

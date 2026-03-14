@@ -1380,5 +1380,22 @@
   "reportRefPiRatio": "瞳孔/虹彩比: 正常 20-30%",
   "reportRefEllipseness": "楕円度: 正常 >95%",
   "reportRefDecentralization": "脱中心: 正常 <5%",
-  "reportRefPupilSizeDiff": "瞳孔サイズ差: <2% 正常, 2-4% 軽度, >4% 重要"
+  "reportRefPupilSizeDiff": "瞳孔サイズ差: <2% 正常, 2-4% 軽度, >4% 重要",
+  "enterPatientInfoAnalysis": "患者情報を入力 → 分析",
+  "chooseCaptureMethod": "撮影方法を選択：",
+  "usbCamera": "USBカメラ",
+  "selectExistingImage": "既存の画像を選択",
+  "detectingCameras": "カメラを検出中...",
+  "retryDetection": "検出を再試行",
+  "connectUvcCameraViaUsb": "UVCカメラをUSBで接続",
+  "ensureCameraDriversInstalled": "カメラドライバーがインストールされていることを確認",
+  "tapRefreshToDetect": "更新をタップしてカメラを検出",
+  "connectUsbCameraToBegin": "USBカメラを接続して開始",
+  "noExternalCameraTitle": "外部カメラが検出されません",
+  "connectUsbIriscopeEnsurePlugged": "USBアイリスコープを接続し、接続されていることを確認してください",
+  "languagesAvailable": "利用可能な言語",
+  "validationChecks": "バリデーションチェック：",
+  "eyeQualityTip": "ヒント：適切な照明を確保し、目を安定させてください",
+  "validatingEye": "目を検証中...",
+  "initializing": "初期化中..."
 }

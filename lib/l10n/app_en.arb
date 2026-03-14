@@ -1868,5 +1868,22 @@
   "reportRefPiRatio": "Pupil/Iris Ratio: Normal 20-30%",
   "reportRefEllipseness": "Ellipseness: Normal >95%",
   "reportRefDecentralization": "Decentralization: Normal <5%",
-  "reportRefPupilSizeDiff": "Pupil Size Diff: <2% Normal, 2-4% Mild, >4% Significant"
+  "reportRefPupilSizeDiff": "Pupil Size Diff: <2% Normal, 2-4% Mild, >4% Significant",
+  "enterPatientInfoAnalysis": "Enter Patient Info → Analysis",
+  "chooseCaptureMethod": "Choose capture method:",
+  "usbCamera": "USB Camera",
+  "selectExistingImage": "Select existing image",
+  "detectingCameras": "Detecting cameras...",
+  "retryDetection": "Retry Detection",
+  "connectUvcCameraViaUsb": "Connect UVC camera via USB",
+  "ensureCameraDriversInstalled": "Ensure camera drivers are installed",
+  "tapRefreshToDetect": "Tap Refresh to detect cameras",
+  "connectUsbCameraToBegin": "Connect USB camera to begin",
+  "noExternalCameraTitle": "No External Camera Detected",
+  "connectUsbIriscopeEnsurePlugged": "Connect your USB iriscope and ensure it is plugged in",
+  "languagesAvailable": "Languages Available",
+  "validationChecks": "Validation Checks:",
+  "eyeQualityTip": "Tip: Ensure good lighting and keep the eye steady",
+  "validatingEye": "Validating eye...",
+  "initializing": "Initializing..."
 }

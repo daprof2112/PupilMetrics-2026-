@@ -3240,4 +3240,56 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get reportRefPupilSizeDiff => '瞳孔サイズ差: <2% 正常, 2-4% 軽度, >4% 重要';
+
+  @override
+  String get enterPatientInfoAnalysis => '患者情報を入力 → 分析';
+
+  @override
+  String get chooseCaptureMethod => '撮影方法を選択：';
+
+  @override
+  String get usbCamera => 'USBカメラ';
+
+  @override
+  String get selectExistingImage => '既存の画像を選択';
+
+  @override
+  String get detectingCameras => 'カメラを検出中...';
+
+  @override
+  String get retryDetection => '検出を再試行';
+
+  @override
+  String get connectUvcCameraViaUsb => 'UVCカメラをUSBで接続';
+
+  @override
+  String get ensureCameraDriversInstalled => 'カメラドライバーがインストールされていることを確認';
+
+  @override
+  String get tapRefreshToDetect => '更新をタップしてカメラを検出';
+
+  @override
+  String get connectUsbCameraToBegin => 'USBカメラを接続して開始';
+
+  @override
+  String get noExternalCameraTitle => '外部カメラが検出されません';
+
+  @override
+  String get connectUsbIriscopeEnsurePlugged =>
+      'USBアイリスコープを接続し、接続されていることを確認してください';
+
+  @override
+  String get languagesAvailable => '利用可能な言語';
+
+  @override
+  String get validationChecks => 'バリデーションチェック：';
+
+  @override
+  String get eyeQualityTip => 'ヒント：適切な照明を確保し、目を安定させてください';
+
+  @override
+  String get validatingEye => '目を検証中...';
+
+  @override
+  String get initializing => '初期化中...';
 }

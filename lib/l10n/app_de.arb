@@ -1350,5 +1350,22 @@
   "reportRefPiRatio": "Pupillen/Iris-Verhaeltnis: Normal 20-30%",
   "reportRefEllipseness": "Ellipsizitaet: Normal >95%",
   "reportRefDecentralization": "Dezentralisierung: Normal <5%",
-  "reportRefPupilSizeDiff": "Pupillengroesse Diff.: <2% Normal, 2-4% Mild, >4% Signifikant"
+  "reportRefPupilSizeDiff": "Pupillengroesse Diff.: <2% Normal, 2-4% Mild, >4% Signifikant",
+  "enterPatientInfoAnalysis": "Patienteninfo eingeben → Analyse",
+  "chooseCaptureMethod": "Aufnahmemethode wählen:",
+  "usbCamera": "USB-Kamera",
+  "selectExistingImage": "Vorhandenes Bild auswählen",
+  "detectingCameras": "Kameras werden erkannt...",
+  "retryDetection": "Erkennung erneut versuchen",
+  "connectUvcCameraViaUsb": "UVC-Kamera per USB verbinden",
+  "ensureCameraDriversInstalled": "Sicherstellen, dass Kameratreiber installiert sind",
+  "tapRefreshToDetect": "Auf Aktualisieren tippen, um Kameras zu erkennen",
+  "connectUsbCameraToBegin": "USB-Kamera verbinden, um zu beginnen",
+  "noExternalCameraTitle": "Keine externe Kamera erkannt",
+  "connectUsbIriscopeEnsurePlugged": "USB-Iriskop anschließen und sicherstellen, dass es eingesteckt ist",
+  "languagesAvailable": "Verfügbare Sprachen",
+  "validationChecks": "Validierungsprüfungen:",
+  "eyeQualityTip": "Tipp: Gute Beleuchtung sicherstellen und Auge ruhig halten",
+  "validatingEye": "Auge wird validiert...",
+  "initializing": "Initialisierung..."
 }

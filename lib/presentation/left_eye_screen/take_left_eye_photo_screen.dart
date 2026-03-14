@@ -618,7 +618,7 @@ Padding(
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              'Choose capture method:',
+              l10n!.chooseCaptureMethod,
               style: TextStyle(color: Colors.white70),
             ),
             const SizedBox(height: 20),
@@ -626,8 +626,8 @@ Padding(
             // USB Camera option
             ListTile(
               leading: const Icon(Icons.usb, color: Colors.teal),
-              title: const Text('USB Camera', style: TextStyle(color: Colors.white)),
-              subtitle: Text('Use connected iriscope', style: TextStyle(color: Colors.white54, fontSize: 12)),
+              title: Text(l10n.usbCamera, style: const TextStyle(color: Colors.white)),
+              subtitle: Text(l10n.useConnectedUsbCamera, style: const TextStyle(color: Colors.white54, fontSize: 12)),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
                 side: BorderSide(color: Colors.teal.withOpacity(0.3)),
@@ -648,8 +648,8 @@ Padding(
             // Gallery option
             ListTile(
               leading: const Icon(Icons.photo_library, color: Colors.orange),
-              title: const Text('Load from Gallery', style: TextStyle(color: Colors.white)),
-              subtitle: Text('Select existing image', style: TextStyle(color: Colors.white54, fontSize: 12)),
+              title: Text(l10n.loadFromGallery, style: const TextStyle(color: Colors.white)),
+              subtitle: Text(l10n.selectExistingImage, style: const TextStyle(color: Colors.white54, fontSize: 12)),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
                 side: BorderSide(color: Colors.orange.withOpacity(0.3)),

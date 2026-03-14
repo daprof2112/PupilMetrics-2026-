@@ -221,7 +221,7 @@ class _UvcCameraScreenState extends State<UvcCameraScreen> {
         actions: [
           IconButton(
             icon: const Icon(Icons.info_outline),
-            tooltip: 'Camera Info',
+            tooltip: l10n.usbCameraInfo,
             onPressed: _showDeviceInfo,
           ),
         ],
@@ -293,7 +293,7 @@ class _UvcCameraScreenState extends State<UvcCameraScreen> {
           Expanded(
             child: Text(
               // v5.2.8: Show clean English message
-              _statusMessage ?? 'Connect USB camera to begin',
+              _statusMessage ?? l10n.connectUsbCameraToBegin,
               style: TextStyle(fontSize: 12, color: Colors.grey[400]),
               overflow: TextOverflow.ellipsis,
             ),
@@ -307,7 +307,7 @@ class _UvcCameraScreenState extends State<UvcCameraScreen> {
               borderRadius: BorderRadius.circular(8),
             ),
             child: Text(
-              widget.isRightEye ? 'OD' : 'OS',
+              widget.isRightEye ? l10n.od : l10n.os,
               style: TextStyle(
                 fontSize: 11,
                 color: widget.isRightEye ? Colors.green : Colors.blue,
@@ -393,7 +393,7 @@ class _UvcCameraScreenState extends State<UvcCameraScreen> {
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Text(
-                    widget.isRightEye ? 'Right Eye (OD)' : 'Left Eye (OS)',
+                    widget.isRightEye ? AppLocalizations.of(context)!.rightEyeOD : AppLocalizations.of(context)!.leftEyeOS,
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 14,
@@ -449,9 +449,9 @@ class _UvcCameraScreenState extends State<UvcCameraScreen> {
                     children: [
                       const Icon(Icons.usb, color: Colors.teal, size: 32),
                       const SizedBox(height: 12),
-                      const Text(
-                        'No External Camera Detected',
-                        style: TextStyle(
+                      Text(
+                        AppLocalizations.of(context)!.noExternalCameraTitle,
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
@@ -459,7 +459,7 @@ class _UvcCameraScreenState extends State<UvcCameraScreen> {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        'Connect your USB iriscope or external camera.\nMake sure the device is properly plugged in.',
+                        AppLocalizations.of(context)!.connectUsbIriscopeEnsurePlugged,
                         style: TextStyle(color: Colors.grey[400], fontSize: 12),
                         textAlign: TextAlign.center,
                       ),

@@ -3353,4 +3353,61 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get reportRefPupilSizeDiff =>
       'Diff. Taille Pupille: <2% Normal, 2-4% Leger, >4% Significatif';
+
+  @override
+  String get enterPatientInfoAnalysis =>
+      'Saisir les infos du patient → Analyse';
+
+  @override
+  String get chooseCaptureMethod => 'Choisir la méthode de capture :';
+
+  @override
+  String get usbCamera => 'Caméra USB';
+
+  @override
+  String get selectExistingImage => 'Sélectionner une image existante';
+
+  @override
+  String get detectingCameras => 'Détection des caméras...';
+
+  @override
+  String get retryDetection => 'Réessayer la détection';
+
+  @override
+  String get connectUvcCameraViaUsb => 'Connecter la caméra UVC via USB';
+
+  @override
+  String get ensureCameraDriversInstalled =>
+      'Vérifier que les pilotes sont installés';
+
+  @override
+  String get tapRefreshToDetect =>
+      'Appuyez sur Actualiser pour détecter les caméras';
+
+  @override
+  String get connectUsbCameraToBegin =>
+      'Connecter la caméra USB pour commencer';
+
+  @override
+  String get noExternalCameraTitle => 'Aucune caméra externe détectée';
+
+  @override
+  String get connectUsbIriscopeEnsurePlugged =>
+      'Connectez votre iridoscope USB et assurez-vous qu\'il est branché';
+
+  @override
+  String get languagesAvailable => 'Langues disponibles';
+
+  @override
+  String get validationChecks => 'Vérifications de validation :';
+
+  @override
+  String get eyeQualityTip =>
+      'Conseil : Assurez un bon éclairage et gardez l\'œil stable';
+
+  @override
+  String get validatingEye => 'Validation de l\'œil...';
+
+  @override
+  String get initializing => 'Initialisation...';
 }

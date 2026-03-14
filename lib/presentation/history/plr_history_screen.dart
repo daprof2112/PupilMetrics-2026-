@@ -137,7 +137,7 @@ class _PLRHistoryScreenState extends State<PLRHistoryScreen> {
           _statItem(Icons.videocam, '${_stats!.totalScans}', l10n.plr, Colors.cyan),
           _statItem(Icons.calendar_today, '${_stats!.scansThisWeek}', l10n.thisWeek, Colors.blue),
           _statItem(Icons.check_circle, '${_stats!.detectionRate.toStringAsFixed(0)}%', l10n.detected, Colors.green),
-          _statItem(Icons.trending_up, '${_stats!.avgPlrMagnitude.toStringAsFixed(1)}%', 'Avg PLR', Colors.purple),
+          _statItem(Icons.trending_up, '${_stats!.avgPlrMagnitude.toStringAsFixed(1)}%', l10n.avgPlr, Colors.purple),
         ],
       ),
     );

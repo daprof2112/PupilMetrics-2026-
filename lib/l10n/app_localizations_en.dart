@@ -3320,4 +3320,58 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get reportRefPupilSizeDiff =>
       'Pupil Size Diff: <2% Normal, 2-4% Mild, >4% Significant';
+
+  @override
+  String get enterPatientInfoAnalysis => 'Enter Patient Info → Analysis';
+
+  @override
+  String get chooseCaptureMethod => 'Choose capture method:';
+
+  @override
+  String get usbCamera => 'USB Camera';
+
+  @override
+  String get selectExistingImage => 'Select existing image';
+
+  @override
+  String get detectingCameras => 'Detecting cameras...';
+
+  @override
+  String get retryDetection => 'Retry Detection';
+
+  @override
+  String get connectUvcCameraViaUsb => 'Connect UVC camera via USB';
+
+  @override
+  String get ensureCameraDriversInstalled =>
+      'Ensure camera drivers are installed';
+
+  @override
+  String get tapRefreshToDetect => 'Tap Refresh to detect cameras';
+
+  @override
+  String get connectUsbCameraToBegin => 'Connect USB camera to begin';
+
+  @override
+  String get noExternalCameraTitle => 'No External Camera Detected';
+
+  @override
+  String get connectUsbIriscopeEnsurePlugged =>
+      'Connect your USB iriscope and ensure it is plugged in';
+
+  @override
+  String get languagesAvailable => 'Languages Available';
+
+  @override
+  String get validationChecks => 'Validation Checks:';
+
+  @override
+  String get eyeQualityTip =>
+      'Tip: Ensure good lighting and keep the eye steady';
+
+  @override
+  String get validatingEye => 'Validating eye...';
+
+  @override
+  String get initializing => 'Initializing...';
 }

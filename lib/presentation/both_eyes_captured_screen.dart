@@ -5,6 +5,7 @@ import 'package:ai_eye_capture/presentation/analysis_screen.dart';
 import 'package:ai_eye_capture/utils/pupil_analyzer_fixed.dart'; // For PatientInfo
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ai_eye_capture/l10n/app_localizations.dart';
 
 String? leftEyePic;
 String? rightEyePic;
@@ -22,7 +23,7 @@ class BothEyesCapturedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Both Eyes Captured')),
+      appBar: AppBar(title: Text(AppLocalizations.of(context)!.bothEyesCaptured)),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -49,7 +50,7 @@ class BothEyesCapturedScreen extends StatelessWidget {
                   ));
                 }
               },
-              child: const Text('Enter Patient Info → Analysis'),
+              child: Text(AppLocalizations.of(context)!.enterPatientInfoAnalysis),
             ),
           ],
         ),

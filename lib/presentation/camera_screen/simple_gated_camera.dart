@@ -659,8 +659,8 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
               child: const Icon(Icons.visibility_off, color: Colors.red, size: 28),
             ),
             const SizedBox(width: 12),
-            const Expanded(
-              child: Text('Eye Not Detected', style: TextStyle(color: Colors.white, fontSize: 18)),
+            Expanded(
+              child: Text(l10n!.eyeNotDetected, style: const TextStyle(color: Colors.white, fontSize: 18)),
             ),
           ],
         ),
@@ -678,7 +678,7 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
               child: Text(_getSimplifiedError(result), style: const TextStyle(color: Colors.white, fontSize: 14)),
             ),
             const SizedBox(height: 16),
-            const Text('Validation Checks:', style: TextStyle(color: Colors.white70, fontSize: 12, fontWeight: FontWeight.bold)),
+            Text(l10n!.validationChecks, style: const TextStyle(color: Colors.white70, fontSize: 12, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
             ...checks.entries.map((e) => Padding(
               padding: const EdgeInsets.symmetric(vertical: 2),
@@ -691,17 +691,17 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
               ),
             )),
             const SizedBox(height: 16),
-            Text('Confidence: ${(result.confidence * 100).toStringAsFixed(0)}%', style: const TextStyle(color: Colors.white54, fontSize: 11)),
+            Text('${l10n!.confidence}: ${(result.confidence * 100).toStringAsFixed(0)}%', style: const TextStyle(color: Colors.white54, fontSize: 11)),
             if (_validationAttempts > 2)
               Container(
                 margin: const EdgeInsets.only(top: 12),
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(color: Colors.amber.withOpacity(0.2), borderRadius: BorderRadius.circular(8)),
-                child: const Row(
+                child: Row(
                   children: [
-                    Icon(Icons.lightbulb, color: Colors.amber, size: 18),
-                    SizedBox(width: 8),
-                    Expanded(child: Text('Tip: Ensure good lighting, hold camera 10-15cm from eye, avoid reflections', style: TextStyle(color: Colors.amber, fontSize: 11))),
+                    const Icon(Icons.lightbulb, color: Colors.amber, size: 18),
+                    const SizedBox(width: 8),
+                    Expanded(child: Text(l10n!.eyeQualityTip, style: const TextStyle(color: Colors.amber, fontSize: 11))),
                   ],
                 ),
               ),
@@ -710,7 +710,7 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx),
-            child: const Text('Try Again', style: TextStyle(color: Colors.cyan)),
+            child: Text(l10n!.tryAgain, style: const TextStyle(color: Colors.cyan)),
           ),
         ],
       ),
@@ -893,13 +893,13 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
 
   Widget _buildCameraPreview(bool isReady) {
     if (!_isInitialized) {
-      return const Center(
+      return Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            CircularProgressIndicator(color: Colors.white),
-            SizedBox(height: 16),
-            Text('Starting camera...', style: TextStyle(color: Colors.white70)),
+            const CircularProgressIndicator(color: Colors.white),
+            const SizedBox(height: 16),
+            Text(AppLocalizations.of(context)!.startingCamera, style: const TextStyle(color: Colors.white70)),
           ],
         ),
       );
@@ -924,13 +924,13 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
         if (_isValidating && !_isCapturing)
           Container(
             decoration: BoxDecoration(color: Colors.black54, borderRadius: BorderRadius.circular(20)),
-            child: const Center(
+            child: Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  CircularProgressIndicator(color: Colors.cyan),
-                  SizedBox(height: 16),
-                  Text('Validating eye...', style: TextStyle(color: Colors.white, fontSize: 16)),
+                  const CircularProgressIndicator(color: Colors.cyan),
+                  const SizedBox(height: 16),
+                  Text(AppLocalizations.of(context)!.validatingEye, style: const TextStyle(color: Colors.white, fontSize: 16)),
                 ],
               ),
             ),
@@ -1132,7 +1132,7 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
       return Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(color: Colors.black54, borderRadius: BorderRadius.circular(12)),
-        child: const Text('Initializing...', style: TextStyle(color: Colors.white70, fontSize: 11)),
+        child: Text(AppLocalizations.of(context)!.initializing, style: const TextStyle(color: Colors.white70, fontSize: 11)),
       );
     }
 
@@ -1142,13 +1142,13 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _indicator('Eye', result.issue != QualityIssue.notAnEye, result.issue == QualityIssue.notAnEye ? 'No' : 'Yes'),
+          _indicator(AppLocalizations.of(context)!.eye, result.issue != QualityIssue.notAnEye, result.issue == QualityIssue.notAnEye ? 'No' : 'Yes'),
           _indicator('Sharp', result.sharpness >= 100, '${result.sharpness.toInt()}'),
-          _indicator('Light', result.brightness >= 30 && result.brightness <= 230, '${result.brightness.toInt()}'),
+          _indicator(AppLocalizations.of(context)!.light, result.brightness >= 30 && result.brightness <= 230, '${result.brightness.toInt()}'),
           _indicator('Focus', result.contrast >= 30, '${result.contrast.toInt()}'),
           _indicator('Pupil', result.pupilConfidence >= 0.3, '${(result.pupilConfidence * 100).toInt()}%'),
           if (_smoothedIrisSize != null)
-            _indicator('Iris', true, '${_smoothedIrisSize!.toInt()}px'),
+            _indicator(AppLocalizations.of(context)!.iris, true, '${_smoothedIrisSize!.toInt()}px'),
           if (_hasReference && _distanceMatchPercent != null)
             _indicator('Match', _distanceMatchPercent! >= BilateralMatchConfig.acceptableMatch,
                 '${(_distanceMatchPercent! * 100).toInt()}%'),
@@ -1219,7 +1219,7 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
         icon = Icons.check_circle;
       }
     } else {
-      displayMessage = _lastResult?.feedback ?? 'Initializing...';
+      displayMessage = _lastResult?.feedback ?? AppLocalizations.of(context)!.initializing;
       backgroundColor = _getIssueColor(_lastResult?.issue);
       icon = _getIssueIcon(_lastResult?.issue);
     }
