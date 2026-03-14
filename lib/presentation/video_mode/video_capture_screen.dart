@@ -99,12 +99,12 @@ class _VideoCaptureScreenState extends State<VideoCaptureScreen> with TickerProv
         await _cameraController!.setExposureMode(ExposureMode.locked);
         await _cameraController!.setFocusMode(FocusMode.locked);
       } catch (e) {
-        print('[PLR] Could not lock exposure/focus: $e');
+        debugPrint('[PLR] Could not lock exposure/focus: $e');
       }
 
       if (mounted) setState(() => _isInitialized = true);
     } catch (e) {
-      setState(() => _errorMessage = e.toString());
+      if (mounted) setState(() => _errorMessage = e.toString());
     }
   }
 
@@ -123,6 +123,10 @@ class _VideoCaptureScreenState extends State<VideoCaptureScreen> with TickerProv
       _phaseCountdown = 3;
     });
     _phaseTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (!mounted) {
+        timer.cancel();
+        return;
+      }
       setState(() {
         _phaseCountdown--;
         if (_phaseCountdown <= 0) {
@@ -143,6 +147,10 @@ class _VideoCaptureScreenState extends State<VideoCaptureScreen> with TickerProv
         _currentPhase = PLRPhase.baseline;
       });
       _recordingTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+        if (!mounted) {
+          timer.cancel();
+          return;
+        }
         setState(() {
           _recordingSeconds++;
           if (_recordingSeconds == PLRNormativeValues.flashTriggerSec) {
@@ -167,13 +175,14 @@ class _VideoCaptureScreenState extends State<VideoCaptureScreen> with TickerProv
     if (_cameraController == null || !_isRecording) return;
     try {
       final video = await _cameraController!.stopVideoRecording();
+      if (!mounted) return;
       setState(() {
         _isRecording = false;
         _currentPhase = PLRPhase.complete;
       });
       _showCompletionDialog(video.path);
     } catch (e) {
-      setState(() => _errorMessage = e.toString());
+      if (mounted) setState(() => _errorMessage = e.toString());
     }
   }
 
@@ -186,7 +195,7 @@ class _VideoCaptureScreenState extends State<VideoCaptureScreen> with TickerProv
         await _cameraController!.setFlashMode(FlashMode.off);
         setState(() => _isFlashOn = false);
       } catch (e) {
-        print('[PLR] Flash error: $e');
+        debugPrint('[PLR] Flash error: $e');
       }
     }
   }
@@ -223,7 +232,7 @@ class _VideoCaptureScreenState extends State<VideoCaptureScreen> with TickerProv
                   _infoRow(l10n.eye, widget.eyeLabel),
                   if (widget.patientName != null) _infoRow(l10n.patient, widget.patientName!),
                   _infoRow(l10n.flash, l10n.flashAt(PLRNormativeValues.flashTriggerSec, PLRNormativeValues.flashDurationMs)),
-                  _infoRow('Zoom', '${_currentZoom.toStringAsFixed(1)}x'),
+                  _infoRow(l10n.zoom, '${_currentZoom.toStringAsFixed(1)}x'),
                   const Divider(color: Colors.white24, height: 16),
                   _infoRow(l10n.phases, l10n.phasesFlow),
                 ],
@@ -667,7 +676,7 @@ class _VideoCaptureScreenState extends State<VideoCaptureScreen> with TickerProv
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        'Use the zoom slider on the right to adjust magnification before recording.',
+                        l10n.zoomSliderTip,
                         style: const TextStyle(color: Colors.cyan, fontSize: 11),
                       ),
                     ),

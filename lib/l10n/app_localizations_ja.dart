@@ -3316,4 +3316,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get bilateralBothHands => '両手の両側使用';
+
+  @override
+  String get zoom => 'ズーム';
+
+  @override
+  String get zoomSliderTip => '録画前に右側のズームスライダーで倍率を調整してください。';
 }

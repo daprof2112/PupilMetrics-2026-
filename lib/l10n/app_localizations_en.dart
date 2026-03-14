@@ -3398,4 +3398,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get bilateralBothHands => 'Bilateral use of both hands';
+
+  @override
+  String get zoom => 'Zoom';
+
+  @override
+  String get zoomSliderTip =>
+      'Use the zoom slider on the right to adjust magnification before recording.';
 }

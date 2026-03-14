@@ -1446,5 +1446,7 @@
   "pleaseEnterAge": "나이를 입력해 주세요",
   "ageMustBe2Digits": "나이는 1자리 또는 2자리여야 합니다",
   "optional": "(선택)",
-  "bilateralBothHands": "양손 양측 사용"
+  "bilateralBothHands": "양손 양측 사용",
+  "zoom": "줌",
+  "zoomSliderTip": "녹화 전에 오른쪽 줌 슬라이더를 사용하여 배율을 조정하세요."
 }

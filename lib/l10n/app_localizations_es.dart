@@ -3433,4 +3433,11 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get bilateralBothHands => 'Uso bilateral de ambas manos';
+
+  @override
+  String get zoom => 'Zoom';
+
+  @override
+  String get zoomSliderTip =>
+      'Usa el control deslizante de zoom a la derecha para ajustar la ampliación antes de grabar.';
 }

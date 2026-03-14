@@ -6287,6 +6287,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Bilateral use of both hands'**
   String get bilateralBothHands;
+
+  /// No description provided for @zoom.
+  ///
+  /// In en, this message translates to:
+  /// **'Zoom'**
+  String get zoom;
+
+  /// No description provided for @zoomSliderTip.
+  ///
+  /// In en, this message translates to:
+  /// **'Use the zoom slider on the right to adjust magnification before recording.'**
+  String get zoomSliderTip;
 }
 
 class _AppLocalizationsDelegate

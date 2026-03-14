@@ -3322,4 +3322,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get bilateralBothHands => '양손 양측 사용';
+
+  @override
+  String get zoom => '줌';
+
+  @override
+  String get zoomSliderTip => '녹화 전에 오른쪽 줌 슬라이더를 사용하여 배율을 조정하세요.';
 }

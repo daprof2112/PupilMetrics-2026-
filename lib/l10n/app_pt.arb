@@ -1404,5 +1404,7 @@
   "pleaseEnterAge": "Por favor insira a idade",
   "ageMustBe2Digits": "A idade deve ter 1 ou 2 dígitos",
   "optional": "(Opcional)",
-  "bilateralBothHands": "Uso bilateral de ambas as mãos"
+  "bilateralBothHands": "Uso bilateral de ambas as mãos",
+  "zoom": "Zoom",
+  "zoomSliderTip": "Use o controle deslizante de zoom à direita para ajustar a ampliação antes de gravar."
 }

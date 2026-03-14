@@ -3428,6 +3428,13 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get bilateralBothHands => 'Uso bilateral de ambas as mãos';
+
+  @override
+  String get zoom => 'Zoom';
+
+  @override
+  String get zoomSliderTip =>
+      'Use o controle deslizante de zoom à direita para ajustar a ampliação antes de gravar.';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -6793,4 +6800,11 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get bilateralBothHands => 'Uso bilateral de ambas as mãos';
+
+  @override
+  String get zoom => 'Zoom';
+
+  @override
+  String get zoomSliderTip =>
+      'Use o controle deslizante de zoom à direita para ajustar a ampliação antes de gravar.';
 }

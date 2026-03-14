@@ -1405,5 +1405,7 @@
   "pleaseEnterAge": "年齢を入力してください",
   "ageMustBe2Digits": "年齢は1桁または2桁である必要があります",
   "optional": "（任意）",
-  "bilateralBothHands": "両手の両側使用"
+  "bilateralBothHands": "両手の両側使用",
+  "zoom": "ズーム",
+  "zoomSliderTip": "録画前に右側のズームスライダーで倍率を調整してください。"
 }
