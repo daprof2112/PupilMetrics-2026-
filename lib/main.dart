@@ -211,16 +211,12 @@ class _MyAppState extends State<MyApp> {
       return;
     }
 
-    final license = LicenseManager().cachedLicense;
-
-    if (license != null && license.isValid) {
-      setState(() => _licenseChecked = true);
-      return;
-    }
+    // Run full initialization (starts 14-day trial for new users automatically)
+    final license = await LicenseManager().initialize();
 
     setState(() {
       _licenseChecked = true;
-      _showLicenseBlocker = true;
+      _showLicenseBlocker = !license.isValid;
     });
   }
 
