@@ -958,5 +958,9 @@ class EyeDetectionOverlay extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(EyeDetectionOverlay oldDelegate) => true;
+  bool shouldRepaint(EyeDetectionOverlay oldDelegate) =>
+      oldDelegate.eyeDetected != eyeDetected ||
+      oldDelegate.isWellCentered != isWellCentered ||
+      oldDelegate.hasGoodLighting != hasGoodLighting ||
+      oldDelegate.isStable != isStable;
 }

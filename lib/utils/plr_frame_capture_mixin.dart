@@ -5,6 +5,7 @@
 import 'dart:async';
 import 'dart:typed_data';
 import 'package:camera/camera.dart';
+import 'package:flutter/foundation.dart';
 import 'package:image/image.dart' as img;
 
 /// Captured frame with metadata
@@ -49,14 +50,14 @@ mixin PLRFrameCaptureMixin {
     _recordingStartTime = DateTime.now();
     _isCapturing = true;
 
-    print('[PLR Capture] Starting frame capture...');
+    debugPrint('[PLR Capture] Starting frame capture...');
 
     try {
       await controller.startImageStream((CameraImage image) {
         _processCameraImage(image);
       });
     } catch (e) {
-      print('[PLR Capture] Error starting image stream: $e');
+      debugPrint('[PLR Capture] Error starting image stream: $e');
       _isCapturing = false;
     }
   }
@@ -70,10 +71,10 @@ mixin PLRFrameCaptureMixin {
     try {
       await controller.stopImageStream();
     } catch (e) {
-      print('[PLR Capture] Error stopping image stream: $e');
+      debugPrint('[PLR Capture] Error stopping image stream: $e');
     }
 
-    print('[PLR Capture] Captured ${_capturedFrames.length} frames');
+    debugPrint('[PLR Capture] Captured ${_capturedFrames.length} frames');
   }
 
   /// Process incoming camera image
@@ -106,7 +107,7 @@ mixin PLRFrameCaptureMixin {
       ));
 
     } catch (e) {
-      print('[PLR Capture] Frame processing error: $e');
+      debugPrint('[PLR Capture] Frame processing error: $e');
     }
   }
 
@@ -122,10 +123,10 @@ mixin PLRFrameCaptureMixin {
         return image.planes[0].bytes;
       }
 
-      print('[PLR Capture] Unsupported image format: ${image.format.group}');
+      debugPrint('[PLR Capture] Unsupported image format: ${image.format.group}');
       return null;
     } catch (e) {
-      print('[PLR Capture] Image conversion error: $e');
+      debugPrint('[PLR Capture] Image conversion error: $e');
       return null;
     }
   }
@@ -155,7 +156,7 @@ mixin PLRFrameCaptureMixin {
 
       return Uint8List.fromList(img.encodeJpg(resized, quality: 70));
     } catch (e) {
-      print('[PLR Capture] YUV conversion error: $e');
+      debugPrint('[PLR Capture] YUV conversion error: $e');
       return null;
     }
   }
@@ -186,7 +187,7 @@ mixin PLRFrameCaptureMixin {
 
       return Uint8List.fromList(img.encodeJpg(resized, quality: 70));
     } catch (e) {
-      print('[PLR Capture] BGRA conversion error: $e');
+      debugPrint('[PLR Capture] BGRA conversion error: $e');
       return null;
     }
   }

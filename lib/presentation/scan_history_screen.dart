@@ -2,6 +2,7 @@
 // View and manage scan history from database - WITH PLATFORM-SPECIFIC PLR TAB
 // v5.2.8 - Desktop hides PLR tab (no iriscope flash capability)
 
+import 'dart:async';
 import 'dart:io';
 import 'dart:convert';
 import 'package:ai_eye_capture/models/patient_info.dart';
@@ -38,6 +39,8 @@ class _ScanHistoryScreenState extends State<ScanHistoryScreen> with SingleTicker
   bool _isLoadingPLR = true;
   String _plrSearchQuery = '';
   final _plrSearchController = TextEditingController();
+  Timer? _scanSearchDebounce;
+  Timer? _plrSearchDebounce;
 
   @override
   void initState() {
@@ -64,6 +67,8 @@ class _ScanHistoryScreenState extends State<ScanHistoryScreen> with SingleTicker
     _tabController.dispose();
     _scanSearchController.dispose();
     _plrSearchController.dispose();
+    _scanSearchDebounce?.cancel();
+    _plrSearchDebounce?.cancel();
     super.dispose();
   }
 
@@ -316,7 +321,8 @@ class _ScanHistoryScreenState extends State<ScanHistoryScreen> with SingleTicker
             ),
             onChanged: (value) {
               setState(() => _scanSearchQuery = value);
-              _loadScans();
+              _scanSearchDebounce?.cancel();
+              _scanSearchDebounce = Timer(const Duration(milliseconds: 300), _loadScans);
             },
           ),
         ),
@@ -381,7 +387,8 @@ class _ScanHistoryScreenState extends State<ScanHistoryScreen> with SingleTicker
             ),
             onChanged: (value) {
               setState(() => _plrSearchQuery = value);
-              _loadPLRRecords();
+              _plrSearchDebounce?.cancel();
+              _plrSearchDebounce = Timer(const Duration(milliseconds: 300), _loadPLRRecords);
             },
           ),
         ),

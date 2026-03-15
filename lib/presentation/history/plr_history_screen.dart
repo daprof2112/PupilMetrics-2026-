@@ -1,6 +1,7 @@
 // lib/presentation/history/plr_history_screen.dart
 // PLR Analysis History Screen - v5.2.6 FIXED OVERFLOW with DraggableScrollableSheet
 
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:ai_eye_capture/l10n/app_localizations.dart';
 import 'package:ai_eye_capture/utils/app_branding.dart';
@@ -18,6 +19,7 @@ class PLRHistoryScreen extends StatefulWidget {
 class _PLRHistoryScreenState extends State<PLRHistoryScreen> {
   final PLRDatabaseService _db = PLRDatabaseService();
   final TextEditingController _searchController = TextEditingController();
+  Timer? _searchDebounce;
 
   List<PLRHistoryRecord> _records = [];
   PLRHistoryStats? _stats;
@@ -46,9 +48,17 @@ class _PLRHistoryScreenState extends State<PLRHistoryScreen> {
     }
   }
 
+  @override
+  void dispose() {
+    _searchDebounce?.cancel();
+    _searchController.dispose();
+    super.dispose();
+  }
+
   void _onSearch(String query) {
     setState(() => _searchQuery = query);
-    _loadData();
+    _searchDebounce?.cancel();
+    _searchDebounce = Timer(const Duration(milliseconds: 300), _loadData);
   }
 
   Future<void> _deleteRecord(PLRHistoryRecord record) async {
