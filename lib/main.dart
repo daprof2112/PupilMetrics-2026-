@@ -125,9 +125,8 @@ void main() async {
   // PLATFORM-SPECIFIC SERVICES
   // ------------------------------------------------------------
   if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-    await logToFile('Initializing desktop license system');
-    await LicenseManager().initialize();
-    await logToFile('License system initialized');
+    // License initialization is handled by splash_screen._initializeAndNavigate()
+    // so the UI launches immediately instead of blocking on network calls here.
   } else {
     await Purchases.setDebugLogsEnabled(true);
     final revenueCatApiKey = _resolveRevenueCatApiKey();
@@ -135,7 +134,6 @@ void main() async {
       PurchasesConfiguration(revenueCatApiKey),
     );
   }
-
 
   await logToFile('Launching UI');
   runApp(const MyApp());
