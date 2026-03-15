@@ -3465,4 +3465,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get cameraErrorOccurred => 'Camera error occurred';
+
+  @override
+  String get connectingToUsbIriscope => 'Connecting to USB iriscope...';
+
+  @override
+  String get noCamerasDetectedMessage =>
+      'No cameras detected. Please ensure your USB camera is connected and recognized by your system.';
+
+  @override
+  String get failedToAccessCameras => 'Failed to access cameras';
 }

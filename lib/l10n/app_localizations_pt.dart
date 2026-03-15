@@ -3496,6 +3496,16 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get cameraErrorOccurred => 'Ocorreu um erro de câmera';
+
+  @override
+  String get connectingToUsbIriscope => 'Conectando ao iriscopio USB...';
+
+  @override
+  String get noCamerasDetectedMessage =>
+      'Nenhuma câmera detectada. Certifique-se de que sua câmera USB está conectada e reconhecida pelo sistema.';
+
+  @override
+  String get failedToAccessCameras => 'Falha ao acessar câmeras';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -6929,4 +6939,14 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get cameraErrorOccurred => 'Ocorreu um erro de câmera';
+
+  @override
+  String get connectingToUsbIriscope => 'Conectando ao iriscopio USB...';
+
+  @override
+  String get noCamerasDetectedMessage =>
+      'Nenhuma câmera detectada. Certifique-se de que sua câmera USB está conectada e reconhecida pelo sistema.';
+
+  @override
+  String get failedToAccessCameras => 'Falha ao acessar câmeras';
 }

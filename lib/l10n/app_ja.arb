@@ -1426,5 +1426,8 @@
   "gradeB": "B",
   "gradeC": "C",
   "gradeD": "D",
-  "cameraErrorOccurred": "カメラエラーが発生しました"
+  "cameraErrorOccurred": "カメラエラーが発生しました",
+  "connectingToUsbIriscope": "USB虹彩カメラに接続中...",
+  "noCamerasDetectedMessage": "カメラが検出されません。USBカメラが接続されシステムに認識されていることを確認してください。",
+  "failedToAccessCameras": "カメラへのアクセスに失敗しました"
 }

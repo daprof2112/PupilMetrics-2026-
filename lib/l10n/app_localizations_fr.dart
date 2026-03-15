@@ -3501,4 +3501,14 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get cameraErrorOccurred => 'Une erreur de caméra s\'est produite';
+
+  @override
+  String get connectingToUsbIriscope => 'Connexion au irisscope USB...';
+
+  @override
+  String get noCamerasDetectedMessage =>
+      'Aucune caméra détectée. Assurez-vous que votre caméra USB est connectée et reconnue par votre système.';
+
+  @override
+  String get failedToAccessCameras => 'Échec de l\'accès aux caméras';
 }

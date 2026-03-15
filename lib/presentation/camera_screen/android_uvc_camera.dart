@@ -67,7 +67,7 @@ class _AndroidUvcCameraScreenState extends State<AndroidUvcCameraScreen> {
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Capture failed: $e'), backgroundColor: Colors.red),
+          SnackBar(content: Text(AppLocalizations.of(context)!.failedToCaptureImage), backgroundColor: Colors.red),
         );
       }
     } finally {
@@ -100,7 +100,7 @@ class _AndroidUvcCameraScreenState extends State<AndroidUvcCameraScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context);
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       backgroundColor: Colors.black,
@@ -156,15 +156,15 @@ class _AndroidUvcCameraScreenState extends State<AndroidUvcCameraScreen> {
             const SizedBox(height: 16),
             Text(_errorMessage!, style: const TextStyle(color: Colors.red)),
             const SizedBox(height: 8),
-            const Text(
-              'Make sure USB iriscope is connected',
-              style: TextStyle(color: Colors.white54),
+            Text(
+              AppLocalizations.of(context)!.connectUsbIriscopeEnsurePlugged,
+              style: const TextStyle(color: Colors.white54),
             ),
             const SizedBox(height: 24),
             ElevatedButton.icon(
               onPressed: _initializeUvcCamera,
               icon: const Icon(Icons.refresh),
-              label: const Text('Retry'),
+              label: Text(AppLocalizations.of(context)!.retry),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.teal),
             ),
           ],
@@ -173,13 +173,13 @@ class _AndroidUvcCameraScreenState extends State<AndroidUvcCameraScreen> {
     }
 
     if (!_isInitialized || _controller == null) {
-      return const Center(
+      return Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircularProgressIndicator(color: Colors.teal),
-            SizedBox(height: 16),
-            Text('Connecting to USB iriscope...', style: TextStyle(color: Colors.white70)),
+            const CircularProgressIndicator(color: Colors.teal),
+            const SizedBox(height: 16),
+            Text(AppLocalizations.of(context)!.connectingToUsbIriscope, style: const TextStyle(color: Colors.white70)),
           ],
         ),
       );

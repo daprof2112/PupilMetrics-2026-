@@ -6413,6 +6413,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Camera error occurred'**
   String get cameraErrorOccurred;
+
+  /// No description provided for @connectingToUsbIriscope.
+  ///
+  /// In en, this message translates to:
+  /// **'Connecting to USB iriscope...'**
+  String get connectingToUsbIriscope;
+
+  /// No description provided for @noCamerasDetectedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'No cameras detected. Please ensure your USB camera is connected and recognized by your system.'**
+  String get noCamerasDetectedMessage;
+
+  /// No description provided for @failedToAccessCameras.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to access cameras'**
+  String get failedToAccessCameras;
 }
 
 class _AppLocalizationsDelegate

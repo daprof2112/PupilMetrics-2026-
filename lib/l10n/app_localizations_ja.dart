@@ -3379,4 +3379,14 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get cameraErrorOccurred => 'カメラエラーが発生しました';
+
+  @override
+  String get connectingToUsbIriscope => 'USB虹彩カメラに接続中...';
+
+  @override
+  String get noCamerasDetectedMessage =>
+      'カメラが検出されません。USBカメラが接続されシステムに認識されていることを確認してください。';
+
+  @override
+  String get failedToAccessCameras => 'カメラへのアクセスに失敗しました';
 }

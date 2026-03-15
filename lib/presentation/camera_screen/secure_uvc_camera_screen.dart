@@ -75,7 +75,7 @@ class _UnifiedCameraScreenState extends State<UnifiedCameraScreen> {
 
       if (_cameras.isEmpty) {
         setState(() {
-          _errorMessage = 'No cameras detected.\n\nPlease ensure your USB camera is connected and recognized by your system.';
+          _errorMessage = AppLocalizations.of(context)!.noCamerasDetectedMessage;
           _isLoadingCameras = false;
         });
         return;
@@ -89,7 +89,7 @@ class _UnifiedCameraScreenState extends State<UnifiedCameraScreen> {
     } catch (e) {
       debugPrint('❌ Camera init error: $e');
       setState(() {
-        _errorMessage = 'Failed to access cameras:\n${e.toString().split('\n').first}';
+        _errorMessage = AppLocalizations.of(context)!.failedToAccessCameras;
         _isLoadingCameras = false;
       });
     }
@@ -154,7 +154,7 @@ class _UnifiedCameraScreenState extends State<UnifiedCameraScreen> {
     } catch (e) {
       debugPrint('❌ Camera $index error: $e');
       setState(() {
-        _errorMessage = 'Camera "${UsbCameraDatabase.getFriendlyName(_cameras[index].name)}" failed:\n${e.toString().split('\n').first}';
+        _errorMessage = AppLocalizations.of(context)!.cameraFailedInit;
         _isLoadingCameras = false;
       });
     }
@@ -185,7 +185,7 @@ class _UnifiedCameraScreenState extends State<UnifiedCameraScreen> {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Capture failed: ${e.toString().split('\n').first}'),
+            content: Text(AppLocalizations.of(context)!.failedToCaptureImage),
             backgroundColor: Colors.red,
           ),
         );

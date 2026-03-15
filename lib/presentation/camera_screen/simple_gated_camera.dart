@@ -207,7 +207,7 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
       debugPrint('Camera init error: $e');
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Camera error: $e'), backgroundColor: Colors.red),
+          SnackBar(content: Text(AppLocalizations.of(context)!.cameraErrorOccurred), backgroundColor: Colors.red),
         );
       }
     }
@@ -608,7 +608,7 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
           _isValidating = false;
         });
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Capture failed: $e'), backgroundColor: Colors.red),
+          SnackBar(content: Text(AppLocalizations.of(context)!.failedToCaptureImage), backgroundColor: Colors.red),
         );
       }
     }

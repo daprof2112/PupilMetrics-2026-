@@ -3385,4 +3385,14 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get cameraErrorOccurred => '카메라 오류 발생';
+
+  @override
+  String get connectingToUsbIriscope => 'USB 홍채경 연결 중...';
+
+  @override
+  String get noCamerasDetectedMessage =>
+      '카메라가 감지되지 않았습니다. USB 카메라가 연결되어 시스템에 인식되는지 확인하세요.';
+
+  @override
+  String get failedToAccessCameras => '카메라 접근 실패';
 }

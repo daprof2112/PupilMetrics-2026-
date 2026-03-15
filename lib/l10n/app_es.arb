@@ -1174,5 +1174,8 @@
   "gradeB": "B",
   "gradeC": "C",
   "gradeD": "D",
-  "cameraErrorOccurred": "Ocurrió un error de cámara"
+  "cameraErrorOccurred": "Ocurrió un error de cámara",
+  "connectingToUsbIriscope": "Conectando al iriscopio USB...",
+  "noCamerasDetectedMessage": "No se detectaron cámaras. Asegúrese de que su cámara USB esté conectada y reconocida por su sistema.",
+  "failedToAccessCameras": "Error al acceder a las cámaras"
 }

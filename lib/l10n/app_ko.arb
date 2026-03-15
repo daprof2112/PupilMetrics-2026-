@@ -1467,5 +1467,8 @@
   "gradeB": "B",
   "gradeC": "C",
   "gradeD": "D",
-  "cameraErrorOccurred": "카메라 오류 발생"
+  "cameraErrorOccurred": "카메라 오류 발생",
+  "connectingToUsbIriscope": "USB 홍채경 연결 중...",
+  "noCamerasDetectedMessage": "카메라가 감지되지 않았습니다. USB 카메라가 연결되어 시스템에 인식되는지 확인하세요.",
+  "failedToAccessCameras": "카메라 접근 실패"
 }
