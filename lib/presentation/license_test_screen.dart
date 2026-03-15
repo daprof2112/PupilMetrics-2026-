@@ -6,7 +6,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:ai_eye_capture/utils/license_manager.dart';
 import 'package:ai_eye_capture/presentation/license_dialog.dart';
 
@@ -399,10 +399,10 @@ class _LicenseTestScreenState extends State<LicenseTestScreen> {
   }
 
   Future<void> _expireTrialForTesting() async {
-    final prefs = await SharedPreferences.getInstance();
+    const storage = FlutterSecureStorage();
     final expiredDate = DateTime.now().subtract(const Duration(days: 30));
-    await prefs.setString('trial_start', expiredDate.toIso8601String());
-    await prefs.remove('license_data');
+    await storage.write(key: 'pm_trial_start', value: expiredDate.toIso8601String());
+    await storage.delete(key: 'pm_license_data');
 
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
@@ -414,10 +414,10 @@ class _LicenseTestScreenState extends State<LicenseTestScreen> {
   }
 
   Future<void> _resetLicense() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.remove('trial_start');
-    await prefs.remove('license_data');
-    await prefs.remove('last_validation');
+    const storage = FlutterSecureStorage();
+    await storage.delete(key: 'pm_trial_start');
+    await storage.delete(key: 'pm_license_data');
+    await storage.delete(key: 'pm_last_validation');
 
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(

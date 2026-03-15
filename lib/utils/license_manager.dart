@@ -1,6 +1,8 @@
 // lib/utils/license_manager.dart
-// CNRI Eye Capture - Desktop License Management System v1.1
-// UPDATED: Friendly user messages (no scary "corrupted" text!)
+// CNRI Eye Capture - Desktop License Management System v1.2
+// v1.2: Migrated from SharedPreferences + XOR to flutter_secure_storage
+//       License data is now encrypted at rest using OS-native storage:
+//       Windows DPAPI / macOS Keychain / Linux libsecret
 // ============================================================================
 
 import 'dart:convert';
@@ -8,16 +10,15 @@ import 'dart:io';
 import 'dart:math';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
-import 'package:path_provider/path_provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 /// License types supported by the system
 enum LicenseType {
-  trial,       // 14-day trial
-  standard,    // Single machine, 1 year
-  professional,// Single machine, lifetime
-  enterprise,  // Multi-machine, lifetime
+  trial,        // 14-day trial
+  standard,     // Single machine, 1 year
+  professional, // Single machine, lifetime
+  enterprise,   // Multi-machine, lifetime
 }
 
 /// Current license status
@@ -88,6 +89,17 @@ class LicenseManager {
   static const int _trialDays = 14;
   static const int _offlineGraceDays = 7;
 
+  // OS-native encrypted storage (Windows DPAPI / macOS Keychain / Linux libsecret)
+  // No key management needed — the OS handles encryption transparently.
+  static const _storage = FlutterSecureStorage(
+    wOptions: WindowsOptions(useBackwardCompatibility: false),
+  );
+
+  // Storage keys
+  static const _keyLicenseData   = 'pm_license_data';
+  static const _keyLastValidation = 'pm_last_validation';
+  static const _keyTrialStart    = 'pm_trial_start';
+
   // Singleton pattern
   static final LicenseManager _instance = LicenseManager._internal();
   factory LicenseManager() => _instance;
@@ -110,20 +122,18 @@ class LicenseManager {
   /// Get current license status
   Future<LicenseInfo> checkLicense() async {
     try {
-      final prefs = await SharedPreferences.getInstance();
-      final storedLicense = prefs.getString('license_data');
+      final storedLicense = await _storage.read(key: _keyLicenseData);
 
       // No license stored - check for trial
       if (storedLicense == null) {
         return await _checkOrStartTrial();
       }
 
-      // Decrypt and validate stored license
-      final licenseData = _decryptLicenseData(storedLicense);
+      // Parse stored license (stored as plain JSON; OS storage encrypts at rest)
+      final licenseData = _parseLicenseData(storedLicense);
       if (licenseData == null) {
-        // FRIENDLY MESSAGE - Not "corrupted"!
-        await prefs.remove('license_data'); // Clear bad data
-        return await _checkOrStartTrial(); // Start fresh trial
+        await _storage.delete(key: _keyLicenseData);
+        return await _checkOrStartTrial();
       }
 
       // Validate machine ID
@@ -158,7 +168,7 @@ class LicenseManager {
       }
 
       // Check if online validation needed
-      final lastValidation = prefs.getString('last_validation');
+      final lastValidation = await _storage.read(key: _keyLastValidation);
       if (lastValidation != null) {
         final lastDate = DateTime.parse(lastValidation);
         final daysSince = DateTime.now().difference(lastDate).inDays;
@@ -174,7 +184,6 @@ class LicenseManager {
 
     } catch (e) {
       debugPrint('License check error: $e');
-      // FRIENDLY MESSAGE - Not "validation error"!
       return _createLicenseInfo(LicenseStatus.unregistered,
           'License needs to be set up. Start your free trial or enter a license key.');
     }
@@ -183,10 +192,8 @@ class LicenseManager {
   /// Activate a license key
   Future<LicenseInfo> activateLicense(String licenseKey, String email, String name) async {
     try {
-      // Clean up the key
       licenseKey = licenseKey.trim().toUpperCase().replaceAll(' ', '');
 
-      // Validate key format
       if (!_validateKeyFormat(licenseKey)) {
         return _createLicenseInfo(LicenseStatus.invalid,
             'Please check your license key format. It should look like: CNRI-XXXX-XXXX-XXXX-XXXX');
@@ -217,10 +224,9 @@ class LicenseManager {
 
   /// Deactivate current license
   Future<void> deactivateLicense() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.remove('license_data');
-    await prefs.remove('last_validation');
-    await prefs.remove('trial_start');
+    await _storage.delete(key: _keyLicenseData);
+    await _storage.delete(key: _keyLastValidation);
+    await _storage.delete(key: _keyTrialStart);
     _cachedLicense = null;
   }
 
@@ -290,13 +296,12 @@ class LicenseManager {
   // =========================================================================
 
   Future<LicenseInfo> _checkOrStartTrial() async {
-    final prefs = await SharedPreferences.getInstance();
-    final trialStart = prefs.getString('trial_start');
+    final trialStart = await _storage.read(key: _keyTrialStart);
 
     if (trialStart == null) {
       // Start new trial
       final now = DateTime.now();
-      await prefs.setString('trial_start', now.toIso8601String());
+      await _storage.write(key: _keyTrialStart, value: now.toIso8601String());
 
       final expiration = now.add(const Duration(days: _trialDays));
       final licenseData = {
@@ -307,7 +312,7 @@ class LicenseManager {
         'registeredTo': 'Trial User',
       };
 
-      await prefs.setString('license_data', _encryptLicenseData(licenseData));
+      await _storage.write(key: _keyLicenseData, value: jsonEncode(licenseData));
 
       _cachedLicense = LicenseInfo(
         status: LicenseStatus.trialActive,
@@ -532,17 +537,20 @@ class LicenseManager {
   }
 
   Future<void> _updateValidationTime() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString('last_validation', DateTime.now().toIso8601String());
+    await _storage.write(
+      key: _keyLastValidation,
+      value: DateTime.now().toIso8601String(),
+    );
   }
 
   // =========================================================================
   // LICENSE STORAGE
+  // Stored as plain JSON — flutter_secure_storage encrypts at rest using
+  // OS-native APIs (Windows DPAPI, macOS Keychain, Linux libsecret).
+  // No application-level encryption needed.
   // =========================================================================
 
   Future<void> _storeLicense(LicenseInfo info, String key, String email, String name) async {
-    final prefs = await SharedPreferences.getInstance();
-
     final licenseData = {
       'key': key,
       'type': info.type?.name ?? 'standard',
@@ -553,28 +561,16 @@ class LicenseManager {
       'expirationDate': info.expirationDate?.toIso8601String(),
     };
 
-    await prefs.setString('license_data', _encryptLicenseData(licenseData));
-    await prefs.remove('trial_start'); // Clear trial when activating full license
+    await _storage.write(key: _keyLicenseData, value: jsonEncode(licenseData));
+    await _storage.delete(key: _keyTrialStart);
     await _updateValidationTime();
     _cachedLicense = info;
   }
 
-  String _encryptLicenseData(Map<String, dynamic> data) {
-    final json = jsonEncode(data);
-    final bytes = utf8.encode(json);
-    final key = utf8.encode(_secretKey.substring(0, 32));
-
-    final encrypted = List<int>.generate(bytes.length, (i) => bytes[i] ^ key[i % key.length]);
-    return base64Encode(encrypted);
-  }
-
-  Map<String, dynamic>? _decryptLicenseData(String encrypted) {
+  /// Parse license data from secure storage (plain JSON — OS handles encryption).
+  Map<String, dynamic>? _parseLicenseData(String stored) {
     try {
-      final bytes = base64Decode(encrypted);
-      final key = utf8.encode(_secretKey.substring(0, 32));
-      final decrypted = List<int>.generate(bytes.length, (i) => bytes[i] ^ key[i % key.length]);
-      final json = utf8.decode(decrypted);
-      return jsonDecode(json);
+      return jsonDecode(stored) as Map<String, dynamic>;
     } catch (e) {
       return null;
     }
@@ -624,7 +620,8 @@ class LicenseManager {
   }
 
   // =========================================================================
-  // LICENSE KEY GENERATION (For admin use only!)
+  // LICENSE KEY GENERATION (For admin use only — run offline, never ship
+  // this method in a production build.)
   // =========================================================================
 
   static String generateLicenseKey(LicenseType type) {
