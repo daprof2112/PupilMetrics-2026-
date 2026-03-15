@@ -1,0 +1,39 @@
+# PupilMetrics License Server — Apache configuration
+
+Options -Indexes
+
+# ── Block direct access to internal PHP files ────────────────────────────────
+<FilesMatch "^(config|db|auth|key_validator)\.php$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block log directory
+<IfModule mod_rewrite.c>
+    RewriteRule ^logs/ - [F,L]
+</IfModule>
+
+# ── Security headers ─────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always unset X-Powered-By
+    Header always unset Server
+</IfModule>
+
+# ── Clean URL rewriting (matches Flutter app URL structure) ──────────────────
+# Flutter app calls:  https://licenses.yoursite.com/activate
+# Apache rewrites to: activate.php
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^activate$          activate.php    [L]
+    RewriteRule ^validate$          validate.php    [L]
+    RewriteRule ^deactivate$        deactivate.php  [L]
+    RewriteRule ^health$            health.php      [L]
+
+    # Admin routes: /admin/revoke → admin.php?action=revoke
+    RewriteRule ^admin/(.+)$        admin.php?action=$1  [L,QSA]
+</IfModule>

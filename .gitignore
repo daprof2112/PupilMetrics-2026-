@@ -36,6 +36,10 @@ tool/gen_keys_temp.dart
 server/.env
 server/data/
 
+# PHP license server — config with secrets and runtime logs
+server_php/config.php
+server_php/logs/
+
 # Environment variables
 .env
 .env.*
