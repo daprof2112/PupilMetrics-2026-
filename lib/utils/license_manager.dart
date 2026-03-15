@@ -420,8 +420,8 @@ class LicenseManager {
       final cleaned = key.replaceAll('-', '').substring(4);
 
       final typeCode = cleaned[0];
-      final checksum = cleaned.substring(1, 4);
-      final encodedData = cleaned.substring(4);
+      final checksum = cleaned.substring(1, 9);   // 8-char HMAC-SHA256 prefix
+      final encodedData = cleaned.substring(9);   // 7-char random data
 
       final expectedChecksum = _generateChecksum(typeCode + encodedData);
       if (checksum != expectedChecksum) return null;
@@ -447,8 +447,9 @@ class LicenseManager {
   }
 
   String _generateChecksum(String data) {
-    final hash = md5.convert(utf8.encode(data + _secretKey)).toString();
-    return hash.substring(0, 3).toUpperCase();
+    final hmac = Hmac(sha256, utf8.encode(_secretKey));
+    final digest = hmac.convert(utf8.encode(data));
+    return digest.toString().substring(0, 8).toUpperCase();
   }
 
   LicenseType _getLicenseType(String? typeStr) {
@@ -633,11 +634,14 @@ class LicenseManager {
       LicenseType.trial => 'T',
     };
 
-    final randomData = List.generate(12, (_) =>
+    // 7 random chars: 36^7 ≈ 78 billion combinations
+    // (reduced from 12 to fit 8-char HMAC-SHA256 checksum in 20-char key)
+    final randomData = List.generate(7, (_) =>
     'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'[random.nextInt(36)]).join();
 
-    final hash = md5.convert(utf8.encode(typeCode + randomData + _secretKey)).toString();
-    final checksum = hash.substring(0, 3).toUpperCase();
+    final hmac = Hmac(sha256, utf8.encode(_secretKey));
+    final digest = hmac.convert(utf8.encode(typeCode + randomData));
+    final checksum = digest.toString().substring(0, 8).toUpperCase();
 
     final raw = 'CNRI$typeCode$checksum$randomData';
     return '${raw.substring(0, 4)}-${raw.substring(4, 8)}-${raw.substring(8, 12)}-${raw.substring(12, 16)}-${raw.substring(16, 20)}';
