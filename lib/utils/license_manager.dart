@@ -1,8 +1,10 @@
 // lib/utils/license_manager.dart
-// CNRI Eye Capture - Desktop License Management System v1.2
+// CNRI Eye Capture - Desktop License Management System v1.3
 // v1.2: Migrated from SharedPreferences + XOR to flutter_secure_storage
 //       License data is now encrypted at rest using OS-native storage:
 //       Windows DPAPI / macOS Keychain / Linux libsecret
+// v1.3: Added HMAC-SHA256 integrity check to stored license blob.
+//       Any direct edit of secure storage will be detected and rejected.
 // ============================================================================
 
 import 'dart:convert';
@@ -312,7 +314,7 @@ class LicenseManager {
         'registeredTo': 'Trial User',
       };
 
-      await _storage.write(key: _keyLicenseData, value: jsonEncode(licenseData));
+      await _writeLicenseData(licenseData);
 
       _cachedLicense = LicenseInfo(
         status: LicenseStatus.trialActive,
@@ -546,10 +548,21 @@ class LicenseManager {
 
   // =========================================================================
   // LICENSE STORAGE
-  // Stored as plain JSON — flutter_secure_storage encrypts at rest using
-  // OS-native APIs (Windows DPAPI, macOS Keychain, Linux libsecret).
-  // No application-level encryption needed.
+  // Stored as HMAC-verified JSON bundle inside OS-native encrypted storage
+  // (Windows DPAPI, macOS Keychain, Linux libsecret).
+  // Format: {"data": "<json payload>", "mac": "<hex HMAC-SHA256>"}
+  // Any direct edit of the stored blob will fail the MAC check.
   // =========================================================================
+
+  /// Write license data with HMAC-SHA256 integrity protection.
+  Future<void> _writeLicenseData(Map<String, dynamic> data) async {
+    final payload = jsonEncode(data);
+    final mac = Hmac(sha256, utf8.encode(_secretKey))
+        .convert(utf8.encode(payload))
+        .toString();
+    final bundle = jsonEncode({'data': payload, 'mac': mac});
+    await _storage.write(key: _keyLicenseData, value: bundle);
+  }
 
   Future<void> _storeLicense(LicenseInfo info, String key, String email, String name) async {
     final licenseData = {
@@ -562,17 +575,39 @@ class LicenseManager {
       'expirationDate': info.expirationDate?.toIso8601String(),
     };
 
-    await _storage.write(key: _keyLicenseData, value: jsonEncode(licenseData));
+    await _writeLicenseData(licenseData);
     await _storage.delete(key: _keyTrialStart);
     await _updateValidationTime();
     _cachedLicense = info;
   }
 
-  /// Parse license data from secure storage (plain JSON — OS handles encryption).
+  /// Parse license data, verifying HMAC integrity before accepting.
+  /// Returns null if data is missing, malformed, or tampered with.
   Map<String, dynamic>? _parseLicenseData(String stored) {
     try {
-      return jsonDecode(stored) as Map<String, dynamic>;
+      final bundle = jsonDecode(stored) as Map<String, dynamic>;
+      final payload = bundle['data'] as String?;
+      final storedMac = bundle['mac'] as String?;
+      if (payload == null || storedMac == null) return null;
+
+      final expectedMac = Hmac(sha256, utf8.encode(_secretKey))
+          .convert(utf8.encode(payload))
+          .toString();
+
+      // Constant-time comparison to prevent timing attacks
+      if (expectedMac.length != storedMac.length) return null;
+      int diff = 0;
+      for (int i = 0; i < expectedMac.length; i++) {
+        diff |= expectedMac.codeUnitAt(i) ^ storedMac.codeUnitAt(i);
+      }
+      if (diff != 0) {
+        debugPrint('[LicenseManager] HMAC mismatch — stored license data may be tampered.');
+        return null;
+      }
+
+      return jsonDecode(payload) as Map<String, dynamic>;
     } catch (e) {
+      debugPrint('[LicenseManager] Failed to parse license bundle: $e');
       return null;
     }
   }
