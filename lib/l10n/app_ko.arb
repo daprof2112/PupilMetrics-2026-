@@ -1453,5 +1453,19 @@
   "chartSizeTooltip": "차트 크기",
   "chartOpacityAdvancedTooltip": "차트 불투명도 (0 = 호버 전용 / 장기 모드)",
   "anwLabel": "ANW",
-  "doneAndGoBack": "완료 및 뒤로"
+  "doneAndGoBack": "완료 및 뒤로",
+  "errorImageShape": "이미지 형태 오류 - 눈이 프레임을 채우도록 하세요",
+  "cameraConnected": "카메라 연결됨",
+  "cameraDisconnected": "카메라 연결 해제",
+  "cameraPermissionDenied": "카메라 권한 거부됨",
+  "cameraFailedInit": "카메라 초기화 실패",
+  "cameraInUse": "카메라가 다른 앱에서 사용 중입니다",
+  "cameraFormatNotSupported": "카메라 형식이 지원되지 않습니다",
+  "capturedImageNotFound": "촬영된 이미지 파일을 찾을 수 없습니다",
+  "failedToCaptureImage": "이미지 캡처 실패",
+  "gradeA": "A",
+  "gradeB": "B",
+  "gradeC": "C",
+  "gradeD": "D",
+  "cameraErrorOccurred": "카메라 오류 발생"
 }

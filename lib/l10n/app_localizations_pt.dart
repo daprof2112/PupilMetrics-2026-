@@ -3452,6 +3452,50 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get doneAndGoBack => 'Concluído e voltar';
+
+  @override
+  String get errorImageShape =>
+      'Forma da imagem incorreta - garanta que o olho preencha o quadro';
+
+  @override
+  String get cameraConnected => 'Câmera conectada';
+
+  @override
+  String get cameraDisconnected => 'Câmera desconectada';
+
+  @override
+  String get cameraPermissionDenied => 'Permissão da câmera negada';
+
+  @override
+  String get cameraFailedInit => 'Falha ao inicializar câmera';
+
+  @override
+  String get cameraInUse => 'Câmera está sendo usada por outro aplicativo';
+
+  @override
+  String get cameraFormatNotSupported => 'Formato de câmera não suportado';
+
+  @override
+  String get capturedImageNotFound =>
+      'Arquivo de imagem capturada não encontrado';
+
+  @override
+  String get failedToCaptureImage => 'Falha ao capturar imagem';
+
+  @override
+  String get gradeA => 'A';
+
+  @override
+  String get gradeB => 'B';
+
+  @override
+  String get gradeC => 'C';
+
+  @override
+  String get gradeD => 'D';
+
+  @override
+  String get cameraErrorOccurred => 'Ocorreu um erro de câmera';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -6841,4 +6885,48 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get doneAndGoBack => 'Concluído e voltar';
+
+  @override
+  String get errorImageShape =>
+      'Forma da imagem incorreta - garanta que o olho preencha o quadro';
+
+  @override
+  String get cameraConnected => 'Câmera conectada';
+
+  @override
+  String get cameraDisconnected => 'Câmera desconectada';
+
+  @override
+  String get cameraPermissionDenied => 'Permissão da câmera negada';
+
+  @override
+  String get cameraFailedInit => 'Falha ao inicializar câmera';
+
+  @override
+  String get cameraInUse => 'Câmera está sendo usada por outro aplicativo';
+
+  @override
+  String get cameraFormatNotSupported => 'Formato de câmera não suportado';
+
+  @override
+  String get capturedImageNotFound =>
+      'Arquivo de imagem capturada não encontrado';
+
+  @override
+  String get failedToCaptureImage => 'Falha ao capturar imagem';
+
+  @override
+  String get gradeA => 'A';
+
+  @override
+  String get gradeB => 'B';
+
+  @override
+  String get gradeC => 'C';
+
+  @override
+  String get gradeD => 'D';
+
+  @override
+  String get cameraErrorOccurred => 'Ocorreu um erro de câmera';
 }

@@ -1411,5 +1411,19 @@
   "chartSizeTooltip": "Tamanho do gráfico",
   "chartOpacityAdvancedTooltip": "Opacidade do gráfico (0 = somente hover / Modo órgãos)",
   "anwLabel": "ANW",
-  "doneAndGoBack": "Concluído e voltar"
+  "doneAndGoBack": "Concluído e voltar",
+  "errorImageShape": "Forma da imagem incorreta - garanta que o olho preencha o quadro",
+  "cameraConnected": "Câmera conectada",
+  "cameraDisconnected": "Câmera desconectada",
+  "cameraPermissionDenied": "Permissão da câmera negada",
+  "cameraFailedInit": "Falha ao inicializar câmera",
+  "cameraInUse": "Câmera está sendo usada por outro aplicativo",
+  "cameraFormatNotSupported": "Formato de câmera não suportado",
+  "capturedImageNotFound": "Arquivo de imagem capturada não encontrado",
+  "failedToCaptureImage": "Falha ao capturar imagem",
+  "gradeA": "A",
+  "gradeB": "B",
+  "gradeC": "C",
+  "gradeD": "D",
+  "cameraErrorOccurred": "Ocorreu um erro de câmera"
 }

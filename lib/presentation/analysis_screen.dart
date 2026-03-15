@@ -472,10 +472,11 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
   }
 
   String _gradeFromConfidence(double confidence) {
-    if (confidence >= 0.85) return 'A';
-    if (confidence >= 0.70) return 'B';
-    if (confidence >= 0.55) return 'C';
-    return 'D';
+    final l10n = AppLocalizations.of(context)!;
+    if (confidence >= 0.85) return l10n.gradeA;
+    if (confidence >= 0.70) return l10n.gradeB;
+    if (confidence >= 0.55) return l10n.gradeC;
+    return l10n.gradeD;
   }
 
   String _displayGrade(EyeAnalysisResult r, {required bool isRightEye}) {

@@ -3457,4 +3457,48 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get doneAndGoBack => 'Listo y volver';
+
+  @override
+  String get errorImageShape =>
+      'Forma de imagen incorrecta - asegúrese de que el ojo llene el marco';
+
+  @override
+  String get cameraConnected => 'Cámara conectada';
+
+  @override
+  String get cameraDisconnected => 'Cámara desconectada';
+
+  @override
+  String get cameraPermissionDenied => 'Permiso de cámara denegado';
+
+  @override
+  String get cameraFailedInit => 'Error al inicializar la cámara';
+
+  @override
+  String get cameraInUse => 'La cámara está siendo usada por otra aplicación';
+
+  @override
+  String get cameraFormatNotSupported => 'Formato de cámara no compatible';
+
+  @override
+  String get capturedImageNotFound =>
+      'Archivo de imagen capturada no encontrado';
+
+  @override
+  String get failedToCaptureImage => 'Error al capturar imagen';
+
+  @override
+  String get gradeA => 'A';
+
+  @override
+  String get gradeB => 'B';
+
+  @override
+  String get gradeC => 'C';
+
+  @override
+  String get gradeD => 'D';
+
+  @override
+  String get cameraErrorOccurred => 'Ocurrió un error de cámara';
 }

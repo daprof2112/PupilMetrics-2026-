@@ -3337,4 +3337,46 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get doneAndGoBack => '完了して戻る';
+
+  @override
+  String get errorImageShape => '画像形状が不正 - 目がフレームを満たすようにしてください';
+
+  @override
+  String get cameraConnected => 'カメラ接続済み';
+
+  @override
+  String get cameraDisconnected => 'カメラ切断';
+
+  @override
+  String get cameraPermissionDenied => 'カメラのアクセス許可が拒否されました';
+
+  @override
+  String get cameraFailedInit => 'カメラの初期化に失敗しました';
+
+  @override
+  String get cameraInUse => 'カメラは別のアプリで使用中です';
+
+  @override
+  String get cameraFormatNotSupported => 'カメラのフォーマットがサポートされていません';
+
+  @override
+  String get capturedImageNotFound => '撮影した画像ファイルが見つかりません';
+
+  @override
+  String get failedToCaptureImage => '画像の撮影に失敗しました';
+
+  @override
+  String get gradeA => 'A';
+
+  @override
+  String get gradeB => 'B';
+
+  @override
+  String get gradeC => 'C';
+
+  @override
+  String get gradeD => 'D';
+
+  @override
+  String get cameraErrorOccurred => 'カメラエラーが発生しました';
 }

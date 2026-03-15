@@ -37,6 +37,22 @@ class _UvcCameraScreenState extends State<UvcCameraScreen> {
     _initializeController();
   }
 
+  // Maps English status/error constant strings to localized equivalents
+  String? _localizeMessage(String? msg, AppLocalizations l10n) {
+    if (msg == null) return null;
+    switch (msg) {
+      case 'Camera connected': return l10n.cameraConnected;
+      case 'Camera disconnected': return l10n.cameraDisconnected;
+      case 'No external camera detected': return l10n.noExternalCameraTitle;
+      case 'Camera permission denied': return l10n.cameraPermissionDenied;
+      case 'Failed to initialize camera': return l10n.cameraFailedInit;
+      case 'Camera error occurred': return l10n.cameraErrorOccurred;
+      case 'Camera is in use by another app': return l10n.cameraInUse;
+      case 'Camera format not supported': return l10n.cameraFormatNotSupported;
+      default: return msg;
+    }
+  }
+
   // v5.2.8: Sanitize messages - remove Chinese/non-ASCII and provide English fallback
   String _sanitizeMessage(String? message) {
     if (message == null || message.isEmpty) {
@@ -142,14 +158,14 @@ class _UvcCameraScreenState extends State<UvcCameraScreen> {
             _navigateWithPhoto(imagePath);
           }
         } else {
-          _showError('Captured image file not found');
+          _showError(AppLocalizations.of(context)!.capturedImageNotFound);
         }
       } else {
-        _showError('Failed to capture image');
+        _showError(AppLocalizations.of(context)!.failedToCaptureImage);
       }
     } catch (e) {
       debugPrint('Capture error: $e');
-      _showError('Capture failed: ${_sanitizeMessage(e.toString())}');
+      _showError(AppLocalizations.of(context)!.cameraErrorOccurred);
     } finally {
       if (mounted) {
         setState(() => _isCapturing = false);
@@ -187,7 +203,7 @@ class _UvcCameraScreenState extends State<UvcCameraScreen> {
   void _showError(String message) {
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(_sanitizeMessage(message)), backgroundColor: Colors.red),
+        SnackBar(content: Text(message), backgroundColor: Colors.red),
       );
     }
   }
@@ -292,8 +308,7 @@ class _UvcCameraScreenState extends State<UvcCameraScreen> {
           const SizedBox(width: 12),
           Expanded(
             child: Text(
-              // v5.2.8: Show clean English message
-              _statusMessage ?? l10n.connectUsbCameraToBegin,
+              _localizeMessage(_statusMessage, l10n) ?? l10n.connectUsbCameraToBegin,
               style: TextStyle(fontSize: 12, color: Colors.grey[400]),
               overflow: TextOverflow.ellipsis,
             ),
@@ -573,9 +588,9 @@ class _UvcCameraScreenState extends State<UvcCameraScreen> {
             _buildInfoRow(l10n.state, _cameraState.name.toUpperCase()),
             _buildInfoRow(l10n.eye, widget.isRightEye ? l10n.rightEyeOD : l10n.leftEyeOS),
             if (_statusMessage != null)
-              _buildInfoRow(l10n.status, _statusMessage!),
+              _buildInfoRow(l10n.status, _localizeMessage(_statusMessage, l10n)!),
             if (_errorMessage != null)
-              _buildInfoRow(l10n.error, _errorMessage!),
+              _buildInfoRow(l10n.error, _localizeMessage(_errorMessage, l10n)!),
             const SizedBox(height: 16),
             const Divider(color: Colors.grey),
             const SizedBox(height: 8),

@@ -3343,4 +3343,46 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get doneAndGoBack => '완료 및 뒤로';
+
+  @override
+  String get errorImageShape => '이미지 형태 오류 - 눈이 프레임을 채우도록 하세요';
+
+  @override
+  String get cameraConnected => '카메라 연결됨';
+
+  @override
+  String get cameraDisconnected => '카메라 연결 해제';
+
+  @override
+  String get cameraPermissionDenied => '카메라 권한 거부됨';
+
+  @override
+  String get cameraFailedInit => '카메라 초기화 실패';
+
+  @override
+  String get cameraInUse => '카메라가 다른 앱에서 사용 중입니다';
+
+  @override
+  String get cameraFormatNotSupported => '카메라 형식이 지원되지 않습니다';
+
+  @override
+  String get capturedImageNotFound => '촬영된 이미지 파일을 찾을 수 없습니다';
+
+  @override
+  String get failedToCaptureImage => '이미지 캡처 실패';
+
+  @override
+  String get gradeA => 'A';
+
+  @override
+  String get gradeB => 'B';
+
+  @override
+  String get gradeC => 'C';
+
+  @override
+  String get gradeD => 'D';
+
+  @override
+  String get cameraErrorOccurred => '카메라 오류 발생';
 }

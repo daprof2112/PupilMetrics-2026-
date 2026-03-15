@@ -1412,5 +1412,19 @@
   "chartSizeTooltip": "チャートサイズ",
   "chartOpacityAdvancedTooltip": "チャート不透明度（0 = ホバーのみ / 臓器モード）",
   "anwLabel": "ANW",
-  "doneAndGoBack": "完了して戻る"
+  "doneAndGoBack": "完了して戻る",
+  "errorImageShape": "画像形状が不正 - 目がフレームを満たすようにしてください",
+  "cameraConnected": "カメラ接続済み",
+  "cameraDisconnected": "カメラ切断",
+  "cameraPermissionDenied": "カメラのアクセス許可が拒否されました",
+  "cameraFailedInit": "カメラの初期化に失敗しました",
+  "cameraInUse": "カメラは別のアプリで使用中です",
+  "cameraFormatNotSupported": "カメラのフォーマットがサポートされていません",
+  "capturedImageNotFound": "撮影した画像ファイルが見つかりません",
+  "failedToCaptureImage": "画像の撮影に失敗しました",
+  "gradeA": "A",
+  "gradeB": "B",
+  "gradeC": "C",
+  "gradeD": "D",
+  "cameraErrorOccurred": "カメラエラーが発生しました"
 }

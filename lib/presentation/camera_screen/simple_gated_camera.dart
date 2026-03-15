@@ -557,7 +557,7 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
           setState(() {
             _isCapturing = false;
             _isValidating = false;
-            _validationError = _getSimplifiedError(validationResult);
+            _validationError = _getSimplifiedError(validationResult, AppLocalizations.of(context)!);
             _readyFrameCount = 0;
           });
           _showValidationErrorDialog(validationResult);
@@ -614,29 +614,29 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
     }
   }
 
-  String _getSimplifiedError(EyeValidationResult result) {
+  String _getSimplifiedError(EyeValidationResult result, AppLocalizations l10n) {
     final checks = result.checkResults;
 
     if (checks['aspectRatio'] == false) {
-      return 'Image shape incorrect - ensure eye fills frame';
+      return l10n.errorImageShape;
     }
     if (checks['hasCircle'] == false || checks['hasConcentricCircles'] == false) {
-      return 'No eye detected - center iris in frame';
+      return l10n.errorNoEyeDetected;
     }
     if (checks['hasDarkCenter'] == false) {
-      return 'No pupil detected - ensure good lighting';
+      return l10n.errorNoPupilDetected;
     }
     if (checks['hasTexture'] == false) {
-      return 'No iris texture - move closer to eye';
+      return l10n.errorNoIrisTexture;
     }
     if (checks['colorDistribution'] == false) {
-      return 'Unusual colors detected - avoid screens/reflections';
+      return l10n.errorUnusualColors;
     }
     if (checks['edgeDensity'] == false) {
-      return 'Too many straight edges - this may not be an eye';
+      return l10n.errorTooManyEdges;
     }
 
-    return 'Not a valid eye image - please try again';
+    return l10n.errorNotValidEye;
   }
 
   void _showValidationErrorDialog(EyeValidationResult result) {
@@ -675,7 +675,7 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: Colors.red.withOpacity(0.3)),
               ),
-              child: Text(_getSimplifiedError(result), style: const TextStyle(color: Colors.white, fontSize: 14)),
+              child: Text(_getSimplifiedError(result, l10n), style: const TextStyle(color: Colors.white, fontSize: 14)),
             ),
             const SizedBox(height: 16),
             Text(l10n!.validationChecks, style: const TextStyle(color: Colors.white70, fontSize: 12, fontWeight: FontWeight.bold)),
@@ -686,7 +686,7 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
                 children: [
                   Icon(e.value ? Icons.check_circle : Icons.cancel, color: e.value ? Colors.green : Colors.red, size: 16),
                   const SizedBox(width: 8),
-                  Text(_getCheckLabel(e.key), style: TextStyle(color: e.value ? Colors.white70 : Colors.red.shade300, fontSize: 12)),
+                  Text(_getCheckLabel(e.key, l10n), style: TextStyle(color: e.value ? Colors.white70 : Colors.red.shade300, fontSize: 12)),
                 ],
               ),
             )),
@@ -717,15 +717,15 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
     );
   }
 
-  String _getCheckLabel(String checkName) {
+  String _getCheckLabel(String checkName, AppLocalizations l10n) {
     switch (checkName) {
-      case 'aspectRatio': return 'Image Shape';
-      case 'hasCircle': return 'Circular Iris';
-      case 'hasDarkCenter': return 'Dark Pupil';
-      case 'hasTexture': return 'Iris Texture';
-      case 'hasConcentricCircles': return 'Pupil-Iris Structure';
-      case 'colorDistribution': return 'Natural Colors';
-      case 'edgeDensity': return 'Edge Pattern';
+      case 'aspectRatio': return l10n.checkImageShape;
+      case 'hasCircle': return l10n.checkCircularIris;
+      case 'hasDarkCenter': return l10n.checkDarkPupil;
+      case 'hasTexture': return l10n.checkIrisTexture;
+      case 'hasConcentricCircles': return l10n.checkPupilIrisStructure;
+      case 'colorDistribution': return l10n.checkNaturalColors;
+      case 'edgeDensity': return l10n.checkEdgePattern;
       default: return checkName;
     }
   }

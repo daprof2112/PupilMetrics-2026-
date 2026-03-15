@@ -1453,5 +1453,19 @@
   "chartSizeTooltip": "Dimensione del grafico",
   "chartOpacityAdvancedTooltip": "Opacità del grafico (0 = solo hover / Modalità organi)",
   "anwLabel": "ANW",
-  "doneAndGoBack": "Fatto e torna indietro"
+  "doneAndGoBack": "Fatto e torna indietro",
+  "errorImageShape": "Forma dell'immagine errata - assicurarsi che l'occhio riempia il frame",
+  "cameraConnected": "Fotocamera connessa",
+  "cameraDisconnected": "Fotocamera disconnessa",
+  "cameraPermissionDenied": "Autorizzazione fotocamera negata",
+  "cameraFailedInit": "Impossibile inizializzare la fotocamera",
+  "cameraInUse": "La fotocamera è in uso da un'altra app",
+  "cameraFormatNotSupported": "Formato fotocamera non supportato",
+  "capturedImageNotFound": "File immagine acquisita non trovato",
+  "failedToCaptureImage": "Impossibile acquisire l'immagine",
+  "gradeA": "A",
+  "gradeB": "B",
+  "gradeC": "C",
+  "gradeD": "D",
+  "cameraErrorOccurred": "Si è verificato un errore della fotocamera"
 }

@@ -6329,6 +6329,90 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Done & Go Back'**
   String get doneAndGoBack;
+
+  /// No description provided for @errorImageShape.
+  ///
+  /// In en, this message translates to:
+  /// **'Image shape incorrect - ensure eye fills frame'**
+  String get errorImageShape;
+
+  /// No description provided for @cameraConnected.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera connected'**
+  String get cameraConnected;
+
+  /// No description provided for @cameraDisconnected.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera disconnected'**
+  String get cameraDisconnected;
+
+  /// No description provided for @cameraPermissionDenied.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera permission denied'**
+  String get cameraPermissionDenied;
+
+  /// No description provided for @cameraFailedInit.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to initialize camera'**
+  String get cameraFailedInit;
+
+  /// No description provided for @cameraInUse.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera is in use by another app'**
+  String get cameraInUse;
+
+  /// No description provided for @cameraFormatNotSupported.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera format not supported'**
+  String get cameraFormatNotSupported;
+
+  /// No description provided for @capturedImageNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Captured image file not found'**
+  String get capturedImageNotFound;
+
+  /// No description provided for @failedToCaptureImage.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to capture image'**
+  String get failedToCaptureImage;
+
+  /// No description provided for @gradeA.
+  ///
+  /// In en, this message translates to:
+  /// **'A'**
+  String get gradeA;
+
+  /// No description provided for @gradeB.
+  ///
+  /// In en, this message translates to:
+  /// **'B'**
+  String get gradeB;
+
+  /// No description provided for @gradeC.
+  ///
+  /// In en, this message translates to:
+  /// **'C'**
+  String get gradeC;
+
+  /// No description provided for @gradeD.
+  ///
+  /// In en, this message translates to:
+  /// **'D'**
+  String get gradeD;
+
+  /// No description provided for @cameraErrorOccurred.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera error occurred'**
+  String get cameraErrorOccurred;
 }
 
 class _AppLocalizationsDelegate
