@@ -1,16 +1,20 @@
 // lib/utils/license_manager.dart
-// CNRI Eye Capture - Desktop License Management System v1.3
+// CNRI Eye Capture - Desktop License Management System v2.0
 // v1.2: Migrated from SharedPreferences + XOR to flutter_secure_storage
 //       License data is now encrypted at rest using OS-native storage:
 //       Windows DPAPI / macOS Keychain / Linux libsecret
 // v1.3: Added HMAC-SHA256 integrity check to stored license blob.
 //       Any direct edit of secure storage will be detected and rejected.
+// v2.0: Phase 2 — Ed25519 asymmetric license file (.lic) support.
+//       Private key lives only in the admin tool (never in the app).
+//       Public key is embedded; no private key → no forged licenses.
 // ============================================================================
 
 import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 import 'package:crypto/crypto.dart';
+import 'package:cryptography/cryptography.dart' as cry;
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
@@ -90,6 +94,11 @@ class LicenseManager {
   static const String _activationServer = 'offline'; // Set to URL if using server
   static const int _trialDays = 14;
   static const int _offlineGraceDays = 7;
+
+  // Ed25519 public key for .lic file verification (base64-encoded, 32 bytes).
+  // The matching private key lives ONLY in tool/generate_license.dart (gitignored).
+  static const String _ed25519PublicKeyB64 =
+      '9ThxoaJ2JIDDd8G50WRZglapCc6x/79gQ6MTJoLqn50=';
 
   // OS-native encrypted storage (Windows DPAPI / macOS Keychain / Linux libsecret)
   // No key management needed — the OS handles encryption transparently.
@@ -288,6 +297,114 @@ class LicenseManager {
     _machineId = hash.substring(0, 32).toUpperCase();
 
     return _machineId!;
+  }
+
+  /// Import and activate a signed .lic license file (Phase 2 / Ed25519).
+  Future<LicenseInfo> importLicenseFile(String filePath) async {
+    try {
+      final file = File(filePath);
+      if (!await file.exists()) {
+        return _createLicenseInfo(LicenseStatus.invalid, 'License file not found.');
+      }
+
+      final content = await file.readAsString();
+      final payload = await _verifyLicFile(content);
+      if (payload == null) {
+        return _createLicenseInfo(LicenseStatus.invalid,
+            'This license file is invalid or has been tampered with. '
+            'Please request a new one from support.');
+      }
+
+      // Check machine binding if present
+      final boundMachine = payload['machineId'] as String?;
+      if (boundMachine != null &&
+          boundMachine.isNotEmpty &&
+          boundMachine != _machineId) {
+        return _createLicenseInfo(LicenseStatus.machineMismatch,
+            'This license file is bound to a different computer. '
+            'Contact support to transfer your license.');
+      }
+
+      // Check expiry
+      final expiresAtStr = payload['expiresAt'] as String?;
+      DateTime? expDate;
+      if (expiresAtStr != null) {
+        expDate = DateTime.parse(expiresAtStr);
+        if (DateTime.now().isAfter(expDate)) {
+          return _createLicenseInfo(LicenseStatus.expired,
+              'This license file has expired. Please contact support for renewal.');
+        }
+      }
+
+      final type = _getLicenseType(payload['type'] as String?);
+      final name = payload['registeredTo'] as String? ?? 'Licensed User';
+      final email = payload['email'] as String? ?? '';
+      final licKey = payload['licenseKey'] as String? ?? '';
+
+      final info = LicenseInfo(
+        status: LicenseStatus.valid,
+        type: type,
+        licenseKey: licKey,
+        registeredTo: name,
+        email: email,
+        activationDate: DateTime.now(),
+        expirationDate: expDate,
+        daysRemaining: expDate?.difference(DateTime.now()).inDays,
+        machineId: _machineId,
+        message: 'License file activated successfully! Welcome, $name.',
+      );
+
+      await _writeLicenseData({
+        'key': licKey,
+        'type': type.name,
+        'email': email,
+        'registeredTo': name,
+        'machineId': boundMachine ?? _machineId,
+        'activationDate': DateTime.now().toIso8601String(),
+        'expirationDate': expDate?.toIso8601String(),
+        'source': 'licfile',
+      });
+      await _storage.delete(key: _keyTrialStart);
+      await _updateValidationTime();
+      _cachedLicense = info;
+
+      return info;
+    } catch (e) {
+      debugPrint('[LicenseManager] importLicenseFile error: $e');
+      return _createLicenseInfo(LicenseStatus.invalid,
+          'Failed to read license file. Please ensure the file is not corrupted.');
+    }
+  }
+
+  /// Verify the Ed25519 signature of a .lic file and return the parsed payload,
+  /// or null if the signature is invalid or the file is malformed.
+  Future<Map<String, dynamic>?> _verifyLicFile(String content) async {
+    try {
+      final bundle = jsonDecode(content) as Map<String, dynamic>;
+      if ((bundle['version'] as int?) != 2) return null;
+
+      final payloadB64 = bundle['payload'] as String?;
+      final sigB64 = bundle['signature'] as String?;
+      if (payloadB64 == null || sigB64 == null) return null;
+
+      final payloadBytes = base64.decode(base64.normalize(payloadB64));
+      final sigBytes = base64.decode(base64.normalize(sigB64));
+
+      final pubKeyBytes = base64.decode(_ed25519PublicKeyB64);
+      final publicKey = cry.SimplePublicKey(pubKeyBytes, type: cry.KeyPairType.ed25519);
+      final signature = cry.Signature(sigBytes, publicKey: publicKey);
+
+      final valid = await cry.Ed25519().verify(payloadBytes, signature: signature);
+      if (!valid) {
+        debugPrint('[LicenseManager] .lic Ed25519 signature invalid.');
+        return null;
+      }
+
+      return jsonDecode(utf8.decode(payloadBytes)) as Map<String, dynamic>;
+    } catch (e) {
+      debugPrint('[LicenseManager] .lic verification error: $e');
+      return null;
+    }
   }
 
   /// Get cached license info (non-async for UI)

@@ -28,6 +28,9 @@ google-services.json
 GoogleService-Info.plist
 firebase.json
 tool/encode_strings.dart
+tool/generate_license.dart
+tool/gen_keys_temp.dart
+*.lic
 
 # Environment variables
 .env

@@ -6,6 +6,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ai_eye_capture/utils/license_manager.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:ai_eye_capture/utils/purchase_links.dart';
 import 'package:ai_eye_capture/l10n/app_localizations.dart';
@@ -34,6 +35,7 @@ class _LicenseDialogState extends State<LicenseDialog> {
   final _nameController = TextEditingController();
 
   bool _isActivating = false;
+  bool _isImporting = false;
   String? _errorMessage;
   String? _machineId;
   LicenseInfo? _activatedLicense;
@@ -493,6 +495,32 @@ class _LicenseDialogState extends State<LicenseDialog> {
 
         const SizedBox(height: 12),
 
+        // Import License File (.lic) — Phase 2 asymmetric activation
+        SizedBox(
+          width: double.infinity,
+          child: OutlinedButton.icon(
+            onPressed: (_isActivating || _isImporting) ? null : _importLicenseFile,
+            icon: _isImporting
+                ? const SizedBox(
+                    height: 16,
+                    width: 16,
+                    child: CircularProgressIndicator(strokeWidth: 2),
+                  )
+                : const Icon(Icons.upload_file, size: 18),
+            label: const Text('Import License File (.lic)'),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: const Color(0xFF00D9FF),
+              side: const BorderSide(color: Color(0xFF00D9FF)),
+              padding: const EdgeInsets.symmetric(vertical: 14),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+          ),
+        ),
+
+        const SizedBox(height: 12),
+
         // Secondary Actions Row
         Row(
           children: [
@@ -614,6 +642,46 @@ class _LicenseDialogState extends State<LicenseDialog> {
       setState(() {
         _isActivating = false;
         _errorMessage = AppLocalizations.of(context)!.licenseMsgUnableToActivate;
+      });
+    }
+  }
+
+  Future<void> _importLicenseFile() async {
+    setState(() {
+      _isImporting = true;
+      _errorMessage = null;
+      _activatedLicense = null;
+    });
+
+    try {
+      final result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['lic'],
+        dialogTitle: 'Select License File',
+      );
+
+      if (result == null || result.files.single.path == null) {
+        setState(() => _isImporting = false);
+        return;
+      }
+
+      final filePath = result.files.single.path!;
+      final license = await LicenseManager().importLicenseFile(filePath);
+
+      if (!mounted) return;
+      setState(() {
+        _isImporting = false;
+        if (license.isValid) {
+          _activatedLicense = license;
+        } else {
+          _errorMessage = license.message;
+        }
+      });
+    } catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _isImporting = false;
+        _errorMessage = 'Failed to import license file. Please try again.';
       });
     }
   }
