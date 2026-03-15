@@ -801,12 +801,18 @@ class _SimpleGatedCameraScreenState extends State<SimpleGatedCameraScreen>
     }
   }
 
-  void _adjustZoom(double delta) async {
+  Future<void> _adjustZoom(double delta) async {
     final newZoom = (_currentZoom + delta).clamp(_minZoom, _maxZoom);
     if (newZoom != _currentZoom) {
-      await _controller?.setZoomLevel(newZoom);
-      _playHaptic(HapticType.selection);
-      setState(() => _currentZoom = newZoom);
+      try {
+        await _controller?.setZoomLevel(newZoom);
+        if (mounted) {
+          _playHaptic(HapticType.selection);
+          setState(() => _currentZoom = newZoom);
+        }
+      } catch (e) {
+        debugPrint('Zoom error: $e');
+      }
     }
   }
 

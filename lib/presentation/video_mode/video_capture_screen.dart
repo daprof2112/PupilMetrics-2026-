@@ -186,16 +186,17 @@ class _VideoCaptureScreenState extends State<VideoCaptureScreen> with TickerProv
     }
   }
 
-  void _triggerFlash() async {
+  Future<void> _triggerFlash() async {
     if (_cameraController != null) {
       try {
         await _cameraController!.setFlashMode(FlashMode.torch);
-        setState(() => _isFlashOn = true);
+        if (mounted) setState(() => _isFlashOn = true);
         await Future.delayed(Duration(milliseconds: PLRNormativeValues.flashDurationMs));
         await _cameraController!.setFlashMode(FlashMode.off);
-        setState(() => _isFlashOn = false);
+        if (mounted) setState(() => _isFlashOn = false);
       } catch (e) {
         debugPrint('[PLR] Flash error: $e');
+        if (mounted) setState(() => _isFlashOn = false);
       }
     }
   }

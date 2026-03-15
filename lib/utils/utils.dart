@@ -39,7 +39,7 @@ Future<bool> shouldShowOnboarding() async {
   return isFirstTime;
 }
 
-void markOnboardingShown() async {
+Future<void> markOnboardingShown() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   await prefs.setBool('isFirstTime', false);
 }

@@ -627,9 +627,9 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void _openLicenseDialog() async {
+  Future<void> _openLicenseDialog() async {
     final result = await showLicenseDialog(context, currentLicense: _licenseInfo);
-    if (result != null) {
+    if (result != null && mounted) {
       _loadLicenseStatus();
     }
   }
