@@ -32,6 +32,10 @@ tool/generate_license.dart
 tool/gen_keys_temp.dart
 *.lic
 
+# License server — secrets and database
+server/.env
+server/data/
+
 # Environment variables
 .env
 .env.*

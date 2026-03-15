@@ -91,7 +91,17 @@ class LicenseManager {
   static const String _appName = 'PupilMetrics';
   static const String _appVersion = '5.5.0';
   static const String _secretKey = 'J7hhJkReFF-CNRI-2026-JPz123Z883!'; // CHANGE THIS FOR PRODUCTION!
-  static const String _activationServer = 'offline'; // Set to URL if using server
+
+  // Set to your server URL to enable Phase 3 online activation.
+  // Example: 'https://licenses.yourserver.com'
+  // Keep 'offline' to run fully offline (Phase 1 + Phase 2 only).
+  static const String _activationServer = 'offline';
+
+  // Shared HMAC secret between app and license server.
+  // Must match PM_API_SECRET in server/.env.
+  // Only used when _activationServer != 'offline'.
+  static const String _apiSecret = 'change-me-to-match-PM_API_SECRET-on-your-server';
+
   static const int _trialDays = 14;
   static const int _offlineGraceDays = 7;
 
@@ -233,8 +243,14 @@ class LicenseManager {
     }
   }
 
-  /// Deactivate current license
+  /// Deactivate current license — notifies server to free the machine slot.
   Future<void> deactivateLicense() async {
+    // Notify server before clearing local state so we still have the key
+    final storedRaw = await _storage.read(key: _keyLicenseData);
+    if (storedRaw != null) {
+      final data = _parseLicenseData(storedRaw);
+      await _deactivateOnline(data?['key'] as String?);
+    }
     await _storage.delete(key: _keyLicenseData);
     await _storage.delete(key: _keyLastValidation);
     await _storage.delete(key: _keyTrialStart);
@@ -581,24 +597,41 @@ class LicenseManager {
   }
 
   // =========================================================================
-  // ONLINE ACTIVATION (for future use)
+  // ONLINE ACTIVATION (Phase 3 — server-side validation)
+  // Set _activationServer to your server URL to enable.
+  // All requests are HMAC-signed so only genuine app instances can call
+  // the server. The server tracks activations and handles revocation.
   // =========================================================================
+
+  /// Build headers with HMAC-SHA256 request signature.
+  /// Server verifies X-App-Sig == HMAC(apiSecret, requestBody).
+  Map<String, String> _signedHeaders(String body) {
+    final sig = Hmac(sha256, utf8.encode(_apiSecret))
+        .convert(utf8.encode(body))
+        .toString();
+    return {
+      'Content-Type': 'application/json',
+      'X-App-Sig': sig,
+      'X-App-Version': _appVersion,
+    };
+  }
 
   Future<LicenseInfo?> _activateOnline(String key, String email, String name) async {
     if (_activationServer == 'offline') return null;
 
     try {
+      final body = jsonEncode({
+        'key': key,
+        'email': email,
+        'name': name,
+        'machineId': _machineId,
+        'appVersion': _appVersion,
+        'platform': Platform.operatingSystem,
+      });
       final response = await http.post(
         Uri.parse('$_activationServer/activate'),
-        headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({
-          'key': key,
-          'email': email,
-          'name': name,
-          'machineId': _machineId,
-          'appVersion': _appVersion,
-          'platform': Platform.operatingSystem,
-        }),
+        headers: _signedHeaders(body),
+        body: body,
       ).timeout(const Duration(seconds: 10));
 
       if (response.statusCode == 200) {
@@ -624,21 +657,19 @@ class LicenseManager {
       }
       return null;
     } catch (e) {
-      debugPrint('Online activation failed: $e');
-      return null;
+      debugPrint('[LicenseManager] Online activation failed (offline fallback): $e');
+      return null; // Fall through to offline validation
     }
   }
 
   Future<LicenseInfo?> _validateOnline(String? key) async {
     if (key == null || _activationServer == 'offline') return null;
     try {
+      final body = jsonEncode({'key': key, 'machineId': _machineId});
       final response = await http.post(
         Uri.parse('$_activationServer/validate'),
-        headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({
-          'key': key,
-          'machineId': _machineId,
-        }),
+        headers: _signedHeaders(body),
+        body: body,
       ).timeout(const Duration(seconds: 10));
 
       if (response.statusCode == 200) {
@@ -651,8 +682,23 @@ class LicenseManager {
       }
       return null;
     } catch (e) {
-      debugPrint('Online validation failed: $e');
-      return null;
+      debugPrint('[LicenseManager] Online validation failed (using cached): $e');
+      return null; // Honour offline grace period
+    }
+  }
+
+  /// Notify server to free the machine slot when deactivating locally.
+  Future<void> _deactivateOnline(String? key) async {
+    if (key == null || _activationServer == 'offline') return;
+    try {
+      final body = jsonEncode({'key': key, 'machineId': _machineId});
+      await http.post(
+        Uri.parse('$_activationServer/deactivate'),
+        headers: _signedHeaders(body),
+        body: body,
+      ).timeout(const Duration(seconds: 10));
+    } catch (e) {
+      debugPrint('[LicenseManager] Online deactivation failed: $e');
     }
   }
 
