@@ -36,4 +36,7 @@ Options -Indexes
 
     # Admin routes: /admin/revoke → admin.php?action=revoke
     RewriteRule ^admin/(.+)$        admin.php?action=$1  [L,QSA]
+
+    # Admin dashboard clean URL: /dashboard → admin_panel.php
+    RewriteRule ^dashboard$         admin_panel.php      [L]
 </IfModule>
