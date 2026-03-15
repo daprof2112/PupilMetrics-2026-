@@ -1,5 +1,5 @@
 // lib/utils/license_manager.dart
-// CNRI Eye Capture - Desktop License Management System v2.0
+// CNRI Eye Capture - Desktop License Management System v2.1
 // v1.2: Migrated from SharedPreferences + XOR to flutter_secure_storage
 //       License data is now encrypted at rest using OS-native storage:
 //       Windows DPAPI / macOS Keychain / Linux libsecret
@@ -8,6 +8,15 @@
 // v2.0: Phase 2 — Ed25519 asymmetric license file (.lic) support.
 //       Private key lives only in the admin tool (never in the app).
 //       Public key is embedded; no private key → no forged licenses.
+// v2.1: Security hardening:
+//       - Fixed: revoked licenses re-validated as valid after first check.
+//         _validateOnline now deletes local cache on server rejection so
+//         subsequent startups also fail rather than using stale local data.
+//       - generateLicenseKey throws in kReleaseMode (cannot be called at
+//         runtime in production builds).
+//       - .lic file size capped at 10 KB before reading into memory.
+//       - Ed25519 algorithm instance is now a cached static (was re-created
+//         on every .lic verification).
 // ============================================================================
 
 import 'dart:convert';
@@ -109,6 +118,12 @@ class LicenseManager {
   // The matching private key lives ONLY in tool/generate_license.dart (gitignored).
   static const String _ed25519PublicKeyB64 =
       '9ThxoaJ2JIDDd8G50WRZglapCc6x/79gQ6MTJoLqn50=';
+
+  // Cached Ed25519 algorithm instance (thread-safe, reused across all .lic verifications).
+  static final _ed25519 = cry.Ed25519();
+
+  // Maximum size of a .lic file we will parse (prevents reading arbitrarily large files).
+  static const int _maxLicFileBytes = 10 * 1024; // 10 KB
 
   // OS-native encrypted storage (Windows DPAPI / macOS Keychain / Linux libsecret)
   // No key management needed — the OS handles encryption transparently.
@@ -323,6 +338,13 @@ class LicenseManager {
         return _createLicenseInfo(LicenseStatus.invalid, 'License file not found.');
       }
 
+      // Reject suspiciously large files before reading them into memory.
+      final fileSize = await file.length();
+      if (fileSize > _maxLicFileBytes) {
+        return _createLicenseInfo(LicenseStatus.invalid,
+            'This file is not a valid license file.');
+      }
+
       final content = await file.readAsString();
       final payload = await _verifyLicFile(content);
       if (payload == null) {
@@ -410,7 +432,7 @@ class LicenseManager {
       final publicKey = cry.SimplePublicKey(pubKeyBytes, type: cry.KeyPairType.ed25519);
       final signature = cry.Signature(sigBytes, publicKey: publicKey);
 
-      final valid = await cry.Ed25519().verify(payloadBytes, signature: signature);
+      final valid = await _ed25519.verify(payloadBytes, signature: signature);
       if (!valid) {
         debugPrint('[LicenseManager] .lic Ed25519 signature invalid.');
         return null;
@@ -674,8 +696,17 @@ class LicenseManager {
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        await _updateValidationTime();
-        if (data['valid'] != true) {
+        if (data['valid'] == true) {
+          // License confirmed valid — reset the grace period timer.
+          await _updateValidationTime();
+          return null; // Continue with locally-stored data
+        } else {
+          // Server says this license is revoked or invalid.
+          // Delete the local cache so the next startup also rejects it —
+          // do NOT update the validation time, so the check is not skipped.
+          await _storage.delete(key: _keyLicenseData);
+          await _storage.delete(key: _keyLastValidation);
+          _cachedLicense = null;
           return _createLicenseInfo(LicenseStatus.invalid,
               data['message'] ?? 'License is no longer valid.');
         }
@@ -819,11 +850,23 @@ class LicenseManager {
   }
 
   // =========================================================================
-  // LICENSE KEY GENERATION (For admin use only — run offline, never ship
-  // this method in a production build.)
+  // LICENSE KEY GENERATION
+  // For development/testing only. Throws in release builds so it cannot be
+  // invoked at runtime even if the binary is reverse-engineered.
+  // Production key issuance should use tool/generate_license.dart (Ed25519).
+  //
+  // NOTE: _secretKey is shared between key-checksum, storage-MAC, and
+  // machine-ID hashing. Migrating to per-purpose derived keys would be a
+  // breaking change (invalidates all existing activations). Preferred path:
+  // stop issuing new HMAC keys and move all customers to Phase 2 .lic files.
   // =========================================================================
 
   static String generateLicenseKey(LicenseType type) {
+    if (kReleaseMode) {
+      throw UnsupportedError(
+          'generateLicenseKey is disabled in release builds. '
+          'Use tool/generate_license.dart to issue licenses.');
+    }
     final random = Random.secure();
     final typeCode = switch (type) {
       LicenseType.standard => 'S',
