@@ -1,0 +1,1921 @@
+{
+  "@@locale": "ru",
+  "appTitle": "PupilMetrics",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "analyzeButton": "Анализировать",
+  "plrModes": "Режимы ЗПР",
+  "captureInstructions": "Расположите глаз в направляющем круге",
+  "scanHistory": "История сканирований",
+  "selectCameraMode": "Выбор режима камеры",
+  "loadFromGallery": "Загрузить из галереи",
+  "rightEyePhoto": "Фото правого глаза",
+  "leftEyePhoto": "Фото левого глаза",
+  "autoCapture": "Авто-съёмка",
+  "autoCaptureDesc": "Обнаружение глаза + авто-съёмка через 5 секунд",
+  "manualCapture": "Ручная съёмка",
+  "manualCaptureDesc": "Обнаружение глаза + ручная съёмка (задняя камера)",
+  "selfieMode": "Режим селфи",
+  "selfieModeDesc": "Обнаружение глаза + авто-съёмка через 5 сек (фронтальная камера)",
+  "plrVideoRear": "ЗПР Видео (задняя)",
+  "plrVideoRearDesc": "Задняя камера • съёмка 10 секунд",
+  "plrVideoSelfie": "ЗПР Видео (селфи)",
+  "plrVideoSelfieDesc": "Фронтальная камера • съёмка 10 секунд",
+  "plrVideoCapture": "Запись видео ЗПР",
+  "frontCamera": "Фронтальная камера",
+  "rearCamera": "Задняя камера",
+  "selectEyeToAssess": "Выберите глаз для оценки",
+  "rightEyeOD": "Правый глаз (OD)",
+  "leftEyeOS": "Левый глаз (OS)",
+  "recordPlrRightEye": "Запись ЗПР для правого глаза",
+  "recordPlrLeftEye": "Запись ЗПР для левого глаза",
+  "loadRightEyeImage": "Загрузить изображение правого глаза",
+  "loadLeftEyeImage": "Загрузить изображение левого глаза",
+  "bothEyes": "Оба глаза",
+  "loadBothEyesDesc": "Загрузить правый глаз, затем левый",
+  "selectEyeImageFromDevice": "Выберите изображение глаза с устройства",
+  "selectRightEyeFirst": "Сначала выберите изображение ПРАВОГО глаза (OD)",
+  "rightEyeSaved": "Правый глаз сохранён. Теперь выберите изображение ЛЕВОГО глаза (OS)",
+  "cancelledNoRightEye": "Отменено — правый глаз не выбран",
+  "cancelledNoLeftEye": "Отменено — левый глаз не выбран",
+  "errorLoadingImages": "Ошибка загрузки изображений: {error}",
+  "@errorLoadingImages": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "crop43": "Обрезка (4:3)",
+  "success": "Успешно",
+  "imageCroppedSuccess": "Изображение успешно обрезано!",
+  "error": "Ошибка",
+  "cropFailed": "Не удалось обрезать изображение. Пожалуйста, попробуйте ещё раз.",
+  "crop": "Обрезать",
+  "cancel": "Отмена",
+  "saved": "Сохранено! ✅",
+  "imageSavedToGallery": "Изображение успешно сохранено в галерее",
+  "exposure": "Экспозиция",
+  "flash": "Вспышка",
+  "eye": "Глаз",
+  "center": "центр",
+  "light": "Свет",
+  "ready": "Готово",
+  "on": "ВКЛ",
+  "off": "ВЫКЛ",
+  "auto": "АВТО",
+  "manual": "РУЧНОЙ",
+  "selfie": "СЕЛФИ",
+  "pupil": "ЗРАЧОК",
+  "plrHistory": "История ЗПР",
+  "searchByName": "Поиск по имени...",
+  "totalScans": "Всего сканирований",
+  "thisWeek": "На этой неделе",
+  "patients": "Пациенты",
+  "detected": "Обнаружено",
+  "noPlrRecordsYet": "Записей ЗПР пока нет",
+  "recordPlrVideoToSeeHistory": "Запишите видео ЗПР, чтобы увидеть историю здесь",
+  "deleteRecord": "Удалить запись?",
+  "deleteRecordConfirm": "Удалить анализ ЗПР для {name} ({eye})?\\n\\nЭто действие нельзя отменить.",
+  "@deleteRecordConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "delete": "Удалить",
+  "recordDeleted": "Запись удалена",
+  "plrAnalysis": "Анализ ЗПР — {eye}",
+  "@plrAnalysis": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "patient": "Пациент",
+  "date": "Дата",
+  "frames": "Кадры",
+  "baselinePiRatio": "Исходное P/I",
+  "minPiRatio": "Мин. P/I",
+  "plrMagnitude": "Величина ЗПР",
+  "constriction": "Сужение",
+  "plrDetected": "ЗПР обнаружен",
+  "confidence": "Достоверность",
+  "grade": "Степень",
+  "close": "закрыть",
+  "yes": "Да",
+  "no": "Нет",
+  "na": "Н/Д",
+  "takeLeftEyePhoto": "Сфотографировать левый глаз",
+  "takeRightEyePhoto": "Сфотографировать правый глаз",
+  "nowTakingLeftEye": "Сейчас снимается ЛЕВЫЙ глаз (OS)",
+  "startingWithRightEye": "Начинаем с ПРАВОГО глаза (OD)",
+  "captured": "Снято ✓",
+  "useSameDistanceLighting": "Используйте то же расстояние и освещение, что и для правого глаза, для точного сравнения.",
+  "step1of2": "Шаг 1 из 2",
+  "step2of2": "Шаг 2 из 2",
+  "bothEyesCaptured": "Оба глаза сфотографированы ✓",
+  "continueToLeftEye": "Перейти к левому глазу",
+  "retakeOD": "Переснять OD",
+  "retakeOS": "Переснять OS",
+  "retakeRightEye": "Переснять правый глаз",
+  "analyzeBothEyes": "Анализировать оба глаза",
+  "patientInfoMissing": "Данные пациента отсутствуют",
+  "rightEyePhotoMissing": "Фото правого глаза отсутствует!",
+  "patientInfoMissingRestart": "Данные пациента отсутствуют. Пожалуйста, перезапустите.",
+  "exitApp": "Выйти из приложения",
+  "tipsForBestResults": "СОВЕТЫ ДЛЯ ЛУЧШИХ РЕЗУЛЬТАТОВ",
+  "followGuidelinesForQuality": "Следуйте этим рекомендациям для оптимального качества изображения",
+  "cameraDistance": "Расстояние до камеры",
+  "cameraDistanceDesc": "Держите камеру на расстоянии 10–15 см от глаза. Сохраняйте одинаковое расстояние для обоих глаз.",
+  "lightingPosition": "Положение источника света",
+  "lightingPositionDesc": "Расположите источник света внутри или снаружи границ зрачка. Попробуйте смотреть в сторону вспышки камеры.",
+  "avoidReflections": "Избегайте отражений",
+  "avoidReflectionsDesc": "Уменьшите отражения, избегая оконного блика, зеркал и прямых ламп.",
+  "centerYourEye": "Отцентрируйте глаз",
+  "centerYourEyeDesc": "Убедитесь, что весь глаз, включая склеру (белок), находится в центре и заполняет кадр.",
+  "cropProperly": "Обрежьте правильно",
+  "cropProperlyDesc": "Обрежьте изображение так, чтобы глаз находился в центре. Изображение будет автоматически сохранено в соотношении сторон 4:3.",
+  "importantInformation": "Важная информация",
+  "imageRatio43": "Соотношение сторон 4:3 для стандарта медицинской визуализации",
+  "forClinicalUseCnri": "Для клинического использования с CNRI (cnri.edu)",
+  "noMedicalDiagnosis": "Не предоставляет медицинский диагноз",
+  "eyeWideOpenClear": "Убедитесь, что глаз широко открыт и изображение чёткое",
+  "personalInfo": "Личные данные",
+  "personInformation": "Информация о человеке",
+  "enterPersonDetails": "Введите данные человека",
+  "infoIncludedInReport": "Эта информация будет включена в отчёт по анализу",
+  "fullName": "Полное имя",
+  "enterPersonName": "Введите имя человека",
+  "nameRequired": "Имя обязательно",
+  "sex": "Пол",
+  "male": "Мужской",
+  "female": "Женский",
+  "ageYears": "Возраст (лет)",
+  "enterAge": "Введите возраст",
+  "ageRequired": "Возраст обязателен",
+  "enterValidNumber": "Введите корректное число",
+  "enterValidAge": "Введите корректный возраст (0–120)",
+  "mainComplaints": "Основные жалобы",
+  "mainComplaintsOptional": "Основные жалобы (необязательно)",
+  "complaintsHint": "например, головные боли, проблемы со зрением, усталость...",
+  "continueToCaptire": "Перейти к съёмке",
+  "ageImportantNote": "Возраст важен для точной оценки размера зрачка, поскольку нормальные диапазоны варьируются в зависимости от возраста.",
+  "submit": "Отправить",
+  "pleaseSelectGender": "Пожалуйста, выберите пол!",
+  "applicationSubmitted": "Ваша заявка успешно отправлена.",
+  "type": "Тип:",
+  "gender": "Пол:",
+  "rightHanded": "Правша",
+  "leftHanded": "Левша",
+  "partialLeftHandedness": "Частичное левшество",
+  "retrainedLeftHandedness": "Переученное левшество",
+  "bilateralUseBothHands": "Двуручное использование обеих рук",
+  "splashTitle": "PupilMetrics Eye Capture",
+  "splashDeveloper": "Разработчик программы — Bryan K. Marcia, Ph.D.",
+  "researchEducationalTool": "Исследовательский/образовательный инструмент",
+  "startNewAnalysis": "Начать новый анализ",
+  "viewHistory": "Просмотр истории",
+  "viewResearchDisclaimer": "Просмотр исследовательского отказа от ответственности",
+  "researchDisclaimerTitle": "Исследовательский/образовательный инструмент",
+  "researchDisclaimerNotMedical": "НЕ является медицинским устройством",
+  "researchDisclaimerNotClinical": "НЕ предназначено для клинической диагностики",
+  "researchDisclaimerResults": "Результаты являются исследовательскими наблюдениями",
+  "researchDisclaimerConsult": "Всегда консультируйтесь со специалистами здравоохранения",
+  "researchDisclaimerAcknowledge": "Продолжая, вы подтверждаете, что это исследовательский инструмент, и он не должен использоваться для принятия медицинских решений.",
+  "researchDisclaimerWarning": "Это приложение предназначено ТОЛЬКО для ИССЛЕДОВАТЕЛЬСКИХ и ОБРАЗОВАТЕЛЬНЫХ целей.",
+  "iUnderstand": "Я понимаю",
+  "plrAnalysisTest": "Тест анализа ЗПР",
+  "checkingVideoFile": "Проверка видеофайла...",
+  "processingFrame": "Обработка кадра {current}/{total} ({timestamp} мс)...",
+  "@processingFrame": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "timestamp": {
+        "type": "int"
+      }
+    }
+  },
+  "analysisComplete": "Анализ завершён!",
+  "errorVideoNotFound": "Ошибка: видеофайл не найден",
+  "waitingForResults": "Ожидание результатов...",
+  "baseline": "Исходный уровень",
+  "flashPhase": "Вспышка",
+  "constrictionPhase": "Сужение",
+  "recovery": "Восстановление",
+  "plrDetectedExclaim": "ЗПР ОБНАРУЖЕН!",
+  "plrWeakNotDetected": "ЗПР слабый/не обнаружен",
+  "min": "Мин",
+  "plr": "ЗПР",
+  "constrLabel": "Сужен.",
+  "saveToHistory": "Сохранить в историю",
+  "txt": "TXT",
+  "json": "JSON",
+  "saveFrames": "Сохранить кадры",
+  "share": "Поделиться",
+  "frameSavedToGallery": "Кадр сохранён в галерее!",
+  "failedToSaveFrame": "Не удалось сохранить кадр",
+  "framesSavedToGallery": "{count} кадров сохранено в галерее!",
+  "@framesSavedToGallery": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "jsonCopiedToClipboard": "JSON скопирован в буфер обмена!",
+  "reportCopiedToClipboard": "Отчёт скопирован в буфер обмена!",
+  "shareFailedError": "Ошибка при попытке поделиться: {error}",
+  "@shareFailedError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "savedToHistoryId": "Сохранено в историю! (ID: {id})",
+  "@savedToHistoryId": {
+    "placeholders": {
+      "id": {
+        "type": "int"
+      }
+    }
+  },
+  "failedToSave": "Не удалось сохранить: {error}",
+  "@failedToSave": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noSuccessfulFramesToSave": "Нет успешных кадров для сохранения",
+  "saveAllFrames": "Сохранить все кадры",
+  "shareReport": "Поделиться отчётом",
+  "shareJson": "Поделиться JSON",
+  "rerunTest": "Запустить тест повторно",
+  "videoCaptureTitle": "ЗПР — {eye}",
+  "@videoCaptureTitle": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "initializingCamera": "Инициализация камеры...",
+  "usingCamera": "Используется {camera} камера",
+  "@usingCamera": {
+    "placeholders": {
+      "camera": {
+        "type": "String"
+      }
+    }
+  },
+  "cameraError": "Ошибка камеры: {error}",
+  "@cameraError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noCamerasFound": "Камеры не найдены",
+  "retry": "Повторить",
+  "startPlrRecording": "Начать запись ЗПР",
+  "stopRecording": "Остановить запись",
+  "phaseReady": "Готово",
+  "phaseStarting": "Запуск...",
+  "phaseBaseline": "Исходный уровень (0–{sec} с)",
+  "@phaseBaseline": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseFlash": "ВСПЫШКА!",
+  "phaseConstriction": "Сужение ({start}–{end} с)",
+  "@phaseConstriction": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseRecovery": "Восстановление ({start}–{end} с)",
+  "@phaseRecovery": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseComplete": "Завершено!",
+  "readyDesc": "Расположите глаз в круге, затем нажмите «Старт»",
+  "holdSteady": "Держите неподвижно...",
+  "recordingBaselinePupil": "Запись исходного размера зрачка",
+  "lightStimulus": "Световой стимул ({ms} мс)",
+  "@lightStimulus": {
+    "placeholders": {
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "measuringConstriction": "Измерение сужения зрачка",
+  "measuringRecovery": "Измерение восстановления зрачка",
+  "plrRecordingComplete": "Запись ЗПР завершена",
+  "positionEyeInstruction": "Расположите {eye} глаз в круге.\\nДержите неподвижно в течение {seconds}-секундной записи.",
+  "@positionEyeInstruction": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      },
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "keepEyeSteadyFlash": "Держите глаз неподвижно. Вспышка произойдёт на {sec} секунде.",
+  "@keepEyeSteadyFlash": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "recordingComplete": "Запись завершена",
+  "plrVideoCapturedSuccess": "Видео ЗПР успешно записано!",
+  "duration": "Длительность",
+  "seconds": "секунды",
+  "frameRate": "Частота кадров",
+  "camera": "Камера",
+  "flashAt": "На {sec} с ({ms} мс)",
+  "@flashAt": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      },
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "phases": "Фазы",
+  "phasesFlow": "Исходный уровень → Вспышка → Сужение → Восстановление",
+  "expectedNormalValues": "Ожидаемые нормальные значения:",
+  "latency": "Латентность",
+  "velocity": "Скорость",
+  "testFrameAnalysis": "🧪 Анализ тестового кадра",
+  "retake": "Переснять",
+  "done": "Готово",
+  "plrVideoModeTitle": "Видеорежим ЗПР",
+  "plrAssessmentTitle": "Оценка зрачкового светового рефлекса (ЗПР)",
+  "plrInstructions": "1. Расположите глаз в направляющем круге\\n2. Нажмите «Начать запись ЗПР»\\n3. Держите неподвижно в течение 10 секунд\\n4. На 3-й секунде произойдёт вспышка\\n5. Приложение записывает реакцию зрачка",
+  "recordingPhases": "Фазы записи:",
+  "baselinePhaseDesc": "Начальный размер зрачка",
+  "flashPhaseDesc": "Световой стимул",
+  "constrictionPhaseDesc": "Зрачок сужается",
+  "recoveryPhaseDesc": "Зрачок восстанавливается",
+  "normalPlrValues": "Нормальные значения ЗПР:",
+  "gotIt": "Понятно",
+  "pupilAnalysis": "Анализ зрачка",
+  "scansLeft": "Осталось {count}",
+  "@scansLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "validatingRightEye": "Проверка правого глаза...",
+  "validatingLeftEye": "Проверка левого глаза...",
+  "analyzingRightEye": "Анализ правого глаза (OD)...",
+  "analyzingLeftEye": "Анализ левого глаза (OS)...",
+  "comparingPupils": "Сравнение зрачков...",
+  "person": "Человек: {name}",
+  "@person": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "invalidEyeImage": "Недействительное изображение глаза",
+  "analysisFailed": "Анализ не выполнен: {error}",
+  "@analysisFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "researchEducationalToolOnly": "ТОЛЬКО ИССЛЕДОВАТЕЛЬСКИЙ/ОБРАЗОВАТЕЛЬНЫЙ ИНСТРУМЕНТ",
+  "resultsNotMedicalDiagnoses": "Данное приложение предназначено исключительно для исследовательских и образовательных целей. Результаты НЕ являются медицинскими диагнозами и НЕ прошли валидацию для клинического применения. Ассоциации паттернов основаны на исторической исследовательской литературе. По любым вопросам здоровья обращайтесь к специалисту здравоохранения.",
+  "pupilSizeDifference": "Обнаружена разница в размере зрачков",
+  "significantPupilSizeDiff": "ЗНАЧИТЕЛЬНАЯ РАЗНИЦА В РАЗМЕРЕ ЗРАЧКОВ",
+  "diff": "разница",
+  "researchObservationConsult": "Исследовательское наблюдение — для интерпретации обратитесь к специалисту здравоохранения",
+  "ageBasedResearchBaseline": "Возрастной исследовательский базовый показатель",
+  "group": "Группа: {group}",
+  "@group": {
+    "placeholders": {
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "researchRange": "Исследовательский диапазон",
+  "measuredEst": "Измеренное (оценка)",
+  "pupilForm": "Форма зрачка",
+  "decentrationPattern": "Паттерн децентрации",
+  "flattenings": "Уплощения",
+  "protrusions": "Выпуклости",
+  "zonesCount": "{count} зон",
+  "@zonesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bilateralComparison": "Двусторонний анализ",
+  "parameter": "Параметр",
+  "od": "OD",
+  "os": "OS",
+  "piRatio": "Соотношение P/I",
+  "ellipseness": "Эллиптичность",
+  "circularity": "Округлость",
+  "decentralization": "Децентрализация",
+  "anwRatio": "Соотношение",
+  "normal": "норма",
+  "elliptical": "Эллиптический",
+  "circular": "Круглый",
+  "irregular": "Неправильный",
+  "centered": "Центрированный",
+  "offset": "Смещение",
+  "miosis": "Миоз",
+  "constricted": "Суженный",
+  "dilated": "Расширенный",
+  "mydriasis": "Мидриаз",
+  "inner": "Внутренний",
+  "outer": "Внешний",
+  "high": "Высокая",
+  "moderate": "Умеренная",
+  "savePdf": "Сохранить PDF",
+  "sharePdf": "Поделиться PDF",
+  "retakePhotos": "Переснять фотографии",
+  "scansLeftBanner": "Осталось {count} сканирований",
+  "@scansLeftBanner": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "upgrade": "Обновить",
+  "unlockUnlimited": "Разблокировать безлимит",
+  "usedAllFreeScans": "Вы использовали все бесплатные сканирования.",
+  "unlimitedScans": "Безлимитные сканирования",
+  "pdfReports": "PDF-отчёты",
+  "scanHistoryFeature": "История сканирований",
+  "bilateralAnalysis": "Двусторонний анализ",
+  "monthly": "Ежемесячно",
+  "perMonth": "/мес",
+  "annual": "Ежегодно",
+  "perYear": "/год",
+  "tenCredits": "10 кредитов",
+  "oneTime": "единоразово",
+  "best": "ЛУЧШИЙ",
+  "purchaseCancelled": "Покупка отменена",
+  "purchaseFailed": "Ошибка покупки: {error}",
+  "@purchaseFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "txtSaved": "TXT сохранён: {path}",
+  "@txtSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "jsonSaved": "JSON сохранён: {path}",
+  "@jsonSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfSaved": "PDF сохранён!",
+  "pdfFailed": "Ошибка PDF: {error}",
+  "@pdfFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "open": "ОТКРЫТЬ",
+  "failed": "Ошибка: {error}",
+  "@failed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "staticScans": "Статические",
+  "plrScans": "ЗПР",
+  "searchByNameOrComplaints": "Поиск по имени или жалобам...",
+  "searchPlrRecords": "Поиск записей ЗПР...",
+  "noScansYet": "Сканирований пока нет",
+  "completedScansAppearHere": "Завершённые сканирования появятся здесь",
+  "deleteScan": "Удалить сканирование?",
+  "deleteScanConfirm": "Удалить сканирование для {name} от {date}?",
+  "@deleteScanConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "scanDeleted": "Сканирование удалено",
+  "originalImagesNotFound": "Исходные изображения глаза не найдены.",
+  "viewResults": "Просмотр результатов",
+  "avgPlr": "Сред. ЗПР",
+  "years": "лет",
+  "anisocoria": "Анизокория",
+  "none": "Нет",
+  "mild": "Лёгкая",
+  "severe": "Тяжёлая",
+  "zoneLabel": "Зона: {zone}",
+  "@zoneLabel": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "associatedWith": "Связано с {organ}",
+  "@associatedWith": {
+    "placeholders": {
+      "organ": {
+        "type": "String"
+      }
+    }
+  },
+  "significant": "Значительная",
+  "fair": "Удовлетворительная",
+  "low": "Низкая",
+  "good": "Хорошая",
+  "zones": "зоны",
+  "significanceWithinLimits": "в пределах допустимых значений",
+  "significanceMild": "лёгкая",
+  "significanceModerate": "умеренная",
+  "significanceSignificant": "значительная",
+  "formTypeCircle": "Круг (норма)",
+  "formTypeOval": "Овал",
+  "formTypeOvalVertical": "Вертикальный овал",
+  "formTypeOvalHorizontal": "Горизонтальный овал",
+  "formTypeOvalDiagonal": "Диагональный овал",
+  "formTypeLeftObliqueEllipse": "Левая косая эллипс",
+  "formTypeUnilateralEllipse": "Односторонняя эллипс",
+  "formTypeVentralDivergingEllipse": "Вентральная расходящаяся эллипс",
+  "formTypeFrontalDivergingEllipse": "Фронтальная расходящаяся эллипс",
+  "formTypeEllipse": "Эллипс",
+  "formTypeChord": "Хорда",
+  "formTypeIrregular": "Неправильная форма",
+  "pupilFormCircleDesc": "Нормальная круглая форма зрачка. Вариаций паттерна не обнаружено.",
+  "pupilFormOvalHorizontalDesc": "Горизонтальный овальный паттерн. Историческое исследование связывало его с паттернами вегетативной нервной системы, влияющими на зоны дыхательной и железистой функции.",
+  "pupilFormOvalVerticalDesc": "Вертикальный овальный паттерн. Исторические исследования связывали этот паттерн с зонами церебрального кровообращения в исследованиях вегетативных рефлексов.",
+  "pupilFormOvalDiagonalDesc": "Диагональный овальный паттерн. Исследовательская литература связывала его с рефлексами урогенитальной зоны в вегетативных исследованиях.",
+  "pupilFormLeftObliqueEllipseDesc": "Паттерн левой косой эллипс. Исторические наблюдения связывали его с вегетативными зонами урогенитального отдела и нижних конечностей.",
+  "pupilFormUnilateralEllipseDesc": "Паттерн односторонней эллипс. Исследования указывали на связь с вегетативными зонами дыхательных путей и бронхов.",
+  "pupilFormVentralDivergingEllipseDesc": "Вентральная расходящаяся эллипс. Исторические исследования связывали её с вегетативными зонами нижней части тела и паттернами двигательных функций.",
+  "pupilFormFrontalDivergingEllipseDesc": "Фронтальная расходящаяся эллипс. Исследовательская литература связывала этот паттерн с церебральными и верхними вегетативными зонами.",
+  "pupilFormOvalDesc": "Паттерн лёгкой овальной деформации. Наблюдайте за прогрессированием в рамках исследовательских наблюдений.",
+  "pupilFormEllipseDesc": "Эллиптический паттерн зрачка, указывающий на вариации вегетативной системы в исторических исследованиях.",
+  "pupilFormChordDesc": "Паттерн деформации по типу хорды, указывающий на локализованные вегетативные влияния в исследовательской литературе.",
+  "pupilFormIrregularDesc": "Неправильная форма, предполагающая множественные вегетативные паттернные влияния на основе исторических наблюдений.",
+  "patternCentered": "Центрированный (норма)",
+  "patternFrontal": "Фронтальная децентрация",
+  "patternBasal": "Базальная децентрация",
+  "patternNasal": "Назальная децентрация",
+  "patternTemporal": "Темпоральная децентрация",
+  "patternMiddleNasal": "Средненазальная децентрация",
+  "patternMiddleTemporal": "Среднетемпоральная децентрация",
+  "patternUpperNasal": "Верхненазальная децентрация",
+  "patternUpperTemporal": "Верхнетемпоральная децентрация",
+  "patternLowerNasal": "Нижненазальная децентрация",
+  "patternLowerTemporal": "Нижнетемпоральная децентрация",
+  "patternUpwards": "Децентрация — вверх",
+  "patternDownwards": "Децентрация — вниз",
+  "patternUpwardsInwards": "Децентрация — вверх-внутрь",
+  "patternUpwardsOutwards": "Децентрация — вверх-наружу",
+  "decentrationCenteredDesc": "Нормальное положение зрачка в физиологических пределах.",
+  "decentrationNasalRightDesc": "Назальный паттерн (правый). Историческое исследование связывало эту зону с лёгочными вегетативными рефлексами.",
+  "decentrationNasalLeftDesc": "Назальный паттерн (левый). Исследовательская литература связывала эту зону с паттернами сердечной вегетативной функции.",
+  "decentrationTemporalDesc": "Темпоральный паттерн. Исторические наблюдения связывали эту зону с почечными и репродуктивными вегетативными рефлексами.",
+  "decentrationFrontalRightDesc": "Фронтальный паттерн (правый). Исследования связывали эту зону с когнитивными и церебральными паттернами функций.",
+  "decentrationFrontalLeftDesc": "Фронтальный паттерн (левый). Исторические исследования связывали эту зону с церебральными вегетативными паттернами.",
+  "decentrationBasalRightDesc": "Базальный паттерн (правый). Исследования указывали на связь с рефлексами внутричерепного давления.",
+  "decentrationBasalLeftDesc": "Базальный паттерн (левый). Исторические наблюдения связывали его с паттернами зон церебрального воспаления.",
+  "decentrationUpwardsInwardsRightDesc": "Верхненазальный паттерн (правый). Исследования связывали эту зону с гепатобилиарными вегетативными рефлексами.",
+  "decentrationUpwardsInwardsLeftDesc": "Верхненазальный паттерн (левый). Исторические исследования связывали его со зонами селезёнки и диафрагмы.",
+  "decentrationUpwardsOutwardsDesc": "Верхнетемпоральный паттерн. Исследования указывали на связь с почечными и репродуктивными вегетативными зонами.",
+  "decentrationMiddleNasalRightDesc": "Средненазальный паттерн (правый). Исторические наблюдения связывали его с утилизацией кислорода и сердечными зонами.",
+  "decentrationMiddleNasalLeftDesc": "Средненазальный паттерн (левый). Исследования связывали его с неврологическими и сердечными вегетативными паттернами.",
+  "decentrationMiddleTemporalRightDesc": "Среднетемпоральный паттерн (правый). Исследования связывали его с зонами сердечной вегетативной регуляции.",
+  "decentrationMiddleTemporalLeftDesc": "Среднетемпоральный паттерн (левый). Исторические исследования связывали его с лёгочными и сердечными зонами.",
+  "decentrationUpperNasalRightDesc": "Верхненазальный паттерн (правый). Исследования указывали на связь с когнитивными зонами и рефлексами шейного отдела позвоночника.",
+  "decentrationUpperNasalLeftDesc": "Верхненазальный паттерн (левый). Исторические наблюдения связывали его с когнитивными паттернами и зонами шейного отдела.",
+  "decentrationUpperTemporalRightDesc": "Верхнетемпоральный паттерн (правый). Исследования связывали эту зону с рефлексами черепно-мозговых нервов и слухового анализатора.",
+  "decentrationUpperTemporalLeftDesc": "Верхнетемпоральный паттерн (левый). Исторические исследования связывали его с нейровегетативными и речевыми зонами.",
+  "decentrationLowerNasalDesc": "Нижненазальный паттерн. Исследования указывали на связь с урогенитальными и пояснично-крестцовыми вегетативными зонами.",
+  "decentrationLowerTemporalRightDesc": "Нижнетемпоральный паттерн (правый). Исторические наблюдения связывали его с метаболическими и печёночными зонами.",
+  "decentrationLowerTemporalLeftDesc": "Нижнетемпоральный паттерн (левый). Исследования связывали его с сердечными и вегетативными паттернами селезёнки.",
+  "flatteningUpperCentralRightDesc": "Паттерн, связанный с верхнецентральной зоной. Историческое исследование связывало его с регуляцией настроения и вегетативными рефлексами энергетических зон.",
+  "flatteningUpperTemporalRightDesc": "Паттерн, связанный с верхнетемпоральной зоной. Исследования указывали на связь с вегетативными рефлексами черепно-мозговых нервов и слухового анализатора.",
+  "flatteningMiddleTemporalRightDesc": "Паттерн, связанный со среднетемпоральной зоной. Исторические наблюдения связывали его с дыхательными и сердечными вегетативными паттернами.",
+  "flatteningLowerTemporalRightDesc": "Паттерн, связанный с нижнетемпоральной зоной. Исследовательская литература связывала его с печёночными и метаболическими вегетативными зонами.",
+  "flatteningLowerBasalRightDesc": "Паттерн, связанный с нижнебазальной зоной. Исторические исследования связывали его с почечными и вегетативными рефлексами нижних конечностей.",
+  "flatteningLowerNasalRightDesc": "Паттерн, связанный с нижненазальной зоной. Исследования указывали на связь с урогенитальными и тазовыми вегетативными зонами.",
+  "flatteningMiddleNasalRightDesc": "Паттерн, связанный со средненазальной зоной. Исторические наблюдения связывали его с утилизацией кислорода и вегетативными паттернами дыхания.",
+  "flatteningUpperNasalRightDesc": "Паттерн, связанный с верхненазальной зоной. Исследовательская литература связывала его с когнитивными и шейными вегетативными рефлексами.",
+  "flatteningDefaultRightDesc": "В данной зоне обнаружено вариативное паттерное изменение вегетативной нервной системы на основе исторических исследований.",
+  "flatteningUpperCentralLeftDesc": "Паттерн, связанный с верхнецентральной зоной. Историческое исследование связывало его с регуляцией настроения и неврологическими вегетативными паттернами.",
+  "flatteningUpperTemporalLeftDesc": "Паттерн, связанный с верхнетемпоральной зоной. Исследования указывали на связь с нейровегетативными и речевыми вегетативными зонами.",
+  "flatteningMiddleTemporalLeftDesc": "Паттерн, связанный со среднетемпоральной зоной. Исторические наблюдения связывали его с лёгочными и сердечными вегетативными рефлексами.",
+  "flatteningLowerTemporalLeftDesc": "Паттерн, связанный с нижнетемпоральной зоной. Исследовательская литература связывала его с сердечными и вегетативными паттернами селезёнки.",
+  "flatteningLowerBasalLeftDesc": "Паттерн, связанный с нижнебазальной зоной. Исторические исследования связывали его с почечными и выделительными вегетативными зонами.",
+  "flatteningLowerNasalLeftDesc": "Паттерн, связанный с нижненазальной зоной. Исследования указывали на связь с урогенитальными и пояснично-крестцовыми вегетативными рефлексами.",
+  "flatteningMiddleNasalLeftDesc": "Паттерн, связанный со средненазальной зоной. Исторические наблюдения связывали его с сердечными и дыхательными вегетативными паттернами.",
+  "flatteningUpperNasalLeftDesc": "Паттерн, связанный с верхненазальной зоной. Исследовательская литература связывала его с когнитивными и шейными вегетативными зонами.",
+  "flatteningDefaultLeftDesc": "В данной зоне обнаружено вариативное паттерное изменение вегетативной нервной системы на основе исторических исследований.",
+  "protrusionUpperCentralRightDesc": "Паттерн выпуклости верхнецентральной зоны. Исследования связывали его с паттернами симпатической гиперактивности, влияющими на церебральные зоны.",
+  "protrusionUpperTemporalRightDesc": "Паттерн выпуклости верхнетемпоральной зоны. Исторические наблюдения связывали его с паттернами гиперактивности черепно-мозговых нервов и слуховой системы.",
+  "protrusionMiddleTemporalRightDesc": "Паттерн выпуклости среднетемпоральной зоны. Исследования указывали на связь с сердечными и дыхательными симпатическими паттернами.",
+  "protrusionLowerTemporalRightDesc": "Паттерн выпуклости нижнетемпоральной зоны. Исторические исследования связывали его с гепатобилиарными и метаболическими симпатическими зонами.",
+  "protrusionLowerBasalRightDesc": "Паттерн выпуклости нижнебазальной зоны. Исследования связывали его с паттернами симпатической гиперактивности почечных и тазовых зон.",
+  "protrusionLowerNasalRightDesc": "Паттерн выпуклости нижненазальной зоны. Исторические наблюдения связывали его с зонами симпатической активации урогенитального отдела.",
+  "protrusionMiddleNasalRightDesc": "Паттерн выпуклости средненазальной зоны. Исследования указывали на связь с желудочными и панкреатическими симпатическими паттернами.",
+  "protrusionUpperNasalRightDesc": "Паттерн выпуклости верхненазальной зоны. Исторические исследования связывали его с когнитивными и зрительными зонами симпатической гиперактивности.",
+  "protrusionDefaultRightDesc": "В данной зоне на основе исследовательских наблюдений обнаружен паттерн гиперактивности симпатической нервной системы.",
+  "protrusionUpperCentralLeftDesc": "Паттерн выпуклости верхнецентральной зоны. Исследования связывали его с психомоторными и церебральными симпатическими паттернами.",
+  "protrusionUpperTemporalLeftDesc": "Паттерн выпуклости верхнетемпоральной зоны. Исторические наблюдения связывали его с зонами нейровегетативной симпатической гиперактивности.",
+  "protrusionMiddleTemporalLeftDesc": "Паттерн выпуклости среднетемпоральной зоны. Исследования указывали на связь с лёгочными и сердечными симпатическими паттернами.",
+  "protrusionLowerTemporalLeftDesc": "Паттерн выпуклости нижнетемпоральной зоны. Исторические исследования связывали его с зонами симпатической активации селезёнки и сердца.",
+  "protrusionLowerBasalLeftDesc": "Паттерн выпуклости нижнебазальной зоны. Исследования связывали его с паттернами симпатической гиперактивности тазовых и почечных зон.",
+  "protrusionLowerNasalLeftDesc": "Паттерн выпуклости нижненазальной зоны. Исторические наблюдения связывали его с зонами симпатической активации пояснично-крестцового отдела.",
+  "protrusionMiddleNasalLeftDesc": "Паттерн выпуклости средненазальной зоны. Исследования указывали на связь с симпатическими паттернами тревожно-сердечной сферы.",
+  "protrusionUpperNasalLeftDesc": "Паттерн выпуклости верхненазальной зоны. Исторические исследования связывали его с когнитивными и зрительными зонами симпатической гиперактивности.",
+  "protrusionDefaultLeftDesc": "В данной зоне на основе исследовательских наблюдений обнаружен паттерн гиперактивности симпатической нервной системы.",
+  "anisocoriaNone": "Размеры зрачков в пределах нормы. Значительной анизокории не обнаружено.",
+  "anisocoriaDetected": "Обнаружена анизокория: {difference}% ({direction}). {description}",
+  "@anisocoriaDetected": {
+    "placeholders": {
+      "difference": {
+        "type": "String"
+      },
+      "direction": {
+        "type": "String"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "anisocoriaDirectionSD": "S>D",
+  "anisocoriaDirectionDS": "D>S",
+  "anisocoriaSeverityNone": "В пределах нормы.",
+  "anisocoriaSeverityMild": "Наблюдается лёгкое различие. Может быть физиологическим.",
+  "anisocoriaSeverityModerate": "Умеренная асимметрия. Исследовательское наблюдение отмечено.",
+  "anisocoriaSeveritySevere": "Значительная асимметрия. Исследовательское наблюдение зафиксировано.",
+  "largerPupilEqual": "равны",
+  "largerPupilOS": "OS (левый)",
+  "largerPupilOD": "OD (правый)",
+  "decentrationWithinLimits": "В пределах нормы.",
+  "decentrationClinicalNote": "{patternName}. Смещение: {offset}%",
+  "@decentrationClinicalNote": {
+    "placeholders": {
+      "patternName": {
+        "type": "String"
+      },
+      "offset": {
+        "type": "String"
+      }
+    }
+  },
+  "zoneUpperCentral": "Верхнецентральная",
+  "zoneUpperNasal": "Верхненазальная",
+  "zoneMiddleNasal": "Средненазальная",
+  "zoneLowerNasal": "Нижненазальная",
+  "zoneLowerBasal": "Нижнебазальная",
+  "zoneLowerTemporal": "Нижнетемпоральная",
+  "zoneMiddleTemporal": "Среднетемпоральная",
+  "zoneUpperTemporal": "Верхнетемпоральная",
+  "zoneFrontal": "Фронтальная",
+  "zoneBasal": "Базальная",
+  "zoneUnknown": "Неизвестная",
+  "flatteningDescription": "{zone} уплощение ({clockRange}) — {percentage}%",
+  "@flatteningDescription": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "protrusionDescription": "{zone} выпуклость ({clockRange}) — {percentage}%",
+  "@protrusionDescription": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "usbIriscopeMode": "Режим USB-ирископа",
+  "iriscopeExternal": "Ирископ / внешняя камера",
+  "usbLabel": "USB",
+  "useConnectedUsbCamera": "Использовать подключённую USB-камеру или ирископ",
+  "detectedCameras": "Обнаруженные камеры",
+  "externalCamera": "Внешняя камера",
+  "cameraIndex": "Камера {index}",
+  "@cameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "noExternalCameraDetected": "Внешняя камера не обнаружена.\\nПодключите USB-ирископ для включения.",
+  "refresh": "Обновить",
+  "selectCameraSource": "Выбор источника камеры",
+  "camerasDetected": "Обнаружено {count} камер",
+  "@camerasDetected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "camerasAvailable": "Доступно {count} камер",
+  "@camerasAvailable": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "externalCameraIndex": "Внешняя камера {index}",
+  "@externalCameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "qualityGatedRear": "Авто-съёмка с контролем качества (задняя камера)",
+  "qualityGatedFront": "Авто-съёмка с контролем качества (фронтальная камера)",
+  "usbCameraInfo": "Информация о USB-камере",
+  "connected": "Подключено",
+  "waiting": "Ожидание...",
+  "disconnected": "Отключено",
+  "waitingForUsbCamera": "Ожидание USB-камеры",
+  "connectIriscopePrompt": "Подключите ирископ через адаптер USB OTG.\\nРазрешите доступ при появлении запроса.",
+  "usbCameraIssue": "Проблема с USB-камерой",
+  "pleaseConnectIriscope": "Пожалуйста, подключите ирископ или USB-камеру.",
+  "retryConnection": "Повторить подключение",
+  "troubleshootingTips": "Советы по устранению неполадок",
+  "tipUsbOtgAdapter": "Убедитесь, что адаптер USB OTG правильно подключён",
+  "tipUsbHostMode": "Проверьте, поддерживает ли устройство режим USB Host",
+  "tipReconnectCamera": "Попробуйте отключить и снова подключить камеру",
+  "tipGrantPermissions": "Предоставьте разрешения на USB при появлении запроса",
+  "tipUnlockDevice": "На некоторых устройствах может потребоваться разблокировка",
+  "back": "Назад",
+  "switchEye": "Переключить глаз",
+  "state": "Состояние",
+  "status": "Статус",
+  "usingFlutterUvcPlugin": "Используется плагин flutter_uvc_camera\\Плагин для поддержки устройств USB Video Class.",
+  "initialized": "Инициализировано",
+  "notReady": "Не готово",
+  "captureDistanceMatch": "Соответствие расстояния съёмки",
+  "@captureDistanceMatch": {
+    "description": "Title for the bilateral iris size comparison card"
+  },
+  "irisSize": "Размер радужки",
+  "@irisSize": {
+    "description": "Label for iris size measurement"
+  },
+  "distanceMatched": "Расстояние совпадает",
+  "@distanceMatched": {
+    "description": "Status when capture distances match well"
+  },
+  "distanceMismatch": "Расстояние не совпадает",
+  "@distanceMismatch": {
+    "description": "Status when capture distances don't match"
+  },
+  "excellentMatch": "Отличное совпадение",
+  "@excellentMatch": {
+    "description": "Distance match status 90%+"
+  },
+  "goodMatch": "Хорошее совпадение",
+  "@goodMatch": {
+    "description": "Distance match status 80-90%"
+  },
+  "acceptableMatch": "Приемлемое совпадение",
+  "@acceptableMatch": {
+    "description": "Distance match status 70-80%"
+  },
+  "considerRetaking": "Расстояние не совпадает — рекомендуется переснять",
+  "@considerRetaking": {
+    "description": "Warning when distances don't match well"
+  },
+  "qualityReady": "Готово! Держите неподвижно...",
+  "@qualityReady": {
+    "description": "Camera quality feedback when ready to capture"
+  },
+  "qualityTooBlurry": "Держите камеру неподвижно",
+  "@qualityTooBlurry": {
+    "description": "Camera quality feedback when image is blurry"
+  },
+  "qualityTooDark": "Необходимо больше света",
+  "@qualityTooDark": {
+    "description": "Camera quality feedback when too dark"
+  },
+  "qualityTooBright": "Слишком ярко — уменьшите освещение",
+  "@qualityTooBright": {
+    "description": "Camera quality feedback when too bright"
+  },
+  "qualityNoContrast": "Отрегулируйте угол освещения",
+  "@qualityNoContrast": {
+    "description": "Camera quality feedback when contrast is low"
+  },
+  "qualityNoPupil": "Центрируйте зрачок в кадре",
+  "@qualityNoPupil": {
+    "description": "Camera quality feedback when pupil not detected"
+  },
+  "qualityNotCentered": "Переместите глаз в центр",
+  "@qualityNotCentered": {
+    "description": "Camera quality feedback when eye not centered"
+  },
+  "qualityNotAnEye": "Глаз не обнаружен",
+  "@qualityNotAnEye": {
+    "description": "Camera quality feedback when no eye detected"
+  },
+  "qualityProcessing": "Обработка...",
+  "@qualityProcessing": {
+    "description": "Camera quality feedback during processing"
+  },
+  "distanceMatchedCheck": "✓ Расстояние совпадает",
+  "@distanceMatchedCheck": {
+    "description": "Distance guidance when perfectly matched"
+  },
+  "distanceGoodMatchCheck": "✓ Хорошее совпадение",
+  "@distanceGoodMatchCheck": {
+    "description": "Distance guidance when good match"
+  },
+"distanceSlightlyBack": "Немного назад ↔",
+  "@distanceSlightlyBack": {
+    "description": "Distance guidance to move slightly back"
+  },
+  "distanceSlightlyCloser": "Немного ближе ↔",
+  "@distanceSlightlyCloser": {
+    "description": "Distance guidance to move slightly closer"
+  },
+  "distanceAlmostThere": "Почти готово...",
+  "@distanceAlmostThere": {
+    "description": "Distance guidance when nearly matched"
+  },
+  "distanceMoveBack": "Отодвиньтесь ←←",
+  "@distanceMoveBack": {
+    "description": "Distance guidance to move back"
+  },
+  "distanceMoveCloser": "Приблизьтесь →→",
+  "@distanceMoveCloser": {
+    "description": "Distance guidance to move closer"
+  },
+  "distanceTooClose": "Слишком близко! Отодвиньтесь",
+  "@distanceTooClose": {
+    "description": "Distance guidance when too close"
+  },
+  "distanceTooFar": "Слишком далеко! Приблизьтесь",
+  "@distanceTooFar": {
+    "description": "Distance guidance when too far"
+  },
+  "distanceStabilizing": "Стабилизация...",
+  "@distanceStabilizing": {
+    "description": "Distance status while stabilizing reading"
+  },
+  "distanceLabel": "Расстояние: {percent}%",
+  "@distanceLabel": {
+    "description": "Distance match percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "irisSizeComparison": "OD: {odSize}пкс → OS: {osSize}пкс",
+  "@irisSizeComparison": {
+    "description": "Iris size comparison between eyes",
+    "placeholders": {
+      "odSize": {
+        "type": "int"
+      },
+      "osSize": {
+        "type": "int"
+      }
+    }
+  },
+  "frontCameraLabel": "Фронтальная камера",
+  "@frontCameraLabel": {
+    "description": "Label for front camera"
+  },
+  "rearCameraLabel": "Задняя камера",
+  "@rearCameraLabel": {
+    "description": "Label for rear/back camera"
+  },
+  "startingCamera": "Запуск камеры...",
+  "@startingCamera": {
+    "description": "Status when camera is initializing"
+  },
+  "eyeNotDetected": "Глаз не обнаружен",
+  "@eyeNotDetected": {
+    "description": "Title for validation failure dialog"
+  },
+  "tryAgain": "Повторить",
+  "@tryAgain": {
+    "description": "Button text to retry capture"
+  },
+  "indicatorEye": "Глаз",
+  "@indicatorEye": {
+    "description": "Quality indicator label for eye detection"
+  },
+  "indicatorSharp": "Резкость",
+  "@indicatorSharp": {
+    "description": "Quality indicator label for sharpness"
+  },
+  "indicatorLight": "Освещение",
+  "@indicatorLight": {
+    "description": "Quality indicator label for lighting"
+  },
+  "indicatorFocus": "Фокус",
+  "@indicatorFocus": {
+    "description": "Quality indicator label for focus/contrast"
+  },
+  "indicatorPupil": "Зрачок",
+  "@indicatorPupil": {
+    "description": "Quality indicator label for pupil detection"
+  },
+  "indicatorIris": "Радужка",
+  "@indicatorIris": {
+    "description": "Quality indicator label for iris size"
+  },
+  "indicatorMatch": "Совпадение",
+  "@indicatorMatch": {
+    "description": "Quality indicator label for distance match"
+  },
+  "checkImageShape": "Форма изображения",
+  "@checkImageShape": {
+    "description": "Validation check label for aspect ratio"
+  },
+  "checkCircularIris": "Круглая радужка",
+  "@checkCircularIris": {
+    "description": "Validation check label for circular iris"
+  },
+  "checkDarkPupil": "Тёмный зрачок",
+  "@checkDarkPupil": {
+    "description": "Validation check label for dark pupil center"
+  },
+  "checkIrisTexture": "Текстура радужки",
+  "@checkIrisTexture": {
+    "description": "Validation check label for iris texture"
+  },
+  "checkPupilIrisStructure": "Структура зрачок-радужка",
+  "@checkPupilIrisStructure": {
+    "description": "Validation check label for concentric circles"
+  },
+  "checkNaturalColors": "Естественные цвета",
+  "@checkNaturalColors": {
+    "description": "Validation check label for color distribution"
+  },
+  "checkEdgePattern": "Контуры краёв",
+  "@checkEdgePattern": {
+    "description": "Validation check label for edge density"
+  },
+  "errorImageShapeIncorrect": "Неверная форма изображения — убедитесь, что глаз заполняет кадр",
+  "@errorImageShapeIncorrect": {
+    "description": "Validation error for incorrect aspect ratio"
+  },
+  "errorNoEyeDetected": "Глаз не обнаружен — расположите радужку в центре кадра",
+  "@errorNoEyeDetected": {
+    "description": "Validation error when no eye/iris detected"
+  },
+  "errorNoPupilDetected": "Зрачок не обнаружен — обеспечьте хорошее освещение",
+  "@errorNoPupilDetected": {
+    "description": "Validation error when pupil not detected"
+  },
+  "errorNoIrisTexture": "Текстура радужки не определена — приблизьтесь к глазу",
+  "@errorNoIrisTexture": {
+    "description": "Validation error when iris texture not detected"
+  },
+  "errorUnusualColors": "Обнаружены нетипичные цвета — избегайте экранов и бликов",
+  "@errorUnusualColors": {
+    "description": "Validation error for unusual color distribution"
+  },
+  "errorTooManyEdges": "Слишком много прямых краёв — возможно, это не глаз",
+  "@errorTooManyEdges": {
+    "description": "Validation error for too many straight edges"
+  },
+  "errorNotValidEye": "Изображение не является действительным снимком глаза — повторите попытку",
+  "@errorNotValidEye": {
+    "description": "Generic validation error for invalid eye image"
+  },
+  "holdStillCapturing": "Не двигайтесь — выполняется съёмка...",
+  "@holdStillCapturing": {
+    "description": "Status during countdown capture"
+  },
+  "adjustDistanceFirst": "Сначала отрегулируйте расстояние",
+  "@adjustDistanceFirst": {
+    "description": "Status when distance needs adjustment before capture"
+  },
+  "stabilizingReading": "Стабилизация...",
+  "@stabilizingReading": {
+    "description": "Status while distance reading stabilizes"
+  },
+  "autoCaptureWhenReady": "Автосъёмка при готовности",
+  "@autoCaptureWhenReady": {
+    "description": "Status indicating auto-capture is enabled"
+  },
+  "tapOrWaitAutoCapture": "Нажмите или дождитесь автосъёмки",
+  "@tapOrWaitAutoCapture": {
+    "description": "Instruction when ready to capture"
+  },
+  "validatingImage": "Проверка...",
+  "@validatingImage": {
+    "description": "Status during image validation"
+  },
+  "capturingStatus": "Съёмка...",
+  "@capturingStatus": {
+    "description": "Status during image capture"
+  },
+  "adjustPositionStatus": "Откорректируйте положение",
+  "@adjustPositionStatus": {
+    "description": "Status when position needs adjustment"
+  },
+  "validationTip": "Совет: обеспечьте хорошее освещение, держите камеру на расстоянии 10–15 см от глаза, избегайте бликов",
+  "@validationTip": {
+    "description": "Helpful tip shown after multiple validation failures"
+  },
+  "validationChecksTitle": "Проверки качества:",
+  "@validationChecksTitle": {
+    "description": "Title for validation checks list in dialog"
+  },
+  "confidenceLabel": "Достоверность: {percent}%",
+  "@confidenceLabel": {
+    "description": "Confidence percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "incompleteData": "Неполные данные",
+  "@incompleteData": {
+    "description": "Status when iris metrics data is incomplete"
+  },
+  "irisDiameterLabel": "радужка ø",
+  "@irisDiameterLabel": {
+    "description": "Label for iris diameter measurement"
+  },
+  "plrResponseCurve": "Кривая ЗПР",
+  "@plrResponseCurve": {
+    "description": "Title for PLR chart showing pupil response over time"
+  },
+  "plrLatency": "Латентность",
+  "@plrLatency": {
+    "description": "Time from flash to start of constriction"
+  },
+  "plrVelocity": "Скорость",
+  "@plrVelocity": {
+    "description": "Rate of pupil constriction"
+  },
+  "plrRecoveryTime": "Время восст.",
+  "@plrRecoveryTime": {
+    "description": "Time for pupil to recover"
+  },
+  "plrRecoveryRatio": "Восст. %",
+  "@plrRecoveryRatio": {
+    "description": "Final size compared to baseline"
+  },
+  "plrEnhancedMetrics": "Расширенные показатели ЗПР",
+  "@plrEnhancedMetrics": {
+    "description": "Section title for advanced PLR measurements"
+  },
+  "plrNormalLatency": "Норма: 200–500 мс",
+  "@plrNormalLatency": {
+    "description": "Normal latency reference range"
+  },
+  "plrNormalConstriction": "Норма: 10–30%",
+  "@plrNormalConstriction": {
+    "description": "Normal constriction reference range"
+  },
+  "plrNormalVelocity": "Норма: 1,5–4,0%/с",
+  "@plrNormalVelocity": {
+    "description": "Normal velocity reference range"
+  },
+  "plrReferenceValues": "Нормативные значения ЗПР",
+  "@plrReferenceValues": {
+    "description": "Title for reference values section"
+  },
+  "plrSubjectInfo": "Данные пациента",
+  "@plrSubjectInfo": {
+    "description": "Section title for patient/subject info in PLR report"
+  },
+  "plrTestType": "Зрачковый световой рефлекс",
+  "@plrTestType": {
+    "description": "Name of the PLR test type"
+  },
+  "plrAnalysisSummary": "Сводка анализа",
+  "@plrAnalysisSummary": {
+    "description": "Section title for analysis summary"
+  },
+  "plrTotalFrames": "Всего проанализировано кадров",
+  "@plrTotalFrames": {
+    "description": "Label for total frames count"
+  },
+  "plrSuccessRate": "Доля успешных кадров",
+  "@plrSuccessRate": {
+    "description": "Label for frame analysis success rate"
+  },
+  "plrMaxConstriction": "Максимальное сужение",
+  "@plrMaxConstriction": {
+    "description": "Label for maximum constriction time"
+  },
+  "plrResponseCurveLabels": "Кривая ЗПР",
+  "anwTitle": "Автономное нервное кольцо (АНК)",
+  "anwAbnormal": "Отклонение",
+  "anwDiameter": "Диаметр",
+  "anwPerimeter": "Периметр",
+  "anwAsymmetry": "Асимметрия",
+  "anwElevated": "Приподнятое",
+  "anwFormType": "Тип формы",
+  "anwRegular": "Правильное",
+  "anwDrawnIn": "Втянутое",
+  "anwIndented": "Вдавленное",
+  "anwLacerated": "Разорванное",
+  "anwSpastic": "Спастическое",
+  "anwAtonic": "Атоническое",
+  "anwTonicState": "Исторический паттерн тонуса",
+  "anwParasympathotonic": "Парасимпатотонический паттерн",
+  "anwSympathotonicState": "Симпатотонический паттерн",
+  "anwShiftDetected": "Исторический паттерн смещения",
+  "anwConstrictionDetected": "Обнаружено сужение",
+  "anwFindings": "Находки",
+  "anwRatioComparison": "Соотношение АНК",
+  "bilateralANWComparison": "Двустороннее сравнение АНК",
+  "anwSymmetryNormal": "Симметрия АНК в пределах нормы.",
+  "anwAsymmetryDetected": "Обнаружена асимметрия АНК между глазами.",
+  "functionalFrustration": "Функциональный дисбаланс в корреляции симпатической и парасимпатической нервных систем.",
+  "anwParasympathotonicDesc": "По историческим наблюдениям это связано с повышенной лимбальной чувствительностью. Рефлекторная активность ускорена. Секреторные и эвакуаторные функции ЖКТ усилены.",
+  "anwSympathotonicDesc": "По историческим наблюдениям это связано со сниженной лимбальной чувствительностью. Рефлекторная активность замедлена. Секреторные и эвакуаторные функции ЖКТ снижены.",
+  "anwMiddleTemporalShiftCardiac": "Исторические исследования по Вельховеру связывали это с паттернами перегрузки левого желудочка и сердечного стресса.",
+  "anwFrontalConstricted": "Фронтальная зона зрачкового пояса сужена.",
+  "anwBasalConstricted": "Базальная зона зрачкового пояса сужена.",
+  "anwFrontalBasalConstricted": "Фронтальная и базальная зоны зрачкового пояса сужены.",
+  "helpTitle": "Справка и руководство пользователя",
+  "helpTabQuickStart": "Быстрый старт",
+  "helpTabCnriAnalysis": "Анализ CNRI",
+  "helpTabShortcuts": "Горячие клавиши",
+  "helpTabTroubleshooting": "Устранение неполадок",
+  "helpOnlineDocs": "Онлайн-документация",
+  "helpContactSupport": "Связаться с поддержкой",
+  "helpGettingStarted": "Начало работы",
+  "helpStep1Title": "Подключите ирископ",
+  "helpStep1Desc": "Подключите Dino-Lite или совместимый USB-ирископ.",
+  "helpStep2Title": "Введите данные пациента",
+  "helpStep2Desc": "Укажите имя, возраст, пол и основные жалобы пациента.",
+  "helpStep3Title": "Снимите правый глаз (OD)",
+  "helpStep3Desc": "Расположите ирископ и сделайте снимок правого глаза.",
+  "helpStep4Title": "Снимите левый глаз (OS)",
+  "helpStep4Desc": "Повторите процедуру для левого глаза с одинаковым освещением.",
+  "helpStep5Title": "Просмотрите анализ",
+  "helpStep5Desc": "Приложение анализирует соотношение зрачок/радужка, форму зрачка и характеристики АНК.",
+  "helpStep6Title": "Экспортируйте отчёт",
+  "helpStep6Desc": "Сохраните в формате PDF, TXT или JSON.",
+  "helpTipBestResults": "Для лучших результатов: используйте равномерное освещение и держите ирископ на расстоянии 2–3 см от глаза.",
+  "helpCnriProtocolFeatures": "Функции протокола CNRI",
+  "helpFeaturePiRatioTitle": "Соотношение зрачок/радужка (P/I)",
+  "helpFeaturePiRatioDesc": "Норма: 20–30%. Значения за пределами нормы могут указывать на вегетативный дисбаланс.",
+  "helpFeaturePupilFormTitle": "Анализ формы зрачка",
+  "helpFeaturePupilFormDesc": "Выявляет овальные паттерны, направление децентрации и эксцентриситет.",
+  "helpFeatureAnwTitle": "Оценка АНК (коллоретты)",
+  "helpFeatureAnwDesc": "Анализирует соотношение, регулярность формы, смещения секторов и тонус.",
+  "helpFeatureZoneTitle": "Зональный анализ",
+  "helpFeatureZoneDesc": "Сопоставляет уплощения/выпячивания с зонами органов по CNRI.",
+  "helpFeatureBilateralTitle": "Двустороннее сравнение",
+  "helpFeatureBilateralDesc": "Сравнивает OD и OS для выявления асимметрий.",
+  "helpFeatureMlTitle": "Сравнение ONNX CNN",
+  "helpFeatureMlDesc": "Модель ONNX CNN предоставляет дополнительные измерения для сравнения.",
+  "helpKeyboardShortcuts": "Горячие клавиши",
+  "helpCameraControls": "Управление камерой",
+  "helpShortcutSpace": "Сделать снимок",
+  "helpShortcutCtrlS": "Сохранить PDF-отчёт",
+  "helpShortcutCtrlO": "Открыть изображение из галереи",
+  "helpShortcutCtrlH": "Просмотреть историю сканирований",
+  "helpShortcutF11": "Полноэкранный режим",
+  "helpShortcutEsc": "Назад / Отмена",
+  "helpShortcutScroll": "Увеличение/уменьшение",
+  "helpShortcutDoubleClick": "Сбросить масштаб",
+  "helpCommonIssues": "Частые проблемы",
+  "helpIssueCameraNotDetected": "Камера не обнаружена",
+  "helpIssueCameraSolution1": "Проверьте USB-подключение",
+  "helpIssueCameraSolution2": "Попробуйте другой USB-порт",
+  "helpIssueCameraSolution3": "Установите драйверы Dino-Lite",
+  "helpIssueCameraSolution4": "Перезапустите приложение",
+  "helpIssuePupilDetectionFails": "Ошибка обнаружения зрачка",
+  "helpIssuePupilSolution1": "Обеспечьте достаточное освещение",
+  "helpIssuePupilSolution2": "Разместите зрачок в центре кадра",
+  "helpIssuePupilSolution3": "Протрите объектив ирископа",
+  "helpIssuePupilSolution4": "Настройте фокус вручную",
+  "helpIssuePdfExportFails": "Ошибка экспорта PDF",
+  "helpIssuePdfSolution1": "Проверьте права доступа к папке",
+  "helpIssuePdfSolution2": "Убедитесь в наличии свободного места на диске",
+  "helpIssuePdfSolution3": "Закройте открытые PDF-файлы",
+  "helpIssuePdfSolution4": "Сначала попробуйте экспорт в TXT",
+  "helpCaptureChecklistTitle": "Контрольный список съёмки",
+  "helpCaptureChecklist1": "Держите зрачок по центру и полностью в кадре.",
+  "helpCaptureChecklist2": "Используйте равномерное освещение и уменьшайте блики на роговице.",
+  "helpCaptureChecklist3": "Сохраняйте одинаковое расстояние ирископа для правого и левого глаза.",
+  "helpCaptureChecklist4": "Перефокусируйтесь или переснимите, если край зрачка выглядит нечётким.",
+  "helpExportSettingsTitle": "Настройки экспорта",
+  "helpExportSettingsDesc": "Автосохранение PDF сохраняет отчёт после анализа; параметр «Включить изображения» управляет наличием фотографий глаз в PDF; «Показать сравнение ML» добавляет значения сравнения ONNX CNN в отчёты.",
+  "helpHybridScoreTitle": "Гибридная достоверность и оценка",
+  "helpHybridScoreDesc": "Отображаемая достоверность и оценка объединяют качество классической геометрии и согласованность ML, отражая надёжность измерений, а не диагноз.",
+  "helpAnomalyGuideTitle": "Интерпретация уплощений и выпячиваний",
+  "helpAnomalyGuideDesc": "Уплощения указывают на относительное втяжение, а выпячивания — на выбухание вдоль границы зрачка; каждая карточка содержит зону, величину и сопоставленную ассоциацию.",
+  "helpZoneOverlayGuideTitle": "Наложение зон",
+  "helpZoneOverlayGuideDesc": "Используйте наложение зон для визуального осмотра позиций секторов и сверки расположения выявленных аномалий вокруг зрачка и радужки.",
+  "helpContactSupportTip": "Для получения помощи обратитесь по адресу helpdesk@cnri.edu.",
+  "settingsTitle": "Настройки",
+  "settingsCameraIriscope": "КАМЕРА / ИРИСКОП",
+  "settingsPreferredCamera": "Предпочтительная камера:",
+  "settingsCameraDinoLite": "Dino-Lite",
+  "settingsCameraUsb": "USB-камера",
+  "settingsCameraAutoDetect": "Автоопределение",
+  "settingsDefaultZoom": "Масштаб по умолчанию:",
+  "settingsAnalysis": "АНАЛИЗ",
+  "settingsShowMlComparison": "Показывать сравнение ML",
+  "settingsShowZoneOverlay": "Показывать наложение зон",
+  "settingsExportReports": "ЭКСПОРТ И ОТЧЁТЫ",
+  "settingsAutoSavePdf": "Автосохранение PDF",
+  "settingsIncludeImages": "Включать изображения",
+  "settingsSaved": "Настройки сохранены",
+  "aboutResearchEdition": "Исследовательская версия",
+  "aboutVersion": "Версия {version}",
+  "@aboutVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "aboutLicense": "Лицензия",
+  "aboutLicensedTo": "Лицензировано для:",
+  "aboutExpires": "Истекает:",
+  "aboutManageLicense": "Управление лицензией",
+  "aboutBasedOnCnri": "На основе протокола CNRI",
+  "aboutCopyright": "© 2024-2026 PupilMetrics Research",
+  "aboutWebsite": "Веб-сайт",
+  "aboutPrivacy": "Конфиденциальность",
+  "languageSelectTitle": "Выбор языка",
+  "selectLanguage": "Выбор языка",
+  "languageChanged": "Язык изменён",
+  "languageChangedMessage": "Язык приложения установлен: {language}",
+  "@languageChangedMessage": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languageSystemNotAvailable": "Языковая система недоступна",
+  "licenseLoading": "Загрузка...",
+  "licenseWelcome": "Добро пожаловать в PupilMetrics!",
+  "licenseTrialFeatures": "14-дневная бесплатная пробная версия • Полный функционал",
+  "licenseStartTrial": "Начать пробный период",
+  "licenseEnterKey": "Ввести лицензию",
+  "licenseFreeTrial": "Бесплатная пробная версия",
+  "licenseDaysRemaining": "Осталось дней: {count}",
+  "@licenseDaysRemaining": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseTrialEnded": "Пробный период завершён",
+  "licenseEnterToContinue": "Введите лицензию для продолжения",
+  "licenseStandard": "Стандартная лицензия",
+  "licenseProfessional": "Профессиональная лицензия",
+  "licenseEnterprise": "Корпоративная лицензия",
+  "licenseLicensed": "Лицензировано",
+  "licenseActive": "Активна",
+  "licenseTrialUser": "Пробный пользователь",
+  "licenseLifetime": "Бессрочная",
+  "licenseNotSetUp": "Не настроена",
+  "trialExpiredTitle": "Пробный период завершён",
+  "trialExpiredMessage": "Ваш 14-дневный пробный период истёк. Для продолжения анализа снимков радужки приобретите лицензию.",
+  "trialExpiredCanStill": "Вы по-прежнему можете:",
+  "trialExpiredViewAnalyses": "Просматривать предыдущие анализы",
+  "trialExpiredExportReports": "Экспортировать существующие отчёты",
+  "trialExpiredAccessHistory": "Получить доступ к истории сканирований",
+  "trialExpiredMaybeLater": "Позже",
+  "licenseRegistration": "Регистрация лицензии",
+  "licenseStatusValid": "Действительна",
+  "licenseStatusTrialActive": "Бесплатная пробная версия",
+  "licenseStatusTrialExpired": "Пробный период завершён",
+  "licenseStatusExpired": "Лицензия истекла",
+  "licenseStatusInvalid": "Недействительная лицензия",
+  "licenseStatusUnregistered": "Не настроена",
+  "licenseStatusMachineMismatch": "Другой компьютер",
+  "licenseStatusNetworkError": "Ошибка подключения",
+  "licenseEnterKeyTitle": "Введите лицензионный ключ",
+  "licenseKeyPlaceholder": "CNRI-XXXX-XXXX-XXXX-XXXX",
+  "licenseYourName": "Ваше имя",
+  "licenseEmailAddress": "Адрес электронной почты",
+  "licenseMachineId": "Идентификатор машины",
+  "licenseCopyMachineId": "Копировать идентификатор машины",
+  "licenseMachineIdCopied": "Идентификатор машины скопирован в буфер обмена",
+  "licenseValidationKeyRequired": "Пожалуйста, введите лицензионный ключ",
+  "licenseValidationKeyFormat": "Лицензионный ключ должен содержать 20 символов (CNRI-XXXX-XXXX-XXXX-XXXX)",
+  "licenseValidationNameRequired": "Пожалуйста, введите ваше имя",
+  "licenseValidationEmailRequired": "Пожалуйста, введите адрес электронной почты",
+  "licenseValidationEmailInvalid": "Пожалуйста, введите корректный адрес электронной почты",
+  "licenseActivate": "Активировать лицензию",
+  "licenseContinueTrial": "Продолжить пробный период",
+  "licenseBuyLicense": "Купить лицензию",
+  "licenseNeedHelp": "Нужна помощь?",
+  "licenseLicenseAgreement": "Лицензионное соглашение",
+  "licenseActivatedSuccess": "Лицензия успешно активирована!",
+  "licenseMsgMachineMismatch": "Эта лицензия зарегистрирована на другом компьютере. Используйте исходное устройство или обратитесь в поддержку.",
+  "licenseMsgTrialEnded": "Ваш бесплатный пробный период завершён. Введите лицензионный ключ для доступа ко всем функциям.",
+  "licenseMsgExpired": "Срок действия вашей лицензии истёк. Продлите её для продолжения работы.",
+  "licenseMsgNeedsSetup": "Лицензия требует настройки. Начните бесплатный пробный период или введите лицензионный ключ.",
+  "licenseMsgCheckFormat": "Проверьте формат лицензионного ключа. Он должен выглядеть так: CNRI-XXXX-XXXX-XXXX-XXXX",
+  "licenseMsgNotRecognized": "Этот лицензионный ключ не распознан. Проверьте ключ и повторите попытку.",
+  "licenseMsgAlreadyRegistered": "Этот ключ уже зарегистрирован на другом компьютере.",
+  "licenseMsgContactSupport": "Срок действия лицензии истёк. Обратитесь в поддержку для продления.",
+  "licenseMsgActivatedThankYou": "Лицензия успешно активирована! Спасибо за покупку.",
+  "licenseMsgUnableToActivate": "Не удалось активировать лицензию. Проверьте подключение к интернету и повторите попытку.",
+  "licenseMsgTrialWelcome": "Добро пожаловать! Ваш {days}-дневный бесплатный пробный период начался.",
+  "@licenseMsgTrialWelcome": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseMsgTrialActive": "Пробный период активен: осталось дней — {days}.",
+  "@licenseMsgTrialActive": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseMsgFreeTrialActive": "Бесплатный пробный период активен",
+  "licenseMsgLicenseActive": "Лицензия активна — {type}",
+  "@licenseMsgLicenseActive": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "licenseMsgUnableToActivateKey": "Не удалось активировать этот лицензионный ключ.",
+  "licenseMsgNoLongerValid": "Лицензия более недействительна.",
+  "licenseMsgUnableToVerify": "Не удалось проверить этот лицензионный ключ. Обратитесь в поддержку.",
+  "trialStartedSnackbar": "Пробный период начат!",
+  "trialStartedMessage": "Наслаждайтесь 14 днями полного доступа",
+  "windowTitle": "PupilMetrics",
+  "themeMode": "Режим темы",
+  "methods": "МЕТОДЫ",
+  "setAsFrameless": "setAsFrameless",
+  "isPreventCloseSetPreventClose": "isPreventClose / setPreventClose",
+  "focusBlur": "focus / blur",
+  "showHide": "show / hide",
+  "isVisible": "isVisible",
+  "isMaximized": "isMaximized",
+  "maximizeUnmaximize": "maximize / unmaximize",
+  "isMinimized": "isMinimized",
+  "minimizeRestore": "minimize / restore",
+  "dockUndock": "dock / undock",
+  "dockLeft": "dock left",
+  "dockRight": "dock right",
+  "undock": "undock",
+  "isFullScreenSetFullScreen": "isFullScreen / setFullScreen",
+  "setAspectRatio": "setAspectRatio",
+  "reset": "сброс",
+  "setBackgroundColor": "setBackgroundColor",
+  "transparent": "прозрачный",
+  "red": "красный",
+  "green": "зелёный",
+  "blue": "синий",
+  "setBoundsGetBounds": "setBounds / getBounds",
+  "setAlignment": "setAlignment",
+  "topLeft": "topLeft",
+  "topCenter": "topCenter",
+  "topRight": "topRight",
+  "centerLeft": "centerLeft",
+  "centerRight": "centerRight",
+  "bottomLeft": "bottomLeft",
+  "bottomCenter": "bottomCenter",
+  "bottomRight": "bottomRight",
+  "getPositionSetPosition": "getPosition / setPosition",
+  "getSizeSetSize": "getSize / setSize",
+  "set": "Установить",
+  "getMinimumSizeSetMinimumSize": "getMinimumSize / setMinimumSize",
+  "getMaximumSizeSetMaximumSize": "getMaximumSize / setMaximumSize",
+  "isResizableSetResizable": "isResizable / setResizable",
+  "isMovableSetMovable": "isMovable / setMovable",
+  "isMinimizableSetMinimizable": "isMinimizable / setMinimizable",
+  "isMaximizableSetMaximizable": "isMaximizable / setMaximizable",
+  "isClosableSetClosable": "isClosable / setClosable",
+  "isAlwaysOnTopSetAlwaysOnTop": "isAlwaysOnTop / setAlwaysOnTop",
+  "isAlwaysOnBottomSetAlwaysOnBottom": "isAlwaysOnBottom / setAlwaysOnBottom",
+  "getTitleSetTitle": "getTitle / setTitle",
+  "setTitleBarStyle": "setTitleBarStyle",
+  "hidden": "скрыт",
+  "getTitleBarHeight": "getTitleBarHeight",
+  "isSkipTaskbar": "isSkipTaskbar",
+  "setSkipTaskbar": "setSkipTaskbar",
+  "setProgressBar": "setProgressBar",
+  "setIcon": "setIcon",
+  "defaultIcon": "По умолчанию",
+  "original": "Оригинал",
+  "isVisibleOnAllWorkspacesSetVisibleOnAllWorkspaces": "isVisibleOnAllWorkspaces / setVisibleOnAllWorkspaces",
+  "setBadgeLabel": "setBadgeLabel",
+  "hasShadowSetHasShadow": "hasShadow / setHasShadow",
+  "getOpacitySetOpacity": "getOpacity / setOpacity",
+  "setIgnoreMouseEvents": "setIgnoreMouseEvents",
+  "popUpWindowMenu": "popUpWindowMenu",
+  "grabKeyboard": "grabKeyboard",
+  "ungrabKeyboard": "ungrabKeyboard",
+  "dragToMoveArea": "DragToMoveArea",
+  "dragToResizeArea": "DragToResizeArea",
+  "dragToResizeAreaExample": "Пример DragToResizeArea",
+  "closeWindowConfirmation": "Вы уверены, что хотите закрыть это окно?",
+  "licenseChecking": "Проверка лицензии...",
+  "licenseRequiredTitle": "Требуется лицензия",
+  "licenseActivateValidMessage": "Активируйте действительную лицензию для продолжения.",
+  "licenseProIncludes": "PupilMetrics Pro включает:",
+  "licenseFeatureUnlimitedAnalysis": "Неограниченный анализ зрачок-коллоретта",
+  "licenseFeaturePdfReports": "Создание PDF-отчётов",
+  "licenseFeatureBilateralComparison": "Двустороннее сравнение",
+  "licenseFeatureAnwAnalysis": "Анализ коллоретты АНК",
+  "licenseFeatureScanHistory": "База данных истории сканирований",
+  "licenseFeatureUpdates": "Бесплатные обновления в течение 1 года",
+  "licensePurchase": "Купить лицензию",
+  "licenseExitApplication": "Выйти из приложения",
+  "windowCompactView": "Компактный вид",
+  "windowExpandedView": "Расширенный вид",
+  "licenseStatusTrialDaysLeft": "Пробная ({count} дн. осталось)",
+  "@licenseStatusTrialDaysLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseNotLicensed": "Не лицензировано",
+  "licenseStatusTitle": "Статус лицензии",
+  "unknown": "Неизвестно",
+  "plrReportTitle": "Отчёт по анализу ЗПР",
+  "plrResearchOnlyTitle": "ТОЛЬКО ДЛЯ ИССЛЕДОВАНИЙ/ОБУЧЕНИЯ",
+  "plrResearchDisclaimer": "Результаты НЕ являются медицинскими диагнозами. Проконсультируйтесь со специалистом здравоохранения.",
+  "plrNameLabel": "Имя",
+  "plrAgeYears": "Возраст: {age} лет",
+  "@plrAgeYears": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "plrTestLabel": "Тест",
+  "plrSummaryTitle": "Сводка ЗПР",
+  "plrGradeValue": "Оценка {grade}",
+  "@plrGradeValue": {
+    "placeholders": {
+      "grade": {
+        "type": "String"
+      }
+    }
+  },
+  "plrStatusLabel": "Статус",
+  "plrDetectedStatus": "ЗПР ОБНАРУЖЕН",
+  "plrWeakNotDetectedStatus": "СЛАБЫЙ/НЕ ОБНАРУЖЕН",
+  "plrRecoveryTimeLabel": "Время восстановления",
+  "plrRecoveryRatioLabel": "Коэффициент восстановления",
+  "plrChartDescription": "Визуальное представление реакции зрачка во времени",
+  "plrPiRange": "Диапазон P/I: {min}% - {max}%",
+  "@plrPiRange": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "plrMinValue": "Мин: {value}%",
+  "@plrMinValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "plrFrameDataTitle": "Данные кадров",
+  "plrTableTime": "Время",
+  "plrTablePiPercent": "P/I %",
+  "plrTablePhase": "Фаза",
+  "plrTableConfidenceShort": "Дост.",
+  "plrSuccessfulFailed": "Успешно: {success} | Ошибок: {fail}",
+  "@plrSuccessfulFailed": {
+    "placeholders": {
+      "success": {
+        "type": "int"
+      },
+      "fail": {
+        "type": "int"
+      }
+    }
+  },
+  "plrReferenceLatencyLine": "• Латентность: 200–500 мс (время до начала реакции)",
+  "plrReferenceConstrictionLine": "• Сужение: снижение на 10–30% от исходного уровня",
+  "plrReferenceVelocityLine": "• Скорость: 1,5–4,0%/сек",
+  "plrReferenceRecoveryLine": "• Восстановление: >75% возврата к исходному уровню в течение 5 секунд",
+  "plrReferenceRecoveryLineShort": "• Восстановление: >75% возврата к исходному уровню за 5 с",
+  "plrShareSubject": "Отчёт по анализу ЗПР — {eye}",
+  "@plrShareSubject": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "plrTextReportTitle": "ОТЧЁТ ПО ВИДЕОАНАЛИЗУ ЗПР",
+  "plrTextDisclaimerTitle": "ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ: только для исследований/обучения",
+  "plrTextDisclaimerBody": "Результаты НЕ являются медицинскими диагнозами.",
+  "plrOverallGradeLabel": "Общая оценка",
+  "plrEndOfReport": "КОНЕЦ ОТЧЁТА",
+  "zoneOverlay": "Наложение зон",
+  "@zoneOverlay": {
+    "description": "Zone overlay / analysis: Zone Overlay"
+  },
+  "tipDragImage": "Совет: перетащите изображение, чтобы совместить лимб с кольцами наложения.",
+  "@tipDragImage": {
+    "description": "Zone overlay / analysis: Tip: drag image to align limbus with overlay circl"
+  },
+  "overlayMetrics": "Метрики наложения",
+  "@overlayMetrics": {
+    "description": "Zone overlay / analysis: Overlay Metrics"
+  },
+  "piRatioLabel": "Соотношение P/I:",
+  "@piRatioLabel": {
+    "description": "Zone overlay / analysis: P/I Ratio:"
+  },
+  "ellipsenessLabel": "Эллиптичность:",
+  "@ellipsenessLabel": {
+    "description": "Zone overlay / analysis: Ellipseness:"
+  },
+  "decentralizationLabel": "Децентрализация:",
+  "@decentralizationLabel": {
+    "description": "Zone overlay / analysis: Decentralization:"
+  },
+  "detectedFindings": "Выявленные находки",
+  "@detectedFindings": {
+    "description": "Zone overlay / analysis: Detected findings"
+  },
+  "anwCollarette": "АНК / КОЛЛОРЕТТА",
+  "@anwCollarette": {
+    "description": "Zone overlay / analysis: ANW / COLLARETTE"
+  },
+  "observerNotes": "Заметки наблюдателя",
+  "@observerNotes": {
+    "description": "Zone overlay / analysis: Observer notes"
+  },
+  "observerNotesHint": "Введите клинические наблюдения, результаты зональных находок, паттерны…",
+  "@observerNotesHint": {
+    "description": "Zone overlay / analysis: Enter clinical observations, zone findings, patter"
+  },
+  "autoCenter": "Автоцентрирование",
+  "@autoCenter": {
+    "description": "Zone overlay / analysis: Auto-center"
+  },
+  "anwRing": "Кольцо АНК",
+  "@anwRing": {
+    "description": "Zone overlay / analysis: ANW Ring"
+  },
+  "axisGrid": "Оси/Сетка",
+  "@axisGrid": {
+    "description": "Zone overlay / analysis: Axis/Grid"
+  },
+  "chart": "График",
+  "@chart": {
+    "description": "Zone overlay / analysis: Chart"
+  },
+  "hoverToIdentify": "Наведите курсор или нажмите на зону для идентификации",
+  "@hoverToIdentify": {
+    "description": "Zone overlay / analysis: Hover or tap a zone to identify"
+  },
+  "organsMode": "Режим органов — наведите курсор на радужку для идентификации зон",
+  "@organsMode": {
+    "description": "Zone overlay / analysis: Organs mode — hover iris to identify zones"
+  },
+  "mildSizeDiff": "Незначительная разница в размере. Возможно физиологическое различие.",
+  "@mildSizeDiff": {
+    "description": "Zone overlay / analysis: Mild size difference. May be physiological variati"
+  },
+  "withinBaseline": "В пределах нормы для возраста {age} ({group})",
+  "@withinBaseline": {
+    "description": "Zone overlay / analysis: Within research baseline for age {age} ({group})"
+  },
+  "formLabel": "Форма:",
+  "@formLabel": {
+    "description": "Zone overlay / analysis: Form:"
+  },
+  "flatteningLabel": "Уплощение:",
+  "@flatteningLabel": {
+    "description": "Zone overlay / analysis: Flattening:"
+  },
+  "protrusionLabel": "Выпячивание:",
+  "@protrusionLabel": {
+    "description": "Zone overlay / analysis: Protrusion:"
+  },
+  "decentrationLabel": "Децентрация:",
+  "@decentrationLabel": {
+    "description": "Zone overlay / analysis: Decentration:"
+  },
+  "pupilSizeLabel": "Размер зрачка:",
+  "@pupilSizeLabel": {
+    "description": "Zone overlay / analysis: Pupil size:"
+  },
+  "anwRatioLabel": "Соотношение АНК:",
+  "@anwRatioLabel": {
+    "description": "Zone overlay / analysis: ANW ratio:"
+  },
+  "anwToneLabel": "Тонус АНК:",
+  "@anwToneLabel": {
+    "description": "Zone overlay / analysis: ANW tone:"
+  },
+  "noMajorODAnomalies": "Значимых аномалий зрачка OD не выявлено.",
+  "@noMajorODAnomalies": {
+    "description": "Zone overlay / analysis: No major OD pupil anomalies."
+  },
+  "noMajorOSAnomalies": "Значимых аномалий зрачка OS не выявлено.",
+  "@noMajorOSAnomalies": {
+    "description": "Zone overlay / analysis: No major OS pupil anomalies."
+  },
+  "anwNotAssessed": "АНК: не оценивалось",
+  "@anwNotAssessed": {
+    "description": "Zone overlay / analysis: ANW: not assessed"
+  },
+  "manualAlignmentAid": "Вспомогательное выравнивание вручную только для ревизии (после съёмки). Перетащите изображение или воспользуйтесь автоцентрированием.",
+  "@manualAlignmentAid": {
+    "description": "Zone overlay / analysis: Manual alignment aid for review only (post-capture"
+  },
+  "frontalShift": "С: Фронтальный паттерн смещения.",
+  "@frontalShift": {
+    "description": "Zone overlay / analysis: S: Frontal shift."
+  },
+  "cerebralCirculation": "Исторические исследования по Вельховеру связывали это с паттернами мозгового кровообращения.",
+  "@cerebralCirculation": {
+    "description": "Zone overlay / analysis: Cerebral circulation patterns."
+  },
+  "middleTemporalShift": "Д: Средне-темпоральный паттерн смещения.",
+  "@middleTemporalShift": {
+    "description": "Zone overlay / analysis: D: Middle-temporal shift."
+  },
+  "respiratoryCardiac": "Исторические исследования по Вельховеру связывали это с дыхательными и сердечными вегетативными паттернами.",
+  "@respiratoryCardiac": {
+    "description": "Zone overlay / analysis: Respiratory and cardiac autonomic patterns."
+  },
+  "findings": "Находки:",
+  "@findings": {
+    "description": "Zone overlay / analysis: Findings:"
+  },
+  "analysisReportTitle": "Отчёт по анализу зрачка",
+  "reportResearchVersion": "Исследовательская версия",
+  "reportDisclaimerTitle": "ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ: только для исследований/обучения",
+  "reportDisclaimerBody": "Результаты являются исследовательскими наблюдениями, а НЕ медицинскими диагнозами.",
+  "reportPersonInformationTitle": "Данные пациента",
+  "reportAgeGroupLabel": "Возрастная группа",
+  "reportPupilSizeComparisonTitle": "Сравнение размеров зрачка",
+  "reportCaptureDistanceMetricsTitle": "Метрики дистанции съёмки",
+  "reportResearchObservationsTitle": "Исследовательские наблюдения",
+  "reportObserverNotesZoneOverlayTitle": "Заметки наблюдателя (наложение зон)",
+  "reportEndOfReport": "КОНЕЦ ОТЧЁТА",
+  "reportGradeLabel": "Оценка",
+  "reportPupilFormTitle": "Форма зрачка",
+  "reportDecentrationTitle": "Децентрация",
+  "reportFlatteningsTitle": "Уплощения",
+  "reportProtrusionsTitle": "Выпячивания",
+  "reportAnwParametersTitle": "Автономное нервное кольцо (АНК)",
+  "reportTonicStateLabel": "Исторический паттерн тонуса",
+  "reportShiftDetectedTitle": "Исторический паттерн смещения",
+  "reportClinicalLabel": "Историческая заметка",
+  "reportConstrictionDetectedTitle": "Обнаружено сужение",
+  "reportSeverityLabel": "Степень тяжести",
+  "reportReferenceValuesTitle": "Референсные значения (исследовательский протокол CNRI)",
+  "reportMatchLabel": "Соответствие",
+  "reportValueLabel": "Значение",
+  "reportNormalPupilForm": "Нормальная форма зрачка",
+  "reportPageXofY": "Страница {page}/{total}",
+  "@reportPageXofY": {
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "reportShareSubject": "Отчёт по анализу зрачка — {patientName}",
+  "@reportShareSubject": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      }
+    }
+  },
+  "reportShareBody": "Прилагается отчёт по анализу зрачка пациента {patientName}, сформированный {date}.",
+  "@reportShareBody": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "belowBaseline": "Ниже нормы для возраста {age} ({group})",
+  "@belowBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "aboveBaseline": "Выше нормы для возраста {age} ({group})",
+  "@aboveBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "ageGroupInfant": "Младенец",
+  "@ageGroupInfant": {
+    "description": "Localized age group label"
+  },
+  "ageGroupChild15": "Ребёнок (1–5)",
+  "@ageGroupChild15": {
+    "description": "Localized age group label"
+  },
+  "ageGroupChild611": "Ребёнок (6–11)",
+  "@ageGroupChild611": {
+    "description": "Localized age group label"
+  },
+  "ageGroupTeen": "Подросток",
+  "@ageGroupTeen": {
+    "description": "Localized age group label"
+  },
+  "ageGroupAdult2039": "Взрослый (20–39)",
+  "@ageGroupAdult2039": {
+    "description": "Localized age group label"
+  },
+  "ageGroupAdult4059": "Взрослый (40–59)",
+  "@ageGroupAdult4059": {
+    "description": "Localized age group label"
+  },
+  "ageGroupSenior60Plus": "Пожилой (60+)",
+  "@ageGroupSenior60Plus": {
+    "description": "Localized age group label"
+  },
+  "middleNasalShift": "Средне-назальный паттерн смещения.",
+  "upperTemporalShift": "Верхне-темпоральный паттерн смещения.",
+  "lowerTemporalShift": "Нижне-темпоральный паттерн смещения.",
+  "basalShift": "Базальный паттерн смещения.",
+  "vagusStellateAssociation": "Исторические исследования по Вельховеру связывали это с паттернами гипофункции блуждающего нерва или звёздчатого ганглия.",
+  "venaCavaInferiorAssociation": "Исторические исследования по Вельховеру связывали это с паттернами гемодинамических нарушений нижней полой вены.",
+  "vertebralArteryAssociation": "Исторические исследования по Вельховеру связывали это с паттернами кровообращения позвоночной артерии.",
+  "smallPelvisAssociation": "Исторические исследования по Вельховеру связывали это с застойными паттернами малого таза.",
+  "openZoneOverlay": "Открыть наложение зон",
+  "iris": "Радужка",
+  "chartOpacity": "Непрозрачность графика",
+  "irisSizeNotAvailable": "Данные о размере радужки недоступны",
+  "ratio": "Соотношение",
+  "reportRefPiRatio": "Соотношение зрачок/радужка: норма 20–30%",
+  "reportRefEllipseness": "Эллиптичность: норма >95%",
+  "reportRefDecentralization": "Децентрализация: норма <5%",
+  "reportRefPupilSizeDiff": "Разница размеров зрачка: <2% — норма, 2–4% — незначительная, >4% — значимая",
+  "enterPatientInfoAnalysis": "Введите данные пациента → Анализ",
+  "chooseCaptureMethod": "Выберите метод съёмки:",
+  "usbCamera": "USB-камера",
+  "selectExistingImage": "Выбрать существующее изображение",
+  "detectingCameras": "Обнаружение камер...",
+  "retryDetection": "Повторить обнаружение",
+  "connectUvcCameraViaUsb": "Подключите UVC-камеру через USB",
+  "ensureCameraDriversInstalled": "Убедитесь, что драйверы камеры установлены",
+  "tapRefreshToDetect": "Нажмите «Обновить» для обнаружения камер",
+  "connectUsbCameraToBegin": "Подключите USB-камеру для начала работы",
+  "noExternalCameraTitle": "Внешняя камера не обнаружена",
+  "connectUsbIriscopeEnsurePlugged": "Подключите USB-ирископ и убедитесь, что он подключён",
+  "languagesAvailable": "Доступные языки",
+  "validationChecks": "Проверки качества:",
+  "eyeQualityTip": "Совет: обеспечьте хорошее освещение и держите глаз неподвижным",
+  "validatingEye": "Проверка изображения глаза...",
+  "initializing": "Инициализация...",
+  "nameLabel": "Имя:",
+  "ageLabel": "Возраст:",
+  "typeLabel": "Тип:",
+  "pleaseEnterName": "Введите имя",
+  "pleaseEnterAge": "Введите возраст",
+  "ageMustBe2Digits": "Возраст должен содержать 1 или 2 цифры",
+  "optional": "(Необязательно)",
+  "bilateralBothHands": "Двустороннее использование обеих рук",
+  "zoom": "Масштаб",
+  "zoomSliderTip": "Используйте ползунок масштаба справа для регулировки увеличения перед записью.",
+  "aboutProgramDeveloper": "Разработчик программы — Bryan K. Marcia, Ph.D.",
+  "chartSizeTooltip": "Размер графика",
+  "chartOpacityAdvancedTooltip": "Непрозрачность графика (0 = только при наведении / режим органов)",
+  "anwLabel": "АНК",
+  "doneAndGoBack": "Готово и назад",
+  "errorImageShape": "Неверная форма изображения — убедитесь, что глаз заполняет кадр",
+  "cameraConnected": "Камера подключена",
+  "cameraDisconnected": "Камера отключена",
+  "cameraPermissionDenied": "Доступ к камере запрещён",
+  "cameraFailedInit": "Не удалось инициализировать камеру",
+  "cameraInUse": "Камера используется другим приложением",
+  "cameraFormatNotSupported": "Формат камеры не поддерживается",
+  "capturedImageNotFound": "Файл снятого изображения не найден",
+  "failedToCaptureImage": "Не удалось сделать снимок",
+  "gradeA": "А",
+  "gradeB": "Б",
+  "gradeC": "В",
+  "gradeD": "Г",
+  "cameraErrorOccurred": "Произошла ошибка камеры",
+  "connectingToUsbIriscope": "Подключение к USB-ирископу...",
+  "noCamerasDetectedMessage": "Камеры не обнаружены. Убедитесь, что USB-камера подключена и распознана системой.",
+  "failedToAccessCameras": "Не удалось получить доступ к камерам"
+}

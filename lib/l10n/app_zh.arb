@@ -1,0 +1,1921 @@
+{
+  "@@locale": "zh",
+  "appTitle": "PupilMetrics",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "analyzeButton": "分析",
+  "plrModes": "PLR模式",
+  "captureInstructions": "将眼睛置于引导圆内",
+  "scanHistory": "扫描历史",
+  "selectCameraMode": "选择摄像头模式",
+  "loadFromGallery": "从相册加载",
+  "rightEyePhoto": "右眼照片",
+  "leftEyePhoto": "左眼照片",
+  "autoCapture": "自动拍摄",
+  "autoCaptureDesc": "眼部检测 + 5秒自动拍摄",
+  "manualCapture": "手动拍摄",
+  "manualCaptureDesc": "眼部检测 + 手动拍摄（后置摄像头）",
+  "selfieMode": "自拍模式",
+  "selfieModeDesc": "眼部检测 + 5秒自动拍摄（前置摄像头）",
+  "plrVideoRear": "PLR视频（后置）",
+  "plrVideoRearDesc": "后置摄像头 • 10秒拍摄",
+  "plrVideoSelfie": "PLR视频（自拍）",
+  "plrVideoSelfieDesc": "前置摄像头 • 10秒拍摄",
+  "plrVideoCapture": "PLR视频拍摄",
+  "frontCamera": "前置摄像头",
+  "rearCamera": "后置摄像头",
+  "selectEyeToAssess": "选择要评估的眼睛",
+  "rightEyeOD": "右眼 (OD)",
+  "leftEyeOS": "左眼 (OS)",
+  "recordPlrRightEye": "记录右眼PLR",
+  "recordPlrLeftEye": "记录左眼PLR",
+  "loadRightEyeImage": "加载右眼图像",
+  "loadLeftEyeImage": "加载左眼图像",
+  "bothEyes": "双眼",
+  "loadBothEyesDesc": "先加载右眼，再加载左眼",
+  "selectEyeImageFromDevice": "从设备中选择眼部图像",
+  "selectRightEyeFirst": "请先选择右眼 (OD) 图像",
+  "rightEyeSaved": "右眼已保存。请选择左眼 (OS) 图像",
+  "cancelledNoRightEye": "已取消 - 未选择右眼",
+  "cancelledNoLeftEye": "已取消 - 未选择左眼",
+  "errorLoadingImages": "图像加载错误：{error}",
+  "@errorLoadingImages": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "crop43": "裁剪 (4:3)",
+  "success": "成功",
+  "imageCroppedSuccess": "图像裁剪成功！",
+  "error": "错误",
+  "cropFailed": "图像裁剪失败，请重试。",
+  "crop": "裁剪",
+  "cancel": "取消",
+  "saved": "已保存！ ✅",
+  "imageSavedToGallery": "图像已成功保存到相册",
+  "exposure": "曝光",
+  "flash": "闪光灯",
+  "eye": "眼睛",
+  "center": "中心",
+  "light": "光线",
+  "ready": "就绪",
+  "on": "开",
+  "off": "关",
+  "auto": "自动",
+  "manual": "手动",
+  "selfie": "自拍",
+  "pupil": "瞳孔",
+  "plrHistory": "PLR历史",
+  "searchByName": "按姓名搜索...",
+  "totalScans": "扫描总数",
+  "thisWeek": "本周",
+  "patients": "患者",
+  "detected": "已检测",
+  "noPlrRecordsYet": "暂无PLR记录",
+  "recordPlrVideoToSeeHistory": "录制PLR视频后，历史记录将显示在此处",
+  "deleteRecord": "删除记录？",
+  "deleteRecordConfirm": "删除 {name}（{eye}）的PLR分析记录？\\n\\n此操作无法撤销。",
+  "@deleteRecordConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "delete": "删除",
+  "recordDeleted": "记录已删除",
+  "plrAnalysis": "PLR分析 - {eye}",
+  "@plrAnalysis": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "patient": "患者",
+  "date": "日期",
+  "frames": "帧数",
+  "baselinePiRatio": "基线P/I",
+  "minPiRatio": "最小P/I",
+  "plrMagnitude": "PLR幅度",
+  "constriction": "缩瞳",
+  "plrDetected": "PLR已检测",
+  "confidence": "置信度",
+  "grade": "等级",
+  "close": "关闭",
+  "yes": "是",
+  "no": "否",
+  "na": "N/A",
+  "takeLeftEyePhoto": "拍摄左眼照片",
+  "takeRightEyePhoto": "拍摄右眼照片",
+  "nowTakingLeftEye": "正在拍摄左眼 (OS)",
+  "startingWithRightEye": "从右眼 (OD) 开始",
+  "captured": "已拍摄 ✓",
+  "useSameDistanceLighting": "请使用与右眼相同的距离和光线，以确保准确比较。",
+  "step1of2": "第1步 共2步",
+  "step2of2": "第2步 共2步",
+  "bothEyesCaptured": "双眼拍摄完成 ✓",
+  "continueToLeftEye": "继续拍摄左眼",
+  "retakeOD": "重拍OD",
+  "retakeOS": "重拍OS",
+  "retakeRightEye": "重拍右眼",
+  "analyzeBothEyes": "分析双眼",
+  "patientInfoMissing": "患者信息缺失",
+  "rightEyePhotoMissing": "缺少右眼照片！",
+  "patientInfoMissingRestart": "患者信息缺失，请重新开始。",
+  "exitApp": "退出应用",
+  "tipsForBestResults": "获得最佳效果的建议",
+  "followGuidelinesForQuality": "请遵循以下指南以获得最佳图像质量",
+  "cameraDistance": "摄像头距离",
+  "cameraDistanceDesc": "将摄像头保持在距眼睛10-15厘米处。两眼保持相同距离。",
+  "lightingPosition": "光线位置",
+  "lightingPositionDesc": "将光源置于瞳孔边缘内侧或外侧。尝试向摄像头闪光灯方向注视。",
+  "avoidReflections": "避免反光",
+  "avoidReflectionsDesc": "避免窗户眩光、镜子和直射灯光，以减少反光。",
+  "centerYourEye": "居中眼睛",
+  "centerYourEyeDesc": "确保包含巩膜（白眼球）在内的整个眼睛居中并充满画面。",
+  "cropProperly": "正确裁剪",
+  "cropProperlyDesc": "以眼睛为中心裁剪图像。图像将自动以4:3比例保存。",
+  "importantInformation": "重要信息",
+  "imageRatio43": "符合医学影像标准的4:3图像比例",
+  "forClinicalUseCnri": "供CNRI (cnri.edu) 临床使用",
+  "noMedicalDiagnosis": "不提供医学诊断",
+  "eyeWideOpenClear": "请确保眼睛充分睁开且图像清晰",
+  "personalInfo": "个人信息",
+  "personInformation": "受检者信息",
+  "enterPersonDetails": "输入受检者详细信息",
+  "infoIncludedInReport": "此信息将包含在分析报告中",
+  "fullName": "姓名",
+  "enterPersonName": "输入姓名",
+  "nameRequired": "姓名为必填项",
+  "sex": "性别",
+  "male": "男",
+  "female": "女",
+  "ageYears": "年龄（岁）",
+  "enterAge": "输入年龄",
+  "ageRequired": "年龄为必填项",
+  "enterValidNumber": "请输入有效数字",
+  "enterValidAge": "请输入有效年龄（0-120）",
+  "mainComplaints": "主诉",
+  "mainComplaintsOptional": "主诉（可选）",
+  "complaintsHint": "例如：头痛、视力问题、疲劳...",
+  "continueToCaptire": "继续拍摄",
+  "ageImportantNote": "年龄对于准确评估瞳孔大小很重要，因为正常范围因年龄而异。",
+  "submit": "提交",
+  "pleaseSelectGender": "请选择性别！",
+  "applicationSubmitted": "申请已成功提交。",
+  "type": "类型：",
+  "gender": "性别：",
+  "rightHanded": "惯用右手",
+  "leftHanded": "惯用左手",
+  "partialLeftHandedness": "部分惯用左手",
+  "retrainedLeftHandedness": "矫正后的左利手",
+  "bilateralUseBothHands": "双手均用",
+  "splashTitle": "PupilMetrics 眼部拍摄",
+  "splashDeveloper": "程序开发者 - Bryan K. Marcia, Ph.D.",
+  "researchEducationalTool": "研究/教育工具",
+  "startNewAnalysis": "开始新分析",
+  "viewHistory": "查看历史",
+  "viewResearchDisclaimer": "查看研究免责声明",
+  "researchDisclaimerTitle": "研究/教育工具",
+  "researchDisclaimerNotMedical": "非医疗设备",
+  "researchDisclaimerNotClinical": "不用于临床诊断",
+  "researchDisclaimerResults": "结果为研究性观察",
+  "researchDisclaimerConsult": "请始终咨询医疗专业人员",
+  "researchDisclaimerAcknowledge": "继续使用即表示您确认本应用为研究工具，不应用于医疗决策。",
+  "researchDisclaimerWarning": "本应用仅供研究和教育目的使用。",
+  "iUnderstand": "我已了解",
+  "plrAnalysisTest": "PLR分析测试",
+  "checkingVideoFile": "正在检查视频文件...",
+  "processingFrame": "正在处理帧 {current}/{total}（{timestamp}ms）...",
+  "@processingFrame": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "timestamp": {
+        "type": "int"
+      }
+    }
+  },
+  "analysisComplete": "分析完成！",
+  "errorVideoNotFound": "错误：未找到视频文件",
+  "waitingForResults": "等待结果...",
+  "baseline": "基线",
+  "flashPhase": "闪光",
+  "constrictionPhase": "缩瞳",
+  "recovery": "恢复",
+  "plrDetectedExclaim": "检测到PLR！",
+  "plrWeakNotDetected": "PLR弱/未检测到",
+  "min": "最小值",
+  "plr": "PLR",
+  "constrLabel": "缩瞳",
+  "saveToHistory": "保存到历史",
+  "txt": "TXT",
+  "json": "JSON",
+  "saveFrames": "保存帧",
+  "share": "分享",
+  "frameSavedToGallery": "帧已保存到相册！",
+  "failedToSaveFrame": "帧保存失败",
+  "framesSavedToGallery": "{count}帧已保存到相册！",
+  "@framesSavedToGallery": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "jsonCopiedToClipboard": "JSON已复制到剪贴板！",
+  "reportCopiedToClipboard": "报告已复制到剪贴板！",
+  "shareFailedError": "分享失败：{error}",
+  "@shareFailedError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "savedToHistoryId": "已保存到历史！（ID：{id}）",
+  "@savedToHistoryId": {
+    "placeholders": {
+      "id": {
+        "type": "int"
+      }
+    }
+  },
+  "failedToSave": "保存失败：{error}",
+  "@failedToSave": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noSuccessfulFramesToSave": "没有可保存的成功帧",
+  "saveAllFrames": "保存所有帧",
+  "shareReport": "分享报告",
+  "shareJson": "分享JSON",
+  "rerunTest": "重新测试",
+  "videoCaptureTitle": "PLR - {eye}",
+  "@videoCaptureTitle": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "initializingCamera": "正在初始化摄像头...",
+  "usingCamera": "使用{camera}摄像头",
+  "@usingCamera": {
+    "placeholders": {
+      "camera": {
+        "type": "String"
+      }
+    }
+  },
+  "cameraError": "摄像头错误：{error}",
+  "@cameraError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noCamerasFound": "未找到摄像头",
+  "retry": "重试",
+  "startPlrRecording": "开始PLR录制",
+  "stopRecording": "停止录制",
+  "phaseReady": "就绪",
+  "phaseStarting": "启动中...",
+  "phaseBaseline": "基线（0-{sec}秒）",
+  "@phaseBaseline": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseFlash": "闪光！",
+  "phaseConstriction": "缩瞳（{start}-{end}秒）",
+  "@phaseConstriction": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseRecovery": "恢复（{start}-{end}秒）",
+  "@phaseRecovery": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseComplete": "完成！",
+  "readyDesc": "将眼睛置于圆内，然后点击开始",
+  "holdSteady": "保持稳定...",
+  "recordingBaselinePupil": "正在记录基线瞳孔大小",
+  "lightStimulus": "光刺激（{ms}ms）",
+  "@lightStimulus": {
+    "placeholders": {
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "measuringConstriction": "正在测量瞳孔缩小",
+  "measuringRecovery": "正在测量瞳孔恢复",
+  "plrRecordingComplete": "PLR录制完成",
+  "positionEyeInstruction": "将{eye}置于圆内。\\n录制{seconds}秒期间请保持稳定。",
+  "@positionEyeInstruction": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      },
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "keepEyeSteadyFlash": "保持眼睛稳定。闪光将在{sec}秒时发生。",
+  "@keepEyeSteadyFlash": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "recordingComplete": "录制完成",
+  "plrVideoCapturedSuccess": "PLR视频拍摄成功！",
+  "duration": "时长",
+  "seconds": "秒",
+  "frameRate": "帧率",
+  "camera": "摄像头",
+  "flashAt": "{sec}秒时（{ms}ms）",
+  "@flashAt": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      },
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "phases": "阶段",
+  "phasesFlow": "基线 → 闪光 → 缩瞳 → 恢复",
+  "expectedNormalValues": "预期正常值：",
+  "latency": "潜伏期",
+  "velocity": "速度",
+  "testFrameAnalysis": "🧪 帧分析测试",
+  "retake": "重拍",
+  "done": "完成",
+  "plrVideoModeTitle": "PLR视频模式",
+  "plrAssessmentTitle": "PLR（瞳孔对光反射）评估",
+  "plrInstructions": "1. 将眼睛置于引导圆内\\n2. 点击'开始PLR录制'\\n3. 保持稳定10秒\\n4. 3秒时发出闪光\\n5. 应用记录瞳孔反应",
+  "recordingPhases": "录制阶段：",
+  "baselinePhaseDesc": "初始瞳孔大小",
+  "flashPhaseDesc": "光刺激",
+  "constrictionPhaseDesc": "瞳孔缩小",
+  "recoveryPhaseDesc": "瞳孔恢复",
+  "normalPlrValues": "正常PLR值：",
+  "gotIt": "明白了",
+  "pupilAnalysis": "瞳孔分析",
+  "scansLeft": "剩余{count}次",
+  "@scansLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "validatingRightEye": "正在验证右眼...",
+  "validatingLeftEye": "正在验证左眼...",
+  "analyzingRightEye": "正在分析右眼 (OD)...",
+  "analyzingLeftEye": "正在分析左眼 (OS)...",
+  "comparingPupils": "正在比较瞳孔...",
+  "person": "受检者：{name}",
+  "@person": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "invalidEyeImage": "无效的眼部图像",
+  "analysisFailed": "分析失败：{error}",
+  "@analysisFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "researchEducationalToolOnly": "仅供研究/教育使用",
+  "resultsNotMedicalDiagnoses": "本应用仅供研究和教育目的使用。结果不是医学诊断，未经临床使用验证。模式关联来自历史研究文献。如有健康问题，请咨询医疗专业人员。",
+  "pupilSizeDifference": "检测到瞳孔大小差异",
+  "significantPupilSizeDiff": "显著瞳孔大小差异",
+  "diff": "差值",
+  "researchObservationConsult": "研究性观察 - 请咨询医疗专业人员进行解读",
+  "ageBasedResearchBaseline": "基于年龄的研究基准值",
+  "group": "组别：{group}",
+  "@group": {
+    "placeholders": {
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "researchRange": "研究范围",
+  "measuredEst": "测量值（估算）",
+  "pupilForm": "瞳孔形态",
+  "decentrationPattern": "偏心度模式",
+  "flattenings": "扁平化",
+  "protrusions": "突出",
+  "zonesCount": "{count}个区域",
+  "@zonesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bilateralComparison": "双眼比较",
+  "parameter": "参数",
+  "od": "OD",
+  "os": "OS",
+  "piRatio": "P/I比值",
+  "ellipseness": "椭圆度",
+  "circularity": "圆形度",
+  "decentralization": "偏心度",
+  "anwRatio": "ANW比值",
+  "normal": "正常",
+  "elliptical": "椭圆形",
+  "circular": "圆形",
+  "irregular": "不规则",
+  "centered": "居中",
+  "offset": "偏移",
+  "miosis": "缩瞳",
+  "constricted": "收缩",
+  "dilated": "散大",
+  "mydriasis": "散瞳",
+  "inner": "内侧",
+  "outer": "外侧",
+  "high": "高",
+  "moderate": "中等",
+  "savePdf": "保存PDF",
+  "sharePdf": "分享PDF",
+  "retakePhotos": "重新拍摄",
+  "scansLeftBanner": "剩余{count}次扫描",
+  "@scansLeftBanner": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "upgrade": "升级",
+  "unlockUnlimited": "解锁无限制",
+  "usedAllFreeScans": "您已用完所有免费扫描次数。",
+  "unlimitedScans": "无限次扫描",
+  "pdfReports": "PDF报告",
+  "scanHistoryFeature": "扫描历史",
+  "bilateralAnalysis": "双眼分析",
+  "monthly": "月付",
+  "perMonth": "/月",
+  "annual": "年付",
+  "perYear": "/年",
+  "tenCredits": "10次点数",
+  "oneTime": "一次性",
+  "best": "最优",
+  "purchaseCancelled": "购买已取消",
+  "purchaseFailed": "购买失败：{error}",
+  "@purchaseFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "txtSaved": "TXT已保存：{path}",
+  "@txtSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "jsonSaved": "JSON已保存：{path}",
+  "@jsonSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfSaved": "PDF已保存！",
+  "pdfFailed": "PDF失败：{error}",
+  "@pdfFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "open": "打开",
+  "failed": "失败：{error}",
+  "@failed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "staticScans": "静态",
+  "plrScans": "PLR",
+  "searchByNameOrComplaints": "按姓名或主诉搜索...",
+  "searchPlrRecords": "搜索PLR记录...",
+  "noScansYet": "暂无扫描记录",
+  "completedScansAppearHere": "已完成的扫描将显示在此处",
+  "deleteScan": "删除扫描？",
+  "deleteScanConfirm": "删除{name}于{date}的扫描记录？",
+  "@deleteScanConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "scanDeleted": "扫描已删除",
+  "originalImagesNotFound": "未找到原始眼部图像。",
+  "viewResults": "查看结果",
+  "avgPlr": "平均PLR",
+  "years": "岁",
+  "anisocoria": "瞳孔不等大",
+  "none": "无",
+  "mild": "轻度",
+  "severe": "重度",
+  "zoneLabel": "区域：{zone}",
+  "@zoneLabel": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "associatedWith": "与{organ}相关",
+  "@associatedWith": {
+    "placeholders": {
+      "organ": {
+        "type": "String"
+      }
+    }
+  },
+  "significant": "显著",
+  "fair": "一般",
+  "low": "低",
+  "good": "良好",
+  "zones": "区域",
+  "significanceWithinLimits": "在可接受范围内",
+  "significanceMild": "轻度",
+  "significanceModerate": "中度",
+  "significanceSignificant": "显著",
+  "formTypeCircle": "圆形（正常）",
+  "formTypeOval": "椭圆形",
+  "formTypeOvalVertical": "垂直椭圆形",
+  "formTypeOvalHorizontal": "水平椭圆形",
+  "formTypeOvalDiagonal": "斜向椭圆形",
+  "formTypeLeftObliqueEllipse": "左斜椭圆",
+  "formTypeUnilateralEllipse": "单侧椭圆",
+  "formTypeVentralDivergingEllipse": "腹侧发散椭圆",
+  "formTypeFrontalDivergingEllipse": "额侧发散椭圆",
+  "formTypeEllipse": "椭圆",
+  "formTypeChord": "弦形",
+  "formTypeIrregular": "不规则",
+  "pupilFormCircleDesc": "正常圆形瞳孔形态。未检测到形态变异。",
+  "pupilFormOvalHorizontalDesc": "水平椭圆形模式。历史研究将此与影响呼吸和腺体功能区域的自主神经系统模式相关联。",
+  "pupilFormOvalVerticalDesc": "垂直椭圆形模式。历史研究将此模式与自主神经反射研究中的脑循环区域相关联。",
+  "pupilFormOvalDiagonalDesc": "斜向椭圆形模式。研究文献将此与自主神经研究中的泌尿生殖区域反射相关联。",
+  "pupilFormLeftObliqueEllipseDesc": "左斜椭圆形模式。历史观察将此与泌尿生殖和下肢自主神经区域相关联。",
+  "pupilFormUnilateralEllipseDesc": "单侧椭圆形模式。研究表明与呼吸和支气管自主神经区域有关联。",
+  "pupilFormVentralDivergingEllipseDesc": "腹侧发散椭圆。历史研究将此与下体自主神经区域和运动功能模式相关联。",
+  "pupilFormFrontalDivergingEllipseDesc": "额侧发散椭圆。研究文献将此模式与脑部和上部自主神经区域相关联。",
+  "pupilFormOvalDesc": "轻度椭圆变形模式。请在研究观察中监测其进展。",
+  "pupilFormEllipseDesc": "历史研究中显示自主神经系统变异的椭圆形瞳孔模式。",
+  "pupilFormChordDesc": "研究文献中显示局部自主神经影响的弦形变形模式。",
+  "pupilFormIrregularDesc": "基于历史观察提示多种自主神经模式影响的不规则形态。",
+  "patternCentered": "居中（正常）",
+  "patternFrontal": "额侧偏心",
+  "patternBasal": "基底偏心",
+  "patternNasal": "鼻侧偏心",
+  "patternTemporal": "颞侧偏心",
+  "patternMiddleNasal": "中鼻侧偏心",
+  "patternMiddleTemporal": "中颞侧偏心",
+  "patternUpperNasal": "上鼻侧偏心",
+  "patternUpperTemporal": "上颞侧偏心",
+  "patternLowerNasal": "下鼻侧偏心",
+  "patternLowerTemporal": "下颞侧偏心",
+  "patternUpwards": "偏心 - 向上",
+  "patternDownwards": "偏心 - 向下",
+  "patternUpwardsInwards": "偏心 - 上内方",
+  "patternUpwardsOutwards": "偏心 - 上外方",
+  "decentrationCenteredDesc": "瞳孔位置在生理限制范围内。",
+  "decentrationNasalRightDesc": "鼻侧模式（右）。历史研究将此区域与肺部自主神经反射相关联。",
+  "decentrationNasalLeftDesc": "鼻侧模式（左）。研究文献将此区域与心脏自主神经功能模式相关联。",
+  "decentrationTemporalDesc": "颞侧模式。历史观察将此区域与肾脏和生殖器官自主神经反射相关联。",
+  "decentrationFrontalRightDesc": "额侧模式（右）。研究将此区域与认知和脑功能模式相关联。",
+  "decentrationFrontalLeftDesc": "额侧模式（左）。历史研究将此区域与脑自主神经模式相关联。",
+  "decentrationBasalRightDesc": "基底模式（右）。研究表明与颅内压反射有关联。",
+  "decentrationBasalLeftDesc": "基底模式（左）。历史观察将此与脑部炎症区域模式相关联。",
+  "decentrationUpwardsInwardsRightDesc": "上鼻侧模式（右）。研究将此区域与肝胆自主神经反射相关联。",
+  "decentrationUpwardsInwardsLeftDesc": "上鼻侧模式（左）。历史研究将此与脾脏和膈肌区域相关联。",
+  "decentrationUpwardsOutwardsDesc": "上颞侧模式。研究表明与肾脏和生殖器官自主神经区域有关联。",
+  "decentrationMiddleNasalRightDesc": "中鼻侧模式（右）。历史观察将此与氧气利用和心脏区域相关联。",
+  "decentrationMiddleNasalLeftDesc": "中鼻侧模式（左）。研究将此与神经学和心脏自主神经模式相关联。",
+  "decentrationMiddleTemporalRightDesc": "中颞侧模式（右）。研究将此与心脏自主神经调节区域相关联。",
+  "decentrationMiddleTemporalLeftDesc": "中颞侧模式（左）。历史研究将此与肺部和心脏区域相关联。",
+  "decentrationUpperNasalRightDesc": "上鼻侧模式（右）。研究表明与认知区域和颈椎反射有关联。",
+  "decentrationUpperNasalLeftDesc": "上鼻侧模式（左）。历史观察将此与认知模式和颈部区域相关联。",
+  "decentrationUpperTemporalRightDesc": "上颞侧模式（右）。研究将此区域与脑神经和听觉反射相关联。",
+  "decentrationUpperTemporalLeftDesc": "上颞侧模式（左）。历史研究将此与神经植物性和语言区域相关联。",
+  "decentrationLowerNasalDesc": "下鼻侧模式。研究表明与泌尿生殖和腰骶部自主神经区域有关联。",
+  "decentrationLowerTemporalRightDesc": "下颞侧模式（右）。历史观察将此与代谢和肝脏区域相关联。",
+  "decentrationLowerTemporalLeftDesc": "下颞侧模式（左）。研究将此与心脏和脾脏自主神经模式相关联。",
+  "flatteningUpperCentralRightDesc": "与上中央区域相关的模式。历史研究将此与情绪调节和能量自主神经反射相关联。",
+  "flatteningUpperTemporalRightDesc": "与上颞侧区域相关的模式。研究表明与脑神经和听觉自主神经反射有关联。",
+  "flatteningMiddleTemporalRightDesc": "与中颞侧区域相关的模式。历史观察将此与呼吸和心脏自主神经模式相关联。",
+  "flatteningLowerTemporalRightDesc": "与下颞侧区域相关的模式。研究文献将此与肝脏和代谢自主神经区域相关联。",
+  "flatteningLowerBasalRightDesc": "与下基底区域相关的模式。历史研究将此与肾脏和下肢自主神经反射相关联。",
+  "flatteningLowerNasalRightDesc": "与下鼻侧区域相关的模式。研究表明与泌尿生殖和骨盆自主神经区域有关联。",
+  "flatteningMiddleNasalRightDesc": "与中鼻侧区域相关的模式。历史观察将此与氧气利用和呼吸自主神经模式相关联。",
+  "flatteningUpperNasalRightDesc": "与上鼻侧区域相关的模式。研究文献将此与认知和颈部自主神经反射相关联。",
+  "flatteningDefaultRightDesc": "基于历史研究，在此区域检测到自主神经系统模式变异。",
+  "flatteningUpperCentralLeftDesc": "与上中央区域相关的模式。历史研究将此与情绪调节和神经学自主神经模式相关联。",
+  "flatteningUpperTemporalLeftDesc": "与上颞侧区域相关的模式。研究表明与神经植物性和语言自主神经区域有关联。",
+  "flatteningMiddleTemporalLeftDesc": "与中颞侧区域相关的模式。历史观察将此与肺部和心脏自主神经反射相关联。",
+  "flatteningLowerTemporalLeftDesc": "与下颞侧区域相关的模式。研究文献将此与心脏和脾脏自主神经模式相关联。",
+  "flatteningLowerBasalLeftDesc": "与下基底区域相关的模式。历史研究将此与肾脏和排泄自主神经区域相关联。",
+  "flatteningLowerNasalLeftDesc": "与下鼻侧区域相关的模式。研究表明与泌尿生殖和腰骶部自主神经反射有关联。",
+  "flatteningMiddleNasalLeftDesc": "与中鼻侧区域相关的模式。历史观察将此与心脏和呼吸自主神经模式相关联。",
+  "flatteningUpperNasalLeftDesc": "与上鼻侧区域相关的模式。研究文献将此与认知和颈部自主神经区域相关联。",
+  "flatteningDefaultLeftDesc": "基于历史研究，在此区域检测到自主神经系统模式变异。",
+  "protrusionUpperCentralRightDesc": "上中央区域突出模式。研究将此与影响脑部区域的交感神经过度激活模式相关联。",
+  "protrusionUpperTemporalRightDesc": "上颞侧区域突出模式。历史观察将此与脑神经和听觉系统过度激活模式相关联。",
+  "protrusionMiddleTemporalRightDesc": "中颞侧区域突出模式。研究表明与心脏和呼吸交感神经模式有关联。",
+  "protrusionLowerTemporalRightDesc": "下颞侧区域突出模式。历史研究将此与肝胆和代谢交感神经区域相关联。",
+  "protrusionLowerBasalRightDesc": "下基底区域突出模式。研究将此与肾脏和骨盆交感神经过度激活模式相关联。",
+  "protrusionLowerNasalRightDesc": "下鼻侧区域突出模式。历史观察将此与泌尿生殖交感神经激活区域相关联。",
+  "protrusionMiddleNasalRightDesc": "中鼻侧区域突出模式。研究表明与胃和胰腺交感神经模式有关联。",
+  "protrusionUpperNasalRightDesc": "上鼻侧区域突出模式。历史研究将此与认知和视觉交感神经过度激活区域相关联。",
+  "protrusionDefaultRightDesc": "基于研究观察，在此区域检测到交感神经系统过度激活模式。",
+  "protrusionUpperCentralLeftDesc": "上中央区域突出模式。研究将此与精神运动和脑部交感神经模式相关联。",
+  "protrusionUpperTemporalLeftDesc": "上颞侧区域突出模式。历史观察将此与神经植物性交感神经过度激活区域相关联。",
+  "protrusionMiddleTemporalLeftDesc": "中颞侧区域突出模式。研究表明与肺部和心脏交感神经模式有关联。",
+  "protrusionLowerTemporalLeftDesc": "下颞侧区域突出模式。历史研究将此与脾脏和心脏交感神经激活区域相关联。",
+  "protrusionLowerBasalLeftDesc": "下基底区域突出模式。研究将此与骨盆和肾脏交感神经过度激活模式相关联。",
+  "protrusionLowerNasalLeftDesc": "下鼻侧区域突出模式。历史观察将此与腰骶部交感神经激活区域相关联。",
+  "protrusionMiddleNasalLeftDesc": "中鼻侧区域突出模式。研究表明与焦虑-心脏交感神经模式有关联。",
+  "protrusionUpperNasalLeftDesc": "上鼻侧区域突出模式。历史研究将此与认知和视觉交感神经过度激活区域相关联。",
+  "protrusionDefaultLeftDesc": "基于研究观察，在此区域检测到交感神经系统过度激活模式。",
+  "anisocoriaNone": "瞳孔大小在正常范围内。未检测到显著的瞳孔不等大。",
+  "anisocoriaDetected": "检测到瞳孔不等大：{difference}%（{direction}）。{description}",
+  "@anisocoriaDetected": {
+    "placeholders": {
+      "difference": {
+        "type": "String"
+      },
+      "direction": {
+        "type": "String"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "anisocoriaDirectionSD": "左>右",
+  "anisocoriaDirectionDS": "右>左",
+  "anisocoriaSeverityNone": "在正常范围内。",
+  "anisocoriaSeverityMild": "观察到轻度差异。可能属于生理性。",
+  "anisocoriaSeverityModerate": "中度不对称。已记录为研究性观察。",
+  "anisocoriaSeveritySevere": "显著不对称。已标记为研究性观察。",
+  "largerPupilEqual": "相等",
+  "largerPupilOS": "OS（左眼）",
+  "largerPupilOD": "OD（右眼）",
+  "decentrationWithinLimits": "在正常范围内。",
+  "decentrationClinicalNote": "{patternName}。偏移量：{offset}%",
+  "@decentrationClinicalNote": {
+    "placeholders": {
+      "patternName": {
+        "type": "String"
+      },
+      "offset": {
+        "type": "String"
+      }
+    }
+  },
+  "zoneUpperCentral": "上中央",
+  "zoneUpperNasal": "上鼻侧",
+  "zoneMiddleNasal": "中鼻侧",
+  "zoneLowerNasal": "下鼻侧",
+  "zoneLowerBasal": "下基底",
+  "zoneLowerTemporal": "下颞侧",
+  "zoneMiddleTemporal": "中颞侧",
+  "zoneUpperTemporal": "上颞侧",
+  "zoneFrontal": "额侧",
+  "zoneBasal": "基底",
+  "zoneUnknown": "未知",
+  "flatteningDescription": "{zone}扁平化（{clockRange}）- {percentage}%",
+  "@flatteningDescription": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "protrusionDescription": "{zone}突出（{clockRange}）- {percentage}%",
+  "@protrusionDescription": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "usbIriscopeMode": "USB虹膜镜模式",
+  "iriscopeExternal": "虹膜镜 / 外接",
+  "usbLabel": "USB",
+  "useConnectedUsbCamera": "使用已连接的USB摄像头或虹膜镜",
+  "detectedCameras": "已检测到的摄像头",
+  "externalCamera": "外接摄像头",
+  "cameraIndex": "摄像头 {index}",
+  "@cameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "noExternalCameraDetected": "未检测到外接摄像头。\\n请连接USB虹膜镜以启用。",
+  "refresh": "刷新",
+  "selectCameraSource": "选择摄像头来源",
+  "camerasDetected": "已检测到{count}个摄像头",
+  "@camerasDetected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "camerasAvailable": "{count}个摄像头可用",
+  "@camerasAvailable": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "externalCameraIndex": "外接摄像头 {index}",
+  "@externalCameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "qualityGatedRear": "质量门控自动拍摄（后置摄像头）",
+  "qualityGatedFront": "质量门控自动拍摄（前置摄像头）",
+  "usbCameraInfo": "USB摄像头信息",
+  "connected": "已连接",
+  "waiting": "等待中...",
+  "disconnected": "已断开",
+  "waitingForUsbCamera": "等待USB摄像头",
+  "connectIriscopePrompt": "通过USB OTG适配器连接虹膜镜。\\n出现提示时请授予权限。",
+  "usbCameraIssue": "USB摄像头问题",
+  "pleaseConnectIriscope": "请连接虹膜镜或USB摄像头。",
+  "retryConnection": "重试连接",
+  "troubleshootingTips": "故障排除提示",
+  "tipUsbOtgAdapter": "确保USB OTG适配器已正确连接",
+  "tipUsbHostMode": "检查设备是否支持USB主机模式",
+  "tipReconnectCamera": "尝试断开并重新连接摄像头",
+  "tipGrantPermissions": "出现提示时授予USB权限",
+  "tipUnlockDevice": "某些设备可能需要先解锁",
+  "back": "返回",
+  "switchEye": "切换眼睛",
+  "state": "状态",
+  "status": "状态",
+  "usingFlutterUvcPlugin": "使用flutter_uvc_camera插件\\支持USB视频类设备。",
+  "initialized": "已初始化",
+  "notReady": "未就绪",
+  "captureDistanceMatch": "拍摄距离匹配",
+  "@captureDistanceMatch": {
+    "description": "Title for the bilateral iris size comparison card"
+  },
+  "irisSize": "虹膜大小",
+  "@irisSize": {
+    "description": "Label for iris size measurement"
+  },
+  "distanceMatched": "距离匹配",
+  "@distanceMatched": {
+    "description": "Status when capture distances match well"
+  },
+  "distanceMismatch": "距离不匹配",
+  "@distanceMismatch": {
+    "description": "Status when capture distances don't match"
+  },
+  "excellentMatch": "极佳匹配",
+  "@excellentMatch": {
+    "description": "Distance match status 90%+"
+  },
+  "goodMatch": "良好匹配",
+  "@goodMatch": {
+    "description": "Distance match status 80-90%"
+  },
+  "acceptableMatch": "可接受匹配",
+  "@acceptableMatch": {
+    "description": "Distance match status 70-80%"
+  },
+  "considerRetaking": "距离不匹配 - 建议重拍",
+  "@considerRetaking": {
+    "description": "Warning when distances don't match well"
+  },
+  "qualityReady": "就绪！保持稳定...",
+  "@qualityReady": {
+    "description": "Camera quality feedback when ready to capture"
+  },
+  "qualityTooBlurry": "保持摄像头稳定",
+  "@qualityTooBlurry": {
+    "description": "Camera quality feedback when image is blurry"
+  },
+  "qualityTooDark": "需要更多光线",
+  "@qualityTooDark": {
+    "description": "Camera quality feedback when too dark"
+  },
+  "qualityTooBright": "太亮 - 减少光线",
+  "@qualityTooBright": {
+    "description": "Camera quality feedback when too bright"
+  },
+  "qualityNoContrast": "调整光线角度",
+  "@qualityNoContrast": {
+    "description": "Camera quality feedback when contrast is low"
+  },
+  "qualityNoPupil": "将瞳孔居中于画面",
+  "@qualityNoPupil": {
+    "description": "Camera quality feedback when pupil not detected"
+  },
+  "qualityNotCentered": "将眼睛移至中央",
+  "@qualityNotCentered": {
+    "description": "Camera quality feedback when eye not centered"
+  },
+  "qualityNotAnEye": "未检测到眼睛",
+  "@qualityNotAnEye": {
+    "description": "Camera quality feedback when no eye detected"
+  },
+  "qualityProcessing": "处理中...",
+  "@qualityProcessing": {
+    "description": "Camera quality feedback during processing"
+  },
+  "distanceMatchedCheck": "✓ 距离匹配",
+  "@distanceMatchedCheck": {
+    "description": "Distance guidance when perfectly matched"
+  },
+  "distanceGoodMatchCheck": "✓ 良好匹配",
+  "@distanceGoodMatchCheck": {
+    "description": "Distance guidance when good match"
+  },
+  "distanceSlightlyBack": "稍微后退 ↔",
+  "@distanceSlightlyBack": {
+    "description": "Distance guidance to move slightly back"
+  },
+  "distanceSlightlyCloser": "稍微靠近 ↔",
+  "@distanceSlightlyCloser": {
+    "description": "Distance guidance to move slightly closer"
+  },
+  "distanceAlmostThere": "快到了...",
+  "@distanceAlmostThere": {
+    "description": "Distance guidance when nearly matched"
+  },
+  "distanceMoveBack": "后退 ←←",
+  "@distanceMoveBack": {
+    "description": "Distance guidance to move back"
+  },
+  "distanceMoveCloser": "靠近 →→",
+  "@distanceMoveCloser": {
+    "description": "Distance guidance to move closer"
+  },
+  "distanceTooClose": "太近！请后退",
+  "@distanceTooClose": {
+    "description": "Distance guidance when too close"
+  },
+  "distanceTooFar": "太远！请靠近",
+  "@distanceTooFar": {
+    "description": "Distance guidance when too far"
+  },
+  "distanceStabilizing": "稳定中...",
+  "@distanceStabilizing": {
+    "description": "Distance status while stabilizing reading"
+  },
+  "distanceLabel": "距离：{percent}%",
+  "@distanceLabel": {
+    "description": "Distance match percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "irisSizeComparison": "OD: {odSize}px → OS: {osSize}px",
+  "@irisSizeComparison": {
+    "description": "Iris size comparison between eyes",
+    "placeholders": {
+      "odSize": {
+        "type": "int"
+      },
+      "osSize": {
+        "type": "int"
+      }
+    }
+  },
+  "frontCameraLabel": "前置摄像头",
+  "@frontCameraLabel": {
+    "description": "Label for front camera"
+  },
+  "rearCameraLabel": "后置摄像头",
+  "@rearCameraLabel": {
+    "description": "Label for rear/back camera"
+  },
+  "startingCamera": "正在启动摄像头...",
+  "@startingCamera": {
+    "description": "Status when camera is initializing"
+  },
+  "eyeNotDetected": "未检测到眼睛",
+  "@eyeNotDetected": {
+    "description": "Title for validation failure dialog"
+  },
+  "tryAgain": "重试",
+  "@tryAgain": {
+    "description": "Button text to retry capture"
+  },
+  "indicatorEye": "眼睛",
+  "@indicatorEye": {
+    "description": "Quality indicator label for eye detection"
+  },
+  "indicatorSharp": "清晰",
+  "@indicatorSharp": {
+    "description": "Quality indicator label for sharpness"
+  },
+  "indicatorLight": "光线",
+  "@indicatorLight": {
+    "description": "Quality indicator label for lighting"
+  },
+  "indicatorFocus": "对焦",
+  "@indicatorFocus": {
+    "description": "Quality indicator label for focus/contrast"
+  },
+  "indicatorPupil": "瞳孔",
+  "@indicatorPupil": {
+    "description": "Quality indicator label for pupil detection"
+  },
+  "indicatorIris": "虹膜",
+  "@indicatorIris": {
+    "description": "Quality indicator label for iris size"
+  },
+  "indicatorMatch": "匹配",
+  "@indicatorMatch": {
+    "description": "Quality indicator label for distance match"
+  },
+  "checkImageShape": "图像形状",
+  "@checkImageShape": {
+    "description": "Validation check label for aspect ratio"
+  },
+  "checkCircularIris": "圆形虹膜",
+  "@checkCircularIris": {
+    "description": "Validation check label for circular iris"
+  },
+  "checkDarkPupil": "暗色瞳孔",
+  "@checkDarkPupil": {
+    "description": "Validation check label for dark pupil center"
+  },
+  "checkIrisTexture": "虹膜纹理",
+  "@checkIrisTexture": {
+    "description": "Validation check label for iris texture"
+  },
+  "checkPupilIrisStructure": "瞳孔-虹膜结构",
+  "@checkPupilIrisStructure": {
+    "description": "Validation check label for concentric circles"
+  },
+  "checkNaturalColors": "自然色彩",
+  "@checkNaturalColors": {
+    "description": "Validation check label for color distribution"
+  },
+  "checkEdgePattern": "边缘模式",
+  "@checkEdgePattern": {
+    "description": "Validation check label for edge density"
+  },
+  "errorImageShapeIncorrect": "图像形状不正确 - 请确保眼睛充满画面",
+  "@errorImageShapeIncorrect": {
+    "description": "Validation error for incorrect aspect ratio"
+  },
+  "errorNoEyeDetected": "未检测到眼睛 - 请将虹膜居中于画面",
+  "@errorNoEyeDetected": {
+    "description": "Validation error when no eye/iris detected"
+  },
+  "errorNoPupilDetected": "未检测到瞳孔 - 请确保光线充足",
+  "@errorNoPupilDetected": {
+    "description": "Validation error when pupil not detected"
+  },
+  "errorNoIrisTexture": "无虹膜纹理 - 请靠近眼睛",
+  "@errorNoIrisTexture": {
+    "description": "Validation error when iris texture not detected"
+  },
+  "errorUnusualColors": "检测到异常色彩 - 请避免屏幕/反光",
+  "@errorUnusualColors": {
+    "description": "Validation error for unusual color distribution"
+  },
+  "errorTooManyEdges": "直线边缘过多 - 这可能不是眼睛",
+  "@errorTooManyEdges": {
+    "description": "Validation error for too many straight edges"
+  },
+  "errorNotValidEye": "不是有效的眼部图像 - 请重试",
+  "@errorNotValidEye": {
+    "description": "Generic validation error for invalid eye image"
+  },
+  "holdStillCapturing": "保持不动 - 拍摄中...",
+  "@holdStillCapturing": {
+    "description": "Status during countdown capture"
+  },
+  "adjustDistanceFirst": "请先调整距离",
+  "@adjustDistanceFirst": {
+    "description": "Status when distance needs adjustment before capture"
+  },
+  "stabilizingReading": "稳定中...",
+  "@stabilizingReading": {
+    "description": "Status while distance reading stabilizes"
+  },
+  "autoCaptureWhenReady": "就绪后自动拍摄",
+  "@autoCaptureWhenReady": {
+    "description": "Status indicating auto-capture is enabled"
+  },
+  "tapOrWaitAutoCapture": "点击或等待自动拍摄",
+  "@tapOrWaitAutoCapture": {
+    "description": "Instruction when ready to capture"
+  },
+  "validatingImage": "验证中...",
+  "@validatingImage": {
+    "description": "Status during image validation"
+  },
+  "capturingStatus": "拍摄中...",
+  "@capturingStatus": {
+    "description": "Status during image capture"
+  },
+  "adjustPositionStatus": "调整位置",
+  "@adjustPositionStatus": {
+    "description": "Status when position needs adjustment"
+  },
+  "validationTip": "提示：确保光线充足，将摄像头保持在距眼睛10-15厘米处，避免反光",
+  "@validationTip": {
+    "description": "Helpful tip shown after multiple validation failures"
+  },
+  "validationChecksTitle": "验证检查：",
+  "@validationChecksTitle": {
+    "description": "Title for validation checks list in dialog"
+  },
+  "confidenceLabel": "置信度：{percent}%",
+  "@confidenceLabel": {
+    "description": "Confidence percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "incompleteData": "数据不完整",
+  "@incompleteData": {
+    "description": "Status when iris metrics data is incomplete"
+  },
+  "irisDiameterLabel": "虹膜 ø",
+  "@irisDiameterLabel": {
+    "description": "Label for iris diameter measurement"
+  },
+  "plrResponseCurve": "PLR反应曲线",
+  "@plrResponseCurve": {
+    "description": "Title for PLR chart showing pupil response over time"
+  },
+  "plrLatency": "潜伏期",
+  "@plrLatency": {
+    "description": "Time from flash to start of constriction"
+  },
+  "plrVelocity": "速度",
+  "@plrVelocity": {
+    "description": "Rate of pupil constriction"
+  },
+  "plrRecoveryTime": "恢复时间",
+  "@plrRecoveryTime": {
+    "description": "Time for pupil to recover"
+  },
+  "plrRecoveryRatio": "恢复率",
+  "@plrRecoveryRatio": {
+    "description": "Final size compared to baseline"
+  },
+  "plrEnhancedMetrics": "增强PLR指标",
+  "@plrEnhancedMetrics": {
+    "description": "Section title for advanced PLR measurements"
+  },
+  "plrNormalLatency": "正常：200-500ms",
+  "@plrNormalLatency": {
+    "description": "Normal latency reference range"
+  },
+  "plrNormalConstriction": "正常：10-30%",
+  "@plrNormalConstriction": {
+    "description": "Normal constriction reference range"
+  },
+  "plrNormalVelocity": "正常：1.5-4.0%/秒",
+  "@plrNormalVelocity": {
+    "description": "Normal velocity reference range"
+  },
+  "plrReferenceValues": "正常PLR参考值",
+  "@plrReferenceValues": {
+    "description": "Title for reference values section"
+  },
+  "plrSubjectInfo": "受检者信息",
+  "@plrSubjectInfo": {
+    "description": "Section title for patient/subject info in PLR report"
+  },
+  "plrTestType": "PLR（瞳孔对光反射）",
+  "@plrTestType": {
+    "description": "Name of the PLR test type"
+  },
+  "plrAnalysisSummary": "分析摘要",
+  "@plrAnalysisSummary": {
+    "description": "Section title for analysis summary"
+  },
+  "plrTotalFrames": "分析帧总数",
+  "@plrTotalFrames": {
+    "description": "Label for total frames count"
+  },
+  "plrSuccessRate": "成功率",
+  "@plrSuccessRate": {
+    "description": "Label for frame analysis success rate"
+  },
+  "plrMaxConstriction": "最大缩瞳",
+  "@plrMaxConstriction": {
+    "description": "Label for maximum constriction time"
+  },
+  "plrResponseCurveLabels": "PLR反应曲线",
+  "anwTitle": "自主神经带 (ANW)",
+  "anwAbnormal": "异常",
+  "anwDiameter": "直径",
+  "anwPerimeter": "周长",
+  "anwAsymmetry": "不对称性",
+  "anwElevated": "升高",
+  "anwFormType": "形态类型",
+  "anwRegular": "规则",
+  "anwDrawnIn": "内收",
+  "anwIndented": "缺刻",
+  "anwLacerated": "裂状",
+  "anwSpastic": "痉挛性",
+  "anwAtonic": "弛缓性",
+  "anwTonicState": "历史张力模式",
+  "anwParasympathotonic": "副交感神经优势模式",
+  "anwSympathotonicState": "交感神经优势模式",
+  "anwShiftDetected": "历史移位模式",
+  "anwConstrictionDetected": "检测到收缩",
+  "anwFindings": "所见",
+  "anwRatioComparison": "ANW比值",
+  "bilateralANWComparison": "双眼ANW比较",
+  "anwSymmetryNormal": "ANW对称性在正常范围内。",
+  "anwAsymmetryDetected": "双眼间检测到ANW不对称。",
+  "functionalFrustration": "交感神经和副交感神经系统相关性中的功能性失衡。",
+  "anwParasympathotonicDesc": "历史观察将此与阈值敏感性增加、反射活动加速、胃肠分泌/排泄功能增强相关联。",
+  "anwSympathotonicDesc": "历史观察将此与阈值敏感性降低、反射活动减慢、胃肠分泌/排泄功能减弱相关联。",
+  "anwMiddleTemporalShiftCardiac": "Velchover历史研究将此与左心室负荷模式和心脏压力相关联。",
+  "anwFrontalConstricted": "瞳孔带额侧区域收缩。",
+  "anwBasalConstricted": "瞳孔带基底区域收缩。",
+  "anwFrontalBasalConstricted": "瞳孔带额侧和基底区域均收缩。",
+  "helpTitle": "帮助与用户指南",
+  "helpTabQuickStart": "快速入门",
+  "helpTabCnriAnalysis": "CNRI分析",
+  "helpTabShortcuts": "快捷键",
+  "helpTabTroubleshooting": "故障排除",
+  "helpOnlineDocs": "在线文档",
+  "helpContactSupport": "联系支持",
+  "helpGettingStarted": "入门指南",
+  "helpStep1Title": "连接虹膜镜",
+  "helpStep1Desc": "连接您的Dino-Lite或兼容的USB虹膜镜。",
+  "helpStep2Title": "输入患者信息",
+  "helpStep2Desc": "填写患者姓名、年龄、性别和主诉。",
+  "helpStep3Title": "拍摄右眼 (OD)",
+  "helpStep3Desc": "放置虹膜镜并拍摄右眼图像。",
+  "helpStep4Title": "拍摄左眼 (OS)",
+  "helpStep4Desc": "在相同光线条件下对左眼重复操作。",
+  "helpStep5Title": "查看分析",
+  "helpStep5Desc": "应用分析瞳孔-虹膜比值、瞳孔形态和ANW特征。",
+  "helpStep6Title": "导出报告",
+  "helpStep6Desc": "以PDF、TXT或JSON格式保存。",
+  "helpTipBestResults": "获得最佳结果：使用稳定光线，保持虹膜镜距离2-3厘米。",
+  "helpCnriProtocolFeatures": "CNRI协议功能",
+  "helpFeaturePiRatioTitle": "瞳孔/虹膜比值 (P/I)",
+  "helpFeaturePiRatioDesc": "正常：20-30%。超出范围可能提示自主神经失衡。",
+  "helpFeaturePupilFormTitle": "瞳孔形态分析",
+  "helpFeaturePupilFormDesc": "检测椭圆模式、偏心方向和离心率。",
+  "helpFeatureAnwTitle": "ANW（领状带）评估",
+  "helpFeatureAnwDesc": "分析比值、形态规则性、区段移位和张力状态。",
+  "helpFeatureZoneTitle": "区域分析",
+  "helpFeatureZoneDesc": "将扁平化/突出映射到CNRI器官区域。",
+  "helpFeatureBilateralTitle": "双眼比较",
+  "helpFeatureBilateralDesc": "比较OD与OS以检测不对称性。",
+  "helpFeatureMlTitle": "ONNX CNN比较",
+  "helpFeatureMlDesc": "ONNX CNN模型提供辅助测量值供比较。",
+  "helpKeyboardShortcuts": "键盘快捷键",
+  "helpCameraControls": "摄像头控制",
+  "helpShortcutSpace": "拍摄图像",
+  "helpShortcutCtrlS": "保存PDF报告",
+  "helpShortcutCtrlO": "打开相册图像",
+  "helpShortcutCtrlH": "查看扫描历史",
+  "helpShortcutF11": "切换全屏",
+  "helpShortcutEsc": "返回 / 取消",
+  "helpShortcutScroll": "放大/缩小",
+  "helpShortcutDoubleClick": "重置缩放",
+  "helpCommonIssues": "常见问题",
+  "helpIssueCameraNotDetected": "未检测到摄像头",
+  "helpIssueCameraSolution1": "检查USB连接",
+  "helpIssueCameraSolution2": "尝试不同的USB端口",
+  "helpIssueCameraSolution3": "安装Dino-Lite驱动",
+  "helpIssueCameraSolution4": "重启应用程序",
+  "helpIssuePupilDetectionFails": "瞳孔检测失败",
+  "helpIssuePupilSolution1": "确保光线充足",
+  "helpIssuePupilSolution2": "将瞳孔居中于画面",
+  "helpIssuePupilSolution3": "清洁虹膜镜镜头",
+  "helpIssuePupilSolution4": "手动调整对焦",
+  "helpIssuePdfExportFails": "PDF导出失败",
+  "helpIssuePdfSolution1": "检查文件夹权限",
+  "helpIssuePdfSolution2": "确保磁盘空间充足",
+  "helpIssuePdfSolution3": "关闭已打开的PDF文件",
+  "helpIssuePdfSolution4": "先尝试TXT导出",
+  "helpCaptureChecklistTitle": "拍摄核查清单",
+  "helpCaptureChecklist1": "确保瞳孔居中且在画面内完全可见。",
+  "helpCaptureChecklist2": "使用均匀光线，减少角膜上的眩光或反光。",
+  "helpCaptureChecklist3": "左右眼保持相近的虹膜镜距离。",
+  "helpCaptureChecklist4": "如瞳孔边缘模糊，请重新对焦或重拍。",
+  "helpExportSettingsTitle": "导出设置",
+  "helpExportSettingsDesc": "PDF自动保存可在分析后保存报告，包含图像控制眼部照片是否出现在PDF中，显示ML比较可将ONNX CNN比较值添加到报告中。",
+  "helpHybridScoreTitle": "综合置信度与等级",
+  "helpHybridScoreDesc": "显示的置信度和等级结合了经典几何质量与ML一致性，反映测量可靠性而非诊断。",
+  "helpAnomalyGuideTitle": "读取扁平化与突出",
+  "helpAnomalyGuideDesc": "扁平化表示瞳孔边界的相对内向变化，突出表示外向变化；每张卡片列出区域、幅度和映射关联。",
+  "helpZoneOverlayGuideTitle": "区域叠加",
+  "helpZoneOverlayGuideDesc": "使用区域叠加功能可视化检查区段位置，并交叉核查检测到的异常落在瞳孔和虹膜周围的哪个位置。",
+  "helpContactSupportTip": "如需帮助，请联系 helpdesk@cnri.edu。",
+  "settingsTitle": "设置",
+  "settingsCameraIriscope": "摄像头 / 虹膜镜",
+  "settingsPreferredCamera": "首选摄像头：",
+  "settingsCameraDinoLite": "Dino-Lite",
+  "settingsCameraUsb": "USB摄像头",
+  "settingsCameraAutoDetect": "自动检测",
+  "settingsDefaultZoom": "默认缩放：",
+  "settingsAnalysis": "分析",
+  "settingsShowMlComparison": "显示ML比较",
+  "settingsShowZoneOverlay": "显示区域叠加",
+  "settingsExportReports": "导出与报告",
+  "settingsAutoSavePdf": "自动保存PDF",
+  "settingsIncludeImages": "包含图像",
+  "settingsSaved": "设置已保存",
+  "aboutResearchEdition": "研究版",
+  "aboutVersion": "版本 {version}",
+  "@aboutVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "aboutLicense": "许可证",
+  "aboutLicensedTo": "授权给：",
+  "aboutExpires": "到期日：",
+  "aboutManageLicense": "管理许可证",
+  "aboutBasedOnCnri": "基于CNRI协议",
+  "aboutCopyright": "© 2024-2026 PupilMetrics Research",
+  "aboutWebsite": "网站",
+  "aboutPrivacy": "隐私",
+  "languageSelectTitle": "选择语言",
+  "selectLanguage": "选择语言",
+  "languageChanged": "语言已更改",
+  "languageChangedMessage": "应用语言已设置为{language}",
+  "@languageChangedMessage": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languageSystemNotAvailable": "语言系统不可用",
+  "licenseLoading": "加载中...",
+  "licenseWelcome": "欢迎使用PupilMetrics！",
+  "licenseTrialFeatures": "14天免费试用 • 全功能",
+  "licenseStartTrial": "开始免费试用",
+  "licenseEnterKey": "输入许可证",
+  "licenseFreeTrial": "免费试用",
+  "licenseDaysRemaining": "剩余{count}天",
+  "@licenseDaysRemaining": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseTrialEnded": "试用已结束",
+  "licenseEnterToContinue": "请输入许可证以继续",
+  "licenseStandard": "标准许可证",
+  "licenseProfessional": "专业许可证",
+  "licenseEnterprise": "企业许可证",
+  "licenseLicensed": "已授权",
+  "licenseActive": "激活",
+  "licenseTrialUser": "试用用户",
+  "licenseLifetime": "永久",
+  "licenseNotSetUp": "未设置",
+  "trialExpiredTitle": "试用期已结束",
+  "trialExpiredMessage": "您的14天试用已结束。如需继续分析虹膜图像，请购买许可证。",
+  "trialExpiredCanStill": "您仍可以：",
+  "trialExpiredViewAnalyses": "查看之前的分析",
+  "trialExpiredExportReports": "导出现有报告",
+  "trialExpiredAccessHistory": "访问扫描历史",
+  "trialExpiredMaybeLater": "稍后再说",
+  "licenseRegistration": "许可证注册",
+  "licenseStatusValid": "已授权",
+  "licenseStatusTrialActive": "免费试用",
+  "licenseStatusTrialExpired": "试用已结束",
+  "licenseStatusExpired": "许可证已过期",
+  "licenseStatusInvalid": "无效许可证",
+  "licenseStatusUnregistered": "未设置",
+  "licenseStatusMachineMismatch": "不同计算机",
+  "licenseStatusNetworkError": "连接错误",
+  "licenseEnterKeyTitle": "输入许可证密钥",
+  "licenseKeyPlaceholder": "CNRI-XXXX-XXXX-XXXX-XXXX",
+  "licenseYourName": "您的姓名",
+  "licenseEmailAddress": "电子邮件地址",
+  "licenseMachineId": "机器ID",
+  "licenseCopyMachineId": "复制机器ID",
+  "licenseMachineIdCopied": "机器ID已复制到剪贴板",
+  "licenseValidationKeyRequired": "请输入您的许可证密钥",
+  "licenseValidationKeyFormat": "许可证密钥应为20个字符（CNRI-XXXX-XXXX-XXXX-XXXX）",
+  "licenseValidationNameRequired": "请输入您的姓名",
+  "licenseValidationEmailRequired": "请输入您的电子邮件",
+  "licenseValidationEmailInvalid": "请输入有效的电子邮件",
+  "licenseActivate": "激活许可证",
+  "licenseContinueTrial": "继续试用",
+  "licenseBuyLicense": "购买许可证",
+  "licenseNeedHelp": "需要帮助？",
+  "licenseLicenseAgreement": "许可协议",
+  "licenseActivatedSuccess": "许可证激活成功！",
+  "licenseMsgMachineMismatch": "此许可证已在另一台计算机上注册。请使用原始设备或联系支持。",
+  "licenseMsgTrialEnded": "您的免费试用已结束。请输入许可证密钥以继续使用所有功能。",
+  "licenseMsgExpired": "您的许可证已过期。请续期以继续使用。",
+  "licenseMsgNeedsSetup": "许可证需要设置。请开始免费试用或输入许可证密钥。",
+  "licenseMsgCheckFormat": "请检查您的许可证密钥格式。应如下所示：CNRI-XXXX-XXXX-XXXX-XXXX",
+  "licenseMsgNotRecognized": "此许可证密钥未被识别。请再次核实并重试。",
+  "licenseMsgAlreadyRegistered": "此密钥已在另一台计算机上注册。",
+  "licenseMsgContactSupport": "此许可证已过期。请联系支持以续期。",
+  "licenseMsgActivatedThankYou": "许可证激活成功！感谢您的购买。",
+  "licenseMsgUnableToActivate": "无法激活许可证。请检查网络连接并重试。",
+  "licenseMsgTrialWelcome": "欢迎！您的{days}天免费试用已开始。",
+  "@licenseMsgTrialWelcome": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseMsgTrialActive": "试用有效：剩余{days}天。",
+  "@licenseMsgTrialActive": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseMsgFreeTrialActive": "免费试用有效",
+  "licenseMsgLicenseActive": "许可证有效 - {type}",
+  "@licenseMsgLicenseActive": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "licenseMsgUnableToActivateKey": "无法激活此许可证密钥。",
+  "licenseMsgNoLongerValid": "许可证已失效。",
+  "licenseMsgUnableToVerify": "无法验证此许可证密钥。请联系支持。",
+  "trialStartedSnackbar": "试用已开始！",
+  "trialStartedMessage": "享受14天完整访问权限",
+  "windowTitle": "PupilMetrics",
+  "themeMode": "主题模式",
+  "methods": "方法",
+  "setAsFrameless": "setAsFrameless",
+  "isPreventCloseSetPreventClose": "isPreventClose / setPreventClose",
+  "focusBlur": "获焦 / 失焦",
+  "showHide": "显示 / 隐藏",
+  "isVisible": "isVisible",
+  "isMaximized": "isMaximized",
+  "maximizeUnmaximize": "最大化 / 还原",
+  "isMinimized": "isMinimized",
+  "minimizeRestore": "最小化 / 还原",
+  "dockUndock": "停靠 / 取消停靠",
+  "dockLeft": "左侧停靠",
+  "dockRight": "右侧停靠",
+  "undock": "取消停靠",
+  "isFullScreenSetFullScreen": "isFullScreen / setFullScreen",
+  "setAspectRatio": "setAspectRatio",
+  "reset": "重置",
+  "setBackgroundColor": "setBackgroundColor",
+  "transparent": "透明",
+  "red": "红色",
+  "green": "绿色",
+  "blue": "蓝色",
+  "setBoundsGetBounds": "setBounds / getBounds",
+  "setAlignment": "setAlignment",
+  "topLeft": "左上",
+  "topCenter": "上中",
+  "topRight": "右上",
+  "centerLeft": "左中",
+  "centerRight": "右中",
+  "bottomLeft": "左下",
+  "bottomCenter": "下中",
+  "bottomRight": "右下",
+  "getPositionSetPosition": "getPosition / setPosition",
+  "getSizeSetSize": "getSize / setSize",
+  "set": "设置",
+  "getMinimumSizeSetMinimumSize": "getMinimumSize / setMinimumSize",
+  "getMaximumSizeSetMaximumSize": "getMaximumSize / setMaximumSize",
+  "isResizableSetResizable": "isResizable / setResizable",
+  "isMovableSetMovable": "isMovable / setMovable",
+  "isMinimizableSetMinimizable": "isMinimizable / setMinimizable",
+  "isMaximizableSetMaximizable": "isMaximizable / setMaximizable",
+  "isClosableSetClosable": "isClosable / setClosable",
+  "isAlwaysOnTopSetAlwaysOnTop": "isAlwaysOnTop / setAlwaysOnTop",
+  "isAlwaysOnBottomSetAlwaysOnBottom": "isAlwaysOnBottom / setAlwaysOnBottom",
+  "getTitleSetTitle": "getTitle / setTitle",
+  "setTitleBarStyle": "setTitleBarStyle",
+  "hidden": "隐藏",
+  "getTitleBarHeight": "getTitleBarHeight",
+  "isSkipTaskbar": "isSkipTaskbar",
+  "setSkipTaskbar": "setSkipTaskbar",
+  "setProgressBar": "setProgressBar",
+  "setIcon": "setIcon",
+  "defaultIcon": "默认",
+  "original": "原始",
+  "isVisibleOnAllWorkspacesSetVisibleOnAllWorkspaces": "isVisibleOnAllWorkspaces / setVisibleOnAllWorkspaces",
+  "setBadgeLabel": "setBadgeLabel",
+  "hasShadowSetHasShadow": "hasShadow / setHasShadow",
+  "getOpacitySetOpacity": "getOpacity / setOpacity",
+  "setIgnoreMouseEvents": "setIgnoreMouseEvents",
+  "popUpWindowMenu": "popUpWindowMenu",
+  "grabKeyboard": "grabKeyboard",
+  "ungrabKeyboard": "ungrabKeyboard",
+  "dragToMoveArea": "拖动以移动区域",
+  "dragToResizeArea": "拖动以调整大小区域",
+  "dragToResizeAreaExample": "调整大小区域示例",
+  "closeWindowConfirmation": "确定要关闭此窗口吗？",
+  "licenseChecking": "正在检查许可证...",
+  "licenseRequiredTitle": "需要许可证",
+  "licenseActivateValidMessage": "请激活有效许可证以继续。",
+  "licenseProIncludes": "PupilMetrics Pro 包含：",
+  "licenseFeatureUnlimitedAnalysis": "无限次瞳孔-领状带分析",
+  "licenseFeaturePdfReports": "PDF报告生成",
+  "licenseFeatureBilateralComparison": "双眼比较",
+  "licenseFeatureAnwAnalysis": "ANW领状带分析",
+  "licenseFeatureScanHistory": "扫描历史数据库",
+  "licenseFeatureUpdates": "1年免费更新",
+  "licensePurchase": "购买许可证",
+  "licenseExitApplication": "退出应用程序",
+  "windowCompactView": "紧凑视图",
+  "windowExpandedView": "扩展视图",
+  "licenseStatusTrialDaysLeft": "试用（剩余{count}天）",
+  "@licenseStatusTrialDaysLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseNotLicensed": "未授权",
+  "licenseStatusTitle": "许可证状态",
+  "unknown": "未知",
+  "plrReportTitle": "PLR分析报告",
+  "plrResearchOnlyTitle": "仅供研究/教育使用",
+  "plrResearchDisclaimer": "结果不是医学诊断。请咨询医疗专业人员。",
+  "plrNameLabel": "姓名",
+  "plrAgeYears": "年龄：{age}岁",
+  "@plrAgeYears": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "plrTestLabel": "检测",
+  "plrSummaryTitle": "PLR摘要",
+  "plrGradeValue": "等级 {grade}",
+  "@plrGradeValue": {
+    "placeholders": {
+      "grade": {
+        "type": "String"
+      }
+    }
+  },
+  "plrStatusLabel": "状态",
+  "plrDetectedStatus": "已检测到PLR",
+  "plrWeakNotDetectedStatus": "弱/未检测到",
+  "plrRecoveryTimeLabel": "恢复时间",
+  "plrRecoveryRatioLabel": "恢复率",
+  "plrChartDescription": "瞳孔反应随时间变化的可视化表示",
+  "plrPiRange": "P/I范围：{min}% - {max}%",
+  "@plrPiRange": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "plrMinValue": "最小值：{value}%",
+  "@plrMinValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "plrFrameDataTitle": "帧数据",
+  "plrTableTime": "时间",
+  "plrTablePiPercent": "P/I %",
+  "plrTablePhase": "阶段",
+  "plrTableConfidenceShort": "置信",
+  "plrSuccessfulFailed": "成功：{success} | 失败：{fail}",
+  "@plrSuccessfulFailed": {
+    "placeholders": {
+      "success": {
+        "type": "int"
+      },
+      "fail": {
+        "type": "int"
+      }
+    }
+  },
+  "plrReferenceLatencyLine": "• 潜伏期：200-500ms（初始反应时间）",
+  "plrReferenceConstrictionLine": "• 缩瞳：较基线减少10-30%",
+  "plrReferenceVelocityLine": "• 速度：1.5-4.0%/秒",
+  "plrReferenceRecoveryLine": "• 恢复：5秒内恢复至基线的75%以上",
+  "plrReferenceRecoveryLineShort": "• 恢复：5秒内恢复至基线75%以上",
+  "plrShareSubject": "PLR分析报告 - {eye}",
+  "@plrShareSubject": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "plrTextReportTitle": "PLR视频分析报告",
+  "plrTextDisclaimerTitle": "免责声明：仅供研究/教育使用",
+  "plrTextDisclaimerBody": "结果不是医学诊断。",
+  "plrOverallGradeLabel": "综合等级",
+  "plrEndOfReport": "报告结束",
+  "zoneOverlay": "区域叠加",
+  "@zoneOverlay": {
+    "description": "Zone overlay / analysis: Zone Overlay"
+  },
+  "tipDragImage": "提示：拖动图像以将角膜缘与叠加圆对齐。",
+  "@tipDragImage": {
+    "description": "Zone overlay / analysis: Tip: drag image to align limbus with overlay circl"
+  },
+  "overlayMetrics": "叠加指标",
+  "@overlayMetrics": {
+    "description": "Zone overlay / analysis: Overlay Metrics"
+  },
+  "piRatioLabel": "P/I比值：",
+  "@piRatioLabel": {
+    "description": "Zone overlay / analysis: P/I Ratio:"
+  },
+  "ellipsenessLabel": "椭圆度：",
+  "@ellipsenessLabel": {
+    "description": "Zone overlay / analysis: Ellipseness:"
+  },
+  "decentralizationLabel": "偏心度：",
+  "@decentralizationLabel": {
+    "description": "Zone overlay / analysis: Decentralization:"
+  },
+  "detectedFindings": "检测到的所见",
+  "@detectedFindings": {
+    "description": "Zone overlay / analysis: Detected findings"
+  },
+  "anwCollarette": "ANW / 领状带",
+  "@anwCollarette": {
+    "description": "Zone overlay / analysis: ANW / COLLARETTE"
+  },
+  "observerNotes": "观察者备注",
+  "@observerNotes": {
+    "description": "Zone overlay / analysis: Observer notes"
+  },
+  "observerNotesHint": "输入临床观察、区域所见、模式...",
+  "@observerNotesHint": {
+    "description": "Zone overlay / analysis: Enter clinical observations, zone findings, patter"
+  },
+  "autoCenter": "自动居中",
+  "@autoCenter": {
+    "description": "Zone overlay / analysis: Auto-center"
+  },
+  "anwRing": "ANW环",
+  "@anwRing": {
+    "description": "Zone overlay / analysis: ANW Ring"
+  },
+  "axisGrid": "轴/网格",
+  "@axisGrid": {
+    "description": "Zone overlay / analysis: Axis/Grid"
+  },
+  "chart": "图表",
+  "@chart": {
+    "description": "Zone overlay / analysis: Chart"
+  },
+  "hoverToIdentify": "悬停或点击区域以识别",
+  "@hoverToIdentify": {
+    "description": "Zone overlay / analysis: Hover or tap a zone to identify"
+  },
+  "organsMode": "器官模式 — 悬停于虹膜上以识别区域",
+  "@organsMode": {
+    "description": "Zone overlay / analysis: Organs mode — hover iris to identify zones"
+  },
+  "mildSizeDiff": "轻度大小差异。可能属于生理性变异。",
+  "@mildSizeDiff": {
+    "description": "Zone overlay / analysis: Mild size difference. May be physiological variati"
+  },
+  "withinBaseline": "在年龄{age}（{group}）的研究基准值范围内",
+  "@withinBaseline": {
+    "description": "Zone overlay / analysis: Within research baseline for age {age} ({group})"
+  },
+  "formLabel": "形态：",
+  "@formLabel": {
+    "description": "Zone overlay / analysis: Form:"
+  },
+  "flatteningLabel": "扁平化：",
+  "@flatteningLabel": {
+    "description": "Zone overlay / analysis: Flattening:"
+  },
+  "protrusionLabel": "突出：",
+  "@protrusionLabel": {
+    "description": "Zone overlay / analysis: Protrusion:"
+  },
+  "decentrationLabel": "偏心度：",
+  "@decentrationLabel": {
+    "description": "Zone overlay / analysis: Decentration:"
+  },
+  "pupilSizeLabel": "瞳孔大小：",
+  "@pupilSizeLabel": {
+    "description": "Zone overlay / analysis: Pupil size:"
+  },
+  "anwRatioLabel": "ANW比值：",
+  "@anwRatioLabel": {
+    "description": "Zone overlay / analysis: ANW ratio:"
+  },
+  "anwToneLabel": "ANW张力：",
+  "@anwToneLabel": {
+    "description": "Zone overlay / analysis: ANW tone:"
+  },
+  "noMajorODAnomalies": "OD瞳孔无主要异常。",
+  "@noMajorODAnomalies": {
+    "description": "Zone overlay / analysis: No major OD pupil anomalies."
+  },
+  "noMajorOSAnomalies": "OS瞳孔无主要异常。",
+  "@noMajorOSAnomalies": {
+    "description": "Zone overlay / analysis: No major OS pupil anomalies."
+  },
+  "anwNotAssessed": "ANW：未评估",
+  "@anwNotAssessed": {
+    "description": "Zone overlay / analysis: ANW: not assessed"
+  },
+  "manualAlignmentAid": "仅供审阅的手动对齐辅助（拍摄后）。拖动图像或使用自动居中。",
+  "@manualAlignmentAid": {
+    "description": "Zone overlay / analysis: Manual alignment aid for review only (post-capture"
+  },
+  "frontalShift": "S：额侧移位模式。",
+  "@frontalShift": {
+    "description": "Zone overlay / analysis: S: Frontal shift."
+  },
+  "cerebralCirculation": "Velchover历史研究将此与脑循环模式相关联。",
+  "@cerebralCirculation": {
+    "description": "Zone overlay / analysis: Cerebral circulation patterns."
+  },
+  "middleTemporalShift": "D：中颞侧移位模式。",
+  "@middleTemporalShift": {
+    "description": "Zone overlay / analysis: D: Middle-temporal shift."
+  },
+  "respiratoryCardiac": "Velchover历史研究将此与呼吸和心脏自主神经模式相关联。",
+  "@respiratoryCardiac": {
+    "description": "Zone overlay / analysis: Respiratory and cardiac autonomic patterns."
+  },
+  "findings": "所见：",
+  "@findings": {
+    "description": "Zone overlay / analysis: Findings:"
+  },
+  "analysisReportTitle": "瞳孔分析报告",
+  "reportResearchVersion": "研究版",
+  "reportDisclaimerTitle": "免责声明：仅供研究/教育使用",
+  "reportDisclaimerBody": "结果为研究性观察，非医学诊断。",
+  "reportPersonInformationTitle": "受检者信息",
+  "reportAgeGroupLabel": "年龄组",
+  "reportPupilSizeComparisonTitle": "瞳孔大小比较",
+  "reportCaptureDistanceMetricsTitle": "拍摄距离指标",
+  "reportResearchObservationsTitle": "研究所见",
+  "reportObserverNotesZoneOverlayTitle": "观察者备注（区域叠加）",
+  "reportEndOfReport": "报告结束",
+  "reportGradeLabel": "等级",
+  "reportPupilFormTitle": "瞳孔形态",
+  "reportDecentrationTitle": "偏心度",
+  "reportFlatteningsTitle": "扁平化",
+  "reportProtrusionsTitle": "突出",
+  "reportAnwParametersTitle": "自主神经带（ANW）",
+  "reportTonicStateLabel": "历史张力模式",
+  "reportShiftDetectedTitle": "历史移位模式",
+  "reportClinicalLabel": "历史注记",
+  "reportConstrictionDetectedTitle": "检测到收缩",
+  "reportSeverityLabel": "严重程度",
+  "reportReferenceValuesTitle": "参考值（CNRI研究协议）",
+  "reportMatchLabel": "匹配",
+  "reportValueLabel": "值",
+  "reportNormalPupilForm": "正常瞳孔形态",
+  "reportPageXofY": "第{page}页 共{total}页",
+  "@reportPageXofY": {
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "reportShareSubject": "瞳孔分析报告 - {patientName}",
+  "@reportShareSubject": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      }
+    }
+  },
+  "reportShareBody": "附件为{patientName}的瞳孔分析报告，生成于{date}。",
+  "@reportShareBody": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "belowBaseline": "低于年龄{age}（{group}）的研究基准值",
+  "@belowBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "aboveBaseline": "高于年龄{age}（{group}）的研究基准值",
+  "@aboveBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "ageGroupInfant": "婴儿",
+  "@ageGroupInfant": {
+    "description": "Localized age group label"
+  },
+  "ageGroupChild15": "幼儿（1-5岁）",
+  "@ageGroupChild15": {
+    "description": "Localized age group label"
+  },
+  "ageGroupChild611": "儿童（6-11岁）",
+  "@ageGroupChild611": {
+    "description": "Localized age group label"
+  },
+  "ageGroupTeen": "青少年",
+  "@ageGroupTeen": {
+    "description": "Localized age group label"
+  },
+  "ageGroupAdult2039": "成人（20-39岁）",
+  "@ageGroupAdult2039": {
+    "description": "Localized age group label"
+  },
+  "ageGroupAdult4059": "成人（40-59岁）",
+  "@ageGroupAdult4059": {
+    "description": "Localized age group label"
+  },
+  "ageGroupSenior60Plus": "老年人（60岁以上）",
+  "@ageGroupSenior60Plus": {
+    "description": "Localized age group label"
+  },
+  "middleNasalShift": "中鼻侧移位模式。",
+  "upperTemporalShift": "上颞侧移位模式。",
+  "lowerTemporalShift": "下颞侧移位模式。",
+  "basalShift": "基底移位模式。",
+  "vagusStellateAssociation": "Velchover历史研究将此与迷走神经或星状神经节功能减退模式相关联。",
+  "venaCavaInferiorAssociation": "Velchover历史研究将此与下腔静脉血流动力学障碍模式相关联。",
+  "vertebralArteryAssociation": "Velchover历史研究将此与椎动脉循环模式相关联。",
+  "smallPelvisAssociation": "Velchover历史研究将此与小骨盆充血模式相关联。",
+  "openZoneOverlay": "打开区域叠加",
+  "iris": "虹膜",
+  "chartOpacity": "图表不透明度",
+  "irisSizeNotAvailable": "虹膜大小数据不可用",
+  "ratio": "比值",
+  "reportRefPiRatio": "瞳孔/虹膜比值：正常20-30%",
+  "reportRefEllipseness": "椭圆度：正常>95%",
+  "reportRefDecentralization": "偏心度：正常<5%",
+  "reportRefPupilSizeDiff": "瞳孔大小差：<2%正常，2-4%轻度，>4%显著",
+  "enterPatientInfoAnalysis": "输入患者信息 → 分析",
+  "chooseCaptureMethod": "选择拍摄方式：",
+  "usbCamera": "USB摄像头",
+  "selectExistingImage": "选择现有图像",
+  "detectingCameras": "正在检测摄像头...",
+  "retryDetection": "重试检测",
+  "connectUvcCameraViaUsb": "通过USB连接UVC摄像头",
+  "ensureCameraDriversInstalled": "确保已安装摄像头驱动",
+  "tapRefreshToDetect": "点击刷新以检测摄像头",
+  "connectUsbCameraToBegin": "连接USB摄像头以开始",
+  "noExternalCameraTitle": "未检测到外接摄像头",
+  "connectUsbIriscopeEnsurePlugged": "请连接USB虹膜镜并确保已插入",
+  "languagesAvailable": "可用语言",
+  "validationChecks": "验证检查：",
+  "eyeQualityTip": "提示：确保光线充足并保持眼睛稳定",
+  "validatingEye": "正在验证眼睛...",
+  "initializing": "初始化中...",
+  "nameLabel": "姓名：",
+  "ageLabel": "年龄：",
+  "typeLabel": "类型：",
+  "pleaseEnterName": "请输入姓名",
+  "pleaseEnterAge": "请输入年龄",
+  "ageMustBe2Digits": "年龄必须为1或2位数字",
+  "optional": "（可选）",
+  "bilateralBothHands": "双手均用",
+  "zoom": "缩放",
+  "zoomSliderTip": "录制前请使用右侧缩放滑块调整放大倍率。",
+  "aboutProgramDeveloper": "程序开发者 - Bryan K. Marcia, Ph.D.",
+  "chartSizeTooltip": "图表大小",
+  "chartOpacityAdvancedTooltip": "图表不透明度（0 = 仅悬停 / 器官模式）",
+  "anwLabel": "ANW",
+  "doneAndGoBack": "完成并返回",
+  "errorImageShape": "图像形状不正确 - 请确保眼睛充满画面",
+  "cameraConnected": "摄像头已连接",
+  "cameraDisconnected": "摄像头已断开",
+  "cameraPermissionDenied": "摄像头权限被拒绝",
+  "cameraFailedInit": "摄像头初始化失败",
+  "cameraInUse": "摄像头正被其他应用使用",
+  "cameraFormatNotSupported": "不支持的摄像头格式",
+  "capturedImageNotFound": "未找到拍摄的图像文件",
+  "failedToCaptureImage": "图像拍摄失败",
+  "gradeA": "A",
+  "gradeB": "B",
+  "gradeC": "C",
+  "gradeD": "D",
+  "cameraErrorOccurred": "发生摄像头错误",
+  "connectingToUsbIriscope": "正在连接USB虹膜镜...",
+  "noCamerasDetectedMessage": "未检测到摄像头。请确保USB摄像头已连接并被系统识别。",
+  "failedToAccessCameras": "访问摄像头失败"
+}

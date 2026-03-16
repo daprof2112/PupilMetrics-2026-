@@ -21,6 +21,12 @@ class LanguageController extends GetxController {
     LanguageModel(locale: const Locale('ja'), name: 'Japanese', nativeName: '日本語', flag: '🇯🇵', countryCode: 'JP'),
     LanguageModel(locale: const Locale('ko'), name: 'Korean', nativeName: '한국어', flag: '🇰🇷', countryCode: 'KR'),
     LanguageModel(locale: const Locale('it'), name: 'Italian', nativeName: 'Italiano', flag: '🇮🇹', countryCode: 'IT'),
+    LanguageModel(locale: const Locale('ru'), name: 'Russian', nativeName: 'Русский', flag: '🇷🇺', countryCode: 'RU'),
+    LanguageModel(locale: const Locale('zh'), name: 'Chinese (Simplified)', nativeName: '简体中文', flag: '🇨🇳', countryCode: 'CN'),
+    LanguageModel(locale: const Locale('ar'), name: 'Arabic', nativeName: 'العربية', flag: '🇸🇦', countryCode: 'SA'),
+    LanguageModel(locale: const Locale('hi'), name: 'Hindi', nativeName: 'हिन्दी', flag: '🇮🇳', countryCode: 'IN'),
+    LanguageModel(locale: const Locale('tr'), name: 'Turkish', nativeName: 'Türkçe', flag: '🇹🇷', countryCode: 'TR'),
+    LanguageModel(locale: const Locale('pl'), name: 'Polish', nativeName: 'Polski', flag: '🇵🇱', countryCode: 'PL'),
   ];
 
   @override

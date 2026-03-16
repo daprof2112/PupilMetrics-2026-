@@ -1,0 +1,1921 @@
+{
+  "@@locale": "pl",
+  "appTitle": "PupilMetrics",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "analyzeButton": "Analizuj",
+  "plrModes": "Tryby PLR",
+  "captureInstructions": "Ustaw oko w okręgu prowadnicy",
+  "scanHistory": "Historia skanów",
+  "selectCameraMode": "Wybierz tryb kamery",
+  "loadFromGallery": "Wczytaj z galerii",
+  "rightEyePhoto": "Zdjęcie prawego oka",
+  "leftEyePhoto": "Zdjęcie lewego oka",
+  "autoCapture": "Automatyczne przechwytywanie",
+  "autoCaptureDesc": "Detekcja oka + auto-przechwytywanie po 5 sek.",
+  "manualCapture": "Ręczne przechwytywanie",
+  "manualCaptureDesc": "Detekcja oka + ręczne przechwytywanie (tylna kamera)",
+  "selfieMode": "Tryb selfie",
+  "selfieModeDesc": "Detekcja oka + auto-przechwytywanie po 5 sek. (przednia kamera)",
+  "plrVideoRear": "PLR Video (Tylna)",
+  "plrVideoRearDesc": "Tylna kamera • 10 sek. przechwytywania",
+  "plrVideoSelfie": "PLR Video (Selfie)",
+  "plrVideoSelfieDesc": "Przednia kamera • 10 sek. przechwytywania",
+  "plrVideoCapture": "Przechwytywanie PLR Video",
+  "frontCamera": "Przednia kamera",
+  "rearCamera": "Tylna kamera",
+  "selectEyeToAssess": "Wybierz oko do oceny",
+  "rightEyeOD": "Prawe oko (OD)",
+  "leftEyeOS": "Lewe oko (OS)",
+  "recordPlrRightEye": "Nagraj PLR dla prawego oka",
+  "recordPlrLeftEye": "Nagraj PLR dla lewego oka",
+  "loadRightEyeImage": "Wczytaj obraz prawego oka",
+  "loadLeftEyeImage": "Wczytaj obraz lewego oka",
+  "bothEyes": "Oboje oczu",
+  "loadBothEyesDesc": "Wczytaj prawe oko, następnie lewe",
+  "selectEyeImageFromDevice": "Wybierz obraz oka z urządzenia",
+  "selectRightEyeFirst": "Najpierw wybierz obraz PRAWEGO oka (OD)",
+  "rightEyeSaved": "Prawe oko zapisane. Teraz wybierz obraz LEWEGO oka (OS)",
+  "cancelledNoRightEye": "Anulowano – nie wybrano prawego oka",
+  "cancelledNoLeftEye": "Anulowano – nie wybrano lewego oka",
+  "errorLoadingImages": "Błąd wczytywania obrazów: {error}",
+  "@errorLoadingImages": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "crop43": "Przytnij (4:3)",
+  "success": "Sukces",
+  "imageCroppedSuccess": "Obraz przycięty pomyślnie!",
+  "error": "Błąd",
+  "cropFailed": "Nie udało się przyciąć obrazu. Spróbuj ponownie.",
+  "crop": "Przytnij",
+  "cancel": "Anuluj",
+  "saved": "Zapisano! ✅",
+  "imageSavedToGallery": "Obraz zapisany pomyślnie w galerii",
+  "exposure": "Ekspozycja",
+  "flash": "Błysk",
+  "eye": "Oko",
+  "center": "środek",
+  "light": "Światło",
+  "ready": "Gotowy",
+  "on": "WŁ",
+  "off": "WYŁ",
+  "auto": "AUTO",
+  "manual": "RĘCZNY",
+  "selfie": "SELFIE",
+  "pupil": "ŹRENICA",
+  "plrHistory": "Historia PLR",
+  "searchByName": "Szukaj po nazwisku...",
+  "totalScans": "Łączna liczba skanów",
+  "thisWeek": "Ten tydzień",
+  "patients": "Pacjenci",
+  "detected": "Wykryto",
+  "noPlrRecordsYet": "Brak rekordów PLR",
+  "recordPlrVideoToSeeHistory": "Nagraj film PLR, aby zobaczyć historię",
+  "deleteRecord": "Usunąć rekord?",
+  "deleteRecordConfirm": "Usunąć analizę PLR dla {name} ({eye})?\\n\\nTej operacji nie można cofnąć.",
+  "@deleteRecordConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "delete": "Usuń",
+  "recordDeleted": "Rekord usunięty",
+  "plrAnalysis": "Analiza PLR – {eye}",
+  "@plrAnalysis": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "patient": "Pacjent",
+  "date": "Data",
+  "frames": "Klatki",
+  "baselinePiRatio": "Bazowe P/I",
+  "minPiRatio": "Min P/I",
+  "plrMagnitude": "Wielkość PLR",
+  "constriction": "Zwężenie",
+  "plrDetected": "PLR wykryty",
+  "confidence": "Pewność",
+  "grade": "Ocena",
+  "close": "zamknij",
+  "yes": "Tak",
+  "no": "Nie",
+  "na": "N/D",
+  "takeLeftEyePhoto": "Zrób zdjęcie lewego oka",
+  "takeRightEyePhoto": "Zrób zdjęcie prawego oka",
+  "nowTakingLeftEye": "Teraz przechwytywane LEWE oko (OS)",
+  "startingWithRightEye": "Zaczynamy od PRAWEGO oka (OD)",
+  "captured": "Przechwycono ✓",
+  "useSameDistanceLighting": "Użyj tej samej odległości i oświetlenia co przy prawym oku, aby zapewnić dokładne porównanie.",
+  "step1of2": "Krok 1 z 2",
+  "step2of2": "Krok 2 z 2",
+  "bothEyesCaptured": "Oboje oczu przechwycone ✓",
+  "continueToLeftEye": "Przejdź do lewego oka",
+  "retakeOD": "Powtórz OD",
+  "retakeOS": "Powtórz OS",
+  "retakeRightEye": "Powtórz prawe oko",
+  "analyzeBothEyes": "Analizuj oboje oczu",
+  "patientInfoMissing": "Brak danych pacjenta",
+  "rightEyePhotoMissing": "Brak zdjęcia prawego oka!",
+  "patientInfoMissingRestart": "Brak danych pacjenta. Uruchom ponownie.",
+  "exitApp": "Zamknij aplikację",
+  "tipsForBestResults": "WSKAZÓWKI DLA NAJLEPSZYCH WYNIKÓW",
+  "followGuidelinesForQuality": "Stosuj się do tych wskazówek dla optymalnej jakości obrazu",
+  "cameraDistance": "Odległość kamery",
+  "cameraDistanceDesc": "Trzymaj kamerę 10–15 cm od oka. Zachowaj tę samą odległość dla obu oczu.",
+  "lightingPosition": "Położenie oświetlenia",
+  "lightingPositionDesc": "Ustaw źródło światła wewnątrz lub na zewnątrz granic źrenicy. Spróbuj patrzeć w kierunku lampy błyskowej.",
+  "avoidReflections": "Unikaj refleksów",
+  "avoidReflectionsDesc": "Zmniejsz odbicia, unikając odbicia od okien, luster i bezpośrednich lamp.",
+  "centerYourEye": "Wyśrodkuj oko",
+  "centerYourEyeDesc": "Upewnij się, że całe oko wraz z twardówką (białą częścią) jest wyśrodkowane i wypełnia kadr.",
+  "cropProperly": "Przytnij właściwie",
+  "cropProperlyDesc": "Przytnij obraz z okiem na środku. Obraz zostanie automatycznie zapisany w proporcjach 4:3.",
+  "importantInformation": "Ważne informacje",
+  "imageRatio43": "Proporcje obrazu 4:3 zgodnie ze standardem obrazowania medycznego",
+  "forClinicalUseCnri": "Do użytku klinicznego z CNRI (cnri.edu)",
+  "noMedicalDiagnosis": "Nie dostarcza diagnozy medycznej",
+  "eyeWideOpenClear": "Upewnij się, że oko jest szeroko otwarte, a zdjęcie jest wyraźne",
+  "personalInfo": "Dane osobowe",
+  "personInformation": "Informacje o osobie",
+  "enterPersonDetails": "Wprowadź dane osoby",
+  "infoIncludedInReport": "Te informacje zostaną uwzględnione w raporcie z analizy",
+  "fullName": "Imię i nazwisko",
+  "enterPersonName": "Wprowadź nazwisko osoby",
+  "nameRequired": "Imię i nazwisko jest wymagane",
+  "sex": "Płeć",
+  "male": "Mężczyzna",
+  "female": "Kobieta",
+  "ageYears": "Wiek (lata)",
+  "enterAge": "Wprowadź wiek",
+  "ageRequired": "Wiek jest wymagany",
+  "enterValidNumber": "Wprowadź prawidłową liczbę",
+  "enterValidAge": "Wprowadź prawidłowy wiek (0–120)",
+  "mainComplaints": "Główne dolegliwości",
+  "mainComplaintsOptional": "Główne dolegliwości (opcjonalne)",
+  "complaintsHint": "np. bóle głowy, problemy ze wzrokiem, zmęczenie...",
+  "continueToCaptire": "Przejdź do przechwytywania",
+  "ageImportantNote": "Wiek jest ważny dla dokładnej oceny wielkości źrenicy, ponieważ zakresy prawidłowe różnią się w zależności od wieku.",
+  "submit": "Zatwierdź",
+  "pleaseSelectGender": "Proszę wybrać płeć!",
+  "applicationSubmitted": "Twoje zgłoszenie zostało pomyślnie przesłane.",
+  "type": "Typ:",
+  "gender": "Płeć:",
+  "rightHanded": "Praworęczny",
+  "leftHanded": "Leworęczny",
+  "partialLeftHandedness": "Częściowa leworęczność",
+  "retrainedLeftHandedness": "Przekwalifikowana leworęczność",
+  "bilateralUseBothHands": "Oburęczność",
+  "splashTitle": "PupilMetrics Eye Capture",
+  "splashDeveloper": "Twórca programu – Bryan K. Marcia, Ph.D.",
+  "researchEducationalTool": "Narzędzie badawczo-dydaktyczne",
+  "startNewAnalysis": "Rozpocznij nową analizę",
+  "viewHistory": "Wyświetl historię",
+  "viewResearchDisclaimer": "Wyświetl zastrzeżenie badawcze",
+  "researchDisclaimerTitle": "Narzędzie badawczo-dydaktyczne",
+  "researchDisclaimerNotMedical": "NIE jest urządzeniem medycznym",
+  "researchDisclaimerNotClinical": "NIE do diagnozy klinicznej",
+  "researchDisclaimerResults": "Wyniki są obserwacjami badawczymi",
+  "researchDisclaimerConsult": "Zawsze konsultuj się z pracownikami ochrony zdrowia",
+  "researchDisclaimerAcknowledge": "Kontynuując, potwierdzasz, że jest to narzędzie badawcze i nie należy go używać do podejmowania decyzji medycznych.",
+  "researchDisclaimerWarning": "Ta aplikacja służy WYŁĄCZNIE do celów BADAWCZYCH i EDUKACYJNYCH.",
+  "iUnderstand": "Rozumiem",
+  "plrAnalysisTest": "Test analizy PLR",
+  "checkingVideoFile": "Sprawdzanie pliku wideo...",
+  "processingFrame": "Przetwarzanie klatki {current}/{total} ({timestamp} ms)...",
+  "@processingFrame": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "timestamp": {
+        "type": "int"
+      }
+    }
+  },
+  "analysisComplete": "Analiza zakończona!",
+  "errorVideoNotFound": "Błąd: nie znaleziono pliku wideo",
+  "waitingForResults": "Oczekiwanie na wyniki...",
+  "baseline": "Wartość bazowa",
+  "flashPhase": "Błysk",
+  "constrictionPhase": "Zwężenie",
+  "recovery": "Powrót",
+  "plrDetectedExclaim": "PLR WYKRYTY!",
+  "plrWeakNotDetected": "PLR słaby/niewykryty",
+  "min": "Min",
+  "plr": "PLR",
+  "constrLabel": "Zwęż.",
+  "saveToHistory": "Zapisz w historii",
+  "txt": "TXT",
+  "json": "JSON",
+  "saveFrames": "Zapisz klatki",
+  "share": "Udostępnij",
+  "frameSavedToGallery": "Klatka zapisana w galerii!",
+  "failedToSaveFrame": "Nie udało się zapisać klatki",
+  "framesSavedToGallery": "{count} klatek zapisanych w galerii!",
+  "@framesSavedToGallery": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "jsonCopiedToClipboard": "JSON skopiowany do schowka!",
+  "reportCopiedToClipboard": "Raport skopiowany do schowka!",
+  "shareFailedError": "Udostępnianie nie powiodło się: {error}",
+  "@shareFailedError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "savedToHistoryId": "Zapisano w historii! (ID: {id})",
+  "@savedToHistoryId": {
+    "placeholders": {
+      "id": {
+        "type": "int"
+      }
+    }
+  },
+  "failedToSave": "Nie udało się zapisać: {error}",
+  "@failedToSave": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noSuccessfulFramesToSave": "Brak poprawnych klatek do zapisania",
+  "saveAllFrames": "Zapisz wszystkie klatki",
+  "shareReport": "Udostępnij raport",
+  "shareJson": "Udostępnij JSON",
+  "rerunTest": "Powtórz test",
+  "videoCaptureTitle": "PLR – {eye}",
+  "@videoCaptureTitle": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "initializingCamera": "Inicjalizacja kamery...",
+  "usingCamera": "Używana kamera: {camera}",
+  "@usingCamera": {
+    "placeholders": {
+      "camera": {
+        "type": "String"
+      }
+    }
+  },
+  "cameraError": "Błąd kamery: {error}",
+  "@cameraError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noCamerasFound": "Nie znaleziono kamer",
+  "retry": "Ponów",
+  "startPlrRecording": "Rozpocznij nagrywanie PLR",
+  "stopRecording": "Zatrzymaj nagrywanie",
+  "phaseReady": "Gotowy",
+  "phaseStarting": "Uruchamianie...",
+  "phaseBaseline": "Wartość bazowa (0–{sec} s)",
+  "@phaseBaseline": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseFlash": "BŁYSK!",
+  "phaseConstriction": "Zwężenie ({start}–{end} s)",
+  "@phaseConstriction": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseRecovery": "Powrót ({start}–{end} s)",
+  "@phaseRecovery": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseComplete": "Ukończono!",
+  "readyDesc": "Ustaw oko w okręgu, a następnie dotknij Start",
+  "holdSteady": "Trzymaj nieruchomo...",
+  "recordingBaselinePupil": "Nagrywanie bazowego rozmiaru źrenicy",
+  "lightStimulus": "Bodziec świetlny ({ms} ms)",
+  "@lightStimulus": {
+    "placeholders": {
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "measuringConstriction": "Pomiar zwężenia źrenicy",
+  "measuringRecovery": "Pomiar powrotu źrenicy",
+  "plrRecordingComplete": "Nagrywanie PLR zakończone",
+  "positionEyeInstruction": "Ustaw {eye} oko w okręgu.\\nTrzymaj nieruchomo podczas {seconds}-sekundowego nagrywania.",
+  "@positionEyeInstruction": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      },
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "keepEyeSteadyFlash": "Trzymaj oko nieruchomo. Błysk nastąpi po {sec} sekundach.",
+  "@keepEyeSteadyFlash": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "recordingComplete": "Nagrywanie zakończone",
+  "plrVideoCapturedSuccess": "Film PLR przechwycony pomyślnie!",
+  "duration": "Czas trwania",
+  "seconds": "sekundy",
+  "frameRate": "Liczba klatek",
+  "camera": "Kamera",
+  "flashAt": "O {sec} s ({ms} ms)",
+  "@flashAt": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      },
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "phases": "Fazy",
+  "phasesFlow": "Wartość bazowa → Błysk → Zwężenie → Powrót",
+  "expectedNormalValues": "Oczekiwane wartości prawidłowe:",
+  "latency": "Latencja",
+  "velocity": "Prędkość",
+  "testFrameAnalysis": "🧪 Testowa analiza klatek",
+  "retake": "Powtórz",
+  "done": "Gotowe",
+  "plrVideoModeTitle": "Tryb PLR Video",
+  "plrAssessmentTitle": "Ocena odruchu źrenicznego na światło (PLR)",
+  "plrInstructions": "1. Ustaw oko w okręgu prowadnicy\\n2. Dotknij 'Rozpocznij nagrywanie PLR'\\n3. Trzymaj nieruchomo przez 10 sekund\\n4. Po 3 sekundach nastąpi błysk\\n5. Aplikacja rejestruje odpowiedź źrenicy",
+  "recordingPhases": "Fazy nagrywania:",
+  "baselinePhaseDesc": "Początkowy rozmiar źrenicy",
+  "flashPhaseDesc": "Bodziec świetlny",
+  "constrictionPhaseDesc": "Zwężenie źrenicy",
+  "recoveryPhaseDesc": "Powrót źrenicy",
+  "normalPlrValues": "Prawidłowe wartości PLR:",
+  "gotIt": "Rozumiem",
+  "pupilAnalysis": "Analiza źrenicy",
+  "scansLeft": "Pozostało: {count}",
+  "@scansLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "validatingRightEye": "Weryfikacja prawego oka...",
+  "validatingLeftEye": "Weryfikacja lewego oka...",
+  "analyzingRightEye": "Analiza prawego oka (OD)...",
+  "analyzingLeftEye": "Analiza lewego oka (OS)...",
+  "comparingPupils": "Porównywanie źrenic...",
+  "person": "Osoba: {name}",
+  "@person": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "invalidEyeImage": "Nieprawidłowy obraz oka",
+  "analysisFailed": "Analiza nie powiodła się: {error}",
+  "@analysisFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "researchEducationalToolOnly": "WYŁĄCZNIE NARZĘDZIE BADAWCZO-DYDAKTYCZNE",
+  "resultsNotMedicalDiagnoses": "Ta aplikacja służy wyłącznie do celów badawczych i edukacyjnych. Wyniki NIE są diagnozami medycznymi i NIE zostały zwalidowane do użytku klinicznego. Powiązania wzorców pochodzą z historycznej literatury badawczej. W przypadku jakichkolwiek problemów zdrowotnych skonsultuj się z pracownikiem ochrony zdrowia.",
+  "pupilSizeDifference": "Wykryto różnicę wielkości źrenic",
+  "significantPupilSizeDiff": "ZNACZĄCA RÓŻNICA WIELKOŚCI ŹRENIC",
+  "diff": "różn.",
+  "researchObservationConsult": "Obserwacja badawcza – skonsultuj interpretację z pracownikiem ochrony zdrowia",
+  "ageBasedResearchBaseline": "Wartość bazowa badań wg wieku",
+  "group": "Grupa: {group}",
+  "@group": {
+    "placeholders": {
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "researchRange": "Zakres badawczy",
+  "measuredEst": "Zmierzone (szac.)",
+  "pupilForm": "Kształt źrenicy",
+  "decentrationPattern": "Wzorzec decentracji",
+  "flattenings": "Spłaszczenia",
+  "protrusions": "Wypuklenia",
+  "zonesCount": "{count} stref",
+  "@zonesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bilateralComparison": "Porównanie obustronne",
+  "parameter": "Parametr",
+  "od": "OD",
+  "os": "OS",
+  "piRatio": "Stosunek P/I",
+  "ellipseness": "Eliptyczność",
+  "circularity": "Okrągłość",
+  "decentralization": "Decentracja",
+  "anwRatio": "Stosunek",
+  "normal": "prawidłowy",
+  "elliptical": "Eliptyczny",
+  "circular": "Okrągły",
+  "irregular": "Nieregularny",
+  "centered": "Wyśrodkowany",
+  "offset": "Przesunięty",
+  "miosis": "Mioza",
+  "constricted": "Zwężona",
+  "dilated": "Rozszerzona",
+  "mydriasis": "Mydriaza",
+  "inner": "Wewnętrzna",
+  "outer": "Zewnętrzna",
+  "high": "Wysoka",
+  "moderate": "Umiarkowana",
+  "savePdf": "Zapisz PDF",
+  "sharePdf": "Udostępnij PDF",
+  "retakePhotos": "Powtórz zdjęcia",
+  "scansLeftBanner": "Pozostało skanów: {count}",
+  "@scansLeftBanner": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "upgrade": "Uaktualnij",
+  "unlockUnlimited": "Odblokuj bez limitu",
+  "usedAllFreeScans": "Wykorzystano wszystkie bezpłatne skany.",
+  "unlimitedScans": "Nieograniczone skany",
+  "pdfReports": "Raporty PDF",
+  "scanHistoryFeature": "Historia skanów",
+  "bilateralAnalysis": "Analiza obustronna",
+  "monthly": "Miesięczny",
+  "perMonth": "/mies.",
+  "annual": "Roczny",
+  "perYear": "/rok",
+  "tenCredits": "10 kredytów",
+  "oneTime": "jednorazowy",
+  "best": "NAJLEPSZY",
+  "purchaseCancelled": "Zakup anulowany",
+  "purchaseFailed": "Zakup nie powiódł się: {error}",
+  "@purchaseFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "txtSaved": "TXT zapisany: {path}",
+  "@txtSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "jsonSaved": "JSON zapisany: {path}",
+  "@jsonSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfSaved": "PDF zapisany!",
+  "pdfFailed": "Błąd PDF: {error}",
+  "@pdfFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "open": "OTWÓRZ",
+  "failed": "Błąd: {error}",
+  "@failed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "staticScans": "Statyczne",
+  "plrScans": "PLR",
+  "searchByNameOrComplaints": "Szukaj po nazwisku lub dolegliwościach...",
+  "searchPlrRecords": "Szukaj rekordów PLR...",
+  "noScansYet": "Brak skanów",
+  "completedScansAppearHere": "Ukończone skany pojawią się tutaj",
+  "deleteScan": "Usunąć skan?",
+  "deleteScanConfirm": "Usunąć skan dla {name} z {date}?",
+  "@deleteScanConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "scanDeleted": "Skan usunięty",
+  "originalImagesNotFound": "Nie znaleziono oryginalnych obrazów oka.",
+  "viewResults": "Wyświetl wyniki",
+  "avgPlr": "Śr. PLR",
+  "years": "lat",
+  "anisocoria": "Anizokoria",
+  "none": "Brak",
+  "mild": "Łagodna",
+  "severe": "Znaczna",
+  "zoneLabel": "Strefa: {zone}",
+  "@zoneLabel": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "associatedWith": "Powiązana z: {organ}",
+  "@associatedWith": {
+    "placeholders": {
+      "organ": {
+        "type": "String"
+      }
+    }
+  },
+  "significant": "Znaczący",
+  "fair": "Dostateczna",
+  "low": "Niska",
+  "good": "Dobra",
+  "zones": "strefy",
+  "significanceWithinLimits": "w dopuszczalnych granicach",
+  "significanceMild": "łagodny",
+  "significanceModerate": "umiarkowany",
+  "significanceSignificant": "znaczący",
+  "formTypeCircle": "Okrąg (prawidłowy)",
+  "formTypeOval": "Owal",
+  "formTypeOvalVertical": "Owal pionowy",
+  "formTypeOvalHorizontal": "Owal poziomy",
+  "formTypeOvalDiagonal": "Owal ukośny",
+  "formTypeLeftObliqueEllipse": "Elipsa lewoukośna",
+  "formTypeUnilateralEllipse": "Elipsa jednostronna",
+  "formTypeVentralDivergingEllipse": "Elipsa brzuszna rozbieżna",
+  "formTypeFrontalDivergingEllipse": "Elipsa czołowa rozbieżna",
+  "formTypeEllipse": "Elipsa",
+  "formTypeChord": "Cięciwa",
+  "formTypeIrregular": "Nieregularny",
+  "pupilFormCircleDesc": "Prawidłowy okrągły kształt źrenicy. Nie wykryto odchyleń wzorca.",
+  "pupilFormOvalHorizontalDesc": "Wzorzec owalu poziomego. Historyczne badania wiązały go z wzorcami autonomicznego układu nerwowego wpływającymi na strefy oddechowe i gruczołowe.",
+  "pupilFormOvalVerticalDesc": "Wzorzec owalu pionowego. Historyczne badania wiązały ten wzorzec ze strefami krążenia mózgowego w badaniach odruchów autonomicznych.",
+  "pupilFormOvalDiagonalDesc": "Wzorzec owalu ukośnego. Literatura badawcza wiązała go z odruchami strefy urogenitalnej w badaniach autonomicznych.",
+  "pupilFormLeftObliqueEllipseDesc": "Wzorzec elipsy lewoukośnej. Historyczne obserwacje wiązały go ze strefami autonomicznymi urogenitalnymi i kończyn dolnych.",
+  "pupilFormUnilateralEllipseDesc": "Wzorzec elipsy jednostronnej. Badania wskazywały na powiązania ze strefami autonomicznymi oddechowymi i oskrzelowymi.",
+  "pupilFormVentralDivergingEllipseDesc": "Elipsa brzuszna rozbieżna. Historyczne badania wiązały ją ze strefami autonomicznymi dolnej części ciała i wzorcami funkcji ruchowych.",
+  "pupilFormFrontalDivergingEllipseDesc": "Elipsa czołowa rozbieżna. Literatura badawcza wiązała ten wzorzec ze strefami mózgowymi i górnych układów autonomicznych.",
+  "pupilFormOvalDesc": "Łagodny wzorzec deformacji owalnej. Monitoruj postęp w obserwacjach badawczych.",
+  "pupilFormEllipseDesc": "Wzorzec eliptycznej źrenicy wskazujący na warianty układu autonomicznego w badaniach historycznych.",
+  "pupilFormChordDesc": "Wzorzec deformacji cięciwowej wskazujący na zlokalizowane wpływy autonomiczne w literaturze badawczej.",
+  "pupilFormIrregularDesc": "Forma nieregularna sugerująca wpływy wielu wzorców autonomicznych na podstawie historycznych obserwacji.",
+  "patternCentered": "Wyśrodkowana (prawidłowa)",
+  "patternFrontal": "Decentracja czołowa",
+  "patternBasal": "Decentracja podstawna",
+  "patternNasal": "Decentracja nosowa",
+  "patternTemporal": "Decentracja skroniowa",
+  "patternMiddleNasal": "Decentracja środkowo-nosowa",
+  "patternMiddleTemporal": "Decentracja środkowo-skroniowa",
+  "patternUpperNasal": "Decentracja górno-nosowa",
+  "patternUpperTemporal": "Decentracja górno-skroniowa",
+  "patternLowerNasal": "Decentracja dolno-nosowa",
+  "patternLowerTemporal": "Decentracja dolno-skroniowa",
+  "patternUpwards": "Decentracja – w górę",
+  "patternDownwards": "Decentracja – w dół",
+  "patternUpwardsInwards": "Decentracja – w górę i do środka",
+  "patternUpwardsOutwards": "Decentracja – w górę i na zewnątrz",
+  "decentrationCenteredDesc": "Prawidłowe położenie źrenicy w granicach fizjologicznych.",
+  "decentrationNasalRightDesc": "Wzorzec nosowy (prawy). Historyczne badania wiązały tę strefę z odruchami autonomicznymi płucnymi.",
+  "decentrationNasalLeftDesc": "Wzorzec nosowy (lewy). Literatura badawcza wiązała tę strefę z wzorcami autonomicznymi funkcji serca.",
+  "decentrationTemporalDesc": "Wzorzec skroniowy. Historyczne obserwacje wiązały tę strefę z odruchami autonomicznymi nerkowymi i reprodukcyjnymi.",
+  "decentrationFrontalRightDesc": "Wzorzec czołowy (prawy). Badania wiązały tę strefę z wzorcami funkcji poznawczych i mózgowych.",
+  "decentrationFrontalLeftDesc": "Wzorzec czołowy (lewy). Historyczne badania wiązały tę strefę z wzorcami autonomicznymi mózgowymi.",
+  "decentrationBasalRightDesc": "Wzorzec podstawny (prawy). Badania wskazywały na powiązania z odruchami ciśnienia śródczaszkowego.",
+  "decentrationBasalLeftDesc": "Wzorzec podstawny (lewy). Historyczne obserwacje wiązały go ze wzorcami stref zapalnych mózgowych.",
+  "decentrationUpwardsInwardsRightDesc": "Wzorzec górno-nosowy (prawy). Badania wiązały tę strefę z odruchami autonomicznymi wątrobowo-żółciowymi.",
+  "decentrationUpwardsInwardsLeftDesc": "Wzorzec górno-nosowy (lewy). Historyczne badania wiązały go ze strefami śledzionowymi i przeponowymi.",
+  "decentrationUpwardsOutwardsDesc": "Wzorzec górno-skroniowy. Badania wskazywały na powiązania ze strefami autonomicznymi nerkowymi i reprodukcyjnymi.",
+  "decentrationMiddleNasalRightDesc": "Wzorzec środkowo-nosowy (prawy). Historyczne obserwacje wiązały go z wykorzystaniem tlenu i strefami sercowymi.",
+  "decentrationMiddleNasalLeftDesc": "Wzorzec środkowo-nosowy (lewy). Badania wiązały go z neurologicznymi i sercowymi wzorcami autonomicznymi.",
+  "decentrationMiddleTemporalRightDesc": "Wzorzec środkowo-skroniowy (prawy). Badania wiązały go ze strefami regulacji autonomicznej serca.",
+  "decentrationMiddleTemporalLeftDesc": "Wzorzec środkowo-skroniowy (lewy). Historyczne badania wiązały go ze strefami płucnymi i sercowymi.",
+  "decentrationUpperNasalRightDesc": "Wzorzec górno-nosowy (prawy). Badania wskazywały na powiązania ze strefami poznawczymi i odruchami kręgosłupa szyjnego.",
+  "decentrationUpperNasalLeftDesc": "Wzorzec górno-nosowy (lewy). Historyczne obserwacje wiązały go z wzorcami poznawczymi i strefami szyjnymi.",
+  "decentrationUpperTemporalRightDesc": "Wzorzec górno-skroniowy (prawy). Badania wiązały tę strefę z odruchami nerwów czaszkowych i słuchowych.",
+  "decentrationUpperTemporalLeftDesc": "Wzorzec górno-skroniowy (lewy). Historyczne badania wiązały go ze strefami neurovegetatywnymi i mowy.",
+  "decentrationLowerNasalDesc": "Wzorzec dolno-nosowy. Badania wskazywały na powiązania ze strefami autonomicznymi urogenitalnymi i lędźwiowo-krzyżowymi.",
+  "decentrationLowerTemporalRightDesc": "Wzorzec dolno-skroniowy (prawy). Historyczne obserwacje wiązały go ze strefami metabolicznymi i wątrobowymi.",
+  "decentrationLowerTemporalLeftDesc": "Wzorzec dolno-skroniowy (lewy). Badania wiązały go z wzorcami autonomicznymi sercowymi i śledzionowymi.",
+  "flatteningUpperCentralRightDesc": "Wzorzec powiązany ze strefą górno-centralną. Historyczne badania wiązały go z odruchami autonomicznymi regulacji nastroju i energii.",
+  "flatteningUpperTemporalRightDesc": "Wzorzec powiązany ze strefą górno-skroniową. Badania wskazywały na powiązania z autonomicznymi odruchami nerwów czaszkowych i słuchowych.",
+  "flatteningMiddleTemporalRightDesc": "Wzorzec powiązany ze strefą środkowo-skroniową. Historyczne obserwacje wiązały go z wzorcami autonomicznymi oddechowymi i sercowymi.",
+  "flatteningLowerTemporalRightDesc": "Wzorzec powiązany ze strefą dolno-skroniową. Literatura badawcza wiązała go z autonomicznymi strefami wątrobowymi i metabolicznymi.",
+  "flatteningLowerBasalRightDesc": "Wzorzec powiązany ze strefą dolno-podstawną. Historyczne badania wiązały go z autonomicznymi odruchami nerkowymi i kończyn dolnych.",
+  "flatteningLowerNasalRightDesc": "Wzorzec powiązany ze strefą dolno-nosową. Badania wskazywały na powiązania z autonomicznymi strefami urogenitalnymi i miednicznymi.",
+  "flatteningMiddleNasalRightDesc": "Wzorzec powiązany ze strefą środkowo-nosową. Historyczne obserwacje wiązały go z wzorcami autonomicznymi wykorzystania tlenu i oddechowymi.",
+  "flatteningUpperNasalRightDesc": "Wzorzec powiązany ze strefą górno-nosową. Literatura badawcza wiązała go z poznawczymi i szyjnymi odruchami autonomicznymi.",
+  "flatteningDefaultRightDesc": "Wykryto wariant wzorca autonomicznego układu nerwowego w tej strefie na podstawie historycznych badań.",
+  "flatteningUpperCentralLeftDesc": "Wzorzec powiązany ze strefą górno-centralną. Historyczne badania wiązały go z wzorcami autonomicznymi regulacji nastroju i neurologicznymi.",
+  "flatteningUpperTemporalLeftDesc": "Wzorzec powiązany ze strefą górno-skroniową. Badania wskazywały na powiązania z neurovegetatywnymi i mowy strefami autonomicznymi.",
+  "flatteningMiddleTemporalLeftDesc": "Wzorzec powiązany ze strefą środkowo-skroniową. Historyczne obserwacje wiązały go z autonomicznymi odruchami płucnymi i sercowymi.",
+  "flatteningLowerTemporalLeftDesc": "Wzorzec powiązany ze strefą dolno-skroniową. Literatura badawcza wiązała go z wzorcami autonomicznymi sercowymi i śledzionowymi.",
+  "flatteningLowerBasalLeftDesc": "Wzorzec powiązany ze strefą dolno-podstawną. Historyczne badania wiązały go z autonomicznymi strefami nerkowymi i wydalniczymi.",
+  "flatteningLowerNasalLeftDesc": "Wzorzec powiązany ze strefą dolno-nosową. Badania wskazywały na powiązania z autonomicznymi odruchami urogenitalnymi i lędźwiowo-krzyżowymi.",
+  "flatteningMiddleNasalLeftDesc": "Wzorzec powiązany ze strefą środkowo-nosową. Historyczne obserwacje wiązały go z wzorcami autonomicznymi sercowymi i oddechowymi.",
+  "flatteningUpperNasalLeftDesc": "Wzorzec powiązany ze strefą górno-nosową. Literatura badawcza wiązała go z poznawczymi i szyjnymi strefami autonomicznymi.",
+  "flatteningDefaultLeftDesc": "Wykryto wariant wzorca autonomicznego układu nerwowego w tej strefie na podstawie historycznych badań.",
+  "protrusionUpperCentralRightDesc": "Wzorzec wypuklenia w strefie górno-centralnej. Badania wiązały go z wzorcami nadmiernej aktywacji współczulnej wpływającymi na strefy mózgowe.",
+  "protrusionUpperTemporalRightDesc": "Wzorzec wypuklenia w strefie górno-skroniowej. Historyczne obserwacje wiązały go z wzorcami nadaktywności nerwów czaszkowych i układu słuchowego.",
+  "protrusionMiddleTemporalRightDesc": "Wzorzec wypuklenia w strefie środkowo-skroniowej. Badania wskazywały na powiązania ze współczulnymi wzorcami sercowymi i oddechowymi.",
+  "protrusionLowerTemporalRightDesc": "Wzorzec wypuklenia w strefie dolno-skroniowej. Historyczne badania wiązały go z współczulnymi strefami wątrobowo-żółciowymi i metabolicznymi.",
+  "protrusionLowerBasalRightDesc": "Wzorzec wypuklenia w strefie dolno-podstawnej. Badania wiązały go z wzorcami nadaktywności współczulnej nerkowej i miednicznej.",
+  "protrusionLowerNasalRightDesc": "Wzorzec wypuklenia w strefie dolno-nosowej. Historyczne obserwacje wiązały go ze współczulnymi strefami aktywacji urogenitalnej.",
+  "protrusionMiddleNasalRightDesc": "Wzorzec wypuklenia w strefie środkowo-nosowej. Badania wskazywały na powiązania z współczulnymi wzorcami żołądkowymi i trzustkowymi.",
+  "protrusionUpperNasalRightDesc": "Wzorzec wypuklenia w strefie górno-nosowej. Historyczne badania wiązały go ze współczulnymi strefami nadmiernej aktywacji poznawczej i wzrokowej.",
+  "protrusionDefaultRightDesc": "Wykryto wzorzec nadaktywności współczulnego układu nerwowego w tej strefie na podstawie obserwacji badawczych.",
+  "protrusionUpperCentralLeftDesc": "Wzorzec wypuklenia w strefie górno-centralnej. Badania wiązały go z psychomotorycznymi i mózgowymi wzorcami współczulnymi.",
+  "protrusionUpperTemporalLeftDesc": "Wzorzec wypuklenia w strefie górno-skroniowej. Historyczne obserwacje wiązały go z neurovegetatywnymi strefami nadaktywności współczulnej.",
+  "protrusionMiddleTemporalLeftDesc": "Wzorzec wypuklenia w strefie środkowo-skroniowej. Badania wskazywały na powiązania z płucnymi i sercowymi wzorcami współczulnymi.",
+  "protrusionLowerTemporalLeftDesc": "Wzorzec wypuklenia w strefie dolno-skroniowej. Historyczne badania wiązały go ze śledzionowymi i sercowymi strefami aktywacji współczulnej.",
+  "protrusionLowerBasalLeftDesc": "Wzorzec wypuklenia w strefie dolno-podstawnej. Badania wiązały go z wzorcami nadaktywności współczulnej miednicznej i nerkowej.",
+  "protrusionLowerNasalLeftDesc": "Wzorzec wypuklenia w strefie dolno-nosowej. Historyczne obserwacje wiązały go ze strefami aktywacji współczulnej lędźwiowo-krzyżowej.",
+  "protrusionMiddleNasalLeftDesc": "Wzorzec wypuklenia w strefie środkowo-nosowej. Badania wskazywały na powiązania z wzorcami współczulnymi lękowo-sercowymi.",
+  "protrusionUpperNasalLeftDesc": "Wzorzec wypuklenia w strefie górno-nosowej. Historyczne badania wiązały go ze współczulnymi strefami nadmiernej aktywacji poznawczej i wzrokowej.",
+  "protrusionDefaultLeftDesc": "Wykryto wzorzec nadaktywności współczulnego układu nerwowego w tej strefie na podstawie obserwacji badawczych.",
+  "anisocoriaNone": "Rozmiary źrenic w normie. Nie wykryto istotnej anizokorii.",
+  "anisocoriaDetected": "Wykryto anizokorię: {difference}% ({direction}). {description}",
+  "@anisocoriaDetected": {
+    "placeholders": {
+      "difference": {
+        "type": "String"
+      },
+      "direction": {
+        "type": "String"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "anisocoriaDirectionSD": "S>D",
+  "anisocoriaDirectionDS": "D>S",
+  "anisocoriaSeverityNone": "W granicach normy.",
+  "anisocoriaSeverityMild": "Łagodna różnica. Może być fizjologiczna.",
+  "anisocoriaSeverityModerate": "Umiarkowana asymetria. Odnotowano obserwację badawczą.",
+  "anisocoriaSeveritySevere": "Znacząca asymetria. Zaznaczono obserwację badawczą.",
+  "largerPupilEqual": "równe",
+  "largerPupilOS": "OS (lewe)",
+  "largerPupilOD": "OD (prawe)",
+  "decentrationWithinLimits": "W granicach normy.",
+  "decentrationClinicalNote": "{patternName}. Przesunięcie: {offset}%",
+  "@decentrationClinicalNote": {
+    "placeholders": {
+      "patternName": {
+        "type": "String"
+      },
+      "offset": {
+        "type": "String"
+      }
+    }
+  },
+  "zoneUpperCentral": "Górno-centralna",
+  "zoneUpperNasal": "Górno-nosowa",
+  "zoneMiddleNasal": "Środkowo-nosowa",
+  "zoneLowerNasal": "Dolno-nosowa",
+  "zoneLowerBasal": "Dolno-podstawna",
+  "zoneLowerTemporal": "Dolno-skroniowa",
+  "zoneMiddleTemporal": "Środkowo-skroniowa",
+  "zoneUpperTemporal": "Górno-skroniowa",
+  "zoneFrontal": "Czołowa",
+  "zoneBasal": "Podstawna",
+  "zoneUnknown": "Nieznana",
+  "flatteningDescription": "Spłaszczenie {zone} ({clockRange}) – {percentage}%",
+  "@flatteningDescription": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "protrusionDescription": "Wypuklenie {zone} ({clockRange}) – {percentage}%",
+  "@protrusionDescription": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "usbIriscopeMode": "Tryb iryskopu USB",
+  "iriscopeExternal": "Iryskop / zewnętrzny",
+  "usbLabel": "USB",
+  "useConnectedUsbCamera": "Użyj podłączonej kamery USB lub iryskopu",
+  "detectedCameras": "Wykryte kamery",
+  "externalCamera": "Kamera zewnętrzna",
+  "cameraIndex": "Kamera {index}",
+  "@cameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "noExternalCameraDetected": "Nie wykryto zewnętrznej kamery.\\nPodłącz iryskop USB, aby włączyć.",
+  "refresh": "Odśwież",
+  "selectCameraSource": "Wybierz źródło kamery",
+  "camerasDetected": "Wykryto kamer: {count}",
+  "@camerasDetected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "camerasAvailable": "Dostępnych kamer: {count}",
+  "@camerasAvailable": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "externalCameraIndex": "Kamera zewnętrzna {index}",
+  "@externalCameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "qualityGatedRear": "Auto-przechwytywanie z kontrolą jakości (tylna kamera)",
+  "qualityGatedFront": "Auto-przechwytywanie z kontrolą jakości (przednia kamera)",
+  "usbCameraInfo": "Informacje o kamerze USB",
+  "connected": "Podłączona",
+  "waiting": "Oczekiwanie...",
+  "disconnected": "Odłączona",
+  "waitingForUsbCamera": "Oczekiwanie na kamerę USB",
+  "connectIriscopePrompt": "Podłącz iryskop przez adapter USB OTG.\\nUdziel uprawnień po wyświetleniu monitu.",
+  "usbCameraIssue": "Problem z kamerą USB",
+  "pleaseConnectIriscope": "Proszę podłączyć iryskop lub kamerę USB.",
+  "retryConnection": "Ponów połączenie",
+  "troubleshootingTips": "Wskazówki dotyczące rozwiązywania problemów",
+  "tipUsbOtgAdapter": "Upewnij się, że adapter USB OTG jest prawidłowo podłączony",
+  "tipUsbHostMode": "Sprawdź, czy urządzenie obsługuje tryb USB Host",
+  "tipReconnectCamera": "Spróbuj odłączyć i ponownie podłączyć kamerę",
+  "tipGrantPermissions": "Udziel uprawnień USB po wyświetleniu monitu",
+  "tipUnlockDevice": "Niektóre urządzenia mogą wymagać odblokowania",
+  "back": "Wstecz",
+  "switchEye": "Przełącz oko",
+  "state": "Stan",
+  "status": "Status",
+  "usingFlutterUvcPlugin": "Używa wtyczki flutter_uvc_camera\\nWtyczka do obsługi urządzeń USB Video Class.",
+  "initialized": "Zainicjalizowany",
+  "notReady": "Niegotowy",
+  "captureDistanceMatch": "Dopasowanie odległości przechwytywania",
+  "@captureDistanceMatch": {
+    "description": "Title for the bilateral iris size comparison card"
+  },
+  "irisSize": "Rozmiar tęczówki",
+  "@irisSize": {
+    "description": "Label for iris size measurement"
+  },
+  "distanceMatched": "Odległość dopasowana",
+  "@distanceMatched": {
+    "description": "Status when capture distances match well"
+  },
+  "distanceMismatch": "Niezgodność odległości",
+  "@distanceMismatch": {
+    "description": "Status when capture distances don't match"
+  },
+  "excellentMatch": "Doskonałe dopasowanie",
+  "@excellentMatch": {
+    "description": "Distance match status 90%+"
+  },
+  "goodMatch": "Dobre dopasowanie",
+  "@goodMatch": {
+    "description": "Distance match status 80-90%"
+  },
+  "acceptableMatch": "Dopuszczalne dopasowanie",
+  "@acceptableMatch": {
+    "description": "Distance match status 70-80%"
+  },
+  "considerRetaking": "Niezgodność odległości – rozważ powtórzenie",
+  "@considerRetaking": {
+    "description": "Warning when distances don't match well"
+  },
+  "qualityReady": "Gotowy! Trzymaj nieruchomo...",
+  "@qualityReady": {
+    "description": "Camera quality feedback when ready to capture"
+  },
+  "qualityTooBlurry": "Trzymaj kamerę nieruchomo",
+  "@qualityTooBlurry": {
+    "description": "Camera quality feedback when image is blurry"
+  },
+  "qualityTooDark": "Potrzeba więcej światła",
+  "@qualityTooDark": {
+    "description": "Camera quality feedback when too dark"
+  },
+  "qualityTooBright": "Za jasno – zmniejsz oświetlenie",
+  "@qualityTooBright": {
+    "description": "Camera quality feedback when too bright"
+  },
+  "qualityNoContrast": "Zmień kąt oświetlenia",
+  "@qualityNoContrast": {
+    "description": "Camera quality feedback when contrast is low"
+  },
+  "qualityNoPupil": "Wyśrodkuj źrenicę w kadrze",
+  "@qualityNoPupil": {
+    "description": "Camera quality feedback when pupil not detected"
+  },
+  "qualityNotCentered": "Przesuń oko na środek",
+  "@qualityNotCentered": {
+    "description": "Camera quality feedback when eye not centered"
+  },
+  "qualityNotAnEye": "Nie wykryto oka",
+  "@qualityNotAnEye": {
+    "description": "Camera quality feedback when no eye detected"
+  },
+  "qualityProcessing": "Przetwarzanie...",
+  "@qualityProcessing": {
+    "description": "Camera quality feedback during processing"
+  },
+  "distanceMatchedCheck": "✓ Odległość dopasowana",
+  "@distanceMatchedCheck": {
+    "description": "Distance guidance when perfectly matched"
+  },
+  "distanceGoodMatchCheck": "✓ Dobre dopasowanie",
+  "@distanceGoodMatchCheck": {
+    "description": "Distance guidance when good match"
+  },
+  "distanceSlightlyBack": "Nieco dalej ↔",
+  "@distanceSlightlyBack": {
+    "description": "Distance guidance to move slightly back"
+  },
+  "distanceSlightlyCloser": "Nieco bliżej ↔",
+  "@distanceSlightlyCloser": {
+    "description": "Distance guidance to move slightly closer"
+  },
+  "distanceAlmostThere": "Prawie...",
+  "@distanceAlmostThere": {
+    "description": "Distance guidance when nearly matched"
+  },
+  "distanceMoveBack": "Cofnij się ←←",
+  "@distanceMoveBack": {
+    "description": "Distance guidance to move back"
+  },
+  "distanceMoveCloser": "Przybliż się →→",
+  "@distanceMoveCloser": {
+    "description": "Distance guidance to move closer"
+  },
+  "distanceTooClose": "Za blisko! Cofnij się",
+  "@distanceTooClose": {
+    "description": "Distance guidance when too close"
+  },
+  "distanceTooFar": "Za daleko! Przybliż się",
+  "@distanceTooFar": {
+    "description": "Distance guidance when too far"
+  },
+  "distanceStabilizing": "Stabilizacja...",
+  "@distanceStabilizing": {
+    "description": "Distance status while stabilizing reading"
+  },
+  "distanceLabel": "Odległość: {percent}%",
+  "@distanceLabel": {
+    "description": "Distance match percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "irisSizeComparison": "OD: {odSize}px → OS: {osSize}px",
+  "@irisSizeComparison": {
+    "description": "Iris size comparison between eyes",
+    "placeholders": {
+      "odSize": {
+        "type": "int"
+      },
+      "osSize": {
+        "type": "int"
+      }
+    }
+  },
+  "frontCameraLabel": "Przednia kamera",
+  "@frontCameraLabel": {
+    "description": "Label for front camera"
+  },
+  "rearCameraLabel": "Tylna kamera",
+  "@rearCameraLabel": {
+    "description": "Label for rear/back camera"
+  },
+  "startingCamera": "Uruchamianie kamery...",
+  "@startingCamera": {
+    "description": "Status when camera is initializing"
+  },
+  "eyeNotDetected": "Nie wykryto oka",
+  "@eyeNotDetected": {
+    "description": "Title for validation failure dialog"
+  },
+  "tryAgain": "Spróbuj ponownie",
+  "@tryAgain": {
+    "description": "Button text to retry capture"
+  },
+  "indicatorEye": "Oko",
+  "@indicatorEye": {
+    "description": "Quality indicator label for eye detection"
+  },
+  "indicatorSharp": "Ostrość",
+  "@indicatorSharp": {
+    "description": "Quality indicator label for sharpness"
+  },
+  "indicatorLight": "Światło",
+  "@indicatorLight": {
+    "description": "Quality indicator label for lighting"
+  },
+  "indicatorFocus": "Fokus",
+  "@indicatorFocus": {
+    "description": "Quality indicator label for focus/contrast"
+  },
+  "indicatorPupil": "Źrenica",
+  "@indicatorPupil": {
+    "description": "Quality indicator label for pupil detection"
+  },
+  "indicatorIris": "Tęczówka",
+  "@indicatorIris": {
+    "description": "Quality indicator label for iris size"
+  },
+  "indicatorMatch": "Dopasowanie",
+  "@indicatorMatch": {
+    "description": "Quality indicator label for distance match"
+  },
+  "checkImageShape": "Kształt obrazu",
+  "@checkImageShape": {
+    "description": "Validation check label for aspect ratio"
+  },
+  "checkCircularIris": "Okrągła tęczówka",
+  "@checkCircularIris": {
+    "description": "Validation check label for circular iris"
+  },
+  "checkDarkPupil": "Ciemna źrenica",
+  "@checkDarkPupil": {
+    "description": "Validation check label for dark pupil center"
+  },
+  "checkIrisTexture": "Tekstura tęczówki",
+  "@checkIrisTexture": {
+    "description": "Validation check label for iris texture"
+  },
+  "checkPupilIrisStructure": "Struktura źrenica-tęczówka",
+  "@checkPupilIrisStructure": {
+    "description": "Validation check label for concentric circles"
+  },
+  "checkNaturalColors": "Naturalne kolory",
+  "@checkNaturalColors": {
+    "description": "Validation check label for color distribution"
+  },
+  "checkEdgePattern": "Wzorzec krawędzi",
+  "@checkEdgePattern": {
+    "description": "Validation check label for edge density"
+  },
+  "errorImageShapeIncorrect": "Nieprawidłowy kształt obrazu – upewnij się, że oko wypełnia kadr",
+  "@errorImageShapeIncorrect": {
+    "description": "Validation error for incorrect aspect ratio"
+  },
+  "errorNoEyeDetected": "Nie wykryto oka – wyśrodkuj tęczówkę w kadrze",
+  "@errorNoEyeDetected": {
+    "description": "Validation error when no eye/iris detected"
+  },
+  "errorNoPupilDetected": "Nie wykryto źrenicy – zapewnij odpowiednie oświetlenie",
+  "@errorNoPupilDetected": {
+    "description": "Validation error when pupil not detected"
+  },
+  "errorNoIrisTexture": "Brak tekstury tęczówki – przybliż kamerę do oka",
+  "@errorNoIrisTexture": {
+    "description": "Validation error when iris texture not detected"
+  },
+  "errorUnusualColors": "Wykryto nietypowe kolory – unikaj ekranów i refleksów",
+  "@errorUnusualColors": {
+    "description": "Validation error for unusual color distribution"
+  },
+  "errorTooManyEdges": "Zbyt wiele prostych krawędzi – to może nie być oko",
+  "@errorTooManyEdges": {
+    "description": "Validation error for too many straight edges"
+  },
+  "errorNotValidEye": "Nieprawidłowy obraz oka – spróbuj ponownie",
+  "@errorNotValidEye": {
+    "description": "Generic validation error for invalid eye image"
+  },
+  "holdStillCapturing": "Trzymaj nieruchomo – przechwytywanie...",
+  "@holdStillCapturing": {
+    "description": "Status during countdown capture"
+  },
+  "adjustDistanceFirst": "Najpierw ustaw odległość",
+  "@adjustDistanceFirst": {
+    "description": "Status when distance needs adjustment before capture"
+  },
+  "stabilizingReading": "Stabilizacja...",
+  "@stabilizingReading": {
+    "description": "Status while distance reading stabilizes"
+  },
+  "autoCaptureWhenReady": "Auto-przechwytywanie, gdy gotowy",
+  "@autoCaptureWhenReady": {
+    "description": "Status indicating auto-capture is enabled"
+  },
+  "tapOrWaitAutoCapture": "Dotknij lub czekaj na auto-przechwytywanie",
+  "@tapOrWaitAutoCapture": {
+    "description": "Instruction when ready to capture"
+  },
+  "validatingImage": "Weryfikacja...",
+  "@validatingImage": {
+    "description": "Status during image validation"
+  },
+  "capturingStatus": "Przechwytywanie...",
+  "@capturingStatus": {
+    "description": "Status during image capture"
+  },
+  "adjustPositionStatus": "Dostosuj pozycję",
+  "@adjustPositionStatus": {
+    "description": "Status when position needs adjustment"
+  },
+  "validationTip": "Wskazówka: Zapewnij dobre oświetlenie, trzymaj kamerę 10–15 cm od oka, unikaj refleksów",
+  "@validationTip": {
+    "description": "Helpful tip shown after multiple validation failures"
+  },
+  "validationChecksTitle": "Kontrole walidacji:",
+  "@validationChecksTitle": {
+    "description": "Title for validation checks list in dialog"
+  },
+  "confidenceLabel": "Pewność: {percent}%",
+  "@confidenceLabel": {
+    "description": "Confidence percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "incompleteData": "Niekompletne dane",
+  "@incompleteData": {
+    "description": "Status when iris metrics data is incomplete"
+  },
+  "irisDiameterLabel": "tęcz. ø",
+  "@irisDiameterLabel": {
+    "description": "Label for iris diameter measurement"
+  },
+  "plrResponseCurve": "Krzywa odpowiedzi PLR",
+  "@plrResponseCurve": {
+    "description": "Title for PLR chart showing pupil response over time"
+  },
+  "plrLatency": "Latencja",
+  "@plrLatency": {
+    "description": "Time from flash to start of constriction"
+  },
+  "plrVelocity": "Prędkość",
+  "@plrVelocity": {
+    "description": "Rate of pupil constriction"
+  },
+  "plrRecoveryTime": "Czas powrotu",
+  "@plrRecoveryTime": {
+    "description": "Time for pupil to recover"
+  },
+  "plrRecoveryRatio": "Powrót %",
+  "@plrRecoveryRatio": {
+    "description": "Final size compared to baseline"
+  },
+  "plrEnhancedMetrics": "Rozszerzone metryki PLR",
+  "@plrEnhancedMetrics": {
+    "description": "Section title for advanced PLR measurements"
+  },
+  "plrNormalLatency": "Norma: 200–500 ms",
+  "@plrNormalLatency": {
+    "description": "Normal latency reference range"
+  },
+  "plrNormalConstriction": "Norma: 10–30%",
+  "@plrNormalConstriction": {
+    "description": "Normal constriction reference range"
+  },
+  "plrNormalVelocity": "Norma: 1,5–4,0%/s",
+  "@plrNormalVelocity": {
+    "description": "Normal velocity reference range"
+  },
+  "plrReferenceValues": "Referencyjne wartości PLR",
+  "@plrReferenceValues": {
+    "description": "Title for reference values section"
+  },
+  "plrSubjectInfo": "Dane osoby badanej",
+  "@plrSubjectInfo": {
+    "description": "Section title for patient/subject info in PLR report"
+  },
+  "plrTestType": "Odruch źreniczny na światło",
+  "@plrTestType": {
+    "description": "Name of the PLR test type"
+  },
+  "plrAnalysisSummary": "Podsumowanie analizy",
+  "@plrAnalysisSummary": {
+    "description": "Section title for analysis summary"
+  },
+  "plrTotalFrames": "Łączna liczba przeanalizowanych klatek",
+  "@plrTotalFrames": {
+    "description": "Label for total frames count"
+  },
+  "plrSuccessRate": "Wskaźnik sukcesu",
+  "@plrSuccessRate": {
+    "description": "Label for frame analysis success rate"
+  },
+  "plrMaxConstriction": "Maks. zwężenie",
+  "@plrMaxConstriction": {
+    "description": "Label for maximum constriction time"
+  },
+  "plrResponseCurveLabels": "Krzywa odpowiedzi PLR",
+  "anwTitle": "Kryza autonomiczna (ANW)",
+  "anwAbnormal": "Nieprawidłowy",
+  "anwDiameter": "Średnica",
+  "anwPerimeter": "Obwód",
+  "anwAsymmetry": "Asymetria",
+  "anwElevated": "Podwyższony",
+  "anwFormType": "Typ formy",
+  "anwRegular": "Regularny",
+  "anwDrawnIn": "Wciągnięty",
+  "anwIndented": "Wcięty",
+  "anwLacerated": "Postrzępiony",
+  "anwSpastic": "Spastyczny",
+  "anwAtonic": "Atoniczny",
+  "anwTonicState": "Historyczny wzorzec napięcia",
+  "anwParasympathotonic": "Wzorzec parasympatykotoniczny",
+  "anwSympathotonicState": "Wzorzec sympatykotoniczny",
+  "anwShiftDetected": "Historyczny wzorzec przesunięcia",
+  "anwConstrictionDetected": "Wykryto zwężenie",
+  "anwFindings": "Wyniki",
+  "anwRatioComparison": "Stosunek ANW",
+  "bilateralANWComparison": "Obustronne porównanie ANW",
+  "anwSymmetryNormal": "Symetria ANW w granicach normy.",
+  "anwAsymmetryDetected": "Wykryto asymetrię ANW między oczami.",
+  "functionalFrustration": "Zaburzenie funkcjonalne w korelacji między współczulnym a przywspółczulnym układem nerwowym.",
+  "anwParasympathotonicDesc": "Historyczne obserwacje wiązały to ze zwiększoną wrażliwością liminalną. Aktywność odruchowa przyspieszona. Funkcje wydzielnicze i ewakuacyjne przewodu pokarmowego nasilone.",
+  "anwSympathotonicDesc": "Historyczne obserwacje wiązały to ze zmniejszoną wrażliwością liminalną. Aktywność odruchowa spowolniona. Funkcje wydzielnicze i ewakuacyjne przewodu pokarmowego obniżone.",
+  "anwMiddleTemporalShiftCardiac": "Historyczne badania według Velchowera wiązały to z wzorcami przeciążenia lewej komory i stresem sercowym.",
+  "anwFrontalConstricted": "Czołowa strefa kryzy źrenicznej jest zwężona.",
+  "anwBasalConstricted": "Podstawna strefa kryzy źrenicznej jest zwężona.",
+  "anwFrontalBasalConstricted": "Czołowa i podstawna strefa kryzy źrenicznej są zwężone.",
+  "helpTitle": "Pomoc i podręcznik użytkownika",
+  "helpTabQuickStart": "Szybki start",
+  "helpTabCnriAnalysis": "Analiza CNRI",
+  "helpTabShortcuts": "Skróty",
+  "helpTabTroubleshooting": "Rozwiązywanie problemów",
+  "helpOnlineDocs": "Dokumentacja online",
+  "helpContactSupport": "Kontakt z pomocą techniczną",
+  "helpGettingStarted": "Pierwsze kroki",
+  "helpStep1Title": "Podłącz iryskop",
+  "helpStep1Desc": "Podłącz iryskop Dino-Lite lub kompatybilny iryskop USB.",
+  "helpStep2Title": "Wprowadź dane pacjenta",
+  "helpStep2Desc": "Uzupełnij nazwisko, wiek, płeć i główne dolegliwości pacjenta.",
+  "helpStep3Title": "Przechwytywanie prawego oka (OD)",
+  "helpStep3Desc": "Ustaw iryskop i przechwytuj obraz prawego oka.",
+  "helpStep4Title": "Przechwytywanie lewego oka (OS)",
+  "helpStep4Desc": "Powtórz dla lewego oka przy równomiernym oświetleniu.",
+  "helpStep5Title": "Przejrzyj analizę",
+  "helpStep5Desc": "Aplikacja analizuje stosunek P/I, kształt źrenicy i charakterystykę ANW.",
+  "helpStep6Title": "Eksportuj raport",
+  "helpStep6Desc": "Zapisz w formacie PDF, TXT lub JSON.",
+  "helpTipBestResults": "Dla najlepszych wyników: używaj równomiernego oświetlenia i zachowaj odległość iryskopu 2–3 cm.",
+  "helpCnriProtocolFeatures": "Funkcje protokołu CNRI",
+  "helpFeaturePiRatioTitle": "Stosunek źrenica/tęczówka (P/I)",
+  "helpFeaturePiRatioDesc": "Norma: 20–30%. Wartości poza normą mogą wskazywać na zaburzenia autonomiczne.",
+  "helpFeaturePupilFormTitle": "Analiza kształtu źrenicy",
+  "helpFeaturePupilFormDesc": "Wykrywa wzorce owalne, kierunek decentracji i ekscentryczność.",
+  "helpFeatureAnwTitle": "Ocena ANW (kryzy)",
+  "helpFeatureAnwDesc": "Analizuje stosunek, regularność formy, przesunięcia sektorowe i stan napięcia.",
+  "helpFeatureZoneTitle": "Analiza stref",
+  "helpFeatureZoneDesc": "Mapuje spłaszczenia/wypuklenia na strefy narządów CNRI.",
+  "helpFeatureBilateralTitle": "Porównanie obustronne",
+  "helpFeatureBilateralDesc": "Porównuje OD z OS w celu wykrycia asymetrii.",
+  "helpFeatureMlTitle": "Porównanie ONNX CNN",
+  "helpFeatureMlDesc": "Model ONNX CNN dostarcza dodatkowych pomiarów do porównania.",
+  "helpKeyboardShortcuts": "Skróty klawiszowe",
+  "helpCameraControls": "Sterowanie kamerą",
+  "helpShortcutSpace": "Przechwytuj obraz",
+  "helpShortcutCtrlS": "Zapisz raport PDF",
+  "helpShortcutCtrlO": "Otwórz obraz z galerii",
+  "helpShortcutCtrlH": "Wyświetl historię skanów",
+  "helpShortcutF11": "Przełącz pełny ekran",
+  "helpShortcutEsc": "Wstecz / Anuluj",
+  "helpShortcutScroll": "Powiększ/zmniejsz",
+  "helpShortcutDoubleClick": "Resetuj powiększenie",
+  "helpCommonIssues": "Częste problemy",
+  "helpIssueCameraNotDetected": "Kamera nie wykryta",
+  "helpIssueCameraSolution1": "Sprawdź połączenie USB",
+  "helpIssueCameraSolution2": "Wypróbuj inny port USB",
+  "helpIssueCameraSolution3": "Zainstaluj sterowniki Dino-Lite",
+  "helpIssueCameraSolution4": "Uruchom ponownie aplikację",
+  "helpIssuePupilDetectionFails": "Detekcja źrenicy nie działa",
+  "helpIssuePupilSolution1": "Zapewnij odpowiednie oświetlenie",
+  "helpIssuePupilSolution2": "Wyśrodkuj źrenicę w kadrze",
+  "helpIssuePupilSolution3": "Wyczyść soczewkę iryskopu",
+  "helpIssuePupilSolution4": "Ustaw ostrość ręcznie",
+  "helpIssuePdfExportFails": "Eksport PDF nie działa",
+  "helpIssuePdfSolution1": "Sprawdź uprawnienia do folderu",
+  "helpIssuePdfSolution2": "Upewnij się, że jest dostępne miejsce na dysku",
+  "helpIssuePdfSolution3": "Zamknij otwarte pliki PDF",
+  "helpIssuePdfSolution4": "Najpierw spróbuj eksportu TXT",
+  "helpCaptureChecklistTitle": "Lista kontrolna przechwytywania",
+  "helpCaptureChecklist1": "Utrzymuj źrenicę wyśrodkowaną i w pełni widoczną w kadrze.",
+  "helpCaptureChecklist2": "Używaj równomiernego oświetlenia i zmniejszaj odblaski na rogówce.",
+  "helpCaptureChecklist3": "Zachowaj podobną odległość iryskopu dla prawego i lewego oka.",
+  "helpCaptureChecklist4": "Przeogniskuj lub powtórz zdjęcie, jeśli krawędź źrenicy wygląda miękko lub niewyraźnie.",
+  "helpExportSettingsTitle": "Ustawienia eksportu",
+  "helpExportSettingsDesc": "Opcja Auto-zapis PDF automatycznie zapisuje raport po analizie, Dołącz obrazy kontroluje, czy zdjęcia oka pojawiają się w PDF, a Pokaż porównanie ML dodaje wartości porównania ONNX CNN do raportów.",
+  "helpHybridScoreTitle": "Hybrydowa pewność i ocena",
+  "helpHybridScoreDesc": "Wyświetlana pewność i ocena łączą jakość geometrii klasycznej z zgodnością ML, więc odzwierciedlają wiarygodność pomiaru, a nie diagnozę.",
+  "helpAnomalyGuideTitle": "Odczytywanie spłaszczeń i wypuklenia",
+  "helpAnomalyGuideDesc": "Spłaszczenia wskazują względne wciągnięcie do środka, a wypuklenia – wybrzuszenie na zewnątrz wzdłuż granicy źrenicy; każda karta podaje strefę, wielkość i powiązane skojarzenie.",
+  "helpZoneOverlayGuideTitle": "Nakładka strefowa",
+  "helpZoneOverlayGuideDesc": "Używaj nakładki strefowej do wizualnej kontroli pozycji sektorów i sprawdzania, gdzie wykryte anomalie rozkładają się wokół źrenicy i tęczówki.",
+  "helpContactSupportTip": "Skontaktuj się z helpdesk@cnri.edu w celu uzyskania pomocy.",
+  "settingsTitle": "Ustawienia",
+  "settingsCameraIriscope": "KAMERA / IRYSKOP",
+  "settingsPreferredCamera": "Preferowana kamera:",
+  "settingsCameraDinoLite": "Dino-Lite",
+  "settingsCameraUsb": "Kamera USB",
+  "settingsCameraAutoDetect": "Automatyczne wykrywanie",
+  "settingsDefaultZoom": "Domyślne powiększenie:",
+  "settingsAnalysis": "ANALIZA",
+  "settingsShowMlComparison": "Pokaż porównanie ML",
+  "settingsShowZoneOverlay": "Pokaż nakładkę strefową",
+  "settingsExportReports": "EKSPORT I RAPORTY",
+  "settingsAutoSavePdf": "Auto-zapis PDF",
+  "settingsIncludeImages": "Dołącz obrazy",
+  "settingsSaved": "Ustawienia zapisane",
+  "aboutResearchEdition": "Wydanie badawcze",
+  "aboutVersion": "Wersja {version}",
+  "@aboutVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "aboutLicense": "Licencja",
+  "aboutLicensedTo": "Licencjobiorca:",
+  "aboutExpires": "Wygasa:",
+  "aboutManageLicense": "Zarządzaj licencją",
+  "aboutBasedOnCnri": "Oparty na protokole CNRI",
+  "aboutCopyright": "© 2024–2026 PupilMetrics Research",
+  "aboutWebsite": "Strona internetowa",
+  "aboutPrivacy": "Prywatność",
+  "languageSelectTitle": "Wybierz język",
+  "selectLanguage": "Wybierz język",
+  "languageChanged": "Zmieniono język",
+  "languageChangedMessage": "Język aplikacji ustawiony na {language}",
+  "@languageChangedMessage": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languageSystemNotAvailable": "System języka niedostępny",
+  "licenseLoading": "Ładowanie...",
+  "licenseWelcome": "Witamy w PupilMetrics!",
+  "licenseTrialFeatures": "14-dniowy bezpłatny okres próbny • Pełne funkcje",
+  "licenseStartTrial": "Rozpocznij bezpłatny okres próbny",
+  "licenseEnterKey": "Wprowadź licencję",
+  "licenseFreeTrial": "Bezpłatny okres próbny",
+  "licenseDaysRemaining": "Pozostało dni: {count}",
+  "@licenseDaysRemaining": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseTrialEnded": "Okres próbny zakończony",
+  "licenseEnterToContinue": "Wprowadź licencję, aby kontynuować",
+  "licenseStandard": "Licencja standardowa",
+  "licenseProfessional": "Licencja profesjonalna",
+  "licenseEnterprise": "Licencja korporacyjna",
+  "licenseLicensed": "Licencjonowany",
+  "licenseActive": "Aktywna",
+  "licenseTrialUser": "Użytkownik próbny",
+  "licenseLifetime": "Dożywotnia",
+  "licenseNotSetUp": "Nieskonfigurowana",
+  "trialExpiredTitle": "Okres próbny zakończony",
+  "trialExpiredMessage": "Twój 14-dniowy okres próbny dobiegł końca. Aby kontynuować analizę obrazów tęczówki, prosimy o zakup licencji.",
+  "trialExpiredCanStill": "Nadal możesz:",
+  "trialExpiredViewAnalyses": "Przeglądać poprzednie analizy",
+  "trialExpiredExportReports": "Eksportować istniejące raporty",
+  "trialExpiredAccessHistory": "Przeglądać historię skanów",
+  "trialExpiredMaybeLater": "Może później",
+  "licenseRegistration": "Rejestracja licencji",
+  "licenseStatusValid": "Licencjonowany",
+  "licenseStatusTrialActive": "Bezpłatny okres próbny",
+  "licenseStatusTrialExpired": "Okres próbny zakończony",
+  "licenseStatusExpired": "Licencja wygasła",
+  "licenseStatusInvalid": "Nieprawidłowa licencja",
+  "licenseStatusUnregistered": "Nieskonfigurowana",
+  "licenseStatusMachineMismatch": "Inny komputer",
+  "licenseStatusNetworkError": "Błąd połączenia",
+  "licenseEnterKeyTitle": "Wprowadź klucz licencyjny",
+  "licenseKeyPlaceholder": "CNRI-XXXX-XXXX-XXXX-XXXX",
+  "licenseYourName": "Twoje imię i nazwisko",
+  "licenseEmailAddress": "Adres e-mail",
+  "licenseMachineId": "ID komputera",
+  "licenseCopyMachineId": "Kopiuj ID komputera",
+  "licenseMachineIdCopied": "ID komputera skopiowane do schowka",
+  "licenseValidationKeyRequired": "Proszę wprowadzić klucz licencyjny",
+  "licenseValidationKeyFormat": "Klucz licencyjny powinien mieć 20 znaków (CNRI-XXXX-XXXX-XXXX-XXXX)",
+  "licenseValidationNameRequired": "Proszę wprowadzić nazwisko",
+  "licenseValidationEmailRequired": "Proszę wprowadzić adres e-mail",
+  "licenseValidationEmailInvalid": "Proszę wprowadzić prawidłowy adres e-mail",
+  "licenseActivate": "Aktywuj licencję",
+  "licenseContinueTrial": "Kontynuuj okres próbny",
+  "licenseBuyLicense": "Kup licencję",
+  "licenseNeedHelp": "Potrzebujesz pomocy?",
+  "licenseLicenseAgreement": "Umowa licencyjna",
+  "licenseActivatedSuccess": "Licencja aktywowana pomyślnie!",
+  "licenseMsgMachineMismatch": "Ta licencja jest zarejestrowana na innym komputerze. Użyj oryginalnego urządzenia lub skontaktuj się z pomocą techniczną.",
+  "licenseMsgTrialEnded": "Twój bezpłatny okres próbny dobiegł końca. Wprowadź klucz licencyjny, aby kontynuować korzystanie ze wszystkich funkcji.",
+  "licenseMsgExpired": "Twoja licencja wygasła. Proszę odnowić, aby kontynuować.",
+  "licenseMsgNeedsSetup": "Licencja wymaga skonfigurowania. Rozpocznij bezpłatny okres próbny lub wprowadź klucz licencyjny.",
+  "licenseMsgCheckFormat": "Sprawdź format klucza licencyjnego. Powinien wyglądać tak: CNRI-XXXX-XXXX-XXXX-XXXX",
+  "licenseMsgNotRecognized": "Ten klucz licencyjny nie został rozpoznany. Proszę sprawdzić i spróbować ponownie.",
+  "licenseMsgAlreadyRegistered": "Ten klucz jest już zarejestrowany na innym komputerze.",
+  "licenseMsgContactSupport": "Ta licencja wygasła. Skontaktuj się z pomocą techniczną w celu odnowienia.",
+  "licenseMsgActivatedThankYou": "Licencja aktywowana pomyślnie! Dziękujemy za zakup.",
+  "licenseMsgUnableToActivate": "Nie można aktywować licencji. Sprawdź połączenie z internetem i spróbuj ponownie.",
+  "licenseMsgTrialWelcome": "Witamy! Twój {days}-dniowy bezpłatny okres próbny rozpoczął się.",
+  "@licenseMsgTrialWelcome": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseMsgTrialActive": "Okres próbny aktywny: pozostało {days} dni.",
+  "@licenseMsgTrialActive": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseMsgFreeTrialActive": "Bezpłatny okres próbny aktywny",
+  "licenseMsgLicenseActive": "Licencja aktywna – {type}",
+  "@licenseMsgLicenseActive": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "licenseMsgUnableToActivateKey": "Nie można aktywować tego klucza licencyjnego.",
+  "licenseMsgNoLongerValid": "Licencja jest już nieważna.",
+  "licenseMsgUnableToVerify": "Nie można zweryfikować tego klucza licencyjnego. Skontaktuj się z pomocą techniczną.",
+  "trialStartedSnackbar": "Okres próbny rozpoczęty!",
+  "trialStartedMessage": "Ciesz się 14 dniami pełnego dostępu",
+  "windowTitle": "PupilMetrics",
+  "themeMode": "ThemeMode",
+  "methods": "METODY",
+  "setAsFrameless": "setAsFrameless",
+  "isPreventCloseSetPreventClose": "isPreventClose / setPreventClose",
+  "focusBlur": "focus / blur",
+  "showHide": "show / hide",
+  "isVisible": "isVisible",
+  "isMaximized": "isMaximized",
+  "maximizeUnmaximize": "maximize / unmaximize",
+  "isMinimized": "isMinimized",
+  "minimizeRestore": "minimize / restore",
+  "dockUndock": "dock / undock",
+  "dockLeft": "dock left",
+  "dockRight": "dock right",
+  "undock": "undock",
+  "isFullScreenSetFullScreen": "isFullScreen / setFullScreen",
+  "setAspectRatio": "setAspectRatio",
+  "reset": "reset",
+  "setBackgroundColor": "setBackgroundColor",
+  "transparent": "transparent",
+  "red": "red",
+  "green": "green",
+  "blue": "blue",
+  "setBoundsGetBounds": "setBounds / getBounds",
+  "setAlignment": "setAlignment",
+  "topLeft": "topLeft",
+  "topCenter": "topCenter",
+  "topRight": "topRight",
+  "centerLeft": "centerLeft",
+  "centerRight": "centerRight",
+  "bottomLeft": "bottomLeft",
+  "bottomCenter": "bottomCenter",
+  "bottomRight": "bottomRight",
+  "getPositionSetPosition": "getPosition / setPosition",
+  "getSizeSetSize": "getSize / setSize",
+  "set": "Ustaw",
+  "getMinimumSizeSetMinimumSize": "getMinimumSize / setMinimumSize",
+  "getMaximumSizeSetMaximumSize": "getMaximumSize / setMaximumSize",
+  "isResizableSetResizable": "isResizable / setResizable",
+  "isMovableSetMovable": "isMovable / setMovable",
+  "isMinimizableSetMinimizable": "isMinimizable / setMinimizable",
+  "isMaximizableSetMaximizable": "isMaximizable / setMaximizable",
+  "isClosableSetClosable": "isClosable / setClosable",
+  "isAlwaysOnTopSetAlwaysOnTop": "isAlwaysOnTop / setAlwaysOnTop",
+  "isAlwaysOnBottomSetAlwaysOnBottom": "isAlwaysOnBottom / setAlwaysOnBottom",
+  "getTitleSetTitle": "getTitle / setTitle",
+  "setTitleBarStyle": "setTitleBarStyle",
+  "hidden": "hidden",
+  "getTitleBarHeight": "getTitleBarHeight",
+  "isSkipTaskbar": "isSkipTaskbar",
+  "setSkipTaskbar": "setSkipTaskbar",
+  "setProgressBar": "setProgressBar",
+  "setIcon": "setIcon",
+  "defaultIcon": "Domyślna",
+  "original": "Oryginalna",
+  "isVisibleOnAllWorkspacesSetVisibleOnAllWorkspaces": "isVisibleOnAllWorkspaces / setVisibleOnAllWorkspaces",
+  "setBadgeLabel": "setBadgeLabel",
+  "hasShadowSetHasShadow": "hasShadow / setHasShadow",
+  "getOpacitySetOpacity": "getOpacity / setOpacity",
+  "setIgnoreMouseEvents": "setIgnoreMouseEvents",
+  "popUpWindowMenu": "popUpWindowMenu",
+  "grabKeyboard": "grabKeyboard",
+  "ungrabKeyboard": "ungrabKeyboard",
+  "dragToMoveArea": "DragToMoveArea",
+  "dragToResizeArea": "DragToResizeArea",
+  "dragToResizeAreaExample": "Przykład DragToResizeArea",
+  "closeWindowConfirmation": "Czy na pewno chcesz zamknąć to okno?",
+  "licenseChecking": "Sprawdzanie licencji...",
+  "licenseRequiredTitle": "Wymagana licencja",
+  "licenseActivateValidMessage": "Proszę aktywować prawidłową licencję, aby kontynuować.",
+  "licenseProIncludes": "PupilMetrics Pro zawiera:",
+  "licenseFeatureUnlimitedAnalysis": "Nieograniczona analiza źrenicy i kryzy",
+  "licenseFeaturePdfReports": "Generowanie raportów PDF",
+  "licenseFeatureBilateralComparison": "Porównanie obustronne",
+  "licenseFeatureAnwAnalysis": "Analiza kryzy ANW",
+  "licenseFeatureScanHistory": "Baza danych historii skanów",
+  "licenseFeatureUpdates": "Bezpłatne aktualizacje przez 1 rok",
+  "licensePurchase": "Kup licencję",
+  "licenseExitApplication": "Zamknij aplikację",
+  "windowCompactView": "Widok kompaktowy",
+  "windowExpandedView": "Widok rozszerzony",
+  "licenseStatusTrialDaysLeft": "Okres próbny (pozostało {count} dni)",
+  "@licenseStatusTrialDaysLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseNotLicensed": "Bez licencji",
+  "licenseStatusTitle": "Status licencji",
+  "unknown": "Nieznany",
+  "plrReportTitle": "Raport analizy PLR",
+  "plrResearchOnlyTitle": "WYŁĄCZNIE NARZĘDZIE BADAWCZO-DYDAKTYCZNE",
+  "plrResearchDisclaimer": "Wyniki NIE są diagnozami medycznymi. Skonsultuj się z pracownikiem ochrony zdrowia.",
+  "plrNameLabel": "Nazwisko",
+  "plrAgeYears": "Wiek: {age} lat",
+  "@plrAgeYears": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "plrTestLabel": "Test",
+  "plrSummaryTitle": "Podsumowanie PLR",
+  "plrGradeValue": "Ocena {grade}",
+  "@plrGradeValue": {
+    "placeholders": {
+      "grade": {
+        "type": "String"
+      }
+    }
+  },
+  "plrStatusLabel": "Status",
+  "plrDetectedStatus": "PLR WYKRYTY",
+  "plrWeakNotDetectedStatus": "SŁABY/NIEWYKRYTY",
+  "plrRecoveryTimeLabel": "Czas powrotu",
+  "plrRecoveryRatioLabel": "Wskaźnik powrotu",
+  "plrChartDescription": "Wizualna reprezentacja odpowiedzi źrenicy w czasie",
+  "plrPiRange": "Zakres P/I: {min}% – {max}%",
+  "@plrPiRange": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "plrMinValue": "Min: {value}%",
+  "@plrMinValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "plrFrameDataTitle": "Dane klatek",
+  "plrTableTime": "Czas",
+  "plrTablePiPercent": "P/I %",
+  "plrTablePhase": "Faza",
+  "plrTableConfidenceShort": "Pewn.",
+  "plrSuccessfulFailed": "Pomyślne: {success} | Nieudane: {fail}",
+  "@plrSuccessfulFailed": {
+    "placeholders": {
+      "success": {
+        "type": "int"
+      },
+      "fail": {
+        "type": "int"
+      }
+    }
+  },
+  "plrReferenceLatencyLine": "• Latencja: 200–500 ms (czas do początkowej odpowiedzi)",
+  "plrReferenceConstrictionLine": "• Zwężenie: 10–30% redukcji od wartości bazowej",
+  "plrReferenceVelocityLine": "• Prędkość: 1,5–4,0%/sekundę",
+  "plrReferenceRecoveryLine": "• Powrót: >75% powrotu do wartości bazowej w ciągu 5 sekund",
+  "plrReferenceRecoveryLineShort": "• Powrót: >75% do wartości bazowej w ciągu 5 s",
+  "plrShareSubject": "Raport analizy PLR – {eye}",
+  "@plrShareSubject": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "plrTextReportTitle": "RAPORT ANALIZY PLR VIDEO",
+  "plrTextDisclaimerTitle": "ZASTRZEŻENIE: Wyłącznie narzędzie badawczo-dydaktyczne",
+  "plrTextDisclaimerBody": "Wyniki NIE są diagnozami medycznymi.",
+  "plrOverallGradeLabel": "Ocena ogólna",
+  "plrEndOfReport": "KONIEC RAPORTU",
+  "zoneOverlay": "Nakładka strefowa",
+  "@zoneOverlay": {
+    "description": "Zone overlay / analysis: Zone Overlay"
+  },
+  "tipDragImage": "Wskazówka: przeciągnij obraz, aby wyrównać rąbek z okręgami nakładki.",
+  "@tipDragImage": {
+    "description": "Zone overlay / analysis: Tip: drag image to align limbus with overlay circl"
+  },
+  "overlayMetrics": "Metryki nakładki",
+  "@overlayMetrics": {
+    "description": "Zone overlay / analysis: Overlay Metrics"
+  },
+  "piRatioLabel": "Stosunek P/I:",
+  "@piRatioLabel": {
+    "description": "Zone overlay / analysis: P/I Ratio:"
+  },
+  "ellipsenessLabel": "Eliptyczność:",
+  "@ellipsenessLabel": {
+    "description": "Zone overlay / analysis: Ellipseness:"
+  },
+  "decentralizationLabel": "Decentracja:",
+  "@decentralizationLabel": {
+    "description": "Zone overlay / analysis: Decentralization:"
+  },
+  "detectedFindings": "Wykryte wyniki",
+  "@detectedFindings": {
+    "description": "Zone overlay / analysis: Detected findings"
+  },
+  "anwCollarette": "ANW / KRYZA",
+  "@anwCollarette": {
+    "description": "Zone overlay / analysis: ANW / COLLARETTE"
+  },
+  "observerNotes": "Notatki obserwatora",
+  "@observerNotes": {
+    "description": "Zone overlay / analysis: Observer notes"
+  },
+  "observerNotesHint": "Wprowadź obserwacje kliniczne, wyniki stref, wzorce…",
+  "@observerNotesHint": {
+    "description": "Zone overlay / analysis: Enter clinical observations, zone findings, patter"
+  },
+  "autoCenter": "Auto-wyśrodkowanie",
+  "@autoCenter": {
+    "description": "Zone overlay / analysis: Auto-center"
+  },
+  "anwRing": "Pierścień ANW",
+  "@anwRing": {
+    "description": "Zone overlay / analysis: ANW Ring"
+  },
+  "axisGrid": "Oś/siatka",
+  "@axisGrid": {
+    "description": "Zone overlay / analysis: Axis/Grid"
+  },
+  "chart": "Wykres",
+  "@chart": {
+    "description": "Zone overlay / analysis: Chart"
+  },
+  "hoverToIdentify": "Najedź lub dotknij strefę, aby zidentyfikować",
+  "@hoverToIdentify": {
+    "description": "Zone overlay / analysis: Hover or tap a zone to identify"
+  },
+  "organsMode": "Tryb narządów — najedź na tęczówkę, aby zidentyfikować strefy",
+  "@organsMode": {
+    "description": "Zone overlay / analysis: Organs mode — hover iris to identify zones"
+  },
+  "mildSizeDiff": "Łagodna różnica wielkości. Może być fizjologiczna.",
+  "@mildSizeDiff": {
+    "description": "Zone overlay / analysis: Mild size difference. May be physiological variati"
+  },
+  "withinBaseline": "W granicach wartości badawczej dla wieku {age} ({group})",
+  "@withinBaseline": {
+    "description": "Zone overlay / analysis: Within research baseline for age {age} ({group})"
+  },
+  "formLabel": "Forma:",
+  "@formLabel": {
+    "description": "Zone overlay / analysis: Form:"
+  },
+  "flatteningLabel": "Spłaszczenie:",
+  "@flatteningLabel": {
+    "description": "Zone overlay / analysis: Flattening:"
+  },
+  "protrusionLabel": "Wypuklenie:",
+  "@protrusionLabel": {
+    "description": "Zone overlay / analysis: Protrusion:"
+  },
+  "decentrationLabel": "Decentracja:",
+  "@decentrationLabel": {
+    "description": "Zone overlay / analysis: Decentration:"
+  },
+  "pupilSizeLabel": "Rozmiar źrenicy:",
+  "@pupilSizeLabel": {
+    "description": "Zone overlay / analysis: Pupil size:"
+  },
+  "anwRatioLabel": "Stosunek ANW:",
+  "@anwRatioLabel": {
+    "description": "Zone overlay / analysis: ANW ratio:"
+  },
+  "anwToneLabel": "Napięcie ANW:",
+  "@anwToneLabel": {
+    "description": "Zone overlay / analysis: ANW tone:"
+  },
+  "noMajorODAnomalies": "Brak znaczących anomalii źrenicy OD.",
+  "@noMajorODAnomalies": {
+    "description": "Zone overlay / analysis: No major OD pupil anomalies."
+  },
+  "noMajorOSAnomalies": "Brak znaczących anomalii źrenicy OS.",
+  "@noMajorOSAnomalies": {
+    "description": "Zone overlay / analysis: No major OS pupil anomalies."
+  },
+  "anwNotAssessed": "ANW: nieoceniany",
+  "@anwNotAssessed": {
+    "description": "Zone overlay / analysis: ANW: not assessed"
+  },
+  "manualAlignmentAid": "Pomocnicze ręczne wyrównanie wyłącznie do przeglądu (po przechwyceniu). Przeciągnij obraz lub użyj Auto-wyśrodkowania.",
+  "@manualAlignmentAid": {
+    "description": "Zone overlay / analysis: Manual alignment aid for review only (post-capture"
+  },
+  "frontalShift": "S: Wzorzec przesunięcia czołowego.",
+  "@frontalShift": {
+    "description": "Zone overlay / analysis: S: Frontal shift."
+  },
+  "cerebralCirculation": "Historyczne badania według Velchowera wiązały to z wzorcami krążenia mózgowego.",
+  "@cerebralCirculation": {
+    "description": "Zone overlay / analysis: Cerebral circulation patterns."
+  },
+  "middleTemporalShift": "D: Wzorzec przesunięcia środkowo-skroniowego.",
+  "@middleTemporalShift": {
+    "description": "Zone overlay / analysis: D: Middle-temporal shift."
+  },
+  "respiratoryCardiac": "Historyczne badania według Velchowera wiązały to z wzorcami autonomicznymi oddechowymi i sercowymi.",
+  "@respiratoryCardiac": {
+    "description": "Zone overlay / analysis: Respiratory and cardiac autonomic patterns."
+  },
+  "findings": "Wyniki:",
+  "@findings": {
+    "description": "Zone overlay / analysis: Findings:"
+  },
+  "analysisReportTitle": "Raport analizy źrenicy",
+  "reportResearchVersion": "Wersja badawcza",
+  "reportDisclaimerTitle": "ZASTRZEŻENIE: Wyłącznie narzędzie badawczo-dydaktyczne",
+  "reportDisclaimerBody": "Wyniki są obserwacjami badawczymi, NIE diagnozami medycznymi.",
+  "reportPersonInformationTitle": "Dane osoby",
+  "reportAgeGroupLabel": "Grupa wiekowa",
+  "reportPupilSizeComparisonTitle": "Porównanie rozmiaru źrenic",
+  "reportCaptureDistanceMetricsTitle": "Metryki odległości przechwytywania",
+  "reportResearchObservationsTitle": "Obserwacje badawcze",
+  "reportObserverNotesZoneOverlayTitle": "Notatki obserwatora (nakładka strefowa)",
+  "reportEndOfReport": "KONIEC RAPORTU",
+  "reportGradeLabel": "Ocena",
+  "reportPupilFormTitle": "Kształt źrenicy",
+  "reportDecentrationTitle": "Decentracja",
+  "reportFlatteningsTitle": "Spłaszczenia",
+  "reportProtrusionsTitle": "Wypuklenia",
+  "reportAnwParametersTitle": "Kryza autonomiczna (ANW)",
+  "reportTonicStateLabel": "Historyczny wzorzec napięcia",
+  "reportShiftDetectedTitle": "Historyczny wzorzec przesunięcia",
+  "reportClinicalLabel": "Uwaga historyczna",
+  "reportConstrictionDetectedTitle": "Wykryto zwężenie",
+  "reportSeverityLabel": "Nasilenie",
+  "reportReferenceValuesTitle": "Wartości referencyjne (Protokół badawczy CNRI)",
+  "reportMatchLabel": "Dopasowanie",
+  "reportValueLabel": "Wartość",
+  "reportNormalPupilForm": "Prawidłowy kształt źrenicy",
+  "reportPageXofY": "Strona {page}/{total}",
+  "@reportPageXofY": {
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "reportShareSubject": "Raport analizy źrenicy – {patientName}",
+  "@reportShareSubject": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      }
+    }
+  },
+  "reportShareBody": "W załączeniu raport analizy źrenicy dla {patientName}, wygenerowany dnia {date}.",
+  "@reportShareBody": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "belowBaseline": "Poniżej wartości badawczej dla wieku {age} ({group})",
+  "@belowBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "aboveBaseline": "Powyżej wartości badawczej dla wieku {age} ({group})",
+  "@aboveBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "ageGroupInfant": "Niemowlę",
+  "@ageGroupInfant": {
+    "description": "Localized age group label"
+  },
+  "ageGroupChild15": "Dziecko (1–5)",
+  "@ageGroupChild15": {
+    "description": "Localized age group label"
+  },
+  "ageGroupChild611": "Dziecko (6–11)",
+  "@ageGroupChild611": {
+    "description": "Localized age group label"
+  },
+  "ageGroupTeen": "Nastolatek",
+  "@ageGroupTeen": {
+    "description": "Localized age group label"
+  },
+  "ageGroupAdult2039": "Dorosły (20–39)",
+  "@ageGroupAdult2039": {
+    "description": "Localized age group label"
+  },
+  "ageGroupAdult4059": "Dorosły (40–59)",
+  "@ageGroupAdult4059": {
+    "description": "Localized age group label"
+  },
+  "ageGroupSenior60Plus": "Senior (60+)",
+  "@ageGroupSenior60Plus": {
+    "description": "Localized age group label"
+  },
+  "middleNasalShift": "Wzorzec przesunięcia środkowo-nosowego.",
+  "upperTemporalShift": "Wzorzec przesunięcia górno-skroniowego.",
+  "lowerTemporalShift": "Wzorzec przesunięcia dolno-skroniowego.",
+  "basalShift": "Wzorzec przesunięcia podstawnego.",
+  "vagusStellateAssociation": "Historyczne badania według Velchowera wiązały to z wzorcami hipofunkcji nerwu błędnego lub zwoju gwiaździstego.",
+  "venaCavaInferiorAssociation": "Historyczne badania według Velchowera wiązały to z wzorcami zaburzeń hemodynamicznych w żyle głównej dolnej.",
+  "vertebralArteryAssociation": "Historyczne badania według Velchowera wiązały to z wzorcami krążenia w tętnicy kręgowej.",
+  "smallPelvisAssociation": "Historyczne badania według Velchowera wiązały to z wzorcami zastoinowymi w małej miednicy.",
+  "openZoneOverlay": "Otwórz nakładkę strefową",
+  "iris": "Tęczówka",
+  "chartOpacity": "Przezroczystość wykresu",
+  "irisSizeNotAvailable": "Dane rozmiaru tęczówki niedostępne",
+  "ratio": "Stosunek",
+  "reportRefPiRatio": "Stosunek źrenica/tęczówka: Norma 20–30%",
+  "reportRefEllipseness": "Eliptyczność: Norma >95%",
+  "reportRefDecentralization": "Decentracja: Norma <5%",
+  "reportRefPupilSizeDiff": "Różnica rozmiaru źrenic: <2% norma, 2–4% łagodna, >4% znacząca",
+  "enterPatientInfoAnalysis": "Wprowadź dane pacjenta → Analiza",
+  "chooseCaptureMethod": "Wybierz metodę przechwytywania:",
+  "usbCamera": "Kamera USB",
+  "selectExistingImage": "Wybierz istniejący obraz",
+  "detectingCameras": "Wykrywanie kamer...",
+  "retryDetection": "Ponów wykrywanie",
+  "connectUvcCameraViaUsb": "Podłącz kamerę UVC przez USB",
+  "ensureCameraDriversInstalled": "Upewnij się, że sterowniki kamery są zainstalowane",
+  "tapRefreshToDetect": "Dotknij Odśwież, aby wykryć kamery",
+  "connectUsbCameraToBegin": "Podłącz kamerę USB, aby rozpocząć",
+  "noExternalCameraTitle": "Nie wykryto zewnętrznej kamery",
+  "connectUsbIriscopeEnsurePlugged": "Podłącz iryskop USB i upewnij się, że jest podłączony",
+  "languagesAvailable": "Dostępne języki",
+  "validationChecks": "Kontrole walidacji:",
+  "eyeQualityTip": "Wskazówka: Zapewnij dobre oświetlenie i trzymaj oko nieruchomo",
+  "validatingEye": "Weryfikacja oka...",
+  "initializing": "Inicjalizacja...",
+  "nameLabel": "Nazwisko:",
+  "ageLabel": "Wiek:",
+  "typeLabel": "Typ:",
+  "pleaseEnterName": "Proszę podać nazwisko",
+  "pleaseEnterAge": "Proszę podać wiek",
+  "ageMustBe2Digits": "Wiek musi zawierać 1 lub 2 cyfry",
+  "optional": "(Opcjonalne)",
+  "bilateralBothHands": "Oburęczność",
+  "zoom": "Powiększenie",
+  "zoomSliderTip": "Użyj suwaka powiększenia po prawej stronie, aby dostosować powiększenie przed nagrywaniem.",
+  "aboutProgramDeveloper": "Twórca programu – Bryan K. Marcia, Ph.D.",
+  "chartSizeTooltip": "Rozmiar wykresu",
+  "chartOpacityAdvancedTooltip": "Przezroczystość wykresu (0 = tylko po najechaniu / tryb narządów)",
+  "anwLabel": "ANW",
+  "doneAndGoBack": "Gotowe i powrót",
+  "errorImageShape": "Nieprawidłowy kształt obrazu – upewnij się, że oko wypełnia kadr",
+  "cameraConnected": "Kamera podłączona",
+  "cameraDisconnected": "Kamera odłączona",
+  "cameraPermissionDenied": "Odmówiono dostępu do kamery",
+  "cameraFailedInit": "Nie udało się zainicjalizować kamery",
+  "cameraInUse": "Kamera jest używana przez inną aplikację",
+  "cameraFormatNotSupported": "Format kamery nieobsługiwany",
+  "capturedImageNotFound": "Nie znaleziono przechwycone pliku obrazu",
+  "failedToCaptureImage": "Nie udało się przechwycić obrazu",
+  "gradeA": "A",
+  "gradeB": "B",
+  "gradeC": "C",
+  "gradeD": "D",
+  "cameraErrorOccurred": "Wystąpił błąd kamery",
+  "connectingToUsbIriscope": "Łączenie z iryskotem USB...",
+  "noCamerasDetectedMessage": "Nie wykryto kamer. Upewnij się, że kamera USB jest podłączona i rozpoznana przez system.",
+  "failedToAccessCameras": "Nie udało się uzyskać dostępu do kamer"
+}

@@ -245,6 +245,12 @@ class _MyAppState extends State<MyApp> {
             Locale('ja'),
             Locale('ko'),
             Locale('it'),
+            Locale('ru'),
+            Locale('zh'),
+            Locale('ar'),
+            Locale('hi'),
+            Locale('tr'),
+            Locale('pl'),
           ],
           builder: (context, child) {
             final appContent = isDesktopPlatform

@@ -29,11 +29,11 @@ class WindowsTitleBar extends StatelessWidget {
       return const SizedBox.shrink();
     }
 
-    // BULLETPROOF: GetX builder ensures controller exists and rebuilds on changes
-    return GetX<LanguageController>(
-      init: LanguageController(),
-      builder: (controller) {
-        final displayTitle = AppLocalizations.of(context)!.windowTitle;
+    final langController = Get.find<LanguageController>();
+    return Obx(() {
+      // Read observable so Obx rebuilds on locale switch
+      final locale = langController.currentLocale.value;
+      final displayTitle = AppLocalizations.of(context).windowTitle;
 
         return GestureDetector(
           onPanStart: (_) => windowManager.startDragging(),
@@ -79,8 +79,7 @@ class WindowsTitleBar extends StatelessWidget {
             ),
           ),
         );
-      },
-    );
+    });
   }
 
   static Future<void> _openReportsFolder() async {
@@ -508,6 +507,39 @@ class _FlagPainter extends CustomPainter {
         canvas.drawRect(Rect.fromLTWH(w, 0, w, size.height), p);
         p.color = const Color(0xFFCE2B37);
         canvas.drawRect(Rect.fromLTWH(w * 2, 0, w, size.height), p);
+        break;
+      case 'pl': // Poland: white top, red bottom
+        p.color = Colors.white;
+        canvas.drawRect(Rect.fromLTWH(0, 0, size.width, size.height / 2), p);
+        p.color = const Color(0xFFDC143C);
+        canvas.drawRect(Rect.fromLTWH(0, size.height / 2, size.width, size.height / 2), p);
+        break;
+      case 'ar': // Saudi Arabia flag (green + white sword/text simplified as green)
+        p.color = const Color(0xFF006C35);
+        canvas.drawRect(Rect.fromLTWH(0, 0, size.width, size.height), p);
+        p.color = Colors.white;
+        // Simplified white stripe
+        canvas.drawRect(Rect.fromLTWH(size.width * 0.1, size.height * 0.4, size.width * 0.8, size.height * 0.2), p);
+        break;
+      case 'hi': // India flag: saffron / white / green + blue Ashoka chakra
+        final hh = size.height / 3;
+        p.color = const Color(0xFFFF9933);
+        canvas.drawRect(Rect.fromLTWH(0, 0, size.width, hh), p);
+        p.color = Colors.white;
+        canvas.drawRect(Rect.fromLTWH(0, hh, size.width, hh), p);
+        p.color = const Color(0xFF138808);
+        canvas.drawRect(Rect.fromLTWH(0, hh * 2, size.width, hh), p);
+        p.color = const Color(0xFF000080);
+        canvas.drawCircle(Offset(size.width * 0.5, size.height * 0.5), size.height * 0.13, p..style = PaintingStyle.stroke..strokeWidth = 1.0);
+        p.style = PaintingStyle.fill;
+        break;
+      case 'tr': // Turkey flag: red + white crescent and star
+        p.color = const Color(0xFFE30A17);
+        canvas.drawRect(Rect.fromLTWH(0, 0, size.width, size.height), p);
+        p.color = Colors.white;
+        canvas.drawCircle(Offset(size.width * 0.38, size.height * 0.5), size.height * 0.28, p);
+        p.color = const Color(0xFFE30A17);
+        canvas.drawCircle(Offset(size.width * 0.46, size.height * 0.5), size.height * 0.22, p);
         break;
       default:
         p.color = Colors.grey;
