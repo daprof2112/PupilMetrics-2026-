@@ -1,0 +1,1921 @@
+{
+  "@@locale": "hi",
+  "appTitle": "PupilMetrics",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "analyzeButton": "विश्लेषण करें",
+  "plrModes": "PLR मोड",
+  "captureInstructions": "आँख को गाइड सर्कल के अंदर रखें",
+  "scanHistory": "स्कैन इतिहास",
+  "selectCameraMode": "कैमरा मोड चुनें",
+  "loadFromGallery": "गैलरी से लोड करें",
+  "rightEyePhoto": "दाईं आँख की फोटो",
+  "leftEyePhoto": "बाईं आँख की फोटो",
+  "autoCapture": "स्वतः-कैप्चर",
+  "autoCaptureDesc": "आँख पहचान + 5 सेकंड स्वतः-कैप्चर",
+  "manualCapture": "मैन्युअल कैप्चर",
+  "manualCaptureDesc": "आँख पहचान + मैन्युअल कैप्चर (पिछला कैमरा)",
+  "selfieMode": "सेल्फी मोड",
+  "selfieModeDesc": "आँख पहचान + 5 सेकंड स्वतः-कैप्चर (फ्रंट कैमरा)",
+  "plrVideoRear": "PLR वीडियो (रियर)",
+  "plrVideoRearDesc": "पिछला कैमरा • 10 सेकंड कैप्चर",
+  "plrVideoSelfie": "PLR वीडियो (सेल्फी)",
+  "plrVideoSelfieDesc": "फ्रंट कैमरा • 10 सेकंड कैप्चर",
+  "plrVideoCapture": "PLR वीडियो कैप्चर",
+  "frontCamera": "फ्रंट कैमरा",
+  "rearCamera": "रियर कैमरा",
+  "selectEyeToAssess": "जाँचने के लिए आँख चुनें",
+  "rightEyeOD": "दाईं आँख (OD)",
+  "leftEyeOS": "बाईं आँख (OS)",
+  "recordPlrRightEye": "दाईं आँख के लिए PLR रिकॉर्ड करें",
+  "recordPlrLeftEye": "बाईं आँख के लिए PLR रिकॉर्ड करें",
+  "loadRightEyeImage": "दाईं आँख की छवि लोड करें",
+  "loadLeftEyeImage": "बाईं आँख की छवि लोड करें",
+  "bothEyes": "दोनों आँखें",
+  "loadBothEyesDesc": "पहले दाईं आँख, फिर बाईं आँख लोड करें",
+  "selectEyeImageFromDevice": "अपने डिवाइस से एक आँख की छवि चुनें",
+  "selectRightEyeFirst": "पहले दाईं आँख (OD) की छवि चुनें",
+  "rightEyeSaved": "दाईं आँख सहेजी गई। अब बाईं आँख (OS) की छवि चुनें",
+  "cancelledNoRightEye": "रद्द किया गया - कोई दाईं आँख नहीं चुनी गई",
+  "cancelledNoLeftEye": "रद्द किया गया - कोई बाईं आँख नहीं चुनी गई",
+  "errorLoadingImages": "छवियाँ लोड करने में त्रुटि: {error}",
+  "@errorLoadingImages": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "crop43": "क्रॉप (4:3)",
+  "success": "सफलता",
+  "imageCroppedSuccess": "छवि सफलतापूर्वक क्रॉप की गई!",
+  "error": "त्रुटि",
+  "cropFailed": "छवि क्रॉप करने में विफल। कृपया पुनः प्रयास करें।",
+  "crop": "क्रॉप",
+  "cancel": "रद्द करें",
+  "saved": "सहेजा गया! ✅",
+  "imageSavedToGallery": "छवि गैलरी में सफलतापूर्वक सहेजी गई",
+  "exposure": "एक्सपोजर",
+  "flash": "फ्लैश",
+  "eye": "आँख",
+  "center": "केंद्र",
+  "light": "प्रकाश",
+  "ready": "तैयार",
+  "on": "चालू",
+  "off": "बंद",
+  "auto": "स्वतः",
+  "manual": "मैन्युअल",
+  "selfie": "सेल्फी",
+  "pupil": "पुतली",
+  "plrHistory": "PLR इतिहास",
+  "searchByName": "नाम से खोजें...",
+  "totalScans": "कुल स्कैन",
+  "thisWeek": "इस सप्ताह",
+  "patients": "मरीज़",
+  "detected": "पता चला",
+  "noPlrRecordsYet": "अभी तक कोई PLR रिकॉर्ड नहीं",
+  "recordPlrVideoToSeeHistory": "इतिहास देखने के लिए PLR वीडियो रिकॉर्ड करें",
+  "deleteRecord": "रिकॉर्ड हटाएं?",
+  "deleteRecordConfirm": "{name} ({eye}) का PLR विश्लेषण हटाएं?\\n\\nयह पूर्ववत नहीं किया जा सकता।",
+  "@deleteRecordConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "delete": "हटाएं",
+  "recordDeleted": "रिकॉर्ड हटाया गया",
+  "plrAnalysis": "PLR विश्लेषण - {eye}",
+  "@plrAnalysis": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "patient": "मरीज़",
+  "date": "तारीख",
+  "frames": "फ्रेम",
+  "baselinePiRatio": "आधारभूत P/I",
+  "minPiRatio": "न्यूनतम P/I",
+  "plrMagnitude": "PLR परिमाण",
+  "constriction": "संकुचन",
+  "plrDetected": "PLR पता चला",
+  "confidence": "विश्वसनीयता",
+  "grade": "श्रेणी",
+  "close": "बंद करें",
+  "yes": "हाँ",
+  "no": "नहीं",
+  "na": "N/A",
+  "takeLeftEyePhoto": "बाईं आँख की फोटो लें",
+  "takeRightEyePhoto": "दाईं आँख की फोटो लें",
+  "nowTakingLeftEye": "अब बाईं आँख (OS) ली जा रही है",
+  "startingWithRightEye": "दाईं आँख (OD) से शुरू हो रहे हैं",
+  "captured": "कैप्चर किया ✓",
+  "useSameDistanceLighting": "सटीक तुलना के लिए दाईं आँख जैसी दूरी और रोशनी का उपयोग करें।",
+  "step1of2": "चरण 1 / 2",
+  "step2of2": "चरण 2 / 2",
+  "bothEyesCaptured": "दोनों आँखें कैप्चर की गईं ✓",
+  "continueToLeftEye": "बाईं आँख की ओर जारी रखें",
+  "retakeOD": "OD पुनः लें",
+  "retakeOS": "OS पुनः लें",
+  "retakeRightEye": "दाईं आँख पुनः लें",
+  "analyzeBothEyes": "दोनों आँखों का विश्लेषण करें",
+  "patientInfoMissing": "मरीज़ की जानकारी अनुपलब्ध",
+  "rightEyePhotoMissing": "दाईं आँख की फोटो अनुपलब्ध!",
+  "patientInfoMissingRestart": "मरीज़ की जानकारी अनुपलब्ध। कृपया पुनः आरंभ करें।",
+  "exitApp": "ऐप बंद करें",
+  "tipsForBestResults": "सर्वोत्तम परिणामों के लिए सुझाव",
+  "followGuidelinesForQuality": "इष्टतम छवि गुणवत्ता के लिए इन दिशानिर्देशों का पालन करें",
+  "cameraDistance": "कैमरा दूरी",
+  "cameraDistanceDesc": "कैमरे को आँख से 4-6 इंच दूर रखें। दोनों आँखों के लिए समान दूरी बनाए रखें।",
+  "lightingPosition": "रोशनी की स्थिति",
+  "lightingPositionDesc": "प्रकाश स्रोत को पुतली की सीमाओं के अंदर या बाहर रखें। कैमरे के फ्लैश की ओर देखने का प्रयास करें।",
+  "avoidReflections": "प्रतिबिंबों से बचें",
+  "avoidReflectionsDesc": "खिड़की की चमक, दर्पण और सीधी लैंप से बचकर प्रतिबिंब कम करें।",
+  "centerYourEye": "आँख को केंद्रित करें",
+  "centerYourEyeDesc": "सुनिश्चित करें कि श्वेतपटल (सफेद भाग) सहित पूरी आँख केंद्रित हो और फ्रेम भर जाए।",
+  "cropProperly": "सही तरह से क्रॉप करें",
+  "cropProperlyDesc": "आँख को केंद्र में रखकर छवि क्रॉप करें। छवि 4:3 अनुपात में स्वतः सहेजी जाएगी।",
+  "importantInformation": "महत्वपूर्ण जानकारी",
+  "imageRatio43": "चिकित्सा इमेजिंग मानक के लिए 4:3 छवि अनुपात",
+  "forClinicalUseCnri": "CNRI (cnri.edu) के साथ नैदानिक उपयोग के लिए",
+  "noMedicalDiagnosis": "कोई चिकित्सीय निदान प्रदान नहीं करता",
+  "eyeWideOpenClear": "सुनिश्चित करें कि आपकी आँख पूरी तरह खुली हो और तस्वीर स्पष्ट हो",
+  "personalInfo": "व्यक्तिगत जानकारी",
+  "personInformation": "व्यक्ति की जानकारी",
+  "enterPersonDetails": "व्यक्ति का विवरण दर्ज करें",
+  "infoIncludedInReport": "यह जानकारी विश्लेषण रिपोर्ट में शामिल की जाएगी",
+  "fullName": "पूरा नाम",
+  "enterPersonName": "व्यक्ति का नाम दर्ज करें",
+  "nameRequired": "नाम आवश्यक है",
+  "sex": "लिंग",
+  "male": "पुरुष",
+  "female": "महिला",
+  "ageYears": "उम्र (वर्ष)",
+  "enterAge": "उम्र दर्ज करें",
+  "ageRequired": "उम्र आवश्यक है",
+  "enterValidNumber": "एक वैध संख्या दर्ज करें",
+  "enterValidAge": "एक वैध उम्र दर्ज करें (0-120)",
+  "mainComplaints": "मुख्य शिकायतें",
+  "mainComplaintsOptional": "मुख्य शिकायतें (वैकल्पिक)",
+  "complaintsHint": "जैसे, सिरदर्द, दृष्टि समस्याएं, थकान...",
+  "continueToCaptire": "कैप्चर की ओर जारी रखें",
+  "ageImportantNote": "पुतली के आकार के सटीक मूल्यांकन के लिए उम्र महत्वपूर्ण है क्योंकि सामान्य सीमाएं उम्र के अनुसार बदलती हैं।",
+  "submit": "सबमिट करें",
+  "pleaseSelectGender": "कृपया लिंग चुनें!",
+  "applicationSubmitted": "आपका आवेदन सफलतापूर्वक सबमिट किया गया।",
+  "type": "प्रकार:",
+  "gender": "लिंग:",
+  "rightHanded": "दाहिने हाथ का",
+  "leftHanded": "बाएं हाथ का",
+  "partialLeftHandedness": "आंशिक बाएं हाथ का उपयोग",
+  "retrainedLeftHandedness": "पुनः प्रशिक्षित बाएं हाथ का उपयोग",
+  "bilateralUseBothHands": "दोनों हाथों का द्विपक्षीय उपयोग",
+  "splashTitle": "PupilMetrics Eye Capture",
+  "splashDeveloper": "प्रोग्राम डेवलपर - Bryan K. Marcia, Ph.D.",
+  "researchEducationalTool": "शोध/शैक्षणिक उपकरण",
+  "startNewAnalysis": "नया विश्लेषण शुरू करें",
+  "viewHistory": "इतिहास देखें",
+  "viewResearchDisclaimer": "शोध अस्वीकरण देखें",
+  "researchDisclaimerTitle": "शोध/शैक्षणिक उपकरण",
+  "researchDisclaimerNotMedical": "चिकित्सा उपकरण नहीं है",
+  "researchDisclaimerNotClinical": "नैदानिक निदान के लिए नहीं",
+  "researchDisclaimerResults": "परिणाम शोध अवलोकन हैं",
+  "researchDisclaimerConsult": "हमेशा स्वास्थ्य पेशेवरों से परामर्श करें",
+  "researchDisclaimerAcknowledge": "जारी रखकर, आप स्वीकार करते हैं कि यह एक शोध उपकरण है और इसे चिकित्सीय निर्णयों के लिए उपयोग नहीं किया जाना चाहिए।",
+  "researchDisclaimerWarning": "यह ऐप केवल शोध और शैक्षणिक उद्देश्यों के लिए है।",
+  "iUnderstand": "मैं समझता/समझती हूँ",
+  "plrAnalysisTest": "PLR विश्लेषण परीक्षण",
+  "checkingVideoFile": "वीडियो फ़ाइल की जाँच हो रही है...",
+  "processingFrame": "फ्रेम {current}/{total} ({timestamp}ms) प्रोसेस हो रहा है...",
+  "@processingFrame": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "timestamp": {
+        "type": "int"
+      }
+    }
+  },
+  "analysisComplete": "विश्लेषण पूरा हुआ!",
+  "errorVideoNotFound": "त्रुटि: वीडियो फ़ाइल नहीं मिली",
+  "waitingForResults": "परिणामों की प्रतीक्षा हो रही है...",
+  "baseline": "आधारभूत",
+  "flashPhase": "फ्लैश",
+  "constrictionPhase": "संकुचन",
+  "recovery": "पुनर्प्राप्ति",
+  "plrDetectedExclaim": "PLR पता चला!",
+  "plrWeakNotDetected": "PLR कमज़ोर/पता नहीं चला",
+  "min": "न्यूनतम",
+  "plr": "PLR",
+  "constrLabel": "संकुचन",
+  "saveToHistory": "इतिहास में सहेजें",
+  "txt": "TXT",
+  "json": "JSON",
+  "saveFrames": "फ्रेम सहेजें",
+  "share": "शेयर करें",
+  "frameSavedToGallery": "फ्रेम गैलरी में सहेजा गया!",
+  "failedToSaveFrame": "फ्रेम सहेजने में विफल",
+  "framesSavedToGallery": "{count} फ्रेम गैलरी में सहेजे गए!",
+  "@framesSavedToGallery": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "jsonCopiedToClipboard": "JSON क्लिपबोर्ड में कॉपी किया गया!",
+  "reportCopiedToClipboard": "रिपोर्ट क्लिपबोर्ड में कॉपी की गई!",
+  "shareFailedError": "शेयर विफल: {error}",
+  "@shareFailedError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "savedToHistoryId": "इतिहास में सहेजा गया! (ID: {id})",
+  "@savedToHistoryId": {
+    "placeholders": {
+      "id": {
+        "type": "int"
+      }
+    }
+  },
+  "failedToSave": "सहेजने में विफल: {error}",
+  "@failedToSave": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noSuccessfulFramesToSave": "सहेजने के लिए कोई सफल फ्रेम नहीं",
+  "saveAllFrames": "सभी फ्रेम सहेजें",
+  "shareReport": "रिपोर्ट शेयर करें",
+  "shareJson": "JSON शेयर करें",
+  "rerunTest": "परीक्षण फिर से चलाएं",
+  "videoCaptureTitle": "PLR - {eye}",
+  "@videoCaptureTitle": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "initializingCamera": "कैमरा प्रारंभ हो रहा है...",
+  "usingCamera": "{camera} कैमरा उपयोग में है",
+  "@usingCamera": {
+    "placeholders": {
+      "camera": {
+        "type": "String"
+      }
+    }
+  },
+  "cameraError": "कैमरा त्रुटि: {error}",
+  "@cameraError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noCamerasFound": "कोई कैमरा नहीं मिला",
+  "retry": "पुनः प्रयास करें",
+  "startPlrRecording": "PLR रिकॉर्डिंग शुरू करें",
+  "stopRecording": "रिकॉर्डिंग रोकें",
+  "phaseReady": "तैयार",
+  "phaseStarting": "शुरू हो रहा है...",
+  "phaseBaseline": "आधारभूत (0-{sec} सेकंड)",
+  "@phaseBaseline": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseFlash": "फ्लैश!",
+  "phaseConstriction": "संकुचन ({start}-{end} सेकंड)",
+  "@phaseConstriction": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseRecovery": "पुनर्प्राप्ति ({start}-{end} सेकंड)",
+  "@phaseRecovery": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseComplete": "पूर्ण!",
+  "readyDesc": "आँख को सर्कल में रखें, फिर स्टार्ट दबाएं",
+  "holdSteady": "स्थिर रहें...",
+  "recordingBaselinePupil": "आधारभूत पुतली का आकार रिकॉर्ड हो रहा है",
+  "lightStimulus": "प्रकाश उत्तेजना ({ms}ms)",
+  "@lightStimulus": {
+    "placeholders": {
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "measuringConstriction": "पुतली संकुचन मापा जा रहा है",
+  "measuringRecovery": "पुतली पुनर्प्राप्ति मापी जा रही है",
+  "plrRecordingComplete": "PLR रिकॉर्डिंग पूरी हुई",
+  "positionEyeInstruction": "{eye} आँख को सर्कल के अंदर रखें।\\n{seconds} सेकंड की रिकॉर्डिंग के दौरान स्थिर रहें।",
+  "@positionEyeInstruction": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      },
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "keepEyeSteadyFlash": "आँख स्थिर रखें। {sec} सेकंड पर फ्लैश होगा।",
+  "@keepEyeSteadyFlash": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "recordingComplete": "रिकॉर्डिंग पूरी हुई",
+  "plrVideoCapturedSuccess": "PLR वीडियो सफलतापूर्वक कैप्चर किया गया!",
+  "duration": "अवधि",
+  "seconds": "सेकंड",
+  "frameRate": "फ्रेम दर",
+  "camera": "कैमरा",
+  "flashAt": "{sec} सेकंड पर ({ms}ms)",
+  "@flashAt": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      },
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "phases": "चरण",
+  "phasesFlow": "आधारभूत → फ्लैश → संकुचन → पुनर्प्राप्ति",
+  "expectedNormalValues": "अपेक्षित सामान्य मान:",
+  "latency": "विलंबता",
+  "velocity": "वेग",
+  "testFrameAnalysis": "🧪 परीक्षण फ्रेम विश्लेषण",
+  "retake": "पुनः लें",
+  "done": "हो गया",
+  "plrVideoModeTitle": "PLR वीडियो मोड",
+  "plrAssessmentTitle": "पुतलीय प्रकाश प्रतिवर्त (PLR) मूल्यांकन",
+  "plrInstructions": "1. आँख को गाइड सर्कल के अंदर रखें\\n2. 'PLR रिकॉर्डिंग शुरू करें' दबाएं\\n3. 10 सेकंड तक स्थिर रहें\\n4. 3 सेकंड पर फ्लैश होगा\\n5. ऐप पुतली की प्रतिक्रिया रिकॉर्ड करता है",
+  "recordingPhases": "रिकॉर्डिंग चरण:",
+  "baselinePhaseDesc": "प्रारंभिक पुतली का आकार",
+  "flashPhaseDesc": "प्रकाश उत्तेजना",
+  "constrictionPhaseDesc": "पुतली सिकुड़ती है",
+  "recoveryPhaseDesc": "पुतली वापस आती है",
+  "normalPlrValues": "सामान्य PLR मान:",
+  "gotIt": "समझ गया",
+  "pupilAnalysis": "पुतली विश्लेषण",
+  "scansLeft": "{count} शेष",
+  "@scansLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "validatingRightEye": "दाईं आँख को मान्य किया जा रहा है...",
+  "validatingLeftEye": "बाईं आँख को मान्य किया जा रहा है...",
+  "analyzingRightEye": "दाईं आँख (OD) का विश्लेषण हो रहा है...",
+  "analyzingLeftEye": "बाईं आँख (OS) का विश्लेषण हो रहा है...",
+  "comparingPupils": "पुतलियों की तुलना हो रही है...",
+  "person": "व्यक्ति: {name}",
+  "@person": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "invalidEyeImage": "अमान्य आँख की छवि",
+  "analysisFailed": "विश्लेषण विफल: {error}",
+  "@analysisFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "researchEducationalToolOnly": "केवल शोध/शैक्षणिक उपकरण",
+  "resultsNotMedicalDiagnoses": "यह एप्लिकेशन केवल शोध और शैक्षणिक उद्देश्यों के लिए है। परिणाम चिकित्सीय निदान नहीं हैं और नैदानिक उपयोग के लिए मान्य नहीं किए गए हैं। पैटर्न संबद्धताएं ऐतिहासिक शोध साहित्य से हैं। किसी भी स्वास्थ्य चिंता के लिए स्वास्थ्य पेशेवर से परामर्श करें।",
+  "pupilSizeDifference": "पुतली के आकार में अंतर पाया गया",
+  "significantPupilSizeDiff": "पुतली के आकार में महत्वपूर्ण अंतर",
+  "diff": "अंतर",
+  "researchObservationConsult": "शोध अवलोकन - व्याख्या के लिए स्वास्थ्य पेशेवर से परामर्श करें",
+  "ageBasedResearchBaseline": "आयु-आधारित शोध आधारभूत",
+  "group": "समूह: {group}",
+  "@group": {
+    "placeholders": {
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "researchRange": "शोध सीमा",
+  "measuredEst": "मापा गया (अनुमानित)",
+  "pupilForm": "पुतली का रूप",
+  "decentrationPattern": "विकेंद्रीकरण पैटर्न",
+  "flattenings": "चपटापन",
+  "protrusions": "उभार",
+  "zonesCount": "{count} क्षेत्र",
+  "@zonesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bilateralComparison": "द्विपक्षीय तुलना",
+  "parameter": "पैरामीटर",
+  "od": "OD",
+  "os": "OS",
+  "piRatio": "P/I अनुपात",
+  "ellipseness": "दीर्घवृत्तता",
+  "circularity": "वृत्ताकारिता",
+  "decentralization": "विकेंद्रीकरण",
+  "anwRatio": "अनुपात",
+  "normal": "सामान्य",
+  "elliptical": "दीर्घवृत्ताकार",
+  "circular": "वृत्ताकार",
+  "irregular": "अनियमित",
+  "centered": "केंद्रित",
+  "offset": "विस्थापन",
+  "miosis": "मायोसिस",
+  "constricted": "संकुचित",
+  "dilated": "फैला हुआ",
+  "mydriasis": "मायड्रियासिस",
+  "inner": "आंतरिक",
+  "outer": "बाहरी",
+  "high": "उच्च",
+  "moderate": "मध्यम",
+  "savePdf": "PDF सहेजें",
+  "sharePdf": "PDF शेयर करें",
+  "retakePhotos": "फोटो पुनः लें",
+  "scansLeftBanner": "{count} स्कैन शेष",
+  "@scansLeftBanner": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "upgrade": "अपग्रेड करें",
+  "unlockUnlimited": "असीमित अनलॉक करें",
+  "usedAllFreeScans": "आपने सभी मुफ्त स्कैन उपयोग कर लिए हैं।",
+  "unlimitedScans": "असीमित स्कैन",
+  "pdfReports": "PDF रिपोर्ट",
+  "scanHistoryFeature": "स्कैन इतिहास",
+  "bilateralAnalysis": "द्विपक्षीय विश्लेषण",
+  "monthly": "मासिक",
+  "perMonth": "/माह",
+  "annual": "वार्षिक",
+  "perYear": "/वर्ष",
+  "tenCredits": "10 क्रेडिट",
+  "oneTime": "एकमुश्त",
+  "best": "सर्वोत्तम",
+  "purchaseCancelled": "खरीद रद्द की गई",
+  "purchaseFailed": "खरीद विफल: {error}",
+  "@purchaseFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "txtSaved": "TXT सहेजा गया: {path}",
+  "@txtSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "jsonSaved": "JSON सहेजा गया: {path}",
+  "@jsonSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfSaved": "PDF सहेजी गई!",
+  "pdfFailed": "PDF विफल: {error}",
+  "@pdfFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "open": "खोलें",
+  "failed": "विफल: {error}",
+  "@failed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "staticScans": "स्थैतिक",
+  "plrScans": "PLR",
+  "searchByNameOrComplaints": "नाम या शिकायतों से खोजें...",
+  "searchPlrRecords": "PLR रिकॉर्ड खोजें...",
+  "noScansYet": "अभी तक कोई स्कैन नहीं",
+  "completedScansAppearHere": "पूर्ण स्कैन यहाँ दिखाई देंगे",
+  "deleteScan": "स्कैन हटाएं?",
+  "deleteScanConfirm": "{name} का {date} का स्कैन हटाएं?",
+  "@deleteScanConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "scanDeleted": "स्कैन हटाया गया",
+  "originalImagesNotFound": "मूल आँख की छवियाँ नहीं मिलीं।",
+  "viewResults": "परिणाम देखें",
+  "avgPlr": "औसत PLR",
+  "years": "वर्ष",
+  "anisocoria": "एनीसोकोरिया",
+  "none": "कोई नहीं",
+  "mild": "हल्का",
+  "severe": "गंभीर",
+  "zoneLabel": "क्षेत्र: {zone}",
+  "@zoneLabel": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "associatedWith": "{organ} से संबद्ध",
+  "@associatedWith": {
+    "placeholders": {
+      "organ": {
+        "type": "String"
+      }
+    }
+  },
+  "significant": "महत्वपूर्ण",
+  "fair": "उचित",
+  "low": "निम्न",
+  "good": "अच्छा",
+  "zones": "क्षेत्र",
+  "significanceWithinLimits": "स्वीकार्य सीमाओं के भीतर",
+  "significanceMild": "हल्का",
+  "significanceModerate": "मध्यम",
+  "significanceSignificant": "महत्वपूर्ण",
+  "formTypeCircle": "वृत्त (सामान्य)",
+  "formTypeOval": "अंडाकार",
+  "formTypeOvalVertical": "ऊर्ध्वाधर अंडाकार",
+  "formTypeOvalHorizontal": "क्षैतिज अंडाकार",
+  "formTypeOvalDiagonal": "विकर्ण अंडाकार",
+  "formTypeLeftObliqueEllipse": "बाईं तिरछी दीर्घवृत्त",
+  "formTypeUnilateralEllipse": "एकपक्षीय दीर्घवृत्त",
+  "formTypeVentralDivergingEllipse": "उदर-विचलित दीर्घवृत्त",
+  "formTypeFrontalDivergingEllipse": "अग्र-विचलित दीर्घवृत्त",
+  "formTypeEllipse": "दीर्घवृत्त",
+  "formTypeChord": "जीवा",
+  "formTypeIrregular": "अनियमित",
+  "pupilFormCircleDesc": "सामान्य वृत्ताकार पुतली रूप। कोई पैटर्न विविधता नहीं पाई गई।",
+  "pupilFormOvalHorizontalDesc": "क्षैतिज अंडाकार पैटर्न। ऐतिहासिक शोध ने इसे श्वसन और ग्रंथि संबंधी क्षेत्रों को प्रभावित करने वाले स्वायत्त तंत्रिका तंत्र के पैटर्न से जोड़ा है।",
+  "pupilFormOvalVerticalDesc": "ऊर्ध्वाधर अंडाकार पैटर्न। ऐतिहासिक शोध ने इस पैटर्न को स्वायत्त प्रतिवर्त अध्ययनों में मस्तिष्क परिसंचरण क्षेत्रों से जोड़ा है।",
+  "pupilFormOvalDiagonalDesc": "विकर्ण अंडाकार पैटर्न। शोध साहित्य ने इसे स्वायत्त अध्ययनों में मूत्रजनन क्षेत्र प्रतिवर्त से जोड़ा है।",
+  "pupilFormLeftObliqueEllipseDesc": "बाईं तिरछी दीर्घवृत्त पैटर्न। ऐतिहासिक अवलोकनों ने इसे मूत्रजनन और निचले अंग के स्वायत्त क्षेत्रों से जोड़ा है।",
+  "pupilFormUnilateralEllipseDesc": "एकपक्षीय दीर्घवृत्त पैटर्न। शोध ने श्वसन और ब्रोन्कियल स्वायत्त क्षेत्रों से संबद्धता दर्शाई है।",
+  "pupilFormVentralDivergingEllipseDesc": "उदर-विचलित दीर्घवृत्त। ऐतिहासिक अध्ययनों ने इसे निचले शरीर के स्वायत्त क्षेत्रों और मोटर फंक्शन पैटर्न से जोड़ा है।",
+  "pupilFormFrontalDivergingEllipseDesc": "अग्र-विचलित दीर्घवृत्त। शोध साहित्य ने इस पैटर्न को मस्तिष्क और ऊपरी स्वायत्त क्षेत्रों से जोड़ा है।",
+  "pupilFormOvalDesc": "हल्का अंडाकार विरूपण पैटर्न। शोध अवलोकनों में प्रगति की निगरानी करें।",
+  "pupilFormEllipseDesc": "ऐतिहासिक अध्ययनों में स्वायत्त तंत्रिका तंत्र विविधताओं को दर्शाने वाला दीर्घवृत्ताकार पुतली पैटर्न।",
+  "pupilFormChordDesc": "शोध साहित्य में स्थानीयकृत स्वायत्त प्रभावों को दर्शाने वाला जीवा-जैसा विरूपण पैटर्न।",
+  "pupilFormIrregularDesc": "ऐतिहासिक अवलोकनों के आधार पर कई स्वायत्त पैटर्न प्रभावों को सुझाने वाला अनियमित रूप।",
+  "patternCentered": "केंद्रित (सामान्य)",
+  "patternFrontal": "अग्र विकेंद्रीकरण",
+  "patternBasal": "आधारीय विकेंद्रीकरण",
+  "patternNasal": "नासिका विकेंद्रीकरण",
+  "patternTemporal": "कनपटी विकेंद्रीकरण",
+  "patternMiddleNasal": "मध्य-नासिका विकेंद्रीकरण",
+  "patternMiddleTemporal": "मध्य-कनपटी विकेंद्रीकरण",
+  "patternUpperNasal": "ऊपरी-नासिका विकेंद्रीकरण",
+  "patternUpperTemporal": "ऊपरी-कनपटी विकेंद्रीकरण",
+  "patternLowerNasal": "निचली-नासिका विकेंद्रीकरण",
+  "patternLowerTemporal": "निचली-कनपटी विकेंद्रीकरण",
+  "patternUpwards": "विकेंद्रण - ऊपर की ओर",
+  "patternDownwards": "विकेंद्रण - नीचे की ओर",
+  "patternUpwardsInwards": "विकेंद्रण - ऊपर-अंदर की ओर",
+  "patternUpwardsOutwards": "विकेंद्रण - ऊपर-बाहर की ओर",
+  "decentrationCenteredDesc": "शारीरिक सीमाओं के भीतर सामान्य पुतली स्थिति।",
+  "decentrationNasalRightDesc": "नासिका पैटर्न (दाईं)। ऐतिहासिक शोध ने इस क्षेत्र को फुफ्फुसीय स्वायत्त प्रतिवर्त से जोड़ा है।",
+  "decentrationNasalLeftDesc": "नासिका पैटर्न (बाईं)। शोध साहित्य ने इस क्षेत्र को हृदय स्वायत्त कार्य पैटर्न से जोड़ा है।",
+  "decentrationTemporalDesc": "कनपटी पैटर्न। ऐतिहासिक अवलोकनों ने इस क्षेत्र को वृक्क और प्रजनन स्वायत्त प्रतिवर्त से जोड़ा है।",
+  "decentrationFrontalRightDesc": "अग्र पैटर्न (दाईं)। शोध ने इस क्षेत्र को संज्ञानात्मक और मस्तिष्क कार्य पैटर्न से जोड़ा है।",
+  "decentrationFrontalLeftDesc": "अग्र पैटर्न (बाईं)। ऐतिहासिक अध्ययनों ने इस क्षेत्र को मस्तिष्क स्वायत्त पैटर्न से जोड़ा है।",
+  "decentrationBasalRightDesc": "आधारीय पैटर्न (दाईं)। शोध ने इंट्राक्रानियल दबाव प्रतिवर्त से संबद्धता दर्शाई है।",
+  "decentrationBasalLeftDesc": "आधारीय पैटर्न (बाईं)। ऐतिहासिक अवलोकनों ने इसे मस्तिष्क सूजन क्षेत्र पैटर्न से जोड़ा है।",
+  "decentrationUpwardsInwardsRightDesc": "ऊपरी-नासिका पैटर्न (दाईं)। शोध ने इस क्षेत्र को यकृत-पित्त स्वायत्त प्रतिवर्त से जोड़ा है।",
+  "decentrationUpwardsInwardsLeftDesc": "ऊपरी-नासिका पैटर्न (बाईं)। ऐतिहासिक अध्ययनों ने इसे प्लीहा और डायाफ्राम क्षेत्रों से जोड़ा है।",
+  "decentrationUpwardsOutwardsDesc": "ऊपरी-कनपटी पैटर्न। शोध ने वृक्क और प्रजनन स्वायत्त क्षेत्रों से संबद्धता दर्शाई है।",
+  "decentrationMiddleNasalRightDesc": "मध्य-नासिका पैटर्न (दाईं)। ऐतिहासिक अवलोकनों ने इसे ऑक्सीजन उपयोग और हृदय क्षेत्रों से जोड़ा है।",
+  "decentrationMiddleNasalLeftDesc": "मध्य-नासिका पैटर्न (बाईं)। शोध ने इसे तंत्रिका संबंधी और हृदय स्वायत्त पैटर्न से जोड़ा है।",
+  "decentrationMiddleTemporalRightDesc": "मध्य-कनपटी पैटर्न (दाईं)। शोध ने इसे हृदय स्वायत्त नियमन क्षेत्रों से जोड़ा है।",
+  "decentrationMiddleTemporalLeftDesc": "मध्य-कनपटी पैटर्न (बाईं)। ऐतिहासिक अध्ययनों ने इसे फुफ्फुसीय और हृदय क्षेत्रों से जोड़ा है।",
+  "decentrationUpperNasalRightDesc": "ऊपरी-नासिका पैटर्न (दाईं)। शोध ने संज्ञानात्मक क्षेत्रों और ग्रीवा रीढ़ प्रतिवर्त से संबद्धता दर्शाई है।",
+  "decentrationUpperNasalLeftDesc": "ऊपरी-नासिका पैटर्न (बाईं)। ऐतिहासिक अवलोकनों ने इसे संज्ञानात्मक पैटर्न और ग्रीवा क्षेत्रों से जोड़ा है।",
+  "decentrationUpperTemporalRightDesc": "ऊपरी-कनपटी पैटर्न (दाईं)। शोध ने इस क्षेत्र को कपाल तंत्रिका और श्रवण प्रतिवर्त से जोड़ा है।",
+  "decentrationUpperTemporalLeftDesc": "ऊपरी-कनपटी पैटर्न (बाईं)। ऐतिहासिक अध्ययनों ने इसे तंत्रिकावानस्पतिक और वाक् क्षेत्रों से जोड़ा है।",
+  "decentrationLowerNasalDesc": "निचली-नासिका पैटर्न। शोध ने मूत्रजनन और काठ-त्रिकास्थि स्वायत्त क्षेत्रों से संबद्धता दर्शाई है।",
+  "decentrationLowerTemporalRightDesc": "निचली-कनपटी पैटर्न (दाईं)। ऐतिहासिक अवलोकनों ने इसे चयापचय और यकृत क्षेत्रों से जोड़ा है।",
+  "decentrationLowerTemporalLeftDesc": "निचली-कनपटी पैटर्न (बाईं)। शोध ने इसे हृदय और प्लीहा स्वायत्त पैटर्न से जोड़ा है।",
+  "flatteningUpperCentralRightDesc": "ऊपरी-केंद्रीय क्षेत्र से संबद्ध पैटर्न। ऐतिहासिक शोध ने इसे मनोदशा नियमन और ऊर्जा स्वायत्त प्रतिवर्त से जोड़ा है।",
+  "flatteningUpperTemporalRightDesc": "ऊपरी-कनपटी क्षेत्र से संबद्ध पैटर्न। शोध ने कपाल तंत्रिका और श्रवण स्वायत्त प्रतिवर्त से संबद्धता दर्शाई है।",
+  "flatteningMiddleTemporalRightDesc": "मध्य-कनपटी क्षेत्र से संबद्ध पैटर्न। ऐतिहासिक अवलोकनों ने इसे श्वसन और हृदय स्वायत्त पैटर्न से जोड़ा है।",
+  "flatteningLowerTemporalRightDesc": "निचले-कनपटी क्षेत्र से संबद्ध पैटर्न। शोध साहित्य ने इसे यकृत और चयापचय स्वायत्त क्षेत्रों से जोड़ा है।",
+  "flatteningLowerBasalRightDesc": "निचले-आधारीय क्षेत्र से संबद्ध पैटर्न। ऐतिहासिक अध्ययनों ने इसे वृक्क और निचले अंग स्वायत्त प्रतिवर्त से जोड़ा है।",
+  "flatteningLowerNasalRightDesc": "निचले-नासिका क्षेत्र से संबद्ध पैटर्न। शोध ने मूत्रजनन और श्रोणि स्वायत्त क्षेत्रों से संबद्धता दर्शाई है।",
+  "flatteningMiddleNasalRightDesc": "मध्य-नासिका क्षेत्र से संबद्ध पैटर्न। ऐतिहासिक अवलोकनों ने इसे ऑक्सीजन उपयोग और श्वसन स्वायत्त पैटर्न से जोड़ा है।",
+  "flatteningUpperNasalRightDesc": "ऊपरी-नासिका क्षेत्र से संबद्ध पैटर्न। शोध साहित्य ने इसे संज्ञानात्मक और ग्रीवा स्वायत्त प्रतिवर्त से जोड़ा है।",
+  "flatteningDefaultRightDesc": "इस क्षेत्र में ऐतिहासिक शोध के आधार पर स्वायत्त तंत्रिका तंत्र पैटर्न विविधता पाई गई।",
+  "flatteningUpperCentralLeftDesc": "ऊपरी-केंद्रीय क्षेत्र से संबद्ध पैटर्न। ऐतिहासिक शोध ने इसे मनोदशा नियमन और तंत्रिका संबंधी स्वायत्त पैटर्न से जोड़ा है।",
+  "flatteningUpperTemporalLeftDesc": "ऊपरी-कनपटी क्षेत्र से संबद्ध पैटर्न। शोध ने तंत्रिकावानस्पतिक और वाक् स्वायत्त क्षेत्रों से संबद्धता दर्शाई है।",
+  "flatteningMiddleTemporalLeftDesc": "मध्य-कनपटी क्षेत्र से संबद्ध पैटर्न। ऐतिहासिक अवलोकनों ने इसे फुफ्फुसीय और हृदय स्वायत्त प्रतिवर्त से जोड़ा है।",
+  "flatteningLowerTemporalLeftDesc": "निचले-कनपटी क्षेत्र से संबद्ध पैटर्न। शोध साहित्य ने इसे हृदय और प्लीहा स्वायत्त पैटर्न से जोड़ा है।",
+  "flatteningLowerBasalLeftDesc": "निचले-आधारीय क्षेत्र से संबद्ध पैटर्न। ऐतिहासिक अध्ययनों ने इसे वृक्क और उत्सर्जन स्वायत्त क्षेत्रों से जोड़ा है।",
+  "flatteningLowerNasalLeftDesc": "निचले-नासिका क्षेत्र से संबद्ध पैटर्न। शोध ने मूत्रजनन और काठ-त्रिकास्थि स्वायत्त प्रतिवर्त से संबद्धता दर्शाई है।",
+  "flatteningMiddleNasalLeftDesc": "मध्य-नासिका क्षेत्र से संबद्ध पैटर्न। ऐतिहासिक अवलोकनों ने इसे हृदय और श्वसन स्वायत्त पैटर्न से जोड़ा है।",
+  "flatteningUpperNasalLeftDesc": "ऊपरी-नासिका क्षेत्र से संबद्ध पैटर्न। शोध साहित्य ने इसे संज्ञानात्मक और ग्रीवा स्वायत्त क्षेत्रों से जोड़ा है।",
+  "flatteningDefaultLeftDesc": "इस क्षेत्र में ऐतिहासिक शोध के आधार पर स्वायत्त तंत्रिका तंत्र पैटर्न विविधता पाई गई।",
+  "protrusionUpperCentralRightDesc": "ऊपरी-केंद्रीय क्षेत्र उभार पैटर्न। शोध ने इसे मस्तिष्क क्षेत्रों को प्रभावित करने वाले सहानुभूति अतिसक्रियता पैटर्न से जोड़ा है।",
+  "protrusionUpperTemporalRightDesc": "ऊपरी-कनपटी क्षेत्र उभार पैटर्न। ऐतिहासिक अवलोकनों ने इसे कपाल तंत्रिका और श्रवण तंत्र अतिसक्रियता पैटर्न से जोड़ा है।",
+  "protrusionMiddleTemporalRightDesc": "मध्य-कनपटी क्षेत्र उभार पैटर्न। शोध ने हृदय और श्वसन सहानुभूति पैटर्न से संबद्धता दर्शाई है।",
+  "protrusionLowerTemporalRightDesc": "निचले-कनपटी क्षेत्र उभार पैटर्न। ऐतिहासिक अध्ययनों ने इसे यकृत-पित्त और चयापचय सहानुभूति क्षेत्रों से जोड़ा है।",
+  "protrusionLowerBasalRightDesc": "निचले-आधारीय क्षेत्र उभार पैटर्न। शोध ने इसे वृक्क और श्रोणि सहानुभूति अतिसक्रियता पैटर्न से जोड़ा है।",
+  "protrusionLowerNasalRightDesc": "निचले-नासिका क्षेत्र उभार पैटर्न। ऐतिहासिक अवलोकनों ने इसे मूत्रजनन सहानुभूति सक्रियण क्षेत्रों से जोड़ा है।",
+  "protrusionMiddleNasalRightDesc": "मध्य-नासिका क्षेत्र उभार पैटर्न। शोध ने आमाशय और अग्नाशय सहानुभूति पैटर्न से संबद्धता दर्शाई है।",
+  "protrusionUpperNasalRightDesc": "ऊपरी-नासिका क्षेत्र उभार पैटर्न। ऐतिहासिक अध्ययनों ने इसे संज्ञानात्मक और दृश्य सहानुभूति अतिसक्रियता क्षेत्रों से जोड़ा है।",
+  "protrusionDefaultRightDesc": "शोध अवलोकनों के आधार पर इस क्षेत्र में सहानुभूति तंत्रिका तंत्र अतिसक्रियता पैटर्न पाया गया।",
+  "protrusionUpperCentralLeftDesc": "ऊपरी-केंद्रीय क्षेत्र उभार पैटर्न। शोध ने इसे साइकोमोटर और मस्तिष्क सहानुभूति पैटर्न से जोड़ा है।",
+  "protrusionUpperTemporalLeftDesc": "ऊपरी-कनपटी क्षेत्र उभार पैटर्न। ऐतिहासिक अवलोकनों ने इसे तंत्रिकावानस्पतिक सहानुभूति अतिसक्रियता क्षेत्रों से जोड़ा है।",
+  "protrusionMiddleTemporalLeftDesc": "मध्य-कनपटी क्षेत्र उभार पैटर्न। शोध ने फुफ्फुसीय और हृदय सहानुभूति पैटर्न से संबद्धता दर्शाई है।",
+  "protrusionLowerTemporalLeftDesc": "निचले-कनपटी क्षेत्र उभार पैटर्न। ऐतिहासिक अध्ययनों ने इसे प्लीहा और हृदय सहानुभूति सक्रियण क्षेत्रों से जोड़ा है।",
+  "protrusionLowerBasalLeftDesc": "निचले-आधारीय क्षेत्र उभार पैटर्न। शोध ने इसे श्रोणि और वृक्क सहानुभूति अतिसक्रियता पैटर्न से जोड़ा है।",
+  "protrusionLowerNasalLeftDesc": "निचले-नासिका क्षेत्र उभार पैटर्न। ऐतिहासिक अवलोकनों ने इसे काठ-त्रिकास्थि सहानुभूति सक्रियण क्षेत्रों से जोड़ा है।",
+  "protrusionMiddleNasalLeftDesc": "मध्य-नासिका क्षेत्र उभार पैटर्न। शोध ने चिंता-हृदय सहानुभूति पैटर्न से संबद्धता दर्शाई है।",
+  "protrusionUpperNasalLeftDesc": "ऊपरी-नासिका क्षेत्र उभार पैटर्न। ऐतिहासिक अध्ययनों ने इसे संज्ञानात्मक और दृश्य सहानुभूति अतिसक्रियता क्षेत्रों से जोड़ा है।",
+  "protrusionDefaultLeftDesc": "शोध अवलोकनों के आधार पर इस क्षेत्र में सहानुभूति तंत्रिका तंत्र अतिसक्रियता पैटर्न पाया गया।",
+  "anisocoriaNone": "पुतली का आकार सामान्य सीमाओं के भीतर है। कोई महत्वपूर्ण एनीसोकोरिया नहीं पाया गया।",
+  "anisocoriaDetected": "एनीसोकोरिया पाया गया: {difference}% ({direction})। {description}",
+  "@anisocoriaDetected": {
+    "placeholders": {
+      "difference": {
+        "type": "String"
+      },
+      "direction": {
+        "type": "String"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "anisocoriaDirectionSD": "S>D",
+  "anisocoriaDirectionDS": "D>S",
+  "anisocoriaSeverityNone": "सामान्य सीमाओं के भीतर।",
+  "anisocoriaSeverityMild": "हल्का अंतर देखा गया। शारीरिक हो सकता है।",
+  "anisocoriaSeverityModerate": "मध्यम असमानता। शोध अवलोकन नोट किया गया।",
+  "anisocoriaSeveritySevere": "महत्वपूर्ण असमानता। शोध अवलोकन ध्वजांकित किया गया।",
+  "largerPupilEqual": "समान",
+  "largerPupilOS": "OS (बाईं)",
+  "largerPupilOD": "OD (दाईं)",
+  "decentrationWithinLimits": "सामान्य सीमाओं के भीतर।",
+  "decentrationClinicalNote": "{patternName}। विस्थापन: {offset}%",
+  "@decentrationClinicalNote": {
+    "placeholders": {
+      "patternName": {
+        "type": "String"
+      },
+      "offset": {
+        "type": "String"
+      }
+    }
+  },
+  "zoneUpperCentral": "ऊपरी-केंद्रीय",
+  "zoneUpperNasal": "ऊपरी-नासिका",
+  "zoneMiddleNasal": "मध्य-नासिका",
+  "zoneLowerNasal": "निचली-नासिका",
+  "zoneLowerBasal": "निचला-आधारीय",
+  "zoneLowerTemporal": "निचली-कनपटी",
+  "zoneMiddleTemporal": "मध्य-कनपटी",
+  "zoneUpperTemporal": "ऊपरी-कनपटी",
+  "zoneFrontal": "अग्र",
+  "zoneBasal": "आधारीय",
+  "zoneUnknown": "अज्ञात",
+  "flatteningDescription": "{zone} चपटापन ({clockRange}) - {percentage}%",
+  "@flatteningDescription": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "protrusionDescription": "{zone} उभार ({clockRange}) - {percentage}%",
+  "@protrusionDescription": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "usbIriscopeMode": "USB इरिस्कोप मोड",
+  "iriscopeExternal": "इरिस्कोप / बाहरी",
+  "usbLabel": "USB",
+  "useConnectedUsbCamera": "जुड़े हुए USB कैमरा या इरिस्कोप का उपयोग करें",
+  "detectedCameras": "पता चले कैमरे",
+  "externalCamera": "बाहरी कैमरा",
+  "cameraIndex": "कैमरा {index}",
+  "@cameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "noExternalCameraDetected": "कोई बाहरी कैमरा नहीं पाया गया।\\nसक्षम करने के लिए USB इरिस्कोप कनेक्ट करें।",
+  "refresh": "ताज़ा करें",
+  "selectCameraSource": "कैमरा स्रोत चुनें",
+  "camerasDetected": "{count} कैमरे पाए गए",
+  "@camerasDetected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "camerasAvailable": "{count} कैमरे उपलब्ध",
+  "@camerasAvailable": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "externalCameraIndex": "बाहरी कैमरा {index}",
+  "@externalCameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "qualityGatedRear": "गुणवत्ता-नियंत्रित स्वतः-कैप्चर (पिछला कैमरा)",
+  "qualityGatedFront": "गुणवत्ता-नियंत्रित स्वतः-कैप्चर (फ्रंट कैमरा)",
+  "usbCameraInfo": "USB कैमरा जानकारी",
+  "connected": "जुड़ा हुआ",
+  "waiting": "प्रतीक्षा कर रहा है...",
+  "disconnected": "डिस्कनेक्ट किया गया",
+  "waitingForUsbCamera": "USB कैमरे की प्रतीक्षा हो रही है",
+  "connectIriscopePrompt": "अपना इरिस्कोप USB OTG अडेप्टर से कनेक्ट करें।\\nसंकेत मिलने पर अनुमति दें।",
+  "usbCameraIssue": "USB कैमरा समस्या",
+  "pleaseConnectIriscope": "कृपया अपना इरिस्कोप या USB कैमरा कनेक्ट करें।",
+  "retryConnection": "कनेक्शन पुनः प्रयास करें",
+  "troubleshootingTips": "समस्या निवारण सुझाव",
+  "tipUsbOtgAdapter": "सुनिश्चित करें कि USB OTG अडेप्टर सही तरह से जुड़ा है",
+  "tipUsbHostMode": "जाँचें कि डिवाइस USB होस्ट मोड का समर्थन करता है",
+  "tipReconnectCamera": "कैमरा डिस्कनेक्ट करके पुनः कनेक्ट करें",
+  "tipGrantPermissions": "संकेत मिलने पर USB अनुमतियाँ दें",
+  "tipUnlockDevice": "कुछ डिवाइसों को अनलॉक करना पड़ सकता है",
+  "back": "वापस",
+  "switchEye": "आँख बदलें",
+  "state": "स्थिति",
+  "status": "स्टेटस",
+  "usingFlutterUvcPlugin": "flutter_uvc_camera प्लगइन का उपयोग हो रहा है\\USB Video Class डिवाइस समर्थन के लिए प्लगइन।",
+  "initialized": "प्रारंभ किया गया",
+  "notReady": "तैयार नहीं",
+  "captureDistanceMatch": "कैप्चर दूरी मिलान",
+  "@captureDistanceMatch": {
+    "description": "Title for the bilateral iris size comparison card"
+  },
+  "irisSize": "आइरिस आकार",
+  "@irisSize": {
+    "description": "Label for iris size measurement"
+  },
+  "distanceMatched": "दूरी मिली",
+  "@distanceMatched": {
+    "description": "Status when capture distances match well"
+  },
+  "distanceMismatch": "दूरी बेमेल",
+  "@distanceMismatch": {
+    "description": "Status when capture distances don't match"
+  },
+  "excellentMatch": "उत्कृष्ट मिलान",
+  "@excellentMatch": {
+    "description": "Distance match status 90%+"
+  },
+  "goodMatch": "अच्छा मिलान",
+  "@goodMatch": {
+    "description": "Distance match status 80-90%"
+  },
+  "acceptableMatch": "स्वीकार्य मिलान",
+  "@acceptableMatch": {
+    "description": "Distance match status 70-80%"
+  },
+  "considerRetaking": "दूरी बेमेल - पुनः लेने पर विचार करें",
+  "@considerRetaking": {
+    "description": "Warning when distances don't match well"
+  },
+  "qualityReady": "तैयार! स्थिर रहें...",
+  "@qualityReady": {
+    "description": "Camera quality feedback when ready to capture"
+  },
+  "qualityTooBlurry": "कैमरा स्थिर रखें",
+  "@qualityTooBlurry": {
+    "description": "Camera quality feedback when image is blurry"
+  },
+  "qualityTooDark": "अधिक प्रकाश चाहिए",
+  "@qualityTooDark": {
+    "description": "Camera quality feedback when too dark"
+  },
+  "qualityTooBright": "बहुत तेज रोशनी - कम करें",
+  "@qualityTooBright": {
+    "description": "Camera quality feedback when too bright"
+  },
+  "qualityNoContrast": "रोशनी का कोण बदलें",
+  "@qualityNoContrast": {
+    "description": "Camera quality feedback when contrast is low"
+  },
+  "qualityNoPupil": "पुतली को फ्रेम में केंद्रित करें",
+  "@qualityNoPupil": {
+    "description": "Camera quality feedback when pupil not detected"
+  },
+  "qualityNotCentered": "आँख को केंद्र में लाएं",
+  "@qualityNotCentered": {
+    "description": "Camera quality feedback when eye not centered"
+  },
+  "qualityNotAnEye": "कोई आँख नहीं पाई गई",
+  "@qualityNotAnEye": {
+    "description": "Camera quality feedback when no eye detected"
+  },
+  "qualityProcessing": "प्रोसेस हो रहा है...",
+  "@qualityProcessing": {
+    "description": "Camera quality feedback during processing"
+  },
+  "distanceMatchedCheck": "✓ दूरी मिली",
+  "@distanceMatchedCheck": {
+    "description": "Distance guidance when perfectly matched"
+  },
+  "distanceGoodMatchCheck": "✓ अच्छा मिलान",
+  "@distanceGoodMatchCheck": {
+    "description": "Distance guidance when good match"
+  },
+"distanceSlightlyBack": "थोड़ा पीछे ↔",
+  "@distanceSlightlyBack": {
+    "description": "Distance guidance to move slightly back"
+  },
+  "distanceSlightlyCloser": "थोड़ा करीब ↔",
+  "@distanceSlightlyCloser": {
+    "description": "Distance guidance to move slightly closer"
+  },
+  "distanceAlmostThere": "लगभग सही...",
+  "@distanceAlmostThere": {
+    "description": "Distance guidance when nearly matched"
+  },
+  "distanceMoveBack": "पीछे जाएं ←←",
+  "@distanceMoveBack": {
+    "description": "Distance guidance to move back"
+  },
+  "distanceMoveCloser": "करीब आएं →→",
+  "@distanceMoveCloser": {
+    "description": "Distance guidance to move closer"
+  },
+  "distanceTooClose": "बहुत करीब! पीछे जाएं",
+  "@distanceTooClose": {
+    "description": "Distance guidance when too close"
+  },
+  "distanceTooFar": "बहुत दूर! करीब आएं",
+  "@distanceTooFar": {
+    "description": "Distance guidance when too far"
+  },
+  "distanceStabilizing": "स्थिर हो रहा है...",
+  "@distanceStabilizing": {
+    "description": "Distance status while stabilizing reading"
+  },
+  "distanceLabel": "दूरी: {percent}%",
+  "@distanceLabel": {
+    "description": "Distance match percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "irisSizeComparison": "OD: {odSize}px → OS: {osSize}px",
+  "@irisSizeComparison": {
+    "description": "Iris size comparison between eyes",
+    "placeholders": {
+      "odSize": {
+        "type": "int"
+      },
+      "osSize": {
+        "type": "int"
+      }
+    }
+  },
+  "frontCameraLabel": "फ्रंट कैमरा",
+  "@frontCameraLabel": {
+    "description": "Label for front camera"
+  },
+  "rearCameraLabel": "बैक कैमरा",
+  "@rearCameraLabel": {
+    "description": "Label for rear/back camera"
+  },
+  "startingCamera": "कैमरा शुरू हो रहा है...",
+  "@startingCamera": {
+    "description": "Status when camera is initializing"
+  },
+  "eyeNotDetected": "आंख नहीं मिली",
+  "@eyeNotDetected": {
+    "description": "Title for validation failure dialog"
+  },
+  "tryAgain": "फिर कोशिश करें",
+  "@tryAgain": {
+    "description": "Button text to retry capture"
+  },
+  "indicatorEye": "आंख",
+  "@indicatorEye": {
+    "description": "Quality indicator label for eye detection"
+  },
+  "indicatorSharp": "तेज़",
+  "@indicatorSharp": {
+    "description": "Quality indicator label for sharpness"
+  },
+  "indicatorLight": "रोशनी",
+  "@indicatorLight": {
+    "description": "Quality indicator label for lighting"
+  },
+  "indicatorFocus": "फोकस",
+  "@indicatorFocus": {
+    "description": "Quality indicator label for focus/contrast"
+  },
+  "indicatorPupil": "पुतली",
+  "@indicatorPupil": {
+    "description": "Quality indicator label for pupil detection"
+  },
+  "indicatorIris": "Iris",
+  "@indicatorIris": {
+    "description": "Quality indicator label for iris size"
+  },
+  "indicatorMatch": "मिलान",
+  "@indicatorMatch": {
+    "description": "Quality indicator label for distance match"
+  },
+  "checkImageShape": "छवि आकार",
+  "@checkImageShape": {
+    "description": "Validation check label for aspect ratio"
+  },
+  "checkCircularIris": "गोलाकार Iris",
+  "@checkCircularIris": {
+    "description": "Validation check label for circular iris"
+  },
+  "checkDarkPupil": "गहरी पुतली",
+  "@checkDarkPupil": {
+    "description": "Validation check label for dark pupil center"
+  },
+  "checkIrisTexture": "Iris बनावट",
+  "@checkIrisTexture": {
+    "description": "Validation check label for iris texture"
+  },
+  "checkPupilIrisStructure": "पुतली-Iris संरचना",
+  "@checkPupilIrisStructure": {
+    "description": "Validation check label for concentric circles"
+  },
+  "checkNaturalColors": "प्राकृतिक रंग",
+  "@checkNaturalColors": {
+    "description": "Validation check label for color distribution"
+  },
+  "checkEdgePattern": "किनारे का पैटर्न",
+  "@checkEdgePattern": {
+    "description": "Validation check label for edge density"
+  },
+  "errorImageShapeIncorrect": "छवि का आकार गलत है - सुनिश्चित करें कि आंख फ्रेम भरे",
+  "@errorImageShapeIncorrect": {
+    "description": "Validation error for incorrect aspect ratio"
+  },
+  "errorNoEyeDetected": "कोई आंख नहीं मिली - Iris को फ्रेम के बीच में रखें",
+  "@errorNoEyeDetected": {
+    "description": "Validation error when no eye/iris detected"
+  },
+  "errorNoPupilDetected": "पुतली नहीं मिली - अच्छी रोशनी सुनिश्चित करें",
+  "@errorNoPupilDetected": {
+    "description": "Validation error when pupil not detected"
+  },
+  "errorNoIrisTexture": "Iris बनावट नहीं मिली - आंख के करीब जाएं",
+  "@errorNoIrisTexture": {
+    "description": "Validation error when iris texture not detected"
+  },
+  "errorUnusualColors": "असामान्य रंग पाए गए - स्क्रीन/परावर्तन से बचें",
+  "@errorUnusualColors": {
+    "description": "Validation error for unusual color distribution"
+  },
+  "errorTooManyEdges": "बहुत अधिक सीधे किनारे - यह आंख नहीं हो सकती",
+  "@errorTooManyEdges": {
+    "description": "Validation error for too many straight edges"
+  },
+  "errorNotValidEye": "मान्य आंख की छवि नहीं है - कृपया फिर कोशिश करें",
+  "@errorNotValidEye": {
+    "description": "Generic validation error for invalid eye image"
+  },
+  "holdStillCapturing": "स्थिर रहें - कैप्चर हो रहा है...",
+  "@holdStillCapturing": {
+    "description": "Status during countdown capture"
+  },
+  "adjustDistanceFirst": "पहले दूरी समायोजित करें",
+  "@adjustDistanceFirst": {
+    "description": "Status when distance needs adjustment before capture"
+  },
+  "stabilizingReading": "स्थिर हो रहा है...",
+  "@stabilizingReading": {
+    "description": "Status while distance reading stabilizes"
+  },
+  "autoCaptureWhenReady": "तैयार होने पर स्वतः कैप्चर",
+  "@autoCaptureWhenReady": {
+    "description": "Status indicating auto-capture is enabled"
+  },
+  "tapOrWaitAutoCapture": "टैप करें या स्वतः कैप्चर की प्रतीक्षा करें",
+  "@tapOrWaitAutoCapture": {
+    "description": "Instruction when ready to capture"
+  },
+  "validatingImage": "जांच हो रही है...",
+  "@validatingImage": {
+    "description": "Status during image validation"
+  },
+  "capturingStatus": "कैप्चर हो रहा है...",
+  "@capturingStatus": {
+    "description": "Status during image capture"
+  },
+  "adjustPositionStatus": "स्थिति समायोजित करें",
+  "@adjustPositionStatus": {
+    "description": "Status when position needs adjustment"
+  },
+  "validationTip": "सुझाव: अच्छी रोशनी सुनिश्चित करें, कैमरा आंख से 10-15 सेमी दूर रखें, परावर्तन से बचें",
+  "@validationTip": {
+    "description": "Helpful tip shown after multiple validation failures"
+  },
+  "validationChecksTitle": "जांच सूची:",
+  "@validationChecksTitle": {
+    "description": "Title for validation checks list in dialog"
+  },
+  "confidenceLabel": "विश्वास: {percent}%",
+  "@confidenceLabel": {
+    "description": "Confidence percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "incompleteData": "अधूरा डेटा",
+  "@incompleteData": {
+    "description": "Status when iris metrics data is incomplete"
+  },
+  "irisDiameterLabel": "iris व्यास",
+  "@irisDiameterLabel": {
+    "description": "Label for iris diameter measurement"
+  },
+  "plrResponseCurve": "PLR प्रतिक्रिया वक्र",
+  "@plrResponseCurve": {
+    "description": "Title for PLR chart showing pupil response over time"
+  },
+  "plrLatency": "विलंब",
+  "@plrLatency": {
+    "description": "Time from flash to start of constriction"
+  },
+  "plrVelocity": "गति",
+  "@plrVelocity": {
+    "description": "Rate of pupil constriction"
+  },
+  "plrRecoveryTime": "ठीक होने का समय",
+  "@plrRecoveryTime": {
+    "description": "Time for pupil to recover"
+  },
+  "plrRecoveryRatio": "ठीक होने का %",
+  "@plrRecoveryRatio": {
+    "description": "Final size compared to baseline"
+  },
+  "plrEnhancedMetrics": "उन्नत PLR माप",
+  "@plrEnhancedMetrics": {
+    "description": "Section title for advanced PLR measurements"
+  },
+  "plrNormalLatency": "सामान्य: 200-500ms",
+  "@plrNormalLatency": {
+    "description": "Normal latency reference range"
+  },
+  "plrNormalConstriction": "सामान्य: 10-30%",
+  "@plrNormalConstriction": {
+    "description": "Normal constriction reference range"
+  },
+  "plrNormalVelocity": "सामान्य: 1.5-4.0%/s",
+  "@plrNormalVelocity": {
+    "description": "Normal velocity reference range"
+  },
+  "plrReferenceValues": "सामान्य PLR संदर्भ मान",
+  "@plrReferenceValues": {
+    "description": "Title for reference values section"
+  },
+  "plrSubjectInfo": "विषय की जानकारी",
+  "@plrSubjectInfo": {
+    "description": "Section title for patient/subject info in PLR report"
+  },
+  "plrTestType": "पुतली प्रकाश प्रतिवर्त",
+  "@plrTestType": {
+    "description": "Name of the PLR test type"
+  },
+  "plrAnalysisSummary": "विश्लेषण सारांश",
+  "@plrAnalysisSummary": {
+    "description": "Section title for analysis summary"
+  },
+  "plrTotalFrames": "कुल विश्लेषित फ्रेम",
+  "@plrTotalFrames": {
+    "description": "Label for total frames count"
+  },
+  "plrSuccessRate": "सफलता दर",
+  "@plrSuccessRate": {
+    "description": "Label for frame analysis success rate"
+  },
+  "plrMaxConstriction": "अधिकतम संकुचन",
+  "@plrMaxConstriction": {
+    "description": "Label for maximum constriction time"
+  },
+  "plrResponseCurveLabels": "PLR प्रतिक्रिया वक्र",
+  "anwTitle": "स्वायत्त तंत्रिका पुष्पांजलि (ANW)",
+  "anwAbnormal": "असामान्य",
+  "anwDiameter": "व्यास",
+  "anwPerimeter": "परिधि",
+  "anwAsymmetry": "असमानता",
+  "anwElevated": "उभरी हुई",
+  "anwFormType": "आकार प्रकार",
+  "anwRegular": "नियमित",
+  "anwDrawnIn": "अंदर खिंची",
+  "anwIndented": "दंतुरित",
+  "anwLacerated": "विदीर्ण",
+  "anwSpastic": "ऐंठनयुक्त",
+  "anwAtonic": "शिथिल",
+  "anwTonicState": "ऐतिहासिक स्वर पैटर्न",
+  "anwParasympathotonic": "परानुकंपी स्वर पैटर्न",
+  "anwSympathotonicState": "अनुकंपी स्वर पैटर्न",
+  "anwShiftDetected": "ऐतिहासिक विस्थापन पैटर्न",
+  "anwConstrictionDetected": "संकुचन पाया गया",
+  "anwFindings": "निष्कर्ष",
+  "anwRatioComparison": "ANW अनुपात",
+  "bilateralANWComparison": "द्विपक्षीय ANW तुलना",
+  "anwSymmetryNormal": "ANW समरूपता सामान्य सीमा के भीतर है।",
+  "anwAsymmetryDetected": "आंखों के बीच ANW असमानता पाई गई।",
+  "functionalFrustration": "सहानुभूति और परानुकंपी तंत्रिका तंत्र के बीच कार्यात्मक असंतुलन।",
+  "anwParasympathotonicDesc": "ऐतिहासिक अवलोकनों के अनुसार यह बढ़ी हुई लिमिनल संवेदनशीलता से जुड़ा है। प्रतिवर्त क्रिया त्वरित। GI स्रावी/निष्कासन कार्य बढ़े हुए।",
+  "anwSympathotonicDesc": "ऐतिहासिक अवलोकनों के अनुसार यह घटी हुई लिमिनल संवेदनशीलता से जुड़ा है। प्रतिवर्त क्रिया धीमी। GI स्रावी/निष्कासन कार्य कम।",
+  "anwMiddleTemporalShiftCardiac": "Velchover के अनुसार ऐतिहासिक अध्ययनों ने इसे बाएं वेंट्रिकुलर अधिभार पैटर्न और हृदय तनाव से जोड़ा है।",
+  "anwFrontalConstricted": "पुतली पट्टी का ललाट क्षेत्र संकुचित है।",
+  "anwBasalConstricted": "पुतली पट्टी का आधार क्षेत्र संकुचित है।",
+  "anwFrontalBasalConstricted": "पुतली पट्टी के ललाट और आधार क्षेत्र संकुचित हैं।",
+  "helpTitle": "सहायता और उपयोगकर्ता मार्गदर्शिका",
+  "helpTabQuickStart": "त्वरित शुरुआत",
+  "helpTabCnriAnalysis": "CNRI विश्लेषण",
+  "helpTabShortcuts": "शॉर्टकट",
+  "helpTabTroubleshooting": "समस्या निवारण",
+  "helpOnlineDocs": "ऑनलाइन दस्तावेज़",
+  "helpContactSupport": "सहायता से संपर्क करें",
+  "helpGettingStarted": "शुरुआत कैसे करें",
+  "helpStep1Title": "अपना Iriscope कनेक्ट करें",
+  "helpStep1Desc": "अपना Dino-Lite या संगत USB iriscope कनेक्ट करें।",
+  "helpStep2Title": "रोगी की जानकारी दर्ज करें",
+  "helpStep2Desc": "रोगी का नाम, आयु, लिंग और मुख्य शिकायतें भरें।",
+  "helpStep3Title": "दाहिनी आंख (OD) कैप्चर करें",
+  "helpStep3Desc": "Iriscope को स्थिति दें और दाहिनी आंख की छवि कैप्चर करें।",
+  "helpStep4Title": "बाईं आंख (OS) कैप्चर करें",
+  "helpStep4Desc": "समान रोशनी के साथ बाईं आंख के लिए दोहराएं।",
+  "helpStep5Title": "विश्लेषण देखें",
+  "helpStep5Desc": "ऐप P/I अनुपात, पुतली रूप और ANW विशेषताओं का विश्लेषण करता है।",
+  "helpStep6Title": "रिपोर्ट निर्यात करें",
+  "helpStep6Desc": "PDF, TXT, या JSON प्रारूप में सहेजें।",
+  "helpTipBestResults": "सर्वोत्तम परिणामों के लिए: समान रोशनी का उपयोग करें और 2-3 सेमी iriscope दूरी बनाए रखें।",
+  "helpCnriProtocolFeatures": "CNRI प्रोटोकॉल विशेषताएं",
+  "helpFeaturePiRatioTitle": "पुतली/Iris अनुपात (P/I)",
+  "helpFeaturePiRatioDesc": "सामान्य: 20-30%। इससे बाहर के मान स्वायत्त असंतुलन का संकेत दे सकते हैं।",
+  "helpFeaturePupilFormTitle": "पुतली रूप विश्लेषण",
+  "helpFeaturePupilFormDesc": "अंडाकार पैटर्न, विकेंद्रीकरण दिशा और विकेंद्रता का पता लगाता है।",
+  "helpFeatureAnwTitle": "ANW (Collarette) आकलन",
+  "helpFeatureAnwDesc": "अनुपात, रूप नियमितता, क्षेत्र विस्थापन और स्वर स्थिति का विश्लेषण करता है।",
+  "helpFeatureZoneTitle": "क्षेत्र विश्लेषण",
+  "helpFeatureZoneDesc": "CNRI अंग क्षेत्रों में चपटेपन/उभारों को मैप करता है।",
+  "helpFeatureBilateralTitle": "द्विपक्षीय तुलना",
+  "helpFeatureBilateralDesc": "असमानता पता लगाने के लिए OD बनाम OS की तुलना करता है।",
+  "helpFeatureMlTitle": "ONNX CNN तुलना",
+  "helpFeatureMlDesc": "ONNX CNN मॉडल तुलना के लिए द्वितीयक माप प्रदान करता है।",
+  "helpKeyboardShortcuts": "कीबोर्ड शॉर्टकट",
+  "helpCameraControls": "कैमरा नियंत्रण",
+  "helpShortcutSpace": "छवि कैप्चर करें",
+  "helpShortcutCtrlS": "PDF रिपोर्ट सहेजें",
+  "helpShortcutCtrlO": "गैलरी छवि खोलें",
+  "helpShortcutCtrlH": "स्कैन इतिहास देखें",
+  "helpShortcutF11": "पूर्ण स्क्रीन टॉगल करें",
+  "helpShortcutEsc": "वापस जाएं / रद्द करें",
+  "helpShortcutScroll": "ज़ूम इन/आउट",
+  "helpShortcutDoubleClick": "ज़ूम रीसेट करें",
+  "helpCommonIssues": "सामान्य समस्याएं",
+  "helpIssueCameraNotDetected": "कैमरा नहीं मिला",
+  "helpIssueCameraSolution1": "USB कनेक्शन जांचें",
+  "helpIssueCameraSolution2": "भिन्न USB पोर्ट आज़माएं",
+  "helpIssueCameraSolution3": "Dino-Lite ड्राइवर इंस्टॉल करें",
+  "helpIssueCameraSolution4": "एप्लिकेशन पुनः शुरू करें",
+  "helpIssuePupilDetectionFails": "पुतली का पता लगाने में विफलता",
+  "helpIssuePupilSolution1": "पर्याप्त रोशनी सुनिश्चित करें",
+  "helpIssuePupilSolution2": "फ्रेम में पुतली केंद्रित करें",
+  "helpIssuePupilSolution3": "Iriscope लेंस साफ करें",
+  "helpIssuePupilSolution4": "फोकस मैन्युअल रूप से समायोजित करें",
+  "helpIssuePdfExportFails": "PDF निर्यात विफल",
+  "helpIssuePdfSolution1": "फ़ोल्डर अनुमतियां जांचें",
+  "helpIssuePdfSolution2": "डिस्क स्थान उपलब्धता सुनिश्चित करें",
+  "helpIssuePdfSolution3": "खुली PDF फ़ाइलें बंद करें",
+  "helpIssuePdfSolution4": "पहले TXT निर्यात आज़माएं",
+  "helpCaptureChecklistTitle": "कैप्चर जांच सूची",
+  "helpCaptureChecklist1": "पुतली को केंद्रित और फ्रेम के अंदर पूरी तरह दृश्यमान रखें।",
+  "helpCaptureChecklist2": "समान रोशनी का उपयोग करें और कॉर्निया पर चकाचौंध या परावर्तन कम करें।",
+  "helpCaptureChecklist3": "दाहिनी और बाईं आंखों के लिए समान iriscope दूरी बनाए रखें।",
+  "helpCaptureChecklist4": "यदि पुतली का किनारा धुंधला दिखे तो फिर से फोकस करें या पुनः लें।",
+  "helpExportSettingsTitle": "निर्यात सेटिंग",
+  "helpExportSettingsDesc": "स्वतः-सहेजें PDF विश्लेषण के बाद रिपोर्ट सहेज सकता है, छवियां शामिल करें PDF में आंख की तस्वीरें दिखाने को नियंत्रित करता है, और ML तुलना दिखाएं रिपोर्ट में ONNX CNN तुलना मान जोड़ता है।",
+  "helpHybridScoreTitle": "हाइब्रिड विश्वास और ग्रेड",
+  "helpHybridScoreDesc": "प्रदर्शित विश्वास और ग्रेड शास्त्रीय ज्यामिति गुणवत्ता को ML सहमति के साथ जोड़ते हैं, इसलिए वे निदान की बजाय माप की विश्वसनीयता दर्शाते हैं।",
+  "helpAnomalyGuideTitle": "चपटेपन और उभारों को पढ़ना",
+  "helpAnomalyGuideDesc": "चपटेपन पुतली सीमा के साथ सापेक्ष अंदर की ओर खिंचाव को और उभार बाहर की ओर खिंचाव को दर्शाते हैं; प्रत्येक कार्ड क्षेत्र, परिमाण और मैप किए गए संबंध को सूचीबद्ध करता है।",
+  "helpZoneOverlayGuideTitle": "ज़ोन ओवरले",
+  "helpZoneOverlayGuideDesc": "ज़ोन ओवरले का उपयोग करके क्षेत्र स्थितियों को दृश्य रूप से जांचें और पुतली और Iris के चारों ओर पाई गई विसंगतियां कहां पड़ती हैं यह सत्यापित करें।",
+  "helpContactSupportTip": "सहायता के लिए helpdesk@cnri.edu से संपर्क करें।",
+  "settingsTitle": "सेटिंग",
+  "settingsCameraIriscope": "कैमरा / IRISCOPE",
+  "settingsPreferredCamera": "पसंदीदा कैमरा:",
+  "settingsCameraDinoLite": "Dino-Lite",
+  "settingsCameraUsb": "USB कैमरा",
+  "settingsCameraAutoDetect": "स्वतः-पता लगाएं",
+  "settingsDefaultZoom": "डिफ़ॉल्ट ज़ूम:",
+  "settingsAnalysis": "विश्लेषण",
+  "settingsShowMlComparison": "ML तुलना दिखाएं",
+  "settingsShowZoneOverlay": "ज़ोन ओवरले दिखाएं",
+  "settingsExportReports": "निर्यात और रिपोर्ट",
+  "settingsAutoSavePdf": "PDF स्वतः-सहेजें",
+  "settingsIncludeImages": "छवियां शामिल करें",
+  "settingsSaved": "सेटिंग सहेजी गई",
+  "aboutResearchEdition": "शोध संस्करण",
+  "aboutVersion": "संस्करण {version}",
+  "@aboutVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "aboutLicense": "लाइसेंस",
+  "aboutLicensedTo": "लाइसेंस प्राप्तकर्ता:",
+  "aboutExpires": "समाप्ति:",
+  "aboutManageLicense": "लाइसेंस प्रबंधित करें",
+  "aboutBasedOnCnri": "CNRI प्रोटोकॉल पर आधारित",
+  "aboutCopyright": "© 2024-2026 PupilMetrics Research",
+  "aboutWebsite": "वेबसाइट",
+  "aboutPrivacy": "गोपनीयता",
+  "languageSelectTitle": "भाषा चुनें",
+  "selectLanguage": "भाषा चुनें",
+  "languageChanged": "भाषा बदली गई",
+  "languageChangedMessage": "ऐप की भाषा {language} पर सेट की गई",
+  "@languageChangedMessage": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languageSystemNotAvailable": "भाषा प्रणाली उपलब्ध नहीं है",
+  "licenseLoading": "लोड हो रहा है...",
+  "licenseWelcome": "PupilMetrics में आपका स्वागत है!",
+  "licenseTrialFeatures": "14 दिन का मुफ्त परीक्षण • पूर्ण सुविधाएं",
+  "licenseStartTrial": "मुफ्त परीक्षण शुरू करें",
+  "licenseEnterKey": "लाइसेंस दर्ज करें",
+  "licenseFreeTrial": "मुफ्त परीक्षण",
+  "licenseDaysRemaining": "{count} दिन शेष",
+  "@licenseDaysRemaining": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseTrialEnded": "परीक्षण समाप्त",
+  "licenseEnterToContinue": "जारी रखने के लिए लाइसेंस दर्ज करें",
+  "licenseStandard": "मानक लाइसेंस",
+  "licenseProfessional": "व्यावसायिक लाइसेंस",
+  "licenseEnterprise": "एंटरप्राइज़ लाइसेंस",
+  "licenseLicensed": "लाइसेंस प्राप्त",
+  "licenseActive": "सक्रिय",
+  "licenseTrialUser": "परीक्षण उपयोगकर्ता",
+  "licenseLifetime": "आजीवन",
+  "licenseNotSetUp": "सेट अप नहीं",
+  "trialExpiredTitle": "परीक्षण अवधि समाप्त",
+  "trialExpiredMessage": "आपका 14 दिन का परीक्षण समाप्त हो गया। Iris छवियों का विश्लेषण जारी रखने के लिए कृपया लाइसेंस खरीदें।",
+  "trialExpiredCanStill": "आप अभी भी कर सकते हैं:",
+  "trialExpiredViewAnalyses": "अपने पिछले विश्लेषण देखें",
+  "trialExpiredExportReports": "मौजूदा रिपोर्ट निर्यात करें",
+  "trialExpiredAccessHistory": "स्कैन इतिहास देखें",
+  "trialExpiredMaybeLater": "शायद बाद में",
+  "licenseRegistration": "लाइसेंस पंजीकरण",
+  "licenseStatusValid": "लाइसेंस प्राप्त",
+  "licenseStatusTrialActive": "मुफ्त परीक्षण",
+  "licenseStatusTrialExpired": "परीक्षण समाप्त",
+  "licenseStatusExpired": "लाइसेंस समाप्त",
+  "licenseStatusInvalid": "अमान्य लाइसेंस",
+  "licenseStatusUnregistered": "सेट अप नहीं",
+  "licenseStatusMachineMismatch": "भिन्न कंप्यूटर",
+  "licenseStatusNetworkError": "कनेक्शन त्रुटि",
+  "licenseEnterKeyTitle": "लाइसेंस कुंजी दर्ज करें",
+  "licenseKeyPlaceholder": "CNRI-XXXX-XXXX-XXXX-XXXX",
+  "licenseYourName": "आपका नाम",
+  "licenseEmailAddress": "ईमेल पता",
+  "licenseMachineId": "मशीन ID",
+  "licenseCopyMachineId": "मशीन ID कॉपी करें",
+  "licenseMachineIdCopied": "मशीन ID क्लिपबोर्ड पर कॉपी की गई",
+  "licenseValidationKeyRequired": "कृपया अपनी लाइसेंस कुंजी दर्ज करें",
+  "licenseValidationKeyFormat": "लाइसेंस कुंजी 20 अक्षर की होनी चाहिए (CNRI-XXXX-XXXX-XXXX-XXXX)",
+  "licenseValidationNameRequired": "कृपया अपना नाम दर्ज करें",
+  "licenseValidationEmailRequired": "कृपया अपना ईमेल दर्ज करें",
+  "licenseValidationEmailInvalid": "कृपया एक वैध ईमेल दर्ज करें",
+  "licenseActivate": "लाइसेंस सक्रिय करें",
+  "licenseContinueTrial": "परीक्षण जारी रखें",
+  "licenseBuyLicense": "लाइसेंस खरीदें",
+  "licenseNeedHelp": "सहायता चाहिए?",
+  "licenseLicenseAgreement": "लाइसेंस समझौता",
+  "licenseActivatedSuccess": "लाइसेंस सफलतापूर्वक सक्रिय हुआ!",
+  "licenseMsgMachineMismatch": "यह लाइसेंस किसी अन्य कंप्यूटर पर पंजीकृत है। कृपया अपने मूल डिवाइस का उपयोग करें या सहायता से संपर्क करें।",
+  "licenseMsgTrialEnded": "आपका मुफ्त परीक्षण समाप्त हो गया। सभी सुविधाओं का उपयोग जारी रखने के लिए लाइसेंस कुंजी दर्ज करें।",
+  "licenseMsgExpired": "आपका लाइसेंस समाप्त हो गया है। जारी रखने के लिए कृपया नवीकरण करें।",
+  "licenseMsgNeedsSetup": "लाइसेंस सेट अप की आवश्यकता है। मुफ्त परीक्षण शुरू करें या लाइसेंस कुंजी दर्ज करें।",
+  "licenseMsgCheckFormat": "कृपया अपनी लाइसेंस कुंजी का प्रारूप जांचें। यह इस तरह दिखनी चाहिए: CNRI-XXXX-XXXX-XXXX-XXXX",
+  "licenseMsgNotRecognized": "यह लाइसेंस कुंजी पहचानी नहीं गई। कृपया दोबारा जांचें और फिर कोशिश करें।",
+  "licenseMsgAlreadyRegistered": "यह कुंजी पहले से किसी अन्य कंप्यूटर पर पंजीकृत है।",
+  "licenseMsgContactSupport": "यह लाइसेंस समाप्त हो गया है। नवीकरण के लिए कृपया सहायता से संपर्क करें।",
+  "licenseMsgActivatedThankYou": "लाइसेंस सफलतापूर्वक सक्रिय हुआ! आपकी खरीद के लिए धन्यवाद।",
+  "licenseMsgUnableToActivate": "लाइसेंस सक्रिय करने में असमर्थ। कृपया अपना इंटरनेट कनेक्शन जांचें और फिर कोशिश करें।",
+  "licenseMsgTrialWelcome": "आपका स्वागत है! आपका {days}-दिन का मुफ्त परीक्षण शुरू हो गया।",
+  "@licenseMsgTrialWelcome": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseMsgTrialActive": "परीक्षण सक्रिय: {days} दिन शेष।",
+  "@licenseMsgTrialActive": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseMsgFreeTrialActive": "मुफ्त परीक्षण सक्रिय",
+  "licenseMsgLicenseActive": "लाइसेंस सक्रिय - {type}",
+  "@licenseMsgLicenseActive": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "licenseMsgUnableToActivateKey": "इस लाइसेंस कुंजी को सक्रिय करने में असमर्थ।",
+  "licenseMsgNoLongerValid": "लाइसेंस अब मान्य नहीं है।",
+  "licenseMsgUnableToVerify": "इस लाइसेंस कुंजी को सत्यापित करने में असमर्थ। कृपया सहायता से संपर्क करें।",
+  "trialStartedSnackbar": "परीक्षण शुरू हुआ!",
+  "trialStartedMessage": "14 दिनों की पूर्ण पहुंच का आनंद लें",
+  "windowTitle": "PupilMetrics",
+  "themeMode": "ThemeMode",
+  "methods": "विधियां",
+  "setAsFrameless": "setAsFrameless",
+  "isPreventCloseSetPreventClose": "isPreventClose / setPreventClose",
+  "focusBlur": "focus / blur",
+  "showHide": "show / hide",
+  "isVisible": "isVisible",
+  "isMaximized": "isMaximized",
+  "maximizeUnmaximize": "maximize / unmaximize",
+  "isMinimized": "isMinimized",
+  "minimizeRestore": "minimize / restore",
+  "dockUndock": "dock / undock",
+  "dockLeft": "dock left",
+  "dockRight": "dock right",
+  "undock": "undock",
+  "isFullScreenSetFullScreen": "isFullScreen / setFullScreen",
+  "setAspectRatio": "setAspectRatio",
+  "reset": "reset",
+  "setBackgroundColor": "setBackgroundColor",
+  "transparent": "transparent",
+  "red": "red",
+  "green": "green",
+  "blue": "blue",
+  "setBoundsGetBounds": "setBounds / getBounds",
+  "setAlignment": "setAlignment",
+  "topLeft": "topLeft",
+  "topCenter": "topCenter",
+  "topRight": "topRight",
+  "centerLeft": "centerLeft",
+  "centerRight": "centerRight",
+  "bottomLeft": "bottomLeft",
+  "bottomCenter": "bottomCenter",
+  "bottomRight": "bottomRight",
+  "getPositionSetPosition": "getPosition / setPosition",
+  "getSizeSetSize": "getSize / setSize",
+  "set": "सेट करें",
+  "getMinimumSizeSetMinimumSize": "getMinimumSize / setMinimumSize",
+  "getMaximumSizeSetMaximumSize": "getMaximumSize / setMaximumSize",
+  "isResizableSetResizable": "isResizable / setResizable",
+  "isMovableSetMovable": "isMovable / setMovable",
+  "isMinimizableSetMinimizable": "isMinimizable / setMinimizable",
+  "isMaximizableSetMaximizable": "isMaximizable / setMaximizable",
+  "isClosableSetClosable": "isClosable / setClosable",
+  "isAlwaysOnTopSetAlwaysOnTop": "isAlwaysOnTop / setAlwaysOnTop",
+  "isAlwaysOnBottomSetAlwaysOnBottom": "isAlwaysOnBottom / setAlwaysOnBottom",
+  "getTitleSetTitle": "getTitle / setTitle",
+  "setTitleBarStyle": "setTitleBarStyle",
+  "hidden": "hidden",
+  "getTitleBarHeight": "getTitleBarHeight",
+  "isSkipTaskbar": "isSkipTaskbar",
+  "setSkipTaskbar": "setSkipTaskbar",
+  "setProgressBar": "setProgressBar",
+  "setIcon": "setIcon",
+  "defaultIcon": "डिफ़ॉल्ट",
+  "original": "मूल",
+  "isVisibleOnAllWorkspacesSetVisibleOnAllWorkspaces": "isVisibleOnAllWorkspaces / setVisibleOnAllWorkspaces",
+  "setBadgeLabel": "setBadgeLabel",
+  "hasShadowSetHasShadow": "hasShadow / setHasShadow",
+  "getOpacitySetOpacity": "getOpacity / setOpacity",
+  "setIgnoreMouseEvents": "setIgnoreMouseEvents",
+  "popUpWindowMenu": "popUpWindowMenu",
+  "grabKeyboard": "grabKeyboard",
+  "ungrabKeyboard": "ungrabKeyboard",
+  "dragToMoveArea": "DragToMoveArea",
+  "dragToResizeArea": "DragToResizeArea",
+  "dragToResizeAreaExample": "DragToResizeArea उदाहरण",
+  "closeWindowConfirmation": "क्या आप वाकई इस विंडो को बंद करना चाहते हैं?",
+  "licenseChecking": "लाइसेंस जांच हो रही है...",
+  "licenseRequiredTitle": "लाइसेंस आवश्यक",
+  "licenseActivateValidMessage": "जारी रखने के लिए कृपया एक वैध लाइसेंस सक्रिय करें।",
+  "licenseProIncludes": "PupilMetrics Pro में शामिल है:",
+  "licenseFeatureUnlimitedAnalysis": "असीमित पुतली-collarette विश्लेषण",
+  "licenseFeaturePdfReports": "PDF रिपोर्ट निर्माण",
+  "licenseFeatureBilateralComparison": "द्विपक्षीय तुलना",
+  "licenseFeatureAnwAnalysis": "ANW collarette विश्लेषण",
+  "licenseFeatureScanHistory": "स्कैन इतिहास डेटाबेस",
+  "licenseFeatureUpdates": "1 वर्ष के लिए मुफ्त अपडेट",
+  "licensePurchase": "लाइसेंस खरीदें",
+  "licenseExitApplication": "एप्लिकेशन बंद करें",
+  "windowCompactView": "संक्षिप्त दृश्य",
+  "windowExpandedView": "विस्तृत दृश्य",
+  "licenseStatusTrialDaysLeft": "परीक्षण ({count} दिन शेष)",
+  "@licenseStatusTrialDaysLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseNotLicensed": "लाइसेंस प्राप्त नहीं",
+  "licenseStatusTitle": "लाइसेंस स्थिति",
+  "unknown": "अज्ञात",
+  "plrReportTitle": "PLR विश्लेषण रिपोर्ट",
+  "plrResearchOnlyTitle": "केवल शोध/शैक्षिक उपकरण",
+  "plrResearchDisclaimer": "परिणाम चिकित्सा निदान नहीं हैं। स्वास्थ्य पेशेवर से परामर्श करें।",
+  "plrNameLabel": "नाम",
+  "plrAgeYears": "आयु: {age} वर्ष",
+  "@plrAgeYears": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "plrTestLabel": "परीक्षण",
+  "plrSummaryTitle": "PLR सारांश",
+  "plrGradeValue": "ग्रेड {grade}",
+  "@plrGradeValue": {
+    "placeholders": {
+      "grade": {
+        "type": "String"
+      }
+    }
+  },
+  "plrStatusLabel": "स्थिति",
+  "plrDetectedStatus": "PLR पाया गया",
+  "plrWeakNotDetectedStatus": "कमज़ोर/नहीं पाया गया",
+  "plrRecoveryTimeLabel": "ठीक होने का समय",
+  "plrRecoveryRatioLabel": "ठीक होने का अनुपात",
+  "plrChartDescription": "समय के साथ पुतली प्रतिक्रिया का दृश्य प्रतिनिधित्व",
+  "plrPiRange": "P/I रेंज: {min}% - {max}%",
+  "@plrPiRange": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "plrMinValue": "न्यूनतम: {value}%",
+  "@plrMinValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "plrFrameDataTitle": "फ्रेम डेटा",
+  "plrTableTime": "समय",
+  "plrTablePiPercent": "P/I %",
+  "plrTablePhase": "चरण",
+  "plrTableConfidenceShort": "विश्वास",
+  "plrSuccessfulFailed": "सफल: {success} | विफल: {fail}",
+  "@plrSuccessfulFailed": {
+    "placeholders": {
+      "success": {
+        "type": "int"
+      },
+      "fail": {
+        "type": "int"
+      }
+    }
+  },
+  "plrReferenceLatencyLine": "• विलंब: 200-500ms (प्रारंभिक प्रतिक्रिया का समय)",
+  "plrReferenceConstrictionLine": "• संकुचन: आधार रेखा से 10-30% कमी",
+  "plrReferenceVelocityLine": "• गति: 1.5-4.0%/सेकंड",
+  "plrReferenceRecoveryLine": "• पुनः प्राप्ति: 5 सेकंड के भीतर आधार रेखा पर >75% वापसी",
+  "plrReferenceRecoveryLineShort": "• पुनः प्राप्ति: 5s के भीतर आधार रेखा पर >75% वापसी",
+  "plrShareSubject": "PLR विश्लेषण रिपोर्ट - {eye}",
+  "@plrShareSubject": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "plrTextReportTitle": "PLR वीडियो विश्लेषण रिपोर्ट",
+  "plrTextDisclaimerTitle": "अस्वीकरण: केवल शोध/शैक्षिक उपकरण",
+  "plrTextDisclaimerBody": "परिणाम चिकित्सा निदान नहीं हैं।",
+  "plrOverallGradeLabel": "समग्र ग्रेड",
+  "plrEndOfReport": "रिपोर्ट समाप्त",
+  "zoneOverlay": "ज़ोन ओवरले",
+  "@zoneOverlay": {
+    "description": "Zone overlay / analysis: Zone Overlay"
+  },
+  "tipDragImage": "सुझाव: limbus को ओवरले वृत्तों के साथ संरेखित करने के लिए छवि खींचें।",
+  "@tipDragImage": {
+    "description": "Zone overlay / analysis: Tip: drag image to align limbus with overlay circl"
+  },
+  "overlayMetrics": "ओवरले माप",
+  "@overlayMetrics": {
+    "description": "Zone overlay / analysis: Overlay Metrics"
+  },
+  "piRatioLabel": "P/I अनुपात:",
+  "@piRatioLabel": {
+    "description": "Zone overlay / analysis: P/I Ratio:"
+  },
+  "ellipsenessLabel": "अंडाकारता:",
+  "@ellipsenessLabel": {
+    "description": "Zone overlay / analysis: Ellipseness:"
+  },
+  "decentralizationLabel": "विकेंद्रीकरण:",
+  "@decentralizationLabel": {
+    "description": "Zone overlay / analysis: Decentralization:"
+  },
+  "detectedFindings": "पाए गए निष्कर्ष",
+  "@detectedFindings": {
+    "description": "Zone overlay / analysis: Detected findings"
+  },
+  "anwCollarette": "ANW / COLLARETTE",
+  "@anwCollarette": {
+    "description": "Zone overlay / analysis: ANW / COLLARETTE"
+  },
+  "observerNotes": "पर्यवेक्षक नोट",
+  "@observerNotes": {
+    "description": "Zone overlay / analysis: Observer notes"
+  },
+  "observerNotesHint": "नैदानिक अवलोकन, क्षेत्र निष्कर्ष, पैटर्न दर्ज करें...",
+  "@observerNotesHint": {
+    "description": "Zone overlay / analysis: Enter clinical observations, zone findings, patter"
+  },
+  "autoCenter": "स्वतः-केंद्रित",
+  "@autoCenter": {
+    "description": "Zone overlay / analysis: Auto-center"
+  },
+  "anwRing": "ANW रिंग",
+  "@anwRing": {
+    "description": "Zone overlay / analysis: ANW Ring"
+  },
+  "axisGrid": "अक्ष/ग्रिड",
+  "@axisGrid": {
+    "description": "Zone overlay / analysis: Axis/Grid"
+  },
+  "chart": "चार्ट",
+  "@chart": {
+    "description": "Zone overlay / analysis: Chart"
+  },
+  "hoverToIdentify": "पहचानने के लिए होवर करें या ज़ोन टैप करें",
+  "@hoverToIdentify": {
+    "description": "Zone overlay / analysis: Hover or tap a zone to identify"
+  },
+  "organsMode": "अंग मोड — ज़ोन पहचानने के लिए iris पर होवर करें",
+  "@organsMode": {
+    "description": "Zone overlay / analysis: Organs mode — hover iris to identify zones"
+  },
+  "mildSizeDiff": "हल्का आकार अंतर। यह शारीरिक भिन्नता हो सकती है।",
+  "@mildSizeDiff": {
+    "description": "Zone overlay / analysis: Mild size difference. May be physiological variati"
+  },
+  "withinBaseline": "आयु {age} ({group}) के लिए शोध आधार रेखा के भीतर",
+  "@withinBaseline": {
+    "description": "Zone overlay / analysis: Within research baseline for age {age} ({group})"
+  },
+  "formLabel": "रूप:",
+  "@formLabel": {
+    "description": "Zone overlay / analysis: Form:"
+  },
+  "flatteningLabel": "चपटापन:",
+  "@flatteningLabel": {
+    "description": "Zone overlay / analysis: Flattening:"
+  },
+  "protrusionLabel": "उभार:",
+  "@protrusionLabel": {
+    "description": "Zone overlay / analysis: Protrusion:"
+  },
+  "decentrationLabel": "विकेंद्रीकरण:",
+  "@decentrationLabel": {
+    "description": "Zone overlay / analysis: Decentration:"
+  },
+  "pupilSizeLabel": "पुतली का आकार:",
+  "@pupilSizeLabel": {
+    "description": "Zone overlay / analysis: Pupil size:"
+  },
+  "anwRatioLabel": "ANW अनुपात:",
+  "@anwRatioLabel": {
+    "description": "Zone overlay / analysis: ANW ratio:"
+  },
+  "anwToneLabel": "ANW स्वर:",
+  "@anwToneLabel": {
+    "description": "Zone overlay / analysis: ANW tone:"
+  },
+  "noMajorODAnomalies": "कोई प्रमुख OD पुतली विसंगति नहीं।",
+  "@noMajorODAnomalies": {
+    "description": "Zone overlay / analysis: No major OD pupil anomalies."
+  },
+  "noMajorOSAnomalies": "कोई प्रमुख OS पुतली विसंगति नहीं।",
+  "@noMajorOSAnomalies": {
+    "description": "Zone overlay / analysis: No major OS pupil anomalies."
+  },
+  "anwNotAssessed": "ANW: मूल्यांकन नहीं किया गया",
+  "@anwNotAssessed": {
+    "description": "Zone overlay / analysis: ANW: not assessed"
+  },
+  "manualAlignmentAid": "केवल समीक्षा के लिए मैन्युअल संरेखण सहायता (कैप्चर के बाद)। छवि खींचें या स्वतः-केंद्रित का उपयोग करें।",
+  "@manualAlignmentAid": {
+    "description": "Zone overlay / analysis: Manual alignment aid for review only (post-capture"
+  },
+  "frontalShift": "S: ललाट विस्थापन पैटर्न।",
+  "@frontalShift": {
+    "description": "Zone overlay / analysis: S: Frontal shift."
+  },
+  "cerebralCirculation": "Velchover के अनुसार ऐतिहासिक अध्ययनों ने इसे मस्तिष्क परिसंचरण पैटर्न से जोड़ा है।",
+  "@cerebralCirculation": {
+    "description": "Zone overlay / analysis: Cerebral circulation patterns."
+  },
+  "middleTemporalShift": "D: मध्य-अस्थायी विस्थापन पैटर्न।",
+  "@middleTemporalShift": {
+    "description": "Zone overlay / analysis: D: Middle-temporal shift."
+  },
+  "respiratoryCardiac": "Velchover के अनुसार ऐतिहासिक अध्ययनों ने इसे श्वसन और हृदय स्वायत्त पैटर्न से जोड़ा है।",
+  "@respiratoryCardiac": {
+    "description": "Zone overlay / analysis: Respiratory and cardiac autonomic patterns."
+  },
+  "findings": "निष्कर्ष:",
+  "@findings": {
+    "description": "Zone overlay / analysis: Findings:"
+  },
+  "analysisReportTitle": "पुतली विश्लेषण रिपोर्ट",
+  "reportResearchVersion": "शोध संस्करण",
+  "reportDisclaimerTitle": "अस्वीकरण: केवल शोध/शैक्षिक उपकरण",
+  "reportDisclaimerBody": "परिणाम शोध अवलोकन हैं, चिकित्सा निदान नहीं।",
+  "reportPersonInformationTitle": "व्यक्ति की जानकारी",
+  "reportAgeGroupLabel": "आयु समूह",
+  "reportPupilSizeComparisonTitle": "पुतली आकार तुलना",
+  "reportCaptureDistanceMetricsTitle": "कैप्चर दूरी माप",
+  "reportResearchObservationsTitle": "शोध अवलोकन",
+  "reportObserverNotesZoneOverlayTitle": "पर्यवेक्षक नोट (ज़ोन ओवरले)",
+  "reportEndOfReport": "रिपोर्ट समाप्त",
+  "reportGradeLabel": "ग्रेड",
+  "reportPupilFormTitle": "पुतली रूप",
+  "reportDecentrationTitle": "विकेंद्रीकरण",
+  "reportFlatteningsTitle": "चपटेपन",
+  "reportProtrusionsTitle": "उभार",
+  "reportAnwParametersTitle": "स्वायत्त तंत्रिका पुष्पांजलि (ANW)",
+  "reportTonicStateLabel": "ऐतिहासिक स्वर पैटर्न",
+  "reportShiftDetectedTitle": "ऐतिहासिक विस्थापन पैटर्न",
+  "reportClinicalLabel": "ऐतिहासिक नोट",
+  "reportConstrictionDetectedTitle": "संकुचन पाया गया",
+  "reportSeverityLabel": "गंभीरता",
+  "reportReferenceValuesTitle": "संदर्भ मान (CNRI शोध प्रोटोकॉल)",
+  "reportMatchLabel": "मिलान",
+  "reportValueLabel": "मान",
+  "reportNormalPupilForm": "सामान्य पुतली रूप",
+  "reportPageXofY": "पृष्ठ {page}/{total}",
+  "@reportPageXofY": {
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "reportShareSubject": "पुतली विश्लेषण रिपोर्ट - {patientName}",
+  "@reportShareSubject": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      }
+    }
+  },
+  "reportShareBody": "{patientName} की पुतली विश्लेषण रिपोर्ट संलग्न है, {date} को तैयार की गई।",
+  "@reportShareBody": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "belowBaseline": "आयु {age} ({group}) के लिए शोध आधार रेखा से नीचे",
+  "@belowBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "aboveBaseline": "आयु {age} ({group}) के लिए शोध आधार रेखा से ऊपर",
+  "@aboveBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "ageGroupInfant": "शिशु",
+  "@ageGroupInfant": {
+    "description": "Localized age group label"
+  },
+  "ageGroupChild15": "बच्चा (1-5)",
+  "@ageGroupChild15": {
+    "description": "Localized age group label"
+  },
+  "ageGroupChild611": "बच्चा (6-11)",
+  "@ageGroupChild611": {
+    "description": "Localized age group label"
+  },
+  "ageGroupTeen": "किशोर",
+  "@ageGroupTeen": {
+    "description": "Localized age group label"
+  },
+  "ageGroupAdult2039": "वयस्क (20-39)",
+  "@ageGroupAdult2039": {
+    "description": "Localized age group label"
+  },
+  "ageGroupAdult4059": "वयस्क (40-59)",
+  "@ageGroupAdult4059": {
+    "description": "Localized age group label"
+  },
+  "ageGroupSenior60Plus": "वरिष्ठ (60+)",
+  "@ageGroupSenior60Plus": {
+    "description": "Localized age group label"
+  },
+  "middleNasalShift": "मध्य-नासिका विस्थापन पैटर्न।",
+  "upperTemporalShift": "ऊपरी-अस्थायी विस्थापन पैटर्न।",
+  "lowerTemporalShift": "निचला-अस्थायी विस्थापन पैटर्न।",
+  "basalShift": "आधार विस्थापन पैटर्न।",
+  "vagusStellateAssociation": "Velchover के अनुसार ऐतिहासिक अध्ययनों ने इसे वेगस तंत्रिका या स्टेलेट गैंग्लियन के अल्पक्रिया पैटर्न से जोड़ा है।",
+  "venaCavaInferiorAssociation": "Velchover के अनुसार ऐतिहासिक अध्ययनों ने इसे अवर वेना कावा में हेमोडायनामिक गड़बड़ी के पैटर्न से जोड़ा है।",
+  "vertebralArteryAssociation": "Velchover के अनुसार ऐतिहासिक अध्ययनों ने इसे कशेरुका धमनी परिसंचरण पैटर्न से जोड़ा है।",
+  "smallPelvisAssociation": "Velchover के अनुसार ऐतिहासिक अध्ययनों ने इसे छोटी श्रोणि में जमाव के पैटर्न से जोड़ा है।",
+  "openZoneOverlay": "ज़ोन ओवरले खोलें",
+  "iris": "Iris",
+  "chartOpacity": "चार्ट अपारदर्शिता",
+  "irisSizeNotAvailable": "Iris आकार डेटा उपलब्ध नहीं",
+  "ratio": "अनुपात",
+  "reportRefPiRatio": "पुतली/Iris अनुपात: सामान्य 20-30%",
+  "reportRefEllipseness": "अंडाकारता: सामान्य >95%",
+  "reportRefDecentralization": "विकेंद्रीकरण: सामान्य <5%",
+  "reportRefPupilSizeDiff": "पुतली आकार अंतर: <2% सामान्य, 2-4% हल्का, >4% महत्वपूर्ण",
+  "enterPatientInfoAnalysis": "रोगी जानकारी दर्ज करें → विश्लेषण",
+  "chooseCaptureMethod": "कैप्चर विधि चुनें:",
+  "usbCamera": "USB कैमरा",
+  "selectExistingImage": "मौजूदा छवि चुनें",
+  "detectingCameras": "कैमरे का पता लगाया जा रहा है...",
+  "retryDetection": "पुनः पता लगाएं",
+  "connectUvcCameraViaUsb": "USB के माध्यम से UVC कैमरा कनेक्ट करें",
+  "ensureCameraDriversInstalled": "सुनिश्चित करें कि कैमरा ड्राइवर इंस्टॉल हैं",
+  "tapRefreshToDetect": "कैमरे का पता लगाने के लिए Refresh टैप करें",
+  "connectUsbCameraToBegin": "शुरू करने के लिए USB कैमरा कनेक्ट करें",
+  "noExternalCameraTitle": "कोई बाहरी कैमरा नहीं मिला",
+  "connectUsbIriscopeEnsurePlugged": "अपना USB iriscope कनेक्ट करें और सुनिश्चित करें कि यह प्लग इन है",
+  "languagesAvailable": "उपलब्ध भाषाएं",
+  "validationChecks": "जांच सूची:",
+  "eyeQualityTip": "सुझाव: अच्छी रोशनी सुनिश्चित करें और आंख को स्थिर रखें",
+  "validatingEye": "आंख की जांच हो रही है...",
+  "initializing": "आरंभ हो रहा है...",
+  "nameLabel": "नाम:",
+  "ageLabel": "आयु:",
+  "typeLabel": "प्रकार:",
+  "pleaseEnterName": "कृपया नाम दर्ज करें",
+  "pleaseEnterAge": "कृपया आयु दर्ज करें",
+  "ageMustBe2Digits": "आयु में 1 या 2 अंक होने चाहिए",
+  "optional": "(वैकल्पिक)",
+  "bilateralBothHands": "दोनों हाथों का द्विपक्षीय उपयोग",
+  "zoom": "ज़ूम",
+  "zoomSliderTip": "रिकॉर्डिंग से पहले आवर्धन समायोजित करने के लिए दाईं ओर ज़ूम स्लाइडर का उपयोग करें।",
+  "aboutProgramDeveloper": "प्रोग्राम डेवलपर - Bryan K. Marcia, Ph.D.",
+  "chartSizeTooltip": "चार्ट का आकार",
+  "chartOpacityAdvancedTooltip": "चार्ट अपारदर्शिता (0 = केवल होवर / अंग मोड)",
+  "anwLabel": "ANW",
+  "doneAndGoBack": "हो गया और वापस जाएं",
+  "errorImageShape": "छवि का आकार गलत है - सुनिश्चित करें कि आंख फ्रेम भरे",
+  "cameraConnected": "कैमरा जुड़ा हुआ है",
+  "cameraDisconnected": "कैमरा डिस्कनेक्ट हुआ",
+  "cameraPermissionDenied": "कैमरा अनुमति अस्वीकृत",
+  "cameraFailedInit": "कैमरा आरंभ करने में विफल",
+  "cameraInUse": "कैमरा किसी अन्य ऐप द्वारा उपयोग में है",
+  "cameraFormatNotSupported": "कैमरा प्रारूप समर्थित नहीं",
+  "capturedImageNotFound": "कैप्चर की गई छवि फ़ाइल नहीं मिली",
+  "failedToCaptureImage": "छवि कैप्चर करने में विफल",
+  "gradeA": "A",
+  "gradeB": "B",
+  "gradeC": "C",
+  "gradeD": "D",
+  "cameraErrorOccurred": "कैमरा त्रुटि हुई",
+  "connectingToUsbIriscope": "USB iriscope से जुड़ रहे हैं...",
+  "noCamerasDetectedMessage": "कोई कैमरा नहीं मिला। कृपया सुनिश्चित करें कि आपका USB कैमरा कनेक्ट है और आपके सिस्टम द्वारा पहचाना गया है।",
+  "failedToAccessCameras": "कैमरों तक पहुंचने में विफल"
+}

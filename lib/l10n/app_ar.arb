@@ -1,0 +1,1921 @@
+{
+  "@@locale": "ar",
+  "appTitle": "PupilMetrics",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "analyzeButton": "تحليل",
+  "plrModes": "أوضاع PLR",
+  "captureInstructions": "ضع العين داخل دائرة الإرشاد",
+  "scanHistory": "سجل الفحوصات",
+  "selectCameraMode": "اختر وضع الكاميرا",
+  "loadFromGallery": "تحميل من المعرض",
+  "rightEyePhoto": "صورة العين اليمنى",
+  "leftEyePhoto": "صورة العين اليسرى",
+  "autoCapture": "التقاط تلقائي",
+  "autoCaptureDesc": "كشف العين + التقاط تلقائي بعد 5 ثوانٍ",
+  "manualCapture": "التقاط يدوي",
+  "manualCaptureDesc": "كشف العين + التقاط يدوي (الكاميرا الخلفية)",
+  "selfieMode": "وضع السيلفي",
+  "selfieModeDesc": "كشف العين + التقاط تلقائي بعد 5 ثوانٍ (الكاميرا الأمامية)",
+  "plrVideoRear": "فيديو PLR (خلفي)",
+  "plrVideoRearDesc": "الكاميرا الخلفية • التقاط 10 ثوانٍ",
+  "plrVideoSelfie": "فيديو PLR (سيلفي)",
+  "plrVideoSelfieDesc": "الكاميرا الأمامية • التقاط 10 ثوانٍ",
+  "plrVideoCapture": "التقاط فيديو PLR",
+  "frontCamera": "الكاميرا الأمامية",
+  "rearCamera": "الكاميرا الخلفية",
+  "selectEyeToAssess": "اختر العين المراد تقييمها",
+  "rightEyeOD": "العين اليمنى (OD)",
+  "leftEyeOS": "العين اليسرى (OS)",
+  "recordPlrRightEye": "تسجيل PLR للعين اليمنى",
+  "recordPlrLeftEye": "تسجيل PLR للعين اليسرى",
+  "loadRightEyeImage": "تحميل صورة العين اليمنى",
+  "loadLeftEyeImage": "تحميل صورة العين اليسرى",
+  "bothEyes": "كلتا العينين",
+  "loadBothEyesDesc": "تحميل العين اليمنى ثم العين اليسرى",
+  "selectEyeImageFromDevice": "اختر صورة عين من جهازك",
+  "selectRightEyeFirst": "اختر صورة العين اليمنى (OD) أولاً",
+  "rightEyeSaved": "تم حفظ العين اليمنى. اختر الآن صورة العين اليسرى (OS)",
+  "cancelledNoRightEye": "تم الإلغاء - لم تُختر عين يمنى",
+  "cancelledNoLeftEye": "تم الإلغاء - لم تُختر عين يسرى",
+  "errorLoadingImages": "خطأ في تحميل الصور: {error}",
+  "@errorLoadingImages": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "crop43": "قص (4:3)",
+  "success": "نجاح",
+  "imageCroppedSuccess": "تم قص الصورة بنجاح!",
+  "error": "خطأ",
+  "cropFailed": "فشل قص الصورة. يرجى المحاولة مرة أخرى.",
+  "crop": "قص",
+  "cancel": "إلغاء",
+  "saved": "تم الحفظ! ✅",
+  "imageSavedToGallery": "تم حفظ الصورة بنجاح في المعرض",
+  "exposure": "التعرض",
+  "flash": "الفلاش",
+  "eye": "العين",
+  "center": "المركز",
+  "light": "الضوء",
+  "ready": "جاهز",
+  "on": "تشغيل",
+  "off": "إيقاف",
+  "auto": "تلقائي",
+  "manual": "يدوي",
+  "selfie": "سيلفي",
+  "pupil": "بؤبؤ العين",
+  "plrHistory": "سجل PLR",
+  "searchByName": "البحث بالاسم...",
+  "totalScans": "إجمالي الفحوصات",
+  "thisWeek": "هذا الأسبوع",
+  "patients": "المرضى",
+  "detected": "تم الكشف",
+  "noPlrRecordsYet": "لا توجد سجلات PLR بعد",
+  "recordPlrVideoToSeeHistory": "سجّل فيديو PLR لعرض السجل هنا",
+  "deleteRecord": "حذف السجل؟",
+  "deleteRecordConfirm": "حذف تحليل PLR لـ {name} ({eye})؟\\n\\nلا يمكن التراجع عن هذا الإجراء.",
+  "@deleteRecordConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "delete": "حذف",
+  "recordDeleted": "تم حذف السجل",
+  "plrAnalysis": "تحليل PLR - {eye}",
+  "@plrAnalysis": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "patient": "المريض",
+  "date": "التاريخ",
+  "frames": "الإطارات",
+  "baselinePiRatio": "نسبة P/I الأساسية",
+  "minPiRatio": "أدنى نسبة P/I",
+  "plrMagnitude": "شدة PLR",
+  "constriction": "الانقباض",
+  "plrDetected": "تم كشف PLR",
+  "confidence": "الثقة",
+  "grade": "الدرجة",
+  "close": "إغلاق",
+  "yes": "نعم",
+  "no": "لا",
+  "na": "غير متاح",
+  "takeLeftEyePhoto": "التقط صورة العين اليسرى",
+  "takeRightEyePhoto": "التقط صورة العين اليمنى",
+  "nowTakingLeftEye": "يتم الآن التقاط العين اليسرى (OS)",
+  "startingWithRightEye": "البدء بالعين اليمنى (OD)",
+  "captured": "تم الالتقاط ✓",
+  "useSameDistanceLighting": "استخدم نفس المسافة والإضاءة كالعين اليمنى للحصول على مقارنة دقيقة.",
+  "step1of2": "الخطوة 1 من 2",
+  "step2of2": "الخطوة 2 من 2",
+  "bothEyesCaptured": "تم التقاط كلتا العينين ✓",
+  "continueToLeftEye": "المتابعة إلى العين اليسرى",
+  "retakeOD": "إعادة التقاط OD",
+  "retakeOS": "إعادة التقاط OS",
+  "retakeRightEye": "إعادة التقاط العين اليمنى",
+  "analyzeBothEyes": "تحليل كلتا العينين",
+  "patientInfoMissing": "بيانات المريض مفقودة",
+  "rightEyePhotoMissing": "صورة العين اليمنى مفقودة!",
+  "patientInfoMissingRestart": "بيانات المريض مفقودة. يرجى إعادة التشغيل.",
+  "exitApp": "إنهاء التطبيق",
+  "tipsForBestResults": "نصائح للحصول على أفضل النتائج",
+  "followGuidelinesForQuality": "اتبع هذه الإرشادات للحصول على جودة صورة مثلى",
+  "cameraDistance": "مسافة الكاميرا",
+  "cameraDistanceDesc": "أبقِ الكاميرا على بُعد 4-6 بوصات من عينك. احتفظ بنفس المسافة لكلتا العينين.",
+  "lightingPosition": "موضع الإضاءة",
+  "lightingPositionDesc": "ضع مصدر الضوء داخل حدود بؤبؤ العين أو خارجها. جرّب التحديق نحو فلاش الكاميرا.",
+  "avoidReflections": "تجنب الانعكاسات",
+  "avoidReflectionsDesc": "قلّل الانعكاسات بتجنب الوهج من النوافذ والمرايا والمصابيح المباشرة.",
+  "centerYourEye": "توسيط عينك",
+  "centerYourEyeDesc": "تأكد من أن العين بأكملها بما فيها الصلبة (الجزء الأبيض) متمركزة وتملأ الإطار.",
+  "cropProperly": "القص بشكل صحيح",
+  "cropProperlyDesc": "اقص الصورة مع وضع العين في المركز. سيتم حفظ الصورة تلقائياً بنسبة 4:3.",
+  "importantInformation": "معلومات مهمة",
+  "imageRatio43": "نسبة الصورة 4:3 وفق معيار التصوير الطبي",
+  "forClinicalUseCnri": "للاستخدام السريري مع CNRI (cnri.edu)",
+  "noMedicalDiagnosis": "لا يُقدم تشخيصاً طبياً",
+  "eyeWideOpenClear": "تأكد من أن عينك مفتوحة على نطاق واسع والصورة واضحة",
+  "personalInfo": "المعلومات الشخصية",
+  "personInformation": "معلومات الشخص",
+  "enterPersonDetails": "أدخل بيانات الشخص",
+  "infoIncludedInReport": "ستُدرج هذه المعلومات في تقرير التحليل",
+  "fullName": "الاسم الكامل",
+  "enterPersonName": "أدخل اسم الشخص",
+  "nameRequired": "الاسم مطلوب",
+  "sex": "الجنس",
+  "male": "ذكر",
+  "female": "أنثى",
+  "ageYears": "العمر (بالسنوات)",
+  "enterAge": "أدخل العمر",
+  "ageRequired": "العمر مطلوب",
+  "enterValidNumber": "أدخل رقماً صحيحاً",
+  "enterValidAge": "أدخل عمراً صحيحاً (0-120)",
+  "mainComplaints": "الشكاوى الرئيسية",
+  "mainComplaintsOptional": "الشكاوى الرئيسية (اختياري)",
+  "complaintsHint": "مثال: صداع، مشاكل في الرؤية، إرهاق...",
+  "continueToCaptire": "المتابعة إلى الالتقاط",
+  "ageImportantNote": "العمر مهم لتقييم حجم بؤبؤ العين بدقة إذ تتفاوت النطاقات الطبيعية حسب العمر.",
+  "submit": "إرسال",
+  "pleaseSelectGender": "يرجى اختيار الجنس!",
+  "applicationSubmitted": "تم إرسال طلبك بنجاح.",
+  "type": "النوع:",
+  "gender": "الجنس:",
+  "rightHanded": "أيمن",
+  "leftHanded": "أيسر",
+  "partialLeftHandedness": "يسارية جزئية",
+  "retrainedLeftHandedness": "يسارية معاد تدريبها",
+  "bilateralUseBothHands": "استخدام ثنائي لكلتا اليدين",
+  "splashTitle": "PupilMetrics لالتقاط صور العين",
+  "splashDeveloper": "مطور البرنامج - Bryan K. Marcia, Ph.D.",
+  "researchEducationalTool": "أداة بحثية/تعليمية",
+  "startNewAnalysis": "بدء تحليل جديد",
+  "viewHistory": "عرض السجل",
+  "viewResearchDisclaimer": "عرض إخلاء مسؤولية البحث",
+  "researchDisclaimerTitle": "أداة بحثية/تعليمية",
+  "researchDisclaimerNotMedical": "ليس جهازاً طبياً",
+  "researchDisclaimerNotClinical": "غير مخصص للتشخيص السريري",
+  "researchDisclaimerResults": "النتائج ملاحظات بحثية",
+  "researchDisclaimerConsult": "استشر دائماً المختصين في الرعاية الصحية",
+  "researchDisclaimerAcknowledge": "بالمتابعة، تُقرّ بأن هذا التطبيق أداة بحثية ولا ينبغي استخدامه لاتخاذ قرارات طبية.",
+  "researchDisclaimerWarning": "هذا التطبيق للأغراض البحثية والتعليمية فقط.",
+  "iUnderstand": "أفهم ذلك",
+  "plrAnalysisTest": "اختبار تحليل PLR",
+  "checkingVideoFile": "جارٍ التحقق من ملف الفيديو...",
+  "processingFrame": "معالجة الإطار {current}/{total} ({timestamp}ms)...",
+  "@processingFrame": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "timestamp": {
+        "type": "int"
+      }
+    }
+  },
+  "analysisComplete": "اكتمل التحليل!",
+  "errorVideoNotFound": "خطأ: لم يُعثر على ملف الفيديو",
+  "waitingForResults": "في انتظار النتائج...",
+  "baseline": "القياس الأساسي",
+  "flashPhase": "الفلاش",
+  "constrictionPhase": "الانقباض",
+  "recovery": "الاسترداد",
+  "plrDetectedExclaim": "تم كشف PLR!",
+  "plrWeakNotDetected": "PLR ضعيف/لم يُكشف",
+  "min": "أدنى",
+  "plr": "PLR",
+  "constrLabel": "انقباض",
+  "saveToHistory": "حفظ في السجل",
+  "txt": "TXT",
+  "json": "JSON",
+  "saveFrames": "حفظ الإطارات",
+  "share": "مشاركة",
+  "frameSavedToGallery": "تم حفظ الإطار في المعرض!",
+  "failedToSaveFrame": "فشل حفظ الإطار",
+  "framesSavedToGallery": "تم حفظ {count} إطار في المعرض!",
+  "@framesSavedToGallery": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "jsonCopiedToClipboard": "تم نسخ JSON إلى الحافظة!",
+  "reportCopiedToClipboard": "تم نسخ التقرير إلى الحافظة!",
+  "shareFailedError": "فشلت المشاركة: {error}",
+  "@shareFailedError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "savedToHistoryId": "تم الحفظ في السجل! (المعرّف: {id})",
+  "@savedToHistoryId": {
+    "placeholders": {
+      "id": {
+        "type": "int"
+      }
+    }
+  },
+  "failedToSave": "فشل الحفظ: {error}",
+  "@failedToSave": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noSuccessfulFramesToSave": "لا توجد إطارات ناجحة للحفظ",
+  "saveAllFrames": "حفظ جميع الإطارات",
+  "shareReport": "مشاركة التقرير",
+  "shareJson": "مشاركة JSON",
+  "rerunTest": "إعادة الاختبار",
+  "videoCaptureTitle": "PLR - {eye}",
+  "@videoCaptureTitle": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "initializingCamera": "جارٍ تهيئة الكاميرا...",
+  "usingCamera": "استخدام كاميرا {camera}",
+  "@usingCamera": {
+    "placeholders": {
+      "camera": {
+        "type": "String"
+      }
+    }
+  },
+  "cameraError": "خطأ في الكاميرا: {error}",
+  "@cameraError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noCamerasFound": "لم يُعثر على كاميرات",
+  "retry": "إعادة المحاولة",
+  "startPlrRecording": "بدء تسجيل PLR",
+  "stopRecording": "إيقاف التسجيل",
+  "phaseReady": "جاهز",
+  "phaseStarting": "جارٍ البدء...",
+  "phaseBaseline": "القياس الأساسي (0-{sec}ث)",
+  "@phaseBaseline": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseFlash": "الفلاش!",
+  "phaseConstriction": "الانقباض ({start}-{end}ث)",
+  "@phaseConstriction": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseRecovery": "الاسترداد ({start}-{end}ث)",
+  "@phaseRecovery": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseComplete": "مكتمل!",
+  "readyDesc": "ضع العين في الدائرة ثم اضغط ابدأ",
+  "holdSteady": "ثبّت الكاميرا...",
+  "recordingBaselinePupil": "تسجيل الحجم الأساسي لبؤبؤ العين",
+  "lightStimulus": "منبّه ضوئي ({ms}ms)",
+  "@lightStimulus": {
+    "placeholders": {
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "measuringConstriction": "قياس انقباض بؤبؤ العين",
+  "measuringRecovery": "قياس استرداد بؤبؤ العين",
+  "plrRecordingComplete": "اكتمل تسجيل PLR",
+  "positionEyeInstruction": "ضع عين {eye} داخل الدائرة.\\nحافظ على الثبات طوال فترة التسجيل البالغة {seconds} ثانية.",
+  "@positionEyeInstruction": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      },
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "keepEyeSteadyFlash": "أبقِ العين ثابتة. سيُطلق الفلاش عند {sec} ثوانٍ.",
+  "@keepEyeSteadyFlash": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "recordingComplete": "اكتمل التسجيل",
+  "plrVideoCapturedSuccess": "تم التقاط فيديو PLR بنجاح!",
+  "duration": "المدة",
+  "seconds": "ثوانٍ",
+  "frameRate": "معدل الإطارات",
+  "camera": "الكاميرا",
+  "flashAt": "عند {sec}ث ({ms}ms)",
+  "@flashAt": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      },
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "phases": "المراحل",
+  "phasesFlow": "القياس الأساسي → الفلاش → الانقباض → الاسترداد",
+  "expectedNormalValues": "القيم الطبيعية المتوقعة:",
+  "latency": "الكمون",
+  "velocity": "السرعة",
+  "testFrameAnalysis": "🧪 تحليل إطار اختباري",
+  "retake": "إعادة الالتقاط",
+  "done": "تم",
+  "plrVideoModeTitle": "وضع فيديو PLR",
+  "plrAssessmentTitle": "تقييم رد فعل البؤبؤ للضوء (PLR)",
+  "plrInstructions": "1. ضع العين داخل دائرة الإرشاد\\n2. اضغط 'بدء تسجيل PLR'\\n3. حافظ على الثبات لمدة 10 ثوانٍ\\n4. سيُطلق الفلاش عند 3 ثوانٍ\\n5. يسجّل التطبيق استجابة بؤبؤ العين",
+  "recordingPhases": "مراحل التسجيل:",
+  "baselinePhaseDesc": "الحجم الأولي لبؤبؤ العين",
+  "flashPhaseDesc": "منبّه ضوئي",
+  "constrictionPhaseDesc": "انكماش بؤبؤ العين",
+  "recoveryPhaseDesc": "عودة بؤبؤ العين",
+  "normalPlrValues": "قيم PLR الطبيعية:",
+  "gotIt": "حسناً",
+  "pupilAnalysis": "تحليل بؤبؤ العين",
+  "scansLeft": "تبقّى {count}",
+  "@scansLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "validatingRightEye": "جارٍ التحقق من العين اليمنى...",
+  "validatingLeftEye": "جارٍ التحقق من العين اليسرى...",
+  "analyzingRightEye": "جارٍ تحليل العين اليمنى (OD)...",
+  "analyzingLeftEye": "جارٍ تحليل العين اليسرى (OS)...",
+  "comparingPupils": "جارٍ مقارنة البؤبؤين...",
+  "person": "الشخص: {name}",
+  "@person": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "invalidEyeImage": "صورة عين غير صالحة",
+  "analysisFailed": "فشل التحليل: {error}",
+  "@analysisFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "researchEducationalToolOnly": "أداة بحثية/تعليمية فقط",
+  "resultsNotMedicalDiagnoses": "هذا التطبيق للأغراض البحثية والتعليمية فقط. النتائج ليست تشخيصات طبية ولم يتم التحقق منها للاستخدام السريري. ارتباطات الأنماط مستمدة من أدبيات البحث التاريخية. استشر مختصاً في الرعاية الصحية لأي مخاوف صحية.",
+  "pupilSizeDifference": "تم كشف فرق في حجم بؤبؤ العين",
+  "significantPupilSizeDiff": "فرق ملحوظ في حجم بؤبؤ العين",
+  "diff": "فرق",
+  "researchObservationConsult": "ملاحظة بحثية - استشر مختصاً في الرعاية الصحية للتفسير",
+  "ageBasedResearchBaseline": "القياس الأساسي البحثي حسب العمر",
+  "group": "المجموعة: {group}",
+  "@group": {
+    "placeholders": {
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "researchRange": "النطاق البحثي",
+  "measuredEst": "المقاس (تقريبي)",
+  "pupilForm": "شكل بؤبؤ العين",
+  "decentrationPattern": "نمط الإزاحة المركزية",
+  "flattenings": "التسطيحات",
+  "protrusions": "النتوءات",
+  "zonesCount": "{count} مناطق",
+  "@zonesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bilateralComparison": "المقارنة الثنائية",
+  "parameter": "المعامل",
+  "od": "OD",
+  "os": "OS",
+  "piRatio": "نسبة P/I",
+  "ellipseness": "الاستطالة البيضاوية",
+  "circularity": "الاستدارة",
+  "decentralization": "اللامركزية",
+  "anwRatio": "النسبة",
+  "normal": "طبيعي",
+  "elliptical": "بيضاوي",
+  "circular": "دائري",
+  "irregular": "غير منتظم",
+  "centered": "متمركز",
+  "offset": "إزاحة",
+  "miosis": "انقباض البؤبؤ",
+  "constricted": "مُنقبض",
+  "dilated": "مُتسع",
+  "mydriasis": "اتساع البؤبؤ",
+  "inner": "داخلي",
+  "outer": "خارجي",
+  "high": "عالٍ",
+  "moderate": "متوسط",
+  "savePdf": "حفظ PDF",
+  "sharePdf": "مشاركة PDF",
+  "retakePhotos": "إعادة التقاط الصور",
+  "scansLeftBanner": "تبقّى {count} فحص",
+  "@scansLeftBanner": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "upgrade": "ترقية",
+  "unlockUnlimited": "فتح نسخة غير محدودة",
+  "usedAllFreeScans": "لقد استخدمت جميع الفحوصات المجانية.",
+  "unlimitedScans": "فحوصات غير محدودة",
+  "pdfReports": "تقارير PDF",
+  "scanHistoryFeature": "سجل الفحوصات",
+  "bilateralAnalysis": "التحليل الثنائي",
+  "monthly": "شهري",
+  "perMonth": "/شهر",
+  "annual": "سنوي",
+  "perYear": "/سنة",
+  "tenCredits": "10 رصيد",
+  "oneTime": "مرة واحدة",
+  "best": "الأفضل",
+  "purchaseCancelled": "تم إلغاء الشراء",
+  "purchaseFailed": "فشل الشراء: {error}",
+  "@purchaseFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "txtSaved": "تم حفظ TXT: {path}",
+  "@txtSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "jsonSaved": "تم حفظ JSON: {path}",
+  "@jsonSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfSaved": "تم حفظ PDF!",
+  "pdfFailed": "فشل PDF: {error}",
+  "@pdfFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "open": "فتح",
+  "failed": "فشل: {error}",
+  "@failed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "staticScans": "ثابت",
+  "plrScans": "PLR",
+  "searchByNameOrComplaints": "البحث بالاسم أو الشكاوى...",
+  "searchPlrRecords": "البحث في سجلات PLR...",
+  "noScansYet": "لا توجد فحوصات بعد",
+  "completedScansAppearHere": "ستظهر الفحوصات المكتملة هنا",
+  "deleteScan": "حذف الفحص؟",
+  "deleteScanConfirm": "حذف فحص {name} بتاريخ {date}؟",
+  "@deleteScanConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "scanDeleted": "تم حذف الفحص",
+  "originalImagesNotFound": "لم يُعثر على صور العين الأصلية.",
+  "viewResults": "عرض النتائج",
+  "avgPlr": "متوسط PLR",
+  "years": "سنوات",
+  "anisocoria": "تفاوت حدقتي العين",
+  "none": "لا شيء",
+  "mild": "خفيف",
+  "severe": "شديد",
+  "zoneLabel": "المنطقة: {zone}",
+  "@zoneLabel": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "associatedWith": "مرتبط بـ {organ}",
+  "@associatedWith": {
+    "placeholders": {
+      "organ": {
+        "type": "String"
+      }
+    }
+  },
+  "significant": "ملحوظ",
+  "fair": "مقبول",
+  "low": "منخفض",
+  "good": "جيد",
+  "zones": "مناطق",
+  "significanceWithinLimits": "ضمن الحدود المقبولة",
+  "significanceMild": "خفيف",
+  "significanceModerate": "متوسط",
+  "significanceSignificant": "ملحوظ",
+  "formTypeCircle": "دائري (طبيعي)",
+  "formTypeOval": "بيضاوي",
+  "formTypeOvalVertical": "بيضاوي رأسي",
+  "formTypeOvalHorizontal": "بيضاوي أفقي",
+  "formTypeOvalDiagonal": "بيضاوي قطري",
+  "formTypeLeftObliqueEllipse": "إهليلج مائل يساري",
+  "formTypeUnilateralEllipse": "إهليلج أحادي الجانب",
+  "formTypeVentralDivergingEllipse": "إهليلج متباعد بطني",
+  "formTypeFrontalDivergingEllipse": "إهليلج متباعد أمامي",
+  "formTypeEllipse": "إهليلج",
+  "formTypeChord": "وتري",
+  "formTypeIrregular": "غير منتظم",
+  "pupilFormCircleDesc": "شكل بؤبؤ دائري طبيعي. لم تُكشف أي تغيرات في النمط.",
+  "pupilFormOvalHorizontalDesc": "نمط بيضاوي أفقي. يرتبط في أبحاث تاريخية بأنماط الجهاز العصبي اللاإرادي المؤثرة على مناطق الجهاز التنفسي والوظائف الغدية.",
+  "pupilFormOvalVerticalDesc": "نمط بيضاوي رأسي. ربطت أبحاث تاريخية هذا النمط بمناطق الدورة الدموية الدماغية في دراسات المنعكس اللاإرادي.",
+  "pupilFormOvalDiagonalDesc": "نمط بيضاوي قطري. ربطت أدبيات البحث هذا النمط بمنعكسات المنطقة التناسلية البولية في الدراسات اللاإرادية.",
+  "pupilFormLeftObliqueEllipseDesc": "نمط إهليلج مائل يساري. ربطت ملاحظات تاريخية هذا النمط بمناطق لاإرادية تناسلية بولية وأطراف سفلية.",
+  "pupilFormUnilateralEllipseDesc": "نمط إهليلج أحادي الجانب. أشارت أبحاث إلى ارتباطات بمناطق لاإرادية تنفسية وشعبية.",
+  "pupilFormVentralDivergingEllipseDesc": "إهليلج متباعد بطني. ربطت دراسات تاريخية هذا النمط بمناطق لاإرادية للجسم السفلي وأنماط الوظيفة الحركية.",
+  "pupilFormFrontalDivergingEllipseDesc": "إهليلج متباعد أمامي. ربطت أدبيات البحث هذا النمط بمناطق دماغية ولاإرادية علوية.",
+  "pupilFormOvalDesc": "نمط تشوه بيضاوي خفيف. تابع أي تطور في الملاحظات البحثية.",
+  "pupilFormEllipseDesc": "نمط إهليلجي يدل على تغيرات في الجهاز اللاإرادي وفق دراسات تاريخية.",
+  "pupilFormChordDesc": "نمط تشوه وتري يدل على تأثيرات لاإرادية موضعية في أدبيات البحث.",
+  "pupilFormIrregularDesc": "شكل غير منتظم يُشير إلى تأثيرات أنماط لاإرادية متعددة بناءً على ملاحظات تاريخية.",
+  "patternCentered": "متمركز (طبيعي)",
+  "patternFrontal": "إزاحة أمامية",
+  "patternBasal": "إزاحة قاعدية",
+  "patternNasal": "إزاحة أنفية",
+  "patternTemporal": "إزاحة صدغية",
+  "patternMiddleNasal": "إزاحة أنفية وسطية",
+  "patternMiddleTemporal": "إزاحة صدغية وسطية",
+  "patternUpperNasal": "إزاحة أنفية علوية",
+  "patternUpperTemporal": "إزاحة صدغية علوية",
+  "patternLowerNasal": "إزاحة أنفية سفلية",
+  "patternLowerTemporal": "إزاحة صدغية سفلية",
+  "patternUpwards": "إزاحة مركزية - للأعلى",
+  "patternDownwards": "إزاحة مركزية - للأسفل",
+  "patternUpwardsInwards": "إزاحة مركزية - للأعلى والداخل",
+  "patternUpwardsOutwards": "إزاحة مركزية - للأعلى والخارج",
+  "decentrationCenteredDesc": "وضع بؤبؤ طبيعي ضمن الحدود الفيزيولوجية.",
+  "decentrationNasalRightDesc": "نمط أنفي (يمين). ربطت أبحاث تاريخية هذه المنطقة بمنعكسات لاإرادية رئوية.",
+  "decentrationNasalLeftDesc": "نمط أنفي (يسار). ربطت أدبيات البحث هذه المنطقة بأنماط الوظيفة اللاإرادية للقلب.",
+  "decentrationTemporalDesc": "نمط صدغي. ربطت ملاحظات تاريخية هذه المنطقة بمنعكسات لاإرادية كلوية وتناسلية.",
+  "decentrationFrontalRightDesc": "نمط أمامي (يمين). ربطت أبحاث هذه المنطقة بأنماط الوظيفة المعرفية والدماغية.",
+  "decentrationFrontalLeftDesc": "نمط أمامي (يسار). ربطت دراسات تاريخية هذه المنطقة بالأنماط اللاإرادية الدماغية.",
+  "decentrationBasalRightDesc": "نمط قاعدي (يمين). أشارت أبحاث إلى ارتباطات بمنعكسات الضغط داخل الجمجمة.",
+  "decentrationBasalLeftDesc": "نمط قاعدي (يسار). ربطت ملاحظات تاريخية هذا النمط بأنماط المنطقة الالتهابية الدماغية.",
+  "decentrationUpwardsInwardsRightDesc": "نمط أنفي علوي (يمين). ربطت أبحاث هذه المنطقة بمنعكسات لاإرادية كبدية صفراوية.",
+  "decentrationUpwardsInwardsLeftDesc": "نمط أنفي علوي (يسار). ربطت دراسات تاريخية هذا النمط بمناطق الطحال والحجاب الحاجز.",
+  "decentrationUpwardsOutwardsDesc": "نمط صدغي علوي. أشارت أبحاث إلى ارتباطات بمناطق لاإرادية كلوية وتناسلية.",
+  "decentrationMiddleNasalRightDesc": "نمط أنفي وسطي (يمين). ربطت ملاحظات تاريخية هذا النمط بمناطق استخدام الأكسجين والقلب.",
+  "decentrationMiddleNasalLeftDesc": "نمط أنفي وسطي (يسار). ربطت أبحاث هذا النمط بأنماط لاإرادية عصبية وقلبية.",
+  "decentrationMiddleTemporalRightDesc": "نمط صدغي وسطي (يمين). ربطت أبحاث هذا النمط بمناطق تنظيم لاإرادي للقلب.",
+  "decentrationMiddleTemporalLeftDesc": "نمط صدغي وسطي (يسار). ربطت دراسات تاريخية هذا النمط بمناطق رئوية وقلبية.",
+  "decentrationUpperNasalRightDesc": "نمط أنفي علوي (يمين). أشارت أبحاث إلى ارتباطات بمناطق معرفية ومنعكسات العمود الفقري العنقي.",
+  "decentrationUpperNasalLeftDesc": "نمط أنفي علوي (يسار). ربطت ملاحظات تاريخية هذا النمط بأنماط معرفية ومناطق عنقية.",
+  "decentrationUpperTemporalRightDesc": "نمط صدغي علوي (يمين). ربطت أبحاث هذه المنطقة بمنعكسات الأعصاب القحفية والسمعية.",
+  "decentrationUpperTemporalLeftDesc": "نمط صدغي علوي (يسار). ربطت دراسات تاريخية هذا النمط بمناطق نباتية عصبية وكلامية.",
+  "decentrationLowerNasalDesc": "نمط أنفي سفلي. أشارت أبحاث إلى ارتباطات بمناطق لاإرادية تناسلية بولية وعجزية قطنية.",
+  "decentrationLowerTemporalRightDesc": "نمط صدغي سفلي (يمين). ربطت ملاحظات تاريخية هذا النمط بمناطق أيضية وكبدية.",
+  "decentrationLowerTemporalLeftDesc": "نمط صدغي سفلي (يسار). ربطت أبحاث هذا النمط بأنماط لاإرادية قلبية وطحالية.",
+  "flatteningUpperCentralRightDesc": "نمط مرتبط بالمنطقة المركزية العلوية. ربطت أبحاث تاريخية هذا النمط بمنعكسات لاإرادية تنظيمية للمزاج والطاقة.",
+  "flatteningUpperTemporalRightDesc": "نمط مرتبط بالمنطقة الصدغية العلوية. أشارت أبحاث إلى ارتباطات بمنعكسات لاإرادية للأعصاب القحفية والجهاز السمعي.",
+  "flatteningMiddleTemporalRightDesc": "نمط مرتبط بالمنطقة الصدغية الوسطية. ربطت ملاحظات تاريخية هذا النمط بأنماط لاإرادية تنفسية وقلبية.",
+  "flatteningLowerTemporalRightDesc": "نمط مرتبط بالمنطقة الصدغية السفلية. ربطت أدبيات البحث هذا النمط بمناطق لاإرادية كبدية وأيضية.",
+  "flatteningLowerBasalRightDesc": "نمط مرتبط بالمنطقة القاعدية السفلية. ربطت دراسات تاريخية هذا النمط بمنعكسات لاإرادية كلوية وأطراف سفلية.",
+  "flatteningLowerNasalRightDesc": "نمط مرتبط بالمنطقة الأنفية السفلية. أشارت أبحاث إلى ارتباطات بمناطق لاإرادية تناسلية بولية وحوضية.",
+  "flatteningMiddleNasalRightDesc": "نمط مرتبط بالمنطقة الأنفية الوسطية. ربطت ملاحظات تاريخية هذا النمط بأنماط لاإرادية لاستخدام الأكسجين والجهاز التنفسي.",
+  "flatteningUpperNasalRightDesc": "نمط مرتبط بالمنطقة الأنفية العلوية. ربطت أدبيات البحث هذا النمط بمنعكسات لاإرادية معرفية وعنقية.",
+  "flatteningDefaultRightDesc": "تم كشف تغير في نمط الجهاز العصبي اللاإرادي في هذه المنطقة بناءً على أبحاث تاريخية.",
+  "flatteningUpperCentralLeftDesc": "نمط مرتبط بالمنطقة المركزية العلوية. ربطت أبحاث تاريخية هذا النمط بأنماط لاإرادية نفسحركية وعصبية.",
+  "flatteningUpperTemporalLeftDesc": "نمط مرتبط بالمنطقة الصدغية العلوية. أشارت أبحاث إلى ارتباطات بمناطق لاإرادية نباتية عصبية وكلامية.",
+  "flatteningMiddleTemporalLeftDesc": "نمط مرتبط بالمنطقة الصدغية الوسطية. ربطت ملاحظات تاريخية هذا النمط بمنعكسات لاإرادية رئوية وقلبية.",
+  "flatteningLowerTemporalLeftDesc": "نمط مرتبط بالمنطقة الصدغية السفلية. ربطت أدبيات البحث هذا النمط بأنماط لاإرادية قلبية وطحالية.",
+  "flatteningLowerBasalLeftDesc": "نمط مرتبط بالمنطقة القاعدية السفلية. ربطت دراسات تاريخية هذا النمط بمناطق لاإرادية كلوية وإطراحية.",
+  "flatteningLowerNasalLeftDesc": "نمط مرتبط بالمنطقة الأنفية السفلية. أشارت أبحاث إلى ارتباطات بمنعكسات لاإرادية تناسلية بولية وعجزية قطنية.",
+  "flatteningMiddleNasalLeftDesc": "نمط مرتبط بالمنطقة الأنفية الوسطية. ربطت ملاحظات تاريخية هذا النمط بأنماط لاإرادية قلبية وتنفسية.",
+  "flatteningUpperNasalLeftDesc": "نمط مرتبط بالمنطقة الأنفية العلوية. ربطت أدبيات البحث هذا النمط بمناطق لاإرادية معرفية وعنقية.",
+  "flatteningDefaultLeftDesc": "تم كشف تغير في نمط الجهاز العصبي اللاإرادي في هذه المنطقة بناءً على أبحاث تاريخية.",
+  "protrusionUpperCentralRightDesc": "نمط نتوء في المنطقة المركزية العلوية. ربطت أبحاث هذا النمط بأنماط فرط نشاط سمبثاوي تؤثر على المناطق الدماغية.",
+  "protrusionUpperTemporalRightDesc": "نمط نتوء في المنطقة الصدغية العلوية. ربطت ملاحظات تاريخية هذا النمط بأنماط فرط نشاط الأعصاب القحفية والجهاز السمعي.",
+  "protrusionMiddleTemporalRightDesc": "نمط نتوء في المنطقة الصدغية الوسطية. أشارت أبحاث إلى ارتباطات بأنماط سمبثاوية قلبية وتنفسية.",
+  "protrusionLowerTemporalRightDesc": "نمط نتوء في المنطقة الصدغية السفلية. ربطت دراسات تاريخية هذا النمط بمناطق سمبثاوية كبدية صفراوية وأيضية.",
+  "protrusionLowerBasalRightDesc": "نمط نتوء في المنطقة القاعدية السفلية. ربطت أبحاث هذا النمط بأنماط فرط نشاط سمبثاوي كلوي وحوضي.",
+  "protrusionLowerNasalRightDesc": "نمط نتوء في المنطقة الأنفية السفلية. ربطت ملاحظات تاريخية هذا النمط بمناطق تنشيط سمبثاوي تناسلي بولي.",
+  "protrusionMiddleNasalRightDesc": "نمط نتوء في المنطقة الأنفية الوسطية. أشارت أبحاث إلى ارتباطات بأنماط سمبثاوية معدية وبنكرياسية.",
+  "protrusionUpperNasalRightDesc": "نمط نتوء في المنطقة الأنفية العلوية. ربطت دراسات تاريخية هذا النمط بمناطق فرط نشاط سمبثاوي معرفي وبصري.",
+  "protrusionDefaultRightDesc": "تم كشف نمط فرط نشاط في الجهاز العصبي السمبثاوي في هذه المنطقة بناءً على ملاحظات بحثية.",
+  "protrusionUpperCentralLeftDesc": "نمط نتوء في المنطقة المركزية العلوية. ربطت أبحاث هذا النمط بأنماط سمبثاوية نفسحركية ودماغية.",
+  "protrusionUpperTemporalLeftDesc": "نمط نتوء في المنطقة الصدغية العلوية. ربطت ملاحظات تاريخية هذا النمط بمناطق فرط نشاط سمبثاوي نباتي عصبي.",
+  "protrusionMiddleTemporalLeftDesc": "نمط نتوء في المنطقة الصدغية الوسطية. أشارت أبحاث إلى ارتباطات بأنماط سمبثاوية رئوية وقلبية.",
+  "protrusionLowerTemporalLeftDesc": "نمط نتوء في المنطقة الصدغية السفلية. ربطت دراسات تاريخية هذا النمط بمناطق تنشيط سمبثاوي طحالي وقلبي.",
+  "protrusionLowerBasalLeftDesc": "نمط نتوء في المنطقة القاعدية السفلية. ربطت أبحاث هذا النمط بأنماط فرط نشاط سمبثاوي حوضي وكلوي.",
+  "protrusionLowerNasalLeftDesc": "نمط نتوء في المنطقة الأنفية السفلية. ربطت ملاحظات تاريخية هذا النمط بمناطق تنشيط سمبثاوي عجزي قطني.",
+  "protrusionMiddleNasalLeftDesc": "نمط نتوء في المنطقة الأنفية الوسطية. أشارت أبحاث إلى ارتباطات بأنماط سمبثاوية قلق-قلبية.",
+  "protrusionUpperNasalLeftDesc": "نمط نتوء في المنطقة الأنفية العلوية. ربطت دراسات تاريخية هذا النمط بمناطق فرط نشاط سمبثاوي معرفي وبصري.",
+  "protrusionDefaultLeftDesc": "تم كشف نمط فرط نشاط في الجهاز العصبي السمبثاوي في هذه المنطقة بناءً على ملاحظات بحثية.",
+  "anisocoriaNone": "أحجام البؤبؤين ضمن الحدود الطبيعية. لم يُكشف تفاوت ملحوظ في حدقتي العين.",
+  "anisocoriaDetected": "تم كشف تفاوت حدقتي العين: {difference}% ({direction}). {description}",
+  "@anisocoriaDetected": {
+    "placeholders": {
+      "difference": {
+        "type": "String"
+      },
+      "direction": {
+        "type": "String"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "anisocoriaDirectionSD": "S>D",
+  "anisocoriaDirectionDS": "D>S",
+  "anisocoriaSeverityNone": "ضمن الحدود الطبيعية.",
+  "anisocoriaSeverityMild": "فرق خفيف ملحوظ. قد يكون فيزيولوجياً.",
+  "anisocoriaSeverityModerate": "عدم تماثل متوسط. تمت ملاحظة بحثية.",
+  "anisocoriaSeveritySevere": "عدم تماثل ملحوظ. تم تسجيل ملاحظة بحثية.",
+  "largerPupilEqual": "متساوٍ",
+  "largerPupilOS": "OS (يسار)",
+  "largerPupilOD": "OD (يمين)",
+  "decentrationWithinLimits": "ضمن الحدود الطبيعية.",
+  "decentrationClinicalNote": "{patternName}. الإزاحة: {offset}%",
+  "@decentrationClinicalNote": {
+    "placeholders": {
+      "patternName": {
+        "type": "String"
+      },
+      "offset": {
+        "type": "String"
+      }
+    }
+  },
+  "zoneUpperCentral": "علوي-مركزي",
+  "zoneUpperNasal": "علوي-أنفي",
+  "zoneMiddleNasal": "وسطي-أنفي",
+  "zoneLowerNasal": "سفلي-أنفي",
+  "zoneLowerBasal": "سفلي-قاعدي",
+  "zoneLowerTemporal": "سفلي-صدغي",
+  "zoneMiddleTemporal": "وسطي-صدغي",
+  "zoneUpperTemporal": "علوي-صدغي",
+  "zoneFrontal": "أمامي",
+  "zoneBasal": "قاعدي",
+  "zoneUnknown": "غير معروف",
+  "flatteningDescription": "تسطيح {zone} ({clockRange}) - {percentage}%",
+  "@flatteningDescription": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "protrusionDescription": "نتوء {zone} ({clockRange}) - {percentage}%",
+  "@protrusionDescription": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "usbIriscopeMode": "وضع مجهر القزحية USB",
+  "iriscopeExternal": "مجهر القزحية / خارجي",
+  "usbLabel": "USB",
+  "useConnectedUsbCamera": "استخدم كاميرا USB أو مجهر القزحية المتصل",
+  "detectedCameras": "الكاميرات المكتشفة",
+  "externalCamera": "كاميرا خارجية",
+  "cameraIndex": "الكاميرا {index}",
+  "@cameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "noExternalCameraDetected": "لم تُكتشف كاميرا خارجية.\\nوصّل مجهر القزحية عبر USB لتفعيلها.",
+  "refresh": "تحديث",
+  "selectCameraSource": "اختر مصدر الكاميرا",
+  "camerasDetected": "تم اكتشاف {count} كاميرا",
+  "@camerasDetected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "camerasAvailable": "{count} كاميرا متاحة",
+  "@camerasAvailable": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "externalCameraIndex": "كاميرا خارجية {index}",
+  "@externalCameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "qualityGatedRear": "التقاط تلقائي بوابة الجودة (الكاميرا الخلفية)",
+  "qualityGatedFront": "التقاط تلقائي بوابة الجودة (الكاميرا الأمامية)",
+  "usbCameraInfo": "معلومات كاميرا USB",
+  "connected": "متصل",
+  "waiting": "في الانتظار...",
+  "disconnected": "غير متصل",
+  "waitingForUsbCamera": "في انتظار كاميرا USB",
+  "connectIriscopePrompt": "وصّل مجهر القزحية عبر محوّل USB OTG.\\nامنح الإذن عند المطالبة.",
+  "usbCameraIssue": "مشكلة في كاميرا USB",
+  "pleaseConnectIriscope": "يرجى توصيل مجهر القزحية أو كاميرا USB.",
+  "retryConnection": "إعادة محاولة الاتصال",
+  "troubleshootingTips": "نصائح استكشاف الأخطاء",
+  "tipUsbOtgAdapter": "تأكد من توصيل محوّل USB OTG بشكل صحيح",
+  "tipUsbHostMode": "تحقق من دعم الجهاز لوضع USB Host",
+  "tipReconnectCamera": "جرّب فصل الكاميرا وإعادة توصيلها",
+  "tipGrantPermissions": "امنح أذونات USB عند المطالبة",
+  "tipUnlockDevice": "قد تحتاج بعض الأجهزة إلى إلغاء القفل",
+  "back": "رجوع",
+  "switchEye": "تبديل العين",
+  "state": "الحالة",
+  "status": "الوضع",
+  "usingFlutterUvcPlugin": "استخدام إضافة flutter_uvc_camera\\إضافة لدعم أجهزة فئة USB Video Class.",
+  "initialized": "تمت التهيئة",
+  "notReady": "غير جاهز",
+  "captureDistanceMatch": "تطابق مسافة الالتقاط",
+  "@captureDistanceMatch": {
+    "description": "Title for the bilateral iris size comparison card"
+  },
+  "irisSize": "حجم القزحية",
+  "@irisSize": {
+    "description": "Label for iris size measurement"
+  },
+  "distanceMatched": "المسافة متطابقة",
+  "@distanceMatched": {
+    "description": "Status when capture distances match well"
+  },
+  "distanceMismatch": "عدم تطابق المسافة",
+  "@distanceMismatch": {
+    "description": "Status when capture distances don't match"
+  },
+  "excellentMatch": "تطابق ممتاز",
+  "@excellentMatch": {
+    "description": "Distance match status 90%+"
+  },
+  "goodMatch": "تطابق جيد",
+  "@goodMatch": {
+    "description": "Distance match status 80-90%"
+  },
+  "acceptableMatch": "تطابق مقبول",
+  "@acceptableMatch": {
+    "description": "Distance match status 70-80%"
+  },
+  "considerRetaking": "عدم تطابق المسافة - يُنصح بإعادة الالتقاط",
+  "@considerRetaking": {
+    "description": "Warning when distances don't match well"
+  },
+  "qualityReady": "جاهز! حافظ على الثبات...",
+  "@qualityReady": {
+    "description": "Camera quality feedback when ready to capture"
+  },
+  "qualityTooBlurry": "ثبّت الكاميرا",
+  "@qualityTooBlurry": {
+    "description": "Camera quality feedback when image is blurry"
+  },
+  "qualityTooDark": "تحتاج إلى مزيد من الضوء",
+  "@qualityTooDark": {
+    "description": "Camera quality feedback when too dark"
+  },
+  "qualityTooBright": "ساطع جداً - قلّل الضوء",
+  "@qualityTooBright": {
+    "description": "Camera quality feedback when too bright"
+  },
+  "qualityNoContrast": "اضبط زاوية الإضاءة",
+  "@qualityNoContrast": {
+    "description": "Camera quality feedback when contrast is low"
+  },
+  "qualityNoPupil": "توسّط بؤبؤ العين في الإطار",
+  "@qualityNoPupil": {
+    "description": "Camera quality feedback when pupil not detected"
+  },
+  "qualityNotCentered": "حرّك العين إلى المركز",
+  "@qualityNotCentered": {
+    "description": "Camera quality feedback when eye not centered"
+  },
+  "qualityNotAnEye": "لم تُكشف عين",
+  "@qualityNotAnEye": {
+    "description": "Camera quality feedback when no eye detected"
+  },
+  "qualityProcessing": "جارٍ المعالجة...",
+  "@qualityProcessing": {
+    "description": "Camera quality feedback during processing"
+  },
+  "distanceMatchedCheck": "✓ المسافة متطابقة",
+  "@distanceMatchedCheck": {
+    "description": "Distance guidance when perfectly matched"
+  },
+  "distanceGoodMatchCheck": "✓ تطابق جيد",
+  "@distanceGoodMatchCheck": {
+    "description": "Distance guidance when good match"
+  },
+"distanceSlightlyBack": "تراجع قليلاً ↔",
+  "@distanceSlightlyBack": {
+    "description": "Distance guidance to move slightly back"
+  },
+  "distanceSlightlyCloser": "اقترب قليلاً ↔",
+  "@distanceSlightlyCloser": {
+    "description": "Distance guidance to move slightly closer"
+  },
+  "distanceAlmostThere": "تكاد تصل...",
+  "@distanceAlmostThere": {
+    "description": "Distance guidance when nearly matched"
+  },
+  "distanceMoveBack": "تراجع للخلف ←←",
+  "@distanceMoveBack": {
+    "description": "Distance guidance to move back"
+  },
+  "distanceMoveCloser": "اقترب أكثر →→",
+  "@distanceMoveCloser": {
+    "description": "Distance guidance to move closer"
+  },
+  "distanceTooClose": "قريب جداً! تراجع للخلف",
+  "@distanceTooClose": {
+    "description": "Distance guidance when too close"
+  },
+  "distanceTooFar": "بعيد جداً! اقترب أكثر",
+  "@distanceTooFar": {
+    "description": "Distance guidance when too far"
+  },
+  "distanceStabilizing": "جارٍ التثبيت...",
+  "@distanceStabilizing": {
+    "description": "Distance status while stabilizing reading"
+  },
+  "distanceLabel": "المسافة: {percent}%",
+  "@distanceLabel": {
+    "description": "Distance match percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "irisSizeComparison": "OD (العين اليمنى): {odSize}px → OS (العين اليسرى): {osSize}px",
+  "@irisSizeComparison": {
+    "description": "Iris size comparison between eyes",
+    "placeholders": {
+      "odSize": {
+        "type": "int"
+      },
+      "osSize": {
+        "type": "int"
+      }
+    }
+  },
+  "frontCameraLabel": "الكاميرا الأمامية",
+  "@frontCameraLabel": {
+    "description": "Label for front camera"
+  },
+  "rearCameraLabel": "الكاميرا الخلفية",
+  "@rearCameraLabel": {
+    "description": "Label for rear/back camera"
+  },
+  "startingCamera": "جارٍ تشغيل الكاميرا...",
+  "@startingCamera": {
+    "description": "Status when camera is initializing"
+  },
+  "eyeNotDetected": "لم يتم اكتشاف العين",
+  "@eyeNotDetected": {
+    "description": "Title for validation failure dialog"
+  },
+  "tryAgain": "حاول مجدداً",
+  "@tryAgain": {
+    "description": "Button text to retry capture"
+  },
+  "indicatorEye": "العين",
+  "@indicatorEye": {
+    "description": "Quality indicator label for eye detection"
+  },
+  "indicatorSharp": "حدة",
+  "@indicatorSharp": {
+    "description": "Quality indicator label for sharpness"
+  },
+  "indicatorLight": "إضاءة",
+  "@indicatorLight": {
+    "description": "Quality indicator label for lighting"
+  },
+  "indicatorFocus": "تركيز",
+  "@indicatorFocus": {
+    "description": "Quality indicator label for focus/contrast"
+  },
+  "indicatorPupil": "بؤبؤ العين",
+  "@indicatorPupil": {
+    "description": "Quality indicator label for pupil detection"
+  },
+  "indicatorIris": "القزحية",
+  "@indicatorIris": {
+    "description": "Quality indicator label for iris size"
+  },
+  "indicatorMatch": "تطابق",
+  "@indicatorMatch": {
+    "description": "Quality indicator label for distance match"
+  },
+  "checkImageShape": "شكل الصورة",
+  "@checkImageShape": {
+    "description": "Validation check label for aspect ratio"
+  },
+  "checkCircularIris": "القزحية الدائرية",
+  "@checkCircularIris": {
+    "description": "Validation check label for circular iris"
+  },
+  "checkDarkPupil": "بؤبؤ العين الداكن",
+  "@checkDarkPupil": {
+    "description": "Validation check label for dark pupil center"
+  },
+  "checkIrisTexture": "نسيج القزحية",
+  "@checkIrisTexture": {
+    "description": "Validation check label for iris texture"
+  },
+  "checkPupilIrisStructure": "بنية بؤبؤ العين والقزحية",
+  "@checkPupilIrisStructure": {
+    "description": "Validation check label for concentric circles"
+  },
+  "checkNaturalColors": "الألوان الطبيعية",
+  "@checkNaturalColors": {
+    "description": "Validation check label for color distribution"
+  },
+  "checkEdgePattern": "نمط الحواف",
+  "@checkEdgePattern": {
+    "description": "Validation check label for edge density"
+  },
+  "errorImageShapeIncorrect": "شكل الصورة غير صحيح - تأكد من ملء العين للإطار",
+  "@errorImageShapeIncorrect": {
+    "description": "Validation error for incorrect aspect ratio"
+  },
+  "errorNoEyeDetected": "لم يتم اكتشاف عين - ضع القزحية في وسط الإطار",
+  "@errorNoEyeDetected": {
+    "description": "Validation error when no eye/iris detected"
+  },
+  "errorNoPupilDetected": "لم يتم اكتشاف بؤبؤ العين - تأكد من الإضاءة الجيدة",
+  "@errorNoPupilDetected": {
+    "description": "Validation error when pupil not detected"
+  },
+  "errorNoIrisTexture": "لا يوجد نسيج قزحية - اقترب من العين",
+  "@errorNoIrisTexture": {
+    "description": "Validation error when iris texture not detected"
+  },
+  "errorUnusualColors": "ألوان غير اعتيادية - تجنب الشاشات والانعكاسات",
+  "@errorUnusualColors": {
+    "description": "Validation error for unusual color distribution"
+  },
+  "errorTooManyEdges": "حواف مستقيمة كثيرة جداً - قد لا تكون هذه عيناً",
+  "@errorTooManyEdges": {
+    "description": "Validation error for too many straight edges"
+  },
+  "errorNotValidEye": "ليست صورة عين صالحة - يرجى المحاولة مجدداً",
+  "@errorNotValidEye": {
+    "description": "Generic validation error for invalid eye image"
+  },
+  "holdStillCapturing": "لا تتحرك - جارٍ الالتقاط...",
+  "@holdStillCapturing": {
+    "description": "Status during countdown capture"
+  },
+  "adjustDistanceFirst": "اضبط المسافة أولاً",
+  "@adjustDistanceFirst": {
+    "description": "Status when distance needs adjustment before capture"
+  },
+  "stabilizingReading": "جارٍ التثبيت...",
+  "@stabilizingReading": {
+    "description": "Status while distance reading stabilizes"
+  },
+  "autoCaptureWhenReady": "الالتقاط التلقائي عند الاستعداد",
+  "@autoCaptureWhenReady": {
+    "description": "Status indicating auto-capture is enabled"
+  },
+  "tapOrWaitAutoCapture": "انقر أو انتظر الالتقاط التلقائي",
+  "@tapOrWaitAutoCapture": {
+    "description": "Instruction when ready to capture"
+  },
+  "validatingImage": "جارٍ التحقق...",
+  "@validatingImage": {
+    "description": "Status during image validation"
+  },
+  "capturingStatus": "جارٍ الالتقاط...",
+  "@capturingStatus": {
+    "description": "Status during image capture"
+  },
+  "adjustPositionStatus": "اضبط الموضع",
+  "@adjustPositionStatus": {
+    "description": "Status when position needs adjustment"
+  },
+  "validationTip": "نصيحة: تأكد من إضاءة جيدة، وأمسك الكاميرا على بُعد 10-15 سم من العين، وتجنب الانعكاسات",
+  "@validationTip": {
+    "description": "Helpful tip shown after multiple validation failures"
+  },
+  "validationChecksTitle": "فحوصات التحقق:",
+  "@validationChecksTitle": {
+    "description": "Title for validation checks list in dialog"
+  },
+  "confidenceLabel": "الثقة: {percent}%",
+  "@confidenceLabel": {
+    "description": "Confidence percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "incompleteData": "بيانات غير مكتملة",
+  "@incompleteData": {
+    "description": "Status when iris metrics data is incomplete"
+  },
+  "irisDiameterLabel": "قطر القزحية ø",
+  "@irisDiameterLabel": {
+    "description": "Label for iris diameter measurement"
+  },
+  "plrResponseCurve": "منحنى استجابة PLR",
+  "@plrResponseCurve": {
+    "description": "Title for PLR chart showing pupil response over time"
+  },
+  "plrLatency": "الكمون",
+  "@plrLatency": {
+    "description": "Time from flash to start of constriction"
+  },
+  "plrVelocity": "السرعة",
+  "@plrVelocity": {
+    "description": "Rate of pupil constriction"
+  },
+  "plrRecoveryTime": "وقت الاسترداد",
+  "@plrRecoveryTime": {
+    "description": "Time for pupil to recover"
+  },
+  "plrRecoveryRatio": "نسبة الاسترداد %",
+  "@plrRecoveryRatio": {
+    "description": "Final size compared to baseline"
+  },
+  "plrEnhancedMetrics": "مقاييس PLR المتقدمة",
+  "@plrEnhancedMetrics": {
+    "description": "Section title for advanced PLR measurements"
+  },
+  "plrNormalLatency": "الطبيعي: 200-500 مللي ثانية",
+  "@plrNormalLatency": {
+    "description": "Normal latency reference range"
+  },
+  "plrNormalConstriction": "الطبيعي: 10-30%",
+  "@plrNormalConstriction": {
+    "description": "Normal constriction reference range"
+  },
+  "plrNormalVelocity": "الطبيعي: 1.5-4.0%/ث",
+  "@plrNormalVelocity": {
+    "description": "Normal velocity reference range"
+  },
+  "plrReferenceValues": "القيم المرجعية الطبيعية لـ PLR",
+  "@plrReferenceValues": {
+    "description": "Title for reference values section"
+  },
+  "plrSubjectInfo": "معلومات الشخص",
+  "@plrSubjectInfo": {
+    "description": "Section title for patient/subject info in PLR report"
+  },
+  "plrTestType": "منعكس الضوء الحدقي",
+  "@plrTestType": {
+    "description": "Name of the PLR test type"
+  },
+  "plrAnalysisSummary": "ملخص التحليل",
+  "@plrAnalysisSummary": {
+    "description": "Section title for analysis summary"
+  },
+  "plrTotalFrames": "إجمالي الإطارات المحللة",
+  "@plrTotalFrames": {
+    "description": "Label for total frames count"
+  },
+  "plrSuccessRate": "معدل النجاح",
+  "@plrSuccessRate": {
+    "description": "Label for frame analysis success rate"
+  },
+  "plrMaxConstriction": "أقصى انقباض",
+  "@plrMaxConstriction": {
+    "description": "Label for maximum constriction time"
+  },
+  "plrResponseCurveLabels": "منحنى استجابة PLR",
+  "anwTitle": "الحلقة العصبية اللاإرادية (ANW)",
+  "anwAbnormal": "غير طبيعي",
+  "anwDiameter": "القطر",
+  "anwPerimeter": "المحيط",
+  "anwAsymmetry": "عدم التناسق",
+  "anwElevated": "مرتفع",
+  "anwFormType": "نوع الشكل",
+  "anwRegular": "منتظم",
+  "anwDrawnIn": "مسحوب للداخل",
+  "anwIndented": "مُعضَّن",
+  "anwLacerated": "ممزق",
+  "anwSpastic": "تشنجي",
+  "anwAtonic": "وهني",
+  "anwTonicState": "نمط النغمة التاريخي",
+  "anwParasympathotonic": "نمط باراسيمباثوتوني",
+  "anwSympathotonicState": "نمط سيمباثوتوني",
+  "anwShiftDetected": "نمط الانزياح التاريخي",
+  "anwConstrictionDetected": "تم اكتشاف انقباض",
+  "anwFindings": "النتائج",
+  "anwRatioComparison": "نسبة ANW",
+  "bilateralANWComparison": "مقارنة ANW الثنائية",
+  "anwSymmetryNormal": "تناسق ANW ضمن الحدود الطبيعية.",
+  "anwAsymmetryDetected": "تم اكتشاف عدم تناسق ANW بين العينين.",
+  "functionalFrustration": "اضطراب وظيفي في الارتباط بين الجهازين العصبيين الودي واللاودي.",
+  "anwParasympathotonicDesc": "ربطت الدراسات التاريخية هذا بزيادة الحساسية العتبية. تسارع النشاط الانعكاسي. ارتفعت وظائف الإفراز والإخلاء في الجهاز الهضمي.",
+  "anwSympathotonicDesc": "ربطت الدراسات التاريخية هذا بانخفاض الحساسية العتبية. تباطأ النشاط الانعكاسي. انخفضت وظائف الإفراز والإخلاء في الجهاز الهضمي.",
+  "anwMiddleTemporalShiftCardiac": "ربطت الدراسات التاريخية وفقاً لفيلشوفر هذا بأنماط الحمل الزائد على البطين الأيسر والإجهاد القلبي.",
+  "anwFrontalConstricted": "منطقة الجبهة في الحزام الحدقي منقبضة.",
+  "anwBasalConstricted": "المنطقة القاعدية في الحزام الحدقي منقبضة.",
+  "anwFrontalBasalConstricted": "منطقتا الجبهة والقاعدة في الحزام الحدقي منقبضتان.",
+  "helpTitle": "المساعدة ودليل المستخدم",
+  "helpTabQuickStart": "البدء السريع",
+  "helpTabCnriAnalysis": "تحليل CNRI",
+  "helpTabShortcuts": "الاختصارات",
+  "helpTabTroubleshooting": "استكشاف الأخطاء",
+  "helpOnlineDocs": "الوثائق عبر الإنترنت",
+  "helpContactSupport": "الاتصال بالدعم",
+  "helpGettingStarted": "البدء",
+  "helpStep1Title": "توصيل جهاز الإيريسكوب",
+  "helpStep1Desc": "وصّل جهاز Dino-Lite أو أي إيريسكوب USB متوافق.",
+  "helpStep2Title": "إدخال معلومات المريض",
+  "helpStep2Desc": "أدخل اسم المريض والعمر والجنس والشكاوى الرئيسية.",
+  "helpStep3Title": "التقاط العين اليمنى OD (العين اليمنى)",
+  "helpStep3Desc": "ضع الإيريسكوب والتقط صورة العين اليمنى.",
+  "helpStep4Title": "التقاط العين اليسرى OS (العين اليسرى)",
+  "helpStep4Desc": "كرر العملية للعين اليسرى مع إضاءة متسقة.",
+  "helpStep5Title": "مراجعة التحليل",
+  "helpStep5Desc": "يحلل التطبيق نسبة P/I وشكل بؤبؤ العين وخصائص ANW.",
+  "helpStep6Title": "تصدير التقرير",
+  "helpStep6Desc": "احفظ بصيغة PDF أو TXT أو JSON.",
+  "helpTipBestResults": "للحصول على أفضل النتائج: استخدم إضاءة ثابتة وحافظ على مسافة 2-3 سم للإيريسكوب.",
+  "helpCnriProtocolFeatures": "ميزات بروتوكول CNRI",
+  "helpFeaturePiRatioTitle": "نسبة بؤبؤ العين/القزحية (P/I)",
+  "helpFeaturePiRatioDesc": "الطبيعي: 20-30%. القيم خارج النطاق قد تدل على خلل في الجهاز العصبي اللاإرادي.",
+  "helpFeaturePupilFormTitle": "تحليل شكل بؤبؤ العين",
+  "helpFeaturePupilFormDesc": "يكتشف الأنماط البيضاوية واتجاه اللامركزية والانحراف.",
+  "helpFeatureAnwTitle": "تقييم ANW (الطوق)",
+  "helpFeatureAnwDesc": "يحلل النسبة وانتظام الشكل وانزياحات القطاعات والحالة النغمية.",
+  "helpFeatureZoneTitle": "تحليل المناطق",
+  "helpFeatureZoneDesc": "يربط التسطيحات والنتوءات بمناطق الأعضاء في CNRI.",
+  "helpFeatureBilateralTitle": "المقارنة الثنائية",
+  "helpFeatureBilateralDesc": "تقارن OD (العين اليمنى) مع OS (العين اليسرى) لاكتشاف عدم التناسق.",
+  "helpFeatureMlTitle": "مقارنة ONNX CNN",
+  "helpFeatureMlDesc": "يوفر نموذج ONNX CNN قياسات ثانوية للمقارنة.",
+  "helpKeyboardShortcuts": "اختصارات لوحة المفاتيح",
+  "helpCameraControls": "أدوات التحكم بالكاميرا",
+  "helpShortcutSpace": "التقاط صورة",
+  "helpShortcutCtrlS": "حفظ تقرير PDF",
+  "helpShortcutCtrlO": "فتح صورة من المعرض",
+  "helpShortcutCtrlH": "عرض سجل الفحوصات",
+  "helpShortcutF11": "تبديل وضع ملء الشاشة",
+  "helpShortcutEsc": "رجوع / إلغاء",
+  "helpShortcutScroll": "تكبير/تصغير",
+  "helpShortcutDoubleClick": "إعادة ضبط التكبير",
+  "helpCommonIssues": "المشكلات الشائعة",
+  "helpIssueCameraNotDetected": "لم يتم اكتشاف الكاميرا",
+  "helpIssueCameraSolution1": "تحقق من توصيل USB",
+  "helpIssueCameraSolution2": "جرب منفذ USB مختلفاً",
+  "helpIssueCameraSolution3": "قم بتثبيت برامج تشغيل Dino-Lite",
+  "helpIssueCameraSolution4": "أعد تشغيل التطبيق",
+  "helpIssuePupilDetectionFails": "فشل اكتشاف بؤبؤ العين",
+  "helpIssuePupilSolution1": "تأكد من كفاية الإضاءة",
+  "helpIssuePupilSolution2": "ضع بؤبؤ العين في وسط الإطار",
+  "helpIssuePupilSolution3": "نظّف عدسة الإيريسكوب",
+  "helpIssuePupilSolution4": "اضبط التركيز يدوياً",
+  "helpIssuePdfExportFails": "فشل تصدير PDF",
+  "helpIssuePdfSolution1": "تحقق من أذونات المجلد",
+  "helpIssuePdfSolution2": "تأكد من توفر مساحة القرص",
+  "helpIssuePdfSolution3": "أغلق ملفات PDF المفتوحة",
+  "helpIssuePdfSolution4": "جرب تصدير TXT أولاً",
+  "helpCaptureChecklistTitle": "قائمة مراجعة الالتقاط",
+  "helpCaptureChecklist1": "أبقِ بؤبؤ العين في المركز ومرئياً بالكامل داخل الإطار.",
+  "helpCaptureChecklist2": "استخدم إضاءة متسوية وقلل الوهج والانعكاسات على القرنية.",
+  "helpCaptureChecklist3": "حافظ على مسافة متشابهة للإيريسكوب من العينين اليمنى واليسرى.",
+  "helpCaptureChecklist4": "أعد التركيز أو أعد الالتقاط إذا بدت حافة بؤبؤ العين ناعمة أو ضبابية.",
+  "helpExportSettingsTitle": "إعدادات التصدير",
+  "helpExportSettingsDesc": "يحفظ PDF تلقائياً التقرير بعد التحليل، ويتحكم تضمين الصور في ظهور صور العين في PDF، ويُضاف إظهار مقارنة ML قيم مقارنة ONNX CNN إلى التقارير.",
+  "helpHybridScoreTitle": "الثقة المدمجة والدرجة",
+  "helpHybridScoreDesc": "تجمع الثقة والدرجة المعروضتان جودة الهندسة الكلاسيكية مع توافق ML، وبالتالي تعكسان موثوقية القياس لا تشخيصاً.",
+  "helpAnomalyGuideTitle": "قراءة التسطيحات والنتوءات",
+  "helpAnomalyGuideDesc": "تشير التسطيحات إلى السحب النسبي للداخل وتشير النتوءات إلى السحب للخارج على طول حدود بؤبؤ العين؛ كل بطاقة تسرد المنطقة والحجم والارتباط المحدد.",
+  "helpZoneOverlayGuideTitle": "تراكب المناطق",
+  "helpZoneOverlayGuideDesc": "استخدم تراكب المناطق لفحص مواضع القطاعات بصرياً والتحقق من مكان وقوع الحالات الشاذة المكتشفة حول بؤبؤ العين والقزحية.",
+  "helpContactSupportTip": "تواصل مع helpdesk@cnri.edu للحصول على المساعدة.",
+  "settingsTitle": "الإعدادات",
+  "settingsCameraIriscope": "الكاميرا / الإيريسكوب",
+  "settingsPreferredCamera": "الكاميرا المفضلة:",
+  "settingsCameraDinoLite": "Dino-Lite",
+  "settingsCameraUsb": "كاميرا USB",
+  "settingsCameraAutoDetect": "اكتشاف تلقائي",
+  "settingsDefaultZoom": "التكبير الافتراضي:",
+  "settingsAnalysis": "التحليل",
+  "settingsShowMlComparison": "إظهار مقارنة ML",
+  "settingsShowZoneOverlay": "إظهار تراكب المناطق",
+  "settingsExportReports": "التصدير والتقارير",
+  "settingsAutoSavePdf": "حفظ PDF تلقائياً",
+  "settingsIncludeImages": "تضمين الصور",
+  "settingsSaved": "تم حفظ الإعدادات",
+  "aboutResearchEdition": "إصدار البحث",
+  "aboutVersion": "الإصدار {version}",
+  "@aboutVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "aboutLicense": "الترخيص",
+  "aboutLicensedTo": "مرخص لـ:",
+  "aboutExpires": "ينتهي في:",
+  "aboutManageLicense": "إدارة الترخيص",
+  "aboutBasedOnCnri": "مستند إلى بروتوكول CNRI",
+  "aboutCopyright": "© 2024-2026 PupilMetrics Research",
+  "aboutWebsite": "الموقع الإلكتروني",
+  "aboutPrivacy": "الخصوصية",
+  "languageSelectTitle": "اختر اللغة",
+  "selectLanguage": "اختر اللغة",
+  "languageChanged": "تم تغيير اللغة",
+  "languageChangedMessage": "تم ضبط لغة التطبيق على {language}",
+  "@languageChangedMessage": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languageSystemNotAvailable": "نظام اللغة غير متاح",
+  "licenseLoading": "جارٍ التحميل...",
+  "licenseWelcome": "مرحباً بك في PupilMetrics!",
+  "licenseTrialFeatures": "تجربة مجانية 14 يوماً • ميزات كاملة",
+  "licenseStartTrial": "ابدأ التجربة المجانية",
+  "licenseEnterKey": "إدخال ترخيص",
+  "licenseFreeTrial": "تجربة مجانية",
+  "licenseDaysRemaining": "متبقي {count} يوم",
+  "@licenseDaysRemaining": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseTrialEnded": "انتهت التجربة",
+  "licenseEnterToContinue": "أدخل الترخيص للمتابعة",
+  "licenseStandard": "ترخيص قياسي",
+  "licenseProfessional": "ترخيص احترافي",
+  "licenseEnterprise": "ترخيص مؤسسي",
+  "licenseLicensed": "مرخص",
+  "licenseActive": "نشط",
+  "licenseTrialUser": "مستخدم تجريبي",
+  "licenseLifetime": "مدى الحياة",
+  "licenseNotSetUp": "غير مُعدّ",
+  "trialExpiredTitle": "انتهت فترة التجربة",
+  "trialExpiredMessage": "انتهت تجربتك المجانية لمدة 14 يوماً. للاستمرار في تحليل صور القزحية، يرجى شراء ترخيص.",
+  "trialExpiredCanStill": "لا يزال بإمكانك:",
+  "trialExpiredViewAnalyses": "عرض تحليلاتك السابقة",
+  "trialExpiredExportReports": "تصدير التقارير الموجودة",
+  "trialExpiredAccessHistory": "الوصول إلى سجل الفحوصات",
+  "trialExpiredMaybeLater": "ربما لاحقاً",
+  "licenseRegistration": "تسجيل الترخيص",
+  "licenseStatusValid": "مرخص",
+  "licenseStatusTrialActive": "تجربة مجانية",
+  "licenseStatusTrialExpired": "انتهت التجربة",
+  "licenseStatusExpired": "انتهى صلاحية الترخيص",
+  "licenseStatusInvalid": "ترخيص غير صالح",
+  "licenseStatusUnregistered": "غير مُعدّ",
+  "licenseStatusMachineMismatch": "جهاز مختلف",
+  "licenseStatusNetworkError": "خطأ في الاتصال",
+  "licenseEnterKeyTitle": "أدخل مفتاح الترخيص",
+  "licenseKeyPlaceholder": "CNRI-XXXX-XXXX-XXXX-XXXX",
+  "licenseYourName": "اسمك",
+  "licenseEmailAddress": "عنوان البريد الإلكتروني",
+  "licenseMachineId": "معرف الجهاز",
+  "licenseCopyMachineId": "نسخ معرف الجهاز",
+  "licenseMachineIdCopied": "تم نسخ معرف الجهاز إلى الحافظة",
+  "licenseValidationKeyRequired": "يرجى إدخال مفتاح الترخيص",
+  "licenseValidationKeyFormat": "يجب أن يتكون مفتاح الترخيص من 20 حرفاً (CNRI-XXXX-XXXX-XXXX-XXXX)",
+  "licenseValidationNameRequired": "يرجى إدخال اسمك",
+  "licenseValidationEmailRequired": "يرجى إدخال بريدك الإلكتروني",
+  "licenseValidationEmailInvalid": "يرجى إدخال بريد إلكتروني صالح",
+  "licenseActivate": "تفعيل الترخيص",
+  "licenseContinueTrial": "متابعة التجربة",
+  "licenseBuyLicense": "شراء ترخيص",
+  "licenseNeedHelp": "تحتاج مساعدة؟",
+  "licenseLicenseAgreement": "اتفاقية الترخيص",
+  "licenseActivatedSuccess": "تم تفعيل الترخيص بنجاح!",
+  "licenseMsgMachineMismatch": "هذا الترخيص مسجل لجهاز مختلف. يرجى استخدام جهازك الأصلي أو التواصل مع الدعم.",
+  "licenseMsgTrialEnded": "انتهت تجربتك المجانية. أدخل مفتاح ترخيص لمتابعة استخدام جميع الميزات.",
+  "licenseMsgExpired": "انتهى صلاحية ترخيصك. يرجى التجديد للمتابعة.",
+  "licenseMsgNeedsSetup": "يحتاج الترخيص إلى إعداد. ابدأ تجربتك المجانية أو أدخل مفتاح ترخيص.",
+  "licenseMsgCheckFormat": "يرجى التحقق من تنسيق مفتاح الترخيص. يجب أن يبدو هكذا: CNRI-XXXX-XXXX-XXXX-XXXX",
+  "licenseMsgNotRecognized": "لم يتم التعرف على مفتاح الترخيص هذا. يرجى التحقق منه والمحاولة مجدداً.",
+  "licenseMsgAlreadyRegistered": "هذا المفتاح مسجل بالفعل لجهاز مختلف.",
+  "licenseMsgContactSupport": "انتهى صلاحية هذا الترخيص. يرجى التواصل مع الدعم للتجديد.",
+  "licenseMsgActivatedThankYou": "تم تفعيل الترخيص بنجاح! شكراً لشرائك.",
+  "licenseMsgUnableToActivate": "تعذّر تفعيل الترخيص. يرجى التحقق من اتصالك بالإنترنت والمحاولة مجدداً.",
+  "licenseMsgTrialWelcome": "مرحباً! بدأت تجربتك المجانية لمدة {days} يوماً.",
+  "@licenseMsgTrialWelcome": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseMsgTrialActive": "التجربة نشطة: متبقي {days} يوم.",
+  "@licenseMsgTrialActive": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseMsgFreeTrialActive": "التجربة المجانية نشطة",
+  "licenseMsgLicenseActive": "الترخيص نشط - {type}",
+  "@licenseMsgLicenseActive": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "licenseMsgUnableToActivateKey": "تعذّر تفعيل مفتاح الترخيص هذا.",
+  "licenseMsgNoLongerValid": "الترخيص لم يعد صالحاً.",
+  "licenseMsgUnableToVerify": "تعذّر التحقق من مفتاح الترخيص هذا. يرجى التواصل مع الدعم.",
+  "trialStartedSnackbar": "بدأت التجربة!",
+  "trialStartedMessage": "استمتع بـ 14 يوماً من الوصول الكامل",
+  "windowTitle": "PupilMetrics",
+  "themeMode": "وضع السمة",
+  "methods": "الأساليب",
+  "setAsFrameless": "setAsFrameless",
+  "isPreventCloseSetPreventClose": "isPreventClose / setPreventClose",
+  "focusBlur": "focus / blur",
+  "showHide": "show / hide",
+  "isVisible": "isVisible",
+  "isMaximized": "isMaximized",
+  "maximizeUnmaximize": "maximize / unmaximize",
+  "isMinimized": "isMinimized",
+  "minimizeRestore": "minimize / restore",
+  "dockUndock": "dock / undock",
+  "dockLeft": "إرساء يساراً",
+  "dockRight": "إرساء يميناً",
+  "undock": "إلغاء الإرساء",
+  "isFullScreenSetFullScreen": "isFullScreen / setFullScreen",
+  "setAspectRatio": "setAspectRatio",
+  "reset": "إعادة ضبط",
+  "setBackgroundColor": "setBackgroundColor",
+  "transparent": "شفاف",
+  "red": "أحمر",
+  "green": "أخضر",
+  "blue": "أزرق",
+  "setBoundsGetBounds": "setBounds / getBounds",
+  "setAlignment": "setAlignment",
+  "topLeft": "أعلى اليسار",
+  "topCenter": "أعلى الوسط",
+  "topRight": "أعلى اليمين",
+  "centerLeft": "وسط اليسار",
+  "centerRight": "وسط اليمين",
+  "bottomLeft": "أسفل اليسار",
+  "bottomCenter": "أسفل الوسط",
+  "bottomRight": "أسفل اليمين",
+  "getPositionSetPosition": "getPosition / setPosition",
+  "getSizeSetSize": "getSize / setSize",
+  "set": "ضبط",
+  "getMinimumSizeSetMinimumSize": "getMinimumSize / setMinimumSize",
+  "getMaximumSizeSetMaximumSize": "getMaximumSize / setMaximumSize",
+  "isResizableSetResizable": "isResizable / setResizable",
+  "isMovableSetMovable": "isMovable / setMovable",
+  "isMinimizableSetMinimizable": "isMinimizable / setMinimizable",
+  "isMaximizableSetMaximizable": "isMaximizable / setMaximizable",
+  "isClosableSetClosable": "isClosable / setClosable",
+  "isAlwaysOnTopSetAlwaysOnTop": "isAlwaysOnTop / setAlwaysOnTop",
+  "isAlwaysOnBottomSetAlwaysOnBottom": "isAlwaysOnBottom / setAlwaysOnBottom",
+  "getTitleSetTitle": "getTitle / setTitle",
+  "setTitleBarStyle": "setTitleBarStyle",
+  "hidden": "مخفي",
+  "getTitleBarHeight": "getTitleBarHeight",
+  "isSkipTaskbar": "isSkipTaskbar",
+  "setSkipTaskbar": "setSkipTaskbar",
+  "setProgressBar": "setProgressBar",
+  "setIcon": "setIcon",
+  "defaultIcon": "افتراضي",
+  "original": "أصلي",
+  "isVisibleOnAllWorkspacesSetVisibleOnAllWorkspaces": "isVisibleOnAllWorkspaces / setVisibleOnAllWorkspaces",
+  "setBadgeLabel": "setBadgeLabel",
+  "hasShadowSetHasShadow": "hasShadow / setHasShadow",
+  "getOpacitySetOpacity": "getOpacity / setOpacity",
+  "setIgnoreMouseEvents": "setIgnoreMouseEvents",
+  "popUpWindowMenu": "popUpWindowMenu",
+  "grabKeyboard": "grabKeyboard",
+  "ungrabKeyboard": "ungrabKeyboard",
+  "dragToMoveArea": "DragToMoveArea",
+  "dragToResizeArea": "DragToResizeArea",
+  "dragToResizeAreaExample": "مثال على DragToResizeArea",
+  "closeWindowConfirmation": "هل أنت متأكد أنك تريد إغلاق هذه النافذة؟",
+  "licenseChecking": "جارٍ التحقق من الترخيص...",
+  "licenseRequiredTitle": "الترخيص مطلوب",
+  "licenseActivateValidMessage": "يرجى تفعيل ترخيص صالح للمتابعة.",
+  "licenseProIncludes": "PupilMetrics Pro يشمل:",
+  "licenseFeatureUnlimitedAnalysis": "تحليل غير محدود لبؤبؤ العين والطوق",
+  "licenseFeaturePdfReports": "إنشاء تقارير PDF",
+  "licenseFeatureBilateralComparison": "مقارنة ثنائية",
+  "licenseFeatureAnwAnalysis": "تحليل طوق ANW",
+  "licenseFeatureScanHistory": "قاعدة بيانات سجل الفحوصات",
+  "licenseFeatureUpdates": "تحديثات مجانية لمدة سنة",
+  "licensePurchase": "شراء ترخيص",
+  "licenseExitApplication": "إنهاء التطبيق",
+  "windowCompactView": "عرض مضغوط",
+  "windowExpandedView": "عرض موسّع",
+  "licenseStatusTrialDaysLeft": "تجربة ({count} يوم متبقٍ)",
+  "@licenseStatusTrialDaysLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseNotLicensed": "غير مرخص",
+  "licenseStatusTitle": "حالة الترخيص",
+  "unknown": "غير معروف",
+  "plrReportTitle": "تقرير تحليل PLR",
+  "plrResearchOnlyTitle": "أداة بحثية/تعليمية فقط",
+  "plrResearchDisclaimer": "النتائج ليست تشخيصات طبية. استشر متخصصاً في الرعاية الصحية.",
+  "plrNameLabel": "الاسم",
+  "plrAgeYears": "العمر: {age} سنة",
+  "@plrAgeYears": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "plrTestLabel": "الاختبار",
+  "plrSummaryTitle": "ملخص PLR",
+  "plrGradeValue": "الدرجة {grade}",
+  "@plrGradeValue": {
+    "placeholders": {
+      "grade": {
+        "type": "String"
+      }
+    }
+  },
+  "plrStatusLabel": "الحالة",
+  "plrDetectedStatus": "تم اكتشاف PLR",
+  "plrWeakNotDetectedStatus": "ضعيف/غير مكتشف",
+  "plrRecoveryTimeLabel": "وقت الاسترداد",
+  "plrRecoveryRatioLabel": "نسبة الاسترداد",
+  "plrChartDescription": "تمثيل بصري لاستجابة بؤبؤ العين عبر الزمن",
+  "plrPiRange": "نطاق P/I: {min}% - {max}%",
+  "@plrPiRange": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "plrMinValue": "الأدنى: {value}%",
+  "@plrMinValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "plrFrameDataTitle": "بيانات الإطارات",
+  "plrTableTime": "الوقت",
+  "plrTablePiPercent": "P/I %",
+  "plrTablePhase": "المرحلة",
+  "plrTableConfidenceShort": "ثقة",
+  "plrSuccessfulFailed": "ناجح: {success} | فاشل: {fail}",
+  "@plrSuccessfulFailed": {
+    "placeholders": {
+      "success": {
+        "type": "int"
+      },
+      "fail": {
+        "type": "int"
+      }
+    }
+  },
+  "plrReferenceLatencyLine": "• الكمون: 200-500 مللي ثانية (الوقت للاستجابة الأولية)",
+  "plrReferenceConstrictionLine": "• الانقباض: انخفاض 10-30% من الخط الأساسي",
+  "plrReferenceVelocityLine": "• السرعة: 1.5-4.0% في الثانية",
+  "plrReferenceRecoveryLine": "• الاسترداد: >75% عودة إلى الخط الأساسي خلال 5 ثوانٍ",
+  "plrReferenceRecoveryLineShort": "• الاسترداد: >75% عودة إلى الأساس خلال 5 ث",
+  "plrShareSubject": "تقرير تحليل PLR - {eye}",
+  "@plrShareSubject": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "plrTextReportTitle": "تقرير تحليل فيديو PLR",
+  "plrTextDisclaimerTitle": "إخلاء المسؤولية: أداة بحثية/تعليمية فقط",
+  "plrTextDisclaimerBody": "النتائج ليست تشخيصات طبية.",
+  "plrOverallGradeLabel": "الدرجة الإجمالية",
+  "plrEndOfReport": "نهاية التقرير",
+  "zoneOverlay": "تراكب المناطق",
+  "@zoneOverlay": {
+    "description": "Zone overlay / analysis: Zone Overlay"
+  },
+  "tipDragImage": "نصيحة: اسحب الصورة لمحاذاة الحوف مع دوائر التراكب.",
+  "@tipDragImage": {
+    "description": "Zone overlay / analysis: Tip: drag image to align limbus with overlay circl"
+  },
+  "overlayMetrics": "مقاييس التراكب",
+  "@overlayMetrics": {
+    "description": "Zone overlay / analysis: Overlay Metrics"
+  },
+  "piRatioLabel": "نسبة P/I:",
+  "@piRatioLabel": {
+    "description": "Zone overlay / analysis: P/I Ratio:"
+  },
+  "ellipsenessLabel": "الانحراف البيضاوي:",
+  "@ellipsenessLabel": {
+    "description": "Zone overlay / analysis: Ellipseness:"
+  },
+  "decentralizationLabel": "اللامركزية:",
+  "@decentralizationLabel": {
+    "description": "Zone overlay / analysis: Decentralization:"
+  },
+  "detectedFindings": "النتائج المكتشفة",
+  "@detectedFindings": {
+    "description": "Zone overlay / analysis: Detected findings"
+  },
+  "anwCollarette": "ANW / الطوق",
+  "@anwCollarette": {
+    "description": "Zone overlay / analysis: ANW / COLLARETTE"
+  },
+  "observerNotes": "ملاحظات المراقب",
+  "@observerNotes": {
+    "description": "Zone overlay / analysis: Observer notes"
+  },
+  "observerNotesHint": "أدخل الملاحظات السريرية ونتائج المناطق والأنماط...",
+  "@observerNotesHint": {
+    "description": "Zone overlay / analysis: Enter clinical observations, zone findings, patter"
+  },
+  "autoCenter": "توسيط تلقائي",
+  "@autoCenter": {
+    "description": "Zone overlay / analysis: Auto-center"
+  },
+  "anwRing": "حلقة ANW",
+  "@anwRing": {
+    "description": "Zone overlay / analysis: ANW Ring"
+  },
+  "axisGrid": "المحور/الشبكة",
+  "@axisGrid": {
+    "description": "Zone overlay / analysis: Axis/Grid"
+  },
+  "chart": "مخطط",
+  "@chart": {
+    "description": "Zone overlay / analysis: Chart"
+  },
+  "hoverToIdentify": "مرر المؤشر فوق منطقة أو انقر عليها للتعرف عليها",
+  "@hoverToIdentify": {
+    "description": "Zone overlay / analysis: Hover or tap a zone to identify"
+  },
+  "organsMode": "وضع الأعضاء — مرر المؤشر فوق القزحية لتحديد المناطق",
+  "@organsMode": {
+    "description": "Zone overlay / analysis: Organs mode — hover iris to identify zones"
+  },
+  "mildSizeDiff": "فارق حجم طفيف. قد يكون تغيراً فسيولوجياً.",
+  "@mildSizeDiff": {
+    "description": "Zone overlay / analysis: Mild size difference. May be physiological variati"
+  },
+  "withinBaseline": "ضمن الخط الأساسي البحثي للعمر {age} ({group})",
+  "@withinBaseline": {
+    "description": "Zone overlay / analysis: Within research baseline for age {age} ({group})"
+  },
+  "formLabel": "الشكل:",
+  "@formLabel": {
+    "description": "Zone overlay / analysis: Form:"
+  },
+  "flatteningLabel": "التسطيح:",
+  "@flatteningLabel": {
+    "description": "Zone overlay / analysis: Flattening:"
+  },
+  "protrusionLabel": "النتوء:",
+  "@protrusionLabel": {
+    "description": "Zone overlay / analysis: Protrusion:"
+  },
+  "decentrationLabel": "اللامركزية:",
+  "@decentrationLabel": {
+    "description": "Zone overlay / analysis: Decentration:"
+  },
+  "pupilSizeLabel": "حجم بؤبؤ العين:",
+  "@pupilSizeLabel": {
+    "description": "Zone overlay / analysis: Pupil size:"
+  },
+  "anwRatioLabel": "نسبة ANW:",
+  "@anwRatioLabel": {
+    "description": "Zone overlay / analysis: ANW ratio:"
+  },
+  "anwToneLabel": "نغمة ANW:",
+  "@anwToneLabel": {
+    "description": "Zone overlay / analysis: ANW tone:"
+  },
+  "noMajorODAnomalies": "لا توجد حالات شاذة رئيسية في بؤبؤ عين OD (العين اليمنى).",
+  "@noMajorODAnomalies": {
+    "description": "Zone overlay / analysis: No major OD pupil anomalies."
+  },
+  "noMajorOSAnomalies": "لا توجد حالات شاذة رئيسية في بؤبؤ عين OS (العين اليسرى).",
+  "@noMajorOSAnomalies": {
+    "description": "Zone overlay / analysis: No major OS pupil anomalies."
+  },
+  "anwNotAssessed": "ANW: لم يتم التقييم",
+  "@anwNotAssessed": {
+    "description": "Zone overlay / analysis: ANW: not assessed"
+  },
+  "manualAlignmentAid": "أداة محاذاة يدوية للمراجعة فقط (بعد الالتقاط). اسحب الصورة أو استخدم التوسيط التلقائي.",
+  "@manualAlignmentAid": {
+    "description": "Zone overlay / analysis: Manual alignment aid for review only (post-capture"
+  },
+  "frontalShift": "S: نمط الانزياح الأمامي.",
+  "@frontalShift": {
+    "description": "Zone overlay / analysis: S: Frontal shift."
+  },
+  "cerebralCirculation": "ربطت الدراسات التاريخية وفقاً لفيلشوفر هذا بأنماط الدورة الدموية الدماغية.",
+  "@cerebralCirculation": {
+    "description": "Zone overlay / analysis: Cerebral circulation patterns."
+  },
+  "middleTemporalShift": "D: نمط الانزياح الصدغي الأوسط.",
+  "@middleTemporalShift": {
+    "description": "Zone overlay / analysis: D: Middle-temporal shift."
+  },
+  "respiratoryCardiac": "ربطت الدراسات التاريخية وفقاً لفيلشوفر هذا بأنماط اللاإرادي التنفسية والقلبية.",
+  "@respiratoryCardiac": {
+    "description": "Zone overlay / analysis: Respiratory and cardiac autonomic patterns."
+  },
+  "findings": "النتائج:",
+  "@findings": {
+    "description": "Zone overlay / analysis: Findings:"
+  },
+  "analysisReportTitle": "تقرير تحليل بؤبؤ العين",
+  "reportResearchVersion": "إصدار البحث",
+  "reportDisclaimerTitle": "إخلاء المسؤولية: أداة بحثية/تعليمية فقط",
+  "reportDisclaimerBody": "النتائج ملاحظات بحثية، وليست تشخيصات طبية.",
+  "reportPersonInformationTitle": "معلومات الشخص",
+  "reportAgeGroupLabel": "الفئة العمرية",
+  "reportPupilSizeComparisonTitle": "مقارنة حجم بؤبؤ العين",
+  "reportCaptureDistanceMetricsTitle": "مقاييس مسافة الالتقاط",
+  "reportResearchObservationsTitle": "الملاحظات البحثية",
+  "reportObserverNotesZoneOverlayTitle": "ملاحظات المراقب (تراكب المناطق)",
+  "reportEndOfReport": "نهاية التقرير",
+  "reportGradeLabel": "الدرجة",
+  "reportPupilFormTitle": "شكل بؤبؤ العين",
+  "reportDecentrationTitle": "اللامركزية",
+  "reportFlatteningsTitle": "التسطيحات",
+  "reportProtrusionsTitle": "النتوءات",
+  "reportAnwParametersTitle": "الحلقة العصبية اللاإرادية (ANW)",
+  "reportTonicStateLabel": "نمط النغمة التاريخي",
+  "reportShiftDetectedTitle": "نمط الانزياح التاريخي",
+  "reportClinicalLabel": "ملاحظة تاريخية",
+  "reportConstrictionDetectedTitle": "تم اكتشاف انقباض",
+  "reportSeverityLabel": "الشدة",
+  "reportReferenceValuesTitle": "القيم المرجعية (بروتوكول CNRI البحثي)",
+  "reportMatchLabel": "تطابق",
+  "reportValueLabel": "القيمة",
+  "reportNormalPupilForm": "شكل بؤبؤ عين طبيعي",
+  "reportPageXofY": "الصفحة {page}/{total}",
+  "@reportPageXofY": {
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "reportShareSubject": "تقرير تحليل بؤبؤ العين - {patientName}",
+  "@reportShareSubject": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      }
+    }
+  },
+  "reportShareBody": "مرفق تقرير تحليل بؤبؤ العين لـ {patientName}، المُولَّد بتاريخ {date}.",
+  "@reportShareBody": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "belowBaseline": "أدنى من الخط الأساسي البحثي للعمر {age} ({group})",
+  "@belowBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "aboveBaseline": "أعلى من الخط الأساسي البحثي للعمر {age} ({group})",
+  "@aboveBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "ageGroupInfant": "رضيع",
+  "@ageGroupInfant": {
+    "description": "Localized age group label"
+  },
+  "ageGroupChild15": "طفل (1-5)",
+  "@ageGroupChild15": {
+    "description": "Localized age group label"
+  },
+  "ageGroupChild611": "طفل (6-11)",
+  "@ageGroupChild611": {
+    "description": "Localized age group label"
+  },
+  "ageGroupTeen": "مراهق",
+  "@ageGroupTeen": {
+    "description": "Localized age group label"
+  },
+  "ageGroupAdult2039": "بالغ (20-39)",
+  "@ageGroupAdult2039": {
+    "description": "Localized age group label"
+  },
+  "ageGroupAdult4059": "بالغ (40-59)",
+  "@ageGroupAdult4059": {
+    "description": "Localized age group label"
+  },
+  "ageGroupSenior60Plus": "مسن (60+)",
+  "@ageGroupSenior60Plus": {
+    "description": "Localized age group label"
+  },
+  "middleNasalShift": "نمط الانزياح الأنفي الأوسط.",
+  "upperTemporalShift": "نمط الانزياح الصدغي العلوي.",
+  "lowerTemporalShift": "نمط الانزياح الصدغي السفلي.",
+  "basalShift": "نمط الانزياح القاعدي.",
+  "vagusStellateAssociation": "ربطت الدراسات التاريخية وفقاً لفيلشوفر هذا بأنماط خمول العصب المبهم أو العقدة النجمية.",
+  "venaCavaInferiorAssociation": "ربطت الدراسات التاريخية وفقاً لفيلشوفر هذا بأنماط الاضطراب الديناميكي الدموي في الوريد الأجوف السفلي.",
+  "vertebralArteryAssociation": "ربطت الدراسات التاريخية وفقاً لفيلشوفر هذا بأنماط دوران الشريان الفقري.",
+  "smallPelvisAssociation": "ربطت الدراسات التاريخية وفقاً لفيلشوفر هذا بأنماط الاحتقان في الحوض الصغير.",
+  "openZoneOverlay": "فتح تراكب المناطق",
+  "iris": "القزحية",
+  "chartOpacity": "شفافية المخطط",
+  "irisSizeNotAvailable": "بيانات حجم القزحية غير متاحة",
+  "ratio": "النسبة",
+  "reportRefPiRatio": "نسبة بؤبؤ العين/القزحية: الطبيعي 20-30%",
+  "reportRefEllipseness": "الانحراف البيضاوي: الطبيعي >95%",
+  "reportRefDecentralization": "اللامركزية: الطبيعي <5%",
+  "reportRefPupilSizeDiff": "فارق حجم بؤبؤ العين: <2% طبيعي، 2-4% طفيف، >4% ملحوظ",
+  "enterPatientInfoAnalysis": "أدخل معلومات المريض → التحليل",
+  "chooseCaptureMethod": "اختر طريقة الالتقاط:",
+  "usbCamera": "كاميرا USB",
+  "selectExistingImage": "اختر صورة موجودة",
+  "detectingCameras": "جارٍ اكتشاف الكاميرات...",
+  "retryDetection": "إعادة الاكتشاف",
+  "connectUvcCameraViaUsb": "وصّل كاميرا UVC عبر USB",
+  "ensureCameraDriversInstalled": "تأكد من تثبيت برامج تشغيل الكاميرا",
+  "tapRefreshToDetect": "انقر على تحديث لاكتشاف الكاميرات",
+  "connectUsbCameraToBegin": "وصّل كاميرا USB للبدء",
+  "noExternalCameraTitle": "لم يتم اكتشاف كاميرا خارجية",
+  "connectUsbIriscopeEnsurePlugged": "وصّل إيريسكوب USB وتأكد من توصيله",
+  "languagesAvailable": "اللغات المتاحة",
+  "validationChecks": "فحوصات التحقق:",
+  "eyeQualityTip": "نصيحة: تأكد من إضاءة جيدة وأبقِ العين ثابتة",
+  "validatingEye": "جارٍ التحقق من العين...",
+  "initializing": "جارٍ التهيئة...",
+  "nameLabel": "الاسم:",
+  "ageLabel": "العمر:",
+  "typeLabel": "النوع:",
+  "pleaseEnterName": "يرجى إدخال الاسم",
+  "pleaseEnterAge": "يرجى إدخال العمر",
+  "ageMustBe2Digits": "يجب أن يحتوي العمر على 1 أو 2 رقم",
+  "optional": "(اختياري)",
+  "bilateralBothHands": "الاستخدام الثنائي لكلتا اليدين",
+  "zoom": "تكبير",
+  "zoomSliderTip": "استخدم شريط التكبير على اليمين لضبط التكبير قبل التسجيل.",
+  "aboutProgramDeveloper": "مطور البرنامج - Bryan K. Marcia, Ph.D.",
+  "chartSizeTooltip": "حجم المخطط",
+  "chartOpacityAdvancedTooltip": "شفافية المخطط (0 = عند التمرير فقط / وضع الأعضاء)",
+  "anwLabel": "ANW",
+  "doneAndGoBack": "تم والعودة",
+  "errorImageShape": "شكل الصورة غير صحيح - تأكد من ملء العين للإطار",
+  "cameraConnected": "تم توصيل الكاميرا",
+  "cameraDisconnected": "تم قطع اتصال الكاميرا",
+  "cameraPermissionDenied": "تم رفض إذن الكاميرا",
+  "cameraFailedInit": "فشل تهيئة الكاميرا",
+  "cameraInUse": "الكاميرا قيد الاستخدام من تطبيق آخر",
+  "cameraFormatNotSupported": "تنسيق الكاميرا غير مدعوم",
+  "capturedImageNotFound": "ملف الصورة الملتقطة غير موجود",
+  "failedToCaptureImage": "فشل التقاط الصورة",
+  "gradeA": "A",
+  "gradeB": "B",
+  "gradeC": "C",
+  "gradeD": "D",
+  "cameraErrorOccurred": "حدث خطأ في الكاميرا",
+  "connectingToUsbIriscope": "جارٍ الاتصال بالإيريسكوب USB...",
+  "noCamerasDetectedMessage": "لم يتم اكتشاف أي كاميرات. يرجى التأكد من توصيل كاميرا USB وتعرّف النظام عليها.",
+  "failedToAccessCameras": "فشل الوصول إلى الكاميرات"
+}

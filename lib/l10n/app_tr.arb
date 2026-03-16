@@ -1,0 +1,1921 @@
+{
+  "@@locale": "tr",
+  "appTitle": "PupilMetrics",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "analyzeButton": "Analiz Et",
+  "plrModes": "PLR Modları",
+  "captureInstructions": "Gözü kılavuz çemberin içine konumlandırın",
+  "scanHistory": "Tarama Geçmişi",
+  "selectCameraMode": "Kamera Modunu Seçin",
+  "loadFromGallery": "Galeriden Yükle",
+  "rightEyePhoto": "Sağ Göz Fotoğrafı",
+  "leftEyePhoto": "Sol Göz Fotoğrafı",
+  "autoCapture": "Otomatik Çekim",
+  "autoCaptureDesc": "Göz algılama + 5 saniyelik otomatik çekim",
+  "manualCapture": "Manuel Çekim",
+  "manualCaptureDesc": "Göz algılama + manuel çekim (arka kamera)",
+  "selfieMode": "Selfie Modu",
+  "selfieModeDesc": "Göz algılama + 5 saniyelik otomatik çekim (ön kamera)",
+  "plrVideoRear": "PLR Video (Arka)",
+  "plrVideoRearDesc": "Arka kamera • 10 saniyelik çekim",
+  "plrVideoSelfie": "PLR Video (Selfie)",
+  "plrVideoSelfieDesc": "Ön kamera • 10 saniyelik çekim",
+  "plrVideoCapture": "PLR Video Çekimi",
+  "frontCamera": "Ön Kamera",
+  "rearCamera": "Arka Kamera",
+  "selectEyeToAssess": "Değerlendirilecek gözü seçin",
+  "rightEyeOD": "Sağ Göz (OD)",
+  "leftEyeOS": "Sol Göz (OS)",
+  "recordPlrRightEye": "Sağ göz için PLR kaydet",
+  "recordPlrLeftEye": "Sol göz için PLR kaydet",
+  "loadRightEyeImage": "Sağ göz görüntüsünü yükle",
+  "loadLeftEyeImage": "Sol göz görüntüsünü yükle",
+  "bothEyes": "Her İki Göz",
+  "loadBothEyesDesc": "Önce sağ göz, ardından sol göz yükle",
+  "selectEyeImageFromDevice": "Cihazınızdan bir göz görüntüsü seçin",
+  "selectRightEyeFirst": "Önce SAĞ göz (OD) görüntüsünü seçin",
+  "rightEyeSaved": "Sağ göz kaydedildi. Şimdi SOL göz (OS) görüntüsünü seçin",
+  "cancelledNoRightEye": "İptal edildi - sağ göz seçilmedi",
+  "cancelledNoLeftEye": "İptal edildi - sol göz seçilmedi",
+  "errorLoadingImages": "Görüntüler yüklenirken hata oluştu: {error}",
+  "@errorLoadingImages": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "crop43": "Kırp (4:3)",
+  "success": "Başarılı",
+  "imageCroppedSuccess": "Görüntü başarıyla kırpıldı!",
+  "error": "Hata",
+  "cropFailed": "Görüntü kırpılamadı. Lütfen tekrar deneyin.",
+  "crop": "Kırp",
+  "cancel": "İptal",
+  "saved": "Kaydedildi! ✅",
+  "imageSavedToGallery": "Görüntü galeride başarıyla kaydedildi",
+  "exposure": "Pozlama",
+  "flash": "Flaş",
+  "eye": "Göz",
+  "center": "merkez",
+  "light": "Işık",
+  "ready": "Hazır",
+  "on": "AÇIK",
+  "off": "KAPALI",
+  "auto": "OTO",
+  "manual": "MANUEL",
+  "selfie": "SELFİE",
+  "pupil": "GÖZ BEBEĞİ",
+  "plrHistory": "PLR Geçmişi",
+  "searchByName": "Ada göre ara...",
+  "totalScans": "Toplam Tarama",
+  "thisWeek": "Bu Hafta",
+  "patients": "Hastalar",
+  "detected": "Algılandı",
+  "noPlrRecordsYet": "Henüz PLR kaydı yok",
+  "recordPlrVideoToSeeHistory": "Geçmişi görmek için bir PLR videosu kaydedin",
+  "deleteRecord": "Kayıt Silinsin mi?",
+  "deleteRecordConfirm": "{name} ({eye}) için PLR analizi silinsin mi?\\n\\nBu işlem geri alınamaz.",
+  "@deleteRecordConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "delete": "Sil",
+  "recordDeleted": "Kayıt silindi",
+  "plrAnalysis": "PLR Analizi - {eye}",
+  "@plrAnalysis": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "patient": "Hasta",
+  "date": "Tarih",
+  "frames": "Kareler",
+  "baselinePiRatio": "Başlangıç G/İ",
+  "minPiRatio": "Min G/İ",
+  "plrMagnitude": "PLR Büyüklüğü",
+  "constriction": "Konstrüksiyon",
+  "plrDetected": "PLR Algılandı",
+  "confidence": "Güvenilirlik",
+  "grade": "Derece",
+  "close": "kapat",
+  "yes": "Evet",
+  "no": "Hayır",
+  "na": "N/A",
+  "takeLeftEyePhoto": "Sol Göz Fotoğrafı Çek",
+  "takeRightEyePhoto": "Sağ Göz Fotoğrafı Çek",
+  "nowTakingLeftEye": "Şu an SOL göz (OS) çekiliyor",
+  "startingWithRightEye": "SAĞ göz (OD) ile başlanıyor",
+  "captured": "Yakalandı ✓",
+  "useSameDistanceLighting": "Doğru karşılaştırma için sağ göz ile aynı mesafe ve aydınlatmayı kullanın.",
+  "step1of2": "Adım 1 / 2",
+  "step2of2": "Adım 2 / 2",
+  "bothEyesCaptured": "Her iki göz yakalandı ✓",
+  "continueToLeftEye": "Sol Göze Devam Et",
+  "retakeOD": "OD'yi Yeniden Çek",
+  "retakeOS": "OS'yi Yeniden Çek",
+  "retakeRightEye": "Sağ Gözü Yeniden Çek",
+  "analyzeBothEyes": "Her İki Gözü Analiz Et",
+  "patientInfoMissing": "Hasta Bilgisi Eksik",
+  "rightEyePhotoMissing": "Sağ göz fotoğrafı eksik!",
+  "patientInfoMissingRestart": "Hasta bilgisi eksik. Lütfen yeniden başlatın.",
+  "exitApp": "Uygulamadan Çık",
+  "tipsForBestResults": "EN İYİ SONUÇLAR İÇİN İPUÇLARI",
+  "followGuidelinesForQuality": "Optimum görüntü kalitesi için bu kılavuzu izleyin",
+  "cameraDistance": "Kamera Mesafesi",
+  "cameraDistanceDesc": "Kamerayı gözünüzden 10-15 cm uzakta tutun. Her iki göz için aynı mesafeyi koruyun.",
+  "lightingPosition": "Işık Kaynağı Konumu",
+  "lightingPositionDesc": "Işık kaynağını göz bebeği sınırlarının içine veya dışına konumlandırın. Kamera flaşına doğru bakmayı deneyin.",
+  "avoidReflections": "Yansımalardan Kaçının",
+  "avoidReflectionsDesc": "Pencere parlamasından, aynalardan ve doğrudan lambalardan kaçınarak yansımaları azaltın.",
+  "centerYourEye": "Gözünüzü Ortala",
+  "centerYourEyeDesc": "Sklerayı (beyaz kısım) da içeren gözün tamamının ortalandığından ve kareyi doldurduğundan emin olun.",
+  "cropProperly": "Düzgün Kırpın",
+  "cropProperlyDesc": "Görüntüyü göz ortada olacak şekilde kırpın. Görüntü otomatik olarak 4:3 en-boy oranında kaydedilecektir.",
+  "importantInformation": "Önemli Bilgi",
+  "imageRatio43": "Tıbbi görüntüleme standardı için 4:3 görüntü oranı",
+  "forClinicalUseCnri": "CNRI (cnri.edu) ile klinik kullanım için",
+  "noMedicalDiagnosis": "Tıbbi tanı sağlamaz",
+  "eyeWideOpenClear": "Gözünüzün tamamen açık ve görüntünün net olduğundan emin olun",
+  "personalInfo": "Kişisel Bilgiler",
+  "personInformation": "Kişi Bilgileri",
+  "enterPersonDetails": "Kişi Bilgilerini Girin",
+  "infoIncludedInReport": "Bu bilgiler analiz raporuna dahil edilecektir",
+  "fullName": "Ad Soyad",
+  "enterPersonName": "Kişi adını girin",
+  "nameRequired": "Ad zorunludur",
+  "sex": "Cinsiyet",
+  "male": "Erkek",
+  "female": "Kadın",
+  "ageYears": "Yaş (yıl)",
+  "enterAge": "Yaşı girin",
+  "ageRequired": "Yaş zorunludur",
+  "enterValidNumber": "Geçerli bir sayı girin",
+  "enterValidAge": "Geçerli bir yaş girin (0-120)",
+  "mainComplaints": "Ana Şikayetler",
+  "mainComplaintsOptional": "Ana Şikayetler (isteğe bağlı)",
+  "complaintsHint": "örn. baş ağrısı, görme sorunları, yorgunluk...",
+  "continueToCaptire": "Çekime Devam Et",
+  "ageImportantNote": "Normal aralıklar yaşa göre değiştiğinden göz bebeği boyutunun doğru değerlendirilebilmesi için yaş önemlidir.",
+  "submit": "Gönder",
+  "pleaseSelectGender": "Lütfen cinsiyet seçin!",
+  "applicationSubmitted": "Başvurunuz başarıyla gönderildi.",
+  "type": "Tür:",
+  "gender": "Cinsiyet:",
+  "rightHanded": "Sağ elini kullanan",
+  "leftHanded": "Sol elini kullanan",
+  "partialLeftHandedness": "Kısmi sol el kullanımı",
+  "retrainedLeftHandedness": "Yeniden eğitilmiş sol el kullanımı",
+  "bilateralUseBothHands": "İki elli kullanım",
+  "splashTitle": "PupilMetrics Göz Çekimi",
+  "splashDeveloper": "Program Geliştiricisi - Bryan K. Marcia, Ph.D.",
+  "researchEducationalTool": "Araştırma/Eğitim Aracı",
+  "startNewAnalysis": "Yeni Analiz Başlat",
+  "viewHistory": "Geçmişi Görüntüle",
+  "viewResearchDisclaimer": "Araştırma Feragatnamesini Görüntüle",
+  "researchDisclaimerTitle": "Araştırma/Eğitim Aracı",
+  "researchDisclaimerNotMedical": "Tıbbi cihaz DEĞİLDİR",
+  "researchDisclaimerNotClinical": "Klinik tanı için DEĞİLDİR",
+  "researchDisclaimerResults": "Sonuçlar araştırma gözlemleridir",
+  "researchDisclaimerConsult": "Her zaman sağlık uzmanlarına danışın",
+  "researchDisclaimerAcknowledge": "Devam ederek, bu uygulamanın bir araştırma aracı olduğunu ve tıbbi kararlar için kullanılmaması gerektiğini kabul etmiş olursunuz.",
+  "researchDisclaimerWarning": "Bu uygulama yalnızca ARAŞTIRMA ve EĞİTİM amaçlıdır.",
+  "iUnderstand": "Anladım",
+  "plrAnalysisTest": "PLR Analiz Testi",
+  "checkingVideoFile": "Video dosyası kontrol ediliyor...",
+  "processingFrame": "Kare işleniyor {current}/{total} ({timestamp}ms)...",
+  "@processingFrame": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "timestamp": {
+        "type": "int"
+      }
+    }
+  },
+  "analysisComplete": "Analiz tamamlandı!",
+  "errorVideoNotFound": "Hata: Video dosyası bulunamadı",
+  "waitingForResults": "Sonuçlar bekleniyor...",
+  "baseline": "Başlangıç Değeri",
+  "flashPhase": "Flaş",
+  "constrictionPhase": "Konstrüksiyon",
+  "recovery": "İyileşme",
+  "plrDetectedExclaim": "PLR ALGILANDI!",
+  "plrWeakNotDetected": "PLR Zayıf/Algılanamadı",
+  "min": "Min",
+  "plr": "PLR",
+  "constrLabel": "Konstr.",
+  "saveToHistory": "Geçmişe Kaydet",
+  "txt": "TXT",
+  "json": "JSON",
+  "saveFrames": "Kareleri Kaydet",
+  "share": "Paylaş",
+  "frameSavedToGallery": "Kare galeriye kaydedildi!",
+  "failedToSaveFrame": "Kare kaydedilemedi",
+  "framesSavedToGallery": "{count} kare galeriye kaydedildi!",
+  "@framesSavedToGallery": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "jsonCopiedToClipboard": "JSON panoya kopyalandı!",
+  "reportCopiedToClipboard": "Rapor panoya kopyalandı!",
+  "shareFailedError": "Paylaşım başarısız: {error}",
+  "@shareFailedError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "savedToHistoryId": "Geçmişe kaydedildi! (ID: {id})",
+  "@savedToHistoryId": {
+    "placeholders": {
+      "id": {
+        "type": "int"
+      }
+    }
+  },
+  "failedToSave": "Kaydedilemedi: {error}",
+  "@failedToSave": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noSuccessfulFramesToSave": "Kaydedilecek başarılı kare yok",
+  "saveAllFrames": "Tüm Kareleri Kaydet",
+  "shareReport": "Raporu Paylaş",
+  "shareJson": "JSON'ı Paylaş",
+  "rerunTest": "Testi Yeniden Çalıştır",
+  "videoCaptureTitle": "PLR - {eye}",
+  "@videoCaptureTitle": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "initializingCamera": "Kamera başlatılıyor...",
+  "usingCamera": "{camera} kamera kullanılıyor",
+  "@usingCamera": {
+    "placeholders": {
+      "camera": {
+        "type": "String"
+      }
+    }
+  },
+  "cameraError": "Kamera hatası: {error}",
+  "@cameraError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noCamerasFound": "Kamera bulunamadı",
+  "retry": "Yeniden Dene",
+  "startPlrRecording": "PLR Kaydını Başlat",
+  "stopRecording": "Kaydı Durdur",
+  "phaseReady": "Hazır",
+  "phaseStarting": "Başlatılıyor...",
+  "phaseBaseline": "Başlangıç Değeri (0-{sec}s)",
+  "@phaseBaseline": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseFlash": "FLAŞ!",
+  "phaseConstriction": "Konstrüksiyon ({start}-{end}s)",
+  "@phaseConstriction": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseRecovery": "İyileşme ({start}-{end}s)",
+  "@phaseRecovery": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "phaseComplete": "Tamamlandı!",
+  "readyDesc": "Gözü çemberin içine konumlandırın, ardından Başlat'a dokunun",
+  "holdSteady": "Sabit tutun...",
+  "recordingBaselinePupil": "Başlangıç göz bebeği boyutu kaydediliyor",
+  "lightStimulus": "Işık uyarısı ({ms}ms)",
+  "@lightStimulus": {
+    "placeholders": {
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "measuringConstriction": "Göz bebeği konstrüksiyonu ölçülüyor",
+  "measuringRecovery": "Göz bebeği iyileşmesi ölçülüyor",
+  "plrRecordingComplete": "PLR kaydı tamamlandı",
+  "positionEyeInstruction": "{eye} gözü çemberin içine konumlandırın.\\n{seconds} saniyelik kayıt süresince sabit tutun.",
+  "@positionEyeInstruction": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      },
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "keepEyeSteadyFlash": "Gözü sabit tutun. Flaş {sec}. saniyede gerçekleşecek.",
+  "@keepEyeSteadyFlash": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "recordingComplete": "Kayıt Tamamlandı",
+  "plrVideoCapturedSuccess": "PLR videosu başarıyla çekildi!",
+  "duration": "Süre",
+  "seconds": "saniye",
+  "frameRate": "Kare Hızı",
+  "camera": "Kamera",
+  "flashAt": "{sec}s'de ({ms}ms)",
+  "@flashAt": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      },
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "phases": "Aşamalar",
+  "phasesFlow": "Başlangıç Değeri → Flaş → Konstrüksiyon → İyileşme",
+  "expectedNormalValues": "Beklenen Normal Değerler:",
+  "latency": "Gecikme",
+  "velocity": "Hız",
+  "testFrameAnalysis": "🧪 Test Kare Analizi",
+  "retake": "Yeniden Çek",
+  "done": "Tamam",
+  "plrVideoModeTitle": "PLR Video Modu",
+  "plrAssessmentTitle": "Işığa Pupil Refleksi (PLR) Değerlendirmesi",
+  "plrInstructions": "1. Gözü kılavuz çemberin içine konumlandırın\\n2. 'PLR Kaydını Başlat'a dokunun\\n3. 10 saniye boyunca sabit tutun\\n4. 3. saniyede flaş gerçekleşecek\\n5. Uygulama göz bebeği tepkisini kaydeder",
+  "recordingPhases": "Kayıt Aşamaları:",
+  "baselinePhaseDesc": "Başlangıç göz bebeği boyutu",
+  "flashPhaseDesc": "Işık uyarısı",
+  "constrictionPhaseDesc": "Göz bebeği küçülür",
+  "recoveryPhaseDesc": "Göz bebeği normale döner",
+  "normalPlrValues": "Normal PLR Değerleri:",
+  "gotIt": "Anladım",
+  "pupilAnalysis": "Göz Bebeği Analizi",
+  "scansLeft": "{count} kaldı",
+  "@scansLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "validatingRightEye": "Sağ göz doğrulanıyor...",
+  "validatingLeftEye": "Sol göz doğrulanıyor...",
+  "analyzingRightEye": "Sağ göz (OD) analiz ediliyor...",
+  "analyzingLeftEye": "Sol göz (OS) analiz ediliyor...",
+  "comparingPupils": "Göz bebekleri karşılaştırılıyor...",
+  "person": "Kişi: {name}",
+  "@person": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "invalidEyeImage": "Geçersiz Göz Görüntüsü",
+  "analysisFailed": "Analiz başarısız: {error}",
+  "@analysisFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "researchEducationalToolOnly": "YALNIZCA ARAŞTIRMA/EĞİTİM ARACI",
+  "resultsNotMedicalDiagnoses": "Bu uygulama yalnızca araştırma ve eğitim amaçlıdır. Sonuçlar tıbbi tanı DEĞİLDİR ve klinik kullanım için doğrulanmamıştır. Örüntü ilişkilendirmeleri tarihsel araştırma literatüründen alınmıştır. Herhangi bir sağlık sorunu için bir sağlık uzmanına danışın.",
+  "pupilSizeDifference": "Göz Bebeği Boyut Farkı Tespit Edildi",
+  "significantPupilSizeDiff": "ANLAMLI GÖZ BEBEĞİ BOYUT FARKI",
+  "diff": "fark",
+  "researchObservationConsult": "Araştırma gözlemi - Yorum için bir sağlık uzmanına danışın",
+  "ageBasedResearchBaseline": "Yaşa Dayalı Araştırma Referans Değeri",
+  "group": "Grup: {group}",
+  "@group": {
+    "placeholders": {
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "researchRange": "Araştırma Aralığı",
+  "measuredEst": "Ölçülen (tah.)",
+  "pupilForm": "Göz Bebeği Formu",
+  "decentrationPattern": "Merkez Dışılık Örüntüsü",
+  "flattenings": "Düzleşmeler",
+  "protrusions": "Çıkıntılar",
+  "zonesCount": "{count} bölge",
+  "@zonesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bilateralComparison": "Bilateral Karşılaştırma",
+  "parameter": "Parametre",
+  "od": "OD",
+  "os": "OS",
+  "piRatio": "G/İ Oranı",
+  "ellipseness": "Eliptiklik",
+  "circularity": "Dairesellik",
+  "decentralization": "Merkez Dışılık",
+  "anwRatio": "Oran",
+  "normal": "normal",
+  "elliptical": "Eliptik",
+  "circular": "Dairesel",
+  "irregular": "Düzensiz",
+  "centered": "Ortalanmış",
+  "offset": "Sapma",
+  "miosis": "Miyozis",
+  "constricted": "Konstrükte",
+  "dilated": "Dilate",
+  "mydriasis": "Midriyazis",
+  "inner": "İç",
+  "outer": "Dış",
+  "high": "Yüksek",
+  "moderate": "Orta",
+  "savePdf": "PDF Kaydet",
+  "sharePdf": "PDF Paylaş",
+  "retakePhotos": "Fotoğrafları Yeniden Çek",
+  "scansLeftBanner": "{count} tarama kaldı",
+  "@scansLeftBanner": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "upgrade": "Yükselt",
+  "unlockUnlimited": "Sınırsızı Aç",
+  "usedAllFreeScans": "Tüm ücretsiz taramalarınızı kullandınız.",
+  "unlimitedScans": "Sınırsız tarama",
+  "pdfReports": "PDF raporlar",
+  "scanHistoryFeature": "Tarama geçmişi",
+  "bilateralAnalysis": "Bilateral analiz",
+  "monthly": "Aylık",
+  "perMonth": "/ay",
+  "annual": "Yıllık",
+  "perYear": "/yıl",
+  "tenCredits": "10 Kredi",
+  "oneTime": "tek seferlik",
+  "best": "EN İYİ",
+  "purchaseCancelled": "Satın alma iptal edildi",
+  "purchaseFailed": "Satın alma başarısız: {error}",
+  "@purchaseFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "txtSaved": "TXT kaydedildi: {path}",
+  "@txtSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "jsonSaved": "JSON kaydedildi: {path}",
+  "@jsonSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfSaved": "PDF Kaydedildi!",
+  "pdfFailed": "PDF Başarısız: {error}",
+  "@pdfFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "open": "AÇ",
+  "failed": "Başarısız: {error}",
+  "@failed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "staticScans": "Statik",
+  "plrScans": "PLR",
+  "searchByNameOrComplaints": "Ada veya şikayete göre ara...",
+  "searchPlrRecords": "PLR kayıtlarında ara...",
+  "noScansYet": "Henüz tarama yok",
+  "completedScansAppearHere": "Tamamlanan taramalar burada görünecek",
+  "deleteScan": "Tarama Silinsin mi?",
+  "deleteScanConfirm": "{name} adlı kişiye ait {date} tarihli tarama silinsin mi?",
+  "@deleteScanConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "scanDeleted": "Tarama silindi",
+  "originalImagesNotFound": "Orijinal göz görüntüleri bulunamadı.",
+  "viewResults": "Sonuçları Görüntüle",
+  "avgPlr": "Ort. PLR",
+  "years": "yıl",
+  "anisocoria": "Anizokori",
+  "none": "Yok",
+  "mild": "Hafif",
+  "severe": "Ciddi",
+  "zoneLabel": "Bölge: {zone}",
+  "@zoneLabel": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "associatedWith": "{organ} ile ilişkilendirilmiş",
+  "@associatedWith": {
+    "placeholders": {
+      "organ": {
+        "type": "String"
+      }
+    }
+  },
+  "significant": "Anlamlı",
+  "fair": "Orta",
+  "low": "Düşük",
+  "good": "İyi",
+  "zones": "bölge",
+  "significanceWithinLimits": "kabul edilebilir sınırlar içinde",
+  "significanceMild": "hafif",
+  "significanceModerate": "orta",
+  "significanceSignificant": "anlamlı",
+  "formTypeCircle": "Daire (Normal)",
+  "formTypeOval": "Oval",
+  "formTypeOvalVertical": "Dikey Oval",
+  "formTypeOvalHorizontal": "Yatay Oval",
+  "formTypeOvalDiagonal": "Diyagonal Oval",
+  "formTypeLeftObliqueEllipse": "Sol Eğik Elips",
+  "formTypeUnilateralEllipse": "Tek Taraflı Elips",
+  "formTypeVentralDivergingEllipse": "Ventral Iraksak Elips",
+  "formTypeFrontalDivergingEllipse": "Frontal Iraksak Elips",
+  "formTypeEllipse": "Elips",
+  "formTypeChord": "Kiriş",
+  "formTypeIrregular": "Düzensiz",
+  "pupilFormCircleDesc": "Normal dairesel göz bebeği formu. Herhangi bir örüntü varyasyonu tespit edilmedi.",
+  "pupilFormOvalHorizontalDesc": "Yatay oval örüntü. Tarihsel araştırmalar bu örüntüyü solunum ve bez fonksiyon bölgelerini etkileyen otonom sinir sistemi örüntüleriyle ilişkilendirmiştir.",
+  "pupilFormOvalVerticalDesc": "Dikey oval örüntü. Tarihsel araştırmalar bu örüntüyü otonom refleks çalışmalarında serebral dolaşım bölgeleriyle ilişkilendirmiştir.",
+  "pupilFormOvalDiagonalDesc": "Diyagonal oval örüntü. Araştırma literatürü bu örüntüyü otonom çalışmalarda ürogenital bölge refleksleriyle ilişkilendirmiştir.",
+  "pupilFormLeftObliqueEllipseDesc": "Sol eğik elips örüntüsü. Tarihsel gözlemler bu örüntüyü ürogenital ve alt ekstremite otonom bölgeleriyle ilişkilendirmiştir.",
+  "pupilFormUnilateralEllipseDesc": "Tek taraflı elips örüntüsü. Araştırmalar solunum ve bronşiyal otonom bölgelerle ilişkiler olduğunu göstermiştir.",
+  "pupilFormVentralDivergingEllipseDesc": "Ventral ıraksak elips. Tarihsel çalışmalar bu örüntüyü alt vücut otonom bölgeleri ve motor fonksiyon örüntüleriyle ilişkilendirmiştir.",
+  "pupilFormFrontalDivergingEllipseDesc": "Frontal ıraksak elips. Araştırma literatürü bu örüntüyü serebral ve üst otonom bölgelerle ilişkilendirmiştir.",
+  "pupilFormOvalDesc": "Hafif oval deformasyon örüntüsü. Araştırma gözlemlerinde ilerleme için izleyin.",
+  "pupilFormEllipseDesc": "Tarihsel çalışmalarda otonom sistem varyasyonlarını gösteren eliptik göz bebeği örüntüsü.",
+  "pupilFormChordDesc": "Araştırma literatüründe lokalize otonom etkileri gösteren kiriş benzeri deformasyon örüntüsü.",
+  "pupilFormIrregularDesc": "Tarihsel gözlemlere dayanarak birden fazla otonom örüntü etkisini düşündüren düzensiz form.",
+  "patternCentered": "Ortalanmış (Normal)",
+  "patternFrontal": "Frontal merkez dışılık",
+  "patternBasal": "Bazal merkez dışılık",
+  "patternNasal": "Nazal merkez dışılık",
+  "patternTemporal": "Temporal merkez dışılık",
+  "patternMiddleNasal": "Orta-nazal merkez dışılık",
+  "patternMiddleTemporal": "Orta-temporal merkez dışılık",
+  "patternUpperNasal": "Üst-nazal merkez dışılık",
+  "patternUpperTemporal": "Üst-temporal merkez dışılık",
+  "patternLowerNasal": "Alt-nazal merkez dışılık",
+  "patternLowerTemporal": "Alt-temporal merkez dışılık",
+  "patternUpwards": "Merkez Dışılık - Yukarı",
+  "patternDownwards": "Merkez Dışılık - Aşağı",
+  "patternUpwardsInwards": "Merkez Dışılık - Yukarı-İçe",
+  "patternUpwardsOutwards": "Merkez Dışılık - Yukarı-Dışa",
+  "decentrationCenteredDesc": "Fizyolojik sınırlar içinde normal göz bebeği konumlanması.",
+  "decentrationNasalRightDesc": "Nazal örüntü (Sağ). Tarihsel araştırmalar bu bölgeyi pulmoner otonom reflekslerle ilişkilendirmiştir.",
+  "decentrationNasalLeftDesc": "Nazal örüntü (Sol). Araştırma literatürü bu bölgeyi kardiyak otonom fonksiyon örüntüleriyle ilişkilendirmiştir.",
+  "decentrationTemporalDesc": "Temporal örüntü. Tarihsel gözlemler bu bölgeyi renal ve üreme otonom refleksleriyle ilişkilendirmiştir.",
+  "decentrationFrontalRightDesc": "Frontal örüntü (Sağ). Araştırmalar bu bölgeyi bilişsel ve serebral fonksiyon örüntüleriyle ilişkilendirmiştir.",
+  "decentrationFrontalLeftDesc": "Frontal örüntü (Sol). Tarihsel çalışmalar bu bölgeyi serebral otonom örüntülerle ilişkilendirmiştir.",
+  "decentrationBasalRightDesc": "Bazal örüntü (Sağ). Araştırmalar intrakraniyal basınç refleksleriyle ilişkiler olduğunu göstermiştir.",
+  "decentrationBasalLeftDesc": "Bazal örüntü (Sol). Tarihsel gözlemler bu bölgeyi serebral enflamatuvar bölge örüntüleriyle ilişkilendirmiştir.",
+  "decentrationUpwardsInwardsRightDesc": "Üst-nazal örüntü (Sağ). Araştırmalar bu bölgeyi hepatobiliyer otonom reflekslerle ilişkilendirmiştir.",
+  "decentrationUpwardsInwardsLeftDesc": "Üst-nazal örüntü (Sol). Tarihsel çalışmalar bu bölgeyi splenik ve diyafragmatik bölgelerle ilişkilendirmiştir.",
+  "decentrationUpwardsOutwardsDesc": "Üst-temporal örüntü. Araştırmalar renal ve üreme otonom bölgeleriyle ilişkiler olduğunu göstermiştir.",
+  "decentrationMiddleNasalRightDesc": "Orta-nazal örüntü (Sağ). Tarihsel gözlemler bu bölgeyi oksijen kullanımı ve kardiyak bölgelerle ilişkilendirmiştir.",
+  "decentrationMiddleNasalLeftDesc": "Orta-nazal örüntü (Sol). Araştırmalar bu bölgeyi nörolojik ve kardiyak otonom örüntülerle ilişkilendirmiştir.",
+  "decentrationMiddleTemporalRightDesc": "Orta-temporal örüntü (Sağ). Araştırmalar bu bölgeyi kardiyak otonom düzenleme bölgeleriyle ilişkilendirmiştir.",
+  "decentrationMiddleTemporalLeftDesc": "Orta-temporal örüntü (Sol). Tarihsel çalışmalar bu bölgeyi pulmoner ve kardiyak bölgelerle ilişkilendirmiştir.",
+  "decentrationUpperNasalRightDesc": "Üst-nazal örüntü (Sağ). Araştırmalar bilişsel bölgeler ve servikal omurga refleksleriyle ilişkiler olduğunu göstermiştir.",
+  "decentrationUpperNasalLeftDesc": "Üst-nazal örüntü (Sol). Tarihsel gözlemler bu bölgeyi bilişsel örüntüler ve servikal bölgelerle ilişkilendirmiştir.",
+  "decentrationUpperTemporalRightDesc": "Üst-temporal örüntü (Sağ). Araştırmalar bu bölgeyi kraniyal sinir ve işitsel reflekslerle ilişkilendirmiştir.",
+  "decentrationUpperTemporalLeftDesc": "Üst-temporal örüntü (Sol). Tarihsel çalışmalar bu bölgeyi nörovejetatif ve konuşma bölgeleriyle ilişkilendirmiştir.",
+  "decentrationLowerNasalDesc": "Alt-nazal örüntü. Araştırmalar ürogenital ve lumbosakral otonom bölgelerle ilişkiler olduğunu göstermiştir.",
+  "decentrationLowerTemporalRightDesc": "Alt-temporal örüntü (Sağ). Tarihsel gözlemler bu bölgeyi metabolik ve hepatik bölgelerle ilişkilendirmiştir.",
+  "decentrationLowerTemporalLeftDesc": "Alt-temporal örüntü (Sol). Araştırmalar bu bölgeyi kardiyak ve splenik otonom örüntülerle ilişkilendirmiştir.",
+  "flatteningUpperCentralRightDesc": "Üst-merkezi bölge ile ilişkili örüntü. Tarihsel araştırmalar bu bölgeyi ruh hali düzenlemesi ve enerji otonom refleksleriyle ilişkilendirmiştir.",
+  "flatteningUpperTemporalRightDesc": "Üst-temporal bölge ile ilişkili örüntü. Araştırmalar kraniyal sinir ve işitsel otonom reflekslerle ilişkiler olduğunu göstermiştir.",
+  "flatteningMiddleTemporalRightDesc": "Orta-temporal bölge ile ilişkili örüntü. Tarihsel gözlemler bu bölgeyi solunum ve kardiyak otonom örüntülerle ilişkilendirmiştir.",
+  "flatteningLowerTemporalRightDesc": "Alt-temporal bölge ile ilişkili örüntü. Araştırma literatürü bu bölgeyi hepatik ve metabolik otonom bölgelerle ilişkilendirmiştir.",
+  "flatteningLowerBasalRightDesc": "Alt-bazal bölge ile ilişkili örüntü. Tarihsel çalışmalar bu bölgeyi renal ve alt ekstremite otonom refleksleriyle ilişkilendirmiştir.",
+  "flatteningLowerNasalRightDesc": "Alt-nazal bölge ile ilişkili örüntü. Araştırmalar ürogenital ve pelvik otonom bölgelerle ilişkiler olduğunu göstermiştir.",
+  "flatteningMiddleNasalRightDesc": "Orta-nazal bölge ile ilişkili örüntü. Tarihsel gözlemler bu bölgeyi oksijen kullanımı ve solunum otonom örüntüleriyle ilişkilendirmiştir.",
+  "flatteningUpperNasalRightDesc": "Üst-nazal bölge ile ilişkili örüntü. Araştırma literatürü bu bölgeyi bilişsel ve servikal otonom reflekslerle ilişkilendirmiştir.",
+  "flatteningDefaultRightDesc": "Tarihsel araştırmalara dayanarak bu bölgede otonom sinir sistemi örüntü varyasyonu tespit edildi.",
+  "flatteningUpperCentralLeftDesc": "Üst-merkezi bölge ile ilişkili örüntü. Tarihsel araştırmalar bu bölgeyi ruh hali düzenlemesi ve nörolojik otonom örüntülerle ilişkilendirmiştir.",
+  "flatteningUpperTemporalLeftDesc": "Üst-temporal bölge ile ilişkili örüntü. Araştırmalar nörovejetatif ve konuşma otonom bölgeleriyle ilişkiler olduğunu göstermiştir.",
+  "flatteningMiddleTemporalLeftDesc": "Orta-temporal bölge ile ilişkili örüntü. Tarihsel gözlemler bu bölgeyi pulmoner ve kardiyak otonom reflekslerle ilişkilendirmiştir.",
+  "flatteningLowerTemporalLeftDesc": "Alt-temporal bölge ile ilişkili örüntü. Araştırma literatürü bu bölgeyi kardiyak ve splenik otonom örüntülerle ilişkilendirmiştir.",
+  "flatteningLowerBasalLeftDesc": "Alt-bazal bölge ile ilişkili örüntü. Tarihsel çalışmalar bu bölgeyi renal ve eliminatif otonom bölgelerle ilişkilendirmiştir.",
+  "flatteningLowerNasalLeftDesc": "Alt-nazal bölge ile ilişkili örüntü. Araştırmalar ürogenital ve lumbosakral otonom reflekslerle ilişkiler olduğunu göstermiştir.",
+  "flatteningMiddleNasalLeftDesc": "Orta-nazal bölge ile ilişkili örüntü. Tarihsel gözlemler bu bölgeyi kardiyak ve solunum otonom örüntüleriyle ilişkilendirmiştir.",
+  "flatteningUpperNasalLeftDesc": "Üst-nazal bölge ile ilişkili örüntü. Araştırma literatürü bu bölgeyi bilişsel ve servikal otonom bölgelerle ilişkilendirmiştir.",
+  "flatteningDefaultLeftDesc": "Tarihsel araştırmalara dayanarak bu bölgede otonom sinir sistemi örüntü varyasyonu tespit edildi.",
+  "protrusionUpperCentralRightDesc": "Üst-merkezi bölge çıkıntı örüntüsü. Araştırmalar bu bölgeyi serebral bölgeleri etkileyen sempatik hiperaruzal örüntüleriyle ilişkilendirmiştir.",
+  "protrusionUpperTemporalRightDesc": "Üst-temporal bölge çıkıntı örüntüsü. Tarihsel gözlemler bu bölgeyi kraniyal sinir ve işitsel sistem hiperaktivite örüntüleriyle ilişkilendirmiştir.",
+  "protrusionMiddleTemporalRightDesc": "Orta-temporal bölge çıkıntı örüntüsü. Araştırmalar kardiyak ve solunum sempatik örüntüleriyle ilişkiler olduğunu göstermiştir.",
+  "protrusionLowerTemporalRightDesc": "Alt-temporal bölge çıkıntı örüntüsü. Tarihsel çalışmalar bu bölgeyi hepatobiliyer ve metabolik sempatik bölgelerle ilişkilendirmiştir.",
+  "protrusionLowerBasalRightDesc": "Alt-bazal bölge çıkıntı örüntüsü. Araştırmalar bu bölgeyi renal ve pelvik sempatik hiperaktivite örüntüleriyle ilişkilendirmiştir.",
+  "protrusionLowerNasalRightDesc": "Alt-nazal bölge çıkıntı örüntüsü. Tarihsel gözlemler bu bölgeyi ürogenital sempatik aktivasyon bölgeleriyle ilişkilendirmiştir.",
+  "protrusionMiddleNasalRightDesc": "Orta-nazal bölge çıkıntı örüntüsü. Araştırmalar gastrik ve pankreatik sempatik örüntülerle ilişkiler olduğunu göstermiştir.",
+  "protrusionUpperNasalRightDesc": "Üst-nazal bölge çıkıntı örüntüsü. Tarihsel çalışmalar bu bölgeyi bilişsel ve görsel sempatik hiperaruzal bölgelerle ilişkilendirmiştir.",
+  "protrusionDefaultRightDesc": "Araştırma gözlemlerine dayanarak bu bölgede sempatik sinir sistemi hiperaktivite örüntüsü tespit edildi.",
+  "protrusionUpperCentralLeftDesc": "Üst-merkezi bölge çıkıntı örüntüsü. Araştırmalar bu bölgeyi psikomotor ve serebral sempatik örüntülerle ilişkilendirmiştir.",
+  "protrusionUpperTemporalLeftDesc": "Üst-temporal bölge çıkıntı örüntüsü. Tarihsel gözlemler bu bölgeyi nörovejetatif sempatik hiperaktivite bölgeleriyle ilişkilendirmiştir.",
+  "protrusionMiddleTemporalLeftDesc": "Orta-temporal bölge çıkıntı örüntüsü. Araştırmalar pulmoner ve kardiyak sempatik örüntülerle ilişkiler olduğunu göstermiştir.",
+  "protrusionLowerTemporalLeftDesc": "Alt-temporal bölge çıkıntı örüntüsü. Tarihsel çalışmalar bu bölgeyi splenik ve kardiyak sempatik aktivasyon bölgeleriyle ilişkilendirmiştir.",
+  "protrusionLowerBasalLeftDesc": "Alt-bazal bölge çıkıntı örüntüsü. Araştırmalar bu bölgeyi pelvik ve renal sempatik hiperaktivite örüntüleriyle ilişkilendirmiştir.",
+  "protrusionLowerNasalLeftDesc": "Alt-nazal bölge çıkıntı örüntüsü. Tarihsel gözlemler bu bölgeyi lumbosakral sempatik aktivasyon bölgeleriyle ilişkilendirmiştir.",
+  "protrusionMiddleNasalLeftDesc": "Orta-nazal bölge çıkıntı örüntüsü. Araştırmalar anksiyete-kardiyak sempatik örüntülerle ilişkiler olduğunu göstermiştir.",
+  "protrusionUpperNasalLeftDesc": "Üst-nazal bölge çıkıntı örüntüsü. Tarihsel çalışmalar bu bölgeyi bilişsel ve görsel sempatik hiperaruzal bölgelerle ilişkilendirmiştir.",
+  "protrusionDefaultLeftDesc": "Araştırma gözlemlerine dayanarak bu bölgede sempatik sinir sistemi hiperaktivite örüntüsü tespit edildi.",
+  "anisocoriaNone": "Göz bebeği boyutları normal sınırlar içinde. Anlamlı anizokori tespit edilmedi.",
+  "anisocoriaDetected": "Anizokori tespit edildi: {difference}% ({direction}). {description}",
+  "@anisocoriaDetected": {
+    "placeholders": {
+      "difference": {
+        "type": "String"
+      },
+      "direction": {
+        "type": "String"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "anisocoriaDirectionSD": "S>D",
+  "anisocoriaDirectionDS": "D>S",
+  "anisocoriaSeverityNone": "Normal sınırlar içinde.",
+  "anisocoriaSeverityMild": "Hafif fark gözlemlendi. Fizyolojik olabilir.",
+  "anisocoriaSeverityModerate": "Orta asimetri. Araştırma gözlemi kaydedildi.",
+  "anisocoriaSeveritySevere": "Anlamlı asimetri. Araştırma gözlemi işaretlendi.",
+  "largerPupilEqual": "eşit",
+  "largerPupilOS": "OS (Sol)",
+  "largerPupilOD": "OD (Sağ)",
+  "decentrationWithinLimits": "Normal sınırlar içinde.",
+  "decentrationClinicalNote": "{patternName}. Sapma: {offset}%",
+  "@decentrationClinicalNote": {
+    "placeholders": {
+      "patternName": {
+        "type": "String"
+      },
+      "offset": {
+        "type": "String"
+      }
+    }
+  },
+  "zoneUpperCentral": "Üst-Merkezi",
+  "zoneUpperNasal": "Üst-Nazal",
+  "zoneMiddleNasal": "Orta-Nazal",
+  "zoneLowerNasal": "Alt-Nazal",
+  "zoneLowerBasal": "Alt-Bazal",
+  "zoneLowerTemporal": "Alt-Temporal",
+  "zoneMiddleTemporal": "Orta-Temporal",
+  "zoneUpperTemporal": "Üst-Temporal",
+  "zoneFrontal": "Frontal",
+  "zoneBasal": "Bazal",
+  "zoneUnknown": "Bilinmiyor",
+  "flatteningDescription": "{zone} düzleşmesi ({clockRange}) - {percentage}%",
+  "@flatteningDescription": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "protrusionDescription": "{zone} çıkıntısı ({clockRange}) - {percentage}%",
+  "@protrusionDescription": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      },
+      "clockRange": {
+        "type": "String"
+      },
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "usbIriscopeMode": "USB İriskop Modu",
+  "iriscopeExternal": "İriskop / Harici",
+  "usbLabel": "USB",
+  "useConnectedUsbCamera": "Bağlı USB kamera veya iriskop kullan",
+  "detectedCameras": "Algılanan Kameralar",
+  "externalCamera": "Harici Kamera",
+  "cameraIndex": "Kamera {index}",
+  "@cameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "noExternalCameraDetected": "Harici kamera algılanamadı.\\nEtkinleştirmek için bir USB iriskop bağlayın.",
+  "refresh": "Yenile",
+  "selectCameraSource": "Kamera Kaynağı Seçin",
+  "camerasDetected": "{count} kamera algılandı",
+  "@camerasDetected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "camerasAvailable": "{count} kamera mevcut",
+  "@camerasAvailable": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "externalCameraIndex": "Harici Kamera {index}",
+  "@externalCameraIndex": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "qualityGatedRear": "Kalite kontrollü otomatik çekim (arka kamera)",
+  "qualityGatedFront": "Kalite kontrollü otomatik çekim (ön kamera)",
+  "usbCameraInfo": "USB Kamera Bilgisi",
+  "connected": "Bağlı",
+  "waiting": "Bekleniyor...",
+  "disconnected": "Bağlantı Kesildi",
+  "waitingForUsbCamera": "USB Kamera Bekleniyor",
+  "connectIriscopePrompt": "İriskopunuzu USB OTG adaptörü ile bağlayın.\\nİstendiğinde izin verin.",
+  "usbCameraIssue": "USB Kamera Sorunu",
+  "pleaseConnectIriscope": "Lütfen iriskopunuzu veya USB kameranızı bağlayın.",
+  "retryConnection": "Bağlantıyı Yeniden Dene",
+  "troubleshootingTips": "Sorun Giderme İpuçları",
+  "tipUsbOtgAdapter": "USB OTG adaptörünün düzgün bağlandığından emin olun",
+  "tipUsbHostMode": "Cihazın USB Ana bilgisayar modunu destekleyip desteklemediğini kontrol edin",
+  "tipReconnectCamera": "Kameranın bağlantısını kesip yeniden bağlamayı deneyin",
+  "tipGrantPermissions": "İstendiğinde USB izinlerini verin",
+  "tipUnlockDevice": "Bazı cihazların kilidinin açılması gerekebilir",
+  "back": "Geri",
+  "switchEye": "Gözü Değiştir",
+  "state": "Durum",
+  "status": "Statü",
+  "usingFlutterUvcPlugin": "flutter_uvc_camera eklentisi kullanılıyor\\nUSB Video Class cihaz desteği için eklenti.",
+  "initialized": "Başlatıldı",
+  "notReady": "Hazır Değil",
+  "captureDistanceMatch": "Çekim Mesafesi Eşleşmesi",
+  "@captureDistanceMatch": {
+    "description": "Title for the bilateral iris size comparison card"
+  },
+  "irisSize": "İris Boyutu",
+  "@irisSize": {
+    "description": "Label for iris size measurement"
+  },
+  "distanceMatched": "Mesafe Eşleşti",
+  "@distanceMatched": {
+    "description": "Status when capture distances match well"
+  },
+  "distanceMismatch": "Mesafe Uyuşmazlığı",
+  "@distanceMismatch": {
+    "description": "Status when capture distances don't match"
+  },
+  "excellentMatch": "Mükemmel eşleşme",
+  "@excellentMatch": {
+    "description": "Distance match status 90%+"
+  },
+  "goodMatch": "İyi eşleşme",
+  "@goodMatch": {
+    "description": "Distance match status 80-90%"
+  },
+  "acceptableMatch": "Kabul edilebilir eşleşme",
+  "@acceptableMatch": {
+    "description": "Distance match status 70-80%"
+  },
+  "considerRetaking": "Mesafe uyuşmazlığı - yeniden çekmeyi düşünün",
+  "@considerRetaking": {
+    "description": "Warning when distances don't match well"
+  },
+  "qualityReady": "Hazır! Sabit tutun...",
+  "@qualityReady": {
+    "description": "Camera quality feedback when ready to capture"
+  },
+  "qualityTooBlurry": "Kamerayı sabit tutun",
+  "@qualityTooBlurry": {
+    "description": "Camera quality feedback when image is blurry"
+  },
+  "qualityTooDark": "Daha fazla ışık gerekiyor",
+  "@qualityTooDark": {
+    "description": "Camera quality feedback when too dark"
+  },
+  "qualityTooBright": "Çok parlak - ışığı azaltın",
+  "@qualityTooBright": {
+    "description": "Camera quality feedback when too bright"
+  },
+  "qualityNoContrast": "Aydınlatma açısını ayarlayın",
+  "@qualityNoContrast": {
+    "description": "Camera quality feedback when contrast is low"
+  },
+  "qualityNoPupil": "Göz bebeğini kareye ortala",
+  "@qualityNoPupil": {
+    "description": "Camera quality feedback when pupil not detected"
+  },
+  "qualityNotCentered": "Gözü merkeze taşıyın",
+  "@qualityNotCentered": {
+    "description": "Camera quality feedback when eye not centered"
+  },
+  "qualityNotAnEye": "Göz algılanamadı",
+  "@qualityNotAnEye": {
+    "description": "Camera quality feedback when no eye detected"
+  },
+  "qualityProcessing": "İşleniyor...",
+  "@qualityProcessing": {
+    "description": "Camera quality feedback during processing"
+  },
+  "distanceMatchedCheck": "✓ Mesafe eşleşti",
+  "@distanceMatchedCheck": {
+    "description": "Distance guidance when perfectly matched"
+  },
+  "distanceGoodMatchCheck": "✓ İyi eşleşme",
+  "@distanceGoodMatchCheck": {
+    "description": "Distance guidance when good match"
+  },
+"distanceSlightlyBack": "Biraz geri ↔",
+  "@distanceSlightlyBack": {
+    "description": "Distance guidance to move slightly back"
+  },
+  "distanceSlightlyCloser": "Biraz yakın ↔",
+  "@distanceSlightlyCloser": {
+    "description": "Distance guidance to move slightly closer"
+  },
+  "distanceAlmostThere": "Neredeyse tamam...",
+  "@distanceAlmostThere": {
+    "description": "Distance guidance when nearly matched"
+  },
+  "distanceMoveBack": "Geri git ←←",
+  "@distanceMoveBack": {
+    "description": "Distance guidance to move back"
+  },
+  "distanceMoveCloser": "Yaklaş →→",
+  "@distanceMoveCloser": {
+    "description": "Distance guidance to move closer"
+  },
+  "distanceTooClose": "Çok yakın! Geri git",
+  "@distanceTooClose": {
+    "description": "Distance guidance when too close"
+  },
+  "distanceTooFar": "Çok uzak! Yaklaş",
+  "@distanceTooFar": {
+    "description": "Distance guidance when too far"
+  },
+  "distanceStabilizing": "Sabitleniyor...",
+  "@distanceStabilizing": {
+    "description": "Distance status while stabilizing reading"
+  },
+  "distanceLabel": "Mesafe: {percent}%",
+  "@distanceLabel": {
+    "description": "Distance match percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "irisSizeComparison": "OD: {odSize}px → OS: {osSize}px",
+  "@irisSizeComparison": {
+    "description": "Iris size comparison between eyes",
+    "placeholders": {
+      "odSize": {
+        "type": "int"
+      },
+      "osSize": {
+        "type": "int"
+      }
+    }
+  },
+  "frontCameraLabel": "Ön Kamera",
+  "@frontCameraLabel": {
+    "description": "Label for front camera"
+  },
+  "rearCameraLabel": "Arka Kamera",
+  "@rearCameraLabel": {
+    "description": "Label for rear/back camera"
+  },
+  "startingCamera": "Kamera başlatılıyor...",
+  "@startingCamera": {
+    "description": "Status when camera is initializing"
+  },
+  "eyeNotDetected": "Göz Algılanamadı",
+  "@eyeNotDetected": {
+    "description": "Title for validation failure dialog"
+  },
+  "tryAgain": "Tekrar Dene",
+  "@tryAgain": {
+    "description": "Button text to retry capture"
+  },
+  "indicatorEye": "Göz",
+  "@indicatorEye": {
+    "description": "Quality indicator label for eye detection"
+  },
+  "indicatorSharp": "Keskinlik",
+  "@indicatorSharp": {
+    "description": "Quality indicator label for sharpness"
+  },
+  "indicatorLight": "Işık",
+  "@indicatorLight": {
+    "description": "Quality indicator label for lighting"
+  },
+  "indicatorFocus": "Odak",
+  "@indicatorFocus": {
+    "description": "Quality indicator label for focus/contrast"
+  },
+  "indicatorPupil": "Pupil",
+  "@indicatorPupil": {
+    "description": "Quality indicator label for pupil detection"
+  },
+  "indicatorIris": "İris",
+  "@indicatorIris": {
+    "description": "Quality indicator label for iris size"
+  },
+  "indicatorMatch": "Eşleşme",
+  "@indicatorMatch": {
+    "description": "Quality indicator label for distance match"
+  },
+  "checkImageShape": "Görüntü Şekli",
+  "@checkImageShape": {
+    "description": "Validation check label for aspect ratio"
+  },
+  "checkCircularIris": "Yuvarlak İris",
+  "@checkCircularIris": {
+    "description": "Validation check label for circular iris"
+  },
+  "checkDarkPupil": "Koyu Pupil",
+  "@checkDarkPupil": {
+    "description": "Validation check label for dark pupil center"
+  },
+  "checkIrisTexture": "İris Dokusu",
+  "@checkIrisTexture": {
+    "description": "Validation check label for iris texture"
+  },
+  "checkPupilIrisStructure": "Pupil-İris Yapısı",
+  "@checkPupilIrisStructure": {
+    "description": "Validation check label for concentric circles"
+  },
+  "checkNaturalColors": "Doğal Renkler",
+  "@checkNaturalColors": {
+    "description": "Validation check label for color distribution"
+  },
+  "checkEdgePattern": "Kenar Deseni",
+  "@checkEdgePattern": {
+    "description": "Validation check label for edge density"
+  },
+  "errorImageShapeIncorrect": "Görüntü şekli hatalı - gözün çerçeveyi doldurduğundan emin olun",
+  "@errorImageShapeIncorrect": {
+    "description": "Validation error for incorrect aspect ratio"
+  },
+  "errorNoEyeDetected": "Göz algılanamadı - irisi çerçeve ortasına getirin",
+  "@errorNoEyeDetected": {
+    "description": "Validation error when no eye/iris detected"
+  },
+  "errorNoPupilDetected": "Pupil algılanamadı - iyi aydınlatma sağlayın",
+  "@errorNoPupilDetected": {
+    "description": "Validation error when pupil not detected"
+  },
+  "errorNoIrisTexture": "İris dokusu yok - gözünüze yaklaşın",
+  "@errorNoIrisTexture": {
+    "description": "Validation error when iris texture not detected"
+  },
+  "errorUnusualColors": "Alışılmadık renkler algılandı - ekranlardan/yansımalardan kaçının",
+  "@errorUnusualColors": {
+    "description": "Validation error for unusual color distribution"
+  },
+  "errorTooManyEdges": "Çok fazla düz kenar - bu bir göz olmayabilir",
+  "@errorTooManyEdges": {
+    "description": "Validation error for too many straight edges"
+  },
+  "errorNotValidEye": "Geçerli bir göz görüntüsü değil - lütfen tekrar deneyin",
+  "@errorNotValidEye": {
+    "description": "Generic validation error for invalid eye image"
+  },
+  "holdStillCapturing": "Hareketsiz durun - yakalanıyor...",
+  "@holdStillCapturing": {
+    "description": "Status during countdown capture"
+  },
+  "adjustDistanceFirst": "Önce mesafeyi ayarlayın",
+  "@adjustDistanceFirst": {
+    "description": "Status when distance needs adjustment before capture"
+  },
+  "stabilizingReading": "Sabitleniyor...",
+  "@stabilizingReading": {
+    "description": "Status while distance reading stabilizes"
+  },
+  "autoCaptureWhenReady": "Hazır olduğunda otomatik yakalama",
+  "@autoCaptureWhenReady": {
+    "description": "Status indicating auto-capture is enabled"
+  },
+  "tapOrWaitAutoCapture": "Dokunun veya otomatik yakalama için bekleyin",
+  "@tapOrWaitAutoCapture": {
+    "description": "Instruction when ready to capture"
+  },
+  "validatingImage": "Doğrulanıyor...",
+  "@validatingImage": {
+    "description": "Status during image validation"
+  },
+  "capturingStatus": "Yakalanıyor...",
+  "@capturingStatus": {
+    "description": "Status during image capture"
+  },
+  "adjustPositionStatus": "Konumu ayarlayın",
+  "@adjustPositionStatus": {
+    "description": "Status when position needs adjustment"
+  },
+  "validationTip": "İpucu: İyi aydınlatma sağlayın, kamerayı gözden 10-15 cm uzakta tutun, yansımalardan kaçının",
+  "@validationTip": {
+    "description": "Helpful tip shown after multiple validation failures"
+  },
+  "validationChecksTitle": "Doğrulama Kontrolleri:",
+  "@validationChecksTitle": {
+    "description": "Title for validation checks list in dialog"
+  },
+  "confidenceLabel": "Güven: {percent}%",
+  "@confidenceLabel": {
+    "description": "Confidence percentage label",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "incompleteData": "Eksik veri",
+  "@incompleteData": {
+    "description": "Status when iris metrics data is incomplete"
+  },
+  "irisDiameterLabel": "iris ø",
+  "@irisDiameterLabel": {
+    "description": "Label for iris diameter measurement"
+  },
+  "plrResponseCurve": "PLR Yanıt Eğrisi",
+  "@plrResponseCurve": {
+    "description": "Title for PLR chart showing pupil response over time"
+  },
+  "plrLatency": "Gecikme",
+  "@plrLatency": {
+    "description": "Time from flash to start of constriction"
+  },
+  "plrVelocity": "Hız",
+  "@plrVelocity": {
+    "description": "Rate of pupil constriction"
+  },
+  "plrRecoveryTime": "İyil. Süresi",
+  "@plrRecoveryTime": {
+    "description": "Time for pupil to recover"
+  },
+  "plrRecoveryRatio": "İyil. %",
+  "@plrRecoveryRatio": {
+    "description": "Final size compared to baseline"
+  },
+  "plrEnhancedMetrics": "Gelişmiş PLR Ölçümleri",
+  "@plrEnhancedMetrics": {
+    "description": "Section title for advanced PLR measurements"
+  },
+  "plrNormalLatency": "Normal: 200-500 ms",
+  "@plrNormalLatency": {
+    "description": "Normal latency reference range"
+  },
+  "plrNormalConstriction": "Normal: %10-30",
+  "@plrNormalConstriction": {
+    "description": "Normal constriction reference range"
+  },
+  "plrNormalVelocity": "Normal: %1,5-4,0/sn",
+  "@plrNormalVelocity": {
+    "description": "Normal velocity reference range"
+  },
+  "plrReferenceValues": "Normal PLR Referans Değerleri",
+  "@plrReferenceValues": {
+    "description": "Title for reference values section"
+  },
+  "plrSubjectInfo": "Kişi Bilgileri",
+  "@plrSubjectInfo": {
+    "description": "Section title for patient/subject info in PLR report"
+  },
+  "plrTestType": "Pupilla Işık Refleksi",
+  "@plrTestType": {
+    "description": "Name of the PLR test type"
+  },
+  "plrAnalysisSummary": "Analiz Özeti",
+  "@plrAnalysisSummary": {
+    "description": "Section title for analysis summary"
+  },
+  "plrTotalFrames": "Analiz Edilen Toplam Kare",
+  "@plrTotalFrames": {
+    "description": "Label for total frames count"
+  },
+  "plrSuccessRate": "Başarı Oranı",
+  "@plrSuccessRate": {
+    "description": "Label for frame analysis success rate"
+  },
+  "plrMaxConstriction": "Maks. Daralma",
+  "@plrMaxConstriction": {
+    "description": "Label for maximum constriction time"
+  },
+  "plrResponseCurveLabels": "PLR Yanıt Eğrisi",
+  "anwTitle": "Otonom Sinir Çemberi (ANW)",
+  "anwAbnormal": "Anormal",
+  "anwDiameter": "Çap",
+  "anwPerimeter": "Çevre",
+  "anwAsymmetry": "Asimetri",
+  "anwElevated": "Yüksek",
+  "anwFormType": "Form Türü",
+  "anwRegular": "Düzenli",
+  "anwDrawnIn": "İçe Çekilmiş",
+  "anwIndented": "Girintili",
+  "anwLacerated": "Yırtık",
+  "anwSpastic": "Spastik",
+  "anwAtonic": "Atonik",
+  "anwTonicState": "Tarihsel Tonus Deseni",
+  "anwParasympathotonic": "Parasimpatotonik desen",
+  "anwSympathotonicState": "Simpatotonik desen",
+  "anwShiftDetected": "Tarihsel Kayma Deseni",
+  "anwConstrictionDetected": "Daralma Tespit Edildi",
+  "anwFindings": "Bulgular",
+  "anwRatioComparison": "ANW Oranı",
+  "bilateralANWComparison": "İki Taraflı ANW Karşılaştırması",
+  "anwSymmetryNormal": "ANW simetrisi normal sınırlar içinde.",
+  "anwAsymmetryDetected": "Gözler arasında ANW asimetrisi tespit edildi.",
+  "functionalFrustration": "Sempatik ve parasempatik sinir sistemleri arasındaki korelasyonda işlevsel bozukluk.",
+  "anwParasympathotonicDesc": "Tarihsel gözlemler bunu artan eşik hassasiyetiyle ilişkilendirmiştir. Refleks aktivitesi hızlanmıştır. GI salgı/boşaltım fonksiyonları yükselmiştir.",
+  "anwSympathotonicDesc": "Tarihsel gözlemler bunu azalmış eşik hassasiyetiyle ilişkilendirmiştir. Refleks aktivitesi yavaşlamıştır. GI salgı/boşaltım fonksiyonları azalmıştır.",
+  "anwMiddleTemporalShiftCardiac": "Velchover'a göre tarihsel çalışmalar bunu sol ventrikül aşırı yüklenmesi desenleri ve kardiyak stresle ilişkilendirmiştir.",
+  "anwFrontalConstricted": "Pupilla kuşağının frontal bölgesi daralmıştır.",
+  "anwBasalConstricted": "Pupilla kuşağının bazal bölgesi daralmıştır.",
+  "anwFrontalBasalConstricted": "Pupilla kuşağının frontal ve bazal bölgeleri daralmıştır.",
+  "helpTitle": "Yardım ve Kullanıcı Kılavuzu",
+  "helpTabQuickStart": "Hızlı Başlangıç",
+  "helpTabCnriAnalysis": "CNRI Analizi",
+  "helpTabShortcuts": "Kısayollar",
+  "helpTabTroubleshooting": "Sorun Giderme",
+  "helpOnlineDocs": "Çevrimiçi Belgeler",
+  "helpContactSupport": "Destek ile İletişim",
+  "helpGettingStarted": "Başlarken",
+  "helpStep1Title": "İriskopunuzu Bağlayın",
+  "helpStep1Desc": "Dino-Lite veya uyumlu bir USB iriskop bağlayın.",
+  "helpStep2Title": "Hasta Bilgilerini Girin",
+  "helpStep2Desc": "Hasta adı, yaşı, cinsiyeti ve başlıca şikayetleri doldurun.",
+  "helpStep3Title": "Sağ Gözü Yakalayın (OD)",
+  "helpStep3Desc": "İriskopun konumunu ayarlayın ve sağ göz görüntüsünü yakalayın.",
+  "helpStep4Title": "Sol Gözü Yakalayın (OS)",
+  "helpStep4Desc": "Tutarlı aydınlatma ile sol göz için tekrarlayın.",
+  "helpStep5Title": "Analizi İnceleyin",
+  "helpStep5Desc": "Uygulama P/I oranını, pupil formunu ve ANW özelliklerini analiz eder.",
+  "helpStep6Title": "Raporu Dışa Aktar",
+  "helpStep6Desc": "PDF, TXT veya JSON formatında kaydedin.",
+  "helpTipBestResults": "En iyi sonuçlar için: Tutarlı aydınlatma kullanın ve iriskop mesafesini 2-3 cm olarak koruyun.",
+  "helpCnriProtocolFeatures": "CNRI Protokol Özellikleri",
+  "helpFeaturePiRatioTitle": "Pupil/İris Oranı (P/I)",
+  "helpFeaturePiRatioDesc": "Normal: %20-30. Bu aralık dışındaki değerler otonom dengesizliğe işaret edebilir.",
+  "helpFeaturePupilFormTitle": "Pupil Form Analizi",
+  "helpFeaturePupilFormDesc": "Oval desenleri, yerinden kayma yönünü ve eksantrikliği tespit eder.",
+  "helpFeatureAnwTitle": "ANW (Kolar) Değerlendirmesi",
+  "helpFeatureAnwDesc": "Oranı, form düzenliliğini, sektör kaymalarını ve tonik durumu analiz eder.",
+  "helpFeatureZoneTitle": "Bölge Analizi",
+  "helpFeatureZoneDesc": "Düzleşmeleri/çıkıntıları CNRI organ bölgelerine eşler.",
+  "helpFeatureBilateralTitle": "İki Taraflı Karşılaştırma",
+  "helpFeatureBilateralDesc": "Asimetrileri tespit etmek için OD - OS karşılaştırması yapar.",
+  "helpFeatureMlTitle": "ONNX CNN Karşılaştırması",
+  "helpFeatureMlDesc": "ONNX CNN modeli karşılaştırma için ikincil ölçümler sağlar.",
+  "helpKeyboardShortcuts": "Klavye Kısayolları",
+  "helpCameraControls": "Kamera Kontrolleri",
+  "helpShortcutSpace": "Görüntü yakala",
+  "helpShortcutCtrlS": "PDF raporu kaydet",
+  "helpShortcutCtrlO": "Galeri görüntüsü aç",
+  "helpShortcutCtrlH": "Tarama geçmişini görüntüle",
+  "helpShortcutF11": "Tam ekranı aç/kapat",
+  "helpShortcutEsc": "Geri git / İptal",
+  "helpShortcutScroll": "Yakınlaştır/Uzaklaştır",
+  "helpShortcutDoubleClick": "Yakınlaştırmayı sıfırla",
+  "helpCommonIssues": "Sık Karşılaşılan Sorunlar",
+  "helpIssueCameraNotDetected": "Kamera algılanamıyor",
+  "helpIssueCameraSolution1": "USB bağlantısını kontrol edin",
+  "helpIssueCameraSolution2": "Farklı USB portu deneyin",
+  "helpIssueCameraSolution3": "Dino-Lite sürücülerini yükleyin",
+  "helpIssueCameraSolution4": "Uygulamayı yeniden başlatın",
+  "helpIssuePupilDetectionFails": "Pupil tespiti başarısız",
+  "helpIssuePupilSolution1": "Yeterli aydınlatma sağlayın",
+  "helpIssuePupilSolution2": "Pupili çerçeve ortasına getirin",
+  "helpIssuePupilSolution3": "İriskop lensini temizleyin",
+  "helpIssuePupilSolution4": "Odağı manuel olarak ayarlayın",
+  "helpIssuePdfExportFails": "PDF dışa aktarma başarısız",
+  "helpIssuePdfSolution1": "Klasör izinlerini kontrol edin",
+  "helpIssuePdfSolution2": "Disk alanının yeterli olduğundan emin olun",
+  "helpIssuePdfSolution3": "Açık PDF dosyalarını kapatın",
+  "helpIssuePdfSolution4": "Önce TXT dışa aktarmayı deneyin",
+  "helpCaptureChecklistTitle": "Yakalama Kontrol Listesi",
+  "helpCaptureChecklist1": "Pupili ortalanmış ve çerçeve içinde tamamen görünür tutun.",
+  "helpCaptureChecklist2": "Düzgün aydınlatma kullanın ve kornea üzerindeki yansımayı azaltın.",
+  "helpCaptureChecklist3": "Sağ ve sol göz için iriskop mesafesini benzer tutun.",
+  "helpCaptureChecklist4": "Pupil kenarı yumuşak veya bulanık görünüyorsa yeniden odaklayın ya da yeniden çekin.",
+  "helpExportSettingsTitle": "Dışa Aktarma Ayarları",
+  "helpExportSettingsDesc": "PDF otomatik kaydet, analizden sonra bir raporu kaydedebilir; Görüntüleri Dahil Et, PDF'de göz fotoğraflarının görünüp görünmeyeceğini kontrol eder; ML Karşılaştırmasını Göster ise ONNX CNN karşılaştırma değerlerini raporlara ekler.",
+  "helpHybridScoreTitle": "Hibrit Güven ve Derece",
+  "helpHybridScoreDesc": "Görüntülenen güven ve derece, klasik geometri kalitesini ML uyumuyla birleştirir; bu nedenle ölçüm güvenilirliğini yansıtır, tanı niteliği taşımaz.",
+  "helpAnomalyGuideTitle": "Düzleşmeler ve Çıkıntıları Okuma",
+  "helpAnomalyGuideDesc": "Düzleşmeler pupil sınırı boyunca görece içe çekilmeyi, çıkıntılar ise dışa çekilmeyi gösterir; her kart bölgeyi, büyüklüğü ve eşlenen ilişkiyi listeler.",
+  "helpZoneOverlayGuideTitle": "Bölge Katmanı",
+  "helpZoneOverlayGuideDesc": "Sektör konumlarını görsel olarak incelemek ve tespit edilen anomalilerin pupil ve iris çevresinde nereye düştüğünü çapraz kontrol etmek için bölge katmanını kullanın.",
+  "helpContactSupportTip": "Yardım için helpdesk@cnri.edu ile iletişime geçin.",
+  "settingsTitle": "Ayarlar",
+  "settingsCameraIriscope": "KAMERA / İRİSKOP",
+  "settingsPreferredCamera": "Tercih Edilen Kamera:",
+  "settingsCameraDinoLite": "Dino-Lite",
+  "settingsCameraUsb": "USB Kamera",
+  "settingsCameraAutoDetect": "Otomatik algıla",
+  "settingsDefaultZoom": "Varsayılan Yakınlaştırma:",
+  "settingsAnalysis": "ANALİZ",
+  "settingsShowMlComparison": "ML Karşılaştırmasını Göster",
+  "settingsShowZoneOverlay": "Bölge Katmanını Göster",
+  "settingsExportReports": "DIŞA AKTARMA VE RAPORLAR",
+  "settingsAutoSavePdf": "PDF Otomatik Kaydet",
+  "settingsIncludeImages": "Görüntüleri Dahil Et",
+  "settingsSaved": "Ayarlar kaydedildi",
+  "aboutResearchEdition": "Araştırma Sürümü",
+  "aboutVersion": "Sürüm {version}",
+  "@aboutVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "aboutLicense": "Lisans",
+  "aboutLicensedTo": "Lisanslanan Kişi:",
+  "aboutExpires": "Bitiş Tarihi:",
+  "aboutManageLicense": "Lisansı Yönet",
+  "aboutBasedOnCnri": "CNRI Protokolüne Dayalı",
+  "aboutCopyright": "© 2024-2026 PupilMetrics Research",
+  "aboutWebsite": "Web Sitesi",
+  "aboutPrivacy": "Gizlilik",
+  "languageSelectTitle": "Dil Seçin",
+  "selectLanguage": "Dil Seçin",
+  "languageChanged": "Dil Değiştirildi",
+  "languageChangedMessage": "Uygulama dili {language} olarak ayarlandı",
+  "@languageChangedMessage": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languageSystemNotAvailable": "Dil sistemi kullanılamıyor",
+  "licenseLoading": "Yükleniyor...",
+  "licenseWelcome": "PupilMetrics'e Hoş Geldiniz!",
+  "licenseTrialFeatures": "14 günlük ücretsiz deneme • Tüm özellikler",
+  "licenseStartTrial": "Ücretsiz Denemeyi Başlat",
+  "licenseEnterKey": "Lisans Girin",
+  "licenseFreeTrial": "Ücretsiz Deneme",
+  "licenseDaysRemaining": "{count} gün kaldı",
+  "@licenseDaysRemaining": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseTrialEnded": "Deneme Süresi Sona Erdi",
+  "licenseEnterToContinue": "Devam etmek için lisans girin",
+  "licenseStandard": "Standart Lisans",
+  "licenseProfessional": "Profesyonel Lisans",
+  "licenseEnterprise": "Kurumsal Lisans",
+  "licenseLicensed": "Lisanslı",
+  "licenseActive": "Aktif",
+  "licenseTrialUser": "Deneme Kullanıcısı",
+  "licenseLifetime": "Ömür Boyu",
+  "licenseNotSetUp": "Kurulmadı",
+  "trialExpiredTitle": "Deneme Süresi Sona Erdi",
+  "trialExpiredMessage": "14 günlük denemeniz sona erdi. İris görüntülerini analiz etmeye devam etmek için lütfen bir lisans satın alın.",
+  "trialExpiredCanStill": "Hâlâ yapabilecekleriniz:",
+  "trialExpiredViewAnalyses": "Önceki analizlerinizi görüntüleyin",
+  "trialExpiredExportReports": "Mevcut raporları dışa aktarın",
+  "trialExpiredAccessHistory": "Tarama geçmişine erişin",
+  "trialExpiredMaybeLater": "Belki Daha Sonra",
+  "licenseRegistration": "Lisans Kaydı",
+  "licenseStatusValid": "Lisanslı",
+  "licenseStatusTrialActive": "Ücretsiz Deneme",
+  "licenseStatusTrialExpired": "Deneme Sona Erdi",
+  "licenseStatusExpired": "Lisans Süresi Doldu",
+  "licenseStatusInvalid": "Geçersiz Lisans",
+  "licenseStatusUnregistered": "Kurulmadı",
+  "licenseStatusMachineMismatch": "Farklı Bilgisayar",
+  "licenseStatusNetworkError": "Bağlantı Hatası",
+  "licenseEnterKeyTitle": "Lisans Anahtarı Girin",
+  "licenseKeyPlaceholder": "CNRI-XXXX-XXXX-XXXX-XXXX",
+  "licenseYourName": "Adınız",
+  "licenseEmailAddress": "E-posta Adresi",
+  "licenseMachineId": "Makine Kimliği",
+  "licenseCopyMachineId": "Makine Kimliğini Kopyala",
+  "licenseMachineIdCopied": "Makine kimliği panoya kopyalandı",
+  "licenseValidationKeyRequired": "Lütfen lisans anahtarınızı girin",
+  "licenseValidationKeyFormat": "Lisans anahtarı 20 karakter olmalıdır (CNRI-XXXX-XXXX-XXXX-XXXX)",
+  "licenseValidationNameRequired": "Lütfen adınızı girin",
+  "licenseValidationEmailRequired": "Lütfen e-postanızı girin",
+  "licenseValidationEmailInvalid": "Lütfen geçerli bir e-posta girin",
+  "licenseActivate": "Lisansı Etkinleştir",
+  "licenseContinueTrial": "Denemeye Devam Et",
+  "licenseBuyLicense": "Lisans Satın Al",
+  "licenseNeedHelp": "Yardıma mı ihtiyacınız var?",
+  "licenseLicenseAgreement": "Lisans Sözleşmesi",
+  "licenseActivatedSuccess": "Lisans Başarıyla Etkinleştirildi!",
+  "licenseMsgMachineMismatch": "Bu lisans farklı bir bilgisayara kayıtlıdır. Lütfen orijinal cihazınızı kullanın veya destekle iletişime geçin.",
+  "licenseMsgTrialEnded": "Ücretsiz deneme süreniz sona erdi. Tüm özellikleri kullanmaya devam etmek için bir lisans anahtarı girin.",
+  "licenseMsgExpired": "Lisansınızın süresi doldu. Devam etmek için lütfen yenileyin.",
+  "licenseMsgNeedsSetup": "Lisans kurulması gerekiyor. Ücretsiz denemenizi başlatın veya bir lisans anahtarı girin.",
+  "licenseMsgCheckFormat": "Lütfen lisans anahtarı formatınızı kontrol edin. Şu şekilde görünmelidir: CNRI-XXXX-XXXX-XXXX-XXXX",
+  "licenseMsgNotRecognized": "Bu lisans anahtarı tanınmadı. Lütfen tekrar kontrol edip deneyin.",
+  "licenseMsgAlreadyRegistered": "Bu anahtar zaten farklı bir bilgisayara kayıtlıdır.",
+  "licenseMsgContactSupport": "Bu lisansın süresi dolmuştur. Yenileme için lütfen destekle iletişime geçin.",
+  "licenseMsgActivatedThankYou": "Lisans başarıyla etkinleştirildi! Satın alımınız için teşekkür ederiz.",
+  "licenseMsgUnableToActivate": "Lisans etkinleştirilemiyor. Lütfen internet bağlantınızı kontrol edip tekrar deneyin.",
+  "licenseMsgTrialWelcome": "Hoş geldiniz! {days} günlük ücretsiz denemeniz başladı.",
+  "@licenseMsgTrialWelcome": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseMsgTrialActive": "Deneme aktif: {days} gün kaldı.",
+  "@licenseMsgTrialActive": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseMsgFreeTrialActive": "Ücretsiz deneme aktif",
+  "licenseMsgLicenseActive": "Lisans aktif - {type}",
+  "@licenseMsgLicenseActive": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "licenseMsgUnableToActivateKey": "Bu lisans anahtarı etkinleştirilemiyor.",
+  "licenseMsgNoLongerValid": "Lisans artık geçerli değil.",
+  "licenseMsgUnableToVerify": "Bu lisans anahtarı doğrulanamıyor. Lütfen destekle iletişime geçin.",
+  "trialStartedSnackbar": "Deneme Başladı!",
+  "trialStartedMessage": "14 günlük tam erişimin keyfini çıkarın",
+  "windowTitle": "PupilMetrics",
+  "themeMode": "ThemeMode",
+  "methods": "YÖNTEMLER",
+  "setAsFrameless": "setAsFrameless",
+  "isPreventCloseSetPreventClose": "isPreventClose / setPreventClose",
+  "focusBlur": "focus / blur",
+  "showHide": "show / hide",
+  "isVisible": "isVisible",
+  "isMaximized": "isMaximized",
+  "maximizeUnmaximize": "maximize / unmaximize",
+  "isMinimized": "isMinimized",
+  "minimizeRestore": "minimize / restore",
+  "dockUndock": "dock / undock",
+  "dockLeft": "sola yerleştir",
+  "dockRight": "sağa yerleştir",
+  "undock": "undock",
+  "isFullScreenSetFullScreen": "isFullScreen / setFullScreen",
+  "setAspectRatio": "setAspectRatio",
+  "reset": "sıfırla",
+  "setBackgroundColor": "setBackgroundColor",
+  "transparent": "şeffaf",
+  "red": "kırmızı",
+  "green": "yeşil",
+  "blue": "mavi",
+  "setBoundsGetBounds": "setBounds / getBounds",
+  "setAlignment": "setAlignment",
+  "topLeft": "topLeft",
+  "topCenter": "topCenter",
+  "topRight": "topRight",
+  "centerLeft": "centerLeft",
+  "centerRight": "centerRight",
+  "bottomLeft": "bottomLeft",
+  "bottomCenter": "bottomCenter",
+  "bottomRight": "bottomRight",
+  "getPositionSetPosition": "getPosition / setPosition",
+  "getSizeSetSize": "getSize / setSize",
+  "set": "Ayarla",
+  "getMinimumSizeSetMinimumSize": "getMinimumSize / setMinimumSize",
+  "getMaximumSizeSetMaximumSize": "getMaximumSize / setMaximumSize",
+  "isResizableSetResizable": "isResizable / setResizable",
+  "isMovableSetMovable": "isMovable / setMovable",
+  "isMinimizableSetMinimizable": "isMinimizable / setMinimizable",
+  "isMaximizableSetMaximizable": "isMaximizable / setMaximizable",
+  "isClosableSetClosable": "isClosable / setClosable",
+  "isAlwaysOnTopSetAlwaysOnTop": "isAlwaysOnTop / setAlwaysOnTop",
+  "isAlwaysOnBottomSetAlwaysOnBottom": "isAlwaysOnBottom / setAlwaysOnBottom",
+  "getTitleSetTitle": "getTitle / setTitle",
+  "setTitleBarStyle": "setTitleBarStyle",
+  "hidden": "gizli",
+  "getTitleBarHeight": "getTitleBarHeight",
+  "isSkipTaskbar": "isSkipTaskbar",
+  "setSkipTaskbar": "setSkipTaskbar",
+  "setProgressBar": "setProgressBar",
+  "setIcon": "setIcon",
+  "defaultIcon": "Varsayılan",
+  "original": "Orijinal",
+  "isVisibleOnAllWorkspacesSetVisibleOnAllWorkspaces": "isVisibleOnAllWorkspaces / setVisibleOnAllWorkspaces",
+  "setBadgeLabel": "setBadgeLabel",
+  "hasShadowSetHasShadow": "hasShadow / setHasShadow",
+  "getOpacitySetOpacity": "getOpacity / setOpacity",
+  "setIgnoreMouseEvents": "setIgnoreMouseEvents",
+  "popUpWindowMenu": "popUpWindowMenu",
+  "grabKeyboard": "grabKeyboard",
+  "ungrabKeyboard": "ungrabKeyboard",
+  "dragToMoveArea": "DragToMoveArea",
+  "dragToResizeArea": "DragToResizeArea",
+  "dragToResizeAreaExample": "DragToResizeArea örneği",
+  "closeWindowConfirmation": "Bu pencereyi kapatmak istediğinizden emin misiniz?",
+  "licenseChecking": "Lisans kontrol ediliyor...",
+  "licenseRequiredTitle": "Lisans Gerekli",
+  "licenseActivateValidMessage": "Devam etmek için lütfen geçerli bir lisans etkinleştirin.",
+  "licenseProIncludes": "PupilMetrics Pro şunları içerir:",
+  "licenseFeatureUnlimitedAnalysis": "Sınırsız pupil-kolar analizi",
+  "licenseFeaturePdfReports": "PDF rapor oluşturma",
+  "licenseFeatureBilateralComparison": "İki taraflı karşılaştırma",
+  "licenseFeatureAnwAnalysis": "ANW kolar analizi",
+  "licenseFeatureScanHistory": "Tarama geçmişi veritabanı",
+  "licenseFeatureUpdates": "1 yıl ücretsiz güncelleme",
+  "licensePurchase": "Lisans Satın Al",
+  "licenseExitApplication": "Uygulamadan Çık",
+  "windowCompactView": "Kompakt Görünüm",
+  "windowExpandedView": "Genişletilmiş Görünüm",
+  "licenseStatusTrialDaysLeft": "Deneme ({count} gün kaldı)",
+  "@licenseStatusTrialDaysLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "licenseNotLicensed": "Lisanslanmamış",
+  "licenseStatusTitle": "Lisans Durumu",
+  "unknown": "Bilinmiyor",
+  "plrReportTitle": "PLR Analiz Raporu",
+  "plrResearchOnlyTitle": "YALNIZCA ARAŞTIRMA/EĞİTİM ARACI",
+  "plrResearchDisclaimer": "Sonuçlar tıbbi tanı DEĞİLDİR. Sağlık uzmanına danışın.",
+  "plrNameLabel": "Ad",
+  "plrAgeYears": "Yaş: {age} yıl",
+  "@plrAgeYears": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "plrTestLabel": "Test",
+  "plrSummaryTitle": "PLR Özeti",
+  "plrGradeValue": "Derece {grade}",
+  "@plrGradeValue": {
+    "placeholders": {
+      "grade": {
+        "type": "String"
+      }
+    }
+  },
+  "plrStatusLabel": "Durum",
+  "plrDetectedStatus": "PLR TESPİT EDİLDİ",
+  "plrWeakNotDetectedStatus": "ZAYIF/TESPİT EDİLEMEDİ",
+  "plrRecoveryTimeLabel": "İyileşme Süresi",
+  "plrRecoveryRatioLabel": "İyileşme Oranı",
+  "plrChartDescription": "Zaman içinde pupil yanıtının görsel gösterimi",
+  "plrPiRange": "P/I Aralığı: {min}% - {max}%",
+  "@plrPiRange": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "plrMinValue": "Min: {value}%",
+  "@plrMinValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "plrFrameDataTitle": "Kare Verileri",
+  "plrTableTime": "Süre",
+  "plrTablePiPercent": "P/I %",
+  "plrTablePhase": "Faz",
+  "plrTableConfidenceShort": "Güv.",
+  "plrSuccessfulFailed": "Başarılı: {success} | Başarısız: {fail}",
+  "@plrSuccessfulFailed": {
+    "placeholders": {
+      "success": {
+        "type": "int"
+      },
+      "fail": {
+        "type": "int"
+      }
+    }
+  },
+  "plrReferenceLatencyLine": "• Gecikme: 200-500 ms (ilk yanıt süresi)",
+  "plrReferenceConstrictionLine": "• Daralma: Başlangıç değerinden %10-30 azalma",
+  "plrReferenceVelocityLine": "• Hız: %1,5-4,0/saniye",
+  "plrReferenceRecoveryLine": "• İyileşme: 5 saniye içinde başlangıç değerinin >%75'ine dönüş",
+  "plrReferenceRecoveryLineShort": "• İyileşme: 5 sn içinde başlangıç değerinin >%75'ine dönüş",
+  "plrShareSubject": "PLR Analiz Raporu - {eye}",
+  "@plrShareSubject": {
+    "placeholders": {
+      "eye": {
+        "type": "String"
+      }
+    }
+  },
+  "plrTextReportTitle": "PLR VİDEO ANALİZ RAPORU",
+  "plrTextDisclaimerTitle": "SORUMLULUK REDDİ: Yalnızca Araştırma/Eğitim Aracı",
+  "plrTextDisclaimerBody": "Sonuçlar tıbbi tanı DEĞİLDİR.",
+  "plrOverallGradeLabel": "Genel Derece",
+  "plrEndOfReport": "RAPORUN SONU",
+  "zoneOverlay": "Bölge Katmanı",
+  "@zoneOverlay": {
+    "description": "Zone overlay / analysis: Zone Overlay"
+  },
+  "tipDragImage": "İpucu: limbusu katman çemberleriyle hizalamak için görüntüyü sürükleyin.",
+  "@tipDragImage": {
+    "description": "Zone overlay / analysis: Tip: drag image to align limbus with overlay circl"
+  },
+  "overlayMetrics": "Katman Metrikleri",
+  "@overlayMetrics": {
+    "description": "Zone overlay / analysis: Overlay Metrics"
+  },
+  "piRatioLabel": "P/I Oranı:",
+  "@piRatioLabel": {
+    "description": "Zone overlay / analysis: P/I Ratio:"
+  },
+  "ellipsenessLabel": "Elipslik:",
+  "@ellipsenessLabel": {
+    "description": "Zone overlay / analysis: Ellipseness:"
+  },
+  "decentralizationLabel": "Merkezden Sapma:",
+  "@decentralizationLabel": {
+    "description": "Zone overlay / analysis: Decentralization:"
+  },
+  "detectedFindings": "Tespit edilen bulgular",
+  "@detectedFindings": {
+    "description": "Zone overlay / analysis: Detected findings"
+  },
+  "anwCollarette": "ANW / KOLAR",
+  "@anwCollarette": {
+    "description": "Zone overlay / analysis: ANW / COLLARETTE"
+  },
+  "observerNotes": "Gözlemci notları",
+  "@observerNotes": {
+    "description": "Zone overlay / analysis: Observer notes"
+  },
+  "observerNotesHint": "Klinik gözlemleri, bölge bulgularını, desenleri girin...",
+  "@observerNotesHint": {
+    "description": "Zone overlay / analysis: Enter clinical observations, zone findings, patter"
+  },
+  "autoCenter": "Otomatik ortala",
+  "@autoCenter": {
+    "description": "Zone overlay / analysis: Auto-center"
+  },
+  "anwRing": "ANW Halkası",
+  "@anwRing": {
+    "description": "Zone overlay / analysis: ANW Ring"
+  },
+  "axisGrid": "Eksen/Izgara",
+  "@axisGrid": {
+    "description": "Zone overlay / analysis: Axis/Grid"
+  },
+  "chart": "Grafik",
+  "@chart": {
+    "description": "Zone overlay / analysis: Chart"
+  },
+  "hoverToIdentify": "Bir bölgeyi tanımlamak için üzerine gelin veya dokunun",
+  "@hoverToIdentify": {
+    "description": "Zone overlay / analysis: Hover or tap a zone to identify"
+  },
+  "organsMode": "Organ modu - bölgeleri tanımlamak için irise gelin",
+  "@organsMode": {
+    "description": "Zone overlay / analysis: Organs mode — hover iris to identify zones"
+  },
+  "mildSizeDiff": "Hafif boyut farkı. Fizyolojik varyasyon olabilir.",
+  "@mildSizeDiff": {
+    "description": "Zone overlay / analysis: Mild size difference. May be physiological variati"
+  },
+  "withinBaseline": "{age} yaş ({group}) için araştırma referans değeri içinde",
+  "@withinBaseline": {
+    "description": "Zone overlay / analysis: Within research baseline for age {age} ({group})"
+  },
+  "formLabel": "Form:",
+  "@formLabel": {
+    "description": "Zone overlay / analysis: Form:"
+  },
+  "flatteningLabel": "Düzleşme:",
+  "@flatteningLabel": {
+    "description": "Zone overlay / analysis: Flattening:"
+  },
+  "protrusionLabel": "Çıkıntı:",
+  "@protrusionLabel": {
+    "description": "Zone overlay / analysis: Protrusion:"
+  },
+  "decentrationLabel": "Merkezden Sapma:",
+  "@decentrationLabel": {
+    "description": "Zone overlay / analysis: Decentration:"
+  },
+  "pupilSizeLabel": "Pupil boyutu:",
+  "@pupilSizeLabel": {
+    "description": "Zone overlay / analysis: Pupil size:"
+  },
+  "anwRatioLabel": "ANW oranı:",
+  "@anwRatioLabel": {
+    "description": "Zone overlay / analysis: ANW ratio:"
+  },
+  "anwToneLabel": "ANW tonu:",
+  "@anwToneLabel": {
+    "description": "Zone overlay / analysis: ANW tone:"
+  },
+  "noMajorODAnomalies": "Önemli OD pupil anomalisi yok.",
+  "@noMajorODAnomalies": {
+    "description": "Zone overlay / analysis: No major OD pupil anomalies."
+  },
+  "noMajorOSAnomalies": "Önemli OS pupil anomalisi yok.",
+  "@noMajorOSAnomalies": {
+    "description": "Zone overlay / analysis: No major OS pupil anomalies."
+  },
+  "anwNotAssessed": "ANW: değerlendirilmedi",
+  "@anwNotAssessed": {
+    "description": "Zone overlay / analysis: ANW: not assessed"
+  },
+  "manualAlignmentAid": "Yalnızca inceleme için manuel hizalama yardımı (yakalama sonrası). Görüntüyü sürükleyin veya Otomatik ortala'yı kullanın.",
+  "@manualAlignmentAid": {
+    "description": "Zone overlay / analysis: Manual alignment aid for review only (post-capture"
+  },
+  "frontalShift": "S: Frontal kayma deseni.",
+  "@frontalShift": {
+    "description": "Zone overlay / analysis: S: Frontal shift."
+  },
+  "cerebralCirculation": "Velchover'a göre tarihsel çalışmalar bunu serebral dolaşım desenleriyle ilişkilendirmiştir.",
+  "@cerebralCirculation": {
+    "description": "Zone overlay / analysis: Cerebral circulation patterns."
+  },
+  "middleTemporalShift": "D: Orta-temporal kayma deseni.",
+  "@middleTemporalShift": {
+    "description": "Zone overlay / analysis: D: Middle-temporal shift."
+  },
+  "respiratoryCardiac": "Velchover'a göre tarihsel çalışmalar bunu solunum ve kardiyak otonom desenleriyle ilişkilendirmiştir.",
+  "@respiratoryCardiac": {
+    "description": "Zone overlay / analysis: Respiratory and cardiac autonomic patterns."
+  },
+  "findings": "Bulgular:",
+  "@findings": {
+    "description": "Zone overlay / analysis: Findings:"
+  },
+  "analysisReportTitle": "Pupil Analiz Raporu",
+  "reportResearchVersion": "Araştırma Sürümü",
+  "reportDisclaimerTitle": "SORUMLULUK REDDİ: Yalnızca Araştırma/Eğitim Aracı",
+  "reportDisclaimerBody": "Sonuçlar araştırma gözlemleridir, tıbbi tanı DEĞİLDİR.",
+  "reportPersonInformationTitle": "Kişi Bilgileri",
+  "reportAgeGroupLabel": "Yaş Grubu",
+  "reportPupilSizeComparisonTitle": "Pupil Boyutu Karşılaştırması",
+  "reportCaptureDistanceMetricsTitle": "Yakalama Mesafesi Metrikleri",
+  "reportResearchObservationsTitle": "Araştırma Gözlemleri",
+  "reportObserverNotesZoneOverlayTitle": "Gözlemci Notları (Bölge Katmanı)",
+  "reportEndOfReport": "RAPORUN SONU",
+  "reportGradeLabel": "Derece",
+  "reportPupilFormTitle": "Pupil Formu",
+  "reportDecentrationTitle": "Merkezden Sapma",
+  "reportFlatteningsTitle": "Düzleşmeler",
+  "reportProtrusionsTitle": "Çıkıntılar",
+  "reportAnwParametersTitle": "Otonom Sinir Çemberi (ANW)",
+  "reportTonicStateLabel": "Tarihsel Tonus Deseni",
+  "reportShiftDetectedTitle": "Tarihsel Kayma Deseni",
+  "reportClinicalLabel": "Tarihsel Not",
+  "reportConstrictionDetectedTitle": "Daralma Tespit Edildi",
+  "reportSeverityLabel": "Şiddet",
+  "reportReferenceValuesTitle": "Referans Değerleri (CNRI Araştırma Protokolü)",
+  "reportMatchLabel": "Eşleşme",
+  "reportValueLabel": "Değer",
+  "reportNormalPupilForm": "Normal pupil formu",
+  "reportPageXofY": "Sayfa {page}/{total}",
+  "@reportPageXofY": {
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "reportShareSubject": "Pupil Analiz Raporu - {patientName}",
+  "@reportShareSubject": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      }
+    }
+  },
+  "reportShareBody": "{patientName} için {date} tarihinde oluşturulan pupil analiz raporu ektedir.",
+  "@reportShareBody": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "belowBaseline": "{age} yaş ({group}) için araştırma referans değerinin altında",
+  "@belowBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "aboveBaseline": "{age} yaş ({group}) için araştırma referans değerinin üstünde",
+  "@aboveBaseline": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      },
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "ageGroupInfant": "Bebek",
+  "@ageGroupInfant": {
+    "description": "Localized age group label"
+  },
+  "ageGroupChild15": "Çocuk (1-5)",
+  "@ageGroupChild15": {
+    "description": "Localized age group label"
+  },
+  "ageGroupChild611": "Çocuk (6-11)",
+  "@ageGroupChild611": {
+    "description": "Localized age group label"
+  },
+  "ageGroupTeen": "Genç",
+  "@ageGroupTeen": {
+    "description": "Localized age group label"
+  },
+  "ageGroupAdult2039": "Yetişkin (20-39)",
+  "@ageGroupAdult2039": {
+    "description": "Localized age group label"
+  },
+  "ageGroupAdult4059": "Yetişkin (40-59)",
+  "@ageGroupAdult4059": {
+    "description": "Localized age group label"
+  },
+  "ageGroupSenior60Plus": "Yaşlı (60+)",
+  "@ageGroupSenior60Plus": {
+    "description": "Localized age group label"
+  },
+  "middleNasalShift": "Orta-nazal kayma deseni.",
+  "upperTemporalShift": "Üst-temporal kayma deseni.",
+  "lowerTemporalShift": "Alt-temporal kayma deseni.",
+  "basalShift": "Bazal kayma deseni.",
+  "vagusStellateAssociation": "Velchover'a göre tarihsel çalışmalar bunu vagus siniri veya stellat ganglionun hipofonksiyon desenleriyle ilişkilendirmiştir.",
+  "venaCavaInferiorAssociation": "Velchover'a göre tarihsel çalışmalar bunu inferior vena kavadaki hemodinamik bozukluk desenleriyle ilişkilendirmiştir.",
+  "vertebralArteryAssociation": "Velchover'a göre tarihsel çalışmalar bunu vertebral arter dolaşım desenleriyle ilişkilendirmiştir.",
+  "smallPelvisAssociation": "Velchover'a göre tarihsel çalışmalar bunu küçük pelvisteki konjesyon desenleriyle ilişkilendirmiştir.",
+  "openZoneOverlay": "Bölge katmanını aç",
+  "iris": "İris",
+  "chartOpacity": "Grafik saydamlığı",
+  "irisSizeNotAvailable": "İris boyutu verisi mevcut değil",
+  "ratio": "Oran",
+  "reportRefPiRatio": "Pupil/İris Oranı: Normal %20-30",
+  "reportRefEllipseness": "Elipslik: Normal >%95",
+  "reportRefDecentralization": "Merkezden Sapma: Normal <%5",
+  "reportRefPupilSizeDiff": "Pupil Boyutu Farkı: <%2 Normal, %2-4 Hafif, >%4 Önemli",
+  "enterPatientInfoAnalysis": "Hasta Bilgisi Girin → Analiz",
+  "chooseCaptureMethod": "Yakalama yöntemini seçin:",
+  "usbCamera": "USB Kamera",
+  "selectExistingImage": "Mevcut görüntüyü seçin",
+  "detectingCameras": "Kameralar algılanıyor...",
+  "retryDetection": "Algılamayı Yeniden Dene",
+  "connectUvcCameraViaUsb": "UVC kamerayı USB ile bağlayın",
+  "ensureCameraDriversInstalled": "Kamera sürücülerinin yüklendiğinden emin olun",
+  "tapRefreshToDetect": "Kameraları algılamak için Yenile'ye dokunun",
+  "connectUsbCameraToBegin": "Başlamak için USB kamerayı bağlayın",
+  "noExternalCameraTitle": "Harici Kamera Algılanamadı",
+  "connectUsbIriscopeEnsurePlugged": "USB iriskopunuzu bağlayın ve takılı olduğundan emin olun",
+  "languagesAvailable": "Mevcut Diller",
+  "validationChecks": "Doğrulama Kontrolleri:",
+  "eyeQualityTip": "İpucu: İyi aydınlatma sağlayın ve gözü sabit tutun",
+  "validatingEye": "Göz doğrulanıyor...",
+  "initializing": "Başlatılıyor...",
+  "nameLabel": "Ad:",
+  "ageLabel": "Yaş:",
+  "typeLabel": "Tür:",
+  "pleaseEnterName": "Lütfen adı girin",
+  "pleaseEnterAge": "Lütfen yaşı girin",
+  "ageMustBe2Digits": "Yaş 1 veya 2 basamaklı olmalıdır",
+  "optional": "(İsteğe Bağlı)",
+  "bilateralBothHands": "Her iki elin iki taraflı kullanımı",
+  "zoom": "Yakınlaştırma",
+  "zoomSliderTip": "Kayıt öncesinde büyütmeyi ayarlamak için sağdaki yakınlaştırma kaydırıcısını kullanın.",
+  "aboutProgramDeveloper": "Program Geliştiricisi - Bryan K. Marcia, Ph.D.",
+  "chartSizeTooltip": "Grafik boyutu",
+  "chartOpacityAdvancedTooltip": "Grafik saydamlığı (0 = yalnızca üzerine gelindiğinde / Organ modu)",
+  "anwLabel": "ANW",
+  "doneAndGoBack": "Bitti ve Geri Dön",
+  "errorImageShape": "Görüntü şekli hatalı - gözün çerçeveyi doldurduğundan emin olun",
+  "cameraConnected": "Kamera bağlandı",
+  "cameraDisconnected": "Kamera bağlantısı kesildi",
+  "cameraPermissionDenied": "Kamera izni reddedildi",
+  "cameraFailedInit": "Kamera başlatılamadı",
+  "cameraInUse": "Kamera başka bir uygulama tarafından kullanılıyor",
+  "cameraFormatNotSupported": "Kamera formatı desteklenmiyor",
+  "capturedImageNotFound": "Yakalanan görüntü dosyası bulunamadı",
+  "failedToCaptureImage": "Görüntü yakalanamadı",
+  "gradeA": "A",
+  "gradeB": "B",
+  "gradeC": "C",
+  "gradeD": "D",
+  "cameraErrorOccurred": "Kamera hatası oluştu",
+  "connectingToUsbIriscope": "USB iriskopa bağlanılıyor...",
+  "noCamerasDetectedMessage": "Hiçbir kamera algılanamadı. Lütfen USB kameranızın bağlı olduğundan ve sisteminiz tarafından tanındığından emin olun.",
+  "failedToAccessCameras": "Kameralara erişilemedi"
+}
