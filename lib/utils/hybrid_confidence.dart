@@ -79,14 +79,15 @@ class HybridConfidenceFusion {
         _softRange(ml.ellipseness, idealMin: 88.0, idealMax: 100.0);
     final decentrationScore =
         _softInverseRange(ml.decentration, idealMin: 0.0, idealMax: 8.0);
-    final anisocoriaScore =
-        _softInverseRange(ml.anisoScore, idealMin: 0.0, idealMax: 5.0);
+    // decentrationAngle should be a valid compass bearing (0–360°); outside that = implausible
+    final angleScore =
+        _softRange(ml.decentrationAngle, idealMin: 0.0, idealMax: 360.0);
 
     return (
       0.35 * piScore +
       0.25 * ellipsenessScore +
       0.20 * decentrationScore +
-      0.20 * anisocoriaScore
+      0.20 * angleScore
     ).clamp(0.0, 1.0);
   }
 

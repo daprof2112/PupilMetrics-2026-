@@ -23,11 +23,11 @@ class MLPupilAnalyzer {
   static const List<double> mean = [0.485, 0.456, 0.406];
   static const List<double> std = [0.229, 0.224, 0.225];
 
-  // Output indices matching training pipeline (4 regression outputs)
-  static const int OUTPUT_PI_RATIO = 0;      // Pupil-Iris ratio (14-43%)
-  static const int OUTPUT_DECENTRATION = 1;  // Decentration angle (0-90°)
-  static const int OUTPUT_ELLIPSENESS = 2;   // Ellipseness (86-98%)
-  static const int OUTPUT_ANISOCORIA = 3;    // Anisocoria score
+  // Output indices — corrected to match cnri_model_metadata.json v6.0.0
+  static const int OUTPUT_PI_RATIO = 0;           // PI ratio (scale 50.0)
+  static const int OUTPUT_ELLIPSENESS = 1;        // Ellipseness (scale 100.0) — was wrongly index 2
+  static const int OUTPUT_DECENTRATION = 2;       // Decentration magnitude (scale 100.0) — was wrongly index 1
+  static const int OUTPUT_DECENTRATION_ANGLE = 3; // Decentration direction 0–360° (scale 360.0) — was mislabelled ANISOCORIA
 
   /// Initialize ONNX Runtime and load model
   Future<bool> initialize() async {
@@ -188,55 +188,50 @@ class MLPupilAnalyzer {
     // DEBUG: Print raw model outputs
     // print('🔬 ML Raw outputs: $values');
 
-    // Extract the 4 regression values
-    final rawPiRatio = values.length > OUTPUT_PI_RATIO ? values[OUTPUT_PI_RATIO] : 0.0;
-    final rawDecentration = values.length > OUTPUT_DECENTRATION ? values[OUTPUT_DECENTRATION] : 0.0;
-    final rawEllipseness = values.length > OUTPUT_ELLIPSENESS ? values[OUTPUT_ELLIPSENESS] : 0.0;
-    final rawAnisoScore = values.length > OUTPUT_ANISOCORIA ? values[OUTPUT_ANISOCORIA] : 0.0;
+    // Extract the 4 regression values (corrected index mapping)
+    final rawPiRatio          = values.length > OUTPUT_PI_RATIO          ? values[OUTPUT_PI_RATIO]          : 0.0;
+    final rawEllipseness      = values.length > OUTPUT_ELLIPSENESS      ? values[OUTPUT_ELLIPSENESS]      : 0.0;
+    final rawDecentration     = values.length > OUTPUT_DECENTRATION     ? values[OUTPUT_DECENTRATION]     : 0.0;
+    final rawDecentrationAngle = values.length > OUTPUT_DECENTRATION_ANGLE ? values[OUTPUT_DECENTRATION_ANGLE] : 0.0;
 
-    // print('🔬 Raw values: PI=$rawPiRatio, Dec=$rawDecentration, Ellip=$rawEllipseness, Aniso=$rawAnisoScore');
+    // print('🔬 Raw values: PI=$rawPiRatio, Ellip=$rawEllipseness, Dec=$rawDecentration, DecAngle=$rawDecentrationAngle');
 
     // =======================================================================
-    // EMPIRICAL CALIBRATION based on Bexel ground truth
-    // Calibrated from John Green case: Left PI=31% (raw=0.05), Right PI=21% (raw=-0.48)
+    // CALIBRATION
+    // PI: empirically calibrated from Bexel ground truth (John Green case).
+    //     Left PI=31% (raw=0.05), Right PI=21% (raw=-0.48) — index 0 was always correct.
+    // Ellipseness / Decentration / DecentrationAngle: indices 1-3 were swapped in prior
+    //     code, so prior empirical calibration was fitted to misidentified raw data.
+    //     Sigmoid-based normalization applied here as a safe default.
+    //     TODO: Re-derive linear calibration constants from new Bexel ground truth cases
+    //     once this fix is deployed, using the debug print above to capture raw values.
     // =======================================================================
 
-    // PI Ratio: Linear transform PI = raw * scale + offset
-    // From calibration: scale ≈ 18.87, offset ≈ 30.0
-    // Dataset stats: mean=23.77, range=[14.58, 43.33]
-    // PI Ratio: Linear transform with eye-specific offset
+    // PI Ratio: empirically calibrated linear transform (unchanged — was always correct)
     const double piScale = 18.87;
     const double piOffsetRight = 30.0;
-    const double piOffsetLeft = 25.0;  // Compensate for ~9% left eye inflation
+    const double piOffsetLeft  = 25.0; // compensate ~9% left-eye inflation
+    final double piRatio = rawPiRatio * piScale + (isLeftEye ? piOffsetLeft : piOffsetRight);
 
-    double piOffset = isLeftEye ? piOffsetLeft : piOffsetRight;
-    double piRatio = rawPiRatio * piScale + piOffset;
-    // print('🔬 Calibrated PI (${isLeftEye ? "left" : "right"}): $piRatio% (raw * $piScale + $piOffset)');
+    // Ellipseness: sigmoid normalization → maps any raw value to 80–100% clinical range
+    // (index 1 raw range unknown post-fix; recalibrate with ground truth when available)
+    final double ellipseness = 80.0 + _sigmoid(rawEllipseness) * 20.0;
 
-    // Decentration: The raw values (~3.5) seem to already be in % scale
-    // But don't match Bexel exactly (6-7%), so apply small adjustment
-    // Trying: decentration = raw * 2.0 (rough calibration)
-    double decentration = rawDecentration * 2.0;
-    // print('🔬 Calibrated Decentration: $decentration%');
+    // Decentration magnitude: sigmoid → 0–20% range
+    // (index 2 raw range unknown post-fix; recalibrate with ground truth when available)
+    final double decentration = _sigmoid(rawDecentration) * 20.0;
 
-    // Ellipseness: Raw values are negative (-0.79, -2.62) for 96%, 94%
-    // Linear: ellip = raw * scale + offset
-    // From: -0.79 → 96, -2.62 → 94: scale ≈ 1.09, offset ≈ 96.86
-    const double ellipScale = 1.09;
-    const double ellipOffset = 96.86;
-    double ellipseness = rawEllipseness * ellipScale + ellipOffset;
-    // print('🔬 Calibrated Ellipseness: $ellipseness%');
+    // Decentration angle: sigmoid → 0–360° directional bearing
+    final double decentrationAngle = _sigmoid(rawDecentrationAngle) * 360.0;
 
-    // Anisocoria: Apply sigmoid then scale to percentage
-    double anisoScore = _sigmoid(rawAnisoScore) * 20.0; // Scale to 0-20% range
-    // print('🔬 Calibrated Anisocoria: $anisoScore%');
+    // print('🔬 Calibrated: PI=$piRatio%, Ellip=$ellipseness%, Dec=$decentration%, DecAngle=$decentrationAngle°');
 
     return MLAnalysisResult(
       isLeftEye: isLeftEye,
       piRatio: piRatio.clamp(10.0, 50.0),
-      decentration: decentration.clamp(0.0, 30.0),
       ellipseness: ellipseness.clamp(80.0, 100.0),
-      anisoScore: anisoScore,
+      decentration: decentration.clamp(0.0, 25.0),
+      decentrationAngle: decentrationAngle,
       threshold: threshold,
     );
   }
@@ -254,18 +249,18 @@ class MLPupilAnalyzer {
 /// Structured result from ML analysis (4 regression values)
 class MLAnalysisResult {
   final bool isLeftEye;
-  final double piRatio;        // Pupil-Iris ratio percentage
-  final double decentration;   // Decentration angle in degrees
-  final double ellipseness;    // Ellipseness percentage (100 = perfect circle)
-  final double anisoScore;     // Anisocoria score
+  final double piRatio;           // Pupil-Iris ratio percentage (index 0)
+  final double ellipseness;       // Ellipseness percentage — 100 = perfect circle (index 1)
+  final double decentration;      // Decentration magnitude % (index 2)
+  final double decentrationAngle; // Decentration direction 0–360° (index 3)
   final double threshold;
 
   MLAnalysisResult({
     required this.isLeftEye,
     required this.piRatio,
-    required this.decentration,
     required this.ellipseness,
-    required this.anisoScore,
+    required this.decentration,
+    required this.decentrationAngle,
     required this.threshold,
   });
 
@@ -274,9 +269,6 @@ class MLAnalysisResult {
 
   /// Check if significant decentration detected
   bool get hasDecentration => decentration > 10.0;
-
-  /// Check if anisocoria detected
-  bool get hasAnisocoria => anisoScore > 0.5;
 
   /// Check if oval deformation (low ellipseness)
   bool get hasOvalDeformation => ellipseness < 90.0;
@@ -288,32 +280,26 @@ class MLAnalysisResult {
     return 'significant';
   }
 
-  bool get hasFindings => hasDecentration || hasAnisocoria || hasOvalDeformation;
+  bool get hasFindings => hasDecentration || hasOvalDeformation;
 
   String get summary {
     final findings = <String>[];
-
     findings.add('PI Ratio: ${piRatio.toStringAsFixed(1)}%');
-
     if (hasDecentration) {
-      findings.add('Decentration: ${decentration.toStringAsFixed(1)}°');
+      findings.add('Decentration: ${decentration.toStringAsFixed(1)}% @ ${decentrationAngle.toStringAsFixed(0)}°');
     }
     if (hasOvalDeformation) {
       findings.add('Ellipseness: ${ellipseness.toStringAsFixed(1)}% ($ovalType)');
     }
-    if (hasAnisocoria) {
-      findings.add('Anisocoria detected');
-    }
-
     return findings.join('\n');
   }
 
   Map<String, dynamic> toJson() => {
     'isLeftEye': isLeftEye,
     'piRatio': piRatio,
-    'decentration': decentration,
     'ellipseness': ellipseness,
-    'anisoScore': anisoScore,
+    'decentration': decentration,
+    'decentrationAngle': decentrationAngle,
   };
 }
 
