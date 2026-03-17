@@ -30,6 +30,9 @@ class HybridConfidenceFusion {
     final normalizedCapture = (captureQuality ?? 0.60).clamp(0.0, 1.0);
     final normalizedClassical = classical.confidence.clamp(0.0, 1.0);
     final mlPlausibility = _computeMlPlausibility(ml);
+    // Cross-model agreement: only PI is weighted — calibration analysis showed
+    // ellipseness (R²=0.004) and decentration (R²=0.003) output near-constants
+    // in the current model, so their "agreement" with classical CV is meaningless.
     final agreementPi =
         _agreement(classical.pupilIrisRatio, ml.piRatio, tolerance: 10.0);
     final agreementEllipseness =
@@ -38,9 +41,9 @@ class HybridConfidenceFusion {
         _agreement(classical.decentralization, ml.decentration, tolerance: 8.0);
 
     final crossModelAgreement = (
-      0.50 * agreementPi +
-      0.30 * agreementEllipseness +
-      0.20 * agreementDecentration
+      0.80 * agreementPi +
+      0.10 * agreementEllipseness +
+      0.10 * agreementDecentration
     ).clamp(0.0, 1.0);
 
     double fused = (
@@ -74,21 +77,12 @@ class HybridConfidenceFusion {
   }
 
   static double _computeMlPlausibility(MLAnalysisResult ml) {
+    // Calibration analysis (712 Bexel cases) showed only PI ratio is reliable
+    // in cnri_model.onnx v6.0.0 (R²=0.856). Ellipseness and decentration have
+    // R²<0.01 — the model outputs near-constant values for those.
+    // PI score therefore carries full weight for ML plausibility.
     final piScore = _softRange(ml.piRatio, idealMin: 20.0, idealMax: 40.0);
-    final ellipsenessScore =
-        _softRange(ml.ellipseness, idealMin: 88.0, idealMax: 100.0);
-    final decentrationScore =
-        _softInverseRange(ml.decentration, idealMin: 0.0, idealMax: 8.0);
-    // decentrationAngle should be a valid compass bearing (0–360°); outside that = implausible
-    final angleScore =
-        _softRange(ml.decentrationAngle, idealMin: 0.0, idealMax: 360.0);
-
-    return (
-      0.35 * piScore +
-      0.25 * ellipsenessScore +
-      0.20 * decentrationScore +
-      0.20 * angleScore
-    ).clamp(0.0, 1.0);
+    return piScore.clamp(0.0, 1.0);
   }
 
   static double _agreement(double classicalValue, double mlValue,

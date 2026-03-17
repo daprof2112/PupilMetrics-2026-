@@ -197,34 +197,39 @@ class MLPupilAnalyzer {
     // print('🔬 Raw values: PI=$rawPiRatio, Ellip=$rawEllipseness, Dec=$rawDecentration, DecAngle=$rawDecentrationAngle');
 
     // =======================================================================
-    // CALIBRATION
-    // PI: empirically calibrated from Bexel ground truth (John Green case).
-    //     Left PI=31% (raw=0.05), Right PI=21% (raw=-0.48) — index 0 was always correct.
-    // Ellipseness / Decentration / DecentrationAngle: indices 1-3 were swapped in prior
-    //     code, so prior empirical calibration was fitted to misidentified raw data.
-    //     Sigmoid-based normalization applied here as a safe default.
-    //     TODO: Re-derive linear calibration constants from new Bexel ground truth cases
-    //     once this fix is deployed, using the debug print above to capture raw values.
+    // CALIBRATION — derived from linear regression over 712 eyes / 356 Bexel cases
+    // (calibrate_onnx.py, bexel_envi/Scripts)
+    //
+    // Index 0 (PI ratio):      R²=0.856  MAE=1.17% — model is well-trained
+    // Index 1 (ellipseness):   R²=0.004  MAE=2.69% — model outputs near-constant ~94%
+    // Index 2 (decentration):  R²=0.003  MAE=2.01% — model outputs near-constant ~6.5%
+    // Index 3 (dec. angle):    raw is negative/unbounded — not a valid bearing
+    //
+    // PRACTICAL CONCLUSION: Only PI ratio is reliable from this ONNX model.
+    // Ellipseness and decentration are reported for completeness but the classical
+    // CV pipeline values should be preferred for clinical decisions on those two.
     // =======================================================================
 
-    // PI Ratio: empirically calibrated linear transform (unchanged — was always correct)
-    const double piScale = 18.87;
-    const double piOffsetRight = 30.0;
-    const double piOffsetLeft  = 25.0; // compensate ~9% left-eye inflation
-    final double piRatio = rawPiRatio * piScale + (isLeftEye ? piOffsetLeft : piOffsetRight);
+    // PI Ratio — calibrated linear fit (scale=11.835, offset=24.529)
+    const double piScale  = 11.835412;
+    const double piOffset = 24.528659;
+    final double piRatio  = rawPiRatio * piScale + piOffset;
 
-    // Ellipseness: sigmoid normalization → maps any raw value to 80–100% clinical range
-    // (index 1 raw range unknown post-fix; recalibrate with ground truth when available)
-    final double ellipseness = 80.0 + _sigmoid(rawEllipseness) * 20.0;
+    // Ellipseness — calibrated but low R² (0.004); outputs ~91.7–94.5% regardless of input
+    const double ellipScale  = 0.609340;
+    const double ellipOffset = 91.728502;
+    final double ellipseness = rawEllipseness * ellipScale + ellipOffset;
 
-    // Decentration magnitude: sigmoid → 0–20% range
-    // (index 2 raw range unknown post-fix; recalibrate with ground truth when available)
-    final double decentration = _sigmoid(rawDecentration) * 20.0;
+    // Decentration — calibrated but low R² (0.003); outputs ~6.0–6.8% regardless of input
+    const double decScale  = 0.179778;
+    const double decOffset = 6.796942;
+    final double decentration = rawDecentration * decScale + decOffset;
 
-    // Decentration angle: sigmoid → 0–360° directional bearing
+    // Decentration angle — raw is negative/unbounded; no ground truth exists.
+    // Stored for future use when model is retrained with angle labels.
     final double decentrationAngle = _sigmoid(rawDecentrationAngle) * 360.0;
 
-    // print('🔬 Calibrated: PI=$piRatio%, Ellip=$ellipseness%, Dec=$decentration%, DecAngle=$decentrationAngle°');
+    // print('ML: PI=$piRatio%, Ellip=$ellipseness%, Dec=$decentration%, Angle=$decentrationAngle°');
 
     return MLAnalysisResult(
       isLeftEye: isLeftEye,
