@@ -249,24 +249,22 @@ class _UnifiedCameraScreenState extends State<UnifiedCameraScreen> {
   }
 
   void _showNotAnEyeDialog() {
+    final l10n = AppLocalizations.of(context)!;
     showDialog<void>(
       context: context,
       builder: (_) => AlertDialog(
-        title: const Row(
+        title: Row(
           children: [
-            Icon(Icons.warning_amber_rounded, color: Colors.orange),
-            SizedBox(width: 8),
-            Text('Not an Eye Image'),
+            const Icon(Icons.warning_amber_rounded, color: Colors.orange),
+            const SizedBox(width: 8),
+            Text(l10n.notAnEyeImageTitle),
           ],
         ),
-        content: const Text(
-          'The captured image does not appear to be an eye.\n\n'
-          'Please position the iriscope directly over the eye and retake.',
-        ),
+        content: Text(l10n.notAnEyeImageBodyCapture),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Retake'),
+            child: Text(l10n.retake),
           ),
         ],
       ),

@@ -1917,5 +1917,12 @@
   "cameraErrorOccurred": "Kamera hatası oluştu",
   "connectingToUsbIriscope": "USB iriskopa bağlanılıyor...",
   "noCamerasDetectedMessage": "Hiçbir kamera algılanamadı. Lütfen USB kameranızın bağlı olduğundan ve sisteminiz tarafından tanındığından emin olun.",
-  "failedToAccessCameras": "Kameralara erişilemedi"
+  "failedToAccessCameras": "Kameralara erişilemedi",
+  "notAnEyeImageTitle": "G\u00f6z G\u00f6r\u00fcnt\u00fcs\u00fc De\u011fil",
+  "notAnEyeImageBody": "Se\u00e7ilen g\u00f6r\u00fcnt\u00fc bir g\u00f6z gibi g\u00f6r\u00fcnm\u00fcyor.\n\nL\u00fctfen iris/pupil'in net bir foto\u011fraf\u0131n\u0131 se\u00e7in ve tekrar deneyin.",
+  "notAnEyeImageBodyCapture": "\u00c7ekilen g\u00f6r\u00fcnt\u00fc bir g\u00f6z gibi g\u00f6r\u00fcnm\u00fcyor.\n\nL\u00fctfen iriskop'u do\u011frudan g\u00f6z\u00fcn \u00fczerine konumland\u0131r\u0131n ve yeniden \u00e7ekin.",
+  "anisocoriaObservationSymmetrical": "Simetrik",
+  "anisocoriaObservationSlight": "Hafif farkl\u0131l\u0131k",
+  "anisocoriaObservationModerate": "Orta d\u00fczeyde farkl\u0131l\u0131k",
+  "anisocoriaObservationMarked": "Belirgin farkl\u0131l\u0131k"
 }

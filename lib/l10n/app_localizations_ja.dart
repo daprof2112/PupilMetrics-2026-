@@ -3389,4 +3389,27 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get failedToAccessCameras => 'カメラへのアクセスに失敗しました';
+
+  @override
+  String get notAnEyeImageTitle => '目の画像ではありません';
+
+  @override
+  String get notAnEyeImageBody =>
+      '選択した画像が目のように見えません。\n\n虹彩/瞳孔の鮮明な写真を選択して、もう一度お試しください。';
+
+  @override
+  String get notAnEyeImageBodyCapture =>
+      '撮影した画像が目のように見えません。\n\nアイリスコープを目の上に直接置いて、もう一度撮影してください。';
+
+  @override
+  String get anisocoriaObservationSymmetrical => '対称';
+
+  @override
+  String get anisocoriaObservationSlight => 'わずかな差';
+
+  @override
+  String get anisocoriaObservationModerate => '中程度の差';
+
+  @override
+  String get anisocoriaObservationMarked => '顕著な差';
 }

@@ -3518,4 +3518,27 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get failedToAccessCameras => 'Не удалось получить доступ к камерам';
+
+  @override
+  String get notAnEyeImageTitle => 'Не изображение глаза';
+
+  @override
+  String get notAnEyeImageBody =>
+      'Выбранное изображение не похоже на глаз.\n\nПожалуйста, выберите чёткое фото радужки/зрачка и попробуйте снова.';
+
+  @override
+  String get notAnEyeImageBodyCapture =>
+      'Снятое изображение не похоже на глаз.\n\nПожалуйста, установите ирископ прямо над глазом и сделайте снимок повторно.';
+
+  @override
+  String get anisocoriaObservationSymmetrical => 'Симметрично';
+
+  @override
+  String get anisocoriaObservationSlight => 'Незначительное различие';
+
+  @override
+  String get anisocoriaObservationModerate => 'Умеренное различие';
+
+  @override
+  String get anisocoriaObservationMarked => 'Значительное различие';
 }

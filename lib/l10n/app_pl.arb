@@ -1917,5 +1917,12 @@
   "cameraErrorOccurred": "Wystąpił błąd kamery",
   "connectingToUsbIriscope": "Łączenie z iryskotem USB...",
   "noCamerasDetectedMessage": "Nie wykryto kamer. Upewnij się, że kamera USB jest podłączona i rozpoznana przez system.",
-  "failedToAccessCameras": "Nie udało się uzyskać dostępu do kamer"
+  "failedToAccessCameras": "Nie udało się uzyskać dostępu do kamer",
+  "notAnEyeImageTitle": "To nie jest obraz oka",
+  "notAnEyeImageBody": "Wybrane zdj\u0119cie nie wygl\u0105da jak oko.\n\nProsz\u0119 wybra\u0107 wyra\u017ane zdj\u0119cie t\u0119cz\u00f3wki/\u017arenicy i spr\u00f3bowa\u0107 ponownie.",
+  "notAnEyeImageBodyCapture": "Przechwycone zdj\u0119cie nie wygl\u0105da jak oko.\n\nProsz\u0119 umie\u015bci\u0107 iriskop bezpo\u015brednio nad okiem i wykona\u0107 zdj\u0119cie ponownie.",
+  "anisocoriaObservationSymmetrical": "Symetryczny",
+  "anisocoriaObservationSlight": "Nieznaczna r\u00f3\u017cnica",
+  "anisocoriaObservationModerate": "Umiarkowana r\u00f3\u017cnica",
+  "anisocoriaObservationMarked": "Wyra\u017ana r\u00f3\u017cnica"
 }

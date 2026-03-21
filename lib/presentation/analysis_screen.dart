@@ -436,6 +436,16 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
     }
   }
 
+  /// Non-diagnostic observation label for anisocoria — avoids clinical severity terms.
+  String _anisocoriaObservationLabel(AnisocoriaSeverity severity, AppLocalizations l10n) {
+    switch (severity) {
+      case AnisocoriaSeverity.none:     return l10n.anisocoriaObservationSymmetrical;
+      case AnisocoriaSeverity.mild:     return l10n.anisocoriaObservationSlight;
+      case AnisocoriaSeverity.moderate: return l10n.anisocoriaObservationModerate;
+      case AnisocoriaSeverity.severe:   return l10n.anisocoriaObservationMarked;
+    }
+  }
+
   String _localizedAnisocoriaNote(AnisocoriaAssessment assessment, AppLocalizations l10n) {
     switch (assessment.severity) {
       case AnisocoriaSeverity.none:
@@ -3048,11 +3058,17 @@ Future<void> _saveTxtReport() async {
     if (widget.patientInfo.mainComplaints?.isNotEmpty ?? false) b.writeln('${l10n.mainComplaints}: ${widget.patientInfo.mainComplaints}');
 
     if (_anisocoriaResult != null) {
+      final ani = _anisocoriaResult!;
       b.writeln('\n--- ${l10n.reportPupilSizeComparisonTitle.toUpperCase()} ---');
-      b.writeln('OD: ${_anisocoriaResult!.rightPupilRatio.toStringAsFixed(2)}%');
-      b.writeln('OS: ${_anisocoriaResult!.leftPupilRatio.toStringAsFixed(2)}%');
-      b.writeln('${l10n.diff}: ${_anisocoriaResult!.absoluteDifference.toStringAsFixed(2)}%');
-      b.writeln('${l10n.reportSeverityLabel}: ${_localizedAnisocoriaSeverity(_anisocoriaResult!.severity, l10n)}');
+      b.writeln('OD: ${ani.rightPupilRatio.toStringAsFixed(2)}%');
+      b.writeln('OS: ${ani.leftPupilRatio.toStringAsFixed(2)}%');
+      b.writeln('${l10n.diff}: ${ani.absoluteDifference.toStringAsFixed(2)}%');
+      b.writeln('Observation: ${_anisocoriaObservationLabel(ani.severity, l10n)}');
+      if (ani.largerPupil != 'equal') {
+        final largerSide = ani.largerPupil == 'right' ? 'OD' : 'OS';
+        b.writeln('Larger pupil: $largerSide');
+      }
+      if (ani.isTBIIndicator) b.writeln('Note: ${l10n.significantPupilSizeDiff}');
     }
 
     if (_irisMetrics?.odIrisDiameterPx != null) {
@@ -3085,7 +3101,7 @@ Future<void> _saveTxtReport() async {
     b.writeln('${l10n.piRatio}: ${r.pupilIrisRatio.toStringAsFixed(2)}%');
     b.writeln('${l10n.ellipseness}: ${r.ellipseness.toStringAsFixed(2)}%');
     b.writeln('${l10n.circularity}: ${r.circularityScore.toStringAsFixed(2)}%');
-    b.writeln('${l10n.decentralization}: ${r.decentralization.toStringAsFixed(2)}%');
+    b.writeln('${l10n.decentralization}: ${r.decentralization.toStringAsFixed(2)}% @ ${r.decentralizationAngle.toStringAsFixed(0)}°');
 
     if (r.ellipseAssessment != null) {
       b.writeln('\n${l10n.reportPupilFormTitle.toUpperCase()}: ${loc.getFormTypeName(r.ellipseAssessment!.formType)}');
@@ -3093,7 +3109,7 @@ Future<void> _saveTxtReport() async {
     }
 
     if (r.decentrationAssessment != null && r.decentrationAssessment!.pattern != DecentrationPattern.centered) {
-      b.writeln('\n${l10n.reportDecentrationTitle.toUpperCase()}: ${loc.getPatternName(r.decentrationAssessment!.pattern)} (${r.decentralization.toStringAsFixed(2)}%)');
+      b.writeln('\n${l10n.reportDecentrationTitle.toUpperCase()}: ${loc.getPatternName(r.decentrationAssessment!.pattern)} (${r.decentralization.toStringAsFixed(2)}% @ ${r.decentralizationAngle.toStringAsFixed(0)}°)');
       b.writeln('  ${loc.getDecentrationDescription(r.decentrationAssessment!.pattern, isRight)}');
     }
 
@@ -3144,7 +3160,7 @@ Future<void> _saveTxtReport() async {
       // Shift details
       if (anw.hasShift && anw.primaryShift != null) {
         b.writeln('\n${l10n.reportShiftDetectedTitle.toUpperCase()}:');
-        b.writeln('  $eyeCode: ${PupilAnalyzerLocalizations(l10n).getZoneName(anw.primaryShift!.zoneName)} shift (${anw.primaryShift!.clockPosition})');
+        b.writeln('  $eyeCode: ${PupilAnalyzerLocalizations(l10n).getZoneName(anw.primaryShift!.zoneName)} shift (${anw.primaryShift!.clockPosition}, ${anw.primaryShift!.deviationPercent.toStringAsFixed(1)}%)');
         if (anw.primaryShift!.clinicalAssociation.isNotEmpty) {
           b.writeln('  ${l10n.reportClinicalLabel}: ${_getLocalizedShiftAssociation(anw.primaryShift!, isRight, l10n)}');
         }
@@ -3398,8 +3414,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
         pw.SizedBox(height: 16),
         if (_includeImagesInPdf && (rightBytes != null || leftBytes != null)) _buildPdfImages(rightBytes, leftBytes, l10n),
         if (_includeImagesInPdf && (rightBytes != null || leftBytes != null)) pw.SizedBox(height: 16),
-        if (_anisocoriaResult != null && _anisocoriaResult!.severity != AnisocoriaSeverity.none)
-          _buildPdfAnisocoria(l10n),
+        if (_anisocoriaResult != null) _buildPdfAnisocoria(l10n),
         if (_irisMetrics?.odIrisDiameterPx != null) _buildPdfIrisMetrics(l10n),
         if (_rightResult != null) _buildPdfEyeV53(l10n.rightEyeOD, _rightResult!, true, ml: _mlRightResult),
         pw.SizedBox(height: 12),
@@ -3475,19 +3490,58 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
     ])
   ]);
 
-  pw.Widget _buildPdfAnisocoria(AppLocalizations l10n) => pw.Container(
+  pw.Widget _buildPdfAnisocoria(AppLocalizations l10n) {
+    final r = _anisocoriaResult!;
+    final isNone = r.severity == AnisocoriaSeverity.none;
+    final borderColor = isNone ? PdfColors.green
+        : (r.severity == AnisocoriaSeverity.mild ? PdfColors.amber
+        : (r.isTBIIndicator ? PdfColors.deepOrange : PdfColors.orange));
+    final bgColor = isNone ? PdfColors.green50
+        : (r.severity == AnisocoriaSeverity.mild ? PdfColors.yellow50
+        : (r.isTBIIndicator ? PdfColors.deepOrange50 : PdfColors.orange50));
+    final labelColor = isNone ? PdfColors.green800
+        : (r.isTBIIndicator ? PdfColors.deepOrange800 : PdfColors.orange800);
+    final observationLabel = _anisocoriaObservationLabel(r.severity, l10n);
+    final largerLabel = r.largerPupil == 'right' ? 'OD'
+        : (r.largerPupil == 'left' ? 'OS' : null);
+
+    return pw.Container(
       margin: const pw.EdgeInsets.only(bottom: 12), padding: const pw.EdgeInsets.all(12),
-      decoration: pw.BoxDecoration(color: _anisocoriaResult!.isTBIIndicator ? PdfColors.red50 : PdfColors.orange50, border: pw.Border.all(color: _anisocoriaResult!.isTBIIndicator ? PdfColors.red : PdfColors.orange, width: 2)),
+      decoration: pw.BoxDecoration(color: bgColor, border: pw.Border.all(color: borderColor, width: 2)),
       child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-        pw.Text(_anisocoriaResult!.isTBIIndicator ? l10n.significantPupilSizeDiff : l10n.pupilSizeDifference, style: pw.TextStyle(fontWeight: pw.FontWeight.bold, color: _anisocoriaResult!.isTBIIndicator ? PdfColors.red : PdfColors.orange)),
+        pw.Row(mainAxisAlignment: pw.MainAxisAlignment.spaceBetween, children: [
+          pw.Text(l10n.pupilSizeDifference, style: pw.TextStyle(fontWeight: pw.FontWeight.bold, color: labelColor)),
+          pw.Container(
+            padding: const pw.EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+            color: borderColor,
+            child: pw.Text(observationLabel, style: const pw.TextStyle(color: PdfColors.white, fontSize: 9)),
+          ),
+        ]),
         pw.SizedBox(height: 8),
         pw.Row(mainAxisAlignment: pw.MainAxisAlignment.spaceAround, children: [
-          pw.Text('${l10n.od}: ${_anisocoriaResult!.rightPupilRatio.toStringAsFixed(1)}%'),
-          pw.Container(padding: const pw.EdgeInsets.symmetric(horizontal: 12, vertical: 4), color: _anisocoriaResult!.isTBIIndicator ? PdfColors.red : PdfColors.orange, child: pw.Text('${_anisocoriaResult!.absoluteDifference.toStringAsFixed(1)}% ${l10n.diff}', style: const pw.TextStyle(color: PdfColors.white))),
-          pw.Text('${l10n.os}: ${_anisocoriaResult!.leftPupilRatio.toStringAsFixed(1)}%')
+          pw.Text('${l10n.od}: ${r.rightPupilRatio.toStringAsFixed(1)}%',
+              style: pw.TextStyle(fontWeight: r.largerPupil == 'right' ? pw.FontWeight.bold : pw.FontWeight.normal)),
+          pw.Container(
+            padding: const pw.EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+            color: borderColor,
+            child: pw.Text('${r.absoluteDifference.toStringAsFixed(1)}% ${l10n.diff}', style: const pw.TextStyle(color: PdfColors.white)),
+          ),
+          pw.Text('${l10n.os}: ${r.leftPupilRatio.toStringAsFixed(1)}%',
+              style: pw.TextStyle(fontWeight: r.largerPupil == 'left' ? pw.FontWeight.bold : pw.FontWeight.normal)),
         ]),
-        pw.SizedBox(height: 6), pw.Text(_localizedAnisocoriaNote(_anisocoriaResult!, l10n), style: const pw.TextStyle(fontSize: 9))
-      ]));
+        if (largerLabel != null) ...[
+          pw.SizedBox(height: 4),
+          pw.Text('Larger: $largerLabel', style: pw.TextStyle(fontSize: 9, color: labelColor, fontWeight: pw.FontWeight.bold)),
+        ],
+        pw.SizedBox(height: 6),
+        pw.Text(_localizedAnisocoriaNote(r, l10n), style: const pw.TextStyle(fontSize: 9)),
+        if (r.isTBIIndicator) ...[
+          pw.SizedBox(height: 4),
+          pw.Text('* ${l10n.significantPupilSizeDiff}', style: pw.TextStyle(fontSize: 9, fontWeight: pw.FontWeight.bold, color: PdfColors.deepOrange800)),
+        ],
+      ]),
+    );
+  }
 
   pw.Widget _buildPdfIrisMetrics(AppLocalizations l10n) => pw.Container(
       margin: const pw.EdgeInsets.only(bottom: 12), padding: const pw.EdgeInsets.all(12),
@@ -3538,7 +3592,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
           pw.Text('${l10n.circularity}: ${r.circularityScore.toStringAsFixed(1)}%', style: const pw.TextStyle(fontSize: 10))
         ])),
         pw.Expanded(child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-          pw.Text('${l10n.decentralizationLabel} ${r.decentralization.toStringAsFixed(1)}%', style: const pw.TextStyle(fontSize: 10)),
+          pw.Text('${l10n.decentralizationLabel} ${r.decentralization.toStringAsFixed(1)}% @ ${r.decentralizationAngle.toStringAsFixed(0)}°', style: const pw.TextStyle(fontSize: 10)),
           pw.Text('${l10n.confidence}: ${(_displayConfidence(r, isRightEye: isRightEye) * 100).toStringAsFixed(0)}%', style: const pw.TextStyle(fontSize: 10))
         ]))
       ]),
@@ -3719,7 +3773,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
           padding: const pw.EdgeInsets.all(6),
           decoration: pw.BoxDecoration(color: PdfColors.deepOrange50, border: pw.Border.all(color: PdfColors.deepOrange)),
           child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-            pw.Text('${l10n.reportShiftDetectedTitle}: $eyeCode: ${_getLocalizedShiftLabel(anw.primaryShift!, l10n)} (${anw.primaryShift!.clockPosition})', style: pw.TextStyle(fontSize: 9, fontWeight: pw.FontWeight.bold, color: PdfColors.deepOrange800)),
+            pw.Text('${l10n.reportShiftDetectedTitle}: $eyeCode: ${_getLocalizedShiftLabel(anw.primaryShift!, l10n)} (${anw.primaryShift!.clockPosition}, ${anw.primaryShift!.deviationPercent.toStringAsFixed(1)}%)', style: pw.TextStyle(fontSize: 9, fontWeight: pw.FontWeight.bold, color: PdfColors.deepOrange800)),
             if (anw.primaryShift!.clinicalAssociation.isNotEmpty) ...[
               pw.SizedBox(height: 3),
               pw.Text(_getLocalizedShiftAssocPdf(anw.primaryShift!, isRightEye, l10n), style: pw.TextStyle(fontSize: 7, color: PdfColors.grey700, fontStyle: pw.FontStyle.italic)),

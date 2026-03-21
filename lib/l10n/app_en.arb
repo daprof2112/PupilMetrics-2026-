@@ -1917,5 +1917,12 @@
   "cameraErrorOccurred": "Camera error occurred",
   "connectingToUsbIriscope": "Connecting to USB iriscope...",
   "noCamerasDetectedMessage": "No cameras detected. Please ensure your USB camera is connected and recognized by your system.",
-  "failedToAccessCameras": "Failed to access cameras"
+  "failedToAccessCameras": "Failed to access cameras",
+  "notAnEyeImageTitle": "Not an Eye Image",
+  "notAnEyeImageBody": "The selected image does not appear to be an eye.\n\nPlease choose a clear iris/pupil photo and try again.",
+  "notAnEyeImageBodyCapture": "The captured image does not appear to be an eye.\n\nPlease position the iriscope directly over the eye and retake.",
+  "anisocoriaObservationSymmetrical": "Symmetrical",
+  "anisocoriaObservationSlight": "Slight variation",
+  "anisocoriaObservationModerate": "Moderate variation",
+  "anisocoriaObservationMarked": "Marked variation"
 }

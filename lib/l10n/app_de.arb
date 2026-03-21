@@ -1399,5 +1399,12 @@
   "cameraErrorOccurred": "Kamerafehler aufgetreten",
   "connectingToUsbIriscope": "Verbindung mit USB-Iriskop...",
   "noCamerasDetectedMessage": "Keine Kameras erkannt. Bitte stellen Sie sicher, dass Ihre USB-Kamera angeschlossen und vom System erkannt wird.",
-  "failedToAccessCameras": "Zugriff auf Kameras fehlgeschlagen"
+  "failedToAccessCameras": "Zugriff auf Kameras fehlgeschlagen",
+  "notAnEyeImageTitle": "Kein Augenbild",
+  "notAnEyeImageBody": "Das ausgew\u00e4hlte Bild scheint kein Auge zu sein.\n\nBitte w\u00e4hlen Sie ein klares Iris-/Pupillenfoto und versuchen Sie es erneut.",
+  "notAnEyeImageBodyCapture": "Das aufgenommene Bild scheint kein Auge zu sein.\n\nBitte positionieren Sie das Iriskop direkt \u00fcber dem Auge und nehmen Sie erneut auf.",
+  "anisocoriaObservationSymmetrical": "Symmetrisch",
+  "anisocoriaObservationSlight": "Geringf\u00fcgige Variation",
+  "anisocoriaObservationModerate": "M\u00e4\u00dfige Variation",
+  "anisocoriaObservationMarked": "Ausgepr\u00e4gte Variation"
 }

@@ -3395,4 +3395,27 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get failedToAccessCameras => '카메라 접근 실패';
+
+  @override
+  String get notAnEyeImageTitle => '눈 이미지가 아닙니다';
+
+  @override
+  String get notAnEyeImageBody =>
+      '선택한 이미지가 눈처럼 보이지 않습니다.\n\n홍채/동공의 선명한 사진을 선택하고 다시 시도하세요.';
+
+  @override
+  String get notAnEyeImageBodyCapture =>
+      '캡처된 이미지가 눈처럼 보이지 않습니다.\n\n아이리스코프를 눈 위에 직접 위치시키고 다시 촬영하세요.';
+
+  @override
+  String get anisocoriaObservationSymmetrical => '대칭';
+
+  @override
+  String get anisocoriaObservationSlight => '약간의 차이';
+
+  @override
+  String get anisocoriaObservationModerate => '중간 정도의 차이';
+
+  @override
+  String get anisocoriaObservationMarked => '현저한 차이';
 }

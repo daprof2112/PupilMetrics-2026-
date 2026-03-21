@@ -1470,5 +1470,12 @@
   "cameraErrorOccurred": "카메라 오류 발생",
   "connectingToUsbIriscope": "USB 홍채경 연결 중...",
   "noCamerasDetectedMessage": "카메라가 감지되지 않았습니다. USB 카메라가 연결되어 시스템에 인식되는지 확인하세요.",
-  "failedToAccessCameras": "카메라 접근 실패"
+  "failedToAccessCameras": "카메라 접근 실패",
+  "notAnEyeImageTitle": "\ub208 \uc774\ubbf8\uc9c0\uac00 \uc544\ub2d9\ub2c8\ub2e4",
+  "notAnEyeImageBody": "\uc120\ud0dd\ud55c \uc774\ubbf8\uc9c0\uac00 \ub208\ucc98\ub7fc \ubcf4\uc774\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4.\n\n\ud64d\ucc44/\ub3d9\uacf5\uc758 \uc120\uba85\ud55c \uc0ac\uc9c4\uc744 \uc120\ud0dd\ud558\uace0 \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uc138\uc694.",
+  "notAnEyeImageBodyCapture": "\ucea1\ucc98\ub41c \uc774\ubbf8\uc9c0\uac00 \ub208\ucc98\ub7fc \ubcf4\uc774\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4.\n\n\uc544\uc774\ub9ac\uc2a4\ucf54\ud504\ub97c \ub208 \uc704\uc5d0 \uc9c1\uc811 \uc704\uce58\uc2dc\ud0a4\uace0 \ub2e4\uc2dc \ucd2c\uc601\ud558\uc138\uc694.",
+  "anisocoriaObservationSymmetrical": "\ub300\uce6d",
+  "anisocoriaObservationSlight": "\uc57d\uac04\uc758 \ucc28\uc774",
+  "anisocoriaObservationModerate": "\uc911\uac04 \uc815\ub3c4\uc758 \ucc28\uc774",
+  "anisocoriaObservationMarked": "\ud604\uc800\ud55c \ucc28\uc774"
 }

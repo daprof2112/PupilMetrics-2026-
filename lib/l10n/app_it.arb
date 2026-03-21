@@ -1470,5 +1470,12 @@
   "cameraErrorOccurred": "Si è verificato un errore della fotocamera",
   "connectingToUsbIriscope": "Connessione all'iriscopio USB...",
   "noCamerasDetectedMessage": "Nessuna fotocamera rilevata. Assicurarsi che la fotocamera USB sia connessa e riconosciuta dal sistema.",
-  "failedToAccessCameras": "Impossibile accedere alle fotocamere"
+  "failedToAccessCameras": "Impossibile accedere alle fotocamere",
+  "notAnEyeImageTitle": "Non \u00e8 un'immagine dell'occhio",
+  "notAnEyeImageBody": "L'immagine selezionata non sembra essere un occhio.\n\nScegli una foto chiara dell'iride/pupilla e riprova.",
+  "notAnEyeImageBodyCapture": "L'immagine acquisita non sembra essere un occhio.\n\nPositiona l'iriscope direttamente sull'occhio e riprova.",
+  "anisocoriaObservationSymmetrical": "Simmetrico",
+  "anisocoriaObservationSlight": "Leggera variazione",
+  "anisocoriaObservationModerate": "Variazione moderata",
+  "anisocoriaObservationMarked": "Variazione marcata"
 }

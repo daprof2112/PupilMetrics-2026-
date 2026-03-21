@@ -6443,6 +6443,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Failed to access cameras'**
   String get failedToAccessCameras;
+
+  /// No description provided for @notAnEyeImageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Not an Eye Image'**
+  String get notAnEyeImageTitle;
+
+  /// No description provided for @notAnEyeImageBody.
+  ///
+  /// In en, this message translates to:
+  /// **'The selected image does not appear to be an eye.\n\nPlease choose a clear iris/pupil photo and try again.'**
+  String get notAnEyeImageBody;
+
+  /// No description provided for @notAnEyeImageBodyCapture.
+  ///
+  /// In en, this message translates to:
+  /// **'The captured image does not appear to be an eye.\n\nPlease position the iriscope directly over the eye and retake.'**
+  String get notAnEyeImageBodyCapture;
+
+  /// No description provided for @anisocoriaObservationSymmetrical.
+  ///
+  /// In en, this message translates to:
+  /// **'Symmetrical'**
+  String get anisocoriaObservationSymmetrical;
+
+  /// No description provided for @anisocoriaObservationSlight.
+  ///
+  /// In en, this message translates to:
+  /// **'Slight variation'**
+  String get anisocoriaObservationSlight;
+
+  /// No description provided for @anisocoriaObservationModerate.
+  ///
+  /// In en, this message translates to:
+  /// **'Moderate variation'**
+  String get anisocoriaObservationModerate;
+
+  /// No description provided for @anisocoriaObservationMarked.
+  ///
+  /// In en, this message translates to:
+  /// **'Marked variation'**
+  String get anisocoriaObservationMarked;
 }
 
 class _AppLocalizationsDelegate

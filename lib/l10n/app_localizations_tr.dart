@@ -3493,4 +3493,27 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get failedToAccessCameras => 'Kameralara erişilemedi';
+
+  @override
+  String get notAnEyeImageTitle => 'Göz Görüntüsü Değil';
+
+  @override
+  String get notAnEyeImageBody =>
+      'Seçilen görüntü bir göz gibi görünmüyor.\n\nLütfen iris/pupil\'in net bir fotoğrafını seçin ve tekrar deneyin.';
+
+  @override
+  String get notAnEyeImageBodyCapture =>
+      'Çekilen görüntü bir göz gibi görünmüyor.\n\nLütfen iriskop\'u doğrudan gözün üzerine konumlandırın ve yeniden çekin.';
+
+  @override
+  String get anisocoriaObservationSymmetrical => 'Simetrik';
+
+  @override
+  String get anisocoriaObservationSlight => 'Hafif farklılık';
+
+  @override
+  String get anisocoriaObservationModerate => 'Orta düzeyde farklılık';
+
+  @override
+  String get anisocoriaObservationMarked => 'Belirgin farklılık';
 }

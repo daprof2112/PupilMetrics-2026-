@@ -856,22 +856,20 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
       v.checkResults['hasCircle'] == true;
 
   void _showNotAnEyeDialog(BuildContext context, String eyeLabel) {
+    final l10n = AppLocalizations.of(context)!;
     showDialog<void>(
       context: context,
       builder: (_) => AlertDialog(
-        title: const Row(children: [
-          Icon(Icons.warning_amber_rounded, color: Colors.orange),
-          SizedBox(width: 8),
-          Text('Not an Eye Image'),
+        title: Row(children: [
+          const Icon(Icons.warning_amber_rounded, color: Colors.orange),
+          const SizedBox(width: 8),
+          Text(l10n.notAnEyeImageTitle),
         ]),
-        content: Text(
-          'The selected $eyeLabel eye image does not appear to be an eye.\n\n'
-          'Please choose a clear iris/pupil photo and try again.',
-        ),
+        content: Text(l10n.notAnEyeImageBody),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('OK'),
+            child: Text(l10n.ok),
           ),
         ],
       ),

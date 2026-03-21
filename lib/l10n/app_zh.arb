@@ -1917,5 +1917,12 @@
   "cameraErrorOccurred": "发生摄像头错误",
   "connectingToUsbIriscope": "正在连接USB虹膜镜...",
   "noCamerasDetectedMessage": "未检测到摄像头。请确保USB摄像头已连接并被系统识别。",
-  "failedToAccessCameras": "访问摄像头失败"
+  "failedToAccessCameras": "访问摄像头失败",
+  "notAnEyeImageTitle": "\u4e0d\u662f\u773c\u775b\u56fe\u50cf",
+  "notAnEyeImageBody": "\u6240\u9009\u56fe\u50cf\u4f3c\u4e4e\u4e0d\u662f\u773c\u775b\u3002\n\n\u8bf7\u9009\u62e9\u6e05\u6670\u7684\u8679\u819c/\u77b3\u5b54\u7167\u7247\uff0c\u7136\u540e\u91cd\u8bd5\u3002",
+  "notAnEyeImageBodyCapture": "\u62cd\u6444\u7684\u56fe\u50cf\u4f3c\u4e4e\u4e0d\u662f\u773c\u775b\u3002\n\n\u8bf7\u5c06\u8679\u819c\u955c\u76f4\u63a5\u653e\u5728\u773c\u775b\u4e0a\u65b9\uff0c\u7136\u540e\u91cd\u65b0\u62cd\u6444\u3002",
+  "anisocoriaObservationSymmetrical": "\u5bf9\u79f0",
+  "anisocoriaObservationSlight": "\u8f7b\u5fae\u5dee\u5f02",
+  "anisocoriaObservationModerate": "\u4e2d\u5ea6\u5dee\u5f02",
+  "anisocoriaObservationMarked": "\u660e\u663e\u5dee\u5f02"
 }

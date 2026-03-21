@@ -3463,4 +3463,27 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get failedToAccessCameras => 'فشل الوصول إلى الكاميرات';
+
+  @override
+  String get notAnEyeImageTitle => 'ليست صورة عين';
+
+  @override
+  String get notAnEyeImageBody =>
+      'الصورة المختارة لا تبدو عيناً.\n\nالرجاء اختيار صورة واضحة للقزحية/الحدقة والمحاولة مجدداً.';
+
+  @override
+  String get notAnEyeImageBodyCapture =>
+      'الصورة الملتقطة لا تبدو عيناً.\n\nيرجى وضع الإيريسكوب مباشرة فوق العين والتقاط الصورة مجدداً.';
+
+  @override
+  String get anisocoriaObservationSymmetrical => 'متماثل';
+
+  @override
+  String get anisocoriaObservationSlight => 'اختلاف طفيف';
+
+  @override
+  String get anisocoriaObservationModerate => 'اختلاف متوسط';
+
+  @override
+  String get anisocoriaObservationMarked => 'اختلاف واضح';
 }

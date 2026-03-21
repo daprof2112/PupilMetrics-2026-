@@ -1429,5 +1429,12 @@
   "cameraErrorOccurred": "カメラエラーが発生しました",
   "connectingToUsbIriscope": "USB虹彩カメラに接続中...",
   "noCamerasDetectedMessage": "カメラが検出されません。USBカメラが接続されシステムに認識されていることを確認してください。",
-  "failedToAccessCameras": "カメラへのアクセスに失敗しました"
+  "failedToAccessCameras": "カメラへのアクセスに失敗しました",
+  "notAnEyeImageTitle": "\u76ee\u306e\u753b\u50cf\u3067\u306f\u3042\u308a\u307e\u305b\u3093",
+  "notAnEyeImageBody": "\u9078\u629e\u3057\u305f\u753b\u50cf\u304c\u76ee\u306e\u3088\u3046\u306b\u898b\u3048\u307e\u305b\u3093\u3002\n\n\u8679\u5f69/\u77b3\u5b54\u306e\u9bae\u660e\u306a\u5199\u771f\u3092\u9078\u629e\u3057\u3066\u3001\u3082\u3046\u4e00\u5ea6\u304a\u8a66\u3057\u304f\u3060\u3055\u3044\u3002",
+  "notAnEyeImageBodyCapture": "\u64ae\u5f71\u3057\u305f\u753b\u50cf\u304c\u76ee\u306e\u3088\u3046\u306b\u898b\u3048\u307e\u305b\u3093\u3002\n\n\u30a2\u30a4\u30ea\u30b9\u30b3\u30fc\u30d7\u3092\u76ee\u306e\u4e0a\u306b\u76f4\u63a5\u7f6e\u3044\u3066\u3001\u3082\u3046\u4e00\u5ea6\u64ae\u5f71\u3057\u3066\u304f\u3060\u3055\u3044\u3002",
+  "anisocoriaObservationSymmetrical": "\u5bfe\u79f0",
+  "anisocoriaObservationSlight": "\u308f\u305a\u304b\u306a\u5dee",
+  "anisocoriaObservationModerate": "\u4e2d\u7a0b\u5ea6\u306e\u5dee",
+  "anisocoriaObservationMarked": "\u9855\u8457\u306a\u5dee"
 }

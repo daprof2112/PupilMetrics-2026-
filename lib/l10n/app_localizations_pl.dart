@@ -3498,4 +3498,27 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get failedToAccessCameras => 'Nie udało się uzyskać dostępu do kamer';
+
+  @override
+  String get notAnEyeImageTitle => 'To nie jest obraz oka';
+
+  @override
+  String get notAnEyeImageBody =>
+      'Wybrane zdjęcie nie wygląda jak oko.\n\nProszę wybrać wyraźne zdjęcie tęczówki/źrenicy i spróbować ponownie.';
+
+  @override
+  String get notAnEyeImageBodyCapture =>
+      'Przechwycone zdjęcie nie wygląda jak oko.\n\nProszę umieścić iriskop bezpośrednio nad okiem i wykonać zdjęcie ponownie.';
+
+  @override
+  String get anisocoriaObservationSymmetrical => 'Symetryczny';
+
+  @override
+  String get anisocoriaObservationSlight => 'Nieznaczna różnica';
+
+  @override
+  String get anisocoriaObservationModerate => 'Umiarkowana różnica';
+
+  @override
+  String get anisocoriaObservationMarked => 'Wyraźna różnica';
 }

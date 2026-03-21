@@ -1428,5 +1428,12 @@
   "cameraErrorOccurred": "Une erreur de caméra s'est produite",
   "connectingToUsbIriscope": "Connexion au irisscope USB...",
   "noCamerasDetectedMessage": "Aucune caméra détectée. Assurez-vous que votre caméra USB est connectée et reconnue par votre système.",
-  "failedToAccessCameras": "Échec de l'accès aux caméras"
+  "failedToAccessCameras": "Échec de l'accès aux caméras",
+  "notAnEyeImageTitle": "Pas une image d'\u0153il",
+  "notAnEyeImageBody": "L'image s\u00e9lectionn\u00e9e ne semble pas \u00eatre un \u0153il.\n\nVeuillez choisir une photo claire de l'iris/pupille et r\u00e9essayer.",
+  "notAnEyeImageBodyCapture": "L'image captur\u00e9e ne semble pas \u00eatre un \u0153il.\n\nVeuillez positionner l'iriscope directement sur l'\u0153il et reprendre.",
+  "anisocoriaObservationSymmetrical": "Sym\u00e9trique",
+  "anisocoriaObservationSlight": "L\u00e9g\u00e8re variation",
+  "anisocoriaObservationModerate": "Variation mod\u00e9r\u00e9e",
+  "anisocoriaObservationMarked": "Variation marqu\u00e9e"
 }

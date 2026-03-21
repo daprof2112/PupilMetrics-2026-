@@ -3506,6 +3506,29 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get failedToAccessCameras => 'Falha ao acessar câmeras';
+
+  @override
+  String get notAnEyeImageTitle => 'Não é uma imagem do olho';
+
+  @override
+  String get notAnEyeImageBody =>
+      'A imagem selecionada não parece ser um olho.\n\nPor favor, escolha uma foto clara da íris/pupila e tente novamente.';
+
+  @override
+  String get notAnEyeImageBodyCapture =>
+      'A imagem capturada não parece ser um olho.\n\nPor favor, posicione o iriscópio diretamente sobre o olho e recapture.';
+
+  @override
+  String get anisocoriaObservationSymmetrical => 'Simétrico';
+
+  @override
+  String get anisocoriaObservationSlight => 'Variação leve';
+
+  @override
+  String get anisocoriaObservationModerate => 'Variação moderada';
+
+  @override
+  String get anisocoriaObservationMarked => 'Variação acentuada';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -6949,4 +6972,27 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get failedToAccessCameras => 'Falha ao acessar câmeras';
+
+  @override
+  String get notAnEyeImageTitle => 'Não é uma imagem do olho';
+
+  @override
+  String get notAnEyeImageBody =>
+      'A imagem selecionada não parece ser um olho.\n\nPor favor, escolha uma foto clara da íris/pupila e tente novamente.';
+
+  @override
+  String get notAnEyeImageBodyCapture =>
+      'A imagem capturada não parece ser um olho.\n\nPor favor, posicione o iriscópio diretamente sobre o olho e recapture.';
+
+  @override
+  String get anisocoriaObservationSymmetrical => 'Simétrico';
+
+  @override
+  String get anisocoriaObservationSlight => 'Variação leve';
+
+  @override
+  String get anisocoriaObservationModerate => 'Variação moderada';
+
+  @override
+  String get anisocoriaObservationMarked => 'Variação acentuada';
 }

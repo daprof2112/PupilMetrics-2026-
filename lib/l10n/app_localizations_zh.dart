@@ -3349,4 +3349,26 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get failedToAccessCameras => '访问摄像头失败';
+
+  @override
+  String get notAnEyeImageTitle => '不是眼睛图像';
+
+  @override
+  String get notAnEyeImageBody => '所选图像似乎不是眼睛。\n\n请选择清晰的虹膜/瞳孔照片，然后重试。';
+
+  @override
+  String get notAnEyeImageBodyCapture =>
+      '拍摄的图像似乎不是眼睛。\n\n请将虹膜镜直接放在眼睛上方，然后重新拍摄。';
+
+  @override
+  String get anisocoriaObservationSymmetrical => '对称';
+
+  @override
+  String get anisocoriaObservationSlight => '轻微差异';
+
+  @override
+  String get anisocoriaObservationModerate => '中度差异';
+
+  @override
+  String get anisocoriaObservationMarked => '明显差异';
 }

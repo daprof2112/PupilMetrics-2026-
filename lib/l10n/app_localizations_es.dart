@@ -3511,4 +3511,27 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get failedToAccessCameras => 'Error al acceder a las cámaras';
+
+  @override
+  String get notAnEyeImageTitle => 'No es una imagen de ojo';
+
+  @override
+  String get notAnEyeImageBody =>
+      'La imagen seleccionada no parece ser un ojo.\n\nPor favor, elige una foto clara del iris/pupila e inténtalo de nuevo.';
+
+  @override
+  String get notAnEyeImageBodyCapture =>
+      'La imagen capturada no parece ser un ojo.\n\nPor favor, posiciona el iriscopio directamente sobre el ojo y vuelve a capturar.';
+
+  @override
+  String get anisocoriaObservationSymmetrical => 'Simétrico';
+
+  @override
+  String get anisocoriaObservationSlight => 'Variación leve';
+
+  @override
+  String get anisocoriaObservationModerate => 'Variación moderada';
+
+  @override
+  String get anisocoriaObservationMarked => 'Variación marcada';
 }

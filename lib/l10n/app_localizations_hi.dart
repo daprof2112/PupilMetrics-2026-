@@ -3477,4 +3477,27 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get failedToAccessCameras => 'कैमरों तक पहुंचने में विफल';
+
+  @override
+  String get notAnEyeImageTitle => 'आँख की छवि नहीं है';
+
+  @override
+  String get notAnEyeImageBody =>
+      'चयनित छवि आँख नहीं लगती है।\n\nकृपया आईरिस/पुतली की स्पष्ट फोटो चुनें और पुनः प्रयास करें।';
+
+  @override
+  String get notAnEyeImageBodyCapture =>
+      'कैप्चर की गई छवि आँख नहीं लगती है।\n\nकृपया आइरिसस्कोप को सीधे आँख के ऊपर रखें और दोबारा कैप्चर करें।';
+
+  @override
+  String get anisocoriaObservationSymmetrical => 'सममित';
+
+  @override
+  String get anisocoriaObservationSlight => 'हल्का अंतर';
+
+  @override
+  String get anisocoriaObservationModerate => 'मध्यम अंतर';
+
+  @override
+  String get anisocoriaObservationMarked => 'स्पष्ट अंतर';
 }

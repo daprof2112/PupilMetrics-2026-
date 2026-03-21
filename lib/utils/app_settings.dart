@@ -49,7 +49,7 @@ class AppSettings {
   static const String _defaultZoomKey = 'cameraZoom';
 
   static const AppSettingsData defaults = AppSettingsData(
-    autoSavePdf: true,
+    autoSavePdf: false,
     includeImagesInPdf: true,
     showMlComparison: true,
     showZoneOverlay: true,
