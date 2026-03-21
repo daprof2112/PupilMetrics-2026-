@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Build this project in Visual Studio (open the .sln) or from the command line:
+
+    msbuild dinolite_bridge.csproj /p:Configuration=Release /p:Platform=x86
+
+  IMPORTANT: Must stay x86 (32-bit) because DNVideoX.ocx is a 32-bit COM control.
+
+  Before building, copy these files from the DNVideoX SDK into this folder:
+    - AxInterop.DNVideoXLib.dll   (from Samples/Sample_C#/DLL/Release/)
+    - Interop.DNVideoXLib.dll     (from Samples/Sample_C#/DLL/Release/)
+-->
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DinoLiteBridge</RootNamespace>
+    <AssemblyName>dinolite_bridge</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <!-- Force x86 in both configurations so the 32-bit OCX can be loaded -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <!-- Pre-generated COM interop assemblies from DNVideoX SDK.
+         EmbedInteropTypes=False + Private=True forces VS to copy these DLLs
+         to the output folder instead of embedding them (which would break
+         the runtime load of the 32-bit COM control). -->
+    <Reference Include="AxInterop.DNVideoXLib">
+      <HintPath>AxInterop.DNVideoXLib.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.DNVideoXLib">
+      <HintPath>Interop.DNVideoXLib.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BridgeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HidButtonWatcher.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <!-- Copy DNVideoX runtime DLLs to output alongside the exe -->
+  <ItemGroup>
+    <Content Include="ClientPropertyPageLIB.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="d3dx9_31.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

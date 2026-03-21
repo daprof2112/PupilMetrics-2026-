@@ -19,6 +19,7 @@ import 'package:ai_eye_capture/presentation/camera_screen/secure_uvc_camera_scre
 import 'package:ai_eye_capture/models/patient_info.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:ai_eye_capture/utils/pupil_analyzer_fixed.dart';
 
 class TakeLeftEyePhotoScreen extends StatefulWidget {
   final CameraDescription? camera;
@@ -671,6 +672,33 @@ Padding(
     );
   }
 
+  bool _isEyeImage(EyeValidationResult v) =>
+      v.checkResults['hasDarkCenter'] == true &&
+      v.checkResults['hasCircle'] == true;
+
+  void _showNotAnEyeDialog(BuildContext context) {
+    showDialog<void>(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: const Row(children: [
+          Icon(Icons.warning_amber_rounded, color: Colors.orange),
+          SizedBox(width: 8),
+          Text('Not an Eye Image'),
+        ]),
+        content: const Text(
+          'The selected image does not appear to be an eye.\n\n'
+          'Please choose a clear iris/pupil photo and try again.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
+  }
+
   // ========== PICK FROM GALLERY (Desktop) ==========
   Future<void> _pickFromGallery(BuildContext context, {required bool isRightEye}) async {
     final picker = ImagePicker();
@@ -687,6 +715,17 @@ Padding(
       final savedPath = '${tempDir.path}/gallery_${eyeLabel}_$timestamp.jpg';
 
       await File(image.path).copy(savedPath);
+
+      try {
+        final bytes = await File(savedPath).readAsBytes();
+        final validation = await EyeValidator().validateBytes(bytes);
+        if (validation.checkResults.isNotEmpty && !_isEyeImage(validation)) {
+          if (mounted) _showNotAnEyeDialog(context);
+          return;
+        }
+      } catch (_) {
+        // If validation throws (unsupported format etc.), allow the import.
+      }
 
       if (isRightEye) {
         setState(() {

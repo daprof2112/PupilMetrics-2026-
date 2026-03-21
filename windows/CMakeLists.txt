@@ -106,3 +106,22 @@ install(DIRECTORY "${PROJECT_BUILD_DIR}/${FLUTTER_ASSET_DIR_NAME}"
 install(FILES "${AOT_LIBRARY}" DESTINATION "${INSTALL_BUNDLE_DATA_DIR}"
   CONFIGURATIONS Profile;Release
   COMPONENT Runtime)
+
+# === Dino-Lite MicroTouch bridge ===
+# The 32-bit C# bridge exe must be pre-built from windows/dinolite_bridge/
+# before running CMake install.  Open dinolite_bridge.sln in Visual Studio
+# and build Release|x86, then run `flutter build windows` as normal.
+set(DINOLITE_BRIDGE_SRC "${CMAKE_CURRENT_SOURCE_DIR}/dinolite_bridge/bin/Release")
+if(EXISTS "${DINOLITE_BRIDGE_SRC}/dinolite_bridge.exe")
+  install(DIRECTORY "${DINOLITE_BRIDGE_SRC}/"
+    DESTINATION "${CMAKE_INSTALL_PREFIX}/dinolite_bridge"
+    COMPONENT Runtime
+    FILES_MATCHING
+      PATTERN "*.exe"
+      PATTERN "*.dll"
+  )
+  message(STATUS "Dino-Lite bridge: will install from ${DINOLITE_BRIDGE_SRC}")
+else()
+  message(STATUS "Dino-Lite bridge: NOT found at ${DINOLITE_BRIDGE_SRC} -- skipping")
+  message(STATUS "  Build windows/dinolite_bridge/dinolite_bridge.sln (Release|x86) to enable MicroTouch support.")
+endif()

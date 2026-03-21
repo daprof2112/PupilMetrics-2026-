@@ -17,6 +17,7 @@ import 'package:ai_eye_capture/presentation/scan_history_screen.dart';
 import 'package:ai_eye_capture/l10n/app_localizations.dart';
 import 'package:ai_eye_capture/utils/license_manager.dart';
 import 'package:ai_eye_capture/presentation/license_dialog.dart';
+import 'package:ai_eye_capture/widgets/windows_title_bar.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -640,6 +641,18 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       backgroundColor: const Color(0xFF0A0E21),
+      appBar: _isDesktop
+          ? null
+          : AppBar(
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              actions: [
+                IconButton(
+                  icon: const Icon(Icons.language, color: Color(0xFF00D9FF)),
+                  onPressed: () => Get.dialog(const LanguageDialog()),
+                ),
+              ],
+            ),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(

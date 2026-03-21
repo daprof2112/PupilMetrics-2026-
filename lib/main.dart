@@ -24,6 +24,7 @@ import 'package:ai_eye_capture/utils/purchase_links.dart';
 // License system (desktop only)
 import 'package:ai_eye_capture/utils/license_manager.dart';
 import 'package:ai_eye_capture/presentation/license_dialog.dart';
+import 'package:ai_eye_capture/services/dinolite_service.dart';
 
 // Database support (DESKTOP)
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
@@ -195,14 +196,28 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> with WindowListener {
   bool _licenseChecked = false;
   bool _showLicenseBlocker = false;
 
   @override
   void initState() {
     super.initState();
+    if (isDesktopPlatform) windowManager.addListener(this);
     _checkDesktopLicense();
+  }
+
+  @override
+  void dispose() {
+    if (isDesktopPlatform) windowManager.removeListener(this);
+    super.dispose();
+  }
+
+  @override
+  void onWindowClose() {
+    // Best-effort bridge cleanup on window close.
+    // Stale bridges are also killed by taskkill at the next app start.
+    globalDinoService?.stop();
   }
 
   Future<void> _checkDesktopLicense() async {
@@ -565,6 +580,12 @@ class _LicenseBlockerScreenContent extends StatelessWidget {
 // ============================================================================
 String? leftEyePic;
 String? rightEyePic;
+
+// Singleton bridge service — kept alive across screen navigations so the
+// camera doesn't need to reconnect each time the user switches eyes.
+// Only initialised on Windows; null on other platforms.
+final DinoLiteService? globalDinoService =
+    Platform.isWindows ? DinoLiteService() : null;
 
 PatientInfo? globalPatientInfo;
 

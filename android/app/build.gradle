@@ -54,13 +54,25 @@ android {
         applicationId "com.cnri.pupil.metrics.neuro"
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion 36
-        versionCode 18  // ← Bump this for new release
-        versionName "18.1"
+        versionCode 20  // ← Bump this for new release
+        versionName "20.1"
     }
 
-    packagingOptions {  // ← ADD THIS BLOCK
+    packagingOptions {
         jniLibs {
-            useLegacyPackaging = true
+            useLegacyPackaging = false  // Required for 16 KB page-aligned native libs (Android 15+)
+            // flutter_uvc_camera is Windows-only in this app (Dino-Lite bridge).
+            // UVCCameraController is never called on Android at runtime, but the plugin
+            // is transitively linked via dead-code imports. Exclude its pre-NDK27 .so files
+            // so they don't trigger the Play Store 16 KB alignment warning.
+            excludes += [
+                '**/libUVCCamera.so',
+                '**/libUACAudio.so',
+                '**/libjpeg-turbo1500.so',
+                '**/libnativelib.so',
+                '**/libusb100.so',
+                '**/libuvc.so',
+            ]
         }
     }
 

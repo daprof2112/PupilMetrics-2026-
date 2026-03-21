@@ -162,7 +162,8 @@ class _TakeRightEyePhotoScreenState extends State<TakeRightEyePhotoScreen> {
   }
 
   Widget _buildCapturedScreen(BuildContext context, AppLocalizations l10n) {
-    return Column(
+    return SingleChildScrollView(
+      child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -269,7 +270,9 @@ class _TakeRightEyePhotoScreenState extends State<TakeRightEyePhotoScreen> {
         ),
         const SizedBox(height: 8),
         Text(l10n.step1of2, style: TextStyle(color: Colors.grey.shade600, fontSize: 12)),
+        const SizedBox(height: 16),
       ],
+      ),
     );
   }
 

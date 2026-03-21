@@ -104,12 +104,12 @@ class LicenseManager {
   // Set to your server URL to enable Phase 3 online activation.
   // Example: 'https://licenses.yourserver.com'
   // Keep 'offline' to run fully offline (Phase 1 + Phase 2 only).
-  static const String _activationServer = 'offline';
+  static const String _activationServer = 'https://licenses.cnri.edu';
 
   // Shared HMAC secret between app and license server.
   // Must match PM_API_SECRET in server/.env.
   // Only used when _activationServer != 'offline'.
-  static const String _apiSecret = 'change-me-to-match-PM_API_SECRET-on-your-server';
+  static const String _apiSecret = 'bc46547cf7af806a86de2a46149474c90979f50c5db812e14ae1a577e0ca1f04';
 
   static const int _trialDays = 14;
   static const int _offlineGraceDays = 7;

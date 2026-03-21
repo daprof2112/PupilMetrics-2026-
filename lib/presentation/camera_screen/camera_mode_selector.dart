@@ -17,6 +17,7 @@ import 'package:ai_eye_capture/presentation/video_mode/video_capture_screen.dart
 import 'package:ai_eye_capture/presentation/camera_screen/uvc_camera_screen.dart';
 import 'package:ai_eye_capture/main.dart';
 import 'package:ai_eye_capture/l10n/app_localizations.dart';
+import 'package:ai_eye_capture/utils/pupil_analyzer_fixed.dart';
 
 class CameraModeSelectorPage extends StatefulWidget {
   final dynamic camera;
@@ -850,6 +851,33 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
     );
   }
 
+  bool _isEyeImage(EyeValidationResult v) =>
+      v.checkResults['hasDarkCenter'] == true &&
+      v.checkResults['hasCircle'] == true;
+
+  void _showNotAnEyeDialog(BuildContext context, String eyeLabel) {
+    showDialog<void>(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: const Row(children: [
+          Icon(Icons.warning_amber_rounded, color: Colors.orange),
+          SizedBox(width: 8),
+          Text('Not an Eye Image'),
+        ]),
+        content: Text(
+          'The selected $eyeLabel eye image does not appear to be an eye.\n\n'
+          'Please choose a clear iris/pupil photo and try again.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
+  }
+
   Future<void> _loadBothEyesFromGallery(BuildContext context) async {
     final l10n = AppLocalizations.of(context)!;
     final scaffoldMessenger = ScaffoldMessenger.of(context);
@@ -867,8 +895,16 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
         return;
       }
 
+      final rightBytes = await rightImage.readAsBytes();
+      try {
+        final rightValidation = await EyeValidator().validateBytes(rightBytes);
+        if (rightValidation.checkResults.isNotEmpty && !_isEyeImage(rightValidation)) {
+          if (context.mounted) _showNotAnEyeDialog(context, 'right');
+          return;
+        }
+      } catch (_) {}
       final rightFile = File('${galleryDir.path}/gallery_right_$timestamp.jpg');
-      await rightFile.writeAsBytes(await rightImage.readAsBytes());
+      await rightFile.writeAsBytes(rightBytes);
 
       scaffoldMessenger.showSnackBar(SnackBar(content: Text(l10n.rightEyeSaved), backgroundColor: Colors.blue, duration: const Duration(seconds: 2)));
       await Future.delayed(const Duration(milliseconds: 500));
@@ -879,8 +915,16 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
         return;
       }
 
+      final leftBytes = await leftImage.readAsBytes();
+      try {
+        final leftValidation = await EyeValidator().validateBytes(leftBytes);
+        if (leftValidation.checkResults.isNotEmpty && !_isEyeImage(leftValidation)) {
+          if (context.mounted) _showNotAnEyeDialog(context, 'left');
+          return;
+        }
+      } catch (_) {}
       final leftFile = File('${galleryDir.path}/gallery_left_$timestamp.jpg');
-      await leftFile.writeAsBytes(await leftImage.readAsBytes());
+      await leftFile.writeAsBytes(leftBytes);
 
       debugPrint('📁 Gallery images saved to: ${galleryDir.path}');
 
@@ -898,11 +942,19 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
       final XFile? image = await picker.pickImage(source: ImageSource.gallery, imageQuality: 100);
 
       if (image != null) {
+        final imageBytes = await image.readAsBytes();
+        try {
+          final validation = await EyeValidator().validateBytes(imageBytes);
+          if (validation.checkResults.isNotEmpty && !_isEyeImage(validation)) {
+            if (context.mounted) _showNotAnEyeDialog(context, isLeftEye ? 'left' : 'right');
+            return;
+          }
+        } catch (_) {}
         final galleryDir = await _getGalleryImagesDirectory();
         final timestamp = DateTime.now().millisecondsSinceEpoch;
         final eyeLabel = isLeftEye ? 'left' : 'right';
         final savedFile = File('${galleryDir.path}/gallery_${eyeLabel}_$timestamp.jpg');
-        await savedFile.writeAsBytes(await image.readAsBytes());
+        await savedFile.writeAsBytes(imageBytes);
 
         debugPrint('📁 Gallery image saved to: ${savedFile.path}');
 

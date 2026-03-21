@@ -44,3 +44,6 @@ server_php/logs/
 .env
 .env.*
 !.env.example
+
+# ML training environment and datasets -- large, not for version control
+bexel_envi/
