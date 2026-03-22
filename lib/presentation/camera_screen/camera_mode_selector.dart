@@ -869,7 +869,7 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: Text(l10n.ok),
+            child: Text(l10n.done),
           ),
         ],
       ),
