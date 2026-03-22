@@ -8,6 +8,7 @@ class AppSettingsData {
     required this.showZoneOverlay,
     required this.preferredCamera,
     required this.defaultZoom,
+    required this.clinicName,
   });
 
   final bool autoSavePdf;
@@ -16,6 +17,9 @@ class AppSettingsData {
   final bool showZoneOverlay;
   final String preferredCamera;
   final double defaultZoom;
+  /// Clinic, practitioner, or university name shown in report headers.
+  /// Empty string means no practice name set.
+  final String clinicName;
 
   AppSettingsData copyWith({
     bool? autoSavePdf,
@@ -24,6 +28,7 @@ class AppSettingsData {
     bool? showZoneOverlay,
     String? preferredCamera,
     double? defaultZoom,
+    String? clinicName,
   }) {
     return AppSettingsData(
       autoSavePdf: autoSavePdf ?? this.autoSavePdf,
@@ -32,6 +37,7 @@ class AppSettingsData {
       showZoneOverlay: showZoneOverlay ?? this.showZoneOverlay,
       preferredCamera: preferredCamera ?? this.preferredCamera,
       defaultZoom: defaultZoom ?? this.defaultZoom,
+      clinicName: clinicName ?? this.clinicName,
     );
   }
 }
@@ -47,6 +53,7 @@ class AppSettings {
   static const String _showZoneOverlayKey = 'settings_show_zone_overlay';
   static const String _preferredCameraKey = 'settings_preferred_camera';
   static const String _defaultZoomKey = 'cameraZoom';
+  static const String _clinicNameKey = 'settings_clinic_name';
 
   static const AppSettingsData defaults = AppSettingsData(
     autoSavePdf: false,
@@ -55,6 +62,7 @@ class AppSettings {
     showZoneOverlay: true,
     preferredCamera: cameraDinoLite,
     defaultZoom: 0.0,
+    clinicName: '',
   );
 
   static Future<AppSettingsData> load() async {
@@ -71,6 +79,7 @@ class AppSettings {
       showZoneOverlay: prefs.getBool(_showZoneOverlayKey) ?? defaults.showZoneOverlay,
       preferredCamera: prefs.getString(_preferredCameraKey) ?? defaults.preferredCamera,
       defaultZoom: normalizedZoom,
+      clinicName: prefs.getString(_clinicNameKey) ?? defaults.clinicName,
     );
   }
 
@@ -91,5 +100,6 @@ class AppSettings {
     await prefs.setBool(_showZoneOverlayKey, settings.showZoneOverlay);
     await prefs.setString(_preferredCameraKey, settings.preferredCamera);
     await prefs.setDouble(_defaultZoomKey, settings.defaultZoom);
+    await prefs.setString(_clinicNameKey, settings.clinicName);
   }
 }

@@ -568,6 +568,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
   bool _showZoneOverlay = AppSettings.defaults.showZoneOverlay;
   String _preferredCamera = AppSettings.defaults.preferredCamera;
   double _defaultZoom = AppSettings.defaults.defaultZoom;
+  String _clinicName = AppSettings.defaults.clinicName;
 
   @override
   void initState() {
@@ -586,6 +587,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
       _showZoneOverlay = settings.showZoneOverlay;
       _preferredCamera = settings.preferredCamera;
       _defaultZoom = settings.defaultZoom;
+      _clinicName = settings.clinicName;
     });
   }
 
@@ -598,6 +600,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
         showZoneOverlay: _showZoneOverlay,
         preferredCamera: _preferredCamera,
         defaultZoom: _defaultZoom,
+        clinicName: _clinicName,
       ),
     );
   }

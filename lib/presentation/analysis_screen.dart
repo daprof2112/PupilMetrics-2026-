@@ -66,6 +66,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
   bool _showZoneOverlay = AppSettings.defaults.showZoneOverlay;
   bool _includeImagesInPdf = AppSettings.defaults.includeImagesInPdf;
   bool _autoSavePdf = AppSettings.defaults.autoSavePdf;
+  String _clinicName = '';
   bool _isAnalyzing = true;
   String _statusMessage = '';
   bool get _isDesktop => Platform.isWindows || Platform.isMacOS || Platform.isLinux;
@@ -118,6 +119,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
       _showZoneOverlay = settings.showZoneOverlay;
       _includeImagesInPdf = settings.includeImagesInPdf;
       _autoSavePdf = settings.autoSavePdf;
+      _clinicName = settings.clinicName;
     });
   }
 
@@ -2980,9 +2982,16 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
   Directory baseDir;
 
   if (Platform.isAndroid) {
-    // Android: Use external storage
-    final extDir = await getExternalStorageDirectory();
-    baseDir = extDir ?? await getApplicationDocumentsDirectory();
+    // Android: Save to public Downloads folder so the file is easy to find.
+    // Falls back to app-private external storage if Downloads isn't accessible
+    // (e.g. Android 11+ scoped storage without MANAGE_EXTERNAL_STORAGE).
+    try {
+      final downloadsDir = await getDownloadsDirectory();
+      baseDir = downloadsDir ?? await getApplicationDocumentsDirectory();
+    } catch (_) {
+      final extDir = await getExternalStorageDirectory();
+      baseDir = extDir ?? await getApplicationDocumentsDirectory();
+    }
   } else if (Platform.isWindows || Platform.isMacOS || Platform.isLinux) {
     // Desktop: Use Documents folder
     baseDir = await getApplicationDocumentsDirectory();
@@ -3044,10 +3053,8 @@ Future<void> _saveTxtReport() async {
     final loc = PupilAnalyzerLocalizations(l10n);
     final b = StringBuffer();
     b.writeln('=' * 60);
-    b.writeln('  ${l10n.analysisReportTitle} v5.3.0 - ${l10n.reportResearchVersion}');
-    b.writeln('=' * 60);
-    b.writeln('\n${l10n.reportDisclaimerTitle}');
-    b.writeln(l10n.reportDisclaimerBody);
+    b.writeln('  ${l10n.analysisReportTitle}');
+    if (_clinicName.isNotEmpty) b.writeln('  $_clinicName');
     b.writeln('=' * 60);
     b.writeln('\nDate: ${DateFormat('MMMM dd, yyyy HH:mm').format(DateTime.now())}');
     b.writeln('\n--- ${l10n.reportPersonInformationTitle.toUpperCase()} ---');
@@ -3298,9 +3305,8 @@ Future<void> _saveJsonReport() async {
     }
 
     return const JsonEncoder.withIndent('  ').convert({
-      'version': '5.3.0-research',
-      'disclaimer': 'Research/educational tool only. Not for clinical use.',
       'date': DateTime.now().toIso8601String(),
+      if (_clinicName.isNotEmpty) 'practice': _clinicName,
       'person': widget.patientInfo.toJson(),
       'ageNorm': _ageNormResult != null ? {
         'ageGroup': _ageNormResult!.ageGroup,
@@ -3382,24 +3388,21 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
             ],
           ),
           pw.Divider(color: PdfColors.blue900, thickness: 2),
-          pw.Container(
-            margin: const pw.EdgeInsets.only(top: 8, bottom: 8),
-            padding: const pw.EdgeInsets.all(10),
-            decoration: pw.BoxDecoration(
-              color: PdfColors.amber50,
-              border: pw.Border.all(color: PdfColors.orange, width: 2),
+          if (_clinicName.isNotEmpty)
+            pw.Container(
+              margin: const pw.EdgeInsets.only(top: 8, bottom: 8),
+              padding: const pw.EdgeInsets.all(10),
+              decoration: pw.BoxDecoration(
+                color: PdfColors.teal50,
+                border: pw.Border.all(color: PdfColors.teal, width: 2),
+              ),
+              child: pw.Row(
+                children: [
+                  pw.Text(_clinicName,
+                      style: pw.TextStyle(fontSize: 11, fontWeight: pw.FontWeight.bold, color: PdfColors.teal900)),
+                ],
+              ),
             ),
-            child: pw.Column(
-              crossAxisAlignment: pw.CrossAxisAlignment.start,
-              children: [
-                pw.Text(l10n.reportDisclaimerTitle.replaceFirst('DISCLAIMER: ', ''),
-                    style: pw.TextStyle(fontSize: 11, fontWeight: pw.FontWeight.bold, color: PdfColors.orange900)),
-                pw.SizedBox(height: 4),
-                pw.Text(l10n.plrResearchDisclaimer,
-                    style: const pw.TextStyle(fontSize: 8, color: PdfColors.orange900))
-              ],
-            ),
-          ),
           pw.Text('${l10n.date}: $dateStr', style: const pw.TextStyle(fontSize: 10)),
           pw.SizedBox(height: 16)
         ],

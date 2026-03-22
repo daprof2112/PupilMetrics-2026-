@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:ai_eye_capture/main.dart';
 import 'package:ai_eye_capture/models/patient_info.dart';
 import 'package:ai_eye_capture/l10n/app_localizations.dart';
+import 'package:ai_eye_capture/utils/app_settings.dart';
 
 class PatientInfoScreen extends StatefulWidget {
   final Function(PatientInfo) onContinue;
@@ -20,18 +21,37 @@ class _PatientInfoScreenState extends State<PatientInfoScreen> {
   final _nameController = TextEditingController();
   final _ageController = TextEditingController();
   final _complaintsController = TextEditingController();
+  final _clinicController = TextEditingController();
   Sex _selectedSex = Sex.male;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadClinicName();
+  }
+
+  Future<void> _loadClinicName() async {
+    final settings = await AppSettings.load();
+    if (mounted) {
+      _clinicController.text = settings.clinicName;
+    }
+  }
 
   @override
   void dispose() {
     _nameController.dispose();
     _ageController.dispose();
     _complaintsController.dispose();
+    _clinicController.dispose();
     super.dispose();
   }
 
-  void _submit() {
+  Future<void> _submit() async {
     if (_formKey.currentState!.validate()) {
+      // Save clinic name back to settings so it persists for future sessions
+      final settings = await AppSettings.load();
+      await AppSettings.save(settings.copyWith(clinicName: _clinicController.text.trim()));
+
       final patientInfo = PatientInfo(
         name: _nameController.text.trim(),
         sex: _selectedSex,
@@ -91,7 +111,54 @@ class _PatientInfoScreenState extends State<PatientInfoScreen> {
                   ],
                 ),
               ),
-              const SizedBox(height: 32),
+              const SizedBox(height: 24),
+
+              // ── Practice Information ───────────────────────────────────────
+              Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF1D1E33),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: Colors.teal.withOpacity(0.4)),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        const Icon(Icons.local_hospital_outlined, color: Colors.teal, size: 20),
+                        const SizedBox(width: 8),
+                        Text(
+                          'Practice Information',
+                          style: const TextStyle(color: Colors.teal, fontSize: 14, fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(width: 8),
+                        Text('(saved for all reports)', style: const TextStyle(color: Colors.white38, fontSize: 11)),
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+                    TextFormField(
+                      controller: _clinicController,
+                      style: const TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                        hintText: 'Clinic, practitioner, doctor or university name',
+                        hintStyle: const TextStyle(color: Colors.white38, fontSize: 13),
+                        prefixIcon: const Icon(Icons.business, color: Colors.teal),
+                        filled: true,
+                        fillColor: const Color(0xFF0A0E21),
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: BorderSide.none),
+                        enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: Colors.white12)),
+                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: Colors.teal, width: 2)),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 24),
+
+              // Patient fields divider
+              const Divider(color: Colors.white12),
+              const SizedBox(height: 16),
 
               // Name field
               Text('${l10n.fullName} *', style: const TextStyle(color: Colors.white70, fontSize: 14, fontWeight: FontWeight.w500)),
