@@ -297,12 +297,18 @@ class _UnifiedCameraScreenState extends State<UnifiedCameraScreen> {
   }
 
   int _findExternalCamera() {
+    // First pass: Android Camera2 classifies USB/OTG cameras as lensDirection.external
+    for (int i = 0; i < _cameras.length; i++) {
+      if (_cameras[i].lensDirection == CameraLensDirection.external) return i;
+    }
+    // Second pass: name-based heuristics (Windows / other platforms)
     for (int i = 0; i < _cameras.length; i++) {
       final name = _cameras[i].name.toLowerCase();
       if (name.contains('usb') || name.contains('external') ||
           name.contains('uvc') || name.contains('microscope') ||
           name.contains('iris')) return i;
     }
+    // Last resort: if more than 2 cameras, assume the extra one is external
     if (_cameras.length > 2) return _cameras.length - 1;
     return -1;
   }
