@@ -16,6 +16,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:ai_eye_capture/l10n/app_localizations.dart';
 import 'package:ai_eye_capture/presentation/camera_screen/secure_uvc_camera_screen.dart';
+import 'package:ai_eye_capture/presentation/camera_screen/android_uvc_camera.dart';
 import 'package:ai_eye_capture/models/patient_info.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
@@ -522,7 +523,9 @@ Padding(
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (_) => const SecureUvcCameraScreen(isRightEye: false),
+          builder: (_) => Platform.isAndroid
+              ? const AndroidUvcCameraScreen(isRightEye: false)
+              : const SecureUvcCameraScreen(isRightEye: false),
         ),
       );
     } else {
@@ -574,7 +577,9 @@ Padding(
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (_) => const SecureUvcCameraScreen(isRightEye: true),
+          builder: (_) => Platform.isAndroid
+              ? const AndroidUvcCameraScreen(isRightEye: true)
+              : const SecureUvcCameraScreen(isRightEye: true),
         ),
       );
     } else {

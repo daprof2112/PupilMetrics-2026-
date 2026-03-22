@@ -15,6 +15,7 @@ import 'package:ai_eye_capture/presentation/left_eye_screen/take_left_eye_photo_
 import 'package:ai_eye_capture/presentation/right_eye_screen/take_right_eye_photo_screen.dart';
 import 'package:ai_eye_capture/presentation/video_mode/video_capture_screen.dart' as plr_video;
 import 'package:ai_eye_capture/presentation/camera_screen/uvc_camera_screen.dart';
+import 'package:ai_eye_capture/presentation/camera_screen/android_uvc_camera.dart';
 import 'package:ai_eye_capture/main.dart';
 import 'package:ai_eye_capture/l10n/app_localizations.dart';
 import 'package:ai_eye_capture/utils/pupil_analyzer_fixed.dart';
@@ -53,7 +54,8 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
       setState(() {
         _availableCameras = cameras;
         _hasExternalCamera = cameras.any((cam) =>
-        cam.name.toLowerCase().contains('external') ||
+            cam.lensDirection == CameraLensDirection.external ||
+            cam.name.toLowerCase().contains('external') ||
             cam.name.toLowerCase().contains('usb') ||
             cam.name.toLowerCase().contains('uvc') ||
             cameras.length > 2
@@ -595,9 +597,9 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => SecureUvcCameraScreen(
-          isRightEye: widget.rightEye,
-        ),
+        builder: (_) => Platform.isAndroid
+            ? AndroidUvcCameraScreen(isRightEye: widget.rightEye)
+            : SecureUvcCameraScreen(isRightEye: widget.rightEye),
       ),
     );
   }

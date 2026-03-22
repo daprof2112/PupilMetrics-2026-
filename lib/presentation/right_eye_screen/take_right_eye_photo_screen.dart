@@ -13,6 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ai_eye_capture/l10n/app_localizations.dart';
 import 'package:ai_eye_capture/presentation/camera_screen/secure_uvc_camera_screen.dart';
+import 'package:ai_eye_capture/presentation/camera_screen/android_uvc_camera.dart';
 
 
 class TakeRightEyePhotoScreen extends StatefulWidget {
@@ -283,7 +284,9 @@ class _TakeRightEyePhotoScreenState extends State<TakeRightEyePhotoScreen> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (_) => SecureUvcCameraScreen(isRightEye: true),
+          builder: (_) => Platform.isAndroid
+              ? const AndroidUvcCameraScreen(isRightEye: true)
+              : const SecureUvcCameraScreen(isRightEye: true),
         ),
       );
     } else {
@@ -328,7 +331,9 @@ class _TakeRightEyePhotoScreenState extends State<TakeRightEyePhotoScreen> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (_) => const SecureUvcCameraScreen(isRightEye: false),
+          builder: (_) => Platform.isAndroid
+              ? const AndroidUvcCameraScreen(isRightEye: false)
+              : const SecureUvcCameraScreen(isRightEye: false),
         ),
       );
     } else {

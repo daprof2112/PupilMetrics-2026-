@@ -54,25 +54,18 @@ android {
         applicationId "com.cnri.pupil.metrics.neuro"
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion 36
-        versionCode 20  // ← Bump this for new release
-        versionName "20.1"
+        versionCode 22  // ← Bump this for new release
+        versionName "22.1"
     }
 
     packagingOptions {
         jniLibs {
             useLegacyPackaging = false  // Required for 16 KB page-aligned native libs (Android 15+)
-            // flutter_uvc_camera is Windows-only in this app (Dino-Lite bridge).
-            // UVCCameraController is never called on Android at runtime, but the plugin
-            // is transitively linked via dead-code imports. Exclude its pre-NDK27 .so files
-            // so they don't trigger the Play Store 16 KB alignment warning.
-            excludes += [
-                '**/libUVCCamera.so',
-                '**/libUACAudio.so',
-                '**/libjpeg-turbo1500.so',
-                '**/libnativelib.so',
-                '**/libusb100.so',
-                '**/libuvc.so',
-            ]
+            // flutter_uvc_camera native libs are required for Android USB Host API / UVC camera support.
+            // These libs are NOT 16KB page-aligned (pre-NDK27 build), which triggers a Play Store
+            // compatibility warning for Android 15+ devices with 16KB page sizes.
+            // Trade-off accepted: camera functionality takes priority over the warning.
+            // To suppress the warning, upgrade flutter_uvc_camera to a version built with NDK 27+.
         }
     }
 
