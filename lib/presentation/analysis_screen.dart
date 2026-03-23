@@ -273,7 +273,13 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
         });
         await Future.delayed(const Duration(milliseconds: 300));
         _rightResult = await analyzer.analyzeEye(widget.rightEyeImage!, isRightEye: true);
-        _mlRightResult = await _mlAnalyzer.analyze(await widget.rightEyeImage!.readAsBytes(), eye: 'OD');
+        _mlRightResult = await _mlAnalyzer.analyze(
+          await widget.rightEyeImage!.readAsBytes(),
+          eye: 'OD',
+          irisCenterX: _rightResult?.irisCenterX,
+          irisCenterY: _rightResult?.irisCenterY,
+          irisRadius:  _rightResult != null ? _rightResult!.irisDiameterPx / 2 : null,
+        );
         _hybridRightConfidence = HybridConfidenceFusion.fuse(
           classical: _rightResult!,
           ml: _mlRightResult!,
@@ -297,7 +303,13 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
         });
         await Future.delayed(const Duration(milliseconds: 300));
         _leftResult = await analyzer.analyzeEye(widget.leftEyeImage!, isRightEye: false);
-        _mlLeftResult = await _mlAnalyzer.analyze(await widget.leftEyeImage!.readAsBytes(), eye: 'OS');
+        _mlLeftResult = await _mlAnalyzer.analyze(
+          await widget.leftEyeImage!.readAsBytes(),
+          eye: 'OS',
+          irisCenterX: _leftResult?.irisCenterX,
+          irisCenterY: _leftResult?.irisCenterY,
+          irisRadius:  _leftResult != null ? _leftResult!.irisDiameterPx / 2 : null,
+        );
         _hybridLeftConfidence = HybridConfidenceFusion.fuse(
           classical: _leftResult!,
           ml: _mlLeftResult!,

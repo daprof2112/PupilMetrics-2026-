@@ -404,6 +404,8 @@ class ANWAssessment {
 class EyeAnalysisResult {
   final double pupilDiameterPx;
   final double irisDiameterPx;
+  final double irisCenterX;   // detected iris center in original image pixels
+  final double irisCenterY;
   final double pupilIrisRatio;
   final double ellipseness;
   final double pupilBorderDeformation;
@@ -425,6 +427,7 @@ class EyeAnalysisResult {
 
   EyeAnalysisResult({
     required this.pupilDiameterPx, required this.irisDiameterPx,
+    this.irisCenterX = 0, this.irisCenterY = 0,
     required this.pupilIrisRatio, required this.ellipseness,
     required this.pupilBorderDeformation, required this.decentralization,
     required this.decentralizationAngle, required this.decentralizationZone,
@@ -962,6 +965,7 @@ class PupilAnalyzer {
 
     return EyeAnalysisResult(
       pupilDiameterPx: pupilDiameter, irisDiameterPx: irisDiameter,
+      irisCenterX: iris.centerX, irisCenterY: iris.centerY,
       pupilIrisRatio: ratio, ellipseness: ellipseness,
       pupilBorderDeformation: shape.deformationDegree.clamp(0, 30),
       decentralization: decentralization, decentralizationAngle: decentralizationAngle,

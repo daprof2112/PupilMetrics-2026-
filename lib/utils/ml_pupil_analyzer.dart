@@ -63,15 +63,28 @@ class MLPupilAnalyzer {
   /// Check if model is ready
   bool get isReady => _isInitialized && _session != null;
 
-  /// Analyze iris image and return detected parameters
-  /// Signature matches existing analysis_screen.dart calls
+  /// Analyze iris image and return detected parameters.
+  /// When [irisCenterX], [irisCenterY], and [irisRadius] are supplied (from the
+  /// classical CV pass), the image is cropped around the iris before being
+  /// resized to 224×224 — critical for correct scale on iriscope images where
+  /// the iris may fill most of the frame vs. phone images where it may not.
   Future<MLAnalysisResult> analyze(
       Uint8List imageBytes, {
         required String eye,
         double threshold = 0.5,
+        double? irisCenterX,
+        double? irisCenterY,
+        double? irisRadius,
       }) async {
     final isLeftEye = eye == 'OS';
-    return analyzeIris(imageBytes: imageBytes, isLeftEye: isLeftEye, threshold: threshold);
+    return analyzeIris(
+      imageBytes: imageBytes,
+      isLeftEye: isLeftEye,
+      threshold: threshold,
+      irisCenterX: irisCenterX,
+      irisCenterY: irisCenterY,
+      irisRadius: irisRadius,
+    );
   }
 
   /// Analyze iris image and return detected parameters
@@ -79,14 +92,22 @@ class MLPupilAnalyzer {
     required Uint8List imageBytes,
     required bool isLeftEye,
     double threshold = 0.5,
+    double? irisCenterX,
+    double? irisCenterY,
+    double? irisRadius,
   }) async {
     if (!isReady) {
       throw Exception('ML Model not initialized. Call initialize() first.');
     }
 
     try {
-      // Decode and preprocess image
-      final inputTensor = await _preprocessImage(imageBytes);
+      // Decode and preprocess image (with optional iris-guided crop)
+      final inputTensor = await _preprocessImage(
+        imageBytes,
+        irisCenterX: irisCenterX,
+        irisCenterY: irisCenterY,
+        irisRadius: irisRadius,
+      );
 
       // Create ONNX input tensor
       final inputOrt = OrtValueTensor.createTensorWithDataList(
@@ -128,12 +149,35 @@ class MLPupilAnalyzer {
     }
   }
 
-  /// Preprocess image for model input
-  Future<Float32List> _preprocessImage(Uint8List imageBytes) async {
+  /// Preprocess image for model input.
+  /// When iris center + radius are provided, crop a square around the iris
+  /// (1.4× diameter) before resizing to [inputSize]×[inputSize].  This
+  /// normalises scale across phone cameras and iriscope devices.
+  Future<Float32List> _preprocessImage(
+    Uint8List imageBytes, {
+    double? irisCenterX,
+    double? irisCenterY,
+    double? irisRadius,
+  }) async {
     // Decode image
     img.Image? image = img.decodeImage(imageBytes);
     if (image == null) {
       throw Exception('Failed to decode image');
+    }
+
+    // Iris-guided crop — only when classical CV provided valid coordinates.
+    if (irisCenterX != null && irisCenterY != null && irisRadius != null && irisRadius > 0) {
+      final pad = (irisRadius * 1.4).round();
+      final left   = (irisCenterX - pad).clamp(0, image.width  - 1).toInt();
+      final top    = (irisCenterY - pad).clamp(0, image.height - 1).toInt();
+      final right  = (irisCenterX + pad).clamp(1, image.width).toInt();
+      final bottom = (irisCenterY + pad).clamp(1, image.height).toInt();
+      final cropW  = right - left;
+      final cropH  = bottom - top;
+      // Only crop if the result is large enough to be meaningful
+      if (cropW >= 64 && cropH >= 64) {
+        image = img.copyCrop(image, x: left, y: top, width: cropW, height: cropH);
+      }
     }
 
     // Resize to model input size
