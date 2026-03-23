@@ -3412,4 +3412,174 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get anisocoriaObservationMarked => '顕著な差';
+
+  @override
+  String get settingsNaturalMedicineSection => '自然療法';
+
+  @override
+  String get settingsHerbalToggle => 'ハーブ推奨（虹彩ゾーンに基づく）';
+
+  @override
+  String get settingsNutritionToggle => '7色ダイエット栄養（虹彩ゾーンに基づく）';
+
+  @override
+  String get settingsChiropracticToggle => 'カイロプラクティック / 脊椎評価';
+
+  @override
+  String get settingsTcmToggle => '伝統的中国医学（TCM）';
+
+  @override
+  String get therapyHerbalTitle => 'ハーブ推奨';
+
+  @override
+  String get therapyHerbalSubtitle => '虹彩ゾーンの所見 — エビデンスの重みで並び替え';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count件の参考文献';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer =>
+      'ハーブの提案は教育目的のみで提供されます。使用前に資格のある医療従事者に相談してください。';
+
+  @override
+  String get therapyNutritionTitle => '7色ダイエット栄養';
+
+  @override
+  String get therapyNutritionSubtitle => '虹彩ゾーンの臓器に対する食品と栄養素';
+
+  @override
+  String get therapyNutritionFoodsByColor => '色別推奨食品';
+
+  @override
+  String get therapyNutritionKeyNutrients => '主要栄養素';
+
+  @override
+  String get therapyNutritionHerbs => '補助的なハーブとスパイス';
+
+  @override
+  String get therapyNutritionNotes => '栄養メモ';
+
+  @override
+  String get therapyNutritionTonifying => '補益食品：';
+
+  @override
+  String get therapyNutritionAvoid => '控える／避ける：';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      '栄養の提案は7色ダイエットの枠組みに基づいており、教育目的のみで提供されます。食事を変更する前に専門家に相談してください。';
+
+  @override
+  String get therapyChiroTitle => 'カイロプラクティック評価';
+
+  @override
+  String get therapyChiroSubtitle => '虹彩ゾーンの所見が示す脊椎セグメント';
+
+  @override
+  String get therapyChiroVertebrae => '椎骨';
+
+  @override
+  String get therapyChiroNerveRoots => '神経根';
+
+  @override
+  String get therapyChiroInnervated => '支配構造';
+
+  @override
+  String get therapyChiroSubluxation => 'サブラクセーション（部分脱臼）の可能性指標';
+
+  @override
+  String get therapyChiroMuscles => 'よく影響を受ける筋肉';
+
+  @override
+  String get therapyChiroAdjusting => 'カイロプラクティック矯正アプローチ';
+
+  @override
+  String get therapyChiroExercises => '自宅でのエクササイズとストレッチ';
+
+  @override
+  String get therapyChiroPostural => '姿勢メモ';
+
+  @override
+  String get therapyChiroDisclaimer =>
+      'カイロプラクティック情報は教育目的で提供されます。診断と治療は認定カイロプラクターに相談してください。';
+
+  @override
+  String get therapyTcmTitle => '伝統的中国医学';
+
+  @override
+  String get therapyTcmSubtitle => '経絡・臓器時計・五行';
+
+  @override
+  String get therapyTcmMeridianFunctions => '経絡の機能';
+
+  @override
+  String get therapyTcmGoverns => '支配';
+
+  @override
+  String get therapyTcmPatterns => '不均衡パターン';
+
+  @override
+  String get therapyTcmSymptoms => '症状';
+
+  @override
+  String get therapyTcmFormulas => '古典処方';
+
+  @override
+  String get therapyTcmKeyPoints => 'このパターンの主要ポイント';
+
+  @override
+  String get therapyTcmAcupoints => '主要ツボ';
+
+  @override
+  String get therapyTcmDiet => '中医食養生';
+
+  @override
+  String get therapyTcmTonifying => '補益食品：';
+
+  @override
+  String get therapyTcmAvoid => '控える／避ける：';
+
+  @override
+  String get therapyTcmDisclaimer =>
+      'TCM情報は教育目的で提供されます。認定の鍼灸師またはTCM専門家に相談してください。';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings => '推奨事項を生成するための有意な虹彩ゾーンの所見は検出されませんでした。';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => '季節';
+
+  @override
+  String get therapyClimateLabel => '気候';
+
+  @override
+  String get therapyEmotionLabel => '感情';
+
+  @override
+  String get therapyTasteLabel => '味';
+
+  @override
+  String get therapyNatureLabel => '性質';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return '対：$organ';
+  }
 }

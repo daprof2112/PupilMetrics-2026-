@@ -3516,4 +3516,180 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get anisocoriaObservationMarked => 'Belirgin farklılık';
+
+  @override
+  String get settingsNaturalMedicineSection => 'Doğal Tıp';
+
+  @override
+  String get settingsHerbalToggle => 'Bitkisel Öneriler (iris bölgesi tabanlı)';
+
+  @override
+  String get settingsNutritionToggle =>
+      '7 Renk Diyet Beslenme (iris bölgesi tabanlı)';
+
+  @override
+  String get settingsChiropracticToggle =>
+      'Kiroprakter / Omurga Değerlendirmesi';
+
+  @override
+  String get settingsTcmToggle => 'Geleneksel Çin Tıbbı (GÇT)';
+
+  @override
+  String get therapyHerbalTitle => 'Bitkisel Öneriler';
+
+  @override
+  String get therapyHerbalSubtitle =>
+      'İris bölgesi bulguları — kanıt ağırlığına göre sıralı';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count referans';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer =>
+      'Bitkisel öneriler yalnızca eğitim amaçlıdır. Kullanmadan önce nitelikli bir sağlık uzmanına danışın.';
+
+  @override
+  String get therapyNutritionTitle => '7 Renk Diyet Beslenme';
+
+  @override
+  String get therapyNutritionSubtitle =>
+      'İris bölgesi organları için gıdalar ve besinler';
+
+  @override
+  String get therapyNutritionFoodsByColor => 'Renge Göre Önerilen Gıdalar';
+
+  @override
+  String get therapyNutritionKeyNutrients => 'Temel Besinler';
+
+  @override
+  String get therapyNutritionHerbs => 'Destekleyici Bitkiler ve Baharatlar';
+
+  @override
+  String get therapyNutritionNotes => 'Beslenme Notları';
+
+  @override
+  String get therapyNutritionTonifying => 'Güçlendirici gıdalar:';
+
+  @override
+  String get therapyNutritionAvoid => 'Azalt / kaçın:';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      'Beslenme önerileri 7 Renk Diyet çerçevesine dayanmakta olup yalnızca eğitim amaçlıdır. Diyet değişikliği yapmadan önce bir uzmanla görüşün.';
+
+  @override
+  String get therapyChiroTitle => 'Kiropraktik Değerlendirme';
+
+  @override
+  String get therapyChiroSubtitle =>
+      'İris bölgesi bulgularının işaret ettiği omurga segmentleri';
+
+  @override
+  String get therapyChiroVertebrae => 'Omurlar';
+
+  @override
+  String get therapyChiroNerveRoots => 'Sinir Kökleri';
+
+  @override
+  String get therapyChiroInnervated => 'İnnervasyonlu Yapılar';
+
+  @override
+  String get therapyChiroSubluxation => 'Olası Subluksasyon Göstergeleri';
+
+  @override
+  String get therapyChiroMuscles => 'Sıklıkla Etkilenen Kaslar';
+
+  @override
+  String get therapyChiroAdjusting => 'Kiropraktik Düzeltme Yaklaşımı';
+
+  @override
+  String get therapyChiroExercises => 'Ev Egzersizleri ve Germe';
+
+  @override
+  String get therapyChiroPostural => 'Postür Notu';
+
+  @override
+  String get therapyChiroDisclaimer =>
+      'Kiropraktik bilgiler eğitim amaçlıdır. Tanı ve tedavi için lisanslı bir kiropraktöre başvurun.';
+
+  @override
+  String get therapyTcmTitle => 'Geleneksel Çin Tıbbı';
+
+  @override
+  String get therapyTcmSubtitle => 'Meridyen · Organ Saati · Beş Element';
+
+  @override
+  String get therapyTcmMeridianFunctions => 'Meridyen İşlevleri';
+
+  @override
+  String get therapyTcmGoverns => 'Yönetir';
+
+  @override
+  String get therapyTcmPatterns => 'Dengesizlik Örüntüleri';
+
+  @override
+  String get therapyTcmSymptoms => 'Belirtiler';
+
+  @override
+  String get therapyTcmFormulas => 'Klasik Formüller';
+
+  @override
+  String get therapyTcmKeyPoints => 'Bu Örüntü için Kilit Noktalar';
+
+  @override
+  String get therapyTcmAcupoints => 'Temel Akupresür Noktaları';
+
+  @override
+  String get therapyTcmDiet => 'GÇT Diyet Terapisi';
+
+  @override
+  String get therapyTcmTonifying => 'Güçlendirici gıdalar:';
+
+  @override
+  String get therapyTcmAvoid => 'Azalt / kaçın:';
+
+  @override
+  String get therapyTcmDisclaimer =>
+      'GÇT bilgileri eğitim amaçlıdır. Lisanslı bir akupunkturist veya GÇT uzmanına danışın.';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings =>
+      'Öneri oluşturmak için anlamlı iris bölgesi bulgusu tespit edilmedi.';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => 'Mevsim';
+
+  @override
+  String get therapyClimateLabel => 'İklim';
+
+  @override
+  String get therapyEmotionLabel => 'Duygu';
+
+  @override
+  String get therapyTasteLabel => 'Tat';
+
+  @override
+  String get therapyNatureLabel => 'Doğa';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return 'çift: $organ';
+  }
 }

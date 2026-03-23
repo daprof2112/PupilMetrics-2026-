@@ -3534,4 +3534,181 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get anisocoriaObservationMarked => 'Variación marcada';
+
+  @override
+  String get settingsNaturalMedicineSection => 'Medicina Natural';
+
+  @override
+  String get settingsHerbalToggle =>
+      'Recomendaciones Herbales (basadas en zonas del iris)';
+
+  @override
+  String get settingsNutritionToggle =>
+      'Nutrición 7 Colores (basada en zonas del iris)';
+
+  @override
+  String get settingsChiropracticToggle => 'Quiropráctica / Evaluación Espinal';
+
+  @override
+  String get settingsTcmToggle => 'Medicina Tradicional China (MTC)';
+
+  @override
+  String get therapyHerbalTitle => 'Recomendaciones Herbales';
+
+  @override
+  String get therapyHerbalSubtitle =>
+      'Hallazgos de zonas del iris — ordenados por peso de evidencia';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count referencias';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer =>
+      'Las sugerencias herbales se proporcionan con fines educativos únicamente. Consulte a un profesional de salud calificado antes de su uso.';
+
+  @override
+  String get therapyNutritionTitle => 'Nutrición Dieta 7 Colores';
+
+  @override
+  String get therapyNutritionSubtitle =>
+      'Alimentos y nutrientes para órganos de zonas del iris';
+
+  @override
+  String get therapyNutritionFoodsByColor => 'Alimentos Recomendados por Color';
+
+  @override
+  String get therapyNutritionKeyNutrients => 'Nutrientes Clave';
+
+  @override
+  String get therapyNutritionHerbs => 'Hierbas y Especias de Apoyo';
+
+  @override
+  String get therapyNutritionNotes => 'Notas Nutricionales';
+
+  @override
+  String get therapyNutritionTonifying => 'Alimentos tonificantes:';
+
+  @override
+  String get therapyNutritionAvoid => 'Minimizar / evitar:';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      'Las sugerencias nutricionales se basan en el marco de la Dieta 7 Colores y se proporcionan con fines educativos únicamente. Consulte a un profesional antes de realizar cambios en su dieta.';
+
+  @override
+  String get therapyChiroTitle => 'Evaluación Quiropráctica';
+
+  @override
+  String get therapyChiroSubtitle =>
+      'Segmentos espinales indicados por hallazgos del iris';
+
+  @override
+  String get therapyChiroVertebrae => 'Vértebras';
+
+  @override
+  String get therapyChiroNerveRoots => 'Raíces Nerviosas';
+
+  @override
+  String get therapyChiroInnervated => 'Estructuras Inervadas';
+
+  @override
+  String get therapyChiroSubluxation => 'Indicadores Posibles de Subluxación';
+
+  @override
+  String get therapyChiroMuscles => 'Músculos Frecuentemente Afectados';
+
+  @override
+  String get therapyChiroAdjusting => 'Enfoque de Ajuste Quiropráctico';
+
+  @override
+  String get therapyChiroExercises => 'Ejercicios y Estiramientos en Casa';
+
+  @override
+  String get therapyChiroPostural => 'Nota Postural';
+
+  @override
+  String get therapyChiroDisclaimer =>
+      'La información quiropráctica se proporciona con fines educativos. Consulte a un quiropráctico licenciado para diagnóstico y tratamiento.';
+
+  @override
+  String get therapyTcmTitle => 'Medicina Tradicional China';
+
+  @override
+  String get therapyTcmSubtitle =>
+      'Meridiano · Reloj de Órganos · Cinco Elementos';
+
+  @override
+  String get therapyTcmMeridianFunctions => 'Funciones del Meridiano';
+
+  @override
+  String get therapyTcmGoverns => 'Rige';
+
+  @override
+  String get therapyTcmPatterns => 'Patrones de Desequilibrio';
+
+  @override
+  String get therapyTcmSymptoms => 'Síntomas';
+
+  @override
+  String get therapyTcmFormulas => 'Fórmulas Clásicas';
+
+  @override
+  String get therapyTcmKeyPoints => 'Puntos Clave para Este Patrón';
+
+  @override
+  String get therapyTcmAcupoints => 'Puntos de Acupresión Clave';
+
+  @override
+  String get therapyTcmDiet => 'Terapia Dietética MTC';
+
+  @override
+  String get therapyTcmTonifying => 'Alimentos tonificantes:';
+
+  @override
+  String get therapyTcmAvoid => 'Minimizar / evitar:';
+
+  @override
+  String get therapyTcmDisclaimer =>
+      'La información de MTC se proporciona con fines educativos. Consulte a un acupunturista o médico de MTC licenciado.';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings =>
+      'No se detectaron hallazgos significativos en zonas del iris para generar recomendaciones.';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => 'Estación';
+
+  @override
+  String get therapyClimateLabel => 'Clima';
+
+  @override
+  String get therapyEmotionLabel => 'Emoción';
+
+  @override
+  String get therapyTasteLabel => 'Sabor';
+
+  @override
+  String get therapyNatureLabel => 'Naturaleza';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return 'par: $organ';
+  }
 }

@@ -3500,4 +3500,179 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get anisocoriaObservationMarked => 'स्पष्ट अंतर';
+
+  @override
+  String get settingsNaturalMedicineSection => 'प्राकृतिक चिकित्सा';
+
+  @override
+  String get settingsHerbalToggle => 'हर्बल सिफारिशें (आइरिस ज़ोन आधारित)';
+
+  @override
+  String get settingsNutritionToggle => '7-रंग आहार पोषण (आइरिस ज़ोन आधारित)';
+
+  @override
+  String get settingsChiropracticToggle => 'कायरोप्रैक्टिक / रीढ़ मूल्यांकन';
+
+  @override
+  String get settingsTcmToggle => 'पारंपरिक चीनी चिकित्सा (TCM)';
+
+  @override
+  String get therapyHerbalTitle => 'हर्बल सिफारिशें';
+
+  @override
+  String get therapyHerbalSubtitle =>
+      'आइरिस ज़ोन परिणाम — साक्ष्य भार के अनुसार क्रमबद्ध';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count संदर्भ';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer =>
+      'हर्बल सुझाव केवल शैक्षणिक उद्देश्यों के लिए प्रदान किए जाते हैं। उपयोग से पहले एक योग्य स्वास्थ्य पेशेवर से परामर्श करें।';
+
+  @override
+  String get therapyNutritionTitle => '7-रंग आहार पोषण';
+
+  @override
+  String get therapyNutritionSubtitle =>
+      'आइरिस ज़ोन अंगों के लिए खाद्य पदार्थ और पोषक तत्व';
+
+  @override
+  String get therapyNutritionFoodsByColor =>
+      'रंग के अनुसार अनुशंसित खाद्य पदार्थ';
+
+  @override
+  String get therapyNutritionKeyNutrients => 'प्रमुख पोषक तत्व';
+
+  @override
+  String get therapyNutritionHerbs => 'सहायक जड़ी-बूटियाँ और मसाले';
+
+  @override
+  String get therapyNutritionNotes => 'पोषण संबंधी नोट्स';
+
+  @override
+  String get therapyNutritionTonifying => 'टोनिफाइंग खाद्य पदार्थ:';
+
+  @override
+  String get therapyNutritionAvoid => 'कम करें / बचें:';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      'पोषण संबंधी सुझाव 7-रंग आहार ढांचे पर आधारित हैं और केवल शैक्षणिक उद्देश्यों के लिए हैं। आहार में बदलाव से पहले किसी विशेषज्ञ से परामर्श करें।';
+
+  @override
+  String get therapyChiroTitle => 'कायरोप्रैक्टिक मूल्यांकन';
+
+  @override
+  String get therapyChiroSubtitle =>
+      'आइरिस ज़ोन परिणामों द्वारा इंगित रीढ़ खंड';
+
+  @override
+  String get therapyChiroVertebrae => 'कशेरुकाएँ';
+
+  @override
+  String get therapyChiroNerveRoots => 'तंत्रिका जड़ें';
+
+  @override
+  String get therapyChiroInnervated => 'संक्रमित संरचनाएँ';
+
+  @override
+  String get therapyChiroSubluxation => 'संभावित उपभ्रंश संकेतक';
+
+  @override
+  String get therapyChiroMuscles => 'सामान्यतः प्रभावित मांसपेशियाँ';
+
+  @override
+  String get therapyChiroAdjusting => 'कायरोप्रैक्टिक समायोजन दृष्टिकोण';
+
+  @override
+  String get therapyChiroExercises => 'घरेलू व्यायाम और स्ट्रेच';
+
+  @override
+  String get therapyChiroPostural => 'आसन नोट';
+
+  @override
+  String get therapyChiroDisclaimer =>
+      'कायरोप्रैक्टिक जानकारी शैक्षणिक उद्देश्यों के लिए प्रदान की जाती है। निदान और उपचार के लिए लाइसेंस प्राप्त कायरोप्रैक्टर से परामर्श करें।';
+
+  @override
+  String get therapyTcmTitle => 'पारंपरिक चीनी चिकित्सा';
+
+  @override
+  String get therapyTcmSubtitle => 'मेरिडियन · अंग घड़ी · पाँच तत्व';
+
+  @override
+  String get therapyTcmMeridianFunctions => 'मेरिडियन कार्य';
+
+  @override
+  String get therapyTcmGoverns => 'शासन करता है';
+
+  @override
+  String get therapyTcmPatterns => 'असंतुलन पैटर्न';
+
+  @override
+  String get therapyTcmSymptoms => 'लक्षण';
+
+  @override
+  String get therapyTcmFormulas => 'क्लासिक फार्मूले';
+
+  @override
+  String get therapyTcmKeyPoints => 'इस पैटर्न के प्रमुख बिंदु';
+
+  @override
+  String get therapyTcmAcupoints => 'प्रमुख एक्यूप्रेशर बिंदु';
+
+  @override
+  String get therapyTcmDiet => 'TCM आहार चिकित्सा';
+
+  @override
+  String get therapyTcmTonifying => 'टोनिफाइंग खाद्य पदार्थ:';
+
+  @override
+  String get therapyTcmAvoid => 'कम करें / बचें:';
+
+  @override
+  String get therapyTcmDisclaimer =>
+      'TCM जानकारी शैक्षणिक उद्देश्यों के लिए है। लाइसेंस प्राप्त एक्यूपंक्चरिस्ट या TCM प्रैक्टिशनर से परामर्श करें।';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings =>
+      'सिफारिशें उत्पन्न करने के लिए कोई महत्वपूर्ण आइरिस ज़ोन परिणाम नहीं मिले।';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => 'मौसम';
+
+  @override
+  String get therapyClimateLabel => 'जलवायु';
+
+  @override
+  String get therapyEmotionLabel => 'भावना';
+
+  @override
+  String get therapyTasteLabel => 'स्वाद';
+
+  @override
+  String get therapyNatureLabel => 'प्रकृति';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return 'युग्मित: $organ';
+  }
 }

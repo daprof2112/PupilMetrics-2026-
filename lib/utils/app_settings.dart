@@ -10,6 +10,9 @@ class AppSettingsData {
     required this.defaultZoom,
     required this.clinicName,
     required this.herbalModeEnabled,
+    required this.nutritionModeEnabled,
+    required this.chiropracticModeEnabled,
+    required this.tcmModeEnabled,
   });
 
   final bool autoSavePdf;
@@ -23,6 +26,12 @@ class AppSettingsData {
   final String clinicName;
   /// Whether the herbal recommendation panel is shown in analysis results.
   final bool herbalModeEnabled;
+  /// Whether the 7-Color Diet nutrition panel is shown in analysis results.
+  final bool nutritionModeEnabled;
+  /// Whether the chiropractic spinal segment panel is shown in analysis results.
+  final bool chiropracticModeEnabled;
+  /// Whether the TCM meridian/organ clock panel is shown in analysis results.
+  final bool tcmModeEnabled;
 
   AppSettingsData copyWith({
     bool? autoSavePdf,
@@ -33,6 +42,9 @@ class AppSettingsData {
     double? defaultZoom,
     String? clinicName,
     bool? herbalModeEnabled,
+    bool? nutritionModeEnabled,
+    bool? chiropracticModeEnabled,
+    bool? tcmModeEnabled,
   }) {
     return AppSettingsData(
       autoSavePdf: autoSavePdf ?? this.autoSavePdf,
@@ -43,6 +55,9 @@ class AppSettingsData {
       defaultZoom: defaultZoom ?? this.defaultZoom,
       clinicName: clinicName ?? this.clinicName,
       herbalModeEnabled: herbalModeEnabled ?? this.herbalModeEnabled,
+      nutritionModeEnabled: nutritionModeEnabled ?? this.nutritionModeEnabled,
+      chiropracticModeEnabled: chiropracticModeEnabled ?? this.chiropracticModeEnabled,
+      tcmModeEnabled: tcmModeEnabled ?? this.tcmModeEnabled,
     );
   }
 }
@@ -60,6 +75,9 @@ class AppSettings {
   static const String _defaultZoomKey = 'cameraZoom';
   static const String _clinicNameKey = 'settings_clinic_name';
   static const String _herbalModeKey = 'settings_herbal_mode_enabled';
+  static const String _nutritionModeKey = 'settings_nutrition_mode_enabled';
+  static const String _chiropracticModeKey = 'settings_chiropractic_mode_enabled';
+  static const String _tcmModeKey = 'settings_tcm_mode_enabled';
 
   static const AppSettingsData defaults = AppSettingsData(
     autoSavePdf: false,
@@ -70,6 +88,9 @@ class AppSettings {
     defaultZoom: 0.0,
     clinicName: '',
     herbalModeEnabled: false,
+    nutritionModeEnabled: false,
+    chiropracticModeEnabled: false,
+    tcmModeEnabled: false,
   );
 
   static Future<AppSettingsData> load() async {
@@ -88,6 +109,9 @@ class AppSettings {
       defaultZoom: normalizedZoom,
       clinicName: prefs.getString(_clinicNameKey) ?? defaults.clinicName,
       herbalModeEnabled: prefs.getBool(_herbalModeKey) ?? defaults.herbalModeEnabled,
+      nutritionModeEnabled: prefs.getBool(_nutritionModeKey) ?? defaults.nutritionModeEnabled,
+      chiropracticModeEnabled: prefs.getBool(_chiropracticModeKey) ?? defaults.chiropracticModeEnabled,
+      tcmModeEnabled: prefs.getBool(_tcmModeKey) ?? defaults.tcmModeEnabled,
     );
   }
 
@@ -110,5 +134,8 @@ class AppSettings {
     await prefs.setDouble(_defaultZoomKey, settings.defaultZoom);
     await prefs.setString(_clinicNameKey, settings.clinicName);
     await prefs.setBool(_herbalModeKey, settings.herbalModeEnabled);
+    await prefs.setBool(_nutritionModeKey, settings.nutritionModeEnabled);
+    await prefs.setBool(_chiropracticModeKey, settings.chiropracticModeEnabled);
+    await prefs.setBool(_tcmModeKey, settings.tcmModeEnabled);
   }
 }

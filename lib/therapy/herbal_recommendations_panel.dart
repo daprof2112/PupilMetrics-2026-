@@ -2,6 +2,7 @@
 // Collapsible panel shown in AnalysisScreen when Herbal therapy mode is active.
 
 import 'package:flutter/material.dart';
+import 'package:ai_eye_capture/l10n/app_localizations.dart';
 import 'package:ai_eye_capture/therapy/herbal_engine.dart';
 
 class HerbalRecommendationsPanel extends StatefulWidget {
@@ -19,8 +20,9 @@ class _HerbalRecommendationsPanelState extends State<HerbalRecommendationsPanel>
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     if (widget.recommendations.isEmpty) {
-      return _emptyState();
+      return _emptyState(context);
     }
 
     return Column(
@@ -40,14 +42,14 @@ class _HerbalRecommendationsPanelState extends State<HerbalRecommendationsPanel>
                 child: const Icon(Icons.local_florist, color: Colors.green, size: 20),
               ),
               const SizedBox(width: 10),
-              const Expanded(
+              Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Herbal Recommendations',
-                        style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
-                    Text('Based on iris zone findings — sorted by evidence weight',
-                        style: TextStyle(color: Colors.white54, fontSize: 11)),
+                    Text(l10n.therapyHerbalTitle,
+                        style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
+                    Text(l10n.therapyHerbalSubtitle,
+                        style: const TextStyle(color: Colors.white54, fontSize: 11)),
                   ],
                 ),
               ),
@@ -79,37 +81,38 @@ class _HerbalRecommendationsPanelState extends State<HerbalRecommendationsPanel>
             borderRadius: BorderRadius.circular(8),
             border: Border.all(color: Colors.white12),
           ),
-          child: const Text(
-            'Herbal suggestions are cross-referenced from multiple naturopathic '
-            'reference works and are provided for educational purposes. '
-            'Consult a qualified healthcare practitioner before use.',
-            style: TextStyle(color: Colors.white38, fontSize: 10),
+          child: Text(
+            l10n.therapyHerbalDisclaimer,
+            style: const TextStyle(color: Colors.white38, fontSize: 10),
           ),
         ),
       ],
     );
   }
 
-  Widget _emptyState() => Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.04),
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Colors.white12),
-        ),
-        child: const Row(
-          children: [
-            Icon(Icons.info_outline, color: Colors.white38, size: 18),
-            SizedBox(width: 10),
-            Expanded(
-              child: Text(
-                'No significant iris zone findings detected to generate herbal recommendations.',
-                style: TextStyle(color: Colors.white54, fontSize: 12),
-              ),
+  Widget _emptyState(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.04),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.white12),
+      ),
+      child: Row(
+        children: [
+          const Icon(Icons.info_outline, color: Colors.white38, size: 18),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              l10n.therapyNoFindings,
+              style: const TextStyle(color: Colors.white54, fontSize: 12),
             ),
-          ],
-        ),
-      );
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 // ── Zone card ─────────────────────────────────────────────────────────────────
@@ -141,6 +144,13 @@ class _ZoneCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final findingLabel = switch (rec.findingType) {
+      'flattening' => l10n.therapyFindingFlat,
+      'protrusion' => l10n.therapyFindingProt,
+      'anw_shift' => l10n.therapyFindingAnw,
+      _ => 'FIND',
+    };
     return GestureDetector(
       onTap: onToggle,
       child: AnimatedContainer(
@@ -170,7 +180,7 @@ class _ZoneCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(4),
                       border: Border.all(color: _findingColor.withOpacity(0.5)),
                     ),
-                    child: Text(_findingLabel,
+                    child: Text(findingLabel,
                         style: TextStyle(color: _findingColor, fontSize: 9, fontWeight: FontWeight.bold)),
                   ),
                   const SizedBox(width: 8),
@@ -297,6 +307,7 @@ class _HerbChip extends StatelessWidget {
   }
 
   void _showRefs(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
@@ -310,7 +321,7 @@ class _HerbChip extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('${herb.count} reference${herb.count != 1 ? 's' : ''}',
+                Text(l10n.therapyHerbalEvidenceCount(herb.count),
                     style: const TextStyle(color: Colors.tealAccent, fontSize: 12)),
                 const SizedBox(height: 10),
                 ...herb.refs.asMap().entries.map((e) => Padding(

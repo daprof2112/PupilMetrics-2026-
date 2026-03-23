@@ -570,6 +570,9 @@ class _SettingsDialogState extends State<SettingsDialog> {
   double _defaultZoom = AppSettings.defaults.defaultZoom;
   String _clinicName = AppSettings.defaults.clinicName;
   bool _herbalModeEnabled = AppSettings.defaults.herbalModeEnabled;
+  bool _nutritionModeEnabled = AppSettings.defaults.nutritionModeEnabled;
+  bool _chiropracticModeEnabled = AppSettings.defaults.chiropracticModeEnabled;
+  bool _tcmModeEnabled = AppSettings.defaults.tcmModeEnabled;
 
   @override
   void initState() {
@@ -590,6 +593,9 @@ class _SettingsDialogState extends State<SettingsDialog> {
       _defaultZoom = settings.defaultZoom;
       _clinicName = settings.clinicName;
       _herbalModeEnabled = settings.herbalModeEnabled;
+      _nutritionModeEnabled = settings.nutritionModeEnabled;
+      _chiropracticModeEnabled = settings.chiropracticModeEnabled;
+      _tcmModeEnabled = settings.tcmModeEnabled;
     });
   }
 
@@ -604,6 +610,9 @@ class _SettingsDialogState extends State<SettingsDialog> {
         defaultZoom: _defaultZoom,
         clinicName: _clinicName,
         herbalModeEnabled: _herbalModeEnabled,
+        nutritionModeEnabled: _nutritionModeEnabled,
+        chiropracticModeEnabled: _chiropracticModeEnabled,
+        tcmModeEnabled: _tcmModeEnabled,
       ),
     );
   }
@@ -688,6 +697,15 @@ class _SettingsDialogState extends State<SettingsDialog> {
               const SizedBox(height: 12),
               _buildSwitch('Herbal Recommendations (iris zone-based)', _herbalModeEnabled,
                   (v) => setState(() => _herbalModeEnabled = v)),
+              const SizedBox(height: 8),
+              _buildSwitch('7-Color Diet Nutrition (iris zone-based)', _nutritionModeEnabled,
+                  (v) => setState(() => _nutritionModeEnabled = v)),
+              const SizedBox(height: 8),
+              _buildSwitch('Chiropractic / Spinal Assessment', _chiropracticModeEnabled,
+                  (v) => setState(() => _chiropracticModeEnabled = v)),
+              const SizedBox(height: 8),
+              _buildSwitch('Traditional Chinese Medicine (TCM)', _tcmModeEnabled,
+                  (v) => setState(() => _tcmModeEnabled = v)),
             ],
           ),
         ),

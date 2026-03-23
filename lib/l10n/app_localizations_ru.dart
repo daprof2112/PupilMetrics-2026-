@@ -3541,4 +3541,180 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get anisocoriaObservationMarked => 'Значительное различие';
+
+  @override
+  String get settingsNaturalMedicineSection => 'Натуральная Медицина';
+
+  @override
+  String get settingsHerbalToggle =>
+      'Фитотерапевтические рекомендации (на основе зон радужки)';
+
+  @override
+  String get settingsNutritionToggle =>
+      'Питание по диете 7 цветов (на основе зон радужки)';
+
+  @override
+  String get settingsChiropracticToggle => 'Хиропрактика / Оценка позвоночника';
+
+  @override
+  String get settingsTcmToggle => 'Традиционная китайская медицина (ТКМ)';
+
+  @override
+  String get therapyHerbalTitle => 'Фитотерапевтические рекомендации';
+
+  @override
+  String get therapyHerbalSubtitle =>
+      'Результаты зон радужки — отсортированы по весу доказательств';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count ссылок';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer =>
+      'Фитотерапевтические рекомендации предоставляются исключительно в образовательных целях. Перед применением проконсультируйтесь с квалифицированным специалистом здравоохранения.';
+
+  @override
+  String get therapyNutritionTitle => 'Питание по диете 7 цветов';
+
+  @override
+  String get therapyNutritionSubtitle =>
+      'Продукты и питательные вещества для органов зон радужки';
+
+  @override
+  String get therapyNutritionFoodsByColor => 'Рекомендуемые продукты по цвету';
+
+  @override
+  String get therapyNutritionKeyNutrients => 'Ключевые питательные вещества';
+
+  @override
+  String get therapyNutritionHerbs => 'Поддерживающие травы и специи';
+
+  @override
+  String get therapyNutritionNotes => 'Питательные заметки';
+
+  @override
+  String get therapyNutritionTonifying => 'Тонизирующие продукты:';
+
+  @override
+  String get therapyNutritionAvoid => 'Минимизировать / избегать:';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      'Рекомендации по питанию основаны на системе диеты 7 цветов и предоставляются исключительно в образовательных целях. Перед изменением диеты проконсультируйтесь со специалистом.';
+
+  @override
+  String get therapyChiroTitle => 'Хиропрактическая оценка';
+
+  @override
+  String get therapyChiroSubtitle =>
+      'Позвоночные сегменты, указанные результатами зон радужки';
+
+  @override
+  String get therapyChiroVertebrae => 'Позвонки';
+
+  @override
+  String get therapyChiroNerveRoots => 'Нервные корешки';
+
+  @override
+  String get therapyChiroInnervated => 'Иннервируемые структуры';
+
+  @override
+  String get therapyChiroSubluxation => 'Возможные признаки подвывиха';
+
+  @override
+  String get therapyChiroMuscles => 'Часто затрагиваемые мышцы';
+
+  @override
+  String get therapyChiroAdjusting => 'Хиропрактический подход к коррекции';
+
+  @override
+  String get therapyChiroExercises => 'Домашние упражнения и растяжки';
+
+  @override
+  String get therapyChiroPostural => 'Постуральная заметка';
+
+  @override
+  String get therapyChiroDisclaimer =>
+      'Хиропрактическая информация предоставляется в образовательных целях. Для диагностики и лечения обратитесь к лицензированному хиропрактику.';
+
+  @override
+  String get therapyTcmTitle => 'Традиционная китайская медицина';
+
+  @override
+  String get therapyTcmSubtitle => 'Меридиан · Часы органов · Пять элементов';
+
+  @override
+  String get therapyTcmMeridianFunctions => 'Функции меридиана';
+
+  @override
+  String get therapyTcmGoverns => 'Управляет';
+
+  @override
+  String get therapyTcmPatterns => 'Паттерны дисбаланса';
+
+  @override
+  String get therapyTcmSymptoms => 'Симптомы';
+
+  @override
+  String get therapyTcmFormulas => 'Классические формулы';
+
+  @override
+  String get therapyTcmKeyPoints => 'Ключевые точки для этого паттерна';
+
+  @override
+  String get therapyTcmAcupoints => 'Ключевые точки акупрессуры';
+
+  @override
+  String get therapyTcmDiet => 'Диетотерапия ТКМ';
+
+  @override
+  String get therapyTcmTonifying => 'Тонизирующие продукты:';
+
+  @override
+  String get therapyTcmAvoid => 'Минимизировать / избегать:';
+
+  @override
+  String get therapyTcmDisclaimer =>
+      'Информация ТКМ предоставляется в образовательных целях. Обратитесь к лицензированному акупунктуристу или практикующему врачу ТКМ.';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings =>
+      'Значимых результатов зон радужки для формирования рекомендаций не обнаружено.';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => 'Сезон';
+
+  @override
+  String get therapyClimateLabel => 'Климат';
+
+  @override
+  String get therapyEmotionLabel => 'Эмоция';
+
+  @override
+  String get therapyTasteLabel => 'Вкус';
+
+  @override
+  String get therapyNatureLabel => 'Природа';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return 'пара: $organ';
+  }
 }

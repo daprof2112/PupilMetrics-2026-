@@ -3521,4 +3521,180 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get anisocoriaObservationMarked => 'Wyraźna różnica';
+
+  @override
+  String get settingsNaturalMedicineSection => 'Medycyna Naturalna';
+
+  @override
+  String get settingsHerbalToggle =>
+      'Zalecenia Ziołowe (na podstawie stref tęczówki)';
+
+  @override
+  String get settingsNutritionToggle =>
+      'Żywienie Dieta 7 Kolorów (na podstawie stref tęczówki)';
+
+  @override
+  String get settingsChiropracticToggle => 'Chiropraktyka / Ocena Kręgosłupa';
+
+  @override
+  String get settingsTcmToggle => 'Tradycyjna Medycyna Chińska (TCM)';
+
+  @override
+  String get therapyHerbalTitle => 'Zalecenia Ziołowe';
+
+  @override
+  String get therapyHerbalSubtitle =>
+      'Wyniki stref tęczówki — posortowane według wagi dowodów';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count referencji';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer =>
+      'Sugestie ziołowe są dostarczane wyłącznie w celach edukacyjnych. Przed zastosowaniem skonsultuj się z wykwalifikowanym pracownikiem służby zdrowia.';
+
+  @override
+  String get therapyNutritionTitle => 'Żywienie Dieta 7 Kolorów';
+
+  @override
+  String get therapyNutritionSubtitle =>
+      'Żywność i składniki odżywcze dla narządów stref tęczówki';
+
+  @override
+  String get therapyNutritionFoodsByColor => 'Zalecane Produkty według Koloru';
+
+  @override
+  String get therapyNutritionKeyNutrients => 'Kluczowe Składniki Odżywcze';
+
+  @override
+  String get therapyNutritionHerbs => 'Wspierające Zioła i Przyprawy';
+
+  @override
+  String get therapyNutritionNotes => 'Uwagi Żywieniowe';
+
+  @override
+  String get therapyNutritionTonifying => 'Produkty tonizujące:';
+
+  @override
+  String get therapyNutritionAvoid => 'Ograniczyć / unikać:';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      'Sugestie żywieniowe opierają się na systemie Diety 7 Kolorów i są dostarczane wyłącznie w celach edukacyjnych. Przed zmianą diety skonsultuj się ze specjalistą.';
+
+  @override
+  String get therapyChiroTitle => 'Ocena Chiropraktyczna';
+
+  @override
+  String get therapyChiroSubtitle =>
+      'Segmenty kręgosłupa wskazane przez wyniki stref tęczówki';
+
+  @override
+  String get therapyChiroVertebrae => 'Kręgi';
+
+  @override
+  String get therapyChiroNerveRoots => 'Korzenie Nerwowe';
+
+  @override
+  String get therapyChiroInnervated => 'Struktury Unerwione';
+
+  @override
+  String get therapyChiroSubluxation => 'Możliwe Wskaźniki Podwichnięcia';
+
+  @override
+  String get therapyChiroMuscles => 'Często Zajęte Mięśnie';
+
+  @override
+  String get therapyChiroAdjusting => 'Podejście do Korekty Chiropraktycznej';
+
+  @override
+  String get therapyChiroExercises => 'Ćwiczenia i Rozciąganie w Domu';
+
+  @override
+  String get therapyChiroPostural => 'Uwaga Posturalna';
+
+  @override
+  String get therapyChiroDisclaimer =>
+      'Informacje chiropraktyczne są dostarczane w celach edukacyjnych. Skonsultuj się z licencjonowanym chiropraktykiem w celu diagnozy i leczenia.';
+
+  @override
+  String get therapyTcmTitle => 'Tradycyjna Medycyna Chińska';
+
+  @override
+  String get therapyTcmSubtitle => 'Meridian · Zegar Narządów · Pięć Elementów';
+
+  @override
+  String get therapyTcmMeridianFunctions => 'Funkcje Meridianu';
+
+  @override
+  String get therapyTcmGoverns => 'Zarządza';
+
+  @override
+  String get therapyTcmPatterns => 'Wzorce Nierównowagi';
+
+  @override
+  String get therapyTcmSymptoms => 'Objawy';
+
+  @override
+  String get therapyTcmFormulas => 'Klasyczne Formuły';
+
+  @override
+  String get therapyTcmKeyPoints => 'Kluczowe Punkty dla Tego Wzorca';
+
+  @override
+  String get therapyTcmAcupoints => 'Kluczowe Punkty Akupresury';
+
+  @override
+  String get therapyTcmDiet => 'Terapia Dietetyczna TCM';
+
+  @override
+  String get therapyTcmTonifying => 'Produkty tonizujące:';
+
+  @override
+  String get therapyTcmAvoid => 'Ograniczyć / unikać:';
+
+  @override
+  String get therapyTcmDisclaimer =>
+      'Informacje TCM są dostarczane w celach edukacyjnych. Skonsultuj się z licencjonowanym akupunkturzystą lub praktykiem TCM.';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings =>
+      'Nie wykryto znaczących wyników stref tęczówki do generowania zaleceń.';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => 'Pora roku';
+
+  @override
+  String get therapyClimateLabel => 'Klimat';
+
+  @override
+  String get therapyEmotionLabel => 'Emocja';
+
+  @override
+  String get therapyTasteLabel => 'Smak';
+
+  @override
+  String get therapyNatureLabel => 'Natura';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return 'para: $organ';
+  }
 }

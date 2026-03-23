@@ -1,0 +1,2061 @@
+{
+  "Adrenal": {
+    "nutrients": [
+      "Anthocyanin",
+      "Antioxidant",
+      "Beta-carotene",
+      "Calcium",
+      "Fiber",
+      "Folic Acid",
+      "Iodine",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Phosphorus",
+      "Potassium",
+      "Protein",
+      "Selenium",
+      "Silicon",
+      "Sulfur",
+      "Vitamin A",
+      "Vitamin B",
+      "Vitamin C",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Beef",
+        "Iron",
+        "Cherry tomatoes",
+        "Lycopene",
+        "Pork",
+        "B vitamins",
+        "Lamb",
+        "Zinc"
+      ],
+      "Orange": [
+        "Carrots",
+        "Beta",
+        "Sweet potato",
+        "Vitamin A",
+        "Sweet potatoes",
+        "Shredded carrots"
+      ],
+      "Yellow": [
+        "Squash",
+        "Vitamin C",
+        "Yellow bell pepper",
+        "Bell pepper",
+        "Onion",
+        "Antioxidants",
+        "Yellow squash"
+      ],
+      "Green": [
+        "Spinach",
+        "Magnesium",
+        "Kale",
+        "Broccoli",
+        "Zucchini",
+        "Arugula and Avocado"
+      ],
+      "Blue/Purple": [
+        "Eggplant",
+        "Antioxidants",
+        "Purple cabbage",
+        "Purple squash",
+        "Anthocyanins",
+        "Blueberries",
+        "Red onion"
+      ],
+      "White": [
+        "Onion",
+        "Sulfur compounds",
+        "Garlic",
+        "Antioxidants",
+        "White mushrooms",
+        "Shrimp",
+        "Protein",
+        "Omega"
+      ],
+      "Brown": [
+        "Brown mushrooms",
+        "Antioxidants",
+        "Soy sauce",
+        "Flavor",
+        "Walnuts",
+        "Omega",
+        "Quinoa",
+        "Fiber"
+      ]
+    },
+    "herbs": [
+      "Basil",
+      "Cumin",
+      "Garlic",
+      "Ginger",
+      "Licorice",
+      "Mint",
+      "Rosemary",
+      "Turmeric"
+    ],
+    "organSupportNotes": [
+      "Adrenals: Beef provides 5 mg of iron per 200g to enhance oxygen transport for energy production,",
+      "Adrenals: Pork provides 1 mg of vitamin B1 and 10 mg of niacin per 100g to support energy",
+      "Adrenals: Lamb provides 3 mg of zinc per 200g to support immune function and hormone",
+      "Adrenals: Shrimp provides 40 g of protein and 1 g of omega-3s per 200g to support tissue repair and",
+      "Adrenals: Salmon provides 2 g of omega-3s per 100g to reduce inflammation. Arugula and avocado"
+    ]
+  },
+  "Bladder": {
+    "nutrients": [
+      "Antioxidant",
+      "Beta-carotene",
+      "Betalain",
+      "Calcium",
+      "Fatty acid",
+      "Fiber",
+      "Folate",
+      "Healthy fats",
+      "Iodine",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Phosphorus",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Selenium",
+      "Silicon",
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin K",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Red Bell Peppers",
+        "Vitamin C",
+        "Beef sirloin",
+        "Iron",
+        "Pork tenderloin",
+        "Lamb chops",
+        "Lamb",
+        "Beets"
+      ],
+      "Orange": [
+        "Carrots",
+        "Beta",
+        "Potassium",
+        "Sweet potatoes",
+        "Mango",
+        "Sweet potato",
+        "Orange bell peppers",
+        "Bell peppers"
+      ],
+      "Yellow": [
+        "Yellow Squash",
+        "Vitamin A",
+        "Yellow bell peppers",
+        "Phosphorus",
+        "Yellow zucchini",
+        "Zucchini",
+        "Vitamin C",
+        "Potatoes"
+      ],
+      "Green": [
+        "Spinach",
+        "Magnesium",
+        "Broccoli",
+        "Kale",
+        "Brussels sprouts",
+        "Cabbage",
+        "Parsley or cilantro",
+        "Vitamin K"
+      ],
+      "Blue/Purple": [
+        "Red Onions",
+        "Antioxidants",
+        "Red cabbage",
+        "Manganese",
+        "Purple beets",
+        "Purple onions",
+        "Eggplant",
+        "Purple cabbage"
+      ],
+      "White": [
+        "Chicken Breast",
+        "Protein",
+        "Mushrooms",
+        "Selenium",
+        "Sour cream",
+        "Calcium",
+        "Garlic herb butter",
+        "Cauliflower"
+      ],
+      "Brown": [
+        "Quinoa",
+        "Fiber",
+        "Brown rice",
+        "Silicon",
+        "Walnuts",
+        "Copper",
+        "Cumin",
+        "Trace minerals"
+      ]
+    },
+    "herbs": [
+      "Basil",
+      "Cilantro",
+      "Cumin",
+      "Dandelion",
+      "Garlic",
+      "Ginger",
+      "Parsley",
+      "Rosemary",
+      "Sage",
+      "Thyme",
+      "Turmeric"
+    ],
+    "organSupportNotes": [
+      "Bladder: Red bell peppers provide 93 mg of vitamin C per cup to boost immunity and reduce urinary",
+      "Bladder: Sulforaphane from broccoli reduces inflammation; hydration from vegetables supports waste",
+      "Bladder: Betalains from purple beets reduce inflammation; hydration from vegetables aids waste",
+      "Bladder: Vitamin C from bell peppers (60 mg per ½ cup) reduces inflammation; hydration from",
+      "Bladder: Carrots provide 320 mg of potassium per 1 cup for hydration and fluid balance, zucchini",
+      "Bladder: Mango provides potassium (150 mg per ½ cup) for hydration and fluid balance, yellow bell",
+      "Bladder: Red bell peppers provide 75 mg of vitamin C to reduce urinary tract inflammation, carrots",
+      "Gallbladder: Protein from chicken (40 g per 6 oz) supports bile production. Fiber from mushrooms (1",
+      "Intestines: Fiber from mushrooms (1 g per ½ cup), kale (2 g per cup), and carrots promotes regularity.",
+      "Gallbladder: Protein from turkey (35 g per 6 oz) supports bile production; fiber from sweet potato (4"
+    ]
+  },
+  "Brain": {
+    "nutrients": [
+      "Allicin",
+      "Amino acid",
+      "Anthocyanin",
+      "Antioxidant",
+      "Beta-carotene",
+      "Betalain",
+      "Calcium",
+      "Carotenoid",
+      "Choline",
+      "Fatty acid",
+      "Fiber",
+      "Flavonoid",
+      "Folate",
+      "Healthy fats",
+      "Iodine",
+      "Iron",
+      "Lecithin",
+      "Lycopene",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Omega-6",
+      "Phosphorus",
+      "Polyphenol",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Selenium",
+      "Silicon",
+      "Sulfur",
+      "Vitamin A",
+      "Vitamin B",
+      "Vitamin C",
+      "Vitamin D",
+      "Vitamin E",
+      "Vitamin K",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Steak",
+        "Protein",
+        "Iron",
+        "Red bell peppers",
+        "Vitamin C",
+        "Red onion",
+        "Antioxidants",
+        "Sulfur compounds"
+      ],
+      "Orange": [
+        "Carrots",
+        "Beta",
+        "Potassium",
+        "Orange bell peppers",
+        "Vitamin C",
+        "Carotenoids",
+        "Sweet potatoes",
+        "Bell peppers"
+      ],
+      "Yellow": [
+        "Lemon juice",
+        "Vitamin C",
+        "Yellow bell peppers",
+        "Potassium",
+        "Corn",
+        "Fiber",
+        "B vitamins",
+        "Egg yolk"
+      ],
+      "Green": [
+        "Spinach",
+        "Magnesium",
+        "Vitamin K",
+        "Avocado",
+        "Healthy fats",
+        "Potassium",
+        "Romaine lettuce and beet greens",
+        "Kale"
+      ],
+      "Blue/Purple": [
+        "Blueberries",
+        "Antioxidants",
+        "Anthocyanins",
+        "Red onion",
+        "Sulfur compounds",
+        "Kelp flakes",
+        "Iodine",
+        "Pomegranate seeds"
+      ],
+      "White": [
+        "Egg",
+        "Protein",
+        "Choline",
+        "Turkey",
+        "Iron",
+        "Cod",
+        "Omega",
+        "Mushrooms"
+      ],
+      "Brown": [
+        "Bacon",
+        "Protein",
+        "Iron",
+        "Walnuts",
+        "Omega",
+        "Manganese",
+        "Pumpkin seeds",
+        "Zinc"
+      ]
+    },
+    "herbs": [
+      "Basil",
+      "Cilantro",
+      "Cumin",
+      "Dandelion",
+      "Dill",
+      "Fennel",
+      "Garlic",
+      "Ginger",
+      "Kelp",
+      "Mint",
+      "Parsley",
+      "Rosemary",
+      "Sage",
+      "Seaweed",
+      "Thyme",
+      "Turmeric"
+    ],
+    "organSupportNotes": [
+      "Brain: Iron from chicken (1.5 mg per 6 oz) supports oxygenation; vitamin E from sunflower seeds",
+      "Brain: Iron from beef (1.25 mg) enhances oxygenation; Omega-3s from walnuts (1.25 g) and egg yolk",
+      "Brain: Iron from pork (1.5 mg per 6 oz) boosts oxygen flow; zinc from pumpkin seeds (2 mg per 2",
+      "Brain: Iron from lamb (2.5 mg per 6 oz) supports oxygenation; vitamin E from sunflower seeds (7.4",
+      "Brain: Omega-3s from salmon (1.8 g per 6 oz) boost memory; zinc from pumpkin seeds (2 mg per 2",
+      "Brain: Betalains from beets (trace amounts) improve blood flow for brain health; Iron from tuna (1",
+      "Digestive System: Menthol relaxes digestive tract muscles, easing discomfort, while alfalfa’s",
+      "Immune System: Vitamins A, C, and E act as antioxidants, strengthening immunity.",
+      "Bone Health: Calcium and magnesium support strong bones and teeth.",
+      "Description: This invigorating blend soothes digestion, boosts immunity, and fortifies bones with"
+    ]
+  },
+  "Colon": {
+    "nutrients": [
+      "Anthocyanin",
+      "Antioxidant",
+      "Calcium",
+      "Choline",
+      "Fiber",
+      "Folic Acid",
+      "Healthy fats",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Phosphorus",
+      "Potassium",
+      "Quercetin",
+      "Silicon",
+      "Sulfur",
+      "Vitamin C"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Red bell peppers",
+        "Vitamin C",
+        "Antioxidants",
+        "Ground beef",
+        "Iron",
+        "Steak",
+        "Tomatoes",
+        "Lycopene"
+      ],
+      "Orange": [
+        "Carrots",
+        "Potassium",
+        "Orange bell pepper",
+        "Vitamin C",
+        "Orange Bell peppers",
+        "Orange juice"
+      ],
+      "Yellow": [
+        "Yellow squash",
+        "Phosphorus",
+        "Yellow bell peppers",
+        "Vitamin C",
+        "Yellow zucchini",
+        "Bell peppers",
+        "Squash"
+      ],
+      "Green": [
+        "Broccoli",
+        "Magnesium",
+        "Celery",
+        "Kale",
+        "Zucchini",
+        "Spinach",
+        "Fiber",
+        "Bok choy"
+      ],
+      "Blue/Purple": [
+        "Red onions",
+        "Manganese",
+        "Antioxidants",
+        "Red cabbage",
+        "Anthocyanins"
+      ],
+      "White": [
+        "Chicken breast",
+        "Iron",
+        "White beans",
+        "Calcium",
+        "White mushrooms",
+        "Antioxidants",
+        "White onion",
+        "Greek yogurt"
+      ],
+      "Brown": [
+        "Quinoa",
+        "Silicon",
+        "Brown rice",
+        "Sweet potatoes",
+        "Fiber",
+        "Walnuts",
+        "Omega",
+        "Mushrooms"
+      ]
+    },
+    "herbs": [
+      "Garlic",
+      "Ginger",
+      "Oregano",
+      "Rosemary"
+    ],
+    "organSupportNotes": [
+      "Colon: Fiber from quinoa (3 g) and broccoli (2 g) promotes regular bowel movements; probiotics",
+      "Intestines: Magnesium from broccoli (20 mg) supports muscle relaxation in the digestive tract.",
+      "Colon: Fiber from beans (8 g) and brown rice (3 g) promotes elimination; lycopene from tomatoes",
+      "Intestines: Prebiotics from beans feed beneficial gut bacteria.",
+      "Colon: Fiber from sweet potatoes (4 g per cup) and kale (2.5 g per cup) promotes regularity; quercetin",
+      "Colon: Fiber from zucchini (2 g), yellow squash (1 g), and walnuts (1 g) promotes regularity.",
+      "Colon: Fiber from orange bell peppers, yellow zucchini, mushrooms, and spinach promotes",
+      "Colon: Fiber from bok choy (2 g per cup) and walnuts (1 g per 2 tbsp) promotes regularity. Quercetin",
+      "Colon: Fiber from breadcrumbs (2 g) and arugula (1 g) promotes regularity; quercetin from red"
+    ]
+  },
+  "Heart": {
+    "nutrients": [
+      "Allicin",
+      "Amino acid",
+      "Anthocyanin",
+      "Antioxidant",
+      "Beta-carotene",
+      "Calcium",
+      "Carotenoid",
+      "Fatty acid",
+      "Fiber",
+      "Flavonoid",
+      "Folate",
+      "Healthy fats",
+      "Iodine",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Phosphorus",
+      "Polyphenol",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Selenium",
+      "Silicon",
+      "Sulfur",
+      "Vitamin A",
+      "Vitamin B",
+      "Vitamin C",
+      "Vitamin D",
+      "Vitamin E",
+      "Vitamin K",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Beef",
+        "Protein",
+        "Iron",
+        "Pomegranate",
+        "Antioxidants",
+        "Bell pepper",
+        "Cabbage",
+        "Steak"
+      ],
+      "Orange": [
+        "Carrots",
+        "Beta",
+        "Potassium",
+        "Mango",
+        "Apricots",
+        "Vitamin C",
+        "Shredded carrots",
+        "Oranges"
+      ],
+      "Yellow": [
+        "Potatoes",
+        "Vitamin C",
+        "Potassium",
+        "Pineapple",
+        "Yellow bell peppers",
+        "Antioxidants",
+        "Yellow bell pepper",
+        "Red bell peppers"
+      ],
+      "Green": [
+        "Spinach",
+        "Magnesium",
+        "Vitamin K",
+        "Spinach and Swiss chard leaves",
+        "Kale and avocado",
+        "Healthy fats",
+        "Kale and celery",
+        "Fiber"
+      ],
+      "Blue/Purple": [
+        "Shallots",
+        "Antioxidants",
+        "Red onion",
+        "Red onions",
+        "Purple cabbage",
+        "Packed with antioxidants",
+        "Anthocyanins"
+      ],
+      "White": [
+        "Swiss chard stem",
+        "Calcium",
+        "Cauliflower",
+        "Fiber",
+        "Vitamin C",
+        "White cucumber and peeled apple",
+        "Hydration",
+        "White mushrooms"
+      ],
+      "Brown": [
+        "Apple cider vinegar",
+        "Trace minerals",
+        "Walnuts",
+        "Omega",
+        "Smoked paprika",
+        "Brown mushrooms",
+        "Selenium",
+        "Antioxidants"
+      ]
+    },
+    "herbs": [
+      "Basil",
+      "Cumin",
+      "Dill",
+      "Fennel",
+      "Garlic",
+      "Ginger",
+      "Oregano",
+      "Parsley",
+      "Rosemary",
+      "Seaweed",
+      "Thyme",
+      "Turmeric"
+    ],
+    "organSupportNotes": [
+      "Immune System: Zinc from pumpkin seeds (1.2 mg) boosts immunity; Vitamin C from pineapple (40",
+      "Heart: Potassium from oranges (292 mg per ½ cup) regulates blood pressure; omega-3s from walnuts",
+      "Heart: Potassium from sweet potatoes (450 mg per 1 cup) regulates blood pressure; magnesium from",
+      "Heart: Potassium from apples (75 mg per ½ cup) regulates blood pressure; omega-3s from walnuts",
+      "Heart: Potassium from carrots (370 mg per 1 cup) regulates blood pressure; magnesium from Brussels",
+      "Heart: Potassium from tomato sauce (290 mg per 1 cup) regulates blood pressure; magnesium from",
+      "Heart: Omega-3s from salmon (1.5 g per 6 oz) reduce inflammation; Potassium from butternut squash",
+      "Heart: Potassium from mango (403 mg per 1 cup) regulates blood pressure; magnesium from spinach",
+      "Cardiovascular System: OPCs improve circulation and strengthen blood vessels, while",
+      "Immune System: Vitamins C and B enhance immunity and energy."
+    ]
+  },
+  "Kidney": {
+    "nutrients": [
+      "Allicin",
+      "Anthocyanin",
+      "Antioxidant",
+      "Beta-carotene",
+      "Calcium",
+      "Choline",
+      "Fiber",
+      "Healthy fats",
+      "Iodine",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Phosphorus",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Selenium",
+      "Silicon",
+      "Vitamin C",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Cherry tomatoes",
+        "Lycopene",
+        "Red onion",
+        "Quercetin",
+        "Beef",
+        "Iron",
+        "Pork",
+        "Protein"
+      ],
+      "Orange": [
+        "Shredded carrots",
+        "Beta",
+        "Carrots",
+        "Potassium",
+        "Orange juice",
+        "Bell pepper",
+        "Potassium for fluid balance"
+      ],
+      "Yellow": [
+        "Yellow bell pepper",
+        "Vitamin C",
+        "Bell peppers",
+        "Bell pepper",
+        "Corn",
+        "Fiber",
+        "Yellow squash",
+        "Vitamin C for antioxidant protection"
+      ],
+      "Green": [
+        "Mixed greens",
+        "Magnesium",
+        "Kale",
+        "Rosemary",
+        "Antioxidants",
+        "Asparagus",
+        "Magnesium for muscle and nerve function",
+        "Spinach"
+      ],
+      "Blue/Purple": [
+        "Blueberries",
+        "Anthocyanins",
+        "Purple cabbage",
+        "Cabbage",
+        "Antioxidants",
+        "Eggplant",
+        "Antioxidants for cell protection",
+        "Onion"
+      ],
+      "White": [
+        "Chicken",
+        "Protein",
+        "Turkey",
+        "Cauliflower",
+        "Fiber",
+        "Vitamin C",
+        "Garlic",
+        "Allicin"
+      ],
+      "Brown": [
+        "Walnuts",
+        "Healthy fats",
+        "Quinoa",
+        "Fiber",
+        "Apple cider vinegar",
+        "Trace minerals",
+        "Honey",
+        "Soy sauce"
+      ]
+    },
+    "herbs": [
+      "Basil",
+      "Cumin",
+      "Dandelion",
+      "Dill",
+      "Fennel",
+      "Garlic",
+      "Ginger",
+      "Parsley",
+      "Rosemary"
+    ],
+    "organSupportNotes": [
+      "Kidneys: Protein from chicken (54 g per 6 oz): Supports tissue repair without overloading the",
+      "Kidneys: Kale provides 30 mg of magnesium per 1 cup to support muscle and nerve function, quinoa",
+      "Kidneys: Carrots provide potassium (200 mg) to regulate fluid balance and blood pressure, cabbage",
+      "Kidneys: Kale provides magnesium (50 mg per 1 cup) to support muscle and nerve function, orange",
+      "Kidneys: Asparagus provides magnesium (20 mg) Bell peppers and yellow squash offer potassium",
+      "Kidneys: Protein from salmon (30 g ) and almonds (3 g) supports tissue repair without overloading"
+    ]
+  },
+  "Liver": {
+    "nutrients": [
+      "Allicin",
+      "Amino acid",
+      "Anthocyanin",
+      "Antioxidant",
+      "Beta-carotene",
+      "Betalain",
+      "Calcium",
+      "Fatty acid",
+      "Fiber",
+      "Flavonoid",
+      "Folate",
+      "Healthy fats",
+      "Iodine",
+      "Iron",
+      "Lecithin",
+      "Lycopene",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Phosphorus",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Selenium",
+      "Silicon",
+      "Sulfur",
+      "Vitamin A",
+      "Vitamin B",
+      "Vitamin C",
+      "Vitamin D",
+      "Vitamin E",
+      "Vitamin K",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Red cabbage",
+        "Antioxidants",
+        "Beets",
+        "Iron",
+        "Salmon",
+        "Omega",
+        "Beef liver",
+        "Vitamin A"
+      ],
+      "Orange": [
+        "Carrots",
+        "Beta",
+        "Potassium",
+        "Oranges",
+        "Vitamin C",
+        "Butternut squash",
+        "Vitamin A",
+        "Sweet potatoes"
+      ],
+      "Yellow": [
+        "Yellow bell peppers",
+        "Vitamin C",
+        "Phosphorus",
+        "Lemon",
+        "Potassium",
+        "Farro",
+        "Yellow onions",
+        "Yellow squash"
+      ],
+      "Green": [
+        "Kale",
+        "Magnesium",
+        "Arugula and dandelion greens",
+        "Fiber",
+        "Mixed greens",
+        "Spinach",
+        "Swiss chard"
+      ],
+      "Blue/Purple": [
+        "Blueberries",
+        "Antioxidants",
+        "Shallots",
+        "Beets",
+        "Red cabbage",
+        "Red onions",
+        "Eggplant"
+      ],
+      "White": [
+        "Onion",
+        "Sulfur compounds",
+        "Fennel",
+        "Fiber",
+        "Vitamin C",
+        "Almond slivers",
+        "Magnesium",
+        "Healthy fats"
+      ],
+      "Brown": [
+        "Brown mushrooms",
+        "Selenium",
+        "Walnuts",
+        "Copper",
+        "Paprika",
+        "Trace minerals",
+        "Barley",
+        "Silicon"
+      ]
+    },
+    "herbs": [
+      "Astragalus",
+      "Basil",
+      "Chamomile",
+      "Cumin",
+      "Dandelion",
+      "Dill",
+      "Fennel",
+      "Garlic",
+      "Ginger",
+      "Kelp",
+      "Mint",
+      "Parsley",
+      "Rosemary",
+      "Sage",
+      "Turmeric"
+    ],
+    "organSupportNotes": [
+      "Liver: Beef liver provides 16,000 IU of vitamin A to support cell regeneration and 5 mg of iron per to",
+      "Liver: Sweet potatoes provide 400 mg of potassium per 1 cup to aid detoxification by flushing toxins,",
+      "Liver: Spinach offers 24 mg of magnesium per 1 cup to support enzyme function, olive oil delivers 10",
+      "Liver: Beet antioxidants reduce oxidative stress; magnesium from greens (79 mg per cup) supports",
+      "Liver: Halibut provides 1 mg of iron per 6 oz to support detoxification and 35 g of protein per 6 oz for",
+      "Liver: Trout provides 1 mg of iron per 6 oz to aid detoxification and 35 g of protein per 6 oz for cell"
+    ]
+  },
+  "Lung": {
+    "nutrients": [
+      "Allicin",
+      "Antioxidant",
+      "Beta-carotene",
+      "Betalain",
+      "Calcium",
+      "Choline",
+      "Collagen",
+      "Fiber",
+      "Flavonoid",
+      "Folic Acid",
+      "Healthy fats",
+      "Iodine",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Phosphorus",
+      "Polyphenol",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Selenium",
+      "Silicon",
+      "Sulfur",
+      "Vitamin C",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Tomatoes",
+        "Lycopene",
+        "Red beets",
+        "Antioxidants",
+        "Lamb",
+        "Iron",
+        "Beef",
+        "Pork chops"
+      ],
+      "Orange": [
+        "Carrots",
+        "Potassium",
+        "Shredded carrots",
+        "Beta"
+      ],
+      "Yellow": [
+        "Bell peppers",
+        "Vitamin C",
+        "Squash",
+        "Yellow bell peppers",
+        "Potatoes",
+        "Yellow squash"
+      ],
+      "Green": [
+        "Spinach",
+        "Magnesium",
+        "Broccoli",
+        "Zucchini",
+        "Celery",
+        "Mixed greens"
+      ],
+      "Blue/Purple": [
+        "Red onions",
+        "Quercetin",
+        "Red cabbage",
+        "Antioxidants",
+        "Shredded purple cabbage"
+      ],
+      "White": [
+        "Chicken",
+        "Protein",
+        "Turkey",
+        "Feta cheese",
+        "Calcium",
+        "White mushrooms",
+        "Garlic herb butter",
+        "Healthy fats"
+      ],
+      "Brown": [
+        "Brown rice",
+        "Selenium",
+        "Fiber",
+        "Quinoa",
+        "Silicon",
+        "Beef broth",
+        "Trace minerals",
+        "Walnuts"
+      ]
+    },
+    "herbs": [
+      "Cumin",
+      "Garlic",
+      "Rosemary",
+      "Thyme"
+    ],
+    "organSupportNotes": [
+      "Lungs and Bronchials: Protein from chicken aids in tissue repair and strengthens immune function.",
+      "Lungs and Bronchials: Iron from turkey (1.2 mg per 6 oz) supports oxygenation; potassium from",
+      "Lungs and Bronchials: Iron from lamb (3.5 mg) supports oxygenation; Potassium from shredded",
+      "Lungs and Bronchials: Iron from beef (2.5 mg) supports oxygenation, potassium from carrots (400",
+      "Lungs and Bronchials: Iron from pork chops (1.2 mg) supports oxygenation, potassium from apples",
+      "Lungs and Bronchials: Iron from salmon (0.5 mg per 6 oz) helps with oxygenation; Potassium from",
+      "Lungs and Bronchials: Iron from shrimp (1.5 mg per 8 oz) supports oxygen transport; Potassium from"
+    ]
+  },
+  "Lymphatic": {
+    "nutrients": [
+      "Allicin",
+      "Amino acid",
+      "Antioxidant",
+      "Fatty acid",
+      "Fiber",
+      "Healthy fats",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Omega-3",
+      "Phosphorus",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Vitamin A",
+      "Vitamin C"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Red bell peppers",
+        "Vitamin C",
+        "Beef",
+        "Iron",
+        "Pork",
+        "Venison",
+        "Salmon",
+        "Omega"
+      ],
+      "Orange": [
+        "Carrots",
+        "Potassium",
+        "Shredded carrots",
+        "Butternut squash",
+        "Vitamin A",
+        "Mango"
+      ],
+      "Yellow": [
+        "Yellow zucchini",
+        "Phosphorus",
+        "Sweet corn",
+        "Fiber",
+        "Squash",
+        "Bell peppers",
+        "Vitamin C",
+        "Parsnips"
+      ],
+      "Green": [
+        "Mixed greens",
+        "Magnesium",
+        "Kale and Avocado",
+        "Healthy fats",
+        "Spinach",
+        "Kale",
+        "Swiss chard"
+      ],
+      "Blue/Purple": [
+        "Blueberries",
+        "Antioxidants",
+        "Red onions",
+        "Cranberries",
+        "Purple cabbage"
+      ],
+      "White": [
+        "Chicken",
+        "Protein",
+        "Turkey",
+        "Iron",
+        "White cauliflower",
+        "Fiber",
+        "Apple",
+        "Garlic"
+      ],
+      "Brown": [
+        "Walnuts",
+        "Omega",
+        "3 fatty acids",
+        "Brown mushrooms",
+        "Antioxidants",
+        "Cinnamon",
+        "Fiber",
+        "Russet potatoes"
+      ]
+    },
+    "herbs": [
+      "Cinnamon",
+      "Echinacea",
+      "Garlic",
+      "Kelp",
+      "Seaweed",
+      "Thyme"
+    ],
+    "organSupportNotes": [
+      "Lymphatic System: Omega-3s from walnuts (2.5 g) reduce inflammation; antioxidants from",
+      "Intestines: Fiber from mixed greens (2 g) and carrots (1 g) promotes regularity.",
+      "Lymphatic System: Iron from beef (2 mg per 6 oz) supports energy for detoxification; antioxidants",
+      "Intestines: Fiber from cauliflower (2 g per ½ cup) and spinach (2 g per cup) promotes regularity.",
+      "Lymphatic System: Antioxidants from cranberries (10 mg) support detoxification; vitamin A from",
+      "Intestines: Fiber from kale (2 g), butternut squash (1.5 g), and apple (2 g) promotes regularity.",
+      "Lymphatic System: Iron from venison (2 mg) supports energy for detoxification; antioxidants from",
+      "Intestines: Fiber from potatoes (2 g) and Swiss chard (2 g) promotes regularity.",
+      "Lymphatic System: Antioxidants from tomatoes (lycopene) and purple cabbage (10 mg) support",
+      "Intestines: Fiber from corn tortillas (2 g) and kale (2 g) promotes regularity."
+    ]
+  },
+  "Pancreas": {
+    "nutrients": [
+      "Antioxidant",
+      "Calcium",
+      "Fiber",
+      "Iron",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Phosphorus",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Selenium",
+      "Silicon",
+      "Vitamin C",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Venison",
+        "Iron",
+        "Bison",
+        "Rabbit",
+        "Goat",
+        "Red chili peppers",
+        "Capsaicin",
+        "Beets"
+      ],
+      "Orange": [
+        "Shredded carrots",
+        "Potassium",
+        "Orange tomatoes",
+        "Carrots",
+        "Oranges"
+      ],
+      "Yellow": [
+        "Yellow bell peppers",
+        "Vitamin C",
+        "Yellow onions",
+        "Antioxidants",
+        "Parsnips",
+        "Bell peppers",
+        "Lemon zest"
+      ],
+      "Green": [
+        "Spinach",
+        "Magnesium",
+        "Avocado",
+        "Celery",
+        "Arugula",
+        "Green beans"
+      ],
+      "Blue/Purple": [
+        "Blueberries",
+        "Antioxidants",
+        "Red onions"
+      ],
+      "White": [
+        "White beans",
+        "Protein",
+        "White mushrooms",
+        "Fiber",
+        "Selenium",
+        "Garlic",
+        "Antioxidants",
+        "Halibut"
+      ],
+      "Brown": [
+        "Brown mushrooms",
+        "Antioxidants",
+        "Whole wheat bun",
+        "Fiber",
+        "Chicken broth",
+        "Trace minerals",
+        "Curry powder",
+        "Fennel seeds"
+      ]
+    },
+    "herbs": [
+      "Cumin",
+      "Dandelion",
+      "Fennel",
+      "Garlic",
+      "Licorice",
+      "Rosemary"
+    ],
+    "organSupportNotes": [
+      "Pancreas: Venison provides 35 g of protein to fuel enzyme production. Spinach offers 157 mg of",
+      "Pancreas: Bison provides 42 g of protein to aid enzyme production. Avocado offers 20 mg of",
+      "Pancreas: Rabbit provides 35 g of protein per 6 oz to aid enzyme production, celery offers 10 mg of",
+      "Pancreas: Goat provides 40 g of protein per 6 oz to aid enzyme production, spinach offers 24 mg of",
+      "Pancreas: Halibut provides 42 g of protein per 6 oz to aid enzyme production, arugula offers 10 mg of",
+      "Pancreas: Sole provides 35 g of protein per 6 oz to fuel enzyme production. Green beans supply 25"
+    ]
+  },
+  "Sex Glands": {
+    "nutrients": [
+      "Allicin",
+      "Antioxidant",
+      "Beta-carotene",
+      "Calcium",
+      "Fatty acid",
+      "Fiber",
+      "Healthy fats",
+      "Iodine",
+      "Iron",
+      "Lecithin",
+      "Lycopene",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Phosphorus",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Selenium",
+      "Silicon",
+      "Vitamin C",
+      "Vitamin E",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Beef",
+        "Iron",
+        "Lamb",
+        "Venison",
+        "Goat",
+        "Red Kale",
+        "Antioxidants",
+        "Red Snapper"
+      ],
+      "Orange": [
+        "Carrots",
+        "Potassium",
+        "Apricots",
+        "Sliced carrots",
+        "Beta",
+        "Oranges"
+      ],
+      "Yellow": [
+        "Bell peppers",
+        "Vitamin C",
+        "Squash",
+        "Yellow bell peppers",
+        "Parsnips"
+      ],
+      "Green": [
+        "Kale",
+        "Magnesium",
+        "Spinach",
+        "Zucchini",
+        "Vitamin C",
+        "Green beans",
+        "Brussels sprouts"
+      ],
+      "Blue/Purple": [
+        "Red onions",
+        "Antioxidants"
+      ],
+      "White": [
+        "Garlic",
+        "Allicin",
+        "Sesame seeds",
+        "Healthy fats",
+        "White mushrooms",
+        "Fiber",
+        "Selenium",
+        "White: Garlic"
+      ],
+      "Brown": [
+        "Walnuts",
+        "Omega",
+        "Brown rice",
+        "Fiber",
+        "Idaho potatoes",
+        "Potassium",
+        "Beef broth",
+        "Trace minerals"
+      ]
+    },
+    "herbs": [
+      "Cumin",
+      "Garlic",
+      "Ginger",
+      "Kelp"
+    ],
+    "organSupportNotes": [
+      "Sex Glands: Beef provides 42 g of protein per 6 oz to drive hormone production, kale offers 40 mg of",
+      "Sex Glands: Lamb provides 35 g of protein per 6 oz to fuel hormone production. Spinach offers 40",
+      "Sex Glands: Venison provides 42 g of protein per 6 oz to drive hormone production. Zucchini offers",
+      "Sex Glands: Goat provides 42 g of protein per 6 oz to drive hormone production, spinach offers 40",
+      "Sex Glands: Halibut provides 42 g of protein per 6 oz to fuel hormone production, green beans offer",
+      "Sex Glands: Red Snapper provides approximately 30-35 g of protein per 6 oz to drive hormone"
+    ]
+  },
+  "Skin": {
+    "nutrients": [
+      "Allicin",
+      "Anthocyanin",
+      "Antioxidant",
+      "Beta-carotene",
+      "Calcium",
+      "Choline",
+      "Collagen",
+      "Fatty acid",
+      "Fiber",
+      "Flavonoid",
+      "Folate",
+      "Folic Acid",
+      "Healthy fats",
+      "Iodine",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Phosphorus",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Selenium",
+      "Silicon",
+      "Sulfur",
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin E",
+      "Vitamin K",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Strawberries",
+        "Vitamin C",
+        "Cherry tomatoes",
+        "Lycopene",
+        "Duck",
+        "Iron",
+        "Beets",
+        "Antioxidants"
+      ],
+      "Orange": [
+        "Shredded carrots",
+        "Beta",
+        "Potassium",
+        "Orange bell peppers",
+        "Carrots",
+        "Vitamin C",
+        "Sweet potatoes",
+        "Vitamin A"
+      ],
+      "Yellow": [
+        "Squash",
+        "Vitamin C",
+        "Yellow beans",
+        "Fiber",
+        "Yellow bell pepper",
+        "Sweet corn",
+        "Turmeric",
+        "Manganese"
+      ],
+      "Green": [
+        "Green beans",
+        "Magnesium",
+        "Kale",
+        "Avocado and Cilantro",
+        "Healthy fats",
+        "Antioxidants",
+        "Calcium",
+        "Broccoli"
+      ],
+      "Blue/Purple": [
+        "Red onions",
+        "Antioxidants",
+        "Purple cabbage",
+        "Red onion",
+        "Potassium",
+        "Quercetin"
+      ],
+      "White": [
+        "Sliced almonds",
+        "Healthy fats",
+        "Olive oil",
+        "Turkey",
+        "Protein",
+        "Chicken",
+        "Zinc",
+        "Garlic"
+      ],
+      "Brown": [
+        "Walnuts",
+        "Trace minerals",
+        "Ginger",
+        "Smoked paprika",
+        "Flavor",
+        "Sesame seeds",
+        "Calcium",
+        "Healthy fats"
+      ]
+    },
+    "herbs": [
+      "Cilantro",
+      "Garlic",
+      "Ginger",
+      "Kelp",
+      "Turmeric"
+    ],
+    "organSupportNotes": [
+      "Immune System: Vitamin C from yellow bell peppers (50 mg) boosts immunity; Zinc from sunflower",
+      "Skin: Vitamin C from mango (50 mg) and red bell peppers (95 mg) supports collagen production;",
+      "Skin: Vitamin C from red bell pepper supports collagen production; zinc from turkey promotes skin",
+      "Skin: Vitamin C from citrus supports collagen production; healthy fats from avocado and omega-3s",
+      "Skin: Vitamin A from carrots (267 mg RAE) supports skin cell turnover; vitamin C from parsnips",
+      "Skin: Omega-3 fatty acids from salmon (1.5 g) reduce inflammation; vitamin C from citrus supports",
+      "Skin: Omega-3 fatty acids from shrimp reduce inflammation; vitamin A from carrots supports skin",
+      "Immune System: Vitamins A and C, plus citral’s antimicrobial properties, bolster defenses.",
+      "Digestive System: Citral reduces inflammation, aiding digestion.",
+      "Skin Health: Antioxidants from vitamins A and C promote healthy, radiant skin."
+    ]
+  },
+  "Small Intestine": {
+    "nutrients": [
+      "Allicin",
+      "Antioxidant",
+      "Beta-carotene",
+      "Calcium",
+      "Fiber",
+      "Folic Acid",
+      "Healthy fats",
+      "Iodine",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Omega-3",
+      "Phosphorus",
+      "Potassium",
+      "Protein",
+      "Silicon",
+      "Sulfur",
+      "Vitamin C",
+      "Vitamin K",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Red bell peppers",
+        "Vitamin C",
+        "Pork",
+        "Iron",
+        "Lamb",
+        "Beef",
+        "Red Bell Pepper",
+        "Tomatoes"
+      ],
+      "Orange": [
+        "Butternut squash",
+        "Potassium",
+        "Mango",
+        "Orange bell peppers",
+        "Vitamin C",
+        "Kimchi",
+        "Probiotics",
+        "Carrots"
+      ],
+      "Yellow": [
+        "Apricots",
+        "Beta",
+        "Bell peppers",
+        "Phosphorus",
+        "Yellow tomatoes",
+        "Yellow onion",
+        "Antioxidants",
+        "Yellow Lentils"
+      ],
+      "Green": [
+        "Collard greens",
+        "Magnesium",
+        "Green cabbage",
+        "Arugula and Cucumber",
+        "Hydration",
+        "Bok choy",
+        "Swiss chard",
+        "Edamame and Watercress"
+      ],
+      "Blue/Purple": [
+        "Purple onions",
+        "Antioxidants",
+        "Red onions",
+        "Purple eggplant",
+        "Purple cabbage",
+        "Collard greens"
+      ],
+      "White": [
+        "Chicken",
+        "Protein",
+        "Garlic",
+        "Antioxidants",
+        "Yogurt",
+        "Calcium",
+        "Parsnips",
+        "Fiber"
+      ],
+      "Brown": [
+        "Cumin",
+        "Flavor",
+        "Fish sauce",
+        "Walnuts",
+        "Omega",
+        "Healthy fats",
+        "Sesame seeds",
+        "Calcium"
+      ]
+    },
+    "herbs": [
+      "Cinnamon",
+      "Cumin",
+      "Garlic",
+      "Ginger",
+      "Mint",
+      "Parsley",
+      "Turmeric"
+    ],
+    "organSupportNotes": [
+      "Small Intestine: Protein from chicken (25 g per 6 oz) aids enzyme production; fiber from butternut",
+      "Intestines: Fiber from apricots (2 g per 1/2 cup), collard greens (2 g per cup), and bell peppers (1 g",
+      "Small Intestine: Protein from pork (20 g) aids enzyme production; fiber from cabbage (1.5 g)",
+      "Intestines: Fiber from cabbage (1.5 g) supports regularity and digestive health.",
+      "Small Intestine: Protein from lamb (30 g per 6 oz) aids enzyme production; probiotics from yogurt (1",
+      "Intestines: Fiber from arugula (1 g per cup) and vegetables promotes regularity.",
+      "Small Intestine: Protein from beef (48 g per 6 oz) aids enzyme production; probiotics from kimchi (1",
+      "Intestines: Fiber from bok choy (1 g per cup), parsnips (3 g per ½ cup), and purple cabbage (1 g per ½",
+      "Small Intestine: Protein from pork (35 g) aids enzyme production; fiber from lentils (8 g) promotes",
+      "Intestines: Fiber from lentils (8 g) and Swiss chard (3.7 g) supports regularity and digestive health."
+    ]
+  },
+  "Spine": {
+    "nutrients": [
+      "Anthocyanin",
+      "Antioxidant",
+      "Beta-carotene",
+      "Betalain",
+      "Calcium",
+      "Collagen",
+      "Fiber",
+      "Healthy fats",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Selenium",
+      "Silicon",
+      "Sulfur",
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin K",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Tomatoes",
+        "Lycopene",
+        "Beef",
+        "Iron",
+        "Ham",
+        "Protein",
+        "Venison",
+        "Lamb"
+      ],
+      "Orange": [
+        "Carrots",
+        "Potassium",
+        "Bell peppers",
+        "Apricots",
+        "Oranges"
+      ],
+      "Yellow": [
+        "Bell Peppers",
+        "Vitamin C",
+        "Sweet corn",
+        "Parsnips",
+        "Squash"
+      ],
+      "Green": [
+        "Spinach",
+        "Magnesium",
+        "Broccoli",
+        "Kale",
+        "Arugula",
+        "Asparagus"
+      ],
+      "Blue/Purple": [
+        "Purple asparagus",
+        "Antioxidants",
+        "Red onions",
+        "Purple cabbage",
+        "Eggplant",
+        "Anthocyanins"
+      ],
+      "White": [
+        "Turnips",
+        "Fiber",
+        "White mushrooms",
+        "Antioxidants",
+        "Fennel",
+        "Garlic",
+        "Sulfur compounds",
+        "Halibut"
+      ],
+      "Brown": [
+        "Almonds",
+        "Calcium",
+        "Walnuts",
+        "Omega",
+        "Chickpeas",
+        "Protein",
+        "Honey",
+        "Trace minerals"
+      ]
+    },
+    "herbs": [
+      "Dandelion",
+      "Fennel",
+      "Garlic",
+      "Thyme"
+    ],
+    "organSupportNotes": [
+      "Spine: Almonds provide 50 mg of calcium for bone density, spinach offers 30 mg of magnesium for",
+      "Spine: Beef provides 2.5 mg of iron per 6 oz to fuel energy for bone health and oxygen transport.",
+      "Spine: Ham provides protein (approximately 35 g per 6 oz) to support the muscles around the spine,",
+      "Spine: Venison provides 5 mg of iron per 6 oz to fuel energy for bone health, kale offers 30 mg of",
+      "Spine: Lamb provides 2.5 mg of iron per 6 oz to fuel energy for bone health, broccoli offers 40 mg of",
+      "Spine: Halibut provides protein (30 g) for muscle health around the spine, beets offer betalains for",
+      "Spine: Almonds provide 50 mg of calcium to support bone density, asparagus offers 20 mg of"
+    ]
+  },
+  "Spleen": {
+    "nutrients": [
+      "Allicin",
+      "Antioxidant",
+      "Beta-carotene",
+      "Calcium",
+      "Fiber",
+      "Healthy fats",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Phosphorus",
+      "Potassium",
+      "Protein",
+      "Selenium",
+      "Sulfur",
+      "Vitamin A",
+      "Vitamin C",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Bison",
+        "Iron",
+        "Goat",
+        "Zinc",
+        "Red bell peppers",
+        "Vitamin C",
+        "Beef",
+        "Red bell pepper"
+      ],
+      "Orange": [
+        "Sweet potato",
+        "Potassium",
+        "Carrots",
+        "Vitamin A",
+        "Shredded carrots",
+        "Beta",
+        "Apricots"
+      ],
+      "Yellow": [
+        "Yellow bell peppers",
+        "Antioxidants",
+        "Vitamin C",
+        "Yellow squash",
+        "Farro",
+        "Fiber",
+        "Ginger",
+        "Yellow bell pepper"
+      ],
+      "Green": [
+        "Collard greens",
+        "Magnesium",
+        "Dandelion greens",
+        "Turnip greens",
+        "Arugula",
+        "Purslane",
+        "Mustard greens",
+        "Spinach"
+      ],
+      "Blue/Purple": [
+        "Shallots",
+        "Antioxidants",
+        "Figs",
+        "Purple cabbage",
+        "Red onion"
+      ],
+      "White": [
+        "Garlic",
+        "Sulfur compounds",
+        "Onion",
+        "Pheasant",
+        "Protein",
+        "Iron",
+        "Allicin",
+        "Cornish game hen"
+      ],
+      "Brown": [
+        "Mushrooms",
+        "Selenium",
+        "Cumin",
+        "Flavor",
+        "Walnuts",
+        "Zinc",
+        "Brown mushrooms",
+        "Chickpeas"
+      ]
+    },
+    "herbs": [
+      "Astragalus",
+      "Cumin",
+      "Dandelion",
+      "Echinacea",
+      "Garlic",
+      "Ginger",
+      "Licorice"
+    ],
+    "organSupportNotes": [
+      "Spleen: Iron from bison (2.25 mg) enhances blood health; magnesium from collard greens (20 mg)",
+      "Spleen: Zinc from goat meat (3.4 mg) boosts immunity; magnesium from dandelion greens (18 mg)",
+      "Spleen: Iron from pheasant enhances blood health; Zinc from walnuts (0.5 mg) boosts immunity;",
+      "Spleen: Iron from beef (2.5 mg) enhances blood health; selenium from brown mushrooms (5 mcg)",
+      "Spleen: Protein from Cornish game hen (23 g) and vitamin C from red bell pepper (75 mg) support",
+      "Spleen: Zinc from cod (0.5 mg) strengthens immunity; magnesium from mustard greens (7.5 mg)",
+      "Spleen: Zinc from oysters (10 mg) strengthens immunity; magnesium from spinach (24 mg) supports"
+    ]
+  },
+  "Stomach": {
+    "nutrients": [
+      "Allicin",
+      "Amino acid",
+      "Anthocyanin",
+      "Antioxidant",
+      "Beta-carotene",
+      "Calcium",
+      "Fatty acid",
+      "Fiber",
+      "Folic Acid",
+      "Healthy fats",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Phosphorus",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Selenium",
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin K",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Bell peppers",
+        "Vitamin C",
+        "Red bell peppers",
+        "Antioxidants",
+        "Pork",
+        "Iron",
+        "Roast beef",
+        "Lamb"
+      ],
+      "Orange": [
+        "Carrots",
+        "Potassium",
+        "Orange bell peppers",
+        "Beta",
+        "Sweet potatoes",
+        "Butternut squash",
+        "Fiber"
+      ],
+      "Yellow": [
+        "Ginger",
+        "Anti",
+        "Squash",
+        "Vitamin C",
+        "Yellow onions",
+        "Phosphorus",
+        "Yellow bell peppers",
+        "Zucchini"
+      ],
+      "Green": [
+        "Broccoli",
+        "Magnesium",
+        "Spinach",
+        "Zucchini",
+        "Mint",
+        "Fennel",
+        "Fiber",
+        "Vitamin C"
+      ],
+      "Blue/Purple": [
+        "Purple onions",
+        "Antioxidants",
+        "Red cabbage",
+        "Blueberries",
+        "Red onions",
+        "Quercetin",
+        "Anthocyanins"
+      ],
+      "White": [
+        "Chicken",
+        "Protein",
+        "Turkey",
+        "Iron",
+        "Greek yogurt",
+        "Probiotics",
+        "Garlic",
+        "Allicin"
+      ],
+      "Brown": [
+        "Quinoa",
+        "Fiber",
+        "Ginger",
+        "Gingerol",
+        "Balsamic vinegar",
+        "Trace minerals",
+        "Brown mushrooms",
+        "Selenium"
+      ]
+    },
+    "herbs": [
+      "Chamomile",
+      "Dandelion",
+      "Fennel",
+      "Garlic",
+      "Ginger",
+      "Mint",
+      "Oregano",
+      "Parsley",
+      "Rosemary",
+      "Thyme"
+    ],
+    "organSupportNotes": [
+      "Stomach: Chicken provides 35.2 g of protein per serving to aid enzyme production for digestion;",
+      "Stomach: The stomach benefits from turkey’s 35 g of protein per 6 oz, which aids enzyme production",
+      "Stomach: The pork tenderloin provides 42 grams of protein, aiding enzyme production for digestion.",
+      "Stomach: This dish supports digestion with protein from roast beef (113 g) for enzyme production,",
+      "Stomach: Lamb provides 1.2 mg of iron per 6 oz to fuel energy production, while sweet potatoes offer",
+      "Stomach: This dish supports digestion with 30 g of protein from cod (per 6 oz) to aid enzyme",
+      "Stomach: Tilapia provides 30 g of protein per 6 oz to aid digestive enzyme production, fennel offers 3"
+    ]
+  },
+  "Thyroid": {
+    "nutrients": [
+      "Allicin",
+      "Anthocyanin",
+      "Antioxidant",
+      "Calcium",
+      "Fiber",
+      "Healthy fats",
+      "Iodine",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Manganese",
+      "Omega-3",
+      "Phosphorus",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Selenium",
+      "Silicon",
+      "Vitamin C",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Red bell peppers",
+        "Vitamin C",
+        "Beef",
+        "Zinc",
+        "Red cabbage",
+        "Anthocyanins",
+        "Selenium",
+        "Salmon"
+      ],
+      "Orange": [
+        "Carrots",
+        "Potassium",
+        "Tomatoes",
+        "Sweet potato",
+        "Orange bell peppers"
+      ],
+      "Yellow": [
+        "Squash",
+        "Phosphorus",
+        "Yellow quinoa",
+        "Bell peppers",
+        "Onions",
+        "Yellow squash"
+      ],
+      "Green": [
+        "Broccoli",
+        "Magnesium",
+        "Kale",
+        "Spinach",
+        "Mixed greens and Avocado",
+        "Healthy fats"
+      ],
+      "Blue/Purple": [
+        "Red onions",
+        "Antioxidants",
+        "Purple eggplant",
+        "Red Cabbage"
+      ],
+      "White": [
+        "Chicken",
+        "Protein",
+        "Turkey",
+        "Selenium",
+        "White mushrooms",
+        "Antioxidants",
+        "Brazil nuts",
+        "Blanched Chopped Almonds"
+      ],
+      "Brown": [
+        "Seaweed",
+        "Iodine",
+        "Garlic powder",
+        "Allicin",
+        "Soy sauce",
+        "Flavor",
+        "Lentils",
+        "Fiber"
+      ]
+    },
+    "herbs": [
+      "Garlic",
+      "Kelp",
+      "Parsley",
+      "Seaweed",
+      "Thyme"
+    ],
+    "organSupportNotes": [
+      "Thyroid: Iodine from seaweed (150 mcg) supports hormone production; selenium from chicken (20",
+      "Intestines: Fiber from vegetables (4 g) promotes regularity.",
+      "Thyroid: Selenium from turkey (20 mcg) supports thyroid function; iodine from quinoa (trace) aids",
+      "Intestines: Fiber from quinoa (3 g) and kale (2 g) promotes regularity.",
+      "Thyroid: Zinc from beef (4 mg per 6 oz) supports hormone synthesis; selenium from beef (20 mcg per",
+      "Intestines: Fiber from vegetables (approximately 5 g per serving) promotes regularity.",
+      "Thyroid: Selenium from chicken (20 mcg) supports thyroid function; zinc from lentils (1 mg) aids",
+      "Intestines: Fiber from lentils (8 g), red cabbage (2 g), and vegetables (approximately 3 g) promotes",
+      "Thyroid: Selenium from beef (20 mcg per 6 oz) and Brazil nuts (68 mcg per 2 tbsp) supports thyroid",
+      "Intestines: Fiber from sweet potato (4 g per medium), eggplant (1.25 g per ½ cup), mushrooms (1 g"
+    ]
+  },
+  "Uterus": {
+    "nutrients": [
+      "Allicin",
+      "Antioxidant",
+      "Beta-carotene",
+      "Calcium",
+      "Fiber",
+      "Folate",
+      "Healthy fats",
+      "Iodine",
+      "Iron",
+      "Lycopene",
+      "Magnesium",
+      "Omega-3",
+      "Phosphorus",
+      "Potassium",
+      "Protein",
+      "Quercetin",
+      "Selenium",
+      "Silicon",
+      "Sulfur",
+      "Vitamin A",
+      "Vitamin C",
+      "Zinc"
+    ],
+    "colorFoods": {
+      "Red": [
+        "Beef",
+        "Iron",
+        "Raspberries",
+        "Cranberries",
+        "Antioxidants",
+        "Pork",
+        "Red bell peppers",
+        "Lycopene"
+      ],
+      "Orange": [
+        "Bell peppers",
+        "Vitamin A",
+        "Acorn squash",
+        "Carrots",
+        "Beta",
+        "Mangos",
+        "Vitamin C"
+      ],
+      "Yellow": [
+        "Sweet corn",
+        "Vitamin C",
+        "Yellow bell pepper",
+        "Vitamin A",
+        "Pineapple",
+        "Turmeric",
+        "Curcumin",
+        "Antioxidants"
+      ],
+      "Green": [
+        "Spinach",
+        "Folate",
+        "Kale",
+        "Bok Choy",
+        "Avocado",
+        "Healthy fats",
+        "Parsley",
+        "Edamame"
+      ],
+      "Blue/Purple": [
+        "Purple cabbage",
+        "Antioxidants",
+        "Red onion",
+        "Quercetin",
+        "Sulfur compounds",
+        "Onion",
+        "Vitamin C"
+      ],
+      "White": [
+        "Onion",
+        "Allicin",
+        "Turkey",
+        "Protein",
+        "Zinc",
+        "Garlic",
+        "Sulfur compounds",
+        "Chicken"
+      ],
+      "Brown": [
+        "Quinoa",
+        "Fiber",
+        "Brown rice",
+        "Selenium",
+        "Brown Mushrooms",
+        "Sesame seeds",
+        "Sesame",
+        "Trace minerals"
+      ]
+    },
+    "herbs": [
+      "Cumin",
+      "Garlic",
+      "Parsley",
+      "Sage",
+      "Turmeric"
+    ],
+    "organSupportNotes": [
+      "Uterus: Iron from beef (2 mg) supports energy and oxygen flow to tissues; antioxidants from",
+      "Uterus: Zinc from turkey (2.6 mg) supports hormone regulation; folate from kale (19 mcg) aids DNA",
+      "Uterus: Iron from pork (1.5 mg) supports energy and oxygen flow; Vitamin C from pineapple (39.5",
+      "Uterus: Zinc from chicken (1 mg) supports hormone regulation; folate from avocado (20 µg) aids cell",
+      "Uterus: Iron from lamb (2 mg) supports energy and oxygen flow; folate from parsley (50 mcg) aids",
+      "Uterus: Omega-3s from salmon (2 g) reduce inflammation and support hormone balance; Folate from",
+      "Uterus: Protein from fish (17 g) aids tissue repair and growth; Folate from squaw vine or kale"
+    ]
+  }
+}

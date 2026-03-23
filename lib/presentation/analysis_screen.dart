@@ -32,6 +32,12 @@ import 'package:ai_eye_capture/utils/zone_translations.dart';
 import 'package:ai_eye_capture/utils/dynamic_chart_painter.dart';  // v5.3.1: Radial chart warping  // v5.3.1: Polar zone lookup
 import 'package:ai_eye_capture/therapy/herbal_engine.dart';
 import 'package:ai_eye_capture/therapy/herbal_recommendations_panel.dart';
+import 'package:ai_eye_capture/therapy/nutrition_engine.dart';
+import 'package:ai_eye_capture/therapy/nutrition_recommendations_panel.dart';
+import 'package:ai_eye_capture/therapy/chiropractic_engine.dart';
+import 'package:ai_eye_capture/therapy/chiropractic_recommendations_panel.dart';
+import 'package:ai_eye_capture/therapy/tcm_engine.dart';
+import 'package:ai_eye_capture/therapy/tcm_recommendations_panel.dart';
 
 class AnalysisScreen extends StatefulWidget {
   final File? leftEyeImage;
@@ -71,6 +77,12 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
   String _clinicName = '';
   bool _herbalModeEnabled = false;
   List<ZoneRecommendation> _herbalRecs = [];
+  bool _nutritionModeEnabled = false;
+  List<ZoneNutritionRecommendation> _nutritionRecs = [];
+  bool _chiropracticModeEnabled = false;
+  List<ChiropracticRecommendation> _chiropracticRecs = [];
+  bool _tcmModeEnabled = false;
+  List<TcmRecommendation> _tcmRecs = [];
   bool _isAnalyzing = true;
   String _statusMessage = '';
   bool get _isDesktop => Platform.isWindows || Platform.isMacOS || Platform.isLinux;
@@ -125,11 +137,17 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
       _autoSavePdf = settings.autoSavePdf;
       _clinicName = settings.clinicName;
       _herbalModeEnabled = settings.herbalModeEnabled;
+      _nutritionModeEnabled = settings.nutritionModeEnabled;
+      _chiropracticModeEnabled = settings.chiropracticModeEnabled;
+      _tcmModeEnabled = settings.tcmModeEnabled;
     });
 
-    // Pre-load herbal database in background so it's ready when analysis finishes
+    // Pre-load therapy databases in background
     if (settings.herbalModeEnabled) {
       HerbalEngine.load().catchError((_) {});
+    }
+    if (settings.nutritionModeEnabled) {
+      NutritionEngine.load().catchError((_) {});
     }
   }
 
@@ -147,6 +165,40 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
     }
     setState(() {
       _herbalRecs = HerbalEngine.recommend(
+          rightResult: _rightResult, leftResult: _leftResult);
+    });
+  }
+
+  void _buildNutritionRecs() {
+    if (!_nutritionModeEnabled) return;
+    if (!NutritionEngine.isLoaded) {
+      NutritionEngine.load().then((_) {
+        if (!mounted) return;
+        setState(() {
+          _nutritionRecs = NutritionEngine.recommend(
+              rightResult: _rightResult, leftResult: _leftResult);
+        });
+      }).catchError((_) {});
+      return;
+    }
+    setState(() {
+      _nutritionRecs = NutritionEngine.recommend(
+          rightResult: _rightResult, leftResult: _leftResult);
+    });
+  }
+
+  void _buildChiropracticRecs() {
+    if (!_chiropracticModeEnabled) return;
+    setState(() {
+      _chiropracticRecs = ChiropracticEngine.recommend(
+          rightResult: _rightResult, leftResult: _leftResult);
+    });
+  }
+
+  void _buildTcmRecs() {
+    if (!_tcmModeEnabled) return;
+    setState(() {
+      _tcmRecs = TcmEngine.recommend(
           rightResult: _rightResult, leftResult: _leftResult);
     });
   }
@@ -300,8 +352,11 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
         _progress = 1.0;
       });
 
-      // Generate herbal recommendations after analysis completes
+      // Generate therapy recommendations after analysis completes
       _buildHerbalRecs();
+      _buildNutritionRecs();
+      _buildChiropracticRecs();
+      _buildTcmRecs();
 
       if (_autoSavePdf) {
         await _exportPdf();
@@ -722,6 +777,18 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
             if (_herbalModeEnabled) ...[
               const SizedBox(height: 20),
               HerbalRecommendationsPanel(recommendations: _herbalRecs),
+            ],
+            if (_nutritionModeEnabled) ...[
+              const SizedBox(height: 20),
+              NutritionRecommendationsPanel(recommendations: _nutritionRecs),
+            ],
+            if (_chiropracticModeEnabled) ...[
+              const SizedBox(height: 20),
+              ChiropracticRecommendationsPanel(recommendations: _chiropracticRecs),
+            ],
+            if (_tcmModeEnabled) ...[
+              const SizedBox(height: 20),
+              TcmRecommendationsPanel(recommendations: _tcmRecs),
             ],
             const SizedBox(height: 24),
             _buildActionButtons(l10n),

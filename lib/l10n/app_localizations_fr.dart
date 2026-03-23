@@ -3534,4 +3534,181 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get anisocoriaObservationMarked => 'Variation marquée';
+
+  @override
+  String get settingsNaturalMedicineSection => 'Médecine Naturelle';
+
+  @override
+  String get settingsHerbalToggle =>
+      'Recommandations Phytothérapiques (basées sur les zones iridologiques)';
+
+  @override
+  String get settingsNutritionToggle =>
+      'Nutrition 7 Couleurs (basée sur les zones iridologiques)';
+
+  @override
+  String get settingsChiropracticToggle => 'Chiropratique / Évaluation Spinale';
+
+  @override
+  String get settingsTcmToggle => 'Médecine Traditionnelle Chinoise (MTC)';
+
+  @override
+  String get therapyHerbalTitle => 'Recommandations Phytothérapiques';
+
+  @override
+  String get therapyHerbalSubtitle =>
+      'Zones iridologiques — triées par niveau de preuve';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count références';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer =>
+      'Les suggestions phytothérapiques sont fournies à des fins éducatives uniquement. Consultez un professionnel de santé qualifié avant utilisation.';
+
+  @override
+  String get therapyNutritionTitle => 'Nutrition Régime 7 Couleurs';
+
+  @override
+  String get therapyNutritionSubtitle =>
+      'Aliments et nutriments pour les organes des zones iridologiques';
+
+  @override
+  String get therapyNutritionFoodsByColor => 'Aliments Recommandés par Couleur';
+
+  @override
+  String get therapyNutritionKeyNutrients => 'Nutriments Clés';
+
+  @override
+  String get therapyNutritionHerbs => 'Herbes et Épices de Soutien';
+
+  @override
+  String get therapyNutritionNotes => 'Notes Nutritionnelles';
+
+  @override
+  String get therapyNutritionTonifying => 'Aliments tonifiants :';
+
+  @override
+  String get therapyNutritionAvoid => 'Minimiser / éviter :';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      'Les suggestions nutritionnelles sont basées sur le cadre du Régime 7 Couleurs et sont fournies à des fins éducatives uniquement. Consultez un professionnel avant de modifier votre alimentation.';
+
+  @override
+  String get therapyChiroTitle => 'Évaluation Chiropratique';
+
+  @override
+  String get therapyChiroSubtitle =>
+      'Segments vertébraux indiqués par les zones iridologiques';
+
+  @override
+  String get therapyChiroVertebrae => 'Vertèbres';
+
+  @override
+  String get therapyChiroNerveRoots => 'Racines Nerveuses';
+
+  @override
+  String get therapyChiroInnervated => 'Structures Innervées';
+
+  @override
+  String get therapyChiroSubluxation => 'Indicateurs Possibles de Subluxation';
+
+  @override
+  String get therapyChiroMuscles => 'Muscles Fréquemment Touchés';
+
+  @override
+  String get therapyChiroAdjusting => 'Approche d\'Ajustement Chiropratique';
+
+  @override
+  String get therapyChiroExercises => 'Exercices et Étirements à Domicile';
+
+  @override
+  String get therapyChiroPostural => 'Note Posturale';
+
+  @override
+  String get therapyChiroDisclaimer =>
+      'Les informations chiropratiques sont fournies à des fins éducatives. Consultez un chiropraticien agréé pour le diagnostic et le traitement.';
+
+  @override
+  String get therapyTcmTitle => 'Médecine Traditionnelle Chinoise';
+
+  @override
+  String get therapyTcmSubtitle =>
+      'Méridien · Horloge des Organes · Cinq Éléments';
+
+  @override
+  String get therapyTcmMeridianFunctions => 'Fonctions du Méridien';
+
+  @override
+  String get therapyTcmGoverns => 'Gouverne';
+
+  @override
+  String get therapyTcmPatterns => 'Schémas de Déséquilibre';
+
+  @override
+  String get therapyTcmSymptoms => 'Symptômes';
+
+  @override
+  String get therapyTcmFormulas => 'Formules Classiques';
+
+  @override
+  String get therapyTcmKeyPoints => 'Points Clés pour Ce Schéma';
+
+  @override
+  String get therapyTcmAcupoints => 'Points d\'Acupression Clés';
+
+  @override
+  String get therapyTcmDiet => 'Thérapie Diététique MTC';
+
+  @override
+  String get therapyTcmTonifying => 'Aliments tonifiants :';
+
+  @override
+  String get therapyTcmAvoid => 'Minimiser / éviter :';
+
+  @override
+  String get therapyTcmDisclaimer =>
+      'Les informations MTC sont fournies à des fins éducatives. Consultez un acupuncteur ou praticien MTC agréé.';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings =>
+      'Aucun résultat significatif des zones iridologiques détecté pour générer des recommandations.';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => 'Saison';
+
+  @override
+  String get therapyClimateLabel => 'Climat';
+
+  @override
+  String get therapyEmotionLabel => 'Émotion';
+
+  @override
+  String get therapyTasteLabel => 'Goût';
+
+  @override
+  String get therapyNatureLabel => 'Nature';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return 'associé : $organ';
+  }
 }

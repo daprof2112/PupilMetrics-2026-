@@ -6485,6 +6485,330 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Marked variation'**
   String get anisocoriaObservationMarked;
+
+  /// No description provided for @settingsNaturalMedicineSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Natural Medicine'**
+  String get settingsNaturalMedicineSection;
+
+  /// No description provided for @settingsHerbalToggle.
+  ///
+  /// In en, this message translates to:
+  /// **'Herbal Recommendations (iris zone-based)'**
+  String get settingsHerbalToggle;
+
+  /// No description provided for @settingsNutritionToggle.
+  ///
+  /// In en, this message translates to:
+  /// **'7-Color Diet Nutrition (iris zone-based)'**
+  String get settingsNutritionToggle;
+
+  /// No description provided for @settingsChiropracticToggle.
+  ///
+  /// In en, this message translates to:
+  /// **'Chiropractic / Spinal Assessment'**
+  String get settingsChiropracticToggle;
+
+  /// No description provided for @settingsTcmToggle.
+  ///
+  /// In en, this message translates to:
+  /// **'Traditional Chinese Medicine (TCM)'**
+  String get settingsTcmToggle;
+
+  /// No description provided for @therapyHerbalTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Herbal Recommendations'**
+  String get therapyHerbalTitle;
+
+  /// No description provided for @therapyHerbalSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Iris zone findings — sorted by evidence weight'**
+  String get therapyHerbalSubtitle;
+
+  /// No description provided for @therapyHerbalEvidenceCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} references'**
+  String therapyHerbalEvidenceCount(int count);
+
+  /// No description provided for @therapyHerbalDisclaimer.
+  ///
+  /// In en, this message translates to:
+  /// **'Herbal suggestions are provided for educational purposes only. Consult a qualified healthcare practitioner before use.'**
+  String get therapyHerbalDisclaimer;
+
+  /// No description provided for @therapyNutritionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'7-Color Diet Nutrition'**
+  String get therapyNutritionTitle;
+
+  /// No description provided for @therapyNutritionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Foods & nutrients for iris zone organs'**
+  String get therapyNutritionSubtitle;
+
+  /// No description provided for @therapyNutritionFoodsByColor.
+  ///
+  /// In en, this message translates to:
+  /// **'Recommended Foods by Color'**
+  String get therapyNutritionFoodsByColor;
+
+  /// No description provided for @therapyNutritionKeyNutrients.
+  ///
+  /// In en, this message translates to:
+  /// **'Key Nutrients'**
+  String get therapyNutritionKeyNutrients;
+
+  /// No description provided for @therapyNutritionHerbs.
+  ///
+  /// In en, this message translates to:
+  /// **'Supportive Herbs & Spices'**
+  String get therapyNutritionHerbs;
+
+  /// No description provided for @therapyNutritionNotes.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutritional Notes'**
+  String get therapyNutritionNotes;
+
+  /// No description provided for @therapyNutritionTonifying.
+  ///
+  /// In en, this message translates to:
+  /// **'Tonifying foods:'**
+  String get therapyNutritionTonifying;
+
+  /// No description provided for @therapyNutritionAvoid.
+  ///
+  /// In en, this message translates to:
+  /// **'Minimize / avoid:'**
+  String get therapyNutritionAvoid;
+
+  /// No description provided for @therapyNutritionDisclaimer.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutrition suggestions are based on the 7 Color Diet framework and are provided for educational purposes only. Consult a qualified healthcare practitioner before making dietary changes.'**
+  String get therapyNutritionDisclaimer;
+
+  /// No description provided for @therapyChiroTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Chiropractic Assessment'**
+  String get therapyChiroTitle;
+
+  /// No description provided for @therapyChiroSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Spinal segments indicated by iris zone findings'**
+  String get therapyChiroSubtitle;
+
+  /// No description provided for @therapyChiroVertebrae.
+  ///
+  /// In en, this message translates to:
+  /// **'Vertebrae'**
+  String get therapyChiroVertebrae;
+
+  /// No description provided for @therapyChiroNerveRoots.
+  ///
+  /// In en, this message translates to:
+  /// **'Nerve Roots'**
+  String get therapyChiroNerveRoots;
+
+  /// No description provided for @therapyChiroInnervated.
+  ///
+  /// In en, this message translates to:
+  /// **'Innervated Structures'**
+  String get therapyChiroInnervated;
+
+  /// No description provided for @therapyChiroSubluxation.
+  ///
+  /// In en, this message translates to:
+  /// **'Possible Subluxation Indicators'**
+  String get therapyChiroSubluxation;
+
+  /// No description provided for @therapyChiroMuscles.
+  ///
+  /// In en, this message translates to:
+  /// **'Commonly Affected Muscles'**
+  String get therapyChiroMuscles;
+
+  /// No description provided for @therapyChiroAdjusting.
+  ///
+  /// In en, this message translates to:
+  /// **'Chiropractic Adjusting Approach'**
+  String get therapyChiroAdjusting;
+
+  /// No description provided for @therapyChiroExercises.
+  ///
+  /// In en, this message translates to:
+  /// **'Home Exercises & Stretches'**
+  String get therapyChiroExercises;
+
+  /// No description provided for @therapyChiroPostural.
+  ///
+  /// In en, this message translates to:
+  /// **'Postural Note'**
+  String get therapyChiroPostural;
+
+  /// No description provided for @therapyChiroDisclaimer.
+  ///
+  /// In en, this message translates to:
+  /// **'Chiropractic information is provided for educational purposes. Consult a licensed chiropractor for diagnosis and treatment.'**
+  String get therapyChiroDisclaimer;
+
+  /// No description provided for @therapyTcmTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Traditional Chinese Medicine'**
+  String get therapyTcmTitle;
+
+  /// No description provided for @therapyTcmSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Meridian · Organ Clock · Five Elements'**
+  String get therapyTcmSubtitle;
+
+  /// No description provided for @therapyTcmMeridianFunctions.
+  ///
+  /// In en, this message translates to:
+  /// **'Meridian Functions'**
+  String get therapyTcmMeridianFunctions;
+
+  /// No description provided for @therapyTcmGoverns.
+  ///
+  /// In en, this message translates to:
+  /// **'Governs'**
+  String get therapyTcmGoverns;
+
+  /// No description provided for @therapyTcmPatterns.
+  ///
+  /// In en, this message translates to:
+  /// **'Imbalance Patterns'**
+  String get therapyTcmPatterns;
+
+  /// No description provided for @therapyTcmSymptoms.
+  ///
+  /// In en, this message translates to:
+  /// **'Symptoms'**
+  String get therapyTcmSymptoms;
+
+  /// No description provided for @therapyTcmFormulas.
+  ///
+  /// In en, this message translates to:
+  /// **'Classic Formulas'**
+  String get therapyTcmFormulas;
+
+  /// No description provided for @therapyTcmKeyPoints.
+  ///
+  /// In en, this message translates to:
+  /// **'Key Points for This Pattern'**
+  String get therapyTcmKeyPoints;
+
+  /// No description provided for @therapyTcmAcupoints.
+  ///
+  /// In en, this message translates to:
+  /// **'Key Acupressure Points'**
+  String get therapyTcmAcupoints;
+
+  /// No description provided for @therapyTcmDiet.
+  ///
+  /// In en, this message translates to:
+  /// **'TCM Dietary Therapy'**
+  String get therapyTcmDiet;
+
+  /// No description provided for @therapyTcmTonifying.
+  ///
+  /// In en, this message translates to:
+  /// **'Tonifying foods:'**
+  String get therapyTcmTonifying;
+
+  /// No description provided for @therapyTcmAvoid.
+  ///
+  /// In en, this message translates to:
+  /// **'Minimize / avoid:'**
+  String get therapyTcmAvoid;
+
+  /// No description provided for @therapyTcmDisclaimer.
+  ///
+  /// In en, this message translates to:
+  /// **'TCM information is provided for educational purposes. Consult a licensed acupuncturist or TCM practitioner.'**
+  String get therapyTcmDisclaimer;
+
+  /// No description provided for @therapyFindingFlat.
+  ///
+  /// In en, this message translates to:
+  /// **'FLAT'**
+  String get therapyFindingFlat;
+
+  /// No description provided for @therapyFindingProt.
+  ///
+  /// In en, this message translates to:
+  /// **'PROT'**
+  String get therapyFindingProt;
+
+  /// No description provided for @therapyFindingAnw.
+  ///
+  /// In en, this message translates to:
+  /// **'ANW'**
+  String get therapyFindingAnw;
+
+  /// No description provided for @therapyNoFindings.
+  ///
+  /// In en, this message translates to:
+  /// **'No significant iris zone findings detected to generate recommendations.'**
+  String get therapyNoFindings;
+
+  /// No description provided for @therapyEyeOD.
+  ///
+  /// In en, this message translates to:
+  /// **'OD'**
+  String get therapyEyeOD;
+
+  /// No description provided for @therapyEyeOS.
+  ///
+  /// In en, this message translates to:
+  /// **'OS'**
+  String get therapyEyeOS;
+
+  /// No description provided for @therapySeasonLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Season'**
+  String get therapySeasonLabel;
+
+  /// No description provided for @therapyClimateLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Climate'**
+  String get therapyClimateLabel;
+
+  /// No description provided for @therapyEmotionLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Emotion'**
+  String get therapyEmotionLabel;
+
+  /// No description provided for @therapyTasteLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Taste'**
+  String get therapyTasteLabel;
+
+  /// No description provided for @therapyNatureLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Nature'**
+  String get therapyNatureLabel;
+
+  /// No description provided for @therapyPairedOrgan.
+  ///
+  /// In en, this message translates to:
+  /// **'paired: {organ}'**
+  String therapyPairedOrgan(String organ);
 }
 
 class _AppLocalizationsDelegate

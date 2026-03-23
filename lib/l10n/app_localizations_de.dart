@@ -3527,4 +3527,180 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get anisocoriaObservationMarked => 'Ausgeprägte Variation';
+
+  @override
+  String get settingsNaturalMedicineSection => 'Naturheilkunde';
+
+  @override
+  String get settingsHerbalToggle => 'Kräuterempfehlungen (iriszonenbasiert)';
+
+  @override
+  String get settingsNutritionToggle =>
+      '7-Farben-Diät Ernährung (iriszonenbasiert)';
+
+  @override
+  String get settingsChiropracticToggle => 'Chiropraktik / Wirbelsäulenanalyse';
+
+  @override
+  String get settingsTcmToggle => 'Traditionelle Chinesische Medizin (TCM)';
+
+  @override
+  String get therapyHerbalTitle => 'Kräuterempfehlungen';
+
+  @override
+  String get therapyHerbalSubtitle =>
+      'Iriszonenbefunde — nach Evidenzstärke sortiert';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count Referenzen';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer =>
+      'Kräuterempfehlungen dienen ausschließlich zu Bildungszwecken. Konsultieren Sie einen qualifizierten Heilpraktiker vor der Anwendung.';
+
+  @override
+  String get therapyNutritionTitle => '7-Farben-Diät Ernährung';
+
+  @override
+  String get therapyNutritionSubtitle =>
+      'Lebensmittel und Nährstoffe für Organe der Iriszone';
+
+  @override
+  String get therapyNutritionFoodsByColor =>
+      'Empfohlene Lebensmittel nach Farbe';
+
+  @override
+  String get therapyNutritionKeyNutrients => 'Wichtige Nährstoffe';
+
+  @override
+  String get therapyNutritionHerbs => 'Unterstützende Kräuter und Gewürze';
+
+  @override
+  String get therapyNutritionNotes => 'Ernährungshinweise';
+
+  @override
+  String get therapyNutritionTonifying => 'Stärkende Lebensmittel:';
+
+  @override
+  String get therapyNutritionAvoid => 'Minimieren / vermeiden:';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      'Ernährungsempfehlungen basieren auf dem 7-Farben-Diät-Konzept und dienen ausschließlich zu Bildungszwecken. Konsultieren Sie einen Fachmann, bevor Sie Ihre Ernährung ändern.';
+
+  @override
+  String get therapyChiroTitle => 'Chiropraktische Befundung';
+
+  @override
+  String get therapyChiroSubtitle =>
+      'Wirbelabschnitte durch Iriszonenbefunde angezeigt';
+
+  @override
+  String get therapyChiroVertebrae => 'Wirbel';
+
+  @override
+  String get therapyChiroNerveRoots => 'Nervenwurzeln';
+
+  @override
+  String get therapyChiroInnervated => 'Innervierte Strukturen';
+
+  @override
+  String get therapyChiroSubluxation => 'Mögliche Subluxationshinweise';
+
+  @override
+  String get therapyChiroMuscles => 'Häufig betroffene Muskeln';
+
+  @override
+  String get therapyChiroAdjusting => 'Chiropraktischer Behandlungsansatz';
+
+  @override
+  String get therapyChiroExercises => 'Heimübungen und Dehnungen';
+
+  @override
+  String get therapyChiroPostural => 'Haltungshinweis';
+
+  @override
+  String get therapyChiroDisclaimer =>
+      'Chiropraktische Informationen dienen zu Bildungszwecken. Konsultieren Sie einen zugelassenen Chiropraktiker für Diagnose und Behandlung.';
+
+  @override
+  String get therapyTcmTitle => 'Traditionelle Chinesische Medizin';
+
+  @override
+  String get therapyTcmSubtitle => 'Meridian · Organzeituhr · Fünf Elemente';
+
+  @override
+  String get therapyTcmMeridianFunctions => 'Meridianfunktionen';
+
+  @override
+  String get therapyTcmGoverns => 'Regiert';
+
+  @override
+  String get therapyTcmPatterns => 'Ungleichgewichtsmuster';
+
+  @override
+  String get therapyTcmSymptoms => 'Symptome';
+
+  @override
+  String get therapyTcmFormulas => 'Klassische Rezepturen';
+
+  @override
+  String get therapyTcmKeyPoints => 'Schlüsselpunkte für dieses Muster';
+
+  @override
+  String get therapyTcmAcupoints => 'Wichtige Akupressurpunkte';
+
+  @override
+  String get therapyTcmDiet => 'TCM-Ernährungstherapie';
+
+  @override
+  String get therapyTcmTonifying => 'Stärkende Lebensmittel:';
+
+  @override
+  String get therapyTcmAvoid => 'Minimieren / vermeiden:';
+
+  @override
+  String get therapyTcmDisclaimer =>
+      'TCM-Informationen dienen zu Bildungszwecken. Konsultieren Sie einen zugelassenen Akupunktör oder TCM-Praktiker.';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings =>
+      'Keine signifikanten Iriszonenbefunde zur Erstellung von Empfehlungen erkannt.';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => 'Jahreszeit';
+
+  @override
+  String get therapyClimateLabel => 'Klima';
+
+  @override
+  String get therapyEmotionLabel => 'Emotion';
+
+  @override
+  String get therapyTasteLabel => 'Geschmack';
+
+  @override
+  String get therapyNatureLabel => 'Natur';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return 'Paarung: $organ';
+  }
 }

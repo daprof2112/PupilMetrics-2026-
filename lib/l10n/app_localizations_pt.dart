@@ -3529,6 +3529,183 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get anisocoriaObservationMarked => 'Variação acentuada';
+
+  @override
+  String get settingsNaturalMedicineSection => 'Medicina Natural';
+
+  @override
+  String get settingsHerbalToggle =>
+      'Recomendações Fitoterapêuticas (baseadas em zonas da íris)';
+
+  @override
+  String get settingsNutritionToggle =>
+      'Nutrição Dieta 7 Cores (baseada em zonas da íris)';
+
+  @override
+  String get settingsChiropracticToggle => 'Quiropraxia / Avaliação Espinal';
+
+  @override
+  String get settingsTcmToggle => 'Medicina Tradicional Chinesa (MTC)';
+
+  @override
+  String get therapyHerbalTitle => 'Recomendações Fitoterapêuticas';
+
+  @override
+  String get therapyHerbalSubtitle =>
+      'Achados das zonas da íris — ordenados por peso de evidência';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count referências';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer =>
+      'As sugestões fitoterapêuticas são fornecidas apenas para fins educacionais. Consulte um profissional de saúde qualificado antes do uso.';
+
+  @override
+  String get therapyNutritionTitle => 'Nutrição Dieta 7 Cores';
+
+  @override
+  String get therapyNutritionSubtitle =>
+      'Alimentos e nutrientes para órgãos das zonas da íris';
+
+  @override
+  String get therapyNutritionFoodsByColor => 'Alimentos Recomendados por Cor';
+
+  @override
+  String get therapyNutritionKeyNutrients => 'Nutrientes-Chave';
+
+  @override
+  String get therapyNutritionHerbs => 'Ervas e Especiarias de Suporte';
+
+  @override
+  String get therapyNutritionNotes => 'Notas Nutricionais';
+
+  @override
+  String get therapyNutritionTonifying => 'Alimentos tonificantes:';
+
+  @override
+  String get therapyNutritionAvoid => 'Minimizar / evitar:';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      'As sugestões nutricionais baseiam-se na estrutura da Dieta 7 Cores e são fornecidas apenas para fins educacionais. Consulte um profissional antes de fazer mudanças na dieta.';
+
+  @override
+  String get therapyChiroTitle => 'Avaliação Quiroprática';
+
+  @override
+  String get therapyChiroSubtitle =>
+      'Segmentos espinhais indicados pelos achados das zonas da íris';
+
+  @override
+  String get therapyChiroVertebrae => 'Vértebras';
+
+  @override
+  String get therapyChiroNerveRoots => 'Raízes Nervosas';
+
+  @override
+  String get therapyChiroInnervated => 'Estruturas Inervadas';
+
+  @override
+  String get therapyChiroSubluxation => 'Possíveis Indicadores de Subluxão';
+
+  @override
+  String get therapyChiroMuscles => 'Músculos Frequentemente Afetados';
+
+  @override
+  String get therapyChiroAdjusting => 'Abordagem de Ajuste Quiroprático';
+
+  @override
+  String get therapyChiroExercises => 'Exercícios e Alongamentos em Casa';
+
+  @override
+  String get therapyChiroPostural => 'Nota Postural';
+
+  @override
+  String get therapyChiroDisclaimer =>
+      'As informações quiroprátias são fornecidas para fins educacionais. Consulte um quiroprático licenciado para diagnóstico e tratamento.';
+
+  @override
+  String get therapyTcmTitle => 'Medicina Tradicional Chinesa';
+
+  @override
+  String get therapyTcmSubtitle =>
+      'Meridiano · Relógio dos Órgãos · Cinco Elementos';
+
+  @override
+  String get therapyTcmMeridianFunctions => 'Funções do Meridiano';
+
+  @override
+  String get therapyTcmGoverns => 'Governa';
+
+  @override
+  String get therapyTcmPatterns => 'Padrões de Desequilíbrio';
+
+  @override
+  String get therapyTcmSymptoms => 'Sintomas';
+
+  @override
+  String get therapyTcmFormulas => 'Fórmulas Clássicas';
+
+  @override
+  String get therapyTcmKeyPoints => 'Pontos-Chave para Este Padrão';
+
+  @override
+  String get therapyTcmAcupoints => 'Pontos de Acupressão Chave';
+
+  @override
+  String get therapyTcmDiet => 'Terapia Dietética MTC';
+
+  @override
+  String get therapyTcmTonifying => 'Alimentos tonificantes:';
+
+  @override
+  String get therapyTcmAvoid => 'Minimizar / evitar:';
+
+  @override
+  String get therapyTcmDisclaimer =>
+      'As informações de MTC são fornecidas para fins educacionais. Consulte um acupunturista ou médico de MTC licenciado.';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings =>
+      'Nenhum achado significativo de zonas da íris detectado para gerar recomendações.';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => 'Estação';
+
+  @override
+  String get therapyClimateLabel => 'Clima';
+
+  @override
+  String get therapyEmotionLabel => 'Emoção';
+
+  @override
+  String get therapyTasteLabel => 'Sabor';
+
+  @override
+  String get therapyNatureLabel => 'Natureza';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return 'par: $organ';
+  }
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -6995,4 +7172,181 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get anisocoriaObservationMarked => 'Variação acentuada';
+
+  @override
+  String get settingsNaturalMedicineSection => 'Medicina Natural';
+
+  @override
+  String get settingsHerbalToggle =>
+      'Recomendações Fitoterapêuticas (baseadas em zonas da íris)';
+
+  @override
+  String get settingsNutritionToggle =>
+      'Nutrição Dieta 7 Cores (baseada em zonas da íris)';
+
+  @override
+  String get settingsChiropracticToggle => 'Quiropraxia / Avaliação Espinal';
+
+  @override
+  String get settingsTcmToggle => 'Medicina Tradicional Chinesa (MTC)';
+
+  @override
+  String get therapyHerbalTitle => 'Recomendações Fitoterapêuticas';
+
+  @override
+  String get therapyHerbalSubtitle =>
+      'Achados das zonas da íris — ordenados por peso de evidência';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count referências';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer =>
+      'As sugestões fitoterapêuticas são fornecidas apenas para fins educacionais. Consulte um profissional de saúde qualificado antes do uso.';
+
+  @override
+  String get therapyNutritionTitle => 'Nutrição Dieta 7 Cores';
+
+  @override
+  String get therapyNutritionSubtitle =>
+      'Alimentos e nutrientes para órgãos das zonas da íris';
+
+  @override
+  String get therapyNutritionFoodsByColor => 'Alimentos Recomendados por Cor';
+
+  @override
+  String get therapyNutritionKeyNutrients => 'Nutrientes-Chave';
+
+  @override
+  String get therapyNutritionHerbs => 'Ervas e Especiarias de Suporte';
+
+  @override
+  String get therapyNutritionNotes => 'Notas Nutricionais';
+
+  @override
+  String get therapyNutritionTonifying => 'Alimentos tonificantes:';
+
+  @override
+  String get therapyNutritionAvoid => 'Minimizar / evitar:';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      'As sugestões nutricionais baseiam-se na estrutura da Dieta 7 Cores e são fornecidas apenas para fins educacionais. Consulte um profissional antes de fazer mudanças na dieta.';
+
+  @override
+  String get therapyChiroTitle => 'Avaliação Quiroprática';
+
+  @override
+  String get therapyChiroSubtitle =>
+      'Segmentos espinhais indicados pelos achados das zonas da íris';
+
+  @override
+  String get therapyChiroVertebrae => 'Vértebras';
+
+  @override
+  String get therapyChiroNerveRoots => 'Raízes Nervosas';
+
+  @override
+  String get therapyChiroInnervated => 'Estruturas Inervadas';
+
+  @override
+  String get therapyChiroSubluxation => 'Possíveis Indicadores de Subluxão';
+
+  @override
+  String get therapyChiroMuscles => 'Músculos Frequentemente Afetados';
+
+  @override
+  String get therapyChiroAdjusting => 'Abordagem de Ajuste Quiroprático';
+
+  @override
+  String get therapyChiroExercises => 'Exercícios e Alongamentos em Casa';
+
+  @override
+  String get therapyChiroPostural => 'Nota Postural';
+
+  @override
+  String get therapyChiroDisclaimer =>
+      'As informações quiroprátias são fornecidas para fins educacionais. Consulte um quiroprático licenciado para diagnóstico e tratamento.';
+
+  @override
+  String get therapyTcmTitle => 'Medicina Tradicional Chinesa';
+
+  @override
+  String get therapyTcmSubtitle =>
+      'Meridiano · Relógio dos Órgãos · Cinco Elementos';
+
+  @override
+  String get therapyTcmMeridianFunctions => 'Funções do Meridiano';
+
+  @override
+  String get therapyTcmGoverns => 'Governa';
+
+  @override
+  String get therapyTcmPatterns => 'Padrões de Desequilíbrio';
+
+  @override
+  String get therapyTcmSymptoms => 'Sintomas';
+
+  @override
+  String get therapyTcmFormulas => 'Fórmulas Clássicas';
+
+  @override
+  String get therapyTcmKeyPoints => 'Pontos-Chave para Este Padrão';
+
+  @override
+  String get therapyTcmAcupoints => 'Pontos de Acupressão Chave';
+
+  @override
+  String get therapyTcmDiet => 'Terapia Dietética MTC';
+
+  @override
+  String get therapyTcmTonifying => 'Alimentos tonificantes:';
+
+  @override
+  String get therapyTcmAvoid => 'Minimizar / evitar:';
+
+  @override
+  String get therapyTcmDisclaimer =>
+      'As informações de MTC são fornecidas para fins educacionais. Consulte um acupunturista ou médico de MTC licenciado.';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings =>
+      'Nenhum achado significativo de zonas da íris detectado para gerar recomendações.';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => 'Estação';
+
+  @override
+  String get therapyClimateLabel => 'Clima';
+
+  @override
+  String get therapyEmotionLabel => 'Emoção';
+
+  @override
+  String get therapyTasteLabel => 'Sabor';
+
+  @override
+  String get therapyNatureLabel => 'Natureza';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return 'par: $organ';
+  }
 }

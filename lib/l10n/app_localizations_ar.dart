@@ -3486,4 +3486,180 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get anisocoriaObservationMarked => 'اختلاف واضح';
+
+  @override
+  String get settingsNaturalMedicineSection => 'الطب الطبيعي';
+
+  @override
+  String get settingsHerbalToggle => 'توصيات عشبية (قائمة على مناطق القزحية)';
+
+  @override
+  String get settingsNutritionToggle =>
+      'تغذية نظام 7 ألوان (قائمة على مناطق القزحية)';
+
+  @override
+  String get settingsChiropracticToggle =>
+      'تقويم العمود الفقري / التقييم الشوكي';
+
+  @override
+  String get settingsTcmToggle => 'الطب الصيني التقليدي (TCM)';
+
+  @override
+  String get therapyHerbalTitle => 'التوصيات العشبية';
+
+  @override
+  String get therapyHerbalSubtitle =>
+      'نتائج مناطق القزحية — مرتبة حسب وزن الأدلة';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count مراجع';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer =>
+      'الاقتراحات العشبية مقدمة لأغراض تعليمية فقط. استشر متخصصاً صحياً مؤهلاً قبل الاستخدام.';
+
+  @override
+  String get therapyNutritionTitle => 'تغذية نظام 7 ألوان';
+
+  @override
+  String get therapyNutritionSubtitle =>
+      'الأطعمة والمغذيات لأعضاء مناطق القزحية';
+
+  @override
+  String get therapyNutritionFoodsByColor => 'الأطعمة الموصى بها حسب اللون';
+
+  @override
+  String get therapyNutritionKeyNutrients => 'المغذيات الرئيسية';
+
+  @override
+  String get therapyNutritionHerbs => 'الأعشاب والتوابل الداعمة';
+
+  @override
+  String get therapyNutritionNotes => 'ملاحظات غذائية';
+
+  @override
+  String get therapyNutritionTonifying => 'أطعمة مقوية:';
+
+  @override
+  String get therapyNutritionAvoid => 'تقليل / تجنب:';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      'تستند اقتراحات التغذية إلى إطار نظام 7 ألوان وتُقدم لأغراض تعليمية فقط. استشر متخصصاً قبل إجراء تغييرات غذائية.';
+
+  @override
+  String get therapyChiroTitle => 'التقييم العلاجي للعمود الفقري';
+
+  @override
+  String get therapyChiroSubtitle =>
+      'المقاطع الفقرية المشار إليها بنتائج مناطق القزحية';
+
+  @override
+  String get therapyChiroVertebrae => 'الفقرات';
+
+  @override
+  String get therapyChiroNerveRoots => 'جذور الأعصاب';
+
+  @override
+  String get therapyChiroInnervated => 'الهياكل المعصبة';
+
+  @override
+  String get therapyChiroSubluxation => 'مؤشرات احتمالية للخلع الجزئي';
+
+  @override
+  String get therapyChiroMuscles => 'العضلات المتأثرة في الغالب';
+
+  @override
+  String get therapyChiroAdjusting => 'نهج التعديل التقويمي';
+
+  @override
+  String get therapyChiroExercises => 'تمارين وتمطيطات منزلية';
+
+  @override
+  String get therapyChiroPostural => 'ملاحظة وضعية';
+
+  @override
+  String get therapyChiroDisclaimer =>
+      'المعلومات التقويمية مقدمة لأغراض تعليمية. استشر معالجاً تقويمياً مرخصاً للتشخيص والعلاج.';
+
+  @override
+  String get therapyTcmTitle => 'الطب الصيني التقليدي';
+
+  @override
+  String get therapyTcmSubtitle => 'الميريديان · ساعة الأعضاء · العناصر الخمسة';
+
+  @override
+  String get therapyTcmMeridianFunctions => 'وظائف الميريديان';
+
+  @override
+  String get therapyTcmGoverns => 'يتحكم في';
+
+  @override
+  String get therapyTcmPatterns => 'أنماط الاختلال';
+
+  @override
+  String get therapyTcmSymptoms => 'الأعراض';
+
+  @override
+  String get therapyTcmFormulas => 'التركيبات الكلاسيكية';
+
+  @override
+  String get therapyTcmKeyPoints => 'النقاط الرئيسية لهذا النمط';
+
+  @override
+  String get therapyTcmAcupoints => 'نقاط الضغط الرئيسية';
+
+  @override
+  String get therapyTcmDiet => 'العلاج الغذائي بالطب الصيني';
+
+  @override
+  String get therapyTcmTonifying => 'أطعمة مقوية:';
+
+  @override
+  String get therapyTcmAvoid => 'تقليل / تجنب:';
+
+  @override
+  String get therapyTcmDisclaimer =>
+      'معلومات الطب الصيني مقدمة لأغراض تعليمية. استشر طبيباً مرخصاً في الوخز بالإبر أو الطب الصيني التقليدي.';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings =>
+      'لم يتم اكتشاف نتائج مهمة في مناطق القزحية لإنشاء توصيات.';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => 'الموسم';
+
+  @override
+  String get therapyClimateLabel => 'المناخ';
+
+  @override
+  String get therapyEmotionLabel => 'العاطفة';
+
+  @override
+  String get therapyTasteLabel => 'الطعم';
+
+  @override
+  String get therapyNatureLabel => 'الطبيعة';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return 'المقترن: $organ';
+  }
 }

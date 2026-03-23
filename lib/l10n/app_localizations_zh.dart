@@ -3371,4 +3371,171 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get anisocoriaObservationMarked => '明显差异';
+
+  @override
+  String get settingsNaturalMedicineSection => '自然医学';
+
+  @override
+  String get settingsHerbalToggle => '草药推荐（基于虹膜区域）';
+
+  @override
+  String get settingsNutritionToggle => '7色饮食营养（基于虹膜区域）';
+
+  @override
+  String get settingsChiropracticToggle => '脊椎指压治疗 / 脊柱评估';
+
+  @override
+  String get settingsTcmToggle => '中医传统医学（TCM）';
+
+  @override
+  String get therapyHerbalTitle => '草药推荐';
+
+  @override
+  String get therapyHerbalSubtitle => '虹膜区域发现 — 按证据强度排序';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count条参考文献';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer => '草药建议仅供教育目的。使用前请咨询合格的医疗保健专业人员。';
+
+  @override
+  String get therapyNutritionTitle => '7色饮食营养';
+
+  @override
+  String get therapyNutritionSubtitle => '虹膜区域器官的食物和营养素';
+
+  @override
+  String get therapyNutritionFoodsByColor => '按颜色推荐食物';
+
+  @override
+  String get therapyNutritionKeyNutrients => '关键营养素';
+
+  @override
+  String get therapyNutritionHerbs => '支持性草药和香料';
+
+  @override
+  String get therapyNutritionNotes => '营养说明';
+
+  @override
+  String get therapyNutritionTonifying => '滋补食物：';
+
+  @override
+  String get therapyNutritionAvoid => '减少 / 避免：';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      '营养建议基于7色饮食框架，仅供教育目的。在做出饮食改变前请咨询专业人员。';
+
+  @override
+  String get therapyChiroTitle => '脊椎指压评估';
+
+  @override
+  String get therapyChiroSubtitle => '虹膜区域发现所指示的脊柱节段';
+
+  @override
+  String get therapyChiroVertebrae => '椎骨';
+
+  @override
+  String get therapyChiroNerveRoots => '神经根';
+
+  @override
+  String get therapyChiroInnervated => '被支配结构';
+
+  @override
+  String get therapyChiroSubluxation => '可能的半脱位指标';
+
+  @override
+  String get therapyChiroMuscles => '常见受影响肌肉';
+
+  @override
+  String get therapyChiroAdjusting => '脊椎指压调整方法';
+
+  @override
+  String get therapyChiroExercises => '居家运动与拉伸';
+
+  @override
+  String get therapyChiroPostural => '姿势说明';
+
+  @override
+  String get therapyChiroDisclaimer => '脊椎指压信息仅供教育目的。请向持牌脊椎指压治疗师咨询诊断和治疗。';
+
+  @override
+  String get therapyTcmTitle => '中医传统医学';
+
+  @override
+  String get therapyTcmSubtitle => '经络 · 脏腑时钟 · 五行';
+
+  @override
+  String get therapyTcmMeridianFunctions => '经络功能';
+
+  @override
+  String get therapyTcmGoverns => '主管';
+
+  @override
+  String get therapyTcmPatterns => '失衡证型';
+
+  @override
+  String get therapyTcmSymptoms => '症状';
+
+  @override
+  String get therapyTcmFormulas => '经典方剂';
+
+  @override
+  String get therapyTcmKeyPoints => '此证型的关键穴位';
+
+  @override
+  String get therapyTcmAcupoints => '关键穴位';
+
+  @override
+  String get therapyTcmDiet => '中医食疗';
+
+  @override
+  String get therapyTcmTonifying => '滋补食物：';
+
+  @override
+  String get therapyTcmAvoid => '减少 / 避免：';
+
+  @override
+  String get therapyTcmDisclaimer => '中医信息仅供教育目的。请向持牌针灸师或中医师咨询。';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings => '未检测到显著虹膜区域发现以生成推荐建议。';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => '季节';
+
+  @override
+  String get therapyClimateLabel => '气候';
+
+  @override
+  String get therapyEmotionLabel => '情绪';
+
+  @override
+  String get therapyTasteLabel => '味道';
+
+  @override
+  String get therapyNatureLabel => '性质';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return '配对：$organ';
+  }
 }

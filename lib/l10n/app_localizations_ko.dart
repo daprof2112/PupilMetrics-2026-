@@ -3418,4 +3418,174 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get anisocoriaObservationMarked => '현저한 차이';
+
+  @override
+  String get settingsNaturalMedicineSection => '자연 의학';
+
+  @override
+  String get settingsHerbalToggle => '한약 추천 (홍채 구역 기반)';
+
+  @override
+  String get settingsNutritionToggle => '7색 다이어트 영양 (홍채 구역 기반)';
+
+  @override
+  String get settingsChiropracticToggle => '카이로프랙틱 / 척추 평가';
+
+  @override
+  String get settingsTcmToggle => '전통 중국 의학 (TCM)';
+
+  @override
+  String get therapyHerbalTitle => '한약 추천';
+
+  @override
+  String get therapyHerbalSubtitle => '홍채 구역 소견 — 근거 강도순 정렬';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count개 참고문헌';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer =>
+      '한약 제안은 교육 목적으로만 제공됩니다. 사용 전 자격을 갖춘 의료 전문가와 상담하십시오.';
+
+  @override
+  String get therapyNutritionTitle => '7색 다이어트 영양';
+
+  @override
+  String get therapyNutritionSubtitle => '홍채 구역 장기에 대한 식품 및 영양소';
+
+  @override
+  String get therapyNutritionFoodsByColor => '색별 추천 식품';
+
+  @override
+  String get therapyNutritionKeyNutrients => '주요 영양소';
+
+  @override
+  String get therapyNutritionHerbs => '보조 허브 및 향신료';
+
+  @override
+  String get therapyNutritionNotes => '영양 노트';
+
+  @override
+  String get therapyNutritionTonifying => '보양 식품:';
+
+  @override
+  String get therapyNutritionAvoid => '최소화 / 피하기:';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      '영양 제안은 7색 다이어트 체계를 기반으로 하며 교육 목적으로만 제공됩니다. 식단 변경 전 전문가와 상담하십시오.';
+
+  @override
+  String get therapyChiroTitle => '카이로프랙틱 평가';
+
+  @override
+  String get therapyChiroSubtitle => '홍채 구역 소견으로 표시된 척추 분절';
+
+  @override
+  String get therapyChiroVertebrae => '척추';
+
+  @override
+  String get therapyChiroNerveRoots => '신경근';
+
+  @override
+  String get therapyChiroInnervated => '신경 지배 구조';
+
+  @override
+  String get therapyChiroSubluxation => '가능한 아탈구 지표';
+
+  @override
+  String get therapyChiroMuscles => '주로 영향받는 근육';
+
+  @override
+  String get therapyChiroAdjusting => '카이로프랙틱 교정 접근법';
+
+  @override
+  String get therapyChiroExercises => '가정 운동 및 스트레칭';
+
+  @override
+  String get therapyChiroPostural => '자세 메모';
+
+  @override
+  String get therapyChiroDisclaimer =>
+      '카이로프랙틱 정보는 교육 목적으로 제공됩니다. 진단과 치료를 위해 면허 카이로프랙터와 상담하십시오.';
+
+  @override
+  String get therapyTcmTitle => '전통 중국 의학';
+
+  @override
+  String get therapyTcmSubtitle => '경락 · 장기 시계 · 오행';
+
+  @override
+  String get therapyTcmMeridianFunctions => '경락 기능';
+
+  @override
+  String get therapyTcmGoverns => '주관';
+
+  @override
+  String get therapyTcmPatterns => '불균형 패턴';
+
+  @override
+  String get therapyTcmSymptoms => '증상';
+
+  @override
+  String get therapyTcmFormulas => '고전 처방';
+
+  @override
+  String get therapyTcmKeyPoints => '이 패턴의 주요 혈자리';
+
+  @override
+  String get therapyTcmAcupoints => '주요 지압점';
+
+  @override
+  String get therapyTcmDiet => 'TCM 식이 요법';
+
+  @override
+  String get therapyTcmTonifying => '보양 식품:';
+
+  @override
+  String get therapyTcmAvoid => '최소화 / 피하기:';
+
+  @override
+  String get therapyTcmDisclaimer =>
+      'TCM 정보는 교육 목적으로 제공됩니다. 면허 침술사 또는 TCM 전문가와 상담하십시오.';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings => '추천을 생성하기 위한 유의미한 홍채 구역 소견이 감지되지 않았습니다.';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => '계절';
+
+  @override
+  String get therapyClimateLabel => '기후';
+
+  @override
+  String get therapyEmotionLabel => '감정';
+
+  @override
+  String get therapyTasteLabel => '맛';
+
+  @override
+  String get therapyNatureLabel => '성질';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return '짝: $organ';
+  }
 }

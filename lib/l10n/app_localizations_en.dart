@@ -3498,4 +3498,179 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get anisocoriaObservationMarked => 'Marked variation';
+
+  @override
+  String get settingsNaturalMedicineSection => 'Natural Medicine';
+
+  @override
+  String get settingsHerbalToggle => 'Herbal Recommendations (iris zone-based)';
+
+  @override
+  String get settingsNutritionToggle =>
+      '7-Color Diet Nutrition (iris zone-based)';
+
+  @override
+  String get settingsChiropracticToggle => 'Chiropractic / Spinal Assessment';
+
+  @override
+  String get settingsTcmToggle => 'Traditional Chinese Medicine (TCM)';
+
+  @override
+  String get therapyHerbalTitle => 'Herbal Recommendations';
+
+  @override
+  String get therapyHerbalSubtitle =>
+      'Iris zone findings — sorted by evidence weight';
+
+  @override
+  String therapyHerbalEvidenceCount(int count) {
+    return '$count references';
+  }
+
+  @override
+  String get therapyHerbalDisclaimer =>
+      'Herbal suggestions are provided for educational purposes only. Consult a qualified healthcare practitioner before use.';
+
+  @override
+  String get therapyNutritionTitle => '7-Color Diet Nutrition';
+
+  @override
+  String get therapyNutritionSubtitle =>
+      'Foods & nutrients for iris zone organs';
+
+  @override
+  String get therapyNutritionFoodsByColor => 'Recommended Foods by Color';
+
+  @override
+  String get therapyNutritionKeyNutrients => 'Key Nutrients';
+
+  @override
+  String get therapyNutritionHerbs => 'Supportive Herbs & Spices';
+
+  @override
+  String get therapyNutritionNotes => 'Nutritional Notes';
+
+  @override
+  String get therapyNutritionTonifying => 'Tonifying foods:';
+
+  @override
+  String get therapyNutritionAvoid => 'Minimize / avoid:';
+
+  @override
+  String get therapyNutritionDisclaimer =>
+      'Nutrition suggestions are based on the 7 Color Diet framework and are provided for educational purposes only. Consult a qualified healthcare practitioner before making dietary changes.';
+
+  @override
+  String get therapyChiroTitle => 'Chiropractic Assessment';
+
+  @override
+  String get therapyChiroSubtitle =>
+      'Spinal segments indicated by iris zone findings';
+
+  @override
+  String get therapyChiroVertebrae => 'Vertebrae';
+
+  @override
+  String get therapyChiroNerveRoots => 'Nerve Roots';
+
+  @override
+  String get therapyChiroInnervated => 'Innervated Structures';
+
+  @override
+  String get therapyChiroSubluxation => 'Possible Subluxation Indicators';
+
+  @override
+  String get therapyChiroMuscles => 'Commonly Affected Muscles';
+
+  @override
+  String get therapyChiroAdjusting => 'Chiropractic Adjusting Approach';
+
+  @override
+  String get therapyChiroExercises => 'Home Exercises & Stretches';
+
+  @override
+  String get therapyChiroPostural => 'Postural Note';
+
+  @override
+  String get therapyChiroDisclaimer =>
+      'Chiropractic information is provided for educational purposes. Consult a licensed chiropractor for diagnosis and treatment.';
+
+  @override
+  String get therapyTcmTitle => 'Traditional Chinese Medicine';
+
+  @override
+  String get therapyTcmSubtitle => 'Meridian · Organ Clock · Five Elements';
+
+  @override
+  String get therapyTcmMeridianFunctions => 'Meridian Functions';
+
+  @override
+  String get therapyTcmGoverns => 'Governs';
+
+  @override
+  String get therapyTcmPatterns => 'Imbalance Patterns';
+
+  @override
+  String get therapyTcmSymptoms => 'Symptoms';
+
+  @override
+  String get therapyTcmFormulas => 'Classic Formulas';
+
+  @override
+  String get therapyTcmKeyPoints => 'Key Points for This Pattern';
+
+  @override
+  String get therapyTcmAcupoints => 'Key Acupressure Points';
+
+  @override
+  String get therapyTcmDiet => 'TCM Dietary Therapy';
+
+  @override
+  String get therapyTcmTonifying => 'Tonifying foods:';
+
+  @override
+  String get therapyTcmAvoid => 'Minimize / avoid:';
+
+  @override
+  String get therapyTcmDisclaimer =>
+      'TCM information is provided for educational purposes. Consult a licensed acupuncturist or TCM practitioner.';
+
+  @override
+  String get therapyFindingFlat => 'FLAT';
+
+  @override
+  String get therapyFindingProt => 'PROT';
+
+  @override
+  String get therapyFindingAnw => 'ANW';
+
+  @override
+  String get therapyNoFindings =>
+      'No significant iris zone findings detected to generate recommendations.';
+
+  @override
+  String get therapyEyeOD => 'OD';
+
+  @override
+  String get therapyEyeOS => 'OS';
+
+  @override
+  String get therapySeasonLabel => 'Season';
+
+  @override
+  String get therapyClimateLabel => 'Climate';
+
+  @override
+  String get therapyEmotionLabel => 'Emotion';
+
+  @override
+  String get therapyTasteLabel => 'Taste';
+
+  @override
+  String get therapyNatureLabel => 'Nature';
+
+  @override
+  String therapyPairedOrgan(String organ) {
+    return 'paired: $organ';
+  }
 }
