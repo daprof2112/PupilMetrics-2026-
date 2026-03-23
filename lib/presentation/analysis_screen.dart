@@ -3526,6 +3526,10 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
         if (_rightResult?.anwAssessment != null && _leftResult?.anwAssessment != null)
           _buildPdfBilateralANW(l10n),
         pw.SizedBox(height: 16),
+        if (_herbalModeEnabled && _herbalRecs.isNotEmpty) _buildPdfHerbal(l10n),
+        if (_nutritionModeEnabled && _nutritionRecs.isNotEmpty) _buildPdfNutrition(l10n),
+        if (_chiropracticModeEnabled && _chiropracticRecs.isNotEmpty) _buildPdfChiropractic(l10n),
+        if (_tcmModeEnabled && _tcmRecs.isNotEmpty) _buildPdfTcm(l10n),
         _buildPdfReference(l10n)
       ],
     ));
@@ -3992,6 +3996,292 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
           ),
       ]),
     );
+  }
+
+// ── THERAPY PDF SECTIONS ─────────────────────────────────────────────────────
+
+  pw.Widget _buildPdfHerbal(AppLocalizations l10n) {
+    const hdrColor = PdfColors.green800;
+    pw.Widget badge(String label, PdfColor color) => pw.Container(
+          padding: const pw.EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+          color: color,
+          child: pw.Text(label,
+              style: const pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+        );
+    String fLabel(String t) => t == 'flattening' ? 'FLAT' : (t == 'protrusion' ? 'PROT' : 'ANW');
+    PdfColor fColor(String t) => t == 'flattening' ? PdfColors.orange : (t == 'protrusion' ? PdfColors.red : PdfColors.purple);
+
+    return pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+      pw.SizedBox(height: 16),
+      pw.Container(
+        padding: const pw.EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        color: hdrColor,
+        child: pw.Text(l10n.therapyHerbalTitle,
+            style: pw.TextStyle(fontSize: 13, fontWeight: pw.FontWeight.bold, color: PdfColors.white)),
+      ),
+      pw.SizedBox(height: 6),
+      ..._herbalRecs.map((rec) => pw.Container(
+            margin: const pw.EdgeInsets.only(bottom: 6),
+            padding: const pw.EdgeInsets.all(8),
+            decoration: pw.BoxDecoration(
+                color: PdfColors.green50, border: pw.Border.all(color: PdfColors.green200)),
+            child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+              pw.Row(children: [
+                badge(fLabel(rec.findingType), fColor(rec.findingType)),
+                pw.SizedBox(width: 5),
+                badge(rec.eyeLabel, rec.isRightEye ? PdfColors.blue : PdfColors.green700),
+                pw.SizedBox(width: 8),
+                pw.Expanded(
+                    child: pw.Text(rec.organInfo.organs.take(3).join(' · '),
+                        style: pw.TextStyle(
+                            fontSize: 10, fontWeight: pw.FontWeight.bold, color: hdrColor))),
+                pw.Text('${rec.severity.toStringAsFixed(1)}%',
+                    style: const pw.TextStyle(fontSize: 9, color: PdfColors.grey600)),
+              ]),
+              if (rec.conditions.isNotEmpty) ...[
+                pw.SizedBox(height: 5),
+                ...rec.conditions.take(4).map((cond) => pw.Padding(
+                      padding: const pw.EdgeInsets.only(bottom: 3),
+                      child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+                        pw.Text(cond.condition,
+                            style: pw.TextStyle(
+                                fontSize: 9,
+                                fontWeight: pw.FontWeight.bold,
+                                color: PdfColors.teal800)),
+                        pw.Text(
+                            cond.herbs.take(8).map((h) => '${h.herb} (x${h.count})').join(', '),
+                            style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey700)),
+                      ]),
+                    )),
+              ],
+            ]),
+          )),
+      pw.Container(
+        padding: const pw.EdgeInsets.all(6),
+        color: PdfColors.grey100,
+        child: pw.Text(l10n.therapyHerbalDisclaimer,
+            style: const pw.TextStyle(fontSize: 7, color: PdfColors.grey600)),
+      ),
+    ]);
+  }
+
+  pw.Widget _buildPdfNutrition(AppLocalizations l10n) {
+    const hdrColor = PdfColors.orange800;
+    pw.Widget badge(String label, PdfColor color) => pw.Container(
+          padding: const pw.EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+          color: color,
+          child: pw.Text(label,
+              style: const pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+        );
+    String fLabel(String t) => t == 'flattening' ? 'FLAT' : (t == 'protrusion' ? 'PROT' : 'ANW');
+    PdfColor fColor(String t) => t == 'flattening' ? PdfColors.orange : (t == 'protrusion' ? PdfColors.red : PdfColors.purple);
+
+    return pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+      pw.SizedBox(height: 16),
+      pw.Container(
+        padding: const pw.EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        color: hdrColor,
+        child: pw.Text(l10n.therapyNutritionTitle,
+            style: pw.TextStyle(fontSize: 13, fontWeight: pw.FontWeight.bold, color: PdfColors.white)),
+      ),
+      pw.SizedBox(height: 6),
+      ..._nutritionRecs.map((rec) => pw.Container(
+            margin: const pw.EdgeInsets.only(bottom: 6),
+            padding: const pw.EdgeInsets.all(8),
+            decoration: pw.BoxDecoration(
+                color: PdfColors.orange50, border: pw.Border.all(color: PdfColors.orange200)),
+            child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+              pw.Row(children: [
+                badge(fLabel(rec.findingType), fColor(rec.findingType)),
+                pw.SizedBox(width: 5),
+                badge(rec.eyeLabel, rec.isRightEye ? PdfColors.blue : PdfColors.green700),
+                pw.SizedBox(width: 8),
+                pw.Expanded(
+                    child: pw.Text(rec.organInfo.organs.take(2).join(' · '),
+                        style: pw.TextStyle(
+                            fontSize: 10, fontWeight: pw.FontWeight.bold, color: hdrColor))),
+              ]),
+              pw.SizedBox(height: 5),
+              if (rec.nutrition.nutrients.isNotEmpty)
+                pw.Text(
+                    '${l10n.therapyNutritionKeyNutrients}: ${rec.nutrition.nutrients.take(10).join(', ')}',
+                    style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey800)),
+              if (rec.nutrition.colorFoods.isNotEmpty) ...[
+                pw.SizedBox(height: 3),
+                ...rec.nutrition.colorFoods.entries.take(4).map((e) => pw.Text(
+                      '${e.key}: ${e.value.take(4).join(", ")}',
+                      style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey700),
+                    )),
+              ],
+              if (rec.nutrition.organSupportNotes.isNotEmpty) ...[
+                pw.SizedBox(height: 3),
+                pw.Text(rec.nutrition.organSupportNotes.first,
+                    style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey600)),
+              ],
+            ]),
+          )),
+      pw.Container(
+        padding: const pw.EdgeInsets.all(6),
+        color: PdfColors.grey100,
+        child: pw.Text(l10n.therapyNutritionDisclaimer,
+            style: const pw.TextStyle(fontSize: 7, color: PdfColors.grey600)),
+      ),
+    ]);
+  }
+
+  pw.Widget _buildPdfChiropractic(AppLocalizations l10n) {
+    const hdrColor = PdfColors.purple800;
+    pw.Widget badge(String label, PdfColor color) => pw.Container(
+          padding: const pw.EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+          color: color,
+          child: pw.Text(label,
+              style: const pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+        );
+    String fLabel(String t) => t == 'flattening' ? 'FLAT' : (t == 'protrusion' ? 'PROT' : 'ANW');
+    PdfColor fColor(String t) => t == 'flattening' ? PdfColors.orange : (t == 'protrusion' ? PdfColors.red : PdfColors.purple);
+
+    return pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+      pw.SizedBox(height: 16),
+      pw.Container(
+        padding: const pw.EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        color: hdrColor,
+        child: pw.Text(l10n.therapyChiroTitle,
+            style: pw.TextStyle(fontSize: 13, fontWeight: pw.FontWeight.bold, color: PdfColors.white)),
+      ),
+      pw.SizedBox(height: 6),
+      ..._chiropracticRecs.map((rec) => pw.Container(
+            margin: const pw.EdgeInsets.only(bottom: 6),
+            padding: const pw.EdgeInsets.all(8),
+            decoration: pw.BoxDecoration(
+                color: PdfColors.purple50, border: pw.Border.all(color: PdfColors.purple200)),
+            child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+              pw.Row(children: [
+                badge(fLabel(rec.findingType), fColor(rec.findingType)),
+                pw.SizedBox(width: 5),
+                badge(rec.eyeLabel, rec.isRightEye ? PdfColors.blue : PdfColors.green700),
+                pw.SizedBox(width: 8),
+                pw.Expanded(
+                    child: pw.Text(rec.spinalData.segmentLabel,
+                        style: pw.TextStyle(
+                            fontSize: 10, fontWeight: pw.FontWeight.bold, color: hdrColor))),
+                pw.Text('${rec.severity.toStringAsFixed(1)}%',
+                    style: const pw.TextStyle(fontSize: 9, color: PdfColors.grey600)),
+              ]),
+              pw.SizedBox(height: 2),
+              pw.Text(rec.organInfo.displayName,
+                  style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey600)),
+              pw.SizedBox(height: 5),
+              pw.Text(
+                  '${l10n.therapyChiroNerveRoots}: ${rec.spinalData.nerveRoots.join(", ")}',
+                  style: const pw.TextStyle(fontSize: 9)),
+              pw.SizedBox(height: 3),
+              pw.Text('${l10n.therapyChiroSubluxation}:',
+                  style: pw.TextStyle(fontSize: 9, fontWeight: pw.FontWeight.bold, color: hdrColor)),
+              ...rec.spinalData.subluxationSymptoms.take(3).map(
+                    (s) => pw.Text('  - $s', style: const pw.TextStyle(fontSize: 8)),
+                  ),
+              pw.SizedBox(height: 3),
+              pw.Text('${l10n.therapyChiroExercises}:',
+                  style: pw.TextStyle(fontSize: 9, fontWeight: pw.FontWeight.bold, color: hdrColor)),
+              ...rec.spinalData.exercises.take(3).map(
+                    (e) => pw.Text('  > $e', style: const pw.TextStyle(fontSize: 8)),
+                  ),
+              if (rec.spinalData.posturalNote.isNotEmpty) ...[
+                pw.SizedBox(height: 4),
+                pw.Container(
+                  padding: const pw.EdgeInsets.all(5),
+                  color: PdfColors.amber50,
+                  child: pw.Text(rec.spinalData.posturalNote,
+                      style: const pw.TextStyle(fontSize: 8, color: PdfColors.brown)),
+                ),
+              ],
+            ]),
+          )),
+      pw.Container(
+        padding: const pw.EdgeInsets.all(6),
+        color: PdfColors.grey100,
+        child: pw.Text(l10n.therapyChiroDisclaimer,
+            style: const pw.TextStyle(fontSize: 7, color: PdfColors.grey600)),
+      ),
+    ]);
+  }
+
+  pw.Widget _buildPdfTcm(AppLocalizations l10n) {
+    const hdrColor = PdfColors.red800;
+
+    return pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+      pw.SizedBox(height: 16),
+      pw.Container(
+        padding: const pw.EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        color: hdrColor,
+        child: pw.Text(l10n.therapyTcmTitle,
+            style: pw.TextStyle(fontSize: 13, fontWeight: pw.FontWeight.bold, color: PdfColors.white)),
+      ),
+      pw.SizedBox(height: 6),
+      ..._tcmRecs.map((rec) {
+        final tcm = rec.tcmData;
+        final el = tcm.element;
+        final pattern = tcm.patterns.isNotEmpty ? tcm.patterns.first : null;
+        return pw.Container(
+          margin: const pw.EdgeInsets.only(bottom: 6),
+          padding: const pw.EdgeInsets.all(8),
+          decoration: pw.BoxDecoration(
+              color: PdfColors.red50, border: pw.Border.all(color: PdfColors.red200)),
+          child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+            // Organ + element + clock
+            pw.Row(mainAxisAlignment: pw.MainAxisAlignment.spaceBetween, children: [
+              pw.Expanded(
+                  child: pw.Text('${tcm.primaryOrgan}  |  ${el.name} Element',
+                      style: pw.TextStyle(
+                          fontSize: 11, fontWeight: pw.FontWeight.bold, color: hdrColor))),
+              pw.Text(tcm.organClockTime,
+                  style: const pw.TextStyle(fontSize: 9, color: PdfColors.grey600)),
+            ]),
+            pw.Text(
+                '${l10n.therapyPairedOrgan(tcm.pairedOrgan)}  |  ${el.season}  |  ${l10n.therapyTasteLabel}: ${el.taste}',
+                style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey600)),
+            pw.SizedBox(height: 5),
+            // Meridian functions
+            pw.Text('${l10n.therapyTcmMeridianFunctions}:',
+                style: pw.TextStyle(fontSize: 9, fontWeight: pw.FontWeight.bold, color: hdrColor)),
+            ...tcm.meridianFunctions.take(2).map(
+                  (f) => pw.Text('  - $f', style: const pw.TextStyle(fontSize: 8)),
+                ),
+            // Pattern
+            if (pattern != null) ...[
+              pw.SizedBox(height: 5),
+              pw.Container(
+                padding: const pw.EdgeInsets.all(6),
+                color: PdfColors.red100,
+                child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+                  pw.Text('${l10n.therapyTcmPatterns}: ${pattern.name}',
+                      style: pw.TextStyle(
+                          fontSize: 9, fontWeight: pw.FontWeight.bold, color: PdfColors.red800)),
+                  pw.Text(
+                      '${l10n.therapyTcmSymptoms}: ${pattern.symptoms.take(5).join(", ")}',
+                      style: const pw.TextStyle(fontSize: 8)),
+                  if (pattern.classicFormulas.isNotEmpty)
+                    pw.Text('${l10n.therapyTcmFormulas}: ${pattern.classicFormulas.first}',
+                        style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey700)),
+                ]),
+              ),
+            ],
+            if (tcm.tonifyingFoods.isNotEmpty) ...[
+              pw.SizedBox(height: 5),
+              pw.Text(
+                  '${l10n.therapyTcmTonifying} ${tcm.tonifyingFoods.take(6).join(", ")}',
+                  style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey800)),
+            ],
+          ]),
+        );
+      }),
+      pw.Container(
+        padding: const pw.EdgeInsets.all(6),
+        color: PdfColors.grey100,
+        child: pw.Text(l10n.therapyTcmDisclaimer,
+            style: const pw.TextStyle(fontSize: 7, color: PdfColors.grey600)),
+      ),
+    ]);
   }
 
   PdfColor _pdfAnwStatusColor(ANWRatioStatus status) {
