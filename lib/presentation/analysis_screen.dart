@@ -30,6 +30,8 @@ import 'package:ai_eye_capture/models/patient_info.dart';
 import 'package:ai_eye_capture/utils/polar_zone_hittest.dart';
 import 'package:ai_eye_capture/utils/zone_translations.dart';
 import 'package:ai_eye_capture/utils/dynamic_chart_painter.dart';  // v5.3.1: Radial chart warping  // v5.3.1: Polar zone lookup
+import 'package:ai_eye_capture/therapy/herbal_engine.dart';
+import 'package:ai_eye_capture/therapy/herbal_recommendations_panel.dart';
 
 class AnalysisScreen extends StatefulWidget {
   final File? leftEyeImage;
@@ -67,6 +69,8 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
   bool _includeImagesInPdf = AppSettings.defaults.includeImagesInPdf;
   bool _autoSavePdf = AppSettings.defaults.autoSavePdf;
   String _clinicName = '';
+  bool _herbalModeEnabled = false;
+  List<ZoneRecommendation> _herbalRecs = [];
   bool _isAnalyzing = true;
   String _statusMessage = '';
   bool get _isDesktop => Platform.isWindows || Platform.isMacOS || Platform.isLinux;
@@ -120,6 +124,30 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
       _includeImagesInPdf = settings.includeImagesInPdf;
       _autoSavePdf = settings.autoSavePdf;
       _clinicName = settings.clinicName;
+      _herbalModeEnabled = settings.herbalModeEnabled;
+    });
+
+    // Pre-load herbal database in background so it's ready when analysis finishes
+    if (settings.herbalModeEnabled) {
+      HerbalEngine.load().catchError((_) {});
+    }
+  }
+
+  void _buildHerbalRecs() {
+    if (!_herbalModeEnabled) return;
+    if (!HerbalEngine.isLoaded) {
+      HerbalEngine.load().then((_) {
+        if (!mounted) return;
+        setState(() {
+          _herbalRecs = HerbalEngine.recommend(
+              rightResult: _rightResult, leftResult: _leftResult);
+        });
+      }).catchError((_) {});
+      return;
+    }
+    setState(() {
+      _herbalRecs = HerbalEngine.recommend(
+          rightResult: _rightResult, leftResult: _leftResult);
     });
   }
 
@@ -272,6 +300,8 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
         _progress = 1.0;
       });
 
+      // Generate herbal recommendations after analysis completes
+      _buildHerbalRecs();
 
       if (_autoSavePdf) {
         await _exportPdf();
@@ -689,6 +719,10 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
               _buildResultCard(_leftResult!, l10n.leftEyeOS, false, l10n),
             if (_leftResult != null && _rightResult != null)
               _buildComparisonCard(l10n),
+            if (_herbalModeEnabled) ...[
+              const SizedBox(height: 20),
+              HerbalRecommendationsPanel(recommendations: _herbalRecs),
+            ],
             const SizedBox(height: 24),
             _buildActionButtons(l10n),
             const SizedBox(height: 32)

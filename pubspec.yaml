@@ -108,6 +108,7 @@ flutter:
     - assets/sounds/
     - assets/charts/
     - assets/overlays/
+    - assets/therapy/
   fonts:
     - family: Inter
       fonts:

@@ -9,6 +9,7 @@ class AppSettingsData {
     required this.preferredCamera,
     required this.defaultZoom,
     required this.clinicName,
+    required this.herbalModeEnabled,
   });
 
   final bool autoSavePdf;
@@ -20,6 +21,8 @@ class AppSettingsData {
   /// Clinic, practitioner, or university name shown in report headers.
   /// Empty string means no practice name set.
   final String clinicName;
+  /// Whether the herbal recommendation panel is shown in analysis results.
+  final bool herbalModeEnabled;
 
   AppSettingsData copyWith({
     bool? autoSavePdf,
@@ -29,6 +32,7 @@ class AppSettingsData {
     String? preferredCamera,
     double? defaultZoom,
     String? clinicName,
+    bool? herbalModeEnabled,
   }) {
     return AppSettingsData(
       autoSavePdf: autoSavePdf ?? this.autoSavePdf,
@@ -38,6 +42,7 @@ class AppSettingsData {
       preferredCamera: preferredCamera ?? this.preferredCamera,
       defaultZoom: defaultZoom ?? this.defaultZoom,
       clinicName: clinicName ?? this.clinicName,
+      herbalModeEnabled: herbalModeEnabled ?? this.herbalModeEnabled,
     );
   }
 }
@@ -54,6 +59,7 @@ class AppSettings {
   static const String _preferredCameraKey = 'settings_preferred_camera';
   static const String _defaultZoomKey = 'cameraZoom';
   static const String _clinicNameKey = 'settings_clinic_name';
+  static const String _herbalModeKey = 'settings_herbal_mode_enabled';
 
   static const AppSettingsData defaults = AppSettingsData(
     autoSavePdf: false,
@@ -63,6 +69,7 @@ class AppSettings {
     preferredCamera: cameraDinoLite,
     defaultZoom: 0.0,
     clinicName: '',
+    herbalModeEnabled: false,
   );
 
   static Future<AppSettingsData> load() async {
@@ -80,6 +87,7 @@ class AppSettings {
       preferredCamera: prefs.getString(_preferredCameraKey) ?? defaults.preferredCamera,
       defaultZoom: normalizedZoom,
       clinicName: prefs.getString(_clinicNameKey) ?? defaults.clinicName,
+      herbalModeEnabled: prefs.getBool(_herbalModeKey) ?? defaults.herbalModeEnabled,
     );
   }
 
@@ -101,5 +109,6 @@ class AppSettings {
     await prefs.setString(_preferredCameraKey, settings.preferredCamera);
     await prefs.setDouble(_defaultZoomKey, settings.defaultZoom);
     await prefs.setString(_clinicNameKey, settings.clinicName);
+    await prefs.setBool(_herbalModeKey, settings.herbalModeEnabled);
   }
 }

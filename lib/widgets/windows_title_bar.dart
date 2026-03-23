@@ -569,6 +569,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
   String _preferredCamera = AppSettings.defaults.preferredCamera;
   double _defaultZoom = AppSettings.defaults.defaultZoom;
   String _clinicName = AppSettings.defaults.clinicName;
+  bool _herbalModeEnabled = AppSettings.defaults.herbalModeEnabled;
 
   @override
   void initState() {
@@ -588,6 +589,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
       _preferredCamera = settings.preferredCamera;
       _defaultZoom = settings.defaultZoom;
       _clinicName = settings.clinicName;
+      _herbalModeEnabled = settings.herbalModeEnabled;
     });
   }
 
@@ -601,6 +603,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
         preferredCamera: _preferredCamera,
         defaultZoom: _defaultZoom,
         clinicName: _clinicName,
+        herbalModeEnabled: _herbalModeEnabled,
       ),
     );
   }
@@ -680,6 +683,11 @@ class _SettingsDialogState extends State<SettingsDialog> {
               const SizedBox(height: 12),
               _buildSwitch(l10n.settingsAutoSavePdf, _autoSavePdf, (v) => setState(() => _autoSavePdf = v)),
               _buildSwitch(l10n.settingsIncludeImages, _includeImagesInPdf, (v) => setState(() => _includeImagesInPdf = v)),
+              const Divider(color: Colors.white24, height: 24),
+              _sectionHeader('Natural Medicine'),
+              const SizedBox(height: 12),
+              _buildSwitch('Herbal Recommendations (iris zone-based)', _herbalModeEnabled,
+                  (v) => setState(() => _herbalModeEnabled = v)),
             ],
           ),
         ),
