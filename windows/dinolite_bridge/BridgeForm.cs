@@ -522,9 +522,6 @@ namespace DinoLiteBridge
 
             byte[] report = new byte[sizeHid];
             Array.Copy(data, dataOff, report, 0, (int)sizeHid);
-            Console.WriteLine("HID:RawInput vid_30fa report=" + BitConverter.ToString(report));
-            Console.Out.Flush();
-
             // Any report from the iriscope HID interface = button event.
             OnHidButtonPressed();
         }
