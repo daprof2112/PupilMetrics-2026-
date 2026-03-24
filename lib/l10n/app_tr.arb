@@ -1982,4 +1982,25 @@
   "therapyNatureLabel": "Doğa",
   "therapyPairedOrgan": "çift: {organ}",
   "@therapyPairedOrgan": { "placeholders": { "organ": { "type": "String" } } }
+,
+
+  "bothEyesCapturedTitle": "Her İki Göz Yakalandı",
+
+  "constitutionalType": "Anayasal Tip",
+
+  "constitutionalTypeOptional": "Anayasal Tip (İsteğe Bağlı)",
+
+  "selectConstitutionalType": "Anayasal tip seçin…",
+
+  "constitutionalTypeNone": "Yok (değerlendirilmedi)",
+
+  "constitutionalIridology": "Anayasal İridoloji",
+
+  "constitutionalIrisDescription": "İris Açıklaması",
+
+  "constitutionalPredispositions": "Sağlık Yatkınlıkları",
+
+  "constitutionalHomeopathicRemedies": "Homeopatik Çareler",
+
+  "constitutionalTypeBy": "Dr. Josef Deck'in Anayasal İridolojisine Dayalı"
 }

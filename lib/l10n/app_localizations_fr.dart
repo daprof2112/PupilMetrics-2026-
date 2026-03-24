@@ -3711,4 +3711,36 @@ class AppLocalizationsFr extends AppLocalizations {
   String therapyPairedOrgan(String organ) {
     return 'associé : $organ';
   }
+
+  @override
+  String get bothEyesCapturedTitle => 'Les Deux Yeux Capturés';
+
+  @override
+  String get constitutionalType => 'Type Constitutionnel';
+
+  @override
+  String get constitutionalTypeOptional => 'Type Constitutionnel (Optionnel)';
+
+  @override
+  String get selectConstitutionalType =>
+      'Sélectionner le type constitutionnel…';
+
+  @override
+  String get constitutionalTypeNone => 'Aucun (non évalué)';
+
+  @override
+  String get constitutionalIridology => 'Iridologie Constitutionnelle';
+
+  @override
+  String get constitutionalIrisDescription => 'Description de l\'Iris';
+
+  @override
+  String get constitutionalPredispositions => 'Prédispositions de Santé';
+
+  @override
+  String get constitutionalHomeopathicRemedies => 'Remèdes Homéopathiques';
+
+  @override
+  String get constitutionalTypeBy =>
+      'Basé sur l\'Iridologie Constitutionnelle du Dr. Josef Deck';
 }

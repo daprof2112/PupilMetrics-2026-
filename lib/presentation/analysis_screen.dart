@@ -38,6 +38,8 @@ import 'package:ai_eye_capture/therapy/chiropractic_engine.dart';
 import 'package:ai_eye_capture/therapy/chiropractic_recommendations_panel.dart';
 import 'package:ai_eye_capture/therapy/tcm_engine.dart';
 import 'package:ai_eye_capture/therapy/tcm_recommendations_panel.dart';
+import 'package:ai_eye_capture/therapy/constitutional_data.dart';
+import 'package:ai_eye_capture/therapy/constitutional_panel.dart';
 
 class AnalysisScreen extends StatefulWidget {
   final File? leftEyeImage;
@@ -786,6 +788,12 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
               _buildResultCard(_leftResult!, l10n.leftEyeOS, false, l10n),
             if (_leftResult != null && _rightResult != null)
               _buildComparisonCard(l10n),
+            if (globalSelectedConstitution != null) ...[
+              const SizedBox(height: 20),
+              ConstitutionalPanel(
+                constitution: findConstitution(globalSelectedConstitution!)!,
+              ),
+            ],
             if (_herbalModeEnabled) ...[
               const SizedBox(height: 20),
               HerbalRecommendationsPanel(recommendations: _herbalRecs),
@@ -3538,6 +3546,7 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
         if (_rightResult?.anwAssessment != null && _leftResult?.anwAssessment != null)
           _buildPdfBilateralANW(l10n),
         pw.SizedBox(height: 16),
+        if (globalSelectedConstitution != null) _buildPdfConstitution(l10n),
         if (_herbalModeEnabled && _herbalRecs.isNotEmpty) _buildPdfHerbal(l10n),
         if (_nutritionModeEnabled && _nutritionRecs.isNotEmpty) _buildPdfNutrition(l10n),
         if (_chiropracticModeEnabled && _chiropracticRecs.isNotEmpty) _buildPdfChiropractic(l10n),
@@ -4007,6 +4016,165 @@ Future<String?> _exportPdf({bool showSnackbar = true}) async {
             style: pw.TextStyle(fontSize: 9, color: borderColor),
           ),
       ]),
+    );
+  }
+
+// ── CONSTITUTIONAL IRIDOLOGY PDF SECTION ─────────────────────────────────────
+
+  pw.Widget _buildPdfConstitution(AppLocalizations l10n) {
+    final c = findConstitution(globalSelectedConstitution!);
+    if (c == null) return pw.SizedBox();
+
+    // Light theme — easy to read on printed/exported PDF
+    const amberDark  = PdfColor(0.75, 0.45, 0.0);   // deep amber for headers
+    const headerBg   = PdfColor(1.0,  0.94, 0.80);  // warm cream header background
+    const subHdrBg   = PdfColor(0.94, 0.97, 1.0);   // very light blue for iris section
+    const predBg     = PdfColor(1.0,  0.97, 0.92);  // light peach for predispositions
+    const remedyBg   = PdfColor(0.92, 1.0,  0.92);  // light green for remedies
+    const bodyText   = PdfColors.black;
+    const mutedText  = PdfColor(0.35, 0.35, 0.35);
+    const divider    = PdfColor(0.85, 0.75, 0.55);
+
+    pw.Widget sectionLabel(String title, PdfColor bg, PdfColor textColor) =>
+        pw.Container(
+          width: double.infinity,
+          padding: const pw.EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          color: bg,
+          child: pw.Text(title,
+              style: pw.TextStyle(
+                  color: textColor,
+                  fontSize: 8,
+                  fontWeight: pw.FontWeight.bold,
+                  letterSpacing: 0.8)),
+        );
+
+    return pw.Container(
+      margin: const pw.EdgeInsets.only(bottom: 16),
+      decoration: pw.BoxDecoration(
+        color: PdfColors.white,
+        border: pw.Border.all(color: amberDark, width: 1.5),
+        borderRadius: const pw.BorderRadius.all(pw.Radius.circular(4)),
+      ),
+      child: pw.Column(
+        crossAxisAlignment: pw.CrossAxisAlignment.start,
+        children: [
+          // ── Header bar ──────────────────────────────────────────────────────
+          pw.Container(
+            width: double.infinity,
+            padding: const pw.EdgeInsets.all(10),
+            color: headerBg,
+            child: pw.Row(
+              mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+              children: [
+                pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+                  pw.Text('CONSTITUTIONAL IRIDOLOGY',
+                      style: pw.TextStyle(
+                          color: amberDark,
+                          fontSize: 8,
+                          fontWeight: pw.FontWeight.bold,
+                          letterSpacing: 1.2)),
+                  pw.SizedBox(height: 3),
+                  pw.Text(c.name,
+                      style: pw.TextStyle(
+                          color: bodyText,
+                          fontSize: 13,
+                          fontWeight: pw.FontWeight.bold)),
+                ]),
+                pw.Container(
+                  padding: const pw.EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  decoration: pw.BoxDecoration(
+                    color: amberDark,
+                    borderRadius: const pw.BorderRadius.all(pw.Radius.circular(10)),
+                  ),
+                  child: pw.Text(c.group,
+                      style: pw.TextStyle(
+                          color: PdfColors.white,
+                          fontSize: 9,
+                          fontWeight: pw.FontWeight.bold)),
+                ),
+              ],
+            ),
+          ),
+
+          pw.Divider(color: divider, thickness: 0.5),
+
+          // ── Iris Description ─────────────────────────────────────────────
+          sectionLabel('IRIS DESCRIPTION', subHdrBg, const PdfColor(0.0, 0.35, 0.65)),
+          pw.Padding(
+            padding: const pw.EdgeInsets.fromLTRB(10, 8, 10, 10),
+            child: pw.Text(c.irisDescription,
+                style: pw.TextStyle(color: bodyText, fontSize: 9, lineSpacing: 2.5)),
+          ),
+
+          pw.Divider(color: divider, thickness: 0.5),
+
+          // ── Health Predispositions ────────────────────────────────────────
+          sectionLabel('HEALTH PREDISPOSITIONS', predBg, const PdfColor(0.55, 0.25, 0.0)),
+          pw.Padding(
+            padding: const pw.EdgeInsets.fromLTRB(10, 8, 10, 10),
+            child: pw.Column(
+              crossAxisAlignment: pw.CrossAxisAlignment.start,
+              children: c.predispositions
+                  .map((p) => pw.Padding(
+                        padding: const pw.EdgeInsets.only(bottom: 5),
+                        child: pw.Row(
+                          crossAxisAlignment: pw.CrossAxisAlignment.start,
+                          children: [
+                            pw.Text('- ',
+                                style: pw.TextStyle(
+                                    color: amberDark,
+                                    fontSize: 9,
+                                    fontWeight: pw.FontWeight.bold)),
+                            pw.Expanded(
+                              child: pw.Text(p,
+                                  style: pw.TextStyle(
+                                      color: bodyText, fontSize: 9, lineSpacing: 2)),
+                            ),
+                          ],
+                        ),
+                      ))
+                  .toList(),
+            ),
+          ),
+
+          pw.Divider(color: divider, thickness: 0.5),
+
+          // ── Homeopathic Remedies ──────────────────────────────────────────
+          sectionLabel('HOMEOPATHIC REMEDIES', remedyBg, const PdfColor(0.0, 0.45, 0.15)),
+          pw.Padding(
+            padding: const pw.EdgeInsets.fromLTRB(10, 8, 10, 10),
+            child: pw.Wrap(
+              spacing: 8,
+              runSpacing: 6,
+              children: c.homeopathicRemedies
+                  .map((r) => pw.Container(
+                        padding: const pw.EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                        decoration: pw.BoxDecoration(
+                          color: const PdfColor(0.90, 1.0, 0.90),
+                          border: pw.Border.all(
+                              color: const PdfColor(0.0, 0.55, 0.20), width: 0.8),
+                          borderRadius: const pw.BorderRadius.all(pw.Radius.circular(8)),
+                        ),
+                        child: pw.Text(r,
+                            style: pw.TextStyle(
+                                color: const PdfColor(0.0, 0.35, 0.10),
+                                fontSize: 9,
+                                fontWeight: pw.FontWeight.bold)),
+                      ))
+                  .toList(),
+            ),
+          ),
+
+          // ── Footer ────────────────────────────────────────────────────────
+          pw.Padding(
+            padding: const pw.EdgeInsets.fromLTRB(10, 0, 10, 8),
+            child: pw.Text(
+              'Based on Dr. Josef Deck\'s Constitutional Iridology - for educational reference only.',
+              style: pw.TextStyle(color: mutedText, fontSize: 7, lineSpacing: 1.5),
+            ),
+          ),
+        ],
+      ),
     );
   }
 

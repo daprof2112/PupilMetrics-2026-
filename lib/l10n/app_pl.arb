@@ -1982,4 +1982,25 @@
   "therapyNatureLabel": "Natura",
   "therapyPairedOrgan": "para: {organ}",
   "@therapyPairedOrgan": { "placeholders": { "organ": { "type": "String" } } }
+,
+
+  "bothEyesCapturedTitle": "Oboje Oczu Uchwycone",
+
+  "constitutionalType": "Typ Konstytucyjny",
+
+  "constitutionalTypeOptional": "Typ Konstytucyjny (Opcjonalny)",
+
+  "selectConstitutionalType": "Wybierz typ konstytucyjny…",
+
+  "constitutionalTypeNone": "Brak (nieoceniony)",
+
+  "constitutionalIridology": "Iridologia Konstytucyjna",
+
+  "constitutionalIrisDescription": "Opis Tęczówki",
+
+  "constitutionalPredispositions": "Predyspozycje Zdrowotne",
+
+  "constitutionalHomeopathicRemedies": "Śrrodki Homeopatyczne",
+
+  "constitutionalTypeBy": "Na podstawie Iridologii Konstytucyjnej dr Josefa Decka"
 }

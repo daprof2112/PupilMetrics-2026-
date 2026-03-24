@@ -1535,4 +1535,25 @@
   "therapyNatureLabel": "성질",
   "therapyPairedOrgan": "짝: {organ}",
   "@therapyPairedOrgan": { "placeholders": { "organ": { "type": "String" } } }
+,
+
+  "bothEyesCapturedTitle": "양안 촬영 완료",
+
+  "constitutionalType": "체질 유형",
+
+  "constitutionalTypeOptional": "체질 유형 (선택사항)",
+
+  "selectConstitutionalType": "체질 유형 선택…",
+
+  "constitutionalTypeNone": "없음 (미평가)",
+
+  "constitutionalIridology": "체질 홍체학",
+
+  "constitutionalIrisDescription": "홍체 설명",
+
+  "constitutionalPredispositions": "건강 성향",
+
+  "constitutionalHomeopathicRemedies": "동종요법 처방",
+
+  "constitutionalTypeBy": "요제프 데크 박사의 체질 홍체학 기반"
 }

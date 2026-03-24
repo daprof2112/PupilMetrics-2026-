@@ -3675,4 +3675,35 @@ class AppLocalizationsHi extends AppLocalizations {
   String therapyPairedOrgan(String organ) {
     return 'युग्मित: $organ';
   }
+
+  @override
+  String get bothEyesCapturedTitle => 'दोनों आंखें कैप्चर हुईं';
+
+  @override
+  String get constitutionalType => 'संवैधानिक प्रकार';
+
+  @override
+  String get constitutionalTypeOptional => 'संवैधानिक प्रकार (वैकल्पिक)';
+
+  @override
+  String get selectConstitutionalType => 'संवैधानिक प्रकार चुनें…';
+
+  @override
+  String get constitutionalTypeNone => 'कोई नहीं (मूल्यांकन नहीं)';
+
+  @override
+  String get constitutionalIridology => 'संवैधानिक आइरिडोलॉजी';
+
+  @override
+  String get constitutionalIrisDescription => 'आइरिस विवरण';
+
+  @override
+  String get constitutionalPredispositions => 'स्वास्थ्य पूर्वाग्रह';
+
+  @override
+  String get constitutionalHomeopathicRemedies => 'होम्योपैथिक उपचार';
+
+  @override
+  String get constitutionalTypeBy =>
+      'डॉ. जोसेफ डेक की संवैधानिक आइरिडोलॉजी पर आधारित';
 }

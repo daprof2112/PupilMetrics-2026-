@@ -1242,4 +1242,25 @@
   "therapyNatureLabel": "Naturaleza",
   "therapyPairedOrgan": "par: {organ}",
   "@therapyPairedOrgan": { "placeholders": { "organ": { "type": "String" } } }
+,
+
+  "bothEyesCapturedTitle": "Ambos Ojos Capturados",
+
+  "constitutionalType": "Tipo Constitucional",
+
+  "constitutionalTypeOptional": "Tipo Constitucional (Opcional)",
+
+  "selectConstitutionalType": "Seleccionar tipo constitucional…",
+
+  "constitutionalTypeNone": "Ninguno (no evaluado)",
+
+  "constitutionalIridology": "Iridología Constitucional",
+
+  "constitutionalIrisDescription": "Descripción del Iris",
+
+  "constitutionalPredispositions": "Predisposiciones de Salud",
+
+  "constitutionalHomeopathicRemedies": "Remedios Homeopáticos",
+
+  "constitutionalTypeBy": "Basado en la Iridología Constitucional del Dr. Josef Deck"
 }

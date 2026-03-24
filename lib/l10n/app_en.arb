@@ -1986,5 +1986,16 @@
   "therapyTasteLabel": "Taste",
   "therapyNatureLabel": "Nature",
   "therapyPairedOrgan": "paired: {organ}",
-  "@therapyPairedOrgan": { "placeholders": { "organ": { "type": "String" } } }
+  "@therapyPairedOrgan": { "placeholders": { "organ": { "type": "String" } } },
+
+  "bothEyesCapturedTitle": "Both Eyes Captured",
+  "constitutionalType": "Constitutional Type",
+  "constitutionalTypeOptional": "Constitutional Type (Optional)",
+  "selectConstitutionalType": "Select constitutional type…",
+  "constitutionalTypeNone": "None (not assessed)",
+  "constitutionalIridology": "Constitutional Iridology",
+  "constitutionalIrisDescription": "Iris Description",
+  "constitutionalPredispositions": "Health Predispositions",
+  "constitutionalHomeopathicRemedies": "Homeopathic Remedies",
+  "constitutionalTypeBy": "Based on Dr. Josef Deck's Constitutional Iridology"
 }

@@ -589,6 +589,9 @@ final DinoLiteService? globalDinoService =
 
 PatientInfo? globalPatientInfo;
 
+/// Selected constitutional type id (set in left-eye screen, read in analysis + PDF).
+String? globalSelectedConstitution;
+
 double? globalRightEyeIrisSize;
 double? globalLeftEyeIrisSize;
 double? globalRightEyeZoom;

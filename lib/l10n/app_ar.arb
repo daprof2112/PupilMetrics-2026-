@@ -1982,4 +1982,25 @@
   "therapyNatureLabel": "الطبيعة",
   "therapyPairedOrgan": "المقترن: {organ}",
   "@therapyPairedOrgan": { "placeholders": { "organ": { "type": "String" } } }
+,
+
+  "bothEyesCapturedTitle": "تم التقاط كلتي العينين",
+
+  "constitutionalType": "النوع الدستوري",
+
+  "constitutionalTypeOptional": "النوع الدستوري (اختياري)",
+
+  "selectConstitutionalType": "اختر النوع الدستوري…",
+
+  "constitutionalTypeNone": "لا شيء (غير مقيّم)",
+
+  "constitutionalIridology": "علم القزحية الدستوري",
+
+  "constitutionalIrisDescription": "وصف القزحية",
+
+  "constitutionalPredispositions": "الاستعدادات الصحية",
+
+  "constitutionalHomeopathicRemedies": "العلاجات المثلية",
+
+  "constitutionalTypeBy": "استناداً إلى علم القزحية الدستوري للدكتور يوزيف ديك"
 }

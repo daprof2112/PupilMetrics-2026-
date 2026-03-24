@@ -1983,4 +1983,25 @@
   "therapyNatureLabel": "\u041f\u0440\u0438\u0440\u043e\u0434\u0430",
   "therapyPairedOrgan": "\u043f\u0430\u0440\u0430: {organ}",
   "@therapyPairedOrgan": { "placeholders": { "organ": { "type": "String" } } }
+,
+
+  "bothEyesCapturedTitle": "Оба глаза сфотографированы",
+
+  "constitutionalType": "Конституциональный тип",
+
+  "constitutionalTypeOptional": "Конституциональный тип (необязательно)",
+
+  "selectConstitutionalType": "Выберите конституциональный тип…",
+
+  "constitutionalTypeNone": "Нет (не оценивалось)",
+
+  "constitutionalIridology": "Конституциональная иридология",
+
+  "constitutionalIrisDescription": "Описание радужки",
+
+  "constitutionalPredispositions": "Предрасположенности к заболеваниям",
+
+  "constitutionalHomeopathicRemedies": "Гомеопатические средства",
+
+  "constitutionalTypeBy": "На основе конституциональной иридологии д-ра Йозефа Дека"
 }

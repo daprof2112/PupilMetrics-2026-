@@ -3588,4 +3588,34 @@ class AppLocalizationsKo extends AppLocalizations {
   String therapyPairedOrgan(String organ) {
     return '짝: $organ';
   }
+
+  @override
+  String get bothEyesCapturedTitle => '양안 촬영 완료';
+
+  @override
+  String get constitutionalType => '체질 유형';
+
+  @override
+  String get constitutionalTypeOptional => '체질 유형 (선택사항)';
+
+  @override
+  String get selectConstitutionalType => '체질 유형 선택…';
+
+  @override
+  String get constitutionalTypeNone => '없음 (미평가)';
+
+  @override
+  String get constitutionalIridology => '체질 홍체학';
+
+  @override
+  String get constitutionalIrisDescription => '홍체 설명';
+
+  @override
+  String get constitutionalPredispositions => '건강 성향';
+
+  @override
+  String get constitutionalHomeopathicRemedies => '동종요법 처방';
+
+  @override
+  String get constitutionalTypeBy => '요제프 데크 박사의 체질 홍체학 기반';
 }

@@ -21,6 +21,7 @@ import 'package:ai_eye_capture/models/patient_info.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:ai_eye_capture/utils/pupil_analyzer_fixed.dart';
+import 'package:ai_eye_capture/therapy/constitutional_data.dart';
 
 class TakeLeftEyePhotoScreen extends StatefulWidget {
   final CameraDescription? camera;
@@ -43,6 +44,9 @@ class TakeLeftEyePhotoScreen extends StatefulWidget {
 }
 
 class _TakeLeftEyePhotoScreenState extends State<TakeLeftEyePhotoScreen> {
+  // Windows-only constitutional type selector
+  String? _selectedConstitutionId;
+
   @override
   void initState() {
     super.initState();
@@ -52,6 +56,8 @@ class _TakeLeftEyePhotoScreenState extends State<TakeLeftEyePhotoScreen> {
     if (widget.rightEyePhoto != null) {
       rightEyePic = widget.rightEyePhoto;
     }
+    // Restore previously selected constitution (if user navigated back)
+    _selectedConstitutionId = globalSelectedConstitution;
   }
 
   @override
@@ -64,7 +70,7 @@ class _TakeLeftEyePhotoScreenState extends State<TakeLeftEyePhotoScreen> {
       child: Scaffold(
         appBar: CustomAppbar(
           appExit: true,
-          text: widget.leftEyePhoto == null ? l10n.takeLeftEyePhoto : l10n.leftEyePhoto,
+          text: widget.leftEyePhoto == null ? l10n.takeLeftEyePhoto : l10n.bothEyesCapturedTitle,
         ),
         body: widget.leftEyePhoto == null
             ? _buildReadyScreen(context, l10n)
@@ -411,6 +417,12 @@ class _TakeLeftEyePhotoScreenState extends State<TakeLeftEyePhotoScreen> {
           ),
 
           const SizedBox(height: 24),
+
+          // ── Windows-only: Constitutional Type selector ──────────────────────
+          if (Platform.isWindows || Platform.isMacOS || Platform.isLinux)
+            _buildConstitutionalSelector(l10n),
+
+          const SizedBox(height: 24),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: PrimaryButton(
@@ -499,6 +511,123 @@ Padding(
             ),
           ),
           const SizedBox(height: 32),
+        ],
+      ),
+    );
+  }
+
+  // ── Constitutional Type Selector (Desktop only) ──────────────────────────
+  Widget _buildConstitutionalSelector(AppLocalizations l10n) {
+    // Build grouped dropdown items
+    final List<DropdownMenuItem<String?>> items = [
+      DropdownMenuItem<String?>(
+        value: null,
+        child: Text(
+          l10n.constitutionalTypeNone,
+          style: const TextStyle(color: Colors.white54, fontSize: 13),
+        ),
+      ),
+    ];
+
+    for (final group in kConstitutionalGroups) {
+      final types = kConstitutionalTypes.where((t) => t.group == group).toList();
+      if (types.isEmpty) continue;
+
+      // Group header as disabled item
+      items.add(DropdownMenuItem<String?>(
+        value: '__header_$group',
+        enabled: false,
+        child: Text(
+          '── $group ──',
+          style: const TextStyle(
+            color: Colors.amber,
+            fontSize: 11,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 0.5,
+          ),
+        ),
+      ));
+
+      for (final t in types) {
+        items.add(DropdownMenuItem<String?>(
+          value: t.id,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 8),
+            child: Text(
+              t.name,
+              style: const TextStyle(color: Colors.white, fontSize: 13),
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ));
+      }
+    }
+
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 24),
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: const Color(0xFF1A1500),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.amber.withOpacity(0.5)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.remove_red_eye_outlined, color: Colors.amber, size: 18),
+              const SizedBox(width: 8),
+              Text(
+                l10n.constitutionalTypeOptional,
+                style: const TextStyle(
+                  color: Colors.amber,
+                  fontSize: 13,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          DropdownButtonFormField<String?>(
+            value: _selectedConstitutionId,
+            isExpanded: true,
+            dropdownColor: const Color(0xFF1D1E33),
+            decoration: InputDecoration(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: BorderSide(color: Colors.amber.withOpacity(0.3)),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: BorderSide(color: Colors.amber.withOpacity(0.3)),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: const BorderSide(color: Colors.amber),
+              ),
+              filled: true,
+              fillColor: const Color(0xFF0D0D1A),
+            ),
+            hint: Text(
+              l10n.selectConstitutionalType,
+              style: const TextStyle(color: Colors.white38, fontSize: 13),
+            ),
+            items: items,
+            onChanged: (val) {
+              if (val != null && val.startsWith('__header_')) return;
+              setState(() => _selectedConstitutionId = val);
+              globalSelectedConstitution = val;
+            },
+          ),
+          if (_selectedConstitutionId != null) ...[
+            const SizedBox(height: 8),
+            Text(
+              findConstitution(_selectedConstitutionId!)?.name ?? '',
+              style: const TextStyle(color: Colors.white70, fontSize: 12),
+            ),
+          ],
         ],
       ),
     );

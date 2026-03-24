@@ -6809,6 +6809,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'paired: {organ}'**
   String therapyPairedOrgan(String organ);
+
+  /// No description provided for @bothEyesCapturedTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Both Eyes Captured'**
+  String get bothEyesCapturedTitle;
+
+  /// No description provided for @constitutionalType.
+  ///
+  /// In en, this message translates to:
+  /// **'Constitutional Type'**
+  String get constitutionalType;
+
+  /// No description provided for @constitutionalTypeOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Constitutional Type (Optional)'**
+  String get constitutionalTypeOptional;
+
+  /// No description provided for @selectConstitutionalType.
+  ///
+  /// In en, this message translates to:
+  /// **'Select constitutional type…'**
+  String get selectConstitutionalType;
+
+  /// No description provided for @constitutionalTypeNone.
+  ///
+  /// In en, this message translates to:
+  /// **'None (not assessed)'**
+  String get constitutionalTypeNone;
+
+  /// No description provided for @constitutionalIridology.
+  ///
+  /// In en, this message translates to:
+  /// **'Constitutional Iridology'**
+  String get constitutionalIridology;
+
+  /// No description provided for @constitutionalIrisDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Iris Description'**
+  String get constitutionalIrisDescription;
+
+  /// No description provided for @constitutionalPredispositions.
+  ///
+  /// In en, this message translates to:
+  /// **'Health Predispositions'**
+  String get constitutionalPredispositions;
+
+  /// No description provided for @constitutionalHomeopathicRemedies.
+  ///
+  /// In en, this message translates to:
+  /// **'Homeopathic Remedies'**
+  String get constitutionalHomeopathicRemedies;
+
+  /// No description provided for @constitutionalTypeBy.
+  ///
+  /// In en, this message translates to:
+  /// **'Based on Dr. Josef Deck\'s Constitutional Iridology'**
+  String get constitutionalTypeBy;
 }
 
 class _AppLocalizationsDelegate

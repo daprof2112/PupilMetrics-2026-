@@ -3538,4 +3538,34 @@ class AppLocalizationsZh extends AppLocalizations {
   String therapyPairedOrgan(String organ) {
     return '配对：$organ';
   }
+
+  @override
+  String get bothEyesCapturedTitle => '双眼已拍摄';
+
+  @override
+  String get constitutionalType => '体质类型';
+
+  @override
+  String get constitutionalTypeOptional => '体质类型（可选）';
+
+  @override
+  String get selectConstitutionalType => '选择体质类型…';
+
+  @override
+  String get constitutionalTypeNone => '无（未评估）';
+
+  @override
+  String get constitutionalIridology => '体质虹膜学';
+
+  @override
+  String get constitutionalIrisDescription => '虹膜描述';
+
+  @override
+  String get constitutionalPredispositions => '健康倾向';
+
+  @override
+  String get constitutionalHomeopathicRemedies => '顺势疗法药物';
+
+  @override
+  String get constitutionalTypeBy => '基于约瑟夫·德克博士的体质虹膜学';
 }

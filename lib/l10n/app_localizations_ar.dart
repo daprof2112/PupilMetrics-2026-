@@ -3662,4 +3662,35 @@ class AppLocalizationsAr extends AppLocalizations {
   String therapyPairedOrgan(String organ) {
     return 'المقترن: $organ';
   }
+
+  @override
+  String get bothEyesCapturedTitle => 'تم التقاط كلتي العينين';
+
+  @override
+  String get constitutionalType => 'النوع الدستوري';
+
+  @override
+  String get constitutionalTypeOptional => 'النوع الدستوري (اختياري)';
+
+  @override
+  String get selectConstitutionalType => 'اختر النوع الدستوري…';
+
+  @override
+  String get constitutionalTypeNone => 'لا شيء (غير مقيّم)';
+
+  @override
+  String get constitutionalIridology => 'علم القزحية الدستوري';
+
+  @override
+  String get constitutionalIrisDescription => 'وصف القزحية';
+
+  @override
+  String get constitutionalPredispositions => 'الاستعدادات الصحية';
+
+  @override
+  String get constitutionalHomeopathicRemedies => 'العلاجات المثلية';
+
+  @override
+  String get constitutionalTypeBy =>
+      'استناداً إلى علم القزحية الدستوري للدكتور يوزيف ديك';
 }

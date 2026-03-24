@@ -1982,4 +1982,25 @@
   "therapyNatureLabel": "性质",
   "therapyPairedOrgan": "配对：{organ}",
   "@therapyPairedOrgan": { "placeholders": { "organ": { "type": "String" } } }
+,
+
+  "bothEyesCapturedTitle": "双眼已拍摄",
+
+  "constitutionalType": "体质类型",
+
+  "constitutionalTypeOptional": "体质类型（可选）",
+
+  "selectConstitutionalType": "选择体质类型…",
+
+  "constitutionalTypeNone": "无（未评估）",
+
+  "constitutionalIridology": "体质虹膜学",
+
+  "constitutionalIrisDescription": "虹膜描述",
+
+  "constitutionalPredispositions": "健康倾向",
+
+  "constitutionalHomeopathicRemedies": "顺势疗法药物",
+
+  "constitutionalTypeBy": "基于约瑟夫·德克博士的体质虹膜学"
 }

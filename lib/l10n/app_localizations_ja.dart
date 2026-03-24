@@ -3582,4 +3582,34 @@ class AppLocalizationsJa extends AppLocalizations {
   String therapyPairedOrgan(String organ) {
     return '対：$organ';
   }
+
+  @override
+  String get bothEyesCapturedTitle => '両眼撮影完了';
+
+  @override
+  String get constitutionalType => '体質タイプ';
+
+  @override
+  String get constitutionalTypeOptional => '体質タイプ（任意）';
+
+  @override
+  String get selectConstitutionalType => '体質タイプを選択…';
+
+  @override
+  String get constitutionalTypeNone => 'なし（未評価）';
+
+  @override
+  String get constitutionalIridology => '体質虪彩学';
+
+  @override
+  String get constitutionalIrisDescription => '虪彩の説明';
+
+  @override
+  String get constitutionalPredispositions => '健康の素因';
+
+  @override
+  String get constitutionalHomeopathicRemedies => 'ホメオパシー療法';
+
+  @override
+  String get constitutionalTypeBy => 'ヨゼフ・デック博士の体質虪彩学に基づく';
 }

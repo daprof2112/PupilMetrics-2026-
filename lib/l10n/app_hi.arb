@@ -1982,4 +1982,25 @@
   "therapyNatureLabel": "प्रकृति",
   "therapyPairedOrgan": "युग्मित: {organ}",
   "@therapyPairedOrgan": { "placeholders": { "organ": { "type": "String" } } }
+,
+
+  "bothEyesCapturedTitle": "दोनों आंखें कैप्चर हुईं",
+
+  "constitutionalType": "संवैधानिक प्रकार",
+
+  "constitutionalTypeOptional": "संवैधानिक प्रकार (वैकल्पिक)",
+
+  "selectConstitutionalType": "संवैधानिक प्रकार चुनें…",
+
+  "constitutionalTypeNone": "कोई नहीं (मूल्यांकन नहीं)",
+
+  "constitutionalIridology": "संवैधानिक आइरिडोलॉजी",
+
+  "constitutionalIrisDescription": "आइरिस विवरण",
+
+  "constitutionalPredispositions": "स्वास्थ्य पूर्वाग्रह",
+
+  "constitutionalHomeopathicRemedies": "होम्योपैथिक उपचार",
+
+  "constitutionalTypeBy": "डॉ. जोसेफ डेक की संवैधानिक आइरिडोलॉजी पर आधारित"
 }

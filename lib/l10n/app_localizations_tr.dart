@@ -3692,4 +3692,35 @@ class AppLocalizationsTr extends AppLocalizations {
   String therapyPairedOrgan(String organ) {
     return 'çift: $organ';
   }
+
+  @override
+  String get bothEyesCapturedTitle => 'Her İki Göz Yakalandı';
+
+  @override
+  String get constitutionalType => 'Anayasal Tip';
+
+  @override
+  String get constitutionalTypeOptional => 'Anayasal Tip (İsteğe Bağlı)';
+
+  @override
+  String get selectConstitutionalType => 'Anayasal tip seçin…';
+
+  @override
+  String get constitutionalTypeNone => 'Yok (değerlendirilmedi)';
+
+  @override
+  String get constitutionalIridology => 'Anayasal İridoloji';
+
+  @override
+  String get constitutionalIrisDescription => 'İris Açıklaması';
+
+  @override
+  String get constitutionalPredispositions => 'Sağlık Yatkınlıkları';
+
+  @override
+  String get constitutionalHomeopathicRemedies => 'Homeopatik Çareler';
+
+  @override
+  String get constitutionalTypeBy =>
+      'Dr. Josef Deck\'in Anayasal İridolojisine Dayalı';
 }

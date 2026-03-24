@@ -5,6 +5,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:convert';
+import 'dart:typed_data';
 import 'package:ai_eye_capture/models/patient_info.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -14,6 +15,12 @@ import 'package:ai_eye_capture/utils/pupil_analyzer_fixed.dart';
 import 'package:ai_eye_capture/models/plr_history_model.dart';
 import 'package:ai_eye_capture/utils/pupil_analyzer_localizations.dart';
 import 'package:ai_eye_capture/services/plr_database_service.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:pdf/pdf.dart';
+import 'package:pdf/widgets.dart' as pw;
+import 'package:open_file/open_file.dart';
+import 'package:share_plus/share_plus.dart';
 
 class ScanHistoryScreen extends StatefulWidget {
   const ScanHistoryScreen({super.key});
@@ -866,6 +873,7 @@ class _ScanResultsViewerState extends State<ScanResultsViewer> {
   EyeAnalysisResult? _leftResult;
   AnisocoriaAssessment? _anisocoria;
   bool _isLoading = true;
+  bool _isExportingPdf = false;
 
   @override
   void initState() {
@@ -923,6 +931,18 @@ class _ScanResultsViewerState extends State<ScanResultsViewer> {
         elevation: 0,
         title: Text(widget.scan.patientName, style: const TextStyle(color: Colors.white)),
         leading: IconButton(icon: const Icon(Icons.arrow_back, color: Colors.white), onPressed: () => Navigator.pop(context)),
+        actions: [
+          _isExportingPdf
+              ? const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: SizedBox(width: 22, height: 22, child: CircularProgressIndicator(color: Color(0xFF00D9FF), strokeWidth: 2)),
+                )
+              : IconButton(
+                  icon: const Icon(Icons.picture_as_pdf, color: Color(0xFF00D9FF)),
+                  tooltip: 'Export PDF',
+                  onPressed: _exportPdf,
+                ),
+        ],
       ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator(color: Color(0xFF00D9FF)))
@@ -962,6 +982,284 @@ class _ScanResultsViewerState extends State<ScanResultsViewer> {
         ),
       ),
     );
+  }
+
+  Future<Directory> _getReportsDirectory() async {
+    Directory base;
+    if (Platform.isAndroid) {
+      try {
+        final dl = await getDownloadsDirectory();
+        base = dl ?? await getApplicationDocumentsDirectory();
+      } catch (_) {
+        final ext = await getExternalStorageDirectory();
+        base = ext ?? await getApplicationDocumentsDirectory();
+      }
+    } else {
+      base = await getApplicationDocumentsDirectory();
+    }
+    final dir = Directory('${base.path}/PupilReports');
+    if (!await dir.exists()) await dir.create(recursive: true);
+    return dir;
+  }
+
+  Future<void> _exportPdf() async {
+    if (_isExportingPdf) return;
+    final l10n = AppLocalizations.of(context)!;
+    final localizer = PupilAnalyzerLocalizations.of(context);
+    setState(() => _isExportingPdf = true);
+    try {
+      // Load clinic name from prefs
+      final prefs = await SharedPreferences.getInstance();
+      final clinicName = prefs.getString('clinic_name') ?? '';
+
+      // Load images from stored file paths
+      Uint8List? rightBytes, leftBytes;
+      if (widget.hasRightEye && widget.scan.rightEyePath != null) {
+        rightBytes = await File(widget.scan.rightEyePath!).readAsBytes();
+      }
+      if (widget.hasLeftEye && widget.scan.leftEyePath != null) {
+        leftBytes = await File(widget.scan.leftEyePath!).readAsBytes();
+      }
+
+      final now = DateTime.now();
+      final pdf = pw.Document();
+
+      // ── helper: a two-column metric row ──────────────────────────────────────
+      pw.Widget metricRow(String label, String value, String statusLabel, PdfColor statusColor) =>
+          pw.Padding(
+            padding: const pw.EdgeInsets.symmetric(vertical: 2),
+            child: pw.Row(children: [
+              pw.SizedBox(width: 130, child: pw.Text(label, style: const pw.TextStyle(fontSize: 9, color: PdfColors.grey700))),
+              pw.SizedBox(width: 60, child: pw.Text(value, style: pw.TextStyle(fontSize: 9, fontWeight: pw.FontWeight.bold))),
+              pw.Container(
+                padding: const pw.EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+                color: statusColor,
+                child: pw.Text(statusLabel, style: const pw.TextStyle(fontSize: 8, color: PdfColors.white)),
+              ),
+            ]),
+          );
+
+      // ── helper: build one eye section ────────────────────────────────────────
+      pw.Widget eyeSection(String title, EyeAnalysisResult r, bool isRight, PdfColor accent) {
+        final ratioLabel = r.pupilIrisRatio < 15 ? l10n.miosis
+            : r.pupilIrisRatio < 20 ? l10n.constricted
+            : r.pupilIrisRatio <= 30 ? l10n.normal
+            : r.pupilIrisRatio <= 40 ? l10n.dilated
+            : l10n.mydriasis;
+        final ratioColor = (r.pupilIrisRatio < 15 || r.pupilIrisRatio > 40) ? PdfColors.orange : PdfColors.green;
+        final anwLabel = r.anwRatio == null ? null
+            : r.anwRatio! < 25 ? l10n.anwSpastic
+            : r.anwRatio! <= 35 ? l10n.normal
+            : l10n.anwAtonic;
+
+        return pw.Container(
+          margin: const pw.EdgeInsets.only(bottom: 12),
+          padding: const pw.EdgeInsets.all(10),
+          decoration: pw.BoxDecoration(border: pw.Border.all(color: accent, width: 1.5)),
+          child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+            // Title + grade badge
+            pw.Row(mainAxisAlignment: pw.MainAxisAlignment.spaceBetween, children: [
+              pw.Text(title, style: pw.TextStyle(fontSize: 12, fontWeight: pw.FontWeight.bold, color: accent)),
+              pw.Container(
+                padding: const pw.EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                color: r.grade == 'A' ? PdfColors.green700
+                    : r.grade == 'B' ? PdfColors.lightGreen700
+                    : r.grade == 'C' ? PdfColors.orange
+                    : PdfColors.red,
+                child: pw.Text('${l10n.grade} ${r.grade}', style: const pw.TextStyle(color: PdfColors.white, fontSize: 10)),
+              ),
+            ]),
+            pw.SizedBox(height: 6),
+            pw.Divider(color: accent, thickness: 0.5),
+            pw.SizedBox(height: 4),
+            metricRow(l10n.piRatio, '${r.pupilIrisRatio.toStringAsFixed(1)}%', ratioLabel, ratioColor),
+            metricRow(l10n.ellipseness, '${r.ellipseness.toStringAsFixed(1)}%',
+                r.ellipseness >= 95 ? l10n.normal : l10n.elliptical,
+                r.ellipseness >= 95 ? PdfColors.green : PdfColors.orange),
+            metricRow(l10n.circularity, '${r.circularity.toStringAsFixed(1)}%',
+                r.circularity >= 90 ? l10n.circular : l10n.irregular,
+                r.circularity >= 90 ? PdfColors.green : PdfColors.orange),
+            metricRow(l10n.decentralization, '${r.decentration.toStringAsFixed(1)}%',
+                r.decentration < 3 ? l10n.centered : l10n.offset,
+                r.decentration < 3 ? PdfColors.green : PdfColors.orange),
+            if (anwLabel != null)
+              metricRow(l10n.anwRatio, '${r.anwRatio!.toStringAsFixed(1)}%', anwLabel,
+                  r.anwRatio! < 25 ? PdfColors.blue700 : r.anwRatio! <= 35 ? PdfColors.green : PdfColors.orange),
+            metricRow(l10n.confidence, '${(r.confidence * 100).toStringAsFixed(0)}%',
+                r.confidence >= 0.8 ? l10n.high : r.confidence >= 0.6 ? l10n.good : r.confidence >= 0.4 ? l10n.fair : l10n.low,
+                r.confidence >= 0.6 ? PdfColors.green : PdfColors.orange),
+            // Zone findings
+            if (r.flattenings.isNotEmpty) ...[
+              pw.SizedBox(height: 6),
+              pw.Text('${l10n.flattenings}:', style: pw.TextStyle(fontSize: 9, fontWeight: pw.FontWeight.bold, color: PdfColors.blue800)),
+              ...r.flattenings.map((f) => pw.Text(
+                '  • ${localizer.getZoneName(f.zone)} — ${f.percentage.toStringAsFixed(1)}%',
+                style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey800),
+              )),
+            ],
+            if (r.protrusions.isNotEmpty) ...[
+              pw.SizedBox(height: 4),
+              pw.Text('${l10n.protrusions}:', style: pw.TextStyle(fontSize: 9, fontWeight: pw.FontWeight.bold, color: PdfColors.orange800)),
+              ...r.protrusions.map((p) => pw.Text(
+                '  • ${localizer.getZoneName(p.zone)} — ${p.percentage.toStringAsFixed(1)}%',
+                style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey800),
+              )),
+            ],
+            // ANW primary shift
+            if (r.anwAssessment?.primaryShift != null) ...[
+              pw.SizedBox(height: 6),
+              pw.Container(
+                padding: const pw.EdgeInsets.all(6),
+                color: PdfColors.deepOrange50,
+                child: pw.Text(
+                  '${l10n.anwShiftDetected}: ${r.anwAssessment!.primaryShift!.zoneName}',
+                  style: pw.TextStyle(fontSize: 8, color: PdfColors.deepOrange800, fontWeight: pw.FontWeight.bold),
+                ),
+              ),
+            ],
+          ]),
+        );
+      }
+
+      pdf.addPage(pw.MultiPage(
+        pageFormat: PdfPageFormat.a4,
+        margin: const pw.EdgeInsets.all(40),
+        header: (ctx) => pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+          pw.Row(mainAxisAlignment: pw.MainAxisAlignment.spaceBetween, children: [
+            pw.Text(l10n.analysisReportTitle, style: pw.TextStyle(fontSize: 20, fontWeight: pw.FontWeight.bold, color: PdfColors.blue900)),
+            pw.Text('v5.3.0', style: const pw.TextStyle(fontSize: 12, color: PdfColors.grey600)),
+          ]),
+          pw.Divider(color: PdfColors.blue900, thickness: 2),
+          if (clinicName.isNotEmpty)
+            pw.Container(
+              margin: const pw.EdgeInsets.only(top: 8, bottom: 8),
+              padding: const pw.EdgeInsets.all(10),
+              decoration: pw.BoxDecoration(color: PdfColors.teal50, border: pw.Border.all(color: PdfColors.teal, width: 2)),
+              child: pw.Text(clinicName, style: pw.TextStyle(fontSize: 11, fontWeight: pw.FontWeight.bold, color: PdfColors.teal900)),
+            ),
+          pw.Text('${l10n.date}: ${DateFormat('MMMM dd, yyyy HH:mm').format(widget.scan.scanDate)}',
+              style: const pw.TextStyle(fontSize: 10)),
+          pw.SizedBox(height: 16),
+        ]),
+        footer: (ctx) => pw.Container(
+          alignment: pw.Alignment.centerRight,
+          child: pw.Text(l10n.reportPageXofY(ctx.pageNumber, ctx.pagesCount),
+              style: const pw.TextStyle(fontSize: 10, color: PdfColors.grey)),
+        ),
+        build: (ctx) => [
+          // Patient info
+          pw.Container(
+            padding: const pw.EdgeInsets.all(12),
+            decoration: pw.BoxDecoration(border: pw.Border.all(color: PdfColors.blue, width: 2)),
+            child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+              pw.Text(l10n.reportPersonInformationTitle, style: pw.TextStyle(fontSize: 14, fontWeight: pw.FontWeight.bold, color: PdfColors.blue900)),
+              pw.SizedBox(height: 8),
+              pw.Row(children: [
+                pw.Expanded(child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+                  pw.Text('${l10n.plrNameLabel}: ${widget.patientInfo.name}'),
+                  pw.Text('${l10n.sex}: ${widget.patientInfo.sexString}'),
+                ])),
+                pw.Expanded(child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+                  pw.Text('${l10n.ageYears}: ${widget.patientInfo.age}',
+                      style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
+                ])),
+              ]),
+              if (widget.patientInfo.mainComplaints?.isNotEmpty ?? false) ...[
+                pw.SizedBox(height: 8),
+                pw.Text('${l10n.mainComplaints}: ${widget.patientInfo.mainComplaints}',
+                    style: const pw.TextStyle(fontSize: 10)),
+              ],
+            ]),
+          ),
+          pw.SizedBox(height: 16),
+          // Eye images
+          if (rightBytes != null || leftBytes != null) ...[
+            pw.Row(mainAxisAlignment: pw.MainAxisAlignment.spaceEvenly, children: [
+              if (rightBytes != null) pw.Column(children: [
+                pw.Container(width: 160, height: 160, decoration: pw.BoxDecoration(border: pw.Border.all(color: PdfColors.blue, width: 2)),
+                    child: pw.Image(pw.MemoryImage(rightBytes), fit: pw.BoxFit.cover)),
+                pw.SizedBox(height: 6),
+                pw.Text(l10n.rightEyeOD, style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
+              ]),
+              if (leftBytes != null) pw.Column(children: [
+                pw.Container(width: 160, height: 160, decoration: pw.BoxDecoration(border: pw.Border.all(color: PdfColors.green, width: 2)),
+                    child: pw.Image(pw.MemoryImage(leftBytes), fit: pw.BoxFit.cover)),
+                pw.SizedBox(height: 6),
+                pw.Text(l10n.leftEyeOS, style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
+              ]),
+            ]),
+            pw.SizedBox(height: 16),
+          ],
+          // Anisocoria
+          if (_anisocoria != null && _anisocoria!.severity != AnisocoriaSeverity.none) ...[
+            pw.Container(
+              padding: const pw.EdgeInsets.all(10),
+              decoration: pw.BoxDecoration(
+                color: PdfColors.orange50,
+                border: pw.Border.all(color: PdfColors.orange, width: 1.5),
+              ),
+              child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+                pw.Text(l10n.pupilSizeDifference,
+                    style: pw.TextStyle(fontSize: 12, fontWeight: pw.FontWeight.bold, color: PdfColors.orange800)),
+                pw.SizedBox(height: 6),
+                pw.Row(mainAxisAlignment: pw.MainAxisAlignment.spaceAround, children: [
+                  pw.Text('OD: ${_anisocoria!.rightPupilRatio.toStringAsFixed(1)}%'),
+                  pw.Text('OS: ${_anisocoria!.leftPupilRatio.toStringAsFixed(1)}%'),
+                  pw.Text('Δ ${_anisocoria!.absoluteDifference.toStringAsFixed(1)}%',
+                      style: pw.TextStyle(fontWeight: pw.FontWeight.bold, color: PdfColors.orange800)),
+                ]),
+              ]),
+            ),
+            pw.SizedBox(height: 12),
+          ],
+          // Eye results
+          if (_rightResult != null) eyeSection(l10n.rightEyeOD, _rightResult!, true, PdfColors.blue),
+          if (_leftResult != null) eyeSection(l10n.leftEyeOS, _leftResult!, false, PdfColors.green),
+          // Reference footer
+          pw.Container(
+            padding: const pw.EdgeInsets.all(8),
+            color: PdfColors.grey100,
+            child: pw.Text(
+              'PupilMetrics v5.3.0 — CNRI Research Edition. For educational purposes only. Not a medical diagnosis.',
+              style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey700),
+            ),
+          ),
+        ],
+      ));
+
+      final reportDir = await _getReportsDirectory();
+      final ts = DateFormat('yyyy-MM-dd_HH-mm-ss').format(now);
+      final safeName = widget.patientInfo.name.replaceAll(RegExp(r'[^a-zA-Z0-9]'), '_');
+      final pdfPath = '${reportDir.path}/${safeName}_$ts.pdf';
+      await File(pdfPath).writeAsBytes(await pdf.save());
+
+      if (!mounted) return;
+
+      if (Platform.isIOS || Platform.isAndroid) {
+        await SharePlus.instance.share(ShareParams(files: [XFile(pdfPath)]));
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(l10n.pdfSaved, style: const TextStyle(fontWeight: FontWeight.bold)),
+            Text(pdfPath, style: const TextStyle(fontSize: 11)),
+          ]),
+          backgroundColor: Colors.green,
+          duration: const Duration(seconds: 6),
+          action: SnackBarAction(
+            label: l10n.open,
+            textColor: Colors.white,
+            onPressed: () => OpenFile.open(pdfPath),
+          ),
+        ));
+      }
+    } catch (e) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(l10n.pdfFailed(e.toString())), backgroundColor: Colors.red),
+      );
+    } finally {
+      if (mounted) setState(() => _isExportingPdf = false);
+    }
   }
 
   Widget _buildPatientCard(AppLocalizations l10n) {

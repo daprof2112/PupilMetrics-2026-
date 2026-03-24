@@ -3717,4 +3717,37 @@ class AppLocalizationsRu extends AppLocalizations {
   String therapyPairedOrgan(String organ) {
     return 'пара: $organ';
   }
+
+  @override
+  String get bothEyesCapturedTitle => 'Оба глаза сфотографированы';
+
+  @override
+  String get constitutionalType => 'Конституциональный тип';
+
+  @override
+  String get constitutionalTypeOptional =>
+      'Конституциональный тип (необязательно)';
+
+  @override
+  String get selectConstitutionalType => 'Выберите конституциональный тип…';
+
+  @override
+  String get constitutionalTypeNone => 'Нет (не оценивалось)';
+
+  @override
+  String get constitutionalIridology => 'Конституциональная иридология';
+
+  @override
+  String get constitutionalIrisDescription => 'Описание радужки';
+
+  @override
+  String get constitutionalPredispositions =>
+      'Предрасположенности к заболеваниям';
+
+  @override
+  String get constitutionalHomeopathicRemedies => 'Гомеопатические средства';
+
+  @override
+  String get constitutionalTypeBy =>
+      'На основе конституциональной иридологии д-ра Йозефа Дека';
 }

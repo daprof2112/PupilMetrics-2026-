@@ -3706,6 +3706,37 @@ class AppLocalizationsPt extends AppLocalizations {
   String therapyPairedOrgan(String organ) {
     return 'par: $organ';
   }
+
+  @override
+  String get bothEyesCapturedTitle => 'Ambos os Olhos Capturados';
+
+  @override
+  String get constitutionalType => 'Tipo Constitucional';
+
+  @override
+  String get constitutionalTypeOptional => 'Tipo Constitucional (Opcional)';
+
+  @override
+  String get selectConstitutionalType => 'Selecionar tipo constitucional…';
+
+  @override
+  String get constitutionalTypeNone => 'Nenhum (não avaliado)';
+
+  @override
+  String get constitutionalIridology => 'Iridologia Constitucional';
+
+  @override
+  String get constitutionalIrisDescription => 'Descrição da Íris';
+
+  @override
+  String get constitutionalPredispositions => 'Predisposições de Saúde';
+
+  @override
+  String get constitutionalHomeopathicRemedies => 'Remédios Homeopáticos';
+
+  @override
+  String get constitutionalTypeBy =>
+      'Baseado na Iridologia Constitucional do Dr. Josef Deck';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -7349,4 +7380,35 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   String therapyPairedOrgan(String organ) {
     return 'par: $organ';
   }
+
+  @override
+  String get bothEyesCapturedTitle => 'Ambos os Olhos Capturados';
+
+  @override
+  String get constitutionalType => 'Tipo Constitucional';
+
+  @override
+  String get constitutionalTypeOptional => 'Tipo Constitucional (Opcional)';
+
+  @override
+  String get selectConstitutionalType => 'Selecionar tipo constitucional…';
+
+  @override
+  String get constitutionalTypeNone => 'Nenhum (não avaliado)';
+
+  @override
+  String get constitutionalIridology => 'Iridologia Constitucional';
+
+  @override
+  String get constitutionalIrisDescription => 'Descrição da Íris';
+
+  @override
+  String get constitutionalPredispositions => 'Predisposições de Saúde';
+
+  @override
+  String get constitutionalHomeopathicRemedies => 'Remédios Homeopáticos';
+
+  @override
+  String get constitutionalTypeBy =>
+      'Baseado na Iridologia Constitucional do Dr. Josef Deck';
 }

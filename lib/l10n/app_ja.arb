@@ -1494,4 +1494,25 @@
   "therapyNatureLabel": "性質",
   "therapyPairedOrgan": "対：{organ}",
   "@therapyPairedOrgan": { "placeholders": { "organ": { "type": "String" } } }
+,
+
+  "bothEyesCapturedTitle": "両眼撮影完了",
+
+  "constitutionalType": "体質タイプ",
+
+  "constitutionalTypeOptional": "体質タイプ（任意）",
+
+  "selectConstitutionalType": "体質タイプを選択…",
+
+  "constitutionalTypeNone": "なし（未評価）",
+
+  "constitutionalIridology": "体質虪彩学",
+
+  "constitutionalIrisDescription": "虪彩の説明",
+
+  "constitutionalPredispositions": "健康の素因",
+
+  "constitutionalHomeopathicRemedies": "ホメオパシー療法",
+
+  "constitutionalTypeBy": "ヨゼフ・デック博士の体質虪彩学に基づく"
 }

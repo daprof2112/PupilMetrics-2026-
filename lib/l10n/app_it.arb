@@ -1535,4 +1535,25 @@
   "therapyNatureLabel": "Natura",
   "therapyPairedOrgan": "associato: {organ}",
   "@therapyPairedOrgan": { "placeholders": { "organ": { "type": "String" } } }
+,
+
+  "bothEyesCapturedTitle": "Entrambi gli Occhi Acquisiti",
+
+  "constitutionalType": "Tipo Costituzionale",
+
+  "constitutionalTypeOptional": "Tipo Costituzionale (Opzionale)",
+
+  "selectConstitutionalType": "Seleziona il tipo costituzionale…",
+
+  "constitutionalTypeNone": "Nessuno (non valutato)",
+
+  "constitutionalIridology": "Iridologia Costituzionale",
+
+  "constitutionalIrisDescription": "Descrizione dell'Iride",
+
+  "constitutionalPredispositions": "Predisposizioni alla Salute",
+
+  "constitutionalHomeopathicRemedies": "Rimedi Omeopatici",
+
+  "constitutionalTypeBy": "Basato sull'Iridologia Costituzionale del Dr. Josef Deck"
 }
