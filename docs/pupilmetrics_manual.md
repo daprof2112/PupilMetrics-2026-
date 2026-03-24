@@ -37,26 +37,33 @@
    - 5.5 [Chiropractic Correlations Panel](#55-chiropractic-correlations-panel)
    - 5.6 [TCM Correlations Panel](#56-tcm-correlations-panel)
    - 5.7 [Reading Therapy Panels Together](#57-reading-therapy-panels-together)
-6. [Exporting PDF Reports](#6-exporting-pdf-reports)
-   - 6.1 [What Affects the PDF Output](#61-what-affects-the-pdf-output)
-   - 6.2 [Report Language](#62-report-language)
-   - 6.3 [File Naming and Save Location](#63-file-naming-and-save-location)
-   - 6.4 [Image Compression](#64-image-compression)
-   - 6.5 [Regenerating a PDF](#65-regenerating-a-pdf)
-7. [Settings & Customization](#7-settings--customization)
-   - 7.1 [Complete Settings Reference](#71-complete-settings-reference)
-   - 7.2 [Language](#72-language)
-   - 7.3 [Zone Overlay & Observer Notes](#73-zone-overlay--observer-notes)
-   - 7.4 [ML Comparison Panel](#74-ml-comparison-panel)
-   - 7.5 [About & Support](#75-about--support)
-8. [Clinical & Legal Disclaimers](#8-clinical--legal-disclaimers)
-   - 8.1 [Intended Use](#81-intended-use)
-   - 8.2 [Not a Medical Diagnosis](#82-not-a-medical-diagnosis)
-   - 8.3 [Therapy Panel Disclaimers](#83-therapy-panel-disclaimers)
-   - 8.4 [PLR Video Mode](#84-plr-video-mode)
-   - 8.5 [Data Privacy](#85-data-privacy)
-   - 8.6 [Image Retention](#86-image-retention)
-   - 8.7 [Intellectual Property](#87-intellectual-property)
+6. [Constitutional Iridology](#6-constitutional-iridology)
+   - 6.1 [Background & Theoretical Basis](#61-background--theoretical-basis)
+   - 6.2 [The 34 Constitutional Types](#62-the-34-constitutional-types)
+   - 6.3 [Selecting a Constitutional Type](#63-selecting-a-constitutional-type)
+   - 6.4 [Constitutional Panel in Analysis Results](#64-constitutional-panel-in-analysis-results)
+   - 6.5 [Constitutional Section in the PDF Report](#65-constitutional-section-in-the-pdf-report)
+   - 6.6 [Clinical Guidance & Limitations](#66-clinical-guidance--limitations)
+7. [Exporting PDF Reports](#7-exporting-pdf-reports)
+   - 7.1 [What Affects the PDF Output](#71-what-affects-the-pdf-output)
+   - 7.2 [Report Language](#72-report-language)
+   - 7.3 [File Naming and Save Location](#73-file-naming-and-save-location)
+   - 7.4 [Image Compression](#74-image-compression)
+   - 7.5 [Regenerating a PDF](#75-regenerating-a-pdf)
+8. [Settings & Customization](#8-settings--customization)
+   - 8.1 [Complete Settings Reference](#81-complete-settings-reference)
+   - 8.2 [Language](#82-language)
+   - 8.3 [Zone Overlay & Observer Notes](#83-zone-overlay--observer-notes)
+   - 8.4 [ML Comparison Panel](#84-ml-comparison-panel)
+   - 8.5 [About & Support](#85-about--support)
+9. [Clinical & Legal Disclaimers](#9-clinical--legal-disclaimers)
+   - 9.1 [Intended Use](#91-intended-use)
+   - 9.2 [Not a Medical Diagnosis](#92-not-a-medical-diagnosis)
+   - 9.3 [Therapy Panel Disclaimers](#93-therapy-panel-disclaimers)
+   - 9.4 [PLR Video Mode](#94-plr-video-mode)
+   - 9.5 [Data Privacy](#95-data-privacy)
+   - 9.6 [Image Retention](#96-image-retention)
+   - 9.7 [Intellectual Property](#97-intellectual-property)
 
 ---
 
@@ -937,9 +944,187 @@ All four draw from the same iris zone findings, so the same flattening that gene
 
 ---
 
-## 6. Exporting PDF Reports
+## 6. Constitutional Iridology
 
-### 6.1 What Affects the PDF Output
+Constitutional iridology is the assessment of an individual's inherited iris structure to identify long-term physiological tendencies, organ predispositions, and constitutional health patterns. PupilMetrics implements Dr. Josef Deck's classification system, expanded and annotated by Dr. Bryan K. Marcia's CCVE manuscript.
+
+> **Platform note:** The constitutional type selector is available on **Windows desktop only**. The constitutional panel and PDF section appear on all platforms when a type was selected before analysis.
+
+---
+
+### 6.1 Background & Theoretical Basis
+
+Constitutional iridology originated with the German iridologist Dr. Josef Deck, whose work in the mid-20th century systematically grouped iris structural patterns into repeating constitutional categories. Unlike topographic iridology (which maps specific iris zones to specific organs), constitutional typing focuses on the **overall fiber texture, pigmentation pattern, and structural qualities** of the iris as a whole — providing a framework for understanding a patient's baseline reactivity, strengths, and long-term susceptibilities.
+
+The system was further developed by Russian medical iridologist Professor Sergei Velhover and others in the European and Soviet iridology traditions. Dr. Bryan K. Marcia's CCVE manuscript (the knowledge basis for PupilMetrics's implementation) integrates Deck's original framework with German homeopathic research, linking each constitutional type to specific homeopathic remedy affinities documented in clinical practice.
+
+**Key principle:** Constitutional type describes an inherited terrain — it indicates *inclinations and predispositions*, not current disease states. A constitutional pattern suggests what organ systems may require monitoring or support over the patient's lifetime, not what is acutely wrong today. Clinical correlation with symptoms, history, and other examination findings is always required.
+
+---
+
+### 6.2 The 34 Constitutional Types
+
+PupilMetrics includes 34 constitutional types organized into six groups:
+
+#### Group 1 — Lymphatic (8 types)
+
+The Lymphatic constitution is the most common in light-eyed populations. The base iris is typically light blue-grey with well-defined, silk-like or wavy fibers. Subtypes are defined by the presence and character of tophi (whitish connective-tissue deposits), pigmentation, and fiber arrangement.
+
+| Type | Key Feature | Primary Tendencies |
+|------|-------------|-------------------|
+| **Pure Lymphatic** | Sparse pigment, distinct radial fibers | Lymphatic congestion, allergies, upper-respiratory catarrh, rheumatic tendency |
+| **Neurogenic Sensitive** *(Neurolymphatic)* | Thin, tight, "combed-hair" fibers | CNS sensitivity, migraines, autonomic dysfunction, nervous hypersensitivity |
+| **Neurogenic Robust** | Thick radials on two levels, transversals | Good nerve vitality but serous membrane susceptibility; overstrain leads to nervous exhaustion |
+| **Lymphatic-Hypoplastic** | Thickened collarette, crypts, cloudy pupillary zone | Impaired digestion/assimilation, gastric insufficiency, lowered resistance |
+| **Hydrogenoid-Hydrogenic** | Rounded, well-defined white-to-off-white tophi | Strong allergic/exudative tendency, asthma, eczema, weather-related rheumatism |
+| **Hydrogenoid-Rheumatic** | Tophi with string-like connections to lymph region | More pronounced rheumatic tendency than base Hydrogenic; dysbiosis |
+| **Classic Rheumatic** | Transparent tophi and wisps; scurf rim | Exudative diathesis, streptococcal rheumatic group, joint pain, chronic allergies |
+| **Rheumatic-Uric Acidic** | Enhanced plaques and wisps in stroma | Uric acid diathesis; urate stone tendency; liver/kidney uric acid metabolism disorder |
+
+#### Group 2 — Haematogenic (2 types)
+
+The Haematogenic constitution is defined by a uniformly dark brown iris with velvet-like texture and heavy pigmentation. It is associated with blood and metabolic disorders.
+
+| Type | Key Feature | Primary Tendencies |
+|------|-------------|-------------------|
+| **Haematogenic I** | Dense velvet-brown iris, sanded-wood light patches | Blood composition dyscrasia; metabolic disorders of liver and pancreas |
+| **Haematogenic II** | Brown scleral pigmentation; endocrine signs | Arteriosclerosis, gallstones, hemorrhoids, phlebitis, thyroid and endocrine disorders |
+
+#### Group 3 — Biliary / Mixed (9 types)
+
+The Biliary/Mixed iris shows dispersed brown pigmentation overlying a lighter stroma — producing a light brown appearance with blue-green undertones. The liver, gallbladder, and biliary tract are the primary organ affiliations.
+
+| Type | Key Feature | Primary Tendencies |
+|------|-------------|-------------------|
+| **Classic Biliary** *(Mixed Iris)* | Light brown iris; dense nutritive zone pigment | Liver/gallbladder congestion; digestive errors; constipation, flatulence, blood sugar instability |
+| **Ferrum Chromotosis** | Golden-brown/red-brown pigments encircling collarette | Hepatic parenchyma damage; fat metabolism difficulty; fatigue; depression |
+| **Rheumatic-Uric Acidic-Dyscratic Gr.1** | Central heterochromia; plaques/tophi; cramp rings in liver zone | Rheumatic illness; uric acid metabolism disorder; gastric secretion imbalance |
+| **Rheumatic-Uric Acidic-Dyscratic Gr.2** | Strong pigmentation; scurf rim; dispersed liver pigments | Increased chronic inflammatory tendency (sinusitis, appendicitis, tonsillitis) |
+| **Rheumatic-Dyscratic-Hepatic** | Distinct tophi/plaque pigmentation; liver-zone darkening | Chronic rheumatism combined with liver dysfunction; dysbiosis |
+| **Rheumatic-Uric Acidic-Dyscratic-Hepatic** | Full-iris pigmentation; uric acid clouds; progressed plaques | Chronic rheumatism, uric acid complications, liver and biliary involvement |
+| **Rheumatic-Arthrotic** | Mixed iris; brown/yellow tophi pigment; border pigments | Arthrotic chronic rheumatic illness; liver/kidney metabolic irregularity |
+| **Rheumatic-Arthrotic-Dyscratic** | Stronger tophi/plaque pigmentation; uric acid granules | Degenerative joint disease; dyspepsia; gastric secretion disorders |
+| **Arthrotic-Dyscratic-Dysenzymatic** | Haematogenic transition; rheumatic plaques; stomach-field outline | Liver, pancreas, GI disorders; raised uric acid, blood lipids, blood sugar |
+
+#### Group 4 — Pathological Constitutions (6 types)
+
+Pathological constitutions represent inherited structural weakness patterns identifiable as lacunae, defect markings, or corneal signs, regardless of primary iris color.
+
+| Type | Key Feature | Primary Tendencies |
+|------|-------------|-------------------|
+| **Glandular Pathological** | Petal-pattern lacunae around collarette; distended collarette | Endocrine/exocrine glandular weakness; diabetes predisposition; anxiety, depression |
+| **Immuno-Pathological** | Grey/black substance-defect points; absent or broken frill | Poor immune resistance; frequent infections; poor physical endurance |
+| **Cardio-Pathological** | Open defect marking at 3 o'clock (heart zone) on frill | Inborn left cardiac insufficiency risk; endocarditis/myocarditis susceptibility |
+| **Vegetative-Spastic** *(Larvate Tetanic)* | Cramp rings (circular contraction furrows); radial folds | Elevated neuromuscular tension; spasms; migraines; anxiety; hypocalcemia |
+| **Mesenchymal Pathological** *(Weak Connective Tissue)* | Large, numerous lacunae; honeycomb patterns; irregular collarette | Inherited connective tissue weakness; varicosities; prolapse; spinal subluxations; fractures |
+| **Lipaemic Pathological** | Arcus senilis / cholesterol ring (corneal sign, not iris) | Raised blood lipids; premature arteriosclerosis; stroke risk; liver/fat metabolism disorder |
+
+#### Group 5 — Syndromes (6 types)
+
+Syndromes represent combined constitutional expressions involving specific organ pairings, visible as lacunae patterns in defined iris sectors.
+
+| Type | Key Feature | Primary Tendencies |
+|------|-------------|-------------------|
+| **Cardio-Renal** | Lacunae in heart AND kidney fields (left iris); scurf rim | Left cardiac + renal insufficiency; edema; dyspnea; begins in middle age |
+| **Cardio-Abdominal** | Large heart lacuna; colonic lacunae; distended collarette in splenic flexure | Colon congestion mechanically stressing heart; flatulence; cardiac dyspnea |
+| **Pancreatic** | Lacunae in pancreatic sector and bronchial zone | Multi-glandular insufficiency; hereditary bronchial and pancreatic weakness; childhood infections |
+| **Hepato-Gastric** | Liver pigment over liver zone; radial/transverse line from pylorus to liver zone | Liver/gallbladder disturbance; possible erosive ulcer; jaundice tendency |
+| **Hepato-Lienal** | Dirty yellow ciliary pigment; dark spleen field (splenic triad) | Spleen enlargement; venous congestion; viral infections; pancreatic excretory dysfunction |
+| **Hepato-Renal** | Green-brown-yellow "liver iris"; transversals in liver-kidney zones | Full range of liver and kidney disorders; poor food tolerance; hypotension |
+
+#### Group 6 — Pre-Cancerous Constitutions (3 types)
+
+Pre-cancerous constitutions describe inherited miasmatic terrains associated with chronic toxicosis, metabolic retention, and increased neoplasm risk. These require the greatest caution in clinical interpretation and must never be communicated to a patient without full clinical context.
+
+| Type | Key Feature | Primary Tendencies |
+|------|-------------|-------------------|
+| **Psoric** | Loose ciliary zone with crypts; open/closed lacunae near collarette; unequal pupils | Immune system pathology; allergic diseases; skin eruptions; reduced drug tolerance |
+| **Sycotic** | Dark pupillary zone; brighter ciliary zone from contraction furrows; scurf rim | Viral/bacterial immune sensitivity; endocrine disturbances; condyloma; arthritis |
+| **Carbon Nitrogen** | Dark pupillary crypts; yellow-brown humoral zone; scurf rim; splenic triad | Carbonic/nitrogen waste accumulation; neoplasm tendency from retained toxicosis; arteriosclerosis |
+
+---
+
+### 6.3 Selecting a Constitutional Type
+
+Constitutional type selection is performed on the **"Both Eyes Captured"** screen, which appears after both left and right eye photos have been taken. At this point the practitioner has both eye images visible side by side — the appropriate moment for constitutional assessment, since Deck's system requires evaluation of both irides together.
+
+**To select a type (Windows desktop only):**
+
+1. Complete the right eye capture (Step 1 of 2).
+2. Complete the left eye capture. The screen title changes to **"Both Eyes Captured"** when both images are present.
+3. Scroll below the eye image pair. An amber-bordered panel labelled **"Constitutional Type (Optional)"** is visible.
+4. Click the dropdown to open it. Types are organized by group with non-selectable group dividers.
+5. Select the appropriate type. The type name is confirmed below the dropdown.
+6. Leave the dropdown at **"None (not assessed)"** to omit the constitutional section entirely from the analysis and PDF.
+7. Tap **Analyze Both Eyes** to proceed.
+
+> **Session persistence:** The selected type is held in memory for the current session. If you navigate back to the Both-Eyes-Captured screen, the previously selected type is restored. The selection is cleared when a new scan session begins from the home screen.
+
+**Assessment approach:** Constitutional typing requires experience and ideally evaluation of the iris under magnification (slit lamp or iriscope). The practitioner should consider:
+
+- **Iris base color** — blue-grey → Lymphatic group; dark brown → Haematogenic; light brown/mixed → Biliary/Mixed
+- **Fiber density and texture** — tight/silk-like vs. loose/wavy vs. coarsely woven with lacunae
+- **Tophi and plaques** — presence, definition, and color of connective-tissue deposits
+- **Pigmentation pattern** — central heterochromia, scurf rim, liver-zone pigments, dispersed spots
+- **Special structures** — cramp rings, heart-zone defect markings, arcus senilis/lipaemic ring
+
+When the constitutional group is clear but the exact subtype is uncertain, selecting the base type (e.g., *Pure Lymphatic*, *Classic Biliary*, *Haematogenic I*) is preferable to guessing a complex subtype.
+
+---
+
+### 6.4 Constitutional Panel in Analysis Results
+
+When a constitutional type has been selected, an amber-bordered **Constitutional Iridology** panel appears in the Analysis Results screen, positioned **after the bilateral comparison card and before the Natural Medicine Therapy panels**.
+
+The panel contains three collapsible sections:
+
+| Section | Content | Default |
+|---------|---------|---------|
+| **Iris Description** | Full description of the iris structural and pigmentation features that define this constitutional type | Expanded |
+| **Health Predispositions** | Bulleted list of organ systems, disease tendencies, and physiological patterns associated with this constitution | Expanded |
+| **Homeopathic Remedies** | Chip tags showing the German homeopathic remedies with constitutional affinity for this type, from Dr. Marcia's CCVE research | Collapsed |
+
+Tap any section header to expand or collapse it independently.
+
+> **Relationship to zone findings:** The constitutional panel is independent of the automated iris zone analysis. Zone findings (flattenings, protrusions, ANW shifts) reflect current or acquired changes; constitutional type reflects the inherited structural terrain. Both perspectives are complementary and intended to be read together.
+
+---
+
+### 6.5 Constitutional Section in the PDF Report
+
+When a constitutional type is selected, the exported PDF includes a dedicated **Constitutional Iridology** section inserted between the bilateral ANW (collarette) assessment and the Natural Medicine therapy sections.
+
+The PDF section uses a light, print-optimized layout:
+
+| Part | Appearance |
+|------|-----------|
+| Header bar | Warm cream background — constitution name in bold, group badge in solid amber |
+| Iris Description | Light blue tint background, black body text |
+| Health Predispositions | Light peach tint, dash-bulleted list in black |
+| Homeopathic Remedies | Light green tint, remedy chips with dark green text and border |
+| Footer | Grey italic — *"Based on Dr. Josef Deck's Constitutional Iridology — for educational reference only."* |
+
+If no constitutional type was selected, this section is omitted from the PDF entirely.
+
+---
+
+### 6.6 Clinical Guidance & Limitations
+
+**Training required.** Accurate constitutional typing requires formal training in iridology. Practitioners unfamiliar with constitutional iridology should complete dedicated training before using this feature clinically.
+
+**Not a diagnosis.** Constitutional patterns describe inherited tendencies, not diagnoses. A patient with a Cardio-Pathological constitution has an inherited structural predisposition — they do not necessarily have heart disease. Constitutional findings must always be interpreted alongside the patient's full history, symptoms, and conventional medical evaluation.
+
+**Homeopathic remedies.** The remedy affinities listed for each type reflect traditional German homeopathic-iridology correlations from the CCVE research base. They are provided for **educational reference only**. Homeopathic prescribing is individualized and requires formal homeopathic training; the constitutional type alone does not constitute a prescription.
+
+**Pre-cancerous constitutions.** The Psoric, Sycotic, and Carbon Nitrogen types carry a "pre-cancerous" label in traditional constitutional iridology. This describes an inherited metabolic terrain, not a prediction or diagnosis of cancer. These findings must **never** be communicated as a cancer risk without full evaluation by a qualified oncologist. Practitioners in jurisdictions where such communication could constitute an unlicensed diagnostic statement must exercise particular caution.
+
+**Windows-only selection.** The constitutional dropdown is available only on Windows desktop. The constitutional panel and PDF section will appear on all platforms if a type was selected during a Windows session — but the type cannot be modified on mobile.
+
+---
+
+## 7. Exporting PDF Reports
+
+### 7.1 What Affects the PDF Output
 
 The PDF report is assembled at the moment you tap the export button. Several settings influence its final content:
 
@@ -951,7 +1136,7 @@ The PDF report is assembled at the moment you tap the export button. Several set
 | **Herbal / Nutrition / Chiropractic / TCM mode** | Each enabled module adds a section at the end of the report, but only when at least one qualifying finding is present |
 | **Auto-save PDF** (off by default) | When enabled, the PDF is saved automatically at the end of every analysis without requiring a manual tap |
 
-### 6.2 Report Language
+### 7.2 Report Language
 
 The PDF is generated using the active interface language at the time of export. All localizable strings — including metric names, zone finding descriptions, ANW status labels, age group names, and therapy section headings — are pulled from the same localization tables used by the on-screen interface.
 
@@ -959,7 +1144,7 @@ Supported languages: English, Spanish, Portuguese (Brazil), French, German, Japa
 
 To export a report in a specific language, switch the app language in Settings before tapping the PDF button. You can switch back immediately after.
 
-### 6.3 File Naming and Save Location
+### 7.3 File Naming and Save Location
 
 **File name format**
 ```
@@ -979,7 +1164,7 @@ Spaces in the patient name are preserved. The timestamp is in local time.
 **Auto-save**
 When Auto-save PDF is enabled, the file is written silently immediately after analysis completes. No dialog appears. A snackbar confirms the path. On mobile, the file is saved locally; you can then share it manually.
 
-### 6.4 Image Compression
+### 7.4 Image Compression
 
 When images are included, each eye photo is compressed before embedding to keep the PDF file size manageable:
 - Maximum width: **2,000 pixels**
@@ -987,7 +1172,7 @@ When images are included, each eye photo is compressed before embedding to keep 
 
 Very large iriscope images (e.g. Dino-Lite at full 5 MP resolution) are automatically downscaled. This keeps typical PDF sizes in the 1–4 MB range without a visible loss of clinical detail in the printed output.
 
-### 6.5 Regenerating a PDF
+### 7.5 Regenerating a PDF
 
 Any past scan stored in Scan History can have its PDF regenerated at any time:
 
@@ -1000,11 +1185,11 @@ The regenerated PDF will use the **current** app language and the **current** cl
 
 ---
 
-## 7. Settings & Customization
+## 8. Settings & Customization
 
 Settings are stored via SharedPreferences and persist across app restarts. On Windows they survive app updates. There is no dedicated Settings screen — all settings are accessible from the **title-bar menu** (Windows) or the **main menu** on mobile.
 
-### 7.1 Complete Settings Reference
+### 8.1 Complete Settings Reference
 
 #### Camera & Capture
 
@@ -1046,7 +1231,7 @@ The zoom slider maps a stored value of 0.0–1.0 to a display range of 1.0×–4
 
 All four therapy toggles are independent. Enable only the modalities relevant to your practice.
 
-### 7.2 Language
+### 8.2 Language
 
 The app ships with 8 languages. Change the language from the language selector (globe icon in the title bar on Windows, or the language option in the main menu on mobile).
 
@@ -1063,7 +1248,7 @@ The app ships with 8 languages. Change the language from the language selector (
 
 The language preference is remembered between sessions. The PDF report follows the active language at export time (see Section 6.2).
 
-### 7.3 Zone Overlay & Observer Notes
+### 8.3 Zone Overlay & Observer Notes
 
 When **Show zone overlay** is on, the iris photo on the results screen displays an interactive polar overlay. Each clock-hour sector is tappable:
 
@@ -1071,7 +1256,7 @@ When **Show zone overlay** is on, the iris photo on the results screen displays 
 - Observer notes are free-form text written by the practitioner. They are included as a named section in both the TXT report and the PDF report under "Observer Notes / Zone Overlay".
 - Notes are session-local — they are not stored in the database between sessions.
 
-### 7.4 ML Comparison Panel
+### 8.4 ML Comparison Panel
 
 When **Show ML comparison** is enabled, the results screen shows a secondary card beneath the main analysis card for each eye. This card displays the raw ONNX model output:
 
@@ -1084,7 +1269,7 @@ When **Show ML comparison** is enabled, the results screen shows a secondary car
 
 This panel is primarily intended for practitioners who want to inspect the raw model output alongside the classical CV result. In routine clinical use it can be left on without any negative effect.
 
-### 7.5 About & Support
+### 8.5 About & Support
 
 Access the About dialog from the title bar (Windows: help menu → About) to view:
 - App version
@@ -1095,15 +1280,15 @@ Access the About dialog from the title bar (Windows: help menu → About) to vie
 
 ---
 
-## 8. Clinical & Legal Disclaimers
+## 9. Clinical & Legal Disclaimers
 
-### 8.1 Intended Use
+### 9.1 Intended Use
 
 PupilMetrics is a **research and educational tool** for licensed healthcare practitioners trained in iridology, natural medicine, or related fields. It is designed to assist in the observation and documentation of iris and pupil features as part of a broader clinical assessment.
 
 PupilMetrics is **not** a medical device. It is not approved, cleared, or certified by any regulatory authority (FDA, CE, TGA, or equivalent) for diagnostic use in any medical context.
 
-### 8.2 Not a Medical Diagnosis
+### 9.2 Not a Medical Diagnosis
 
 All measurements, findings, and reports generated by PupilMetrics — including PI ratio, ellipseness, decentration, zone findings, ANW assessments, anisocoria readings, age-normative comparisons, hybrid confidence scores, and all therapy panel content — are:
 
@@ -1114,7 +1299,7 @@ All measurements, findings, and reports generated by PupilMetrics — including 
 
 The practitioner using this software is solely responsible for all clinical decisions made in connection with its output.
 
-### 8.3 Therapy Panel Disclaimers
+### 9.3 Therapy Panel Disclaimers
 
 Each therapy panel carries its own disclaimer that also appears in the PDF report:
 
@@ -1127,7 +1312,7 @@ Each therapy panel carries its own disclaimer that also appears in the PDF repor
 
 Herb–drug interactions exist. Herbal recommendations must never be applied without first reviewing the patient's current medications and medical history with a qualified practitioner.
 
-### 8.4 PLR Video Mode
+### 9.4 PLR Video Mode
 
 The Pupillary Light Reflex (PLR) video mode carries an additional research-only disclaimer:
 
@@ -1135,17 +1320,17 @@ The Pupillary Light Reflex (PLR) video mode carries an additional research-only 
 
 PLR analysis is an experimental feature. Velocity, amplitude, and latency measurements depend on ambient lighting, camera frame rate, and flash consistency. They should be interpreted only by practitioners trained in pupillometry and only as one component of a full clinical picture.
 
-### 8.5 Data Privacy
+### 9.5 Data Privacy
 
 All patient data — names, ages, scan records, images — is stored **locally on the device only**. No patient data is transmitted to CNRI servers, cloud services, or any third party. License validation communicates only the machine-generated license key and activation status; no patient identifiers are included.
 
 The practitioner is responsible for ensuring that local data storage and any subsequent sharing of exported reports complies with applicable patient privacy laws (HIPAA, GDPR, Australian Privacy Act, etc.) in their jurisdiction.
 
-### 8.6 Image Retention
+### 9.6 Image Retention
 
 Captured eye images are stored as files in the app's local storage directory. Deleting a scan record from Scan History removes the database entry but does **not** automatically delete the image files from disk. To fully remove a patient's data, the practitioner must also delete the associated image files from the device's file system.
 
-### 8.7 Intellectual Property
+### 9.7 Intellectual Property
 
 The iris zone reference chart and clinical threshold data are based on Dr. Bryan K. Marcia's 2004 CNRI Reference Charts. The herbal database is derived from CNRI knowledge base materials. The ONNX model (`cnri_model.onnx`) is proprietary to CNRI. All content is © 2024–2026 PupilMetrics Research. Unauthorized distribution, reverse engineering, or extraction of any embedded database or model is prohibited.
 
