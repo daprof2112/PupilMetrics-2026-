@@ -35,7 +35,7 @@ const List<IrisAnomalyType> kUniversalAnomalyTypes = [
     name: 'Organic pigment spot',
     conclusion:
         'Proliferative process. Post-traumatic changes. '
-        'Scary changes, affecting vegetative inner-cycle. '
+        'Abnormal changes, affecting vegetative inner-cycle. '
         'Viral infection in history. '
         'Infectious process, caused the destruction. '
         'Decompensation. Latent process.',
