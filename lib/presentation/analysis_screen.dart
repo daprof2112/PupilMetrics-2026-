@@ -1406,7 +1406,20 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r, {required bool is
                                       onTapDown: (details) {
                                         if (showChart && (loadedZoneData != null || polarZoneData != null)) {
                                           final hit = hitTestZone(details.localPosition, containerSize, loadedZoneData);
-                                          setLocalState(() { hoveredZoneName = hit['name'] ?? ''; hoveredZoneSystem = hit['system'] ?? ''; });
+                                          final zoneName = hit['name'] ?? '';
+                                          final zoneSys  = hit['system'] ?? '';
+                                          setLocalState(() { hoveredZoneName = zoneName; hoveredZoneSystem = zoneSys; });
+                                          if (zoneName.isNotEmpty) {
+                                            final lang = Localizations.localeOf(ctx).languageCode;
+                                            final label = ZoneTranslations.translate(zoneName, lang);
+                                            final sys   = zoneSys.isNotEmpty ? ZoneTranslations.translateSystem(zoneSys, lang) : '';
+                                            final entry = sys.isNotEmpty ? '$label — $sys' : label;
+                                            final existing = observerNotesController.text;
+                                            if (!existing.contains(entry)) {
+                                              observerNotesController.text = existing.isEmpty ? entry : '$existing\n$entry';
+                                              observerNotesController.selection = TextSelection.collapsed(offset: observerNotesController.text.length);
+                                            }
+                                          }
                                         }
                                       },
                                       child: Stack(

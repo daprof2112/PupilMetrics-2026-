@@ -365,6 +365,16 @@ The iris is divided into **eight concentric-radial zones**, mapped by clock posi
 
 > **Note on mirroring:** The temporal and nasal sides swap between eyes. The left eye (OS) is a mirror image of the right eye (OD) — the nasal side of each eye faces the nose.
 
+**Interactive zone overlay**
+
+The zone map is available as a live polar overlay directly on the iris photo in the Results screen. When **Show zone overlay** is enabled (Settings → §8.3):
+
+- **Tap or click any sector** of the polar chart to identify it. The zone name and its associated organ system are immediately displayed in the info panel directly below the chart image.
+- Each tapped zone is **automatically appended to the Observer Notes field** in the format `Zone Name — Organ System`. Tapping the same zone twice will not create a duplicate entry.
+- Additional free-text commentary can be typed directly in the Observer Notes field alongside the auto-populated entries. All notes are included in both the TXT and PDF exports under "Observer Notes".
+
+This allows quick zone-to-organ cross-reference during a consultation without leaving the results screen.
+
 ---
 
 ### 3.2 PI Ratio (Pupil–Iris Ratio)
