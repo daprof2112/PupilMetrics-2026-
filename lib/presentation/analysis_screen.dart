@@ -40,6 +40,7 @@ import 'package:ai_eye_capture/therapy/tcm_engine.dart';
 import 'package:ai_eye_capture/therapy/tcm_recommendations_panel.dart';
 import 'package:ai_eye_capture/therapy/constitutional_data.dart';
 import 'package:ai_eye_capture/therapy/constitutional_panel.dart';
+import 'package:ai_eye_capture/widgets/iris_anomaly_picker.dart';
 
 class AnalysisScreen extends StatefulWidget {
   final File? leftEyeImage;
@@ -1524,6 +1525,19 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r, {required bool is
                                 ),
                               ],
                             ),
+                          ),
+                          IrisAnomalyPicker(
+                            zoneName: hoveredZoneName,
+                            zoneSystem: hoveredZoneSystem,
+                            onAddFinding: (finding) {
+                              final existing = observerNotesController.text;
+                              observerNotesController.text = existing.isEmpty
+                                  ? finding
+                                  : '$existing\n$finding';
+                              observerNotesController.selection =
+                                  TextSelection.collapsed(
+                                      offset: observerNotesController.text.length);
+                            },
                           ),
                         ],
                       ),
