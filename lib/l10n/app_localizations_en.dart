@@ -3704,4 +3704,22 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get constitutionalTypeBy =>
       'Based on Dr. Josef Deck\'s Constitutional Iridology';
+
+  @override
+  String get addFinding => 'Add Finding';
+
+  @override
+  String get anomalyType => 'Anomaly type';
+
+  @override
+  String get anomalySubtype => 'Subtype';
+
+  @override
+  String get anomalyConclusion => 'Conclusion';
+
+  @override
+  String get selectAnomalyType => 'Select type…';
+
+  @override
+  String get addToNotes => 'Add to Notes';
 }

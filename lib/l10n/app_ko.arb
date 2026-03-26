@@ -1555,5 +1555,11 @@
 
   "constitutionalHomeopathicRemedies": "동종요법 처방",
 
-  "constitutionalTypeBy": "요제프 데크 박사의 체질 홍체학 기반"
+  "constitutionalTypeBy": "요제프 데크 박사의 체질 홍체학 기반",
+  "addFinding": "소견 추가",
+  "anomalyType": "이상 유형",
+  "anomalySubtype": "하위 유형",
+  "anomalyConclusion": "결론",
+  "selectAnomalyType": "유형 선택…",
+  "addToNotes": "메모에 추가"
 }

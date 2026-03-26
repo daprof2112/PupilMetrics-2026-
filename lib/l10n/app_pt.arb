@@ -1513,5 +1513,11 @@
 
   "constitutionalHomeopathicRemedies": "Remédios Homeopáticos",
 
-  "constitutionalTypeBy": "Baseado na Iridologia Constitucional do Dr. Josef Deck"
+  "constitutionalTypeBy": "Baseado na Iridologia Constitucional do Dr. Josef Deck",
+  "addFinding": "Adicionar achado",
+  "anomalyType": "Tipo de anomalia",
+  "anomalySubtype": "Subtipo",
+  "anomalyConclusion": "Conclusão",
+  "selectAnomalyType": "Selecionar tipo…",
+  "addToNotes": "Adicionar às notas"
 }

@@ -3568,4 +3568,22 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get constitutionalTypeBy => '基于约瑟夫·德克博士的体质虹膜学';
+
+  @override
+  String get addFinding => '添加发现';
+
+  @override
+  String get anomalyType => '异常类型';
+
+  @override
+  String get anomalySubtype => '子类型';
+
+  @override
+  String get anomalyConclusion => '结论';
+
+  @override
+  String get selectAnomalyType => '选择类型…';
+
+  @override
+  String get addToNotes => '添加到笔记';
 }

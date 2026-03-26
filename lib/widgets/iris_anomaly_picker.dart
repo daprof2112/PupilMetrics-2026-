@@ -8,6 +8,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ai_eye_capture/therapy/iris_anomaly_data.dart';
+import 'package:ai_eye_capture/l10n/app_localizations.dart';
 
 class IrisAnomalyPicker extends StatefulWidget {
   /// Zone name displayed as the organ label (e.g. "Upper-Nasal")
@@ -72,6 +73,7 @@ class _IrisAnomalyPickerState extends State<IrisAnomalyPicker> {
   @override
   Widget build(BuildContext context) {
     if (widget.zoneName.isEmpty) return const SizedBox.shrink();
+    final l10n = AppLocalizations.of(context)!;
 
     return Container(
       margin: const EdgeInsets.only(top: 8),
@@ -100,9 +102,9 @@ class _IrisAnomalyPickerState extends State<IrisAnomalyPicker> {
                 children: [
                   const Icon(Icons.add_circle_outline, color: _kAccent, size: 16),
                   const SizedBox(width: 6),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'Add Finding',
+                      l10n.addFinding,
                       style: TextStyle(
                         color: _kAccent,
                         fontWeight: FontWeight.bold,
@@ -145,7 +147,7 @@ class _IrisAnomalyPickerState extends State<IrisAnomalyPicker> {
                   const SizedBox(height: 10),
 
                   // ── Anomaly type dropdown ─────────────────────────────
-                  _label('Anomaly type'),
+                  _label(l10n.anomalyType),
                   const SizedBox(height: 4),
                   Container(
                     decoration: BoxDecoration(
@@ -157,7 +159,7 @@ class _IrisAnomalyPickerState extends State<IrisAnomalyPicker> {
                     child: DropdownButtonHideUnderline(
                       child: DropdownButton<IrisAnomalyType>(
                         value: _selectedType,
-                        hint: const Text('Select type…',
+                        hint: Text(l10n.selectAnomalyType,
                             style: TextStyle(color: Colors.white38, fontSize: 12)),
                         isExpanded: true,
                         dropdownColor: const Color(0xFF1D1E33),
@@ -178,7 +180,7 @@ class _IrisAnomalyPickerState extends State<IrisAnomalyPicker> {
                   if (_selectedType != null &&
                       _selectedType!.subtypes.isNotEmpty) ...[
                     const SizedBox(height: 10),
-                    _label('Subtype'),
+                    _label(l10n.anomalySubtype),
                     const SizedBox(height: 4),
                     Wrap(
                       spacing: 6,
@@ -219,7 +221,7 @@ class _IrisAnomalyPickerState extends State<IrisAnomalyPicker> {
                   if (_selectedType != null &&
                       _selectedType!.conclusion.isNotEmpty) ...[
                     const SizedBox(height: 10),
-                    _label('Conclusion'),
+                    _label(l10n.anomalyConclusion),
                     const SizedBox(height: 4),
                     Container(
                       padding: const EdgeInsets.all(10),
@@ -250,7 +252,7 @@ class _IrisAnomalyPickerState extends State<IrisAnomalyPicker> {
                               borderRadius: BorderRadius.circular(8)),
                         ),
                         icon: const Icon(Icons.note_add, size: 16),
-                        label: const Text('Add to Notes',
+                        label: Text(l10n.addToNotes,
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12)),

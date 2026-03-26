@@ -6869,6 +6869,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Based on Dr. Josef Deck\'s Constitutional Iridology'**
   String get constitutionalTypeBy;
+
+  /// No description provided for @addFinding.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Finding'**
+  String get addFinding;
+
+  /// No description provided for @anomalyType.
+  ///
+  /// In en, this message translates to:
+  /// **'Anomaly type'**
+  String get anomalyType;
+
+  /// No description provided for @anomalySubtype.
+  ///
+  /// In en, this message translates to:
+  /// **'Subtype'**
+  String get anomalySubtype;
+
+  /// No description provided for @anomalyConclusion.
+  ///
+  /// In en, this message translates to:
+  /// **'Conclusion'**
+  String get anomalyConclusion;
+
+  /// No description provided for @selectAnomalyType.
+  ///
+  /// In en, this message translates to:
+  /// **'Select type…'**
+  String get selectAnomalyType;
+
+  /// No description provided for @addToNotes.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to Notes'**
+  String get addToNotes;
 }
 
 class _AppLocalizationsDelegate

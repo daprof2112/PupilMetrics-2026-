@@ -3750,4 +3750,22 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get constitutionalTypeBy =>
       'На основе конституциональной иридологии д-ра Йозефа Дека';
+
+  @override
+  String get addFinding => 'Добавить находку';
+
+  @override
+  String get anomalyType => 'Тип аномалии';
+
+  @override
+  String get anomalySubtype => 'Подтип';
+
+  @override
+  String get anomalyConclusion => 'Заключение';
+
+  @override
+  String get selectAnomalyType => 'Выбрать тип…';
+
+  @override
+  String get addToNotes => 'Добавить в заметки';
 }

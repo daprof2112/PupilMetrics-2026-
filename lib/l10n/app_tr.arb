@@ -2002,5 +2002,11 @@
 
   "constitutionalHomeopathicRemedies": "Homeopatik Çareler",
 
-  "constitutionalTypeBy": "Dr. Josef Deck'in Anayasal İridolojisine Dayalı"
+  "constitutionalTypeBy": "Dr. Josef Deck'in Anayasal İridolojisine Dayalı",
+  "addFinding": "Bulgu Ekle",
+  "anomalyType": "Anomali türü",
+  "anomalySubtype": "Alt tür",
+  "anomalyConclusion": "Sonuç",
+  "selectAnomalyType": "Tür seçin…",
+  "addToNotes": "Notlara Ekle"
 }

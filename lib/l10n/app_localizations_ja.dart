@@ -3612,4 +3612,22 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get constitutionalTypeBy => 'ヨゼフ・デック博士の体質虪彩学に基づく';
+
+  @override
+  String get addFinding => '所見を追加';
+
+  @override
+  String get anomalyType => '異常タイプ';
+
+  @override
+  String get anomalySubtype => 'サブタイプ';
+
+  @override
+  String get anomalyConclusion => '結論';
+
+  @override
+  String get selectAnomalyType => 'タイプを選択…';
+
+  @override
+  String get addToNotes => 'メモに追加';
 }

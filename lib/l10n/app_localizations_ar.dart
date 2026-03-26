@@ -3693,4 +3693,22 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get constitutionalTypeBy =>
       'استناداً إلى علم القزحية الدستوري للدكتور يوزيف ديك';
+
+  @override
+  String get addFinding => 'إضافة نتيجة';
+
+  @override
+  String get anomalyType => 'نوع الشذوذ';
+
+  @override
+  String get anomalySubtype => 'النوع الفرعي';
+
+  @override
+  String get anomalyConclusion => 'الخلاصة';
+
+  @override
+  String get selectAnomalyType => 'اختر النوع…';
+
+  @override
+  String get addToNotes => 'إضافة إلى الملاحظات';
 }

@@ -3743,4 +3743,22 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get constitutionalTypeBy =>
       'Basé sur l\'Iridologie Constitutionnelle du Dr. Josef Deck';
+
+  @override
+  String get addFinding => 'Ajouter un résultat';
+
+  @override
+  String get anomalyType => 'Type d\'anomalie';
+
+  @override
+  String get anomalySubtype => 'Sous-type';
+
+  @override
+  String get anomalyConclusion => 'Conclusion';
+
+  @override
+  String get selectAnomalyType => 'Sélectionner le type…';
+
+  @override
+  String get addToNotes => 'Ajouter aux notes';
 }

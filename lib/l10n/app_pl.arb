@@ -2002,5 +2002,11 @@
 
   "constitutionalHomeopathicRemedies": "Śrrodki Homeopatyczne",
 
-  "constitutionalTypeBy": "Na podstawie Iridologii Konstytucyjnej dr Josefa Decka"
+  "constitutionalTypeBy": "Na podstawie Iridologii Konstytucyjnej dr Josefa Decka",
+  "addFinding": "Dodaj wynik",
+  "anomalyType": "Typ anomalii",
+  "anomalySubtype": "Podtyp",
+  "anomalyConclusion": "Wniosek",
+  "selectAnomalyType": "Wybierz typ…",
+  "addToNotes": "Dodaj do notatek"
 }

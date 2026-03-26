@@ -3737,6 +3737,24 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get constitutionalTypeBy =>
       'Baseado na Iridologia Constitucional do Dr. Josef Deck';
+
+  @override
+  String get addFinding => 'Adicionar achado';
+
+  @override
+  String get anomalyType => 'Tipo de anomalia';
+
+  @override
+  String get anomalySubtype => 'Subtipo';
+
+  @override
+  String get anomalyConclusion => 'Conclusão';
+
+  @override
+  String get selectAnomalyType => 'Selecionar tipo…';
+
+  @override
+  String get addToNotes => 'Adicionar às notas';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -7411,4 +7429,22 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   @override
   String get constitutionalTypeBy =>
       'Baseado na Iridologia Constitucional do Dr. Josef Deck';
+
+  @override
+  String get addFinding => 'Adicionar achado';
+
+  @override
+  String get anomalyType => 'Tipo de anomalia';
+
+  @override
+  String get anomalySubtype => 'Subtipo';
+
+  @override
+  String get anomalyConclusion => 'Conclusão';
+
+  @override
+  String get selectAnomalyType => 'Selecionar tipo…';
+
+  @override
+  String get addToNotes => 'Adicionar às notas';
 }

@@ -3618,4 +3618,22 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get constitutionalTypeBy => '요제프 데크 박사의 체질 홍체학 기반';
+
+  @override
+  String get addFinding => '소견 추가';
+
+  @override
+  String get anomalyType => '이상 유형';
+
+  @override
+  String get anomalySubtype => '하위 유형';
+
+  @override
+  String get anomalyConclusion => '결론';
+
+  @override
+  String get selectAnomalyType => '유형 선택…';
+
+  @override
+  String get addToNotes => '메모에 추가';
 }

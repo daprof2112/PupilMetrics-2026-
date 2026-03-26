@@ -3723,4 +3723,22 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get constitutionalTypeBy =>
       'Dr. Josef Deck\'in Anayasal İridolojisine Dayalı';
+
+  @override
+  String get addFinding => 'Bulgu Ekle';
+
+  @override
+  String get anomalyType => 'Anomali türü';
+
+  @override
+  String get anomalySubtype => 'Alt tür';
+
+  @override
+  String get anomalyConclusion => 'Sonuç';
+
+  @override
+  String get selectAnomalyType => 'Tür seçin…';
+
+  @override
+  String get addToNotes => 'Notlara Ekle';
 }

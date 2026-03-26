@@ -3706,4 +3706,22 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get constitutionalTypeBy =>
       'डॉ. जोसेफ डेक की संवैधानिक आइरिडोलॉजी पर आधारित';
+
+  @override
+  String get addFinding => 'निष्कर्ष जोड़ें';
+
+  @override
+  String get anomalyType => 'असामान्यता प्रकार';
+
+  @override
+  String get anomalySubtype => 'उप-प्रकार';
+
+  @override
+  String get anomalyConclusion => 'निष्कर्ष';
+
+  @override
+  String get selectAnomalyType => 'प्रकार चुनें…';
+
+  @override
+  String get addToNotes => 'नोट्स में जोड़ें';
 }

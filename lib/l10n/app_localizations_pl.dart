@@ -3728,4 +3728,22 @@ class AppLocalizationsPl extends AppLocalizations {
   @override
   String get constitutionalTypeBy =>
       'Na podstawie Iridologii Konstytucyjnej dr Josefa Decka';
+
+  @override
+  String get addFinding => 'Dodaj wynik';
+
+  @override
+  String get anomalyType => 'Typ anomalii';
+
+  @override
+  String get anomalySubtype => 'Podtyp';
+
+  @override
+  String get anomalyConclusion => 'Wniosek';
+
+  @override
+  String get selectAnomalyType => 'Wybierz typ…';
+
+  @override
+  String get addToNotes => 'Dodaj do notatek';
 }

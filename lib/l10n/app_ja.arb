@@ -1514,5 +1514,11 @@
 
   "constitutionalHomeopathicRemedies": "ホメオパシー療法",
 
-  "constitutionalTypeBy": "ヨゼフ・デック博士の体質虪彩学に基づく"
+  "constitutionalTypeBy": "ヨゼフ・デック博士の体質虪彩学に基づく",
+  "addFinding": "所見を追加",
+  "anomalyType": "異常タイプ",
+  "anomalySubtype": "サブタイプ",
+  "anomalyConclusion": "結論",
+  "selectAnomalyType": "タイプを選択…",
+  "addToNotes": "メモに追加"
 }

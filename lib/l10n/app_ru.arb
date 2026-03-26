@@ -2003,5 +2003,11 @@
 
   "constitutionalHomeopathicRemedies": "Гомеопатические средства",
 
-  "constitutionalTypeBy": "На основе конституциональной иридологии д-ра Йозефа Дека"
+  "constitutionalTypeBy": "На основе конституциональной иридологии д-ра Йозефа Дека",
+  "addFinding": "Добавить находку",
+  "anomalyType": "Тип аномалии",
+  "anomalySubtype": "Подтип",
+  "anomalyConclusion": "Заключение",
+  "selectAnomalyType": "Выбрать тип…",
+  "addToNotes": "Добавить в заметки"
 }

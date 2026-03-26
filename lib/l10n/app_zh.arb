@@ -2002,5 +2002,11 @@
 
   "constitutionalHomeopathicRemedies": "顺势疗法药物",
 
-  "constitutionalTypeBy": "基于约瑟夫·德克博士的体质虹膜学"
+  "constitutionalTypeBy": "基于约瑟夫·德克博士的体质虹膜学",
+  "addFinding": "添加发现",
+  "anomalyType": "异常类型",
+  "anomalySubtype": "子类型",
+  "anomalyConclusion": "结论",
+  "selectAnomalyType": "选择类型…",
+  "addToNotes": "添加到笔记"
 }

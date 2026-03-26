@@ -2002,5 +2002,11 @@
 
   "constitutionalHomeopathicRemedies": "होम्योपैथिक उपचार",
 
-  "constitutionalTypeBy": "डॉ. जोसेफ डेक की संवैधानिक आइरिडोलॉजी पर आधारित"
+  "constitutionalTypeBy": "डॉ. जोसेफ डेक की संवैधानिक आइरिडोलॉजी पर आधारित",
+  "addFinding": "निष्कर्ष जोड़ें",
+  "anomalyType": "असामान्यता प्रकार",
+  "anomalySubtype": "उप-प्रकार",
+  "anomalyConclusion": "निष्कर्ष",
+  "selectAnomalyType": "प्रकार चुनें…",
+  "addToNotes": "नोट्स में जोड़ें"
 }

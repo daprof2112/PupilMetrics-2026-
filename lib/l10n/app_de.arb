@@ -1484,5 +1484,11 @@
 
   "constitutionalHomeopathicRemedies": "Homöopathische Mittel",
 
-  "constitutionalTypeBy": "Basierend auf Dr. Josef Decks Konstitutioneller Iridologie"
+  "constitutionalTypeBy": "Basierend auf Dr. Josef Decks Konstitutioneller Iridologie",
+  "addFinding": "Befund hinzufügen",
+  "anomalyType": "Anomalietyp",
+  "anomalySubtype": "Untertyp",
+  "anomalyConclusion": "Schlussfolgerung",
+  "selectAnomalyType": "Typ auswählen…",
+  "addToNotes": "Zu Notizen hinzufügen"
 }

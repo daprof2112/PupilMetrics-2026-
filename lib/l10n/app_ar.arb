@@ -2002,5 +2002,11 @@
 
   "constitutionalHomeopathicRemedies": "العلاجات المثلية",
 
-  "constitutionalTypeBy": "استناداً إلى علم القزحية الدستوري للدكتور يوزيف ديك"
+  "constitutionalTypeBy": "استناداً إلى علم القزحية الدستوري للدكتور يوزيف ديك",
+  "addFinding": "إضافة نتيجة",
+  "anomalyType": "نوع الشذوذ",
+  "anomalySubtype": "النوع الفرعي",
+  "anomalyConclusion": "الخلاصة",
+  "selectAnomalyType": "اختر النوع…",
+  "addToNotes": "إضافة إلى الملاحظات"
 }
