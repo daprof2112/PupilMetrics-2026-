@@ -1066,6 +1066,10 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r, {required bool is
     Offset imageOffset = Offset.zero;
     String hoveredZoneName = '';
     String hoveredZoneSystem = '';
+    // Locked zone: set on tap only, persists while mouse moves away so the
+    // Add Finding picker stays visible and interactive.
+    String lockedZoneName = '';
+    String lockedZoneSystem = '';
     // Observer notes: persists for this session, included in PDF/TXT/JSON exports
     final observerNotesController = TextEditingController(
       text: _overlayObserverNotes ?? '',
@@ -1409,11 +1413,13 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r, {required bool is
                                           final hit = hitTestZone(details.localPosition, containerSize, loadedZoneData);
                                           final zoneName = hit['name'] ?? '';
                                           final zoneSys  = hit['system'] ?? '';
-                                          // Only update when a valid zone was hit — clicking outside
-                                          // the iris (empty hit) leaves the current zone visible so
-                                          // the practitioner can still reach the Add Finding panel.
                                           if (zoneName.isNotEmpty) {
-                                            setLocalState(() { hoveredZoneName = zoneName; hoveredZoneSystem = zoneSys; });
+                                            setLocalState(() {
+                                              hoveredZoneName = zoneName;
+                                              hoveredZoneSystem = zoneSys;
+                                              lockedZoneName = zoneName;
+                                              lockedZoneSystem = zoneSys;
+                                            });
                                             final lang = Localizations.localeOf(ctx).languageCode;
                                             final label = ZoneTranslations.translate(zoneName, lang);
                                             final sys   = zoneSys.isNotEmpty ? ZoneTranslations.translateSystem(zoneSys, lang) : '';
@@ -1530,8 +1536,8 @@ Widget _buildThumb(File f, String label, EyeAnalysisResult? r, {required bool is
                             ),
                           ),
                           IrisAnomalyPicker(
-                            zoneName: hoveredZoneName,
-                            zoneSystem: hoveredZoneSystem,
+                            zoneName: lockedZoneName,
+                            zoneSystem: lockedZoneSystem,
                             onAddFinding: (finding) {
                               final existing = observerNotesController.text;
                               observerNotesController.text = existing.isEmpty
