@@ -919,16 +919,26 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
     // If not already JPEG, decode and re-encode so downstream pipeline
     // always receives valid JPEG bytes regardless of source format.
     if (ext == 'jpg' || ext == 'jpeg') return rawBytes;
+    debugPrint('🖼️ Decoding .$ext (${rawBytes!.length} bytes)...');
     imglib.Image? decoded;
-    if (ext == 'bmp') {
-      decoded = imglib.decodeBmp(rawBytes);
-    } else if (ext == 'tif' || ext == 'tiff') {
-      decoded = imglib.decodeTiff(rawBytes);
-    } else {
-      decoded = imglib.decodeImage(rawBytes);
+    try {
+      if (ext == 'bmp') {
+        decoded = imglib.decodeBmp(rawBytes);
+      } else if (ext == 'tif' || ext == 'tiff') {
+        decoded = imglib.decodeTiff(rawBytes);
+      } else {
+        decoded = imglib.decodeImage(rawBytes);
+      }
+    } catch (e, st) {
+      debugPrint('🖼️ Decode threw: $e\n$st');
+      throw Exception('Failed to decode .$ext: $e');
     }
-    if (decoded == null) throw Exception('Could not decode .$ext image — try saving as JPEG or PNG first.');
-    return imglib.encodeJpg(decoded, quality: 95);
+    debugPrint('🖼️ Decode result: ${decoded == null ? "null" : "${decoded.width}x${decoded.height}"}');
+    if (decoded == null) throw Exception('Could not decode .$ext image — unsupported BMP variant.');
+    debugPrint('🖼️ Encoding to JPEG...');
+    final jpegBytes = imglib.encodeJpg(decoded, quality: 95);
+    debugPrint('🖼️ JPEG encoded: ${jpegBytes.length} bytes');
+    return jpegBytes;
   }
 
   Future<void> _loadBothEyesFromGallery(BuildContext context) async {
