@@ -3,6 +3,9 @@
 // v5.2.4 - Added isFromGallery flag to skip validation for imported images
 
 import 'dart:io';
+import 'dart:typed_data';
+import 'package:file_picker/file_picker.dart';
+import 'package:image/image.dart' as imglib;
 import 'package:ai_eye_capture/constant/color.dart';
 import 'package:ai_eye_capture/presentation/widgets/appbar.dart';
 import 'package:ai_eye_capture/presentation/widgets/primary_button.dart';
@@ -833,20 +836,53 @@ Padding(
 
   // ========== PICK FROM GALLERY (Desktop) ==========
   Future<void> _pickFromGallery(BuildContext context, {required bool isRightEye}) async {
-    final picker = ImagePicker();
-    final XFile? image = await picker.pickImage(
-      source: ImageSource.gallery,
-      imageQuality: 100,
-    );
+    Uint8List? imageBytes;
 
-    if (image != null && mounted) {
+    if (Platform.isWindows || Platform.isMacOS || Platform.isLinux) {
+      final result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['jpg', 'jpeg', 'png', 'bmp', 'tif', 'tiff', 'webp'],
+        allowMultiple: false,
+      );
+      if (result == null || result.files.isEmpty) return;
+      final f = result.files.first;
+      final rawBytes = f.path != null
+          ? await File(f.path!).readAsBytes()
+          : f.bytes;
+      if (rawBytes == null) return;
+      final ext = f.extension?.toLowerCase() ?? 'jpg';
+      if (ext == 'jpg' || ext == 'jpeg') {
+        imageBytes = rawBytes;
+      } else {
+        imglib.Image? decoded;
+        if (ext == 'bmp') {
+          decoded = imglib.decodeBmp(rawBytes);
+        } else if (ext == 'tif' || ext == 'tiff') {
+          decoded = imglib.decodeTiff(rawBytes);
+        } else {
+          decoded = imglib.decodeImage(rawBytes);
+        }
+        if (decoded == null) return;
+        imageBytes = imglib.encodeJpg(decoded, quality: 95);
+      }
+    } else {
+      final picker = ImagePicker();
+      final XFile? image = await picker.pickImage(
+        source: ImageSource.gallery,
+        imageQuality: 100,
+      );
+      if (image == null) return;
+      imageBytes = await image.readAsBytes();
+    }
+
+    if (imageBytes != null && mounted) {
       // Save to temp with proper naming
       final tempDir = await getTemporaryDirectory();
       final timestamp = DateTime.now().millisecondsSinceEpoch;
       final eyeLabel = isRightEye ? 'right' : 'left';
       final savedPath = '${tempDir.path}/gallery_${eyeLabel}_$timestamp.jpg';
 
-      await File(image.path).copy(savedPath);
+      await File(savedPath).writeAsBytes(imageBytes);
 
       try {
         final bytes = await File(savedPath).readAsBytes();
