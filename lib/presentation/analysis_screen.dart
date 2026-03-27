@@ -2131,7 +2131,7 @@ List<Widget> _buildPupilAnomalyNotes(EyeAnalysisResult r, {required bool isRight
               // v5.3.0: FULL ANW ASSESSMENT CARD (replaces simple anwRatio display)
               if (r.anwAssessment != null) _buildANWAssessmentCard(r.anwAssessment!, isRightEye, l10n),
 
-              _buildMeas(l10n.confidence, '${(r.confidence * 100).toStringAsFixed(0)}%', _displayConfidence(r, isRightEye: isRightEye) > 0.7 ? Colors.green : Colors.orange, _displayConfidence(r, isRightEye: isRightEye) > 0.7 ? l10n.high : l10n.moderate)
+              _buildMeas(l10n.confidence, '${(_displayConfidence(r, isRightEye: isRightEye) * 100).toStringAsFixed(0)}%', _displayConfidence(r, isRightEye: isRightEye) > 0.7 ? Colors.green : Colors.orange, _displayConfidence(r, isRightEye: isRightEye) > 0.7 ? l10n.high : l10n.moderate)
             ]
         )
     );
