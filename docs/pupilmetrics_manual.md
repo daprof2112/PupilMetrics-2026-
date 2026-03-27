@@ -373,7 +373,7 @@ The zone map is available as a live polar overlay directly on the iris photo in 
 - Each tapped zone is **automatically appended to the Observer Notes field** in the format `Zone Name — Organ System`. Tapping the same zone twice will not create a duplicate entry.
 - Additional free-text commentary can be typed directly in the Observer Notes field alongside the auto-populated entries. All notes are included in both the TXT and PDF exports under "Observer Notes".
 
-This allows quick zone-to-organ cross-reference during a consultation without leaving the results screen.
+This allows quick zone-to-organ cross-reference during a consultation without leaving the results screen. For structured clinical sign recording, see the **Iris Sign Finder** in §8.3.
 
 ---
 
@@ -1263,8 +1263,44 @@ The language preference is remembered between sessions. The PDF report follows t
 When **Show zone overlay** is on, the iris photo on the results screen displays an interactive polar overlay. Each clock-hour sector is tappable:
 
 - Tap any zone to open its detail panel showing all FLAT/PROT/ANW findings in that zone, the associated organ system, and a text field for **observer notes**.
-- Observer notes are free-form text written by the practitioner. They are included as a named section in both the TXT report and the PDF report under "Observer Notes / Zone Overlay".
+- Each tapped zone is **automatically appended to the Observer Notes field** in the format `Zone Name — Organ System`. Tapping the same zone twice will not create a duplicate entry.
+- Additional free-text commentary can be typed directly in the Observer Notes field alongside the auto-populated entries.
+- Observer notes are included as a named section in both the TXT report and the PDF report under "Observer Notes / Zone Overlay".
 - Notes are session-local — they are not stored in the database between sessions.
+
+#### Iris Sign Finder (Add Finding)
+
+Below the Observer Notes field, an **Add Finding** panel allows the practitioner to record structured iris sign observations for the currently selected zone. This is based on the Bexel IRINA clinical classification system.
+
+**Workflow:**
+
+1. Tap any zone on the polar overlay — the zone name and organ system are displayed and locked.
+2. Tap the amber **Add Finding** header to expand the panel.
+3. Select an **Anomaly type** from the dropdown. Organ-specific types appear at the top of the list automatically:
+
+| Anomaly type | Notes |
+|---|---|
+| **Stroma change** | Structural fibre changes; select a subtype |
+| **Organic pigment spot** | Pigmentation deposits; auto-generates clinical conclusion |
+| **Slagging** | Microcirculation / connective tissue changes; auto-conclusion |
+| **Toxic radii** | Radial sulci patterns; select a subtype |
+| **Heterochromia** | Pigmentation variations; select a subtype |
+| **Scurf rim** *(lung zones only)* | Local intoxication indicator; auto-conclusion |
+| **Adaptive rings / arcs** *(lung zones only)* | Bronchospastic predisposition; auto-conclusion |
+| **Autonomous wreath anomaly** *(cardiac zones only)* | ANW irregularity in cardiovascular zones |
+
+4. If the selected type has **subtypes**, tap the appropriate chip (e.g. *Lacunae*, *Hyperemic sulci*, *Sectoral hyperpigmentation*).
+5. Types with known clinical significance display an automatic **Conclusion** text drawn from the iridology reference database.
+6. Tap **Add to Notes** — a structured entry is appended to the Observer Notes field in the format:
+
+```
+[Zone Name] Anomaly type › Subtype
+  → Clinical conclusion text (if applicable)
+```
+
+7. The picker resets automatically, ready for the next zone finding.
+
+> **Note:** Clinical terminology (Stroma change, Lacunae, Hyperemic sulci, etc.) is intentionally kept in the original Latin/Greek form as standard iridology reference language, regardless of the app's display language. The panel UI labels (Add Finding, Anomaly type, Subtype, Conclusion, Add to Notes) are fully localised into all 15 supported languages. Additional organ-specific sign types will be added to the database in future updates.
 
 ### 8.4 ML Comparison Panel
 
