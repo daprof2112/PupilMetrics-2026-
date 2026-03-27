@@ -2,9 +2,12 @@
 // Camera Mode Selector - WITH PLATFORM-SPECIFIC OPTIONS
 
 import 'dart:io';
+import 'dart:typed_data';
 import 'package:ai_eye_capture/presentation/camera_screen/secure_uvc_camera_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:image/image.dart' as imglib;
 import 'package:path_provider/path_provider.dart';
 import 'package:get/get.dart';
 import 'package:camera/camera.dart';
@@ -878,24 +881,56 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
     );
   }
 
+  /// Picks a single image file and returns its bytes decoded as JPEG.
+  /// On desktop: uses FilePicker so BMP/TIFF/PNG are selectable.
+  /// On mobile: falls back to ImagePicker.
+  /// Returns null if the user cancels.
+  Future<Uint8List?> _pickImageAsJpegBytes() async {
+    Uint8List? rawBytes;
+    String? ext;
+
+    if (Platform.isWindows || Platform.isMacOS || Platform.isLinux) {
+      final result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['jpg', 'jpeg', 'png', 'bmp', 'tif', 'tiff', 'webp'],
+        allowMultiple: false,
+      );
+      if (result == null || result.files.isEmpty) return null;
+      final f = result.files.first;
+      rawBytes = f.bytes ?? await File(f.path!).readAsBytes();
+      ext = f.extension?.toLowerCase() ?? 'jpg';
+    } else {
+      final picker = ImagePicker();
+      final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 100);
+      if (picked == null) return null;
+      rawBytes = await picked.readAsBytes();
+      ext = picked.path.split('.').last.toLowerCase();
+    }
+
+    // If not already JPEG, decode and re-encode so downstream pipeline
+    // always receives valid JPEG bytes regardless of source format.
+    if (ext == 'jpg' || ext == 'jpeg') return rawBytes;
+    final decoded = imglib.decodeImage(rawBytes);
+    if (decoded == null) return null;
+    return Uint8List.fromList(imglib.encodeJpg(decoded, quality: 95));
+  }
+
   Future<void> _loadBothEyesFromGallery(BuildContext context) async {
     final l10n = AppLocalizations.of(context)!;
     final scaffoldMessenger = ScaffoldMessenger.of(context);
     try {
-      final picker = ImagePicker();
       final galleryDir = await _getGalleryImagesDirectory();
       final timestamp = DateTime.now().millisecondsSinceEpoch;
 
       scaffoldMessenger.showSnackBar(SnackBar(content: Text(l10n.selectRightEyeFirst), backgroundColor: Colors.green, duration: const Duration(seconds: 2)));
       await Future.delayed(const Duration(milliseconds: 500));
 
-      final XFile? rightImage = await picker.pickImage(source: ImageSource.gallery, imageQuality: 100);
-      if (rightImage == null) {
+      final rightBytes = await _pickImageAsJpegBytes();
+      if (rightBytes == null) {
         scaffoldMessenger.showSnackBar(SnackBar(content: Text(l10n.cancelledNoRightEye), backgroundColor: Colors.orange));
         return;
       }
 
-      final rightBytes = await rightImage.readAsBytes();
       try {
         final rightValidation = await EyeValidator().validateBytes(rightBytes);
         if (rightValidation.checkResults.isNotEmpty && !_isEyeImage(rightValidation)) {
@@ -909,13 +944,12 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
       scaffoldMessenger.showSnackBar(SnackBar(content: Text(l10n.rightEyeSaved), backgroundColor: Colors.blue, duration: const Duration(seconds: 2)));
       await Future.delayed(const Duration(milliseconds: 500));
 
-      final XFile? leftImage = await picker.pickImage(source: ImageSource.gallery, imageQuality: 100);
-      if (leftImage == null) {
+      final leftBytes = await _pickImageAsJpegBytes();
+      if (leftBytes == null) {
         scaffoldMessenger.showSnackBar(SnackBar(content: Text(l10n.cancelledNoLeftEye), backgroundColor: Colors.orange));
         return;
       }
 
-      final leftBytes = await leftImage.readAsBytes();
       try {
         final leftValidation = await EyeValidator().validateBytes(leftBytes);
         if (leftValidation.checkResults.isNotEmpty && !_isEyeImage(leftValidation)) {
@@ -938,11 +972,9 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
     final l10n = AppLocalizations.of(context)!;
     final scaffoldMessenger = ScaffoldMessenger.of(context);
     try {
-      final picker = ImagePicker();
-      final XFile? image = await picker.pickImage(source: ImageSource.gallery, imageQuality: 100);
+      final imageBytes = await _pickImageAsJpegBytes();
 
-      if (image != null) {
-        final imageBytes = await image.readAsBytes();
+      if (imageBytes != null) {
         try {
           final validation = await EyeValidator().validateBytes(imageBytes);
           if (validation.checkResults.isNotEmpty && !_isEyeImage(validation)) {
