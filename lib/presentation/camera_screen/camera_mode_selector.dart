@@ -890,17 +890,23 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
     String? ext;
 
     if (Platform.isWindows || Platform.isMacOS || Platform.isLinux) {
+      debugPrint('🖼️ FilePicker: opening dialog...');
       final result = await FilePicker.platform.pickFiles(
         type: FileType.custom,
         allowedExtensions: ['jpg', 'jpeg', 'png', 'bmp', 'tif', 'tiff', 'webp'],
         allowMultiple: false,
-        withData: true,
       );
+      debugPrint('🖼️ FilePicker result: ${result == null ? "null (cancelled)" : "${result.files.length} file(s)"}');
       if (result == null || result.files.isEmpty) return null;
       final f = result.files.first;
-      // withData:true populates f.bytes; path fallback for non-sandboxed builds
-      rawBytes = f.bytes ?? (f.path != null ? await File(f.path!).readAsBytes() : null);
-      if (rawBytes == null) return null;
+      debugPrint('🖼️ FilePicker file: name=${f.name} ext=${f.extension} path=${f.path} bytesNull=${f.bytes == null}');
+      if (f.path != null) {
+        rawBytes = await File(f.path!).readAsBytes();
+      } else if (f.bytes != null) {
+        rawBytes = f.bytes;
+      }
+      debugPrint('🖼️ FilePicker rawBytes: ${rawBytes?.length ?? "null"} bytes');
+      if (rawBytes == null) throw Exception('Could not read file bytes for ${f.name}');
       ext = f.extension?.toLowerCase() ?? 'jpg';
     } else {
       final picker = ImagePicker();
