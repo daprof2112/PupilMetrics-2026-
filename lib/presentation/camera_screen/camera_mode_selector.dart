@@ -957,13 +957,7 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
         return;
       }
 
-      try {
-        final rightValidation = await EyeValidator().validateBytes(rightBytes);
-        if (rightValidation.checkResults.isNotEmpty && !_isEyeImage(rightValidation)) {
-          if (context.mounted) _showNotAnEyeDialog(context, 'right');
-          return;
-        }
-      } catch (_) {}
+      // Skip eye validation for gallery imports — user is explicitly selecting their own files
       final rightFile = File('${galleryDir.path}/gallery_right_$timestamp.jpg');
       await rightFile.writeAsBytes(rightBytes);
 
@@ -975,14 +969,6 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
         scaffoldMessenger.showSnackBar(SnackBar(content: Text(l10n.cancelledNoLeftEye), backgroundColor: Colors.orange));
         return;
       }
-
-      try {
-        final leftValidation = await EyeValidator().validateBytes(leftBytes);
-        if (leftValidation.checkResults.isNotEmpty && !_isEyeImage(leftValidation)) {
-          if (context.mounted) _showNotAnEyeDialog(context, 'left');
-          return;
-        }
-      } catch (_) {}
       final leftFile = File('${galleryDir.path}/gallery_left_$timestamp.jpg');
       await leftFile.writeAsBytes(leftBytes);
 
@@ -1001,13 +987,7 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
       final imageBytes = await _pickImageAsJpegBytes();
 
       if (imageBytes != null) {
-        try {
-          final validation = await EyeValidator().validateBytes(imageBytes);
-          if (validation.checkResults.isNotEmpty && !_isEyeImage(validation)) {
-            if (context.mounted) _showNotAnEyeDialog(context, isLeftEye ? 'left' : 'right');
-            return;
-          }
-        } catch (_) {}
+        // Skip eye validation for gallery imports — user is explicitly selecting their own files
         final galleryDir = await _getGalleryImagesDirectory();
         final timestamp = DateTime.now().millisecondsSinceEpoch;
         final eyeLabel = isLeftEye ? 'left' : 'right';
