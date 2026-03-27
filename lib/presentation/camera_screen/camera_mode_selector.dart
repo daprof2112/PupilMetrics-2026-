@@ -894,10 +894,13 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
         type: FileType.custom,
         allowedExtensions: ['jpg', 'jpeg', 'png', 'bmp', 'tif', 'tiff', 'webp'],
         allowMultiple: false,
+        withData: true,
       );
       if (result == null || result.files.isEmpty) return null;
       final f = result.files.first;
-      rawBytes = f.bytes ?? await File(f.path!).readAsBytes();
+      // withData:true populates f.bytes; path fallback for non-sandboxed builds
+      rawBytes = f.bytes ?? (f.path != null ? await File(f.path!).readAsBytes() : null);
+      if (rawBytes == null) return null;
       ext = f.extension?.toLowerCase() ?? 'jpg';
     } else {
       final picker = ImagePicker();
