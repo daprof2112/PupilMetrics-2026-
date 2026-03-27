@@ -913,9 +913,16 @@ class _CameraModeSelectorPageState extends State<CameraModeSelectorPage> {
     // If not already JPEG, decode and re-encode so downstream pipeline
     // always receives valid JPEG bytes regardless of source format.
     if (ext == 'jpg' || ext == 'jpeg') return rawBytes;
-    final decoded = imglib.decodeImage(rawBytes);
-    if (decoded == null) return null;
-    return Uint8List.fromList(imglib.encodeJpg(decoded, quality: 95));
+    imglib.Image? decoded;
+    if (ext == 'bmp') {
+      decoded = imglib.decodeBmp(rawBytes);
+    } else if (ext == 'tif' || ext == 'tiff') {
+      decoded = imglib.decodeTiff(rawBytes);
+    } else {
+      decoded = imglib.decodeImage(rawBytes);
+    }
+    if (decoded == null) throw Exception('Could not decode .$ext image — try saving as JPEG or PNG first.');
+    return imglib.encodeJpg(decoded, quality: 95);
   }
 
   Future<void> _loadBothEyesFromGallery(BuildContext context) async {
